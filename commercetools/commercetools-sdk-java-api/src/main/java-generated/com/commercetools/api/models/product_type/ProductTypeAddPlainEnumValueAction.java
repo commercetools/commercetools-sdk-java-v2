@@ -1,51 +1,40 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.AttributePlainEnumValue;
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeAddPlainEnumValueActionImpl.class)
 public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAction {
 
     String ADD_PLAIN_ENUM_VALUE = "addPlainEnumValue";
 
-    
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-    
+
     @NotNull
     @Valid
     @JsonProperty("value")
     public AttributePlainEnumValue getValue();
 
-    
     public void setAttributeName(final String attributeName);
-    
-    
-    
-    public void setValue(final AttributePlainEnumValue value);
-    
 
-    public static ProductTypeAddPlainEnumValueAction of(){
+    public void setValue(final AttributePlainEnumValue value);
+
+    public static ProductTypeAddPlainEnumValueAction of() {
         return new ProductTypeAddPlainEnumValueActionImpl();
     }
-    
 
     public static ProductTypeAddPlainEnumValueAction of(final ProductTypeAddPlainEnumValueAction template) {
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
@@ -54,14 +43,13 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
         return instance;
     }
 
-    public static ProductTypeAddPlainEnumValueActionBuilder builder(){
+    public static ProductTypeAddPlainEnumValueActionBuilder builder() {
         return ProductTypeAddPlainEnumValueActionBuilder.of();
     }
-    
-    public static ProductTypeAddPlainEnumValueActionBuilder builder(final ProductTypeAddPlainEnumValueAction template){
+
+    public static ProductTypeAddPlainEnumValueActionBuilder builder(final ProductTypeAddPlainEnumValueAction template) {
         return ProductTypeAddPlainEnumValueActionBuilder.of(template);
     }
-    
 
     default <T> T withProductTypeAddPlainEnumValueAction(Function<ProductTypeAddPlainEnumValueAction, T> helper) {
         return helper.apply(this);

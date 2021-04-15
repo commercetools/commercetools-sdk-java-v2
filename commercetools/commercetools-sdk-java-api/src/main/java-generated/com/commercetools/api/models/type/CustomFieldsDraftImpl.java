@@ -1,87 +1,73 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
 import java.time.*;
+import java.util.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
 
-    
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
-    
+
     private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
-    CustomFieldsDraftImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+    CustomFieldsDraftImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
     }
+
     public CustomFieldsDraftImpl() {
     }
 
     /**
     *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
     */
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
+
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
     */
-    public com.commercetools.api.models.type.FieldContainer getFields(){
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
-    
-    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
-    
-    
-    public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         CustomFieldsDraftImpl that = (CustomFieldsDraftImpl) o;
-    
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(fields, that.fields)
-                .isEquals();
+
+        return new EqualsBuilder().append(type, that.type).append(fields, that.fields).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(type)
-            .append(fields)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(fields).toHashCode();
     }
 
 }

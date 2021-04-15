@@ -1,23 +1,16 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionUpdateAction;
-import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ExtensionSetTimeoutInMsActionImpl.class)
 public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
 
@@ -29,18 +22,15 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     *  This limit can be increased per project after we review the performance impact.
     *  Please contact Support via the support and provide the region, project key and use case.</p>
     */
-    
+
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
 
-    
     public void setTimeoutInMs(final Integer timeoutInMs);
-    
 
-    public static ExtensionSetTimeoutInMsAction of(){
+    public static ExtensionSetTimeoutInMsAction of() {
         return new ExtensionSetTimeoutInMsActionImpl();
     }
-    
 
     public static ExtensionSetTimeoutInMsAction of(final ExtensionSetTimeoutInMsAction template) {
         ExtensionSetTimeoutInMsActionImpl instance = new ExtensionSetTimeoutInMsActionImpl();
@@ -48,14 +38,13 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
         return instance;
     }
 
-    public static ExtensionSetTimeoutInMsActionBuilder builder(){
+    public static ExtensionSetTimeoutInMsActionBuilder builder() {
         return ExtensionSetTimeoutInMsActionBuilder.of();
     }
-    
-    public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template){
+
+    public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template) {
         return ExtensionSetTimeoutInMsActionBuilder.of(template);
     }
-    
 
     default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);

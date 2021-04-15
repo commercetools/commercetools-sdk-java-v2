@@ -1,32 +1,26 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetCustomerGroupActionBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
-    
-    public StagedOrderSetCustomerGroupActionBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+    public StagedOrderSetCustomerGroupActionBuilder customerGroup(
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 

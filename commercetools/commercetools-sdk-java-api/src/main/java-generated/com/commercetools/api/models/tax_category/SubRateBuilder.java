@@ -1,47 +1,32 @@
+
 package com.commercetools.api.models.tax_category;
 
-
-import com.commercetools.api.models.tax_category.SubRate;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SubRateBuilder {
 
-    
-    
     private String name;
-    
-    
-    
+
     private Double amount;
 
-    
-    public SubRateBuilder name( final String name) {
+    public SubRateBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
-    public SubRateBuilder amount( final Double amount) {
+
+    public SubRateBuilder amount(final Double amount) {
         this.amount = amount;
         return this;
     }
 
-    
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    
-    public Double getAmount(){
+
+    public Double getAmount() {
         return this.amount;
     }
 

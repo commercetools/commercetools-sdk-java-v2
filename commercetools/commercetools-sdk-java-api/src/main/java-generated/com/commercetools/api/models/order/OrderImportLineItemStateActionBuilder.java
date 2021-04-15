@@ -1,54 +1,38 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.ItemState;
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.OrderImportLineItemStateAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderImportLineItemStateActionBuilder {
 
-    
-    
     private String lineItemId;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
-    
-    public OrderImportLineItemStateActionBuilder lineItemId( final String lineItemId) {
+    public OrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-    
-    
-    public OrderImportLineItemStateActionBuilder state( final com.commercetools.api.models.order.ItemState ...state) {
+
+    public OrderImportLineItemStateActionBuilder state(final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
-    
-    
-    public OrderImportLineItemStateActionBuilder state( final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+
+    public OrderImportLineItemStateActionBuilder state(
+            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
 
-    
-    
-    public String getLineItemId(){
+    public String getLineItemId() {
         return this.lineItemId;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
+
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
 

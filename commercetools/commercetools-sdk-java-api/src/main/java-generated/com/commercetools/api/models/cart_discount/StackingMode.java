@@ -1,33 +1,31 @@
+
 package com.commercetools.api.models.cart_discount;
+
+import java.util.Arrays;
+import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.lang.String;
-import java.util.Arrays;
-import java.util.Optional;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface StackingMode {
 
-    
     StackingMode STACKING = StackingModeEnum.STACKING;
-    
+
     StackingMode STOP_AFTER_THIS_DISCOUNT = StackingModeEnum.STOP_AFTER_THIS_DISCOUNT;
-    
+
     enum StackingModeEnum implements StackingMode {
         STACKING("Stacking"),
-        
+
         STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount");
         private final String jsonName;
 
         private StackingModeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
+
         public String getJsonName() {
             return jsonName;
         }
@@ -35,6 +33,7 @@ public interface StackingMode {
 
     @JsonValue
     String getJsonName();
+
     String name();
 
     @JsonCreator
@@ -55,7 +54,7 @@ public interface StackingMode {
     public static Optional<StackingMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-    
+
     public static StackingMode[] values() {
         return StackingModeEnum.values();
     }

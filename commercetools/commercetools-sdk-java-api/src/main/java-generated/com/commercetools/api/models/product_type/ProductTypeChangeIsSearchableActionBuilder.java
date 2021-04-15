@@ -1,47 +1,32 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeChangeIsSearchableActionBuilder {
 
-    
-    
     private String attributeName;
-    
-    
-    
+
     private Boolean isSearchable;
 
-    
-    public ProductTypeChangeIsSearchableActionBuilder attributeName( final String attributeName) {
+    public ProductTypeChangeIsSearchableActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-    
-    
-    public ProductTypeChangeIsSearchableActionBuilder isSearchable( final Boolean isSearchable) {
+
+    public ProductTypeChangeIsSearchableActionBuilder isSearchable(final Boolean isSearchable) {
         this.isSearchable = isSearchable;
         return this;
     }
 
-    
-    
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
-    
-    
-    
-    public Boolean getIsSearchable(){
+
+    public Boolean getIsSearchable() {
         return this.isSearchable;
     }
 

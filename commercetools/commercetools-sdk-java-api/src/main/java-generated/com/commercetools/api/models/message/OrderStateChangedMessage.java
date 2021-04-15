@@ -1,50 +1,39 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.OrderState;
-import com.commercetools.api.models.message.OrderStateChangedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.order.OrderState;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderStateChangedMessageImpl.class)
 public interface OrderStateChangedMessage extends Message {
 
     String ORDER_STATE_CHANGED = "OrderStateChanged";
 
-    
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
-    
+
     @NotNull
     @JsonProperty("oldOrderState")
     public OrderState getOldOrderState();
 
-    
     public void setOrderState(final OrderState orderState);
-    
-    
-    
-    public void setOldOrderState(final OrderState oldOrderState);
-    
 
-    public static OrderStateChangedMessage of(){
+    public void setOldOrderState(final OrderState oldOrderState);
+
+    public static OrderStateChangedMessage of() {
         return new OrderStateChangedMessageImpl();
     }
-    
 
     public static OrderStateChangedMessage of(final OrderStateChangedMessage template) {
         OrderStateChangedMessageImpl instance = new OrderStateChangedMessageImpl();
@@ -63,14 +52,13 @@ public interface OrderStateChangedMessage extends Message {
         return instance;
     }
 
-    public static OrderStateChangedMessageBuilder builder(){
+    public static OrderStateChangedMessageBuilder builder() {
         return OrderStateChangedMessageBuilder.of();
     }
-    
-    public static OrderStateChangedMessageBuilder builder(final OrderStateChangedMessage template){
+
+    public static OrderStateChangedMessageBuilder builder(final OrderStateChangedMessage template) {
         return OrderStateChangedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderStateChangedMessage(Function<OrderStateChangedMessage, T> helper) {
         return helper.apply(this);

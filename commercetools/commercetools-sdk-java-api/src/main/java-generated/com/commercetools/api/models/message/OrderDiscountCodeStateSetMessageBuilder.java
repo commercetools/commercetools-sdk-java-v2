@@ -1,230 +1,177 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.cart.DiscountCodeState;
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderDiscountCodeStateSetMessageBuilder {
 
-    
-    
     private String id;
-    
-    
-    
+
     private Long version;
-    
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
-    
-    
+
     private Long sequenceNumber;
-    
-    
-    
+
     private com.commercetools.api.models.common.Reference resource;
-    
-    
-    
+
     private Long resourceVersion;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-    
-    
-    
+
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-    
-    
-    
+
     private com.commercetools.api.models.cart.DiscountCodeState state;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
-    
-    public OrderDiscountCodeStateSetMessageBuilder id( final String id) {
+    public OrderDiscountCodeStateSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder version( final Long version) {
+
+    public OrderDiscountCodeStateSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public OrderDiscountCodeStateSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+
+    public OrderDiscountCodeStateSetMessageBuilder createdBy(
+            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
+
+    public OrderDiscountCodeStateSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
+
+    public OrderDiscountCodeStateSetMessageBuilder resource(
+            final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder resourceVersion( final Long resourceVersion) {
+
+    public OrderDiscountCodeStateSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+
+    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
+            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+
+    public OrderDiscountCodeStateSetMessageBuilder discountCode(
+            final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder state( final com.commercetools.api.models.cart.DiscountCodeState state) {
+
+    public OrderDiscountCodeStateSetMessageBuilder state(
+            final com.commercetools.api.models.cart.DiscountCodeState state) {
         this.state = state;
         return this;
     }
-    
-    
-    public OrderDiscountCodeStateSetMessageBuilder oldState(@Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
+
+    public OrderDiscountCodeStateSetMessageBuilder oldState(
+            @Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
         this.oldState = oldState;
         return this;
     }
 
-    
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
-    
-    
-    public Long getSequenceNumber(){
+
+    public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.Reference getResource(){
+
+    public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
-    
-    
-    
-    public Long getResourceVersion(){
+
+    public Long getResourceVersion() {
         return this.resourceVersion;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
-    
-    
-    
-    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
+
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
-    
-    
-    
-    public com.commercetools.api.models.cart.DiscountCodeState getState(){
+
+    public com.commercetools.api.models.cart.DiscountCodeState getState() {
         return this.state;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.DiscountCodeState getOldState(){
+    public com.commercetools.api.models.cart.DiscountCodeState getOldState() {
         return this.oldState;
     }
 
     public OrderDiscountCodeStateSetMessage build() {
-        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state, oldState);
+        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
+            oldState);
     }
 
     public static OrderDiscountCodeStateSetMessageBuilder of() {

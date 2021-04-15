@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.channel;
 
-import com.commercetools.api.models.channel.ChannelUpdateAction;
-import com.commercetools.api.models.channel.ChannelChangeKeyAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ChannelChangeKeyActionBuilder {
 
-    
-    
     private String key;
 
-    
-    public ChannelChangeKeyActionBuilder key( final String key) {
+    public ChannelChangeKeyActionBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
-    
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

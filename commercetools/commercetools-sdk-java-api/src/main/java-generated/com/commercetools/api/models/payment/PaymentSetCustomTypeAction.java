@@ -1,25 +1,20 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.payment.PaymentUpdateAction;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.payment.PaymentSetCustomTypeActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentSetCustomTypeActionImpl.class)
 public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
@@ -32,6 +27,7 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>Sets the custom fields to this value.</p>
     */
@@ -39,18 +35,13 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static PaymentSetCustomTypeAction of(){
+    public void setFields(final FieldContainer fields);
+
+    public static PaymentSetCustomTypeAction of() {
         return new PaymentSetCustomTypeActionImpl();
     }
-    
 
     public static PaymentSetCustomTypeAction of(final PaymentSetCustomTypeAction template) {
         PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
@@ -59,14 +50,13 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
         return instance;
     }
 
-    public static PaymentSetCustomTypeActionBuilder builder(){
+    public static PaymentSetCustomTypeActionBuilder builder() {
         return PaymentSetCustomTypeActionBuilder.of();
     }
-    
-    public static PaymentSetCustomTypeActionBuilder builder(final PaymentSetCustomTypeAction template){
+
+    public static PaymentSetCustomTypeActionBuilder builder(final PaymentSetCustomTypeAction template) {
         return PaymentSetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);

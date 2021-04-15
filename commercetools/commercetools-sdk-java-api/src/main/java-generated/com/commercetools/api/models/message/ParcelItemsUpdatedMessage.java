@@ -1,70 +1,59 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.DeliveryItem;
-import com.commercetools.api.models.message.ParcelItemsUpdatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.DeliveryItem;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ParcelItemsUpdatedMessageImpl.class)
 public interface ParcelItemsUpdatedMessage extends Message {
 
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
-    
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-    
-    
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-    
+
     @NotNull
     @Valid
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
 
-    
     public void setParcelId(final String parcelId);
-    
-    
-    
+
     public void setDeliveryId(final String deliveryId);
-    
-    
-    
+
     @JsonIgnore
-    public void setItems(final DeliveryItem ...items);
+    public void setItems(final DeliveryItem... items);
+
     public void setItems(final List<DeliveryItem> items);
-    
-    
+
     @JsonIgnore
-    public void setOldItems(final DeliveryItem ...oldItems);
+    public void setOldItems(final DeliveryItem... oldItems);
+
     public void setOldItems(final List<DeliveryItem> oldItems);
 
-    public static ParcelItemsUpdatedMessage of(){
+    public static ParcelItemsUpdatedMessage of() {
         return new ParcelItemsUpdatedMessageImpl();
     }
-    
 
     public static ParcelItemsUpdatedMessage of(final ParcelItemsUpdatedMessage template) {
         ParcelItemsUpdatedMessageImpl instance = new ParcelItemsUpdatedMessageImpl();
@@ -85,14 +74,13 @@ public interface ParcelItemsUpdatedMessage extends Message {
         return instance;
     }
 
-    public static ParcelItemsUpdatedMessageBuilder builder(){
+    public static ParcelItemsUpdatedMessageBuilder builder() {
         return ParcelItemsUpdatedMessageBuilder.of();
     }
-    
-    public static ParcelItemsUpdatedMessageBuilder builder(final ParcelItemsUpdatedMessage template){
+
+    public static ParcelItemsUpdatedMessageBuilder builder(final ParcelItemsUpdatedMessage template) {
         return ParcelItemsUpdatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withParcelItemsUpdatedMessage(Function<ParcelItemsUpdatedMessage, T> helper) {
         return helper.apply(this);

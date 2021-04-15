@@ -1,50 +1,40 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeSetInputTipActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.LocalizedString;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeSetInputTipActionImpl.class)
 public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
     String SET_INPUT_TIP = "setInputTip";
 
-    
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-    
+
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
 
-    
     public void setAttributeName(final String attributeName);
-    
-    
-    
-    public void setInputTip(final LocalizedString inputTip);
-    
 
-    public static ProductTypeSetInputTipAction of(){
+    public void setInputTip(final LocalizedString inputTip);
+
+    public static ProductTypeSetInputTipAction of() {
         return new ProductTypeSetInputTipActionImpl();
     }
-    
 
     public static ProductTypeSetInputTipAction of(final ProductTypeSetInputTipAction template) {
         ProductTypeSetInputTipActionImpl instance = new ProductTypeSetInputTipActionImpl();
@@ -53,14 +43,13 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
         return instance;
     }
 
-    public static ProductTypeSetInputTipActionBuilder builder(){
+    public static ProductTypeSetInputTipActionBuilder builder() {
         return ProductTypeSetInputTipActionBuilder.of();
     }
-    
-    public static ProductTypeSetInputTipActionBuilder builder(final ProductTypeSetInputTipAction template){
+
+    public static ProductTypeSetInputTipActionBuilder builder(final ProductTypeSetInputTipAction template) {
         return ProductTypeSetInputTipActionBuilder.of(template);
     }
-    
 
     default <T> T withProductTypeSetInputTipAction(Function<ProductTypeSetInputTipAction, T> helper) {
         return helper.apply(this);

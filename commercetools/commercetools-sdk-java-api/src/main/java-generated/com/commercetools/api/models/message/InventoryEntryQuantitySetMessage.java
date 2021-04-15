@@ -1,65 +1,50 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.InventoryEntryQuantitySetMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryQuantitySetMessageImpl.class)
 public interface InventoryEntryQuantitySetMessage extends Message {
 
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
-    
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();
-    
+
     @NotNull
     @JsonProperty("newQuantityOnStock")
     public Long getNewQuantityOnStock();
-    
+
     @NotNull
     @JsonProperty("oldAvailableQuantity")
     public Long getOldAvailableQuantity();
-    
+
     @NotNull
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
-    
     public void setOldQuantityOnStock(final Long oldQuantityOnStock);
-    
-    
-    
-    public void setNewQuantityOnStock(final Long newQuantityOnStock);
-    
-    
-    
-    public void setOldAvailableQuantity(final Long oldAvailableQuantity);
-    
-    
-    
-    public void setNewAvailableQuantity(final Long newAvailableQuantity);
-    
 
-    public static InventoryEntryQuantitySetMessage of(){
+    public void setNewQuantityOnStock(final Long newQuantityOnStock);
+
+    public void setOldAvailableQuantity(final Long oldAvailableQuantity);
+
+    public void setNewAvailableQuantity(final Long newAvailableQuantity);
+
+    public static InventoryEntryQuantitySetMessage of() {
         return new InventoryEntryQuantitySetMessageImpl();
     }
-    
 
     public static InventoryEntryQuantitySetMessage of(final InventoryEntryQuantitySetMessage template) {
         InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
@@ -80,14 +65,13 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         return instance;
     }
 
-    public static InventoryEntryQuantitySetMessageBuilder builder(){
+    public static InventoryEntryQuantitySetMessageBuilder builder() {
         return InventoryEntryQuantitySetMessageBuilder.of();
     }
-    
-    public static InventoryEntryQuantitySetMessageBuilder builder(final InventoryEntryQuantitySetMessage template){
+
+    public static InventoryEntryQuantitySetMessageBuilder builder(final InventoryEntryQuantitySetMessage template) {
         return InventoryEntryQuantitySetMessageBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
         return helper.apply(this);

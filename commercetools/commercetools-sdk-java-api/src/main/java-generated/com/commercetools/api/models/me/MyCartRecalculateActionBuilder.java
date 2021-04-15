@@ -1,31 +1,25 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.me.MyCartRecalculateAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCartRecalculateActionBuilder {
 
-    
     @Nullable
     private Boolean updateProductData;
 
-    
     public MyCartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         return this;
     }
 
-    
     @Nullable
-    public Boolean getUpdateProductData(){
+    public Boolean getUpdateProductData() {
         return this.updateProductData;
     }
 

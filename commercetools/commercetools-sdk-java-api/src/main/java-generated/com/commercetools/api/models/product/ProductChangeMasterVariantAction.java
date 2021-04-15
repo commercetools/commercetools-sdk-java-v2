@@ -1,57 +1,39 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductChangeMasterVariantActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
 public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
     String CHANGE_MASTER_VARIANT = "changeMasterVariant";
 
-    
-    
     @JsonProperty("variantId")
     public Long getVariantId();
-    
-    
+
     @JsonProperty("sku")
     public String getSku();
-    
-    
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setVariantId(final Long variantId);
-    
-    
-    
-    public void setSku(final String sku);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductChangeMasterVariantAction of(){
+    public void setSku(final String sku);
+
+    public void setStaged(final Boolean staged);
+
+    public static ProductChangeMasterVariantAction of() {
         return new ProductChangeMasterVariantActionImpl();
     }
-    
 
     public static ProductChangeMasterVariantAction of(final ProductChangeMasterVariantAction template) {
         ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
@@ -61,14 +43,13 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductChangeMasterVariantActionBuilder builder(){
+    public static ProductChangeMasterVariantActionBuilder builder() {
         return ProductChangeMasterVariantActionBuilder.of();
     }
-    
-    public static ProductChangeMasterVariantActionBuilder builder(final ProductChangeMasterVariantAction template){
+
+    public static ProductChangeMasterVariantActionBuilder builder(final ProductChangeMasterVariantAction template) {
         return ProductChangeMasterVariantActionBuilder.of(template);
     }
-    
 
     default <T> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
         return helper.apply(this);

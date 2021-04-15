@@ -1,23 +1,16 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.CartRecalculateActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartRecalculateActionImpl.class)
 public interface CartRecalculateAction extends CartUpdateAction {
 
@@ -29,18 +22,15 @@ public interface CartRecalculateAction extends CartUpdateAction {
     *  only the prices and tax rates of the line item will be updated.
     *  The updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
     */
-    
+
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 
-    
     public void setUpdateProductData(final Boolean updateProductData);
-    
 
-    public static CartRecalculateAction of(){
+    public static CartRecalculateAction of() {
         return new CartRecalculateActionImpl();
     }
-    
 
     public static CartRecalculateAction of(final CartRecalculateAction template) {
         CartRecalculateActionImpl instance = new CartRecalculateActionImpl();
@@ -48,14 +38,13 @@ public interface CartRecalculateAction extends CartUpdateAction {
         return instance;
     }
 
-    public static CartRecalculateActionBuilder builder(){
+    public static CartRecalculateActionBuilder builder() {
         return CartRecalculateActionBuilder.of();
     }
-    
-    public static CartRecalculateActionBuilder builder(final CartRecalculateAction template){
+
+    public static CartRecalculateActionBuilder builder(final CartRecalculateAction template) {
         return CartRecalculateActionBuilder.of(template);
     }
-    
 
     default <T> T withCartRecalculateAction(Function<CartRecalculateAction, T> helper) {
         return helper.apply(this);

@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.category.Category;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.CategoryCreatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.category.Category;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryCreatedMessageImpl.class)
 public interface CategoryCreatedMessage extends Message {
 
     String CATEGORY_CREATED = "CategoryCreated";
 
-    
     @NotNull
     @Valid
     @JsonProperty("category")
     public Category getCategory();
 
-    
     public void setCategory(final Category category);
-    
 
-    public static CategoryCreatedMessage of(){
+    public static CategoryCreatedMessage of() {
         return new CategoryCreatedMessageImpl();
     }
-    
 
     public static CategoryCreatedMessage of(final CategoryCreatedMessage template) {
         CategoryCreatedMessageImpl instance = new CategoryCreatedMessageImpl();
@@ -55,14 +47,13 @@ public interface CategoryCreatedMessage extends Message {
         return instance;
     }
 
-    public static CategoryCreatedMessageBuilder builder(){
+    public static CategoryCreatedMessageBuilder builder() {
         return CategoryCreatedMessageBuilder.of();
     }
-    
-    public static CategoryCreatedMessageBuilder builder(final CategoryCreatedMessage template){
+
+    public static CategoryCreatedMessageBuilder builder(final CategoryCreatedMessage template) {
         return CategoryCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
         return helper.apply(this);

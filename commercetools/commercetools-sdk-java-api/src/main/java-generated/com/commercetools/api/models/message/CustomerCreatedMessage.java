@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.customer.Customer;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.CustomerCreatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer.Customer;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerCreatedMessageImpl.class)
 public interface CustomerCreatedMessage extends Message {
 
     String CUSTOMER_CREATED = "CustomerCreated";
 
-    
     @NotNull
     @Valid
     @JsonProperty("customer")
     public Customer getCustomer();
 
-    
     public void setCustomer(final Customer customer);
-    
 
-    public static CustomerCreatedMessage of(){
+    public static CustomerCreatedMessage of() {
         return new CustomerCreatedMessageImpl();
     }
-    
 
     public static CustomerCreatedMessage of(final CustomerCreatedMessage template) {
         CustomerCreatedMessageImpl instance = new CustomerCreatedMessageImpl();
@@ -55,14 +47,13 @@ public interface CustomerCreatedMessage extends Message {
         return instance;
     }
 
-    public static CustomerCreatedMessageBuilder builder(){
+    public static CustomerCreatedMessageBuilder builder() {
         return CustomerCreatedMessageBuilder.of();
     }
-    
-    public static CustomerCreatedMessageBuilder builder(final CustomerCreatedMessage template){
+
+    public static CustomerCreatedMessageBuilder builder(final CustomerCreatedMessage template) {
         return CustomerCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withCustomerCreatedMessage(Function<CustomerCreatedMessage, T> helper) {
         return helper.apply(this);

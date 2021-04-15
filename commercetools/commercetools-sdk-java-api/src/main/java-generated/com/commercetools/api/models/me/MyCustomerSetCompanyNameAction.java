@@ -1,41 +1,29 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCustomerUpdateAction;
-import com.commercetools.api.models.me.MyCustomerSetCompanyNameActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetCompanyNameActionImpl.class)
 public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
 
     String SET_COMPANY_NAME = "setCompanyName";
 
-    
-    
     @JsonProperty("companyName")
     public String getCompanyName();
 
-    
     public void setCompanyName(final String companyName);
-    
 
-    public static MyCustomerSetCompanyNameAction of(){
+    public static MyCustomerSetCompanyNameAction of() {
         return new MyCustomerSetCompanyNameActionImpl();
     }
-    
 
     public static MyCustomerSetCompanyNameAction of(final MyCustomerSetCompanyNameAction template) {
         MyCustomerSetCompanyNameActionImpl instance = new MyCustomerSetCompanyNameActionImpl();
@@ -43,14 +31,13 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    public static MyCustomerSetCompanyNameActionBuilder builder(){
+    public static MyCustomerSetCompanyNameActionBuilder builder() {
         return MyCustomerSetCompanyNameActionBuilder.of();
     }
-    
-    public static MyCustomerSetCompanyNameActionBuilder builder(final MyCustomerSetCompanyNameAction template){
+
+    public static MyCustomerSetCompanyNameActionBuilder builder(final MyCustomerSetCompanyNameAction template) {
         return MyCustomerSetCompanyNameActionBuilder.of(template);
     }
-    
 
     default <T> T withMyCustomerSetCompanyNameAction(Function<MyCustomerSetCompanyNameAction, T> helper) {
         return helper.apply(this);

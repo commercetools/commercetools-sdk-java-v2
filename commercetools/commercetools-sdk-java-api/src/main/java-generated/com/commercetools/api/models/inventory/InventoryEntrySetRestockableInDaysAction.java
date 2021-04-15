@@ -1,41 +1,29 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
 
     String SET_RESTOCKABLE_IN_DAYS = "setRestockableInDays";
 
-    
-    
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
-    
     public void setRestockableInDays(final Long restockableInDays);
-    
 
-    public static InventoryEntrySetRestockableInDaysAction of(){
+    public static InventoryEntrySetRestockableInDaysAction of() {
         return new InventoryEntrySetRestockableInDaysActionImpl();
     }
-    
 
     public static InventoryEntrySetRestockableInDaysAction of(final InventoryEntrySetRestockableInDaysAction template) {
         InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
@@ -43,16 +31,17 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
         return instance;
     }
 
-    public static InventoryEntrySetRestockableInDaysActionBuilder builder(){
+    public static InventoryEntrySetRestockableInDaysActionBuilder builder() {
         return InventoryEntrySetRestockableInDaysActionBuilder.of();
     }
-    
-    public static InventoryEntrySetRestockableInDaysActionBuilder builder(final InventoryEntrySetRestockableInDaysAction template){
+
+    public static InventoryEntrySetRestockableInDaysActionBuilder builder(
+            final InventoryEntrySetRestockableInDaysAction template) {
         return InventoryEntrySetRestockableInDaysActionBuilder.of(template);
     }
-    
 
-    default <T> T withInventoryEntrySetRestockableInDaysAction(Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
+    default <T> T withInventoryEntrySetRestockableInDaysAction(
+            Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
         return helper.apply(this);
     }
 }

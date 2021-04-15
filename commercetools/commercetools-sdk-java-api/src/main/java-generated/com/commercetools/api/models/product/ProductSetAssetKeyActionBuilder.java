@@ -1,95 +1,75 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductSetAssetKeyAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSetAssetKeyActionBuilder {
 
-    
     @Nullable
     private Long variantId;
-    
-    
+
     @Nullable
     private String sku;
-    
-    
+
     @Nullable
     private Boolean staged;
-    
-    
-    
+
     private String assetId;
-    
-    
+
     @Nullable
     private String assetKey;
 
-    
     public ProductSetAssetKeyActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    
+
     public ProductSetAssetKeyActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    
+
     public ProductSetAssetKeyActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
-    
-    public ProductSetAssetKeyActionBuilder assetId( final String assetId) {
+
+    public ProductSetAssetKeyActionBuilder assetId(final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
-    
+
     public ProductSetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
 
-    
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
-    
-    
-    public String getAssetId(){
+
+    public String getAssetId() {
         return this.assetId;
     }
-    
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
 

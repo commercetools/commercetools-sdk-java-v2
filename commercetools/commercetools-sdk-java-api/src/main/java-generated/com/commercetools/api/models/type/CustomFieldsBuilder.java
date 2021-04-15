@@ -1,48 +1,32 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeReference;
-import com.commercetools.api.models.type.CustomFields;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomFieldsBuilder {
 
-    
-    
     private com.commercetools.api.models.type.TypeReference type;
-    
-    
-    
+
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    
-    public CustomFieldsBuilder type( final com.commercetools.api.models.type.TypeReference type) {
+    public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
         return this;
     }
-    
-    
-    public CustomFieldsBuilder fields( final com.commercetools.api.models.type.FieldContainer fields) {
+
+    public CustomFieldsBuilder fields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.type.TypeReference getType(){
+    public com.commercetools.api.models.type.TypeReference getType() {
         return this.type;
     }
-    
-    
-    
-    public com.commercetools.api.models.type.FieldContainer getFields(){
+
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

@@ -1,80 +1,62 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.category.CategorySetAssetCustomFieldAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetCustomFieldActionBuilder {
 
-    
     @Nullable
     private String assetId;
-    
-    
+
     @Nullable
     private String assetKey;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private java.lang.Object value;
 
-    
     public CategorySetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
-    
+
     public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    
-    public CategorySetAssetCustomFieldActionBuilder name( final String name) {
+
+    public CategorySetAssetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public CategorySetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getValue(){
+    public java.lang.Object getValue() {
         return this.value;
     }
 

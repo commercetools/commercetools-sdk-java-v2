@@ -1,41 +1,26 @@
+
 package com.commercetools.api.client;
-
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
-
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
-import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import io.vrap.rmf.base.client.*;
-
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, java.lang.Object> implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsSuggestGet> {
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-    
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyProductProjectionsSuggestGet
+        extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, java.lang.Object>
+        implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
+        com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsSuggestGet> {
+
     private String projectKey;
-    
 
     public ByProjectKeyProductProjectionsSuggestGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -51,112 +36,115 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/suggest", this.projectKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), java.lang.Object.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
     public List<String> getFuzzy() {
         return this.getQueryParam("fuzzy");
     }
-    
+
     public List<String> getStaged() {
         return this.getQueryParam("staged");
     }
-    
+
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
-    
+
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-    
+
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final boolean fuzzy){
+    public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final boolean fuzzy) {
         return copy().withQueryParam("fuzzy", fuzzy);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final boolean fuzzy){
+
+    public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final boolean fuzzy) {
         return copy().addQueryParam("fuzzy", fuzzy);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet withStaged(final boolean staged){
+
+    public ByProjectKeyProductProjectionsSuggestGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addStaged(final boolean staged){
+
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort){
+
+    public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addSort(final String sort){
+
+    public ByProjectKeyProductProjectionsSuggestGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet withLimit(final int limit){
+
+    public ByProjectKeyProductProjectionsSuggestGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addLimit(final int limit){
+
+    public ByProjectKeyProductProjectionsSuggestGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet withOffset(final int offset){
+
+    public ByProjectKeyProductProjectionsSuggestGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addOffset(final int offset){
+
+    public ByProjectKeyProductProjectionsSuggestGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final boolean withTotal){
+
+    public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final boolean withTotal){
+
+    public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyProductProjectionsSuggestGet withSearchKeywords(final String locale, final String searchKeywords){
+    public ByProjectKeyProductProjectionsSuggestGet withSearchKeywords(final String locale,
+            final String searchKeywords) {
         return copy().withQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
     }
-    
-    public ByProjectKeyProductProjectionsSuggestGet addSearchKeywords(final String locale, final String searchKeywords){
+
+    public ByProjectKeyProductProjectionsSuggestGet addSearchKeywords(final String locale,
+            final String searchKeywords) {
         return copy().addQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
     }
-    
-    
 
     @Override
-    protected ByProjectKeyProductProjectionsSuggestGet copy()
-    {
+    protected ByProjectKeyProductProjectionsSuggestGet copy() {
         return new ByProjectKeyProductProjectionsSuggestGet(this);
     }
 }

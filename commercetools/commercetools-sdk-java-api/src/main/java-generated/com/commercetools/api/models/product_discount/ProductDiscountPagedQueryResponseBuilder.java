@@ -1,101 +1,76 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.product_discount.ProductDiscount;
-import com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountPagedQueryResponseBuilder {
 
-    
-    
     private Long limit;
-    
-    
-    
+
     private Long count;
-    
-    
+
     @Nullable
     private Long total;
-    
-    
-    
+
     private Long offset;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results;
 
-    
-    public ProductDiscountPagedQueryResponseBuilder limit( final Long limit) {
+    public ProductDiscountPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
-    
-    
-    public ProductDiscountPagedQueryResponseBuilder count( final Long count) {
+
+    public ProductDiscountPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    
+
     public ProductDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-    
-    
-    public ProductDiscountPagedQueryResponseBuilder offset( final Long offset) {
+
+    public ProductDiscountPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    
-    public ProductDiscountPagedQueryResponseBuilder results( final com.commercetools.api.models.product_discount.ProductDiscount ...results) {
+
+    public ProductDiscountPagedQueryResponseBuilder results(
+            final com.commercetools.api.models.product_discount.ProductDiscount... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    
-    public ProductDiscountPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results) {
+
+    public ProductDiscountPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results) {
         this.results = results;
         return this;
     }
 
-    
-    
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
-    
+
     @Nullable
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> getResults(){
+
+    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> getResults() {
         return this.results;
     }
 

@@ -1,47 +1,32 @@
+
 package com.commercetools.api.models.type;
 
-
-import com.commercetools.api.models.type.CustomFieldEnumValue;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomFieldEnumValueBuilder {
 
-    
-    
     private String key;
-    
-    
-    
+
     private String label;
 
-    
-    public CustomFieldEnumValueBuilder key( final String key) {
+    public CustomFieldEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
-    
-    public CustomFieldEnumValueBuilder label( final String label) {
+
+    public CustomFieldEnumValueBuilder label(final String label) {
         this.label = label;
         return this;
     }
 
-    
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    
-    public String getLabel(){
+
+    public String getLabel() {
         return this.label;
     }
 

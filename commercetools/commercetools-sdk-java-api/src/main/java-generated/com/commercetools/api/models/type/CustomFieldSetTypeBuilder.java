@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.FieldType;
-import com.commercetools.api.models.type.CustomFieldSetType;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomFieldSetTypeBuilder {
 
-    
-    
     private com.commercetools.api.models.type.FieldType elementType;
 
-    
-    public CustomFieldSetTypeBuilder elementType( final com.commercetools.api.models.type.FieldType elementType) {
+    public CustomFieldSetTypeBuilder elementType(final com.commercetools.api.models.type.FieldType elementType) {
         this.elementType = elementType;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.type.FieldType getElementType(){
+    public com.commercetools.api.models.type.FieldType getElementType() {
         return this.elementType;
     }
 

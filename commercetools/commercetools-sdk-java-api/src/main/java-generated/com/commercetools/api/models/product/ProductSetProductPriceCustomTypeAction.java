@@ -1,67 +1,52 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.product.ProductSetProductPriceCustomTypeActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
 
     String SET_PRODUCT_PRICE_CUSTOM_TYPE = "setProductPriceCustomType";
 
-    
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-    
-    
+
     @JsonProperty("staged")
     public Boolean getStaged();
-    
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-    
+
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setPriceId(final String priceId);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
-    
-    
-    public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static ProductSetProductPriceCustomTypeAction of(){
+    public void setStaged(final Boolean staged);
+
+    public void setType(final TypeResourceIdentifier type);
+
+    public void setFields(final FieldContainer fields);
+
+    public static ProductSetProductPriceCustomTypeAction of() {
         return new ProductSetProductPriceCustomTypeActionImpl();
     }
-    
 
     public static ProductSetProductPriceCustomTypeAction of(final ProductSetProductPriceCustomTypeAction template) {
         ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
@@ -72,16 +57,17 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         return instance;
     }
 
-    public static ProductSetProductPriceCustomTypeActionBuilder builder(){
+    public static ProductSetProductPriceCustomTypeActionBuilder builder() {
         return ProductSetProductPriceCustomTypeActionBuilder.of();
     }
-    
-    public static ProductSetProductPriceCustomTypeActionBuilder builder(final ProductSetProductPriceCustomTypeAction template){
+
+    public static ProductSetProductPriceCustomTypeActionBuilder builder(
+            final ProductSetProductPriceCustomTypeAction template) {
         return ProductSetProductPriceCustomTypeActionBuilder.of(template);
     }
-    
 
-    default <T> T withProductSetProductPriceCustomTypeAction(Function<ProductSetProductPriceCustomTypeAction, T> helper) {
+    default <T> T withProductSetProductPriceCustomTypeAction(
+            Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

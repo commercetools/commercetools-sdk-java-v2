@@ -1,63 +1,47 @@
+
 package com.commercetools.api.models.customer;
 
-
-import com.commercetools.api.models.customer.CustomerResetPassword;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerResetPasswordBuilder {
 
-    
-    
     private String tokenValue;
-    
-    
-    
+
     private String newPassword;
-    
-    
+
     @Nullable
     private Long version;
 
-    
-    public CustomerResetPasswordBuilder tokenValue( final String tokenValue) {
+    public CustomerResetPasswordBuilder tokenValue(final String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
-    
-    
-    public CustomerResetPasswordBuilder newPassword( final String newPassword) {
+
+    public CustomerResetPasswordBuilder newPassword(final String newPassword) {
         this.newPassword = newPassword;
         return this;
     }
-    
-    
+
     public CustomerResetPasswordBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
 
-    
-    
-    public String getTokenValue(){
+    public String getTokenValue() {
         return this.tokenValue;
     }
-    
-    
-    
-    public String getNewPassword(){
+
+    public String getNewPassword() {
         return this.newPassword;
     }
-    
-    
+
     @Nullable
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
 

@@ -1,53 +1,39 @@
+
 package com.commercetools.api.models.subscription;
 
-import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
-import com.commercetools.api.models.subscription.SubscriptionUpdate;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SubscriptionUpdateBuilder {
 
-    
-    
     private Long version;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions;
 
-    
-    public SubscriptionUpdateBuilder version( final Long version) {
+    public SubscriptionUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public SubscriptionUpdateBuilder actions( final com.commercetools.api.models.subscription.SubscriptionUpdateAction ...actions) {
+
+    public SubscriptionUpdateBuilder actions(
+            final com.commercetools.api.models.subscription.SubscriptionUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    
-    public SubscriptionUpdateBuilder actions( final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
+
+    public SubscriptionUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> getActions() {
         return this.actions;
     }
 

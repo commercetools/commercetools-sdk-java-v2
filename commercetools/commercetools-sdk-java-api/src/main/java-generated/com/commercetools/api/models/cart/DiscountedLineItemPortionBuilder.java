@@ -1,48 +1,34 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart_discount.CartDiscountReference;
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.cart.DiscountedLineItemPortion;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedLineItemPortionBuilder {
 
-    
-    
     private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
-    
-    
-    
+
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
-    
-    public DiscountedLineItemPortionBuilder discount( final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
+    public DiscountedLineItemPortionBuilder discount(
+            final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
         this.discount = discount;
         return this;
     }
-    
-    
-    public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.api.models.common.TypedMoney discountedAmount) {
+
+    public DiscountedLineItemPortionBuilder discountedAmount(
+            final com.commercetools.api.models.common.TypedMoney discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount(){
+    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
         return this.discount;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getDiscountedAmount(){
+
+    public com.commercetools.api.models.common.TypedMoney getDiscountedAmount() {
         return this.discountedAmount;
     }
 

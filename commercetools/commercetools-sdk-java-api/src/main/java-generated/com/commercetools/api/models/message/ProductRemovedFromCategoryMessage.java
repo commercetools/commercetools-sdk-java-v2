@@ -1,51 +1,41 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.category.CategoryReference;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.ProductRemovedFromCategoryMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.category.CategoryReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductRemovedFromCategoryMessageImpl.class)
 public interface ProductRemovedFromCategoryMessage extends Message {
 
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
-    
     @NotNull
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
-    
+
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setCategory(final CategoryReference category);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductRemovedFromCategoryMessage of(){
+    public void setStaged(final Boolean staged);
+
+    public static ProductRemovedFromCategoryMessage of() {
         return new ProductRemovedFromCategoryMessageImpl();
     }
-    
 
     public static ProductRemovedFromCategoryMessage of(final ProductRemovedFromCategoryMessage template) {
         ProductRemovedFromCategoryMessageImpl instance = new ProductRemovedFromCategoryMessageImpl();
@@ -64,14 +54,13 @@ public interface ProductRemovedFromCategoryMessage extends Message {
         return instance;
     }
 
-    public static ProductRemovedFromCategoryMessageBuilder builder(){
+    public static ProductRemovedFromCategoryMessageBuilder builder() {
         return ProductRemovedFromCategoryMessageBuilder.of();
     }
-    
-    public static ProductRemovedFromCategoryMessageBuilder builder(final ProductRemovedFromCategoryMessage template){
+
+    public static ProductRemovedFromCategoryMessageBuilder builder(final ProductRemovedFromCategoryMessage template) {
         return ProductRemovedFromCategoryMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
         return helper.apply(this);

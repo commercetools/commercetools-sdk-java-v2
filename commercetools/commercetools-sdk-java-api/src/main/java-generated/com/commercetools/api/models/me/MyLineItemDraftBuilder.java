@@ -1,167 +1,132 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.me.MyLineItemDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyLineItemDraftBuilder {
 
-    
-    
     private String productId;
-    
-    
-    
+
     private Long variantId;
-    
-    
-    
+
     private Long quantity;
-    
-    
+
     @Nullable
     private java.time.ZonedDateTime addedAt;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-    
-    
+
     @Nullable
     private String sku;
 
-    
-    public MyLineItemDraftBuilder productId( final String productId) {
+    public MyLineItemDraftBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
-    
-    
-    public MyLineItemDraftBuilder variantId( final Long variantId) {
+
+    public MyLineItemDraftBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    
-    public MyLineItemDraftBuilder quantity( final Long quantity) {
+
+    public MyLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-    
-    
-    public MyLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+
+    public MyLineItemDraftBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-    
-    
-    public MyLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+
+    public MyLineItemDraftBuilder distributionChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
-    
-    
+
     public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-    
-    
-    public MyLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+
+    public MyLineItemDraftBuilder shippingDetails(
+            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
-    
-    
+
     public MyLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
-    
-    
-    public String getProductId(){
+    public String getProductId() {
         return this.productId;
     }
-    
-    
-    
-    public Long getVariantId(){
+
+    public Long getVariantId() {
         return this.variantId;
     }
-    
-    
-    
-    public Long getQuantity(){
+
+    public Long getQuantity() {
         return this.quantity;
     }
-    
-    
+
     @Nullable
-    public java.time.ZonedDateTime getAddedAt(){
+    public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
-    
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
 
     public MyLineItemDraft build() {
-        return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel, custom, shippingDetails, sku);
+        return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel,
+            custom, shippingDetails, sku);
     }
 
     public static MyLineItemDraftBuilder of() {

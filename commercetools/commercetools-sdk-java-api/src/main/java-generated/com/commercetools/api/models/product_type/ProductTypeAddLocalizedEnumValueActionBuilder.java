@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeAddLocalizedEnumValueActionBuilder {
 
-    
-    
     private String attributeName;
-    
-    
-    
+
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
-    
-    public ProductTypeAddLocalizedEnumValueActionBuilder attributeName( final String attributeName) {
+    public ProductTypeAddLocalizedEnumValueActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-    
-    
-    public ProductTypeAddLocalizedEnumValueActionBuilder value( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {
+
+    public ProductTypeAddLocalizedEnumValueActionBuilder value(
+            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {
         this.value = value;
         return this;
     }
 
-    
-    
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
-    
-    
-    
-    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue(){
+
+    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue() {
         return this.value;
     }
 
@@ -54,7 +39,8 @@ public final class ProductTypeAddLocalizedEnumValueActionBuilder {
         return new ProductTypeAddLocalizedEnumValueActionBuilder();
     }
 
-    public static ProductTypeAddLocalizedEnumValueActionBuilder of(final ProductTypeAddLocalizedEnumValueAction template) {
+    public static ProductTypeAddLocalizedEnumValueActionBuilder of(
+            final ProductTypeAddLocalizedEnumValueAction template) {
         ProductTypeAddLocalizedEnumValueActionBuilder builder = new ProductTypeAddLocalizedEnumValueActionBuilder();
         builder.attributeName = template.getAttributeName();
         builder.value = template.getValue();

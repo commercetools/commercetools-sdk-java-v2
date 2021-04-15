@@ -1,85 +1,65 @@
+
 package com.commercetools.api.models.zone;
 
-import com.commercetools.api.models.zone.Location;
-import com.commercetools.api.models.zone.ZoneDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ZoneDraftBuilder {
 
-    
     @Nullable
     private String key;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private String description;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
-    
     public ZoneDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    
-    public ZoneDraftBuilder name( final String name) {
+
+    public ZoneDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public ZoneDraftBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
-    
-    
-    public ZoneDraftBuilder locations( final com.commercetools.api.models.zone.Location ...locations) {
+
+    public ZoneDraftBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
-    
-    
-    public ZoneDraftBuilder locations( final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+
+    public ZoneDraftBuilder locations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
         this.locations = locations;
         return this;
     }
 
-    
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public String getDescription(){
+    public String getDescription() {
         return this.description;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
+
+    public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
         return this.locations;
     }
 

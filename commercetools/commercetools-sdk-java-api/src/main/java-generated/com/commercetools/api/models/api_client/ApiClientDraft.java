@@ -1,58 +1,45 @@
+
 package com.commercetools.api.models.api_client;
 
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.api_client.ApiClientDraftImpl;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ApiClientDraftImpl.class)
-public interface ApiClientDraft  {
+public interface ApiClientDraft {
 
-
-    
     @NotNull
     @JsonProperty("name")
     public String getName();
-    
+
     @NotNull
     @JsonProperty("scope")
     public String getScope();
+
     /**
     *  <p>If set, the client will be deleted after the specified amount of days.</p>
     */
-    
+
     @JsonProperty("deleteDaysAfterCreation")
     public Long getDeleteDaysAfterCreation();
 
-    
     public void setName(final String name);
-    
-    
-    
-    public void setScope(final String scope);
-    
-    
-    
-    public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
-    
 
-    public static ApiClientDraft of(){
+    public void setScope(final String scope);
+
+    public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
+
+    public static ApiClientDraft of() {
         return new ApiClientDraftImpl();
     }
-    
 
     public static ApiClientDraft of(final ApiClientDraft template) {
         ApiClientDraftImpl instance = new ApiClientDraftImpl();
@@ -62,14 +49,13 @@ public interface ApiClientDraft  {
         return instance;
     }
 
-    public static ApiClientDraftBuilder builder(){
+    public static ApiClientDraftBuilder builder() {
         return ApiClientDraftBuilder.of();
     }
-    
-    public static ApiClientDraftBuilder builder(final ApiClientDraft template){
+
+    public static ApiClientDraftBuilder builder(final ApiClientDraft template) {
         return ApiClientDraftBuilder.of(template);
     }
-    
 
     default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);

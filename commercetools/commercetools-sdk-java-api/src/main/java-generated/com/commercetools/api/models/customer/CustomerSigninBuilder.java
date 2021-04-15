@@ -1,133 +1,110 @@
+
 package com.commercetools.api.models.customer;
 
-import com.commercetools.api.models.cart.CartResourceIdentifier;
-import com.commercetools.api.models.customer.AnonymousCartSignInMode;
-import com.commercetools.api.models.customer.CustomerSignin;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerSigninBuilder {
 
-    
-    
     private String email;
-    
-    
-    
+
     private String password;
-    
+
     @Deprecated
     @Nullable
     private String anonymousCartId;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
-    
-    
+
     @Nullable
     private String anonymousId;
-    
-    
+
     @Nullable
     private Boolean updateProductData;
 
-    
-    public CustomerSigninBuilder email( final String email) {
+    public CustomerSigninBuilder email(final String email) {
         this.email = email;
         return this;
     }
-    
-    
-    public CustomerSigninBuilder password( final String password) {
+
+    public CustomerSigninBuilder password(final String password) {
         this.password = password;
         return this;
     }
-    
+
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
         return this;
     }
-    
-    
-    public CustomerSigninBuilder anonymousCart(@Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
+
+    public CustomerSigninBuilder anonymousCart(
+            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
         this.anonymousCart = anonymousCart;
         return this;
     }
-    
-    
-    public CustomerSigninBuilder anonymousCartSignInMode(@Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
+
+    public CustomerSigninBuilder anonymousCartSignInMode(
+            @Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
         this.anonymousCartSignInMode = anonymousCartSignInMode;
         return this;
     }
-    
-    
+
     public CustomerSigninBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
-    
-    
+
     public CustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         return this;
     }
 
-    
-    
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
-    
-    
-    
-    public String getPassword(){
+
+    public String getPassword() {
         return this.password;
     }
-    
+
     @Deprecated
     @Nullable
-    public String getAnonymousCartId(){
+    public String getAnonymousCartId() {
         return this.anonymousCartId;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
         return this.anonymousCart;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
+    public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode() {
         return this.anonymousCartSignInMode;
     }
-    
-    
+
     @Nullable
-    public String getAnonymousId(){
+    public String getAnonymousId() {
         return this.anonymousId;
     }
-    
-    
+
     @Nullable
-    public Boolean getUpdateProductData(){
+    public Boolean getUpdateProductData() {
         return this.updateProductData;
     }
 
     public CustomerSignin build() {
-        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode, anonymousId, updateProductData);
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
+            anonymousId, updateProductData);
     }
 
     public static CustomerSigninBuilder of() {

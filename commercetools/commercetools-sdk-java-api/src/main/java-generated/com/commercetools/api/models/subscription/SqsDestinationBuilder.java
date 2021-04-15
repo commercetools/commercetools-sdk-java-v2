@@ -1,79 +1,54 @@
+
 package com.commercetools.api.models.subscription;
 
-import com.commercetools.api.models.subscription.Destination;
-import com.commercetools.api.models.subscription.SqsDestination;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SqsDestinationBuilder {
 
-    
-    
     private String accessKey;
-    
-    
-    
+
     private String accessSecret;
-    
-    
-    
+
     private String queueUrl;
-    
-    
-    
+
     private String region;
 
-    
-    public SqsDestinationBuilder accessKey( final String accessKey) {
+    public SqsDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
-    
-    
-    public SqsDestinationBuilder accessSecret( final String accessSecret) {
+
+    public SqsDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
-    
-    
-    public SqsDestinationBuilder queueUrl( final String queueUrl) {
+
+    public SqsDestinationBuilder queueUrl(final String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
-    
-    
-    public SqsDestinationBuilder region( final String region) {
+
+    public SqsDestinationBuilder region(final String region) {
         this.region = region;
         return this;
     }
 
-    
-    
-    public String getAccessKey(){
+    public String getAccessKey() {
         return this.accessKey;
     }
-    
-    
-    
-    public String getAccessSecret(){
+
+    public String getAccessSecret() {
         return this.accessSecret;
     }
-    
-    
-    
-    public String getQueueUrl(){
+
+    public String getQueueUrl() {
         return this.queueUrl;
     }
-    
-    
-    
-    public String getRegion(){
+
+    public String getRegion() {
         return this.region;
     }
 

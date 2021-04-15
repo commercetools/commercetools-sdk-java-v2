@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryEntryAddQuantityActionBuilder {
 
-    
-    
     private Long quantity;
 
-    
-    public InventoryEntryAddQuantityActionBuilder quantity( final Long quantity) {
+    public InventoryEntryAddQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    
-    
-    public Long getQuantity(){
+    public Long getQuantity() {
         return this.quantity;
     }
 

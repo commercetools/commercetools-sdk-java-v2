@@ -1,84 +1,69 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.AttributePlainEnumValue;
-import com.commercetools.api.models.product_type.AttributeType;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
 import java.time.*;
+import java.util.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeEnumTypeImpl implements AttributeEnumType {
 
-    
     private String name;
-    
-    
+
     private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
     @JsonCreator
-    AttributeEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
+    AttributeEnumTypeImpl(
+            @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
         this.values = values;
-        this.name =  ENUM;
-    }
-    public AttributeEnumTypeImpl() {
-        this.name =  ENUM;
+        this.name = ENUM;
     }
 
-    
-    public String getName(){
+    public AttributeEnumTypeImpl() {
+        this.name = ENUM;
+    }
+
+    public String getName() {
         return this.name;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues(){
+
+    public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {
         return this.values;
     }
 
-    
-    public void setValues(final com.commercetools.api.models.product_type.AttributePlainEnumValue ...values){
-       this.values = new ArrayList<>(Arrays.asList(values));
+    public void setValues(final com.commercetools.api.models.product_type.AttributePlainEnumValue... values) {
+        this.values = new ArrayList<>(Arrays.asList(values));
     }
-    
-    
-    public void setValues(final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values){
-       this.values = values;
+
+    public void setValues(
+            final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
+        this.values = values;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         AttributeEnumTypeImpl that = (AttributeEnumTypeImpl) o;
-    
-        return new EqualsBuilder()
-                .append(name, that.name)
-                .append(values, that.values)
-                .isEquals();
+
+        return new EqualsBuilder().append(name, that.name).append(values, that.values).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(name)
-            .append(values)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(name).append(values).toHashCode();
     }
 
 }

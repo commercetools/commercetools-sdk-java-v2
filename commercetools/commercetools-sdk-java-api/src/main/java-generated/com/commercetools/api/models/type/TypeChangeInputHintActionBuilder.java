@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.TypeTextInputHint;
-import com.commercetools.api.models.type.TypeUpdateAction;
-import com.commercetools.api.models.type.TypeChangeInputHintAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TypeChangeInputHintActionBuilder {
 
-    
-    
     private String fieldName;
-    
-    
-    
+
     private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
-    
-    public TypeChangeInputHintActionBuilder fieldName( final String fieldName) {
+    public TypeChangeInputHintActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-    
-    
-    public TypeChangeInputHintActionBuilder inputHint( final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
+
+    public TypeChangeInputHintActionBuilder inputHint(
+            final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
 
-    
-    
-    public String getFieldName(){
+    public String getFieldName() {
         return this.fieldName;
     }
-    
-    
-    
-    public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
+
+    public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
         return this.inputHint;
     }
 

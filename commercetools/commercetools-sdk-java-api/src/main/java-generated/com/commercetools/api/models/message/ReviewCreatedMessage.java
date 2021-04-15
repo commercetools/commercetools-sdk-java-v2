@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.review.Review;
-import com.commercetools.api.models.message.ReviewCreatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.review.Review;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewCreatedMessageImpl.class)
 public interface ReviewCreatedMessage extends Message {
 
     String REVIEW_CREATED = "ReviewCreated";
 
-    
     @NotNull
     @Valid
     @JsonProperty("review")
     public Review getReview();
 
-    
     public void setReview(final Review review);
-    
 
-    public static ReviewCreatedMessage of(){
+    public static ReviewCreatedMessage of() {
         return new ReviewCreatedMessageImpl();
     }
-    
 
     public static ReviewCreatedMessage of(final ReviewCreatedMessage template) {
         ReviewCreatedMessageImpl instance = new ReviewCreatedMessageImpl();
@@ -55,14 +47,13 @@ public interface ReviewCreatedMessage extends Message {
         return instance;
     }
 
-    public static ReviewCreatedMessageBuilder builder(){
+    public static ReviewCreatedMessageBuilder builder() {
         return ReviewCreatedMessageBuilder.of();
     }
-    
-    public static ReviewCreatedMessageBuilder builder(final ReviewCreatedMessage template){
+
+    public static ReviewCreatedMessageBuilder builder(final ReviewCreatedMessage template) {
         return ReviewCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
         return helper.apply(this);

@@ -1,41 +1,31 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.Suggestion;
-import com.commercetools.api.models.product.SuggestionResult;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SuggestionResultBuilder {
 
-    
-    
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
 
-    
-    public SuggestionResultBuilder values( final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values){
+    public SuggestionResultBuilder values(
+            final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
         this.values = values;
         return this;
     }
-    
-    
-    public SuggestionResultBuilder addValue(final String key, final java.util.List<com.commercetools.api.models.product.Suggestion> value) {
+
+    public SuggestionResultBuilder addValue(final String key,
+            final java.util.List<com.commercetools.api.models.product.Suggestion> value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
-    
 
-    
-    
-    public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> getValues(){
+    public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> getValues() {
         return this.values;
     }
 

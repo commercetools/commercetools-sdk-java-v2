@@ -1,38 +1,34 @@
+
 package com.commercetools.api.models.discount_code;
+
+import java.time.*;
+import java.time.ZonedDateTime;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.discount_code.DiscountCodeDraftImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeDraftImpl.class)
-public interface DiscountCodeDraft  {
+public interface DiscountCodeDraft {
 
-
-    
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-    
+
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
+
     /**
     *  <p>Unique identifier of this discount code.
     *  This value is added to the cart
@@ -41,6 +37,7 @@ public interface DiscountCodeDraft  {
     @NotNull
     @JsonProperty("code")
     public String getCode();
+
     /**
     *  <p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
     *  The number of cart discounts in a discount code is limited to <strong>10</strong>.</p>
@@ -49,103 +46,83 @@ public interface DiscountCodeDraft  {
     @Valid
     @JsonProperty("cartDiscounts")
     public List<CartDiscountResourceIdentifier> getCartDiscounts();
+
     /**
     *  <p>The discount code can only be applied to carts that match this predicate.</p>
     */
-    
+
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
-    
-    
+
     @JsonProperty("isActive")
     public Boolean getIsActive();
-    
-    
+
     @JsonProperty("maxApplications")
     public Long getMaxApplications();
-    
-    
+
     @JsonProperty("maxApplicationsPerCustomer")
     public Long getMaxApplicationsPerCustomer();
-    
+
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
     /**
     *  <p>The groups to which this discount code shall belong to.</p>
     */
-    
+
     @JsonProperty("groups")
     public List<String> getGroups();
+
     /**
     *  <p>The time from which the discount can be applied on a cart.
     *  Before that time the code is invalid.</p>
     */
-    
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
+
     /**
     *  <p>The time until the discount can be applied on a cart.
     *  After that time the code is invalid.</p>
     */
-    
+
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
-    
     public void setName(final LocalizedString name);
-    
-    
-    
-    public void setDescription(final LocalizedString description);
-    
-    
-    
-    public void setCode(final String code);
-    
-    
-    
-    @JsonIgnore
-    public void setCartDiscounts(final CartDiscountResourceIdentifier ...cartDiscounts);
-    public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
-    
-    
-    public void setCartPredicate(final String cartPredicate);
-    
-    
-    
-    public void setIsActive(final Boolean isActive);
-    
-    
-    
-    public void setMaxApplications(final Long maxApplications);
-    
-    
-    
-    public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
-    
-    
-    
-    public void setCustom(final CustomFieldsDraft custom);
-    
-    
-    
-    @JsonIgnore
-    public void setGroups(final String ...groups);
-    public void setGroups(final List<String> groups);
-    
-    
-    public void setValidFrom(final ZonedDateTime validFrom);
-    
-    
-    
-    public void setValidUntil(final ZonedDateTime validUntil);
-    
 
-    public static DiscountCodeDraft of(){
+    public void setDescription(final LocalizedString description);
+
+    public void setCode(final String code);
+
+    @JsonIgnore
+    public void setCartDiscounts(final CartDiscountResourceIdentifier... cartDiscounts);
+
+    public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
+
+    public void setCartPredicate(final String cartPredicate);
+
+    public void setIsActive(final Boolean isActive);
+
+    public void setMaxApplications(final Long maxApplications);
+
+    public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
+
+    public void setCustom(final CustomFieldsDraft custom);
+
+    @JsonIgnore
+    public void setGroups(final String... groups);
+
+    public void setGroups(final List<String> groups);
+
+    public void setValidFrom(final ZonedDateTime validFrom);
+
+    public void setValidUntil(final ZonedDateTime validUntil);
+
+    public static DiscountCodeDraft of() {
         return new DiscountCodeDraftImpl();
     }
-    
 
     public static DiscountCodeDraft of(final DiscountCodeDraft template) {
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
@@ -164,14 +141,13 @@ public interface DiscountCodeDraft  {
         return instance;
     }
 
-    public static DiscountCodeDraftBuilder builder(){
+    public static DiscountCodeDraftBuilder builder() {
         return DiscountCodeDraftBuilder.of();
     }
-    
-    public static DiscountCodeDraftBuilder builder(final DiscountCodeDraft template){
+
+    public static DiscountCodeDraftBuilder builder(final DiscountCodeDraft template) {
         return DiscountCodeDraftBuilder.of(template);
     }
-    
 
     default <T> T withDiscountCodeDraft(Function<DiscountCodeDraft, T> helper) {
         return helper.apply(this);

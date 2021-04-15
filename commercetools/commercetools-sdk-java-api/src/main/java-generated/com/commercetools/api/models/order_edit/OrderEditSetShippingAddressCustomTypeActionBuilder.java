@@ -1,49 +1,40 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.order_edit.OrderEditSetShippingAddressCustomTypeAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderEditSetShippingAddressCustomTypeActionBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    
-    public OrderEditSetShippingAddressCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    public OrderEditSetShippingAddressCustomTypeActionBuilder type(
+            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-    
-    
-    public OrderEditSetShippingAddressCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+
+    public OrderEditSetShippingAddressCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields(){
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
@@ -55,7 +46,8 @@ public final class OrderEditSetShippingAddressCustomTypeActionBuilder {
         return new OrderEditSetShippingAddressCustomTypeActionBuilder();
     }
 
-    public static OrderEditSetShippingAddressCustomTypeActionBuilder of(final OrderEditSetShippingAddressCustomTypeAction template) {
+    public static OrderEditSetShippingAddressCustomTypeActionBuilder of(
+            final OrderEditSetShippingAddressCustomTypeAction template) {
         OrderEditSetShippingAddressCustomTypeActionBuilder builder = new OrderEditSetShippingAddressCustomTypeActionBuilder();
         builder.type = template.getType();
         builder.fields = template.getFields();

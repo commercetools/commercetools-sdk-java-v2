@@ -1,52 +1,44 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.api.models.message.ProductDeletedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product.ProductProjection;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDeletedMessageImpl.class)
 public interface ProductDeletedMessage extends Message {
 
     String PRODUCT_DELETED = "ProductDeleted";
 
-    
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
-    
+
     @NotNull
     @Valid
     @JsonProperty("currentProjection")
     public ProductProjection getCurrentProjection();
 
-    
     @JsonIgnore
-    public void setRemovedImageUrls(final String ...removedImageUrls);
-    public void setRemovedImageUrls(final List<String> removedImageUrls);
-    
-    
-    public void setCurrentProjection(final ProductProjection currentProjection);
-    
+    public void setRemovedImageUrls(final String... removedImageUrls);
 
-    public static ProductDeletedMessage of(){
+    public void setRemovedImageUrls(final List<String> removedImageUrls);
+
+    public void setCurrentProjection(final ProductProjection currentProjection);
+
+    public static ProductDeletedMessage of() {
         return new ProductDeletedMessageImpl();
     }
-    
 
     public static ProductDeletedMessage of(final ProductDeletedMessage template) {
         ProductDeletedMessageImpl instance = new ProductDeletedMessageImpl();
@@ -65,14 +57,13 @@ public interface ProductDeletedMessage extends Message {
         return instance;
     }
 
-    public static ProductDeletedMessageBuilder builder(){
+    public static ProductDeletedMessageBuilder builder() {
         return ProductDeletedMessageBuilder.of();
     }
-    
-    public static ProductDeletedMessageBuilder builder(final ProductDeletedMessage template){
+
+    public static ProductDeletedMessageBuilder builder(final ProductDeletedMessage template) {
         return ProductDeletedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductDeletedMessage(Function<ProductDeletedMessage, T> helper) {
         return helper.apply(this);

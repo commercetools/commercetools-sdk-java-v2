@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.message.OrderCreatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.Order;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderCreatedMessageImpl.class)
 public interface OrderCreatedMessage extends Message {
 
     String ORDER_CREATED = "OrderCreated";
 
-    
     @NotNull
     @Valid
     @JsonProperty("order")
     public Order getOrder();
 
-    
     public void setOrder(final Order order);
-    
 
-    public static OrderCreatedMessage of(){
+    public static OrderCreatedMessage of() {
         return new OrderCreatedMessageImpl();
     }
-    
 
     public static OrderCreatedMessage of(final OrderCreatedMessage template) {
         OrderCreatedMessageImpl instance = new OrderCreatedMessageImpl();
@@ -55,14 +47,13 @@ public interface OrderCreatedMessage extends Message {
         return instance;
     }
 
-    public static OrderCreatedMessageBuilder builder(){
+    public static OrderCreatedMessageBuilder builder() {
         return OrderCreatedMessageBuilder.of();
     }
-    
-    public static OrderCreatedMessageBuilder builder(final OrderCreatedMessage template){
+
+    public static OrderCreatedMessageBuilder builder(final OrderCreatedMessage template) {
         return OrderCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderCreatedMessage(Function<OrderCreatedMessage, T> helper) {
         return helper.apply(this);

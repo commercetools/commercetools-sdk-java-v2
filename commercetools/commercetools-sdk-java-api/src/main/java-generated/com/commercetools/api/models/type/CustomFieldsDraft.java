@@ -1,27 +1,21 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraftImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
-public interface CustomFieldsDraft  {
-
+public interface CustomFieldsDraft {
 
     /**
     *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
@@ -30,6 +24,7 @@ public interface CustomFieldsDraft  {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
     */
@@ -37,18 +32,13 @@ public interface CustomFieldsDraft  {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static CustomFieldsDraft of(){
+    public void setFields(final FieldContainer fields);
+
+    public static CustomFieldsDraft of() {
         return new CustomFieldsDraftImpl();
     }
-    
 
     public static CustomFieldsDraft of(final CustomFieldsDraft template) {
         CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
@@ -57,14 +47,13 @@ public interface CustomFieldsDraft  {
         return instance;
     }
 
-    public static CustomFieldsDraftBuilder builder(){
+    public static CustomFieldsDraftBuilder builder() {
         return CustomFieldsDraftBuilder.of();
     }
-    
-    public static CustomFieldsDraftBuilder builder(final CustomFieldsDraft template){
+
+    public static CustomFieldsDraftBuilder builder(final CustomFieldsDraft template) {
         return CustomFieldsDraftBuilder.of(template);
     }
-    
 
     default <T> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
         return helper.apply(this);

@@ -1,393 +1,308 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.category.CategoryReference;
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product.CategoryOrderHints;
-import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.models.product.SearchKeywords;
-import com.commercetools.api.models.product_type.ProductTypeReference;
-import com.commercetools.api.models.review.ReviewRatingStatistics;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.tax_category.TaxCategoryReference;
-import com.commercetools.api.models.product.ProductProjection;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductProjectionBuilder {
 
-    
-    
     private String id;
-    
-    
-    
+
     private Long version;
-    
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
-    
+
     @Nullable
     private String key;
-    
-    
-    
+
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString slug;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.category.CategoryReference> categories;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
-    
-    
+
     @Nullable
     private Boolean hasStagedChanges;
-    
-    
+
     @Nullable
     private Boolean published;
-    
-    
-    
+
     private com.commercetools.api.models.product.ProductVariant masterVariant;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.product.ProductVariant> variants;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
-    
-    public ProductProjectionBuilder id( final String id) {
+    public ProductProjectionBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder version( final Long version) {
+
+    public ProductProjectionBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public ProductProjectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public ProductProjectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    
+
     public ProductProjectionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder productType( final com.commercetools.api.models.product_type.ProductTypeReference productType) {
+
+    public ProductProjectionBuilder productType(
+            final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public ProductProjectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public ProductProjectionBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
+
+    public ProductProjectionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder categories( final com.commercetools.api.models.category.CategoryReference ...categories) {
+
+    public ProductProjectionBuilder categories(
+            final com.commercetools.api.models.category.CategoryReference... categories) {
         this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
-    
-    
-    public ProductProjectionBuilder categories( final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
+
+    public ProductProjectionBuilder categories(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder categoryOrderHints(@Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
+
+    public ProductProjectionBuilder categoryOrderHints(
+            @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
         this.categoryOrderHints = categoryOrderHints;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
+
+    public ProductProjectionBuilder metaTitle(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder metaDescription(@Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+
+    public ProductProjectionBuilder metaDescription(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+
+    public ProductProjectionBuilder metaKeywords(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder searchKeywords(@Nullable final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+
+    public ProductProjectionBuilder searchKeywords(
+            @Nullable final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
-    
-    
+
     public ProductProjectionBuilder hasStagedChanges(@Nullable final Boolean hasStagedChanges) {
         this.hasStagedChanges = hasStagedChanges;
         return this;
     }
-    
-    
+
     public ProductProjectionBuilder published(@Nullable final Boolean published) {
         this.published = published;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder masterVariant( final com.commercetools.api.models.product.ProductVariant masterVariant) {
+
+    public ProductProjectionBuilder masterVariant(
+            final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder variants( final com.commercetools.api.models.product.ProductVariant ...variants) {
+
+    public ProductProjectionBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
         this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
-    
-    
-    public ProductProjectionBuilder variants( final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
+
+    public ProductProjectionBuilder variants(
+            final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
         this.variants = variants;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
+
+    public ProductProjectionBuilder taxCategory(
+            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-    
-    
+
     public ProductProjectionBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
-    
-    
-    public ProductProjectionBuilder reviewRatingStatistics(@Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
+
+    public ProductProjectionBuilder reviewRatingStatistics(
+            @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
         this.reviewRatingStatistics = reviewRatingStatistics;
         return this;
     }
 
-    
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    
-    public com.commercetools.api.models.product_type.ProductTypeReference getProductType(){
+
+    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getSlug(){
+
+    public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories(){
+
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
         return this.categories;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints(){
+    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
+    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
-    
-    
+
     @Nullable
-    public Boolean getHasStagedChanges(){
+    public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
     }
-    
-    
+
     @Nullable
-    public Boolean getPublished(){
+    public Boolean getPublished() {
         return this.published;
     }
-    
-    
-    
-    public com.commercetools.api.models.product.ProductVariant getMasterVariant(){
+
+    public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
         return this.masterVariant;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants(){
+
+    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
         return this.variants;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
+    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.state.StateReference getState(){
+    public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
+    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
 
     public ProductProjection build() {
-        return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description, slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords, hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);
+        return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
+            slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
+            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);
     }
 
     public static ProductProjectionBuilder of() {

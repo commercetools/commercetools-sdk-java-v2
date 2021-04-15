@@ -1,48 +1,36 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import com.commercetools.api.models.common.AssetDraft;
-import com.commercetools.api.models.category.CategoryAddAssetAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryAddAssetActionBuilder {
 
-    
-    
     private com.commercetools.api.models.common.AssetDraft asset;
-    
-    
+
     @Nullable
     private Integer position;
 
-    
-    public CategoryAddAssetActionBuilder asset( final com.commercetools.api.models.common.AssetDraft asset) {
+    public CategoryAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
         this.asset = asset;
         return this;
     }
-    
-    
+
     public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {
         this.position = position;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.AssetDraft getAsset(){
+    public com.commercetools.api.models.common.AssetDraft getAsset() {
         return this.asset;
     }
-    
-    
+
     @Nullable
-    public Integer getPosition(){
+    public Integer getPosition() {
         return this.position;
     }
 

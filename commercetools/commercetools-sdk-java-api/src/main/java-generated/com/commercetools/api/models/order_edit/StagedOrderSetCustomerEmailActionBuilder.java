@@ -1,31 +1,25 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderSetCustomerEmailAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetCustomerEmailActionBuilder {
 
-    
     @Nullable
     private String email;
 
-    
     public StagedOrderSetCustomerEmailActionBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
-    
     @Nullable
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
 

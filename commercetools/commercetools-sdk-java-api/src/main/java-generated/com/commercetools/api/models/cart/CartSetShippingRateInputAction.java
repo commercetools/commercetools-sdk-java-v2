@@ -1,24 +1,18 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.ShippingRateInputDraft;
-import com.commercetools.api.models.cart.CartSetShippingRateInputActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingRateInputActionImpl.class)
 public interface CartSetShippingRateInputAction extends CartUpdateAction {
 
@@ -34,14 +28,11 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();
 
-    
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
-    
 
-    public static CartSetShippingRateInputAction of(){
+    public static CartSetShippingRateInputAction of() {
         return new CartSetShippingRateInputActionImpl();
     }
-    
 
     public static CartSetShippingRateInputAction of(final CartSetShippingRateInputAction template) {
         CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
@@ -49,14 +40,13 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
         return instance;
     }
 
-    public static CartSetShippingRateInputActionBuilder builder(){
+    public static CartSetShippingRateInputActionBuilder builder() {
         return CartSetShippingRateInputActionBuilder.of();
     }
-    
-    public static CartSetShippingRateInputActionBuilder builder(final CartSetShippingRateInputAction template){
+
+    public static CartSetShippingRateInputActionBuilder builder(final CartSetShippingRateInputAction template) {
         return CartSetShippingRateInputActionBuilder.of(template);
     }
-    
 
     default <T> T withCartSetShippingRateInputAction(Function<CartSetShippingRateInputAction, T> helper) {
         return helper.apply(this);

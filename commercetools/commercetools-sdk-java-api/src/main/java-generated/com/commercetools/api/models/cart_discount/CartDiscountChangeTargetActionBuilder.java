@@ -1,32 +1,22 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.api.models.cart_discount.CartDiscountChangeTargetAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartDiscountChangeTargetActionBuilder {
 
-    
-    
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
-    
-    public CartDiscountChangeTargetActionBuilder target( final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+    public CartDiscountChangeTargetActionBuilder target(
+            final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
+    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
 

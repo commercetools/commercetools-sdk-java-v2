@@ -1,44 +1,32 @@
+
 package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
 
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Query stores</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyStoresGet extends ApiMethod<ByProjectKeyStoresGet, com.commercetools.api.models.store.StorePagedQueryResponse> implements com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet, com.commercetools.api.models.store.StorePagedQueryResponse>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyStoresGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyStoresGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyStoresGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStoresGet> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyStoresGet
+        extends ApiMethod<ByProjectKeyStoresGet, com.commercetools.api.models.store.StorePagedQueryResponse> implements
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet, com.commercetools.api.models.store.StorePagedQueryResponse>,
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresGet>,
+        com.commercetools.api.client.SortableTrait<ByProjectKeyStoresGet>,
+        com.commercetools.api.client.PagingTrait<ByProjectKeyStoresGet>,
+        com.commercetools.api.client.QueryTrait<ByProjectKeyStoresGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresGet>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStoresGet> {
 
-    
     private String projectKey;
-    
 
     public ByProjectKeyStoresGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -54,112 +42,116 @@ public class ByProjectKeyStoresGet extends ApiMethod<ByProjectKeyStoresGet, com.
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/stores", this.projectKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse>> execute(final ApiHttpClient client){
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.store.StorePagedQueryResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
+            com.commercetools.api.models.store.StorePagedQueryResponse.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
-    
+
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
-    
+
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-    
+
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
-    
+
     public List<String> getWhere() {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyStoresGet withExpand(final String expand){
+    public ByProjectKeyStoresGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyStoresGet addExpand(final String expand){
+
+    public ByProjectKeyStoresGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyStoresGet withSort(final String sort){
+
+    public ByProjectKeyStoresGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyStoresGet addSort(final String sort){
+
+    public ByProjectKeyStoresGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyStoresGet withLimit(final int limit){
+
+    public ByProjectKeyStoresGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyStoresGet addLimit(final int limit){
+
+    public ByProjectKeyStoresGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyStoresGet withOffset(final int offset){
+
+    public ByProjectKeyStoresGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyStoresGet addOffset(final int offset){
+
+    public ByProjectKeyStoresGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyStoresGet withWithTotal(final boolean withTotal){
+
+    public ByProjectKeyStoresGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
-    
-    public ByProjectKeyStoresGet addWithTotal(final boolean withTotal){
+
+    public ByProjectKeyStoresGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
-    
-    public ByProjectKeyStoresGet withWhere(final String where){
+
+    public ByProjectKeyStoresGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
     }
-    
-    public ByProjectKeyStoresGet addWhere(final String where){
+
+    public ByProjectKeyStoresGet addWhere(final String where) {
         return copy().addQueryParam("where", where);
     }
 
-    public ByProjectKeyStoresGet withPredicateVar(final String varName, final String predicateVar){
+    public ByProjectKeyStoresGet withPredicateVar(final String varName, final String predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
-    
-    public ByProjectKeyStoresGet addPredicateVar(final String varName, final String predicateVar){
+
+    public ByProjectKeyStoresGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
-    
-    
 
     @Override
-    protected ByProjectKeyStoresGet copy()
-    {
+    protected ByProjectKeyStoresGet copy() {
         return new ByProjectKeyStoresGet(this);
     }
 }

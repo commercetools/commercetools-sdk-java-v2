@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.tax_category;
 
-import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
-import com.commercetools.api.models.tax_category.TaxRateDraft;
-import com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxCategoryReplaceTaxRateActionBuilder {
 
-    
-    
     private String taxRateId;
-    
-    
-    
+
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
-    
-    public TaxCategoryReplaceTaxRateActionBuilder taxRateId( final String taxRateId) {
+    public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
         return this;
     }
-    
-    
-    public TaxCategoryReplaceTaxRateActionBuilder taxRate( final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
+
+    public TaxCategoryReplaceTaxRateActionBuilder taxRate(
+            final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRate = taxRate;
         return this;
     }
 
-    
-    
-    public String getTaxRateId(){
+    public String getTaxRateId() {
         return this.taxRateId;
     }
-    
-    
-    
-    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
+
+    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }
 

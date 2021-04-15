@@ -1,79 +1,54 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductData;
-import com.commercetools.api.models.product.ProductCatalogData;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductCatalogDataBuilder {
 
-    
-    
     private Boolean published;
-    
-    
-    
+
     private com.commercetools.api.models.product.ProductData current;
-    
-    
-    
+
     private com.commercetools.api.models.product.ProductData staged;
-    
-    
-    
+
     private Boolean hasStagedChanges;
 
-    
-    public ProductCatalogDataBuilder published( final Boolean published) {
+    public ProductCatalogDataBuilder published(final Boolean published) {
         this.published = published;
         return this;
     }
-    
-    
-    public ProductCatalogDataBuilder current( final com.commercetools.api.models.product.ProductData current) {
+
+    public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
         this.current = current;
         return this;
     }
-    
-    
-    public ProductCatalogDataBuilder staged( final com.commercetools.api.models.product.ProductData staged) {
+
+    public ProductCatalogDataBuilder staged(final com.commercetools.api.models.product.ProductData staged) {
         this.staged = staged;
         return this;
     }
-    
-    
-    public ProductCatalogDataBuilder hasStagedChanges( final Boolean hasStagedChanges) {
+
+    public ProductCatalogDataBuilder hasStagedChanges(final Boolean hasStagedChanges) {
         this.hasStagedChanges = hasStagedChanges;
         return this;
     }
 
-    
-    
-    public Boolean getPublished(){
+    public Boolean getPublished() {
         return this.published;
     }
-    
-    
-    
-    public com.commercetools.api.models.product.ProductData getCurrent(){
+
+    public com.commercetools.api.models.product.ProductData getCurrent() {
         return this.current;
     }
-    
-    
-    
-    public com.commercetools.api.models.product.ProductData getStaged(){
+
+    public com.commercetools.api.models.product.ProductData getStaged() {
         return this.staged;
     }
-    
-    
-    
-    public Boolean getHasStagedChanges(){
+
+    public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
     }
 

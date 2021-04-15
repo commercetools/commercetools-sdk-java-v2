@@ -1,49 +1,34 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingRateDraft;
-import com.commercetools.api.models.zone.ZoneResourceIdentifier;
-import com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShippingMethodAddShippingRateActionBuilder {
 
-    
-    
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
-    
-    
-    
+
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
-    
-    public ShippingMethodAddShippingRateActionBuilder zone( final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
+    public ShippingMethodAddShippingRateActionBuilder zone(
+            final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
         return this;
     }
-    
-    
-    public ShippingMethodAddShippingRateActionBuilder shippingRate( final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
+
+    public ShippingMethodAddShippingRateActionBuilder shippingRate(
+            final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.shippingRate = shippingRate;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
+    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;
     }
-    
-    
-    
-    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate(){
+
+    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
 

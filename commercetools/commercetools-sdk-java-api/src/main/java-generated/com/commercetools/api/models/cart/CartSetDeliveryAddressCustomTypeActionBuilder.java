@@ -1,64 +1,47 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartSetDeliveryAddressCustomTypeActionBuilder {
 
-    
-    
     private String deliveryId;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private java.lang.Object value;
 
-    
-    public CartSetDeliveryAddressCustomTypeActionBuilder deliveryId( final String deliveryId) {
+    public CartSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-    
-    
-    public CartSetDeliveryAddressCustomTypeActionBuilder name( final String name) {
+
+    public CartSetDeliveryAddressCustomTypeActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public CartSetDeliveryAddressCustomTypeActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    
-    
-    public String getDeliveryId(){
+    public String getDeliveryId() {
         return this.deliveryId;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getValue(){
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -70,7 +53,8 @@ public final class CartSetDeliveryAddressCustomTypeActionBuilder {
         return new CartSetDeliveryAddressCustomTypeActionBuilder();
     }
 
-    public static CartSetDeliveryAddressCustomTypeActionBuilder of(final CartSetDeliveryAddressCustomTypeAction template) {
+    public static CartSetDeliveryAddressCustomTypeActionBuilder of(
+            final CartSetDeliveryAddressCustomTypeAction template) {
         CartSetDeliveryAddressCustomTypeActionBuilder builder = new CartSetDeliveryAddressCustomTypeActionBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.name = template.getName();

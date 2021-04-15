@@ -1,134 +1,105 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.customer_group.CustomerGroupReference;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.MatchingPriceNotFoundError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MatchingPriceNotFoundErrorBuilder {
 
-    
-    
     private String message;
-    
-    
-    
+
     private String productId;
-    
-    
-    
+
     private Integer variantId;
-    
-    
+
     @Nullable
     private String currency;
-    
-    
+
     @Nullable
     private String country;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference channel;
 
-    
-    public MatchingPriceNotFoundErrorBuilder message( final String message) {
+    public MatchingPriceNotFoundErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public MatchingPriceNotFoundErrorBuilder productId( final String productId) {
+
+    public MatchingPriceNotFoundErrorBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
-    
-    
-    public MatchingPriceNotFoundErrorBuilder variantId( final Integer variantId) {
+
+    public MatchingPriceNotFoundErrorBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    
+
     public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
         this.currency = currency;
         return this;
     }
-    
-    
+
     public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
-    
-    
-    public MatchingPriceNotFoundErrorBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+
+    public MatchingPriceNotFoundErrorBuilder customerGroup(
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
-    
-    
-    public MatchingPriceNotFoundErrorBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
+
+    public MatchingPriceNotFoundErrorBuilder channel(
+            @Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    
-    public String getProductId(){
+
+    public String getProductId() {
         return this.productId;
     }
-    
-    
-    
-    public Integer getVariantId(){
+
+    public Integer getVariantId() {
         return this.variantId;
     }
-    
-    
+
     @Nullable
-    public String getCurrency(){
+    public String getCurrency() {
         return this.currency;
     }
-    
-    
+
     @Nullable
-    public String getCountry(){
+    public String getCountry() {
         return this.country;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getChannel(){
+    public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
     public MatchingPriceNotFoundError build() {
-        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup, channel);
+        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
+            channel);
     }
 
     public static MatchingPriceNotFoundErrorBuilder of() {

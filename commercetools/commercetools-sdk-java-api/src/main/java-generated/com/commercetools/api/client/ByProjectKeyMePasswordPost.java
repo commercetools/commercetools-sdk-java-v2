@@ -1,41 +1,26 @@
+
 package com.commercetools.api.client;
-
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
-
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
-import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import io.vrap.rmf.base.client.*;
-
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePasswordPost, com.commercetools.api.models.me.MyCustomer> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePasswordPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePasswordPost> {
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-    
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyMePasswordPost
+        extends ApiMethod<ByProjectKeyMePasswordPost, com.commercetools.api.models.me.MyCustomer>
+        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePasswordPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePasswordPost> {
+
     private String projectKey;
-    
+
     private Object obj;
 
     public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey, Object obj) {
@@ -54,40 +39,42 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/password", this.projectKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(obj);
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-    } catch(Exception e) {
-        e.printStackTrace();
-    }
-    
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(obj);
+            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(
+            final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
-
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-
-
-    
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
     @Override
-    protected ByProjectKeyMePasswordPost copy()
-    {
+    protected ByProjectKeyMePasswordPost copy() {
         return new ByProjectKeyMePasswordPost(this);
     }
 }

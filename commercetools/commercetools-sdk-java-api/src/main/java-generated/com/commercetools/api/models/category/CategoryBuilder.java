@@ -1,343 +1,265 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryReference;
-import com.commercetools.api.models.common.Asset;
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFields;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.category.Category;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryBuilder {
 
-    
-    
     private String id;
-    
-    
-    
+
     private Long version;
-    
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString slug;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.category.CategoryReference parent;
-    
-    
-    
+
     private String orderHint;
-    
-    
+
     @Nullable
     private String externalId;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-    
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Asset> assets;
-    
-    
+
     @Nullable
     private String key;
 
-    
-    public CategoryBuilder id( final String id) {
+    public CategoryBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    
-    public CategoryBuilder version( final Long version) {
+
+    public CategoryBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public CategoryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public CategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    
-    public CategoryBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public CategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    
-    public CategoryBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public CategoryBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
-    
+
     public CategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
-    
-    public CategoryBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public CategoryBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    
-    public CategoryBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
+
+    public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-    
-    
-    public CategoryBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public CategoryBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
-    
-    public CategoryBuilder ancestors( final com.commercetools.api.models.category.CategoryReference ...ancestors) {
+
+    public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
         this.ancestors = new ArrayList<>(Arrays.asList(ancestors));
         return this;
     }
-    
-    
-    public CategoryBuilder ancestors( final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
+
+    public CategoryBuilder ancestors(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
         this.ancestors = ancestors;
         return this;
     }
-    
-    
+
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
         this.parent = parent;
         return this;
     }
-    
-    
-    public CategoryBuilder orderHint( final String orderHint) {
+
+    public CategoryBuilder orderHint(final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
-    
-    
+
     public CategoryBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
-    
-    
+
     public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
-    
-    
-    public CategoryBuilder metaDescription(@Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+
+    public CategoryBuilder metaDescription(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
-    
-    
-    public CategoryBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+
+    public CategoryBuilder metaKeywords(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
-    
-    
+
     public CategoryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-    
-    
-    public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset ...assets) {
+
+    public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
-    
-    
+
     public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
         this.assets = assets;
         return this;
     }
-    
-    
+
     public CategoryBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
-    
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getSlug(){
+
+    public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.category.CategoryReference> getAncestors(){
+
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getAncestors() {
         return this.ancestors;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.category.CategoryReference getParent(){
+    public com.commercetools.api.models.category.CategoryReference getParent() {
         return this.parent;
     }
-    
-    
-    
-    public String getOrderHint(){
+
+    public String getOrderHint() {
         return this.orderHint;
     }
-    
-    
+
     @Nullable
-    public String getExternalId(){
+    public String getExternalId() {
         return this.externalId;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
-    
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Asset> getAssets(){
+    public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;
     }
-    
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 
     public Category build() {
-        return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug, description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom, assets, key);
+        return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
+            description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
+            assets, key);
     }
 
     public static CategoryBuilder of() {

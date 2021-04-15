@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShippingMethodChangeIsDefaultActionBuilder {
 
-    
-    
     private Boolean isDefault;
 
-    
-    public ShippingMethodChangeIsDefaultActionBuilder isDefault( final Boolean isDefault) {
+    public ShippingMethodChangeIsDefaultActionBuilder isDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
 
-    
-    
-    public Boolean getIsDefault(){
+    public Boolean getIsDefault() {
         return this.isDefault;
     }
 

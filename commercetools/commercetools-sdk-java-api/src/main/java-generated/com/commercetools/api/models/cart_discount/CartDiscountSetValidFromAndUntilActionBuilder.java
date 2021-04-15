@@ -1,48 +1,39 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartDiscountSetValidFromAndUntilActionBuilder {
 
-    
     @Nullable
     private java.time.ZonedDateTime validFrom;
-    
-    
+
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
-    
     public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-    
-    
-    public CartDiscountSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+
+    public CartDiscountSetValidFromAndUntilActionBuilder validUntil(
+            @Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
 
-    
     @Nullable
-    public java.time.ZonedDateTime getValidFrom(){
+    public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
-    
-    
+
     @Nullable
-    public java.time.ZonedDateTime getValidUntil(){
+    public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
@@ -54,7 +45,8 @@ public final class CartDiscountSetValidFromAndUntilActionBuilder {
         return new CartDiscountSetValidFromAndUntilActionBuilder();
     }
 
-    public static CartDiscountSetValidFromAndUntilActionBuilder of(final CartDiscountSetValidFromAndUntilAction template) {
+    public static CartDiscountSetValidFromAndUntilActionBuilder of(
+            final CartDiscountSetValidFromAndUntilAction template) {
         CartDiscountSetValidFromAndUntilActionBuilder builder = new CartDiscountSetValidFromAndUntilActionBuilder();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();

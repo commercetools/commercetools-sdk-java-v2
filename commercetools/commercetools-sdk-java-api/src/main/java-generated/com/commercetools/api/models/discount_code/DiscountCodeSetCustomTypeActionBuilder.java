@@ -1,49 +1,40 @@
+
 package com.commercetools.api.models.discount_code;
 
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountCodeSetCustomTypeActionBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    
-    public DiscountCodeSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    public DiscountCodeSetCustomTypeActionBuilder type(
+            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-    
-    
-    public DiscountCodeSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+
+    public DiscountCodeSetCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields(){
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

@@ -1,81 +1,63 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.error.ErrorObject;
-import java.lang.Object;
-import com.commercetools.api.models.error.DuplicateFieldError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DuplicateFieldErrorBuilder {
 
-    
-    
     private String message;
-    
-    
+
     @Nullable
     private String field;
-    
-    
+
     @Nullable
     private java.lang.Object duplicateValue;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.Reference conflictingResource;
 
-    
-    public DuplicateFieldErrorBuilder message( final String message) {
+    public DuplicateFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
+
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
         this.field = field;
         return this;
     }
-    
-    
+
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
         return this;
     }
-    
-    
-    public DuplicateFieldErrorBuilder conflictingResource(@Nullable final com.commercetools.api.models.common.Reference conflictingResource) {
+
+    public DuplicateFieldErrorBuilder conflictingResource(
+            @Nullable final com.commercetools.api.models.common.Reference conflictingResource) {
         this.conflictingResource = conflictingResource;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
+
     @Nullable
-    public String getField(){
+    public String getField() {
         return this.field;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getDuplicateValue(){
+    public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.Reference getConflictingResource(){
+    public com.commercetools.api.models.common.Reference getConflictingResource() {
         return this.conflictingResource;
     }
 

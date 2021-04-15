@@ -1,24 +1,19 @@
+
 package com.commercetools.api.models.discount_code;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
+import javax.validation.Valid;
+
+import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
@@ -31,14 +26,11 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
-    
     public void setName(final LocalizedString name);
-    
 
-    public static DiscountCodeSetNameAction of(){
+    public static DiscountCodeSetNameAction of() {
         return new DiscountCodeSetNameActionImpl();
     }
-    
 
     public static DiscountCodeSetNameAction of(final DiscountCodeSetNameAction template) {
         DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
@@ -46,14 +38,13 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
         return instance;
     }
 
-    public static DiscountCodeSetNameActionBuilder builder(){
+    public static DiscountCodeSetNameActionBuilder builder() {
         return DiscountCodeSetNameActionBuilder.of();
     }
-    
-    public static DiscountCodeSetNameActionBuilder builder(final DiscountCodeSetNameAction template){
+
+    public static DiscountCodeSetNameActionBuilder builder(final DiscountCodeSetNameAction template) {
         return DiscountCodeSetNameActionBuilder.of(template);
     }
-    
 
     default <T> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
         return helper.apply(this);

@@ -1,59 +1,47 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.ProductImageAddedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.Image;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductImageAddedMessageImpl.class)
 public interface ProductImageAddedMessage extends Message {
 
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
-    
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("image")
     public Image getImage();
-    
+
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setVariantId(final Long variantId);
-    
-    
-    
-    public void setImage(final Image image);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductImageAddedMessage of(){
+    public void setImage(final Image image);
+
+    public void setStaged(final Boolean staged);
+
+    public static ProductImageAddedMessage of() {
         return new ProductImageAddedMessageImpl();
     }
-    
 
     public static ProductImageAddedMessage of(final ProductImageAddedMessage template) {
         ProductImageAddedMessageImpl instance = new ProductImageAddedMessageImpl();
@@ -73,14 +61,13 @@ public interface ProductImageAddedMessage extends Message {
         return instance;
     }
 
-    public static ProductImageAddedMessageBuilder builder(){
+    public static ProductImageAddedMessageBuilder builder() {
         return ProductImageAddedMessageBuilder.of();
     }
-    
-    public static ProductImageAddedMessageBuilder builder(final ProductImageAddedMessage template){
+
+    public static ProductImageAddedMessageBuilder builder(final ProductImageAddedMessage template) {
         return ProductImageAddedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
         return helper.apply(this);

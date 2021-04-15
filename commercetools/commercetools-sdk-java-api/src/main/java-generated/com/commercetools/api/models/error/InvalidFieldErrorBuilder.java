@@ -1,86 +1,63 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import java.lang.Object;
-import com.commercetools.api.models.error.InvalidFieldError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InvalidFieldErrorBuilder {
 
-    
-    
     private String message;
-    
-    
-    
+
     private String field;
-    
-    
-    
+
     private java.lang.Object invalidValue;
-    
-    
+
     @Nullable
     private java.util.List<java.lang.Object> allowedValues;
 
-    
-    public InvalidFieldErrorBuilder message( final String message) {
+    public InvalidFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public InvalidFieldErrorBuilder field( final String field) {
+
+    public InvalidFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
-    
-    
-    public InvalidFieldErrorBuilder invalidValue( final java.lang.Object invalidValue) {
+
+    public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
-    
-    
-    public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object ...allowedValues) {
+
+    public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
-    
-    
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    
-    public String getField(){
+
+    public String getField() {
         return this.field;
     }
-    
-    
-    
-    public java.lang.Object getInvalidValue(){
+
+    public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
-    
-    
+
     @Nullable
-    public java.util.List<java.lang.Object> getAllowedValues(){
+    public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;
     }
 

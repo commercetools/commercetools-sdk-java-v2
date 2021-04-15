@@ -1,31 +1,25 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.payment.PaymentUpdateAction;
-import com.commercetools.api.models.payment.PaymentSetAnonymousIdAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentSetAnonymousIdActionBuilder {
 
-    
     @Nullable
     private String anonymousId;
 
-    
     public PaymentSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
-    
     @Nullable
-    public String getAnonymousId(){
+    public String getAnonymousId() {
         return this.anonymousId;
     }
 

@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderDiscountCodeAddedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeAddedMessageImpl.class)
 public interface OrderDiscountCodeAddedMessage extends Message {
 
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
-    
     @NotNull
     @Valid
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
-    
     public void setDiscountCode(final DiscountCodeReference discountCode);
-    
 
-    public static OrderDiscountCodeAddedMessage of(){
+    public static OrderDiscountCodeAddedMessage of() {
         return new OrderDiscountCodeAddedMessageImpl();
     }
-    
 
     public static OrderDiscountCodeAddedMessage of(final OrderDiscountCodeAddedMessage template) {
         OrderDiscountCodeAddedMessageImpl instance = new OrderDiscountCodeAddedMessageImpl();
@@ -55,14 +47,13 @@ public interface OrderDiscountCodeAddedMessage extends Message {
         return instance;
     }
 
-    public static OrderDiscountCodeAddedMessageBuilder builder(){
+    public static OrderDiscountCodeAddedMessageBuilder builder() {
         return OrderDiscountCodeAddedMessageBuilder.of();
     }
-    
-    public static OrderDiscountCodeAddedMessageBuilder builder(final OrderDiscountCodeAddedMessage template){
+
+    public static OrderDiscountCodeAddedMessageBuilder builder(final OrderDiscountCodeAddedMessage template) {
         return OrderDiscountCodeAddedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderDiscountCodeAddedMessage(Function<OrderDiscountCodeAddedMessage, T> helper) {
         return helper.apply(this);

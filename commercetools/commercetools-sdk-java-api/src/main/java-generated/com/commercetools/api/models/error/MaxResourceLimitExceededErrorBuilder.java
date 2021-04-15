@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.MaxResourceLimitExceededError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MaxResourceLimitExceededErrorBuilder {
 
-    
-    
     private String message;
-    
-    
-    
+
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
-    
-    public MaxResourceLimitExceededErrorBuilder message( final String message) {
+    public MaxResourceLimitExceededErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public MaxResourceLimitExceededErrorBuilder exceededResource( final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
+
+    public MaxResourceLimitExceededErrorBuilder exceededResource(
+            final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.exceededResource = exceededResource;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.ReferenceTypeId getExceededResource(){
+
+    public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {
         return this.exceededResource;
     }
 

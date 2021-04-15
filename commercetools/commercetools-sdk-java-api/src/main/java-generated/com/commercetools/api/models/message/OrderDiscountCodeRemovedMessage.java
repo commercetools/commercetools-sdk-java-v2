@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderDiscountCodeRemovedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessageImpl.class)
 public interface OrderDiscountCodeRemovedMessage extends Message {
 
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
-    
     @NotNull
     @Valid
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
-    
     public void setDiscountCode(final DiscountCodeReference discountCode);
-    
 
-    public static OrderDiscountCodeRemovedMessage of(){
+    public static OrderDiscountCodeRemovedMessage of() {
         return new OrderDiscountCodeRemovedMessageImpl();
     }
-    
 
     public static OrderDiscountCodeRemovedMessage of(final OrderDiscountCodeRemovedMessage template) {
         OrderDiscountCodeRemovedMessageImpl instance = new OrderDiscountCodeRemovedMessageImpl();
@@ -55,14 +47,13 @@ public interface OrderDiscountCodeRemovedMessage extends Message {
         return instance;
     }
 
-    public static OrderDiscountCodeRemovedMessageBuilder builder(){
+    public static OrderDiscountCodeRemovedMessageBuilder builder() {
         return OrderDiscountCodeRemovedMessageBuilder.of();
     }
-    
-    public static OrderDiscountCodeRemovedMessageBuilder builder(final OrderDiscountCodeRemovedMessage template){
+
+    public static OrderDiscountCodeRemovedMessageBuilder builder(final OrderDiscountCodeRemovedMessage template) {
         return OrderDiscountCodeRemovedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderDiscountCodeRemovedMessage(Function<OrderDiscountCodeRemovedMessage, T> helper) {
         return helper.apply(this);

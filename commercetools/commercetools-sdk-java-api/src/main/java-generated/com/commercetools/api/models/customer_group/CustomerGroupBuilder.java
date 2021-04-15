@@ -1,168 +1,126 @@
+
 package com.commercetools.api.models.customer_group;
 
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.type.CustomFields;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.customer_group.CustomerGroup;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerGroupBuilder {
 
-    
-    
     private String id;
-    
-    
-    
+
     private Long version;
-    
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
-    
+
     @Nullable
     private String key;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
-    
-    public CustomerGroupBuilder id( final String id) {
+    public CustomerGroupBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    
-    public CustomerGroupBuilder version( final Long version) {
+
+    public CustomerGroupBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public CustomerGroupBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public CustomerGroupBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    
-    public CustomerGroupBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public CustomerGroupBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    
-    public CustomerGroupBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public CustomerGroupBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
-    
+
     public CustomerGroupBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
-    
+
     public CustomerGroupBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    
-    public CustomerGroupBuilder name( final String name) {
+
+    public CustomerGroupBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public CustomerGroupBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
-    
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     public CustomerGroup build() {
-        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, custom);
+        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            custom);
     }
 
     public static CustomerGroupBuilder of() {

@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.subscription;
 
-import com.commercetools.api.models.subscription.Destination;
-import com.commercetools.api.models.subscription.IronMqDestination;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class IronMqDestinationBuilder {
 
-    
-    
     private String uri;
 
-    
-    public IronMqDestinationBuilder uri( final String uri) {
+    public IronMqDestinationBuilder uri(final String uri) {
         this.uri = uri;
         return this;
     }
 
-    
-    
-    public String getUri(){
+    public String getUri() {
         return this.uri;
     }
 

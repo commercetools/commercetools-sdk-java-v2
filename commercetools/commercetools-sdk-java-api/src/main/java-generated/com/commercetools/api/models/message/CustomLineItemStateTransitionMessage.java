@@ -1,77 +1,61 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.state.StateReference;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.message.CustomLineItemStateTransitionMessageImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.state.StateReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemStateTransitionMessageImpl.class)
 public interface CustomLineItemStateTransitionMessage extends Message {
 
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
-    
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-    
+
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
-    
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-    
+
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
-    
+
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateReference getToState();
 
-    
     public void setCustomLineItemId(final String customLineItemId);
-    
-    
-    
-    public void setTransitionDate(final ZonedDateTime transitionDate);
-    
-    
-    
-    public void setQuantity(final Long quantity);
-    
-    
-    
-    public void setFromState(final StateReference fromState);
-    
-    
-    
-    public void setToState(final StateReference toState);
-    
 
-    public static CustomLineItemStateTransitionMessage of(){
+    public void setTransitionDate(final ZonedDateTime transitionDate);
+
+    public void setQuantity(final Long quantity);
+
+    public void setFromState(final StateReference fromState);
+
+    public void setToState(final StateReference toState);
+
+    public static CustomLineItemStateTransitionMessage of() {
         return new CustomLineItemStateTransitionMessageImpl();
     }
-    
 
     public static CustomLineItemStateTransitionMessage of(final CustomLineItemStateTransitionMessage template) {
         CustomLineItemStateTransitionMessageImpl instance = new CustomLineItemStateTransitionMessageImpl();
@@ -93,14 +77,14 @@ public interface CustomLineItemStateTransitionMessage extends Message {
         return instance;
     }
 
-    public static CustomLineItemStateTransitionMessageBuilder builder(){
+    public static CustomLineItemStateTransitionMessageBuilder builder() {
         return CustomLineItemStateTransitionMessageBuilder.of();
     }
-    
-    public static CustomLineItemStateTransitionMessageBuilder builder(final CustomLineItemStateTransitionMessage template){
+
+    public static CustomLineItemStateTransitionMessageBuilder builder(
+            final CustomLineItemStateTransitionMessage template) {
         return CustomLineItemStateTransitionMessageBuilder.of(template);
     }
-    
 
     default <T> T withCustomLineItemStateTransitionMessage(Function<CustomLineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);

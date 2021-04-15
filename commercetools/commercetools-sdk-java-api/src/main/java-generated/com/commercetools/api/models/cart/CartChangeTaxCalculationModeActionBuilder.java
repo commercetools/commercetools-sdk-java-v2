@@ -1,32 +1,22 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.TaxCalculationMode;
-import com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartChangeTaxCalculationModeActionBuilder {
 
-    
-    
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
-    
-    public CartChangeTaxCalculationModeActionBuilder taxCalculationMode( final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+    public CartChangeTaxCalculationModeActionBuilder taxCalculationMode(
+            final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
         this.taxCalculationMode = taxCalculationMode;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 

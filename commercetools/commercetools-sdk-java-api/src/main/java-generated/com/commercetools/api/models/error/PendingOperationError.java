@@ -1,34 +1,24 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.PendingOperationErrorImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PendingOperationErrorImpl.class)
 public interface PendingOperationError extends ErrorObject {
 
     String PENDING_OPERATION = "PendingOperation";
 
-
-
-    public static PendingOperationError of(){
+    public static PendingOperationError of() {
         return new PendingOperationErrorImpl();
     }
-    
 
     public static PendingOperationError of(final PendingOperationError template) {
         PendingOperationErrorImpl instance = new PendingOperationErrorImpl();
@@ -36,14 +26,13 @@ public interface PendingOperationError extends ErrorObject {
         return instance;
     }
 
-    public static PendingOperationErrorBuilder builder(){
+    public static PendingOperationErrorBuilder builder() {
         return PendingOperationErrorBuilder.of();
     }
-    
-    public static PendingOperationErrorBuilder builder(final PendingOperationError template){
+
+    public static PendingOperationErrorBuilder builder(final PendingOperationError template) {
         return PendingOperationErrorBuilder.of(template);
     }
-    
 
     default <T> T withPendingOperationError(Function<PendingOperationError, T> helper) {
         return helper.apply(this);

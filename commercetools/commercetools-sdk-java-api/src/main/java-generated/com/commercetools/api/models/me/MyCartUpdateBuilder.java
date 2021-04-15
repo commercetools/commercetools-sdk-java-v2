@@ -1,53 +1,38 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.me.MyCartUpdate;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCartUpdateBuilder {
 
-    
-    
     private Long version;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions;
 
-    
-    public MyCartUpdateBuilder version( final Long version) {
+    public MyCartUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public MyCartUpdateBuilder actions( final com.commercetools.api.models.me.MyCartUpdateAction ...actions) {
+
+    public MyCartUpdateBuilder actions(final com.commercetools.api.models.me.MyCartUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    
-    public MyCartUpdateBuilder actions( final java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions) {
+
+    public MyCartUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> getActions() {
         return this.actions;
     }
 

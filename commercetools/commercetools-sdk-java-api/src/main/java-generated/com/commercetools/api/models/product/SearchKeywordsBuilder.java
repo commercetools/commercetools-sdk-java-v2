@@ -1,41 +1,31 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.SearchKeyword;
-import com.commercetools.api.models.product.SearchKeywords;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SearchKeywordsBuilder {
 
-    
-    
     private Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values;
 
-    
-    public SearchKeywordsBuilder values( final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values){
+    public SearchKeywordsBuilder values(
+            final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
         this.values = values;
         return this;
     }
-    
-    
-    public SearchKeywordsBuilder addValue(final String key, final java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
+
+    public SearchKeywordsBuilder addValue(final String key,
+            final java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
-    
 
-    
-    
-    public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> getValues(){
+    public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> getValues() {
         return this.values;
     }
 

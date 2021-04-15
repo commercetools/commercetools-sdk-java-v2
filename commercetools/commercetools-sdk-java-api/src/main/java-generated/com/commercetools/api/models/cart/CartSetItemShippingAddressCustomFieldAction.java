@@ -1,60 +1,46 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartSetItemShippingAddressCustomFieldActionImpl.class)
 public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateAction {
 
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD = "setItemShippingAddressCustomField";
 
-    
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
-    
+
     @NotNull
     @JsonProperty("name")
     public String getName();
-    
-    
+
     @JsonProperty("value")
     public Object getValue();
 
-    
     public void setAddressKey(final String addressKey);
-    
-    
-    
-    public void setName(final String name);
-    
-    
-    
-    public void setValue(final Object value);
-    
 
-    public static CartSetItemShippingAddressCustomFieldAction of(){
+    public void setName(final String name);
+
+    public void setValue(final Object value);
+
+    public static CartSetItemShippingAddressCustomFieldAction of() {
         return new CartSetItemShippingAddressCustomFieldActionImpl();
     }
-    
 
-    public static CartSetItemShippingAddressCustomFieldAction of(final CartSetItemShippingAddressCustomFieldAction template) {
+    public static CartSetItemShippingAddressCustomFieldAction of(
+            final CartSetItemShippingAddressCustomFieldAction template) {
         CartSetItemShippingAddressCustomFieldActionImpl instance = new CartSetItemShippingAddressCustomFieldActionImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setName(template.getName());
@@ -62,16 +48,17 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
         return instance;
     }
 
-    public static CartSetItemShippingAddressCustomFieldActionBuilder builder(){
+    public static CartSetItemShippingAddressCustomFieldActionBuilder builder() {
         return CartSetItemShippingAddressCustomFieldActionBuilder.of();
     }
-    
-    public static CartSetItemShippingAddressCustomFieldActionBuilder builder(final CartSetItemShippingAddressCustomFieldAction template){
+
+    public static CartSetItemShippingAddressCustomFieldActionBuilder builder(
+            final CartSetItemShippingAddressCustomFieldAction template) {
         return CartSetItemShippingAddressCustomFieldActionBuilder.of(template);
     }
-    
 
-    default <T> T withCartSetItemShippingAddressCustomFieldAction(Function<CartSetItemShippingAddressCustomFieldAction, T> helper) {
+    default <T> T withCartSetItemShippingAddressCustomFieldAction(
+            Function<CartSetItemShippingAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

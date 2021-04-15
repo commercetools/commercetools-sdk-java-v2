@@ -1,50 +1,42 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.inventory.InventoryEntryUpdateImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryUpdateImpl.class)
-public interface InventoryEntryUpdate extends com.commercetools.api.models.ResourceUpdate<InventoryEntryUpdate, InventoryEntryUpdateAction> {
+public interface InventoryEntryUpdate
+        extends com.commercetools.api.models.ResourceUpdate<InventoryEntryUpdate, InventoryEntryUpdateAction> {
 
-
-    
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-    
+
     @NotNull
     @Valid
     @JsonProperty("actions")
     public List<InventoryEntryUpdateAction> getActions();
 
-    
     public void setVersion(final Long version);
-    
-    
-    
+
     @JsonIgnore
-    public void setActions(final InventoryEntryUpdateAction ...actions);
+    public void setActions(final InventoryEntryUpdateAction... actions);
+
     public void setActions(final List<InventoryEntryUpdateAction> actions);
 
-    public static InventoryEntryUpdate of(){
+    public static InventoryEntryUpdate of() {
         return new InventoryEntryUpdateImpl();
     }
-    
 
     public static InventoryEntryUpdate of(final InventoryEntryUpdate template) {
         InventoryEntryUpdateImpl instance = new InventoryEntryUpdateImpl();
@@ -53,14 +45,13 @@ public interface InventoryEntryUpdate extends com.commercetools.api.models.Resou
         return instance;
     }
 
-    public static InventoryEntryUpdateBuilder builder(){
+    public static InventoryEntryUpdateBuilder builder() {
         return InventoryEntryUpdateBuilder.of();
     }
-    
-    public static InventoryEntryUpdateBuilder builder(final InventoryEntryUpdate template){
+
+    public static InventoryEntryUpdateBuilder builder(final InventoryEntryUpdate template) {
         return InventoryEntryUpdateBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntryUpdate(Function<InventoryEntryUpdate, T> helper) {
         return helper.apply(this);

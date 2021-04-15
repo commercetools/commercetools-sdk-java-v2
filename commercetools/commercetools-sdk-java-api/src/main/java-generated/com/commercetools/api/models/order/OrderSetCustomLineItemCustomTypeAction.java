@@ -1,59 +1,47 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderSetCustomLineItemCustomTypeActionImpl.class)
 public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateAction {
 
     String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE = "setCustomLineItemCustomType";
 
-    
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-    
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-    
+
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setCustomLineItemId(final String customLineItemId);
-    
-    
-    
-    public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static OrderSetCustomLineItemCustomTypeAction of(){
+    public void setType(final TypeResourceIdentifier type);
+
+    public void setFields(final FieldContainer fields);
+
+    public static OrderSetCustomLineItemCustomTypeAction of() {
         return new OrderSetCustomLineItemCustomTypeActionImpl();
     }
-    
 
     public static OrderSetCustomLineItemCustomTypeAction of(final OrderSetCustomLineItemCustomTypeAction template) {
         OrderSetCustomLineItemCustomTypeActionImpl instance = new OrderSetCustomLineItemCustomTypeActionImpl();
@@ -63,16 +51,17 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
         return instance;
     }
 
-    public static OrderSetCustomLineItemCustomTypeActionBuilder builder(){
+    public static OrderSetCustomLineItemCustomTypeActionBuilder builder() {
         return OrderSetCustomLineItemCustomTypeActionBuilder.of();
     }
-    
-    public static OrderSetCustomLineItemCustomTypeActionBuilder builder(final OrderSetCustomLineItemCustomTypeAction template){
+
+    public static OrderSetCustomLineItemCustomTypeActionBuilder builder(
+            final OrderSetCustomLineItemCustomTypeAction template) {
         return OrderSetCustomLineItemCustomTypeActionBuilder.of(template);
     }
-    
 
-    default <T> T withOrderSetCustomLineItemCustomTypeAction(Function<OrderSetCustomLineItemCustomTypeAction, T> helper) {
+    default <T> T withOrderSetCustomLineItemCustomTypeAction(
+            Function<OrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

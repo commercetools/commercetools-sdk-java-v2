@@ -1,153 +1,118 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
-import com.commercetools.api.models.cart.CustomLineItemDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomLineItemDraftBuilder {
 
-    
-    
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
-    
+
     private Long quantity;
-    
-    
-    
+
     private com.commercetools.api.models.common.Money money;
-    
-    
-    
+
     private String slug;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
-    
-    public CustomLineItemDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+    public CustomLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder quantity( final Long quantity) {
+
+    public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder money( final com.commercetools.api.models.common.Money money) {
+
+    public CustomLineItemDraftBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder slug( final String slug) {
+
+    public CustomLineItemDraftBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+
+    public CustomLineItemDraftBuilder taxCategory(
+            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+
+    public CustomLineItemDraftBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+
+    public CustomLineItemDraftBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-    
-    
-    public CustomLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+
+    public CustomLineItemDraftBuilder shippingDetails(
+            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
-    
-    public Long getQuantity(){
+
+    public Long getQuantity() {
         return this.quantity;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.Money getMoney(){
+
+    public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
-    
-    
-    
-    public String getSlug(){
+
+    public String getSlug() {
         return this.slug;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
     public CustomLineItemDraft build() {
-        return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom, shippingDetails);
+        return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,
+            shippingDetails);
     }
 
     public static CustomLineItemDraftBuilder of() {

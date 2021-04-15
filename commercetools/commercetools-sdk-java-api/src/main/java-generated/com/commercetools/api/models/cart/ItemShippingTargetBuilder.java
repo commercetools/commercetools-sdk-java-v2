@@ -1,47 +1,32 @@
+
 package com.commercetools.api.models.cart;
 
-
-import com.commercetools.api.models.cart.ItemShippingTarget;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ItemShippingTargetBuilder {
 
-    
-    
     private String addressKey;
-    
-    
-    
+
     private Double quantity;
 
-    
-    public ItemShippingTargetBuilder addressKey( final String addressKey) {
+    public ItemShippingTargetBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-    
-    
-    public ItemShippingTargetBuilder quantity( final Double quantity) {
+
+    public ItemShippingTargetBuilder quantity(final Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    
-    
-    public String getAddressKey(){
+    public String getAddressKey() {
         return this.addressKey;
     }
-    
-    
-    
-    public Double getQuantity(){
+
+    public Double getQuantity() {
         return this.quantity;
     }
 

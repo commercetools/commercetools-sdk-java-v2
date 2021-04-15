@@ -1,31 +1,25 @@
+
 package com.commercetools.api.models.subscription;
 
-import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
-import com.commercetools.api.models.subscription.SubscriptionSetKeyAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SubscriptionSetKeyActionBuilder {
 
-    
     @Nullable
     private String key;
 
-    
     public SubscriptionSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
-    
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

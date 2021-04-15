@@ -1,49 +1,34 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCustomerUpdateAction;
-import com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCustomerAddBillingAddressIdActionImpl.class)
 public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAction {
 
     String ADD_BILLING_ADDRESS_ID = "addBillingAddressId";
 
-    
-    
     @JsonProperty("addressId")
     public String getAddressId();
-    
-    
+
     @JsonProperty("addressKey")
     public String getAddressKey();
 
-    
     public void setAddressId(final String addressId);
-    
-    
-    
-    public void setAddressKey(final String addressKey);
-    
 
-    public static MyCustomerAddBillingAddressIdAction of(){
+    public void setAddressKey(final String addressKey);
+
+    public static MyCustomerAddBillingAddressIdAction of() {
         return new MyCustomerAddBillingAddressIdActionImpl();
     }
-    
 
     public static MyCustomerAddBillingAddressIdAction of(final MyCustomerAddBillingAddressIdAction template) {
         MyCustomerAddBillingAddressIdActionImpl instance = new MyCustomerAddBillingAddressIdActionImpl();
@@ -52,14 +37,14 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
         return instance;
     }
 
-    public static MyCustomerAddBillingAddressIdActionBuilder builder(){
+    public static MyCustomerAddBillingAddressIdActionBuilder builder() {
         return MyCustomerAddBillingAddressIdActionBuilder.of();
     }
-    
-    public static MyCustomerAddBillingAddressIdActionBuilder builder(final MyCustomerAddBillingAddressIdAction template){
+
+    public static MyCustomerAddBillingAddressIdActionBuilder builder(
+            final MyCustomerAddBillingAddressIdAction template) {
         return MyCustomerAddBillingAddressIdActionBuilder.of(template);
     }
-    
 
     default <T> T withMyCustomerAddBillingAddressIdAction(Function<MyCustomerAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);

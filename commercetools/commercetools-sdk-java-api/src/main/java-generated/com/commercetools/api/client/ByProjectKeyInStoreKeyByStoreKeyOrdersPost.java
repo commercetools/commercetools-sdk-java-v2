@@ -1,31 +1,16 @@
+
 package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
 
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Creates an order from a Cart from a specific Store. The {storeKey} path parameter maps to a Store's key.
@@ -33,19 +18,20 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 *  The cart must have a shipping address set before creating an order. When using the Platform TaxMode,
 *  the shipping address is used for tax calculation.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
+        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order>
+        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost> {
 
-    
     private String projectKey;
     private String storeKey;
-    
+
     private com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft;
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost(final ApiHttpClient apiHttpClient, String projectKey,
+            String storeKey, com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
@@ -63,53 +49,62 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends ApiMethod<ByProj
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/orders", this.projectKey, this.storeKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft);
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-    } catch(Exception e) {
-        e.printStackTrace();
-    }
-    
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft);
+            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(
+            final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.order.Order.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
-    public String getStoreKey() {return this.storeKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getStoreKey() {
+        return this.storeKey;
+    }
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-    
-    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost withExpand(final String expand){
+    public void setStoreKey(final String storeKey) {
+        this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost addExpand(final String expand){
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
-    
-
     @Override
-    protected ByProjectKeyInStoreKeyByStoreKeyOrdersPost copy()
-    {
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersPost copy() {
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersPost(this);
     }
 }

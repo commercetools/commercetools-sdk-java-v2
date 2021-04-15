@@ -1,40 +1,30 @@
+
 package com.commercetools.api.models.project;
 
-import com.commercetools.api.models.project.SearchIndexingConfigurationValues;
-import com.commercetools.api.models.project.SearchIndexingConfigurationImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingConfigurationImpl.class)
-public interface SearchIndexingConfiguration  {
+public interface SearchIndexingConfiguration {
 
-
-    
     @Valid
     @JsonProperty("products")
     public SearchIndexingConfigurationValues getProducts();
 
-    
     public void setProducts(final SearchIndexingConfigurationValues products);
-    
 
-    public static SearchIndexingConfiguration of(){
+    public static SearchIndexingConfiguration of() {
         return new SearchIndexingConfigurationImpl();
     }
-    
 
     public static SearchIndexingConfiguration of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
@@ -42,14 +32,13 @@ public interface SearchIndexingConfiguration  {
         return instance;
     }
 
-    public static SearchIndexingConfigurationBuilder builder(){
+    public static SearchIndexingConfigurationBuilder builder() {
         return SearchIndexingConfigurationBuilder.of();
     }
-    
-    public static SearchIndexingConfigurationBuilder builder(final SearchIndexingConfiguration template){
+
+    public static SearchIndexingConfigurationBuilder builder(final SearchIndexingConfiguration template) {
         return SearchIndexingConfigurationBuilder.of(template);
     }
-    
 
     default <T> T withSearchIndexingConfiguration(Function<SearchIndexingConfiguration, T> helper) {
         return helper.apply(this);

@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyPaymentUpdateAction;
-import com.commercetools.api.models.payment.TransactionDraft;
-import com.commercetools.api.models.me.MyPaymentAddTransactionActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.payment.TransactionDraft;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyPaymentAddTransactionActionImpl.class)
 public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
 
     String ADD_TRANSACTION = "addTransaction";
 
-    
     @NotNull
     @Valid
     @JsonProperty("transaction")
     public TransactionDraft getTransaction();
 
-    
     public void setTransaction(final TransactionDraft transaction);
-    
 
-    public static MyPaymentAddTransactionAction of(){
+    public static MyPaymentAddTransactionAction of() {
         return new MyPaymentAddTransactionActionImpl();
     }
-    
 
     public static MyPaymentAddTransactionAction of(final MyPaymentAddTransactionAction template) {
         MyPaymentAddTransactionActionImpl instance = new MyPaymentAddTransactionActionImpl();
@@ -45,14 +37,13 @@ public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
         return instance;
     }
 
-    public static MyPaymentAddTransactionActionBuilder builder(){
+    public static MyPaymentAddTransactionActionBuilder builder() {
         return MyPaymentAddTransactionActionBuilder.of();
     }
-    
-    public static MyPaymentAddTransactionActionBuilder builder(final MyPaymentAddTransactionAction template){
+
+    public static MyPaymentAddTransactionActionBuilder builder(final MyPaymentAddTransactionAction template) {
         return MyPaymentAddTransactionActionBuilder.of(template);
     }
-    
 
     default <T> T withMyPaymentAddTransactionAction(Function<MyPaymentAddTransactionAction, T> helper) {
         return helper.apply(this);

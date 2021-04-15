@@ -1,23 +1,18 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
 
@@ -30,14 +25,11 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
-    
     public void setIsDefault(final Boolean isDefault);
-    
 
-    public static ShippingMethodChangeIsDefaultAction of(){
+    public static ShippingMethodChangeIsDefaultAction of() {
         return new ShippingMethodChangeIsDefaultActionImpl();
     }
-    
 
     public static ShippingMethodChangeIsDefaultAction of(final ShippingMethodChangeIsDefaultAction template) {
         ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
@@ -45,14 +37,14 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
         return instance;
     }
 
-    public static ShippingMethodChangeIsDefaultActionBuilder builder(){
+    public static ShippingMethodChangeIsDefaultActionBuilder builder() {
         return ShippingMethodChangeIsDefaultActionBuilder.of();
     }
-    
-    public static ShippingMethodChangeIsDefaultActionBuilder builder(final ShippingMethodChangeIsDefaultAction template){
+
+    public static ShippingMethodChangeIsDefaultActionBuilder builder(
+            final ShippingMethodChangeIsDefaultAction template) {
         return ShippingMethodChangeIsDefaultActionBuilder.of(template);
     }
-    
 
     default <T> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
         return helper.apply(this);

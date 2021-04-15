@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderChangeCustomLineItemMoneyActionBuilder {
 
-    
-    
     private String customLineItemId;
-    
-    
-    
+
     private com.commercetools.api.models.common.Money money;
 
-    
-    public StagedOrderChangeCustomLineItemMoneyActionBuilder customLineItemId( final String customLineItemId) {
+    public StagedOrderChangeCustomLineItemMoneyActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
-    
-    public StagedOrderChangeCustomLineItemMoneyActionBuilder money( final com.commercetools.api.models.common.Money money) {
+
+    public StagedOrderChangeCustomLineItemMoneyActionBuilder money(
+            final com.commercetools.api.models.common.Money money) {
         this.money = money;
         return this;
     }
 
-    
-    
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.Money getMoney(){
+
+    public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
 
@@ -54,7 +39,8 @@ public final class StagedOrderChangeCustomLineItemMoneyActionBuilder {
         return new StagedOrderChangeCustomLineItemMoneyActionBuilder();
     }
 
-    public static StagedOrderChangeCustomLineItemMoneyActionBuilder of(final StagedOrderChangeCustomLineItemMoneyAction template) {
+    public static StagedOrderChangeCustomLineItemMoneyActionBuilder of(
+            final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionBuilder builder = new StagedOrderChangeCustomLineItemMoneyActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.money = template.getMoney();

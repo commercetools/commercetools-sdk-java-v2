@@ -1,48 +1,37 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.ParcelMeasurements;
-import com.commercetools.api.models.order.OrderSetParcelMeasurementsAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderSetParcelMeasurementsActionBuilder {
 
-    
-    
     private String parcelId;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
-    
-    public OrderSetParcelMeasurementsActionBuilder parcelId( final String parcelId) {
+    public OrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-    
-    
-    public OrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+
+    public OrderSetParcelMeasurementsActionBuilder measurements(
+            @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
 
-    
-    
-    public String getParcelId(){
+    public String getParcelId() {
         return this.parcelId;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 

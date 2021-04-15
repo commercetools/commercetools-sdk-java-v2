@@ -1,63 +1,47 @@
+
 package com.commercetools.api.models.product;
 
-import java.lang.Object;
-import com.commercetools.api.models.product.FacetResultTerm;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultTermBuilder {
 
-    
-    
     private java.lang.Object term;
-    
-    
-    
+
     private Long count;
-    
-    
+
     @Nullable
     private Long productCount;
 
-    
-    public FacetResultTermBuilder term( final java.lang.Object term) {
+    public FacetResultTermBuilder term(final java.lang.Object term) {
         this.term = term;
         return this;
     }
-    
-    
-    public FacetResultTermBuilder count( final Long count) {
+
+    public FacetResultTermBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    
+
     public FacetResultTermBuilder productCount(@Nullable final Long productCount) {
         this.productCount = productCount;
         return this;
     }
 
-    
-    
-    public java.lang.Object getTerm(){
+    public java.lang.Object getTerm() {
         return this.term;
     }
-    
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
-    
+
     @Nullable
-    public Long getProductCount(){
+    public Long getProductCount() {
         return this.productCount;
     }
 

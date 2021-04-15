@@ -1,117 +1,90 @@
+
 package com.commercetools.api.models.tax_category;
 
-import com.commercetools.api.models.tax_category.SubRate;
-import com.commercetools.api.models.tax_category.TaxRateDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxRateDraftBuilder {
 
-    
-    
     private String name;
-    
-    
+
     @Nullable
     private Double amount;
-    
-    
-    
+
     private Boolean includedInPrice;
-    
-    
-    
+
     private String country;
-    
-    
+
     @Nullable
     private String state;
-    
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
-    
-    public TaxRateDraftBuilder name( final String name) {
+    public TaxRateDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public TaxRateDraftBuilder amount(@Nullable final Double amount) {
         this.amount = amount;
         return this;
     }
-    
-    
-    public TaxRateDraftBuilder includedInPrice( final Boolean includedInPrice) {
+
+    public TaxRateDraftBuilder includedInPrice(final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
-    
-    
-    public TaxRateDraftBuilder country( final String country) {
+
+    public TaxRateDraftBuilder country(final String country) {
         this.country = country;
         return this;
     }
-    
-    
+
     public TaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
-    
-    
-    public TaxRateDraftBuilder subRates(@Nullable final com.commercetools.api.models.tax_category.SubRate ...subRates) {
+
+    public TaxRateDraftBuilder subRates(@Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
-    
-    
-    public TaxRateDraftBuilder subRates(@Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+
+    public TaxRateDraftBuilder subRates(
+            @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
 
-    
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public Double getAmount(){
+    public Double getAmount() {
         return this.amount;
     }
-    
-    
-    
-    public Boolean getIncludedInPrice(){
+
+    public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
-    
-    
-    
-    public String getCountry(){
+
+    public String getCountry() {
         return this.country;
     }
-    
-    
+
     @Nullable
-    public String getState(){
+    public String getState() {
         return this.state;
     }
-    
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates(){
+    public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
     }
 

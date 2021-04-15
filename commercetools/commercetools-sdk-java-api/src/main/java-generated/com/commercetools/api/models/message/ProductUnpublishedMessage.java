@@ -1,34 +1,24 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.ProductUnpublishedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductUnpublishedMessageImpl.class)
 public interface ProductUnpublishedMessage extends Message {
 
     String PRODUCT_UNPUBLISHED = "ProductUnpublished";
 
-
-
-    public static ProductUnpublishedMessage of(){
+    public static ProductUnpublishedMessage of() {
         return new ProductUnpublishedMessageImpl();
     }
-    
 
     public static ProductUnpublishedMessage of(final ProductUnpublishedMessage template) {
         ProductUnpublishedMessageImpl instance = new ProductUnpublishedMessageImpl();
@@ -45,14 +35,13 @@ public interface ProductUnpublishedMessage extends Message {
         return instance;
     }
 
-    public static ProductUnpublishedMessageBuilder builder(){
+    public static ProductUnpublishedMessageBuilder builder() {
         return ProductUnpublishedMessageBuilder.of();
     }
-    
-    public static ProductUnpublishedMessageBuilder builder(final ProductUnpublishedMessage template){
+
+    public static ProductUnpublishedMessageBuilder builder(final ProductUnpublishedMessage template) {
         return ProductUnpublishedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductUnpublishedMessage(Function<ProductUnpublishedMessage, T> helper) {
         return helper.apply(this);

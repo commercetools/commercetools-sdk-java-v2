@@ -1,31 +1,26 @@
+
 package com.commercetools.api.models.project;
 
-import com.commercetools.api.models.project.SearchIndexingConfigurationValues;
-import com.commercetools.api.models.project.SearchIndexingConfiguration;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SearchIndexingConfigurationBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
 
-    
-    public SearchIndexingConfigurationBuilder products(@Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
+    public SearchIndexingConfigurationBuilder products(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts(){
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
         return this.products;
     }
 

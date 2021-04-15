@@ -1,47 +1,36 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemovePriceAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductRemovePriceActionBuilder {
 
-    
-    
     private String priceId;
-    
-    
+
     @Nullable
     private Boolean staged;
 
-    
-    public ProductRemovePriceActionBuilder priceId( final String priceId) {
+    public ProductRemovePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
-    
-    
+
     public ProductRemovePriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    
-    
-    public String getPriceId(){
+    public String getPriceId() {
         return this.priceId;
     }
-    
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

@@ -1,70 +1,56 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
-import com.commercetools.api.models.shipping_method.ShippingRateDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShippingRateDraftBuilder {
 
-    
-    
     private com.commercetools.api.models.common.Money price;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.Money freeAbove;
-    
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
 
-    
-    public ShippingRateDraftBuilder price( final com.commercetools.api.models.common.Money price) {
+    public ShippingRateDraftBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
-    
-    
+
     public ShippingRateDraftBuilder freeAbove(@Nullable final com.commercetools.api.models.common.Money freeAbove) {
         this.freeAbove = freeAbove;
         return this;
     }
-    
-    
-    public ShippingRateDraftBuilder tiers(@Nullable final com.commercetools.api.models.shipping_method.ShippingRatePriceTier ...tiers) {
+
+    public ShippingRateDraftBuilder tiers(
+            @Nullable final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
-    
-    
-    public ShippingRateDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
+
+    public ShippingRateDraftBuilder tiers(
+            @Nullable final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.Money getPrice(){
+    public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.Money getFreeAbove(){
+    public com.commercetools.api.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
-    
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
+    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }
 

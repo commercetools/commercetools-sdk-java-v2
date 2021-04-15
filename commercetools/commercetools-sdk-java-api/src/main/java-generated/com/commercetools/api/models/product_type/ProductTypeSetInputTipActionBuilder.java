@@ -1,48 +1,37 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeSetInputTipAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeSetInputTipActionBuilder {
 
-    
-    
     private String attributeName;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
-    
-    public ProductTypeSetInputTipActionBuilder attributeName( final String attributeName) {
+    public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-    
-    
-    public ProductTypeSetInputTipActionBuilder inputTip(@Nullable final com.commercetools.api.models.common.LocalizedString inputTip) {
+
+    public ProductTypeSetInputTipActionBuilder inputTip(
+            @Nullable final com.commercetools.api.models.common.LocalizedString inputTip) {
         this.inputTip = inputTip;
         return this;
     }
 
-    
-    
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getInputTip(){
+    public com.commercetools.api.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 

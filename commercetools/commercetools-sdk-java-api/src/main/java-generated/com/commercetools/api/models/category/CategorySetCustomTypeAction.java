@@ -1,25 +1,20 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.category.CategorySetCustomTypeActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategorySetCustomTypeActionImpl.class)
 public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
 
@@ -31,6 +26,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type. Sets the custom fields to this value.</p>
     */
@@ -38,18 +34,13 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static CategorySetCustomTypeAction of(){
+    public void setFields(final FieldContainer fields);
+
+    public static CategorySetCustomTypeAction of() {
         return new CategorySetCustomTypeActionImpl();
     }
-    
 
     public static CategorySetCustomTypeAction of(final CategorySetCustomTypeAction template) {
         CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
@@ -58,14 +49,13 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
         return instance;
     }
 
-    public static CategorySetCustomTypeActionBuilder builder(){
+    public static CategorySetCustomTypeActionBuilder builder() {
         return CategorySetCustomTypeActionBuilder.of();
     }
-    
-    public static CategorySetCustomTypeActionBuilder builder(final CategorySetCustomTypeAction template){
+
+    public static CategorySetCustomTypeActionBuilder builder(final CategorySetCustomTypeAction template) {
         return CategorySetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
         return helper.apply(this);

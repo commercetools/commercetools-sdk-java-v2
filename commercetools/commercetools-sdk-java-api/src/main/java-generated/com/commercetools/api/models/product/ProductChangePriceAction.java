@@ -1,24 +1,20 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.common.PriceDraft;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductChangePriceActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.PriceDraft;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductChangePriceActionImpl.class)
 public interface ProductChangePriceAction extends ProductUpdateAction {
 
@@ -30,32 +26,24 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("price")
     public PriceDraft getPrice();
-    
-    
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setPriceId(final String priceId);
-    
-    
-    
-    public void setPrice(final PriceDraft price);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductChangePriceAction of(){
+    public void setPrice(final PriceDraft price);
+
+    public void setStaged(final Boolean staged);
+
+    public static ProductChangePriceAction of() {
         return new ProductChangePriceActionImpl();
     }
-    
 
     public static ProductChangePriceAction of(final ProductChangePriceAction template) {
         ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
@@ -65,14 +53,13 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductChangePriceActionBuilder builder(){
+    public static ProductChangePriceActionBuilder builder() {
         return ProductChangePriceActionBuilder.of();
     }
-    
-    public static ProductChangePriceActionBuilder builder(final ProductChangePriceAction template){
+
+    public static ProductChangePriceActionBuilder builder(final ProductChangePriceAction template) {
         return ProductChangePriceActionBuilder.of(template);
     }
-    
 
     default <T> T withProductChangePriceAction(Function<ProductChangePriceAction, T> helper) {
         return helper.apply(this);

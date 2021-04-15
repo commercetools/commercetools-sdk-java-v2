@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.common;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.product_discount.ProductDiscountReference;
-import com.commercetools.api.models.common.DiscountedPrice;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedPriceBuilder {
 
-    
-    
     private com.commercetools.api.models.common.Money value;
-    
-    
-    
+
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
-    
-    public DiscountedPriceBuilder value( final com.commercetools.api.models.common.Money value) {
+    public DiscountedPriceBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
-    
-    
-    public DiscountedPriceBuilder discount( final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
+
+    public DiscountedPriceBuilder discount(
+            final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
         this.discount = discount;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.Money getValue(){
+    public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
-    
-    
-    
-    public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount(){
+
+    public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
         return this.discount;
     }
 

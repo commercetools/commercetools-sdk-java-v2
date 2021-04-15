@@ -1,95 +1,78 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
-import com.commercetools.api.models.type.TypeUpdateAction;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
 import java.time.*;
+import java.util.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLocalizedEnumValueLabelAction {
 
-    
     private String action;
-    
-    
+
     private String fieldName;
-    
-    
+
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
     @JsonCreator
-    TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
+    TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
         this.fieldName = fieldName;
         this.value = value;
-        this.action =  CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
-    }
-    public TypeChangeLocalizedEnumValueLabelActionImpl() {
-        this.action =  CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
-    
-    public String getAction(){
+    public TypeChangeLocalizedEnumValueLabelActionImpl() {
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+    }
+
+    public String getAction() {
         return this.action;
     }
-    
-    
-    public String getFieldName(){
+
+    public String getFieldName() {
         return this.fieldName;
     }
-    
-    
-    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue(){
+
+    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;
     }
 
-    
-    public void setFieldName(final String fieldName){
+    public void setFieldName(final String fieldName) {
         this.fieldName = fieldName;
     }
-    
-    
-    public void setValue(final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value){
+
+    public void setValue(final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
         this.value = value;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         TypeChangeLocalizedEnumValueLabelActionImpl that = (TypeChangeLocalizedEnumValueLabelActionImpl) o;
-    
-        return new EqualsBuilder()
-                .append(action, that.action)
+
+        return new EqualsBuilder().append(action, that.action)
                 .append(fieldName, that.fieldName)
                 .append(value, that.value)
                 .isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(action)
-            .append(fieldName)
-            .append(value)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(fieldName).append(value).toHashCode();
     }
 
 }

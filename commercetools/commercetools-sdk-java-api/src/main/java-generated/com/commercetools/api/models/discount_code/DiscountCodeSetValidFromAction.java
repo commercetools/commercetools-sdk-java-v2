@@ -1,24 +1,17 @@
+
 package com.commercetools.api.models.discount_code;
 
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionImpl;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
 
@@ -27,18 +20,15 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     /**
     *  <p>If absent, the field with the value is removed in case a value was set before.</p>
     */
-    
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
-    
     public void setValidFrom(final ZonedDateTime validFrom);
-    
 
-    public static DiscountCodeSetValidFromAction of(){
+    public static DiscountCodeSetValidFromAction of() {
         return new DiscountCodeSetValidFromActionImpl();
     }
-    
 
     public static DiscountCodeSetValidFromAction of(final DiscountCodeSetValidFromAction template) {
         DiscountCodeSetValidFromActionImpl instance = new DiscountCodeSetValidFromActionImpl();
@@ -46,14 +36,13 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
         return instance;
     }
 
-    public static DiscountCodeSetValidFromActionBuilder builder(){
+    public static DiscountCodeSetValidFromActionBuilder builder() {
         return DiscountCodeSetValidFromActionBuilder.of();
     }
-    
-    public static DiscountCodeSetValidFromActionBuilder builder(final DiscountCodeSetValidFromAction template){
+
+    public static DiscountCodeSetValidFromActionBuilder builder(final DiscountCodeSetValidFromAction template) {
         return DiscountCodeSetValidFromActionBuilder.of(template);
     }
-    
 
     default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);

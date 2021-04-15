@@ -1,58 +1,46 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.order.TrackingData;
-import com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayloadImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.TrackingData;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ParcelTrackingDataUpdatedMessagePayloadImpl.class)
 public interface ParcelTrackingDataUpdatedMessagePayload extends MessagePayload {
 
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
-    
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-    
+
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-    
+
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
-    
     public void setDeliveryId(final String deliveryId);
-    
-    
-    
-    public void setParcelId(final String parcelId);
-    
-    
-    
-    public void setTrackingData(final TrackingData trackingData);
-    
 
-    public static ParcelTrackingDataUpdatedMessagePayload of(){
+    public void setParcelId(final String parcelId);
+
+    public void setTrackingData(final TrackingData trackingData);
+
+    public static ParcelTrackingDataUpdatedMessagePayload of() {
         return new ParcelTrackingDataUpdatedMessagePayloadImpl();
     }
-    
 
     public static ParcelTrackingDataUpdatedMessagePayload of(final ParcelTrackingDataUpdatedMessagePayload template) {
         ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
@@ -62,16 +50,17 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends MessagePayload 
         return instance;
     }
 
-    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(){
+    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder() {
         return ParcelTrackingDataUpdatedMessagePayloadBuilder.of();
     }
-    
-    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(final ParcelTrackingDataUpdatedMessagePayload template){
+
+    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(
+            final ParcelTrackingDataUpdatedMessagePayload template) {
         return ParcelTrackingDataUpdatedMessagePayloadBuilder.of(template);
     }
-    
 
-    default <T> T withParcelTrackingDataUpdatedMessagePayload(Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
+    default <T> T withParcelTrackingDataUpdatedMessagePayload(
+            Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

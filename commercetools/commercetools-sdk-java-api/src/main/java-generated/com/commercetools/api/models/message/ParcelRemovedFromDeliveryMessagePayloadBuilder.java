@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.order.Parcel;
-import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
 
-    
-    
     private String deliveryId;
-    
-    
-    
+
     private com.commercetools.api.models.order.Parcel parcel;
 
-    
-    public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId( final String deliveryId) {
+    public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-    
-    
-    public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel( final com.commercetools.api.models.order.Parcel parcel) {
+
+    public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
+            final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;
         return this;
     }
 
-    
-    
-    public String getDeliveryId(){
+    public String getDeliveryId() {
         return this.deliveryId;
     }
-    
-    
-    
-    public com.commercetools.api.models.order.Parcel getParcel(){
+
+    public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;
     }
 
@@ -54,7 +39,8 @@ public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
         return new ParcelRemovedFromDeliveryMessagePayloadBuilder();
     }
 
-    public static ParcelRemovedFromDeliveryMessagePayloadBuilder of(final ParcelRemovedFromDeliveryMessagePayload template) {
+    public static ParcelRemovedFromDeliveryMessagePayloadBuilder of(
+            final ParcelRemovedFromDeliveryMessagePayload template) {
         ParcelRemovedFromDeliveryMessagePayloadBuilder builder = new ParcelRemovedFromDeliveryMessagePayloadBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.parcel = template.getParcel();

@@ -1,51 +1,41 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.message.OrderStateTransitionMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.state.StateReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderStateTransitionMessageImpl.class)
 public interface OrderStateTransitionMessage extends Message {
 
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
-    
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-    
+
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();
 
-    
     public void setState(final StateReference state);
-    
-    
-    
-    public void setForce(final Boolean force);
-    
 
-    public static OrderStateTransitionMessage of(){
+    public void setForce(final Boolean force);
+
+    public static OrderStateTransitionMessage of() {
         return new OrderStateTransitionMessageImpl();
     }
-    
 
     public static OrderStateTransitionMessage of(final OrderStateTransitionMessage template) {
         OrderStateTransitionMessageImpl instance = new OrderStateTransitionMessageImpl();
@@ -64,14 +54,13 @@ public interface OrderStateTransitionMessage extends Message {
         return instance;
     }
 
-    public static OrderStateTransitionMessageBuilder builder(){
+    public static OrderStateTransitionMessageBuilder builder() {
         return OrderStateTransitionMessageBuilder.of();
     }
-    
-    public static OrderStateTransitionMessageBuilder builder(final OrderStateTransitionMessage template){
+
+    public static OrderStateTransitionMessageBuilder builder(final OrderStateTransitionMessage template) {
         return OrderStateTransitionMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
         return helper.apply(this);

@@ -1,53 +1,39 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionUpdateAction;
-import com.commercetools.api.models.extension.ExtensionUpdate;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionUpdateBuilder {
 
-    
-    
     private Long version;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions;
 
-    
-    public ExtensionUpdateBuilder version( final Long version) {
+    public ExtensionUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public ExtensionUpdateBuilder actions( final com.commercetools.api.models.extension.ExtensionUpdateAction ...actions) {
+
+    public ExtensionUpdateBuilder actions(
+            final com.commercetools.api.models.extension.ExtensionUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    
-    public ExtensionUpdateBuilder actions( final java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
+
+    public ExtensionUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> getActions() {
         return this.actions;
     }
 

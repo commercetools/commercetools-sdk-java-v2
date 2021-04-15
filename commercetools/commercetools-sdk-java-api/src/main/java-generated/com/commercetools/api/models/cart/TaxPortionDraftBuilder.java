@@ -1,63 +1,47 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.cart.TaxPortionDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxPortionDraftBuilder {
 
-    
     @Nullable
     private String name;
-    
-    
-    
+
     private Double rate;
-    
-    
-    
+
     private com.commercetools.api.models.common.Money amount;
 
-    
     public TaxPortionDraftBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-    
-    
-    public TaxPortionDraftBuilder rate( final Double rate) {
+
+    public TaxPortionDraftBuilder rate(final Double rate) {
         this.rate = rate;
         return this;
     }
-    
-    
-    public TaxPortionDraftBuilder amount( final com.commercetools.api.models.common.Money amount) {
+
+    public TaxPortionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
         return this;
     }
 
-    
     @Nullable
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    
-    public Double getRate(){
+
+    public Double getRate() {
         return this.rate;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.Money getAmount(){
+
+    public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
 

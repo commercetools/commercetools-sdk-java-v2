@@ -1,52 +1,43 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.DiscountedLineItemPortion;
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.cart.DiscountedLineItemPriceImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.TypedMoney;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPriceImpl.class)
-public interface DiscountedLineItemPrice  {
+public interface DiscountedLineItemPrice {
 
-
-    
     @NotNull
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
-    
+
     @NotNull
     @Valid
     @JsonProperty("includedDiscounts")
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
-    
     public void setValue(final TypedMoney value);
-    
-    
-    
+
     @JsonIgnore
-    public void setIncludedDiscounts(final DiscountedLineItemPortion ...includedDiscounts);
+    public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
+
     public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
 
-    public static DiscountedLineItemPrice of(){
+    public static DiscountedLineItemPrice of() {
         return new DiscountedLineItemPriceImpl();
     }
-    
 
     public static DiscountedLineItemPrice of(final DiscountedLineItemPrice template) {
         DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
@@ -55,14 +46,13 @@ public interface DiscountedLineItemPrice  {
         return instance;
     }
 
-    public static DiscountedLineItemPriceBuilder builder(){
+    public static DiscountedLineItemPriceBuilder builder() {
         return DiscountedLineItemPriceBuilder.of();
     }
-    
-    public static DiscountedLineItemPriceBuilder builder(final DiscountedLineItemPrice template){
+
+    public static DiscountedLineItemPriceBuilder builder(final DiscountedLineItemPrice template) {
         return DiscountedLineItemPriceBuilder.of(template);
     }
-    
 
     default <T> T withDiscountedLineItemPrice(Function<DiscountedLineItemPrice, T> helper) {
         return helper.apply(this);

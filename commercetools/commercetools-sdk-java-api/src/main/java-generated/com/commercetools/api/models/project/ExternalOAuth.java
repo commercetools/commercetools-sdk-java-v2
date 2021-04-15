@@ -1,48 +1,36 @@
+
 package com.commercetools.api.models.project;
 
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.project.ExternalOAuthImpl;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
+
 import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ExternalOAuthImpl.class)
-public interface ExternalOAuth  {
+public interface ExternalOAuth {
 
-
-    
     @NotNull
     @JsonProperty("url")
     public String getUrl();
-    
+
     @NotNull
     @JsonProperty("authorizationHeader")
     public String getAuthorizationHeader();
 
-    
     public void setUrl(final String url);
-    
-    
-    
-    public void setAuthorizationHeader(final String authorizationHeader);
-    
 
-    public static ExternalOAuth of(){
+    public void setAuthorizationHeader(final String authorizationHeader);
+
+    public static ExternalOAuth of() {
         return new ExternalOAuthImpl();
     }
-    
 
     public static ExternalOAuth of(final ExternalOAuth template) {
         ExternalOAuthImpl instance = new ExternalOAuthImpl();
@@ -51,14 +39,13 @@ public interface ExternalOAuth  {
         return instance;
     }
 
-    public static ExternalOAuthBuilder builder(){
+    public static ExternalOAuthBuilder builder() {
         return ExternalOAuthBuilder.of();
     }
-    
-    public static ExternalOAuthBuilder builder(final ExternalOAuth template){
+
+    public static ExternalOAuthBuilder builder(final ExternalOAuth template) {
         return ExternalOAuthBuilder.of(template);
     }
-    
 
     default <T> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
         return helper.apply(this);

@@ -1,79 +1,64 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.message.MessagePayload;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
 import java.time.*;
+import java.util.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerAddressChangedMessagePayloadImpl implements CustomerAddressChangedMessagePayload {
 
-    
     private String type;
-    
-    
+
     private com.commercetools.api.models.common.Address address;
 
     @JsonCreator
-    CustomerAddressChangedMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+    CustomerAddressChangedMessagePayloadImpl(
+            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.type =  CUSTOMER_ADDRESS_CHANGED;
-    }
-    public CustomerAddressChangedMessagePayloadImpl() {
-        this.type =  CUSTOMER_ADDRESS_CHANGED;
+        this.type = CUSTOMER_ADDRESS_CHANGED;
     }
 
-    
-    public String getType(){
+    public CustomerAddressChangedMessagePayloadImpl() {
+        this.type = CUSTOMER_ADDRESS_CHANGED;
+    }
+
+    public String getType() {
         return this.type;
     }
-    
-    
-    public com.commercetools.api.models.common.Address getAddress(){
+
+    public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
-    
-    public void setAddress(final com.commercetools.api.models.common.Address address){
+    public void setAddress(final com.commercetools.api.models.common.Address address) {
         this.address = address;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         CustomerAddressChangedMessagePayloadImpl that = (CustomerAddressChangedMessagePayloadImpl) o;
-    
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(address, that.address)
-                .isEquals();
+
+        return new EqualsBuilder().append(type, that.type).append(address, that.address).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(type)
-            .append(address)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(address).toHashCode();
     }
 
 }

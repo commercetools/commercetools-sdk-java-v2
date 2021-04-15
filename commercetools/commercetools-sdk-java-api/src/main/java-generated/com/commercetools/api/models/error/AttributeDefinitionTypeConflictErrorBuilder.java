@@ -1,84 +1,61 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.AttributeDefinitionTypeConflictError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeDefinitionTypeConflictErrorBuilder {
 
-    
-    
     private String message;
-    
-    
-    
+
     private String conflictingProductTypeId;
-    
-    
-    
+
     private String conflictingProductTypeName;
-    
-    
-    
+
     private String conflictingAttributeName;
 
-    
-    public AttributeDefinitionTypeConflictErrorBuilder message( final String message) {
+    public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId( final String conflictingProductTypeId) {
+
+    public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId(final String conflictingProductTypeId) {
         this.conflictingProductTypeId = conflictingProductTypeId;
         return this;
     }
-    
-    
-    public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName( final String conflictingProductTypeName) {
+
+    public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName(
+            final String conflictingProductTypeName) {
         this.conflictingProductTypeName = conflictingProductTypeName;
         return this;
     }
-    
-    
-    public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName( final String conflictingAttributeName) {
+
+    public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    
-    public String getConflictingProductTypeId(){
+
+    public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
-    
-    
-    
-    public String getConflictingProductTypeName(){
+
+    public String getConflictingProductTypeName() {
         return this.conflictingProductTypeName;
     }
-    
-    
-    
-    public String getConflictingAttributeName(){
+
+    public String getConflictingAttributeName() {
         return this.conflictingAttributeName;
     }
 
     public AttributeDefinitionTypeConflictError build() {
-        return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId, conflictingProductTypeName, conflictingAttributeName);
+        return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
+            conflictingProductTypeName, conflictingAttributeName);
     }
 
     public static AttributeDefinitionTypeConflictErrorBuilder of() {

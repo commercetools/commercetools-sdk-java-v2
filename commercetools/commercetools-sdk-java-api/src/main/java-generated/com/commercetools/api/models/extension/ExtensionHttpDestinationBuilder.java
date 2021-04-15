@@ -1,48 +1,37 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionDestination;
-import com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication;
-import com.commercetools.api.models.extension.ExtensionHttpDestination;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionHttpDestinationBuilder {
 
-    
-    
     private String url;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication;
 
-    
-    public ExtensionHttpDestinationBuilder url( final String url) {
+    public ExtensionHttpDestinationBuilder url(final String url) {
         this.url = url;
         return this;
     }
-    
-    
-    public ExtensionHttpDestinationBuilder authentication(@Nullable final com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication) {
+
+    public ExtensionHttpDestinationBuilder authentication(
+            @Nullable final com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication) {
         this.authentication = authentication;
         return this;
     }
 
-    
-    
-    public String getUrl(){
+    public String getUrl() {
         return this.url;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication getAuthentication(){
+    public com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication getAuthentication() {
         return this.authentication;
     }
 

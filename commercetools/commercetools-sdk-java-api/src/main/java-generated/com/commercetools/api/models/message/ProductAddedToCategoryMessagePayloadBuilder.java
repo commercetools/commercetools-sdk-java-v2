@@ -1,48 +1,33 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.category.CategoryReference;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.ProductAddedToCategoryMessagePayload;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductAddedToCategoryMessagePayloadBuilder {
 
-    
-    
     private com.commercetools.api.models.category.CategoryReference category;
-    
-    
-    
+
     private Boolean staged;
 
-    
-    public ProductAddedToCategoryMessagePayloadBuilder category( final com.commercetools.api.models.category.CategoryReference category) {
+    public ProductAddedToCategoryMessagePayloadBuilder category(
+            final com.commercetools.api.models.category.CategoryReference category) {
         this.category = category;
         return this;
     }
-    
-    
-    public ProductAddedToCategoryMessagePayloadBuilder staged( final Boolean staged) {
+
+    public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.category.CategoryReference getCategory(){
+    public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }
-    
-    
-    
-    public Boolean getStaged(){
+
+    public Boolean getStaged() {
         return this.staged;
     }
 

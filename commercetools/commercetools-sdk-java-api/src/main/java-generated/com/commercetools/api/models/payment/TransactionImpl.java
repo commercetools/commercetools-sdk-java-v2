@@ -1,51 +1,40 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.payment.TransactionState;
-import com.commercetools.api.models.payment.TransactionType;
-import java.time.ZonedDateTime;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
 import java.time.*;
+import java.util.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TransactionImpl implements Transaction {
 
-    
     private String id;
-    
-    
+
     private java.time.ZonedDateTime timestamp;
-    
-    
+
     private com.commercetools.api.models.payment.TransactionType type;
-    
-    
+
     private com.commercetools.api.models.common.TypedMoney amount;
-    
-    
+
     private String interactionId;
-    
-    
+
     private com.commercetools.api.models.payment.TransactionState state;
 
     @JsonCreator
-    TransactionImpl(@JsonProperty("id") final String id, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp, @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type, @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount, @JsonProperty("interactionId") final String interactionId, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
+    TransactionImpl(@JsonProperty("id") final String id,
+            @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
+            @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
+            @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount,
+            @JsonProperty("interactionId") final String interactionId,
+            @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
         this.id = id;
         this.timestamp = timestamp;
         this.type = type;
@@ -53,90 +42,85 @@ public final class TransactionImpl implements Transaction {
         this.interactionId = interactionId;
         this.state = state;
     }
+
     public TransactionImpl() {
     }
 
     /**
     *  <p>The unique ID of this object.</p>
     */
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
+
     /**
     *  <p>The time at which the transaction took place.</p>
     */
-    public java.time.ZonedDateTime getTimestamp(){
+    public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
-    
+
     /**
     *  <p>The type of this transaction.</p>
     */
-    public com.commercetools.api.models.payment.TransactionType getType(){
+    public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getAmount(){
+
+    public com.commercetools.api.models.common.TypedMoney getAmount() {
         return this.amount;
     }
-    
+
     /**
     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
     *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
     */
-    public String getInteractionId(){
+    public String getInteractionId() {
         return this.interactionId;
     }
-    
+
     /**
     *  <p>The state of this transaction.</p>
     */
-    public com.commercetools.api.models.payment.TransactionState getState(){
+    public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
 
-    
-    public void setId(final String id){
+    public void setId(final String id) {
         this.id = id;
     }
-    
-    
-    public void setTimestamp(final java.time.ZonedDateTime timestamp){
+
+    public void setTimestamp(final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
     }
-    
-    
-    public void setType(final com.commercetools.api.models.payment.TransactionType type){
+
+    public void setType(final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
     }
-    
-    
-    public void setAmount(final com.commercetools.api.models.common.TypedMoney amount){
+
+    public void setAmount(final com.commercetools.api.models.common.TypedMoney amount) {
         this.amount = amount;
     }
-    
-    
-    public void setInteractionId(final String interactionId){
+
+    public void setInteractionId(final String interactionId) {
         this.interactionId = interactionId;
     }
-    
-    
-    public void setState(final com.commercetools.api.models.payment.TransactionState state){
+
+    public void setState(final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         TransactionImpl that = (TransactionImpl) o;
-    
-        return new EqualsBuilder()
-                .append(id, that.id)
+
+        return new EqualsBuilder().append(id, that.id)
                 .append(timestamp, that.timestamp)
                 .append(type, that.type)
                 .append(amount, that.amount)
@@ -144,17 +128,16 @@ public final class TransactionImpl implements Transaction {
                 .append(state, that.state)
                 .isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(id)
-            .append(timestamp)
-            .append(type)
-            .append(amount)
-            .append(interactionId)
-            .append(state)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(timestamp)
+                .append(type)
+                .append(amount)
+                .append(interactionId)
+                .append(state)
+                .toHashCode();
     }
 
 }

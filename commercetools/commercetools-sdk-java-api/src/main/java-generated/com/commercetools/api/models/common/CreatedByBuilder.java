@@ -1,79 +1,64 @@
+
 package com.commercetools.api.models.common;
 
-import com.commercetools.api.models.common.ClientLogging;
-import com.commercetools.api.models.common.CreatedBy;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CreatedByBuilder {
 
-    
     @Nullable
     private String clientId;
-    
-    
+
     @Nullable
     private String externalUserId;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference customer;
-    
-    
+
     @Nullable
     private String anonymousId;
 
-    
     public CreatedByBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
         return this;
     }
-    
-    
+
     public CreatedByBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
     }
-    
-    
+
     public CreatedByBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
-    
-    
+
     public CreatedByBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
-    
     @Nullable
-    public String getClientId(){
+    public String getClientId() {
         return this.clientId;
     }
-    
-    
+
     @Nullable
-    public String getExternalUserId(){
+    public String getExternalUserId() {
         return this.externalUserId;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.customer.CustomerReference getCustomer(){
+    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
-    
-    
+
     @Nullable
-    public String getAnonymousId(){
+    public String getAnonymousId() {
         return this.anonymousId;
     }
 

@@ -1,95 +1,75 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductSetImageLabelAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSetImageLabelActionBuilder {
 
-    
     @Nullable
     private String sku;
-    
-    
+
     @Nullable
     private Long variantId;
-    
-    
-    
+
     private String imageUrl;
-    
-    
+
     @Nullable
     private String label;
-    
-    
+
     @Nullable
     private Boolean staged;
 
-    
     public ProductSetImageLabelActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    
+
     public ProductSetImageLabelActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    
-    public ProductSetImageLabelActionBuilder imageUrl( final String imageUrl) {
+
+    public ProductSetImageLabelActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
-    
-    
+
     public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
         this.label = label;
         return this;
     }
-    
-    
+
     public ProductSetImageLabelActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
+
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
-    
-    
-    public String getImageUrl(){
+
+    public String getImageUrl() {
         return this.imageUrl;
     }
-    
-    
+
     @Nullable
-    public String getLabel(){
+    public String getLabel() {
         return this.label;
     }
-    
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

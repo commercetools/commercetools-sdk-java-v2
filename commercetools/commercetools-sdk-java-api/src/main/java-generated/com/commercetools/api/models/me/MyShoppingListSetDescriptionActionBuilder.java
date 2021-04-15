@@ -1,32 +1,26 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.me.MyShoppingListUpdateAction;
-import com.commercetools.api.models.me.MyShoppingListSetDescriptionAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyShoppingListSetDescriptionActionBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
-    
-    public MyShoppingListSetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    public MyShoppingListSetDescriptionActionBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 

@@ -1,64 +1,47 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderSetLineItemCustomFieldActionBuilder {
 
-    
-    
     private String lineItemId;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private java.lang.Object value;
 
-    
-    public OrderSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
+    public OrderSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-    
-    
-    public OrderSetLineItemCustomFieldActionBuilder name( final String name) {
+
+    public OrderSetLineItemCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public OrderSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    
-    
-    public String getLineItemId(){
+    public String getLineItemId() {
         return this.lineItemId;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getValue(){
+    public java.lang.Object getValue() {
         return this.value;
     }
 

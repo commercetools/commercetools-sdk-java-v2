@@ -1,112 +1,88 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductChangeAssetNameAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductChangeAssetNameActionBuilder {
 
-    
     @Nullable
     private Long variantId;
-    
-    
+
     @Nullable
     private String sku;
-    
-    
+
     @Nullable
     private Boolean staged;
-    
-    
+
     @Nullable
     private String assetId;
-    
-    
+
     @Nullable
     private String assetKey;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
 
-    
     public ProductChangeAssetNameActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    
+
     public ProductChangeAssetNameActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    
+
     public ProductChangeAssetNameActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
-    
+
     public ProductChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
-    
+
     public ProductChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    
-    public ProductChangeAssetNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
-    
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
-    
+
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 

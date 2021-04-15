@@ -1,32 +1,22 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.type.CustomFields;
-import com.commercetools.api.models.message.PaymentInteractionAddedMessagePayload;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentInteractionAddedMessagePayloadBuilder {
 
-    
-    
     private com.commercetools.api.models.type.CustomFields interaction;
 
-    
-    public PaymentInteractionAddedMessagePayloadBuilder interaction( final com.commercetools.api.models.type.CustomFields interaction) {
+    public PaymentInteractionAddedMessagePayloadBuilder interaction(
+            final com.commercetools.api.models.type.CustomFields interaction) {
         this.interaction = interaction;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.type.CustomFields getInteraction(){
+    public com.commercetools.api.models.type.CustomFields getInteraction() {
         return this.interaction;
     }
 
@@ -38,7 +28,8 @@ public final class PaymentInteractionAddedMessagePayloadBuilder {
         return new PaymentInteractionAddedMessagePayloadBuilder();
     }
 
-    public static PaymentInteractionAddedMessagePayloadBuilder of(final PaymentInteractionAddedMessagePayload template) {
+    public static PaymentInteractionAddedMessagePayloadBuilder of(
+            final PaymentInteractionAddedMessagePayload template) {
         PaymentInteractionAddedMessagePayloadBuilder builder = new PaymentInteractionAddedMessagePayloadBuilder();
         builder.interaction = template.getInteraction();
         return builder;

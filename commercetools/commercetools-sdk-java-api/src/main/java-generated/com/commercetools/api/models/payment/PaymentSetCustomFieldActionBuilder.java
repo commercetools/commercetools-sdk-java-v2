@@ -1,48 +1,36 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.payment.PaymentUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.payment.PaymentSetCustomFieldAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentSetCustomFieldActionBuilder {
 
-    
-    
     private String name;
-    
-    
+
     @Nullable
     private java.lang.Object value;
 
-    
-    public PaymentSetCustomFieldActionBuilder name( final String name) {
+    public PaymentSetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public PaymentSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getValue(){
+    public java.lang.Object getValue() {
         return this.value;
     }
 

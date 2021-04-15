@@ -1,51 +1,40 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderSetShippingAddressCustomTypeActionImpl.class)
 public interface OrderSetShippingAddressCustomTypeAction extends OrderUpdateAction {
 
     String SET_SHIPPING_ADDRESS_CUSTOM_TYPE = "setShippingAddressCustomType";
 
-    
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-    
+
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    
     public void setType(final TypeResourceIdentifier type);
-    
-    
-    
-    public void setFields(final FieldContainer fields);
-    
 
-    public static OrderSetShippingAddressCustomTypeAction of(){
+    public void setFields(final FieldContainer fields);
+
+    public static OrderSetShippingAddressCustomTypeAction of() {
         return new OrderSetShippingAddressCustomTypeActionImpl();
     }
-    
 
     public static OrderSetShippingAddressCustomTypeAction of(final OrderSetShippingAddressCustomTypeAction template) {
         OrderSetShippingAddressCustomTypeActionImpl instance = new OrderSetShippingAddressCustomTypeActionImpl();
@@ -54,16 +43,17 @@ public interface OrderSetShippingAddressCustomTypeAction extends OrderUpdateActi
         return instance;
     }
 
-    public static OrderSetShippingAddressCustomTypeActionBuilder builder(){
+    public static OrderSetShippingAddressCustomTypeActionBuilder builder() {
         return OrderSetShippingAddressCustomTypeActionBuilder.of();
     }
-    
-    public static OrderSetShippingAddressCustomTypeActionBuilder builder(final OrderSetShippingAddressCustomTypeAction template){
+
+    public static OrderSetShippingAddressCustomTypeActionBuilder builder(
+            final OrderSetShippingAddressCustomTypeAction template) {
         return OrderSetShippingAddressCustomTypeActionBuilder.of(template);
     }
-    
 
-    default <T> T withOrderSetShippingAddressCustomTypeAction(Function<OrderSetShippingAddressCustomTypeAction, T> helper) {
+    default <T> T withOrderSetShippingAddressCustomTypeAction(
+            Function<OrderSetShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

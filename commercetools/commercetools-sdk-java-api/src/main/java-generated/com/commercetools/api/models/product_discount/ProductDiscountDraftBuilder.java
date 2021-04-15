@@ -1,166 +1,127 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_discount.ProductDiscountValueDraft;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.product_discount.ProductDiscountDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountDraftBuilder {
 
-    
-    
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
+
     @Nullable
     private String key;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
-    
-    
+
     private com.commercetools.api.models.product_discount.ProductDiscountValueDraft value;
-    
-    
-    
+
     private String predicate;
-    
-    
-    
+
     private String sortOrder;
-    
-    
-    
+
     private Boolean isActive;
-    
-    
+
     @Nullable
     private java.time.ZonedDateTime validFrom;
-    
-    
+
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
-    
-    public ProductDiscountDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+    public ProductDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public ProductDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    
-    public ProductDiscountDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public ProductDiscountDraftBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
-    
-    public ProductDiscountDraftBuilder value( final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
+
+    public ProductDiscountDraftBuilder value(
+            final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
         this.value = value;
         return this;
     }
-    
-    
-    public ProductDiscountDraftBuilder predicate( final String predicate) {
+
+    public ProductDiscountDraftBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
-    
-    
-    public ProductDiscountDraftBuilder sortOrder( final String sortOrder) {
+
+    public ProductDiscountDraftBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
-    
-    
-    public ProductDiscountDraftBuilder isActive( final Boolean isActive) {
+
+    public ProductDiscountDraftBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
-    
-    
+
     public ProductDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-    
-    
+
     public ProductDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
-    
-    
-    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue(){
+
+    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }
-    
-    
-    
-    public String getPredicate(){
+
+    public String getPredicate() {
         return this.predicate;
     }
-    
-    
-    
-    public String getSortOrder(){
+
+    public String getSortOrder() {
         return this.sortOrder;
     }
-    
-    
-    
-    public Boolean getIsActive(){
+
+    public Boolean getIsActive() {
         return this.isActive;
     }
-    
-    
+
     @Nullable
-    public java.time.ZonedDateTime getValidFrom(){
+    public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
-    
-    
+
     @Nullable
-    public java.time.ZonedDateTime getValidUntil(){
+    public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     public ProductDiscountDraft build() {
-        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom, validUntil);
+        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,
+            validUntil);
     }
 
     public static ProductDiscountDraftBuilder of() {

@@ -1,54 +1,39 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.cart.ItemShippingTarget;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.me.MyCartApplyDeltaToLineItemShippingDetailsTargetsAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder {
 
-    
-    
     private String lineItemId;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
-    
-    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId( final String lineItemId) {
+    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-    
-    
-    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta( final com.commercetools.api.models.cart.ItemShippingTarget ...targetsDelta) {
+
+    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
+            final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
         this.targetsDelta = new ArrayList<>(Arrays.asList(targetsDelta));
         return this;
     }
-    
-    
-    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta( final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
+
+    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
+            final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.targetsDelta = targetsDelta;
         return this;
     }
 
-    
-    
-    public String getLineItemId(){
+    public String getLineItemId() {
         return this.lineItemId;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
+
+    public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {
         return this.targetsDelta;
     }
 
@@ -60,7 +45,8 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();
     }
 
-    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of(final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of(
+            final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.targetsDelta = template.getTargetsDelta();

@@ -1,132 +1,98 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
-import com.commercetools.api.models.cart.CartAddCustomLineItemAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartAddCustomLineItemActionBuilder {
 
-    
-    
     private com.commercetools.api.models.common.Money money;
-    
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
-    
+
     private Long quantity;
-    
-    
-    
+
     private String slug;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    
-    public CartAddCustomLineItemActionBuilder money( final com.commercetools.api.models.common.Money money) {
+    public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder quantity( final Long quantity) {
+
+    public CartAddCustomLineItemActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder slug( final String slug) {
+
+    public CartAddCustomLineItemActionBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+
+    public CartAddCustomLineItemActionBuilder taxCategory(
+            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+
+    public CartAddCustomLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-    
-    
-    public CartAddCustomLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+
+    public CartAddCustomLineItemActionBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.Money getMoney(){
+    public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
-    
-    public Long getQuantity(){
+
+    public Long getQuantity() {
         return this.quantity;
     }
-    
-    
-    
-    public String getSlug(){
+
+    public String getSlug() {
         return this.slug;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 

@@ -1,47 +1,35 @@
+
 package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
 
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Query carts</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet, com.commercetools.api.models.cart.CartPagedQueryResponse> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends
+        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet, com.commercetools.api.models.cart.CartPagedQueryResponse>
+        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
+        com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
+        com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
+        com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet> {
 
-    
     private String projectKey;
     private String storeKey;
-    
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet(final ApiHttpClient apiHttpClient, String projectKey,
+            String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
@@ -57,115 +45,124 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends ApiMethod<ByProj
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/me/carts", this.projectKey, this.storeKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.CartPagedQueryResponse.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
-    public String getStoreKey() {return this.storeKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getStoreKey() {
+        return this.storeKey;
+    }
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
-    
+
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
-    
+
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-    
+
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
-    
+
     public List<String> getWhere() {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-    
-    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withExpand(final String expand){
+    public void setStoreKey(final String storeKey) {
+        this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addExpand(final String expand){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withSort(final String sort){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addSort(final String sort){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withLimit(final int limit){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addLimit(final int limit){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withOffset(final int offset){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addOffset(final int offset){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withWithTotal(final boolean withTotal){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addWithTotal(final boolean withTotal){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withWhere(final String where){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addWhere(final String where){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addWhere(final String where) {
         return copy().addQueryParam("where", where);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withPredicateVar(final String varName, final String predicateVar){
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withPredicateVar(final String varName,
+            final String predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addPredicateVar(final String varName, final String predicateVar){
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
-    
-    
 
     @Override
-    protected ByProjectKeyInStoreKeyByStoreKeyMeCartsGet copy()
-    {
+    protected ByProjectKeyInStoreKeyByStoreKeyMeCartsGet copy() {
         return new ByProjectKeyInStoreKeyByStoreKeyMeCartsGet(this);
     }
 }

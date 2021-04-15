@@ -1,53 +1,41 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProjectNotConfiguredForLanguagesErrorBuilder {
 
-    
-    
     private String message;
-    
-    
+
     @Nullable
     private java.util.List<String> languages;
 
-    
-    public ProjectNotConfiguredForLanguagesErrorBuilder message( final String message) {
+    public ProjectNotConfiguredForLanguagesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final String ...languages) {
+
+    public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
-    
-    
+
     public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
+
     @Nullable
-    public java.util.List<String> getLanguages(){
+    public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
@@ -59,7 +47,8 @@ public final class ProjectNotConfiguredForLanguagesErrorBuilder {
         return new ProjectNotConfiguredForLanguagesErrorBuilder();
     }
 
-    public static ProjectNotConfiguredForLanguagesErrorBuilder of(final ProjectNotConfiguredForLanguagesError template) {
+    public static ProjectNotConfiguredForLanguagesErrorBuilder of(
+            final ProjectNotConfiguredForLanguagesError template) {
         ProjectNotConfiguredForLanguagesErrorBuilder builder = new ProjectNotConfiguredForLanguagesErrorBuilder();
         builder.message = template.getMessage();
         builder.languages = template.getLanguages();

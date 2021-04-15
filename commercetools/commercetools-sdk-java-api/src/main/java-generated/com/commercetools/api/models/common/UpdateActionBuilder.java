@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.common;
 
-
-import com.commercetools.api.models.common.UpdateAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class UpdateActionBuilder {
 
-    
-    
     private String action;
 
-    
-    public UpdateActionBuilder action( final String action) {
+    public UpdateActionBuilder action(final String action) {
         this.action = action;
         return this;
     }
 
-    
-    
-    public String getAction(){
+    public String getAction() {
         return this.action;
     }
 

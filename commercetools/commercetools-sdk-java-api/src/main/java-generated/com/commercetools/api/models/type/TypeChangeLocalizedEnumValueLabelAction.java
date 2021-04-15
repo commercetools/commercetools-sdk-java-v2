@@ -1,51 +1,40 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
-import com.commercetools.api.models.type.TypeUpdateAction;
-import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateAction {
 
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
 
-    
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-    
+
     @NotNull
     @Valid
     @JsonProperty("value")
     public CustomFieldLocalizedEnumValue getValue();
 
-    
     public void setFieldName(final String fieldName);
-    
-    
-    
-    public void setValue(final CustomFieldLocalizedEnumValue value);
-    
 
-    public static TypeChangeLocalizedEnumValueLabelAction of(){
+    public void setValue(final CustomFieldLocalizedEnumValue value);
+
+    public static TypeChangeLocalizedEnumValueLabelAction of() {
         return new TypeChangeLocalizedEnumValueLabelActionImpl();
     }
-    
 
     public static TypeChangeLocalizedEnumValueLabelAction of(final TypeChangeLocalizedEnumValueLabelAction template) {
         TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
@@ -54,16 +43,17 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
         return instance;
     }
 
-    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(){
+    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder() {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of();
     }
-    
-    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(final TypeChangeLocalizedEnumValueLabelAction template){
+
+    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(
+            final TypeChangeLocalizedEnumValueLabelAction template) {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
     }
-    
 
-    default <T> T withTypeChangeLocalizedEnumValueLabelAction(Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
+    default <T> T withTypeChangeLocalizedEnumValueLabelAction(
+            Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -1,64 +1,47 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import java.lang.Object;
-import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetCustomLineItemCustomFieldActionBuilder {
 
-    
-    
     private String customLineItemId;
-    
-    
-    
+
     private String name;
-    
-    
+
     @Nullable
     private java.lang.Object value;
 
-    
-    public StagedOrderSetCustomLineItemCustomFieldActionBuilder customLineItemId( final String customLineItemId) {
+    public StagedOrderSetCustomLineItemCustomFieldActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
-    
-    public StagedOrderSetCustomLineItemCustomFieldActionBuilder name( final String name) {
+
+    public StagedOrderSetCustomLineItemCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    
+
     public StagedOrderSetCustomLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    
-    
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getValue(){
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -70,7 +53,8 @@ public final class StagedOrderSetCustomLineItemCustomFieldActionBuilder {
         return new StagedOrderSetCustomLineItemCustomFieldActionBuilder();
     }
 
-    public static StagedOrderSetCustomLineItemCustomFieldActionBuilder of(final StagedOrderSetCustomLineItemCustomFieldAction template) {
+    public static StagedOrderSetCustomLineItemCustomFieldActionBuilder of(
+            final StagedOrderSetCustomLineItemCustomFieldAction template) {
         StagedOrderSetCustomLineItemCustomFieldActionBuilder builder = new StagedOrderSetCustomLineItemCustomFieldActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.name = template.getName();

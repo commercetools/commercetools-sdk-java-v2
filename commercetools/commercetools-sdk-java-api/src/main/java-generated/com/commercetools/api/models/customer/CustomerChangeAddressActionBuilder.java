@@ -1,64 +1,49 @@
+
 package com.commercetools.api.models.customer;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.customer.CustomerUpdateAction;
-import com.commercetools.api.models.customer.CustomerChangeAddressAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerChangeAddressActionBuilder {
 
-    
     @Nullable
     private String addressId;
-    
-    
+
     @Nullable
     private String addressKey;
-    
-    
-    
+
     private com.commercetools.api.models.common.Address address;
 
-    
     public CustomerChangeAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-    
-    
+
     public CustomerChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-    
-    
-    public CustomerChangeAddressActionBuilder address( final com.commercetools.api.models.common.Address address) {
+
+    public CustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
 
-    
     @Nullable
-    public String getAddressId(){
+    public String getAddressId() {
         return this.addressId;
     }
-    
-    
+
     @Nullable
-    public String getAddressKey(){
+    public String getAddressKey() {
         return this.addressKey;
     }
-    
-    
-    
-    public com.commercetools.api.models.common.Address getAddress(){
+
+    public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 

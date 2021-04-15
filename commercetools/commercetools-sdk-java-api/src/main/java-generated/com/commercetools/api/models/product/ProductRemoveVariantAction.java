@@ -1,57 +1,39 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemoveVariantActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveVariantActionImpl.class)
 public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
     String REMOVE_VARIANT = "removeVariant";
 
-    
-    
     @JsonProperty("id")
     public Long getId();
-    
-    
+
     @JsonProperty("sku")
     public String getSku();
-    
-    
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setId(final Long id);
-    
-    
-    
-    public void setSku(final String sku);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductRemoveVariantAction of(){
+    public void setSku(final String sku);
+
+    public void setStaged(final Boolean staged);
+
+    public static ProductRemoveVariantAction of() {
         return new ProductRemoveVariantActionImpl();
     }
-    
 
     public static ProductRemoveVariantAction of(final ProductRemoveVariantAction template) {
         ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
@@ -61,14 +43,13 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductRemoveVariantActionBuilder builder(){
+    public static ProductRemoveVariantActionBuilder builder() {
         return ProductRemoveVariantActionBuilder.of();
     }
-    
-    public static ProductRemoveVariantActionBuilder builder(final ProductRemoveVariantAction template){
+
+    public static ProductRemoveVariantActionBuilder builder(final ProductRemoveVariantAction template) {
         return ProductRemoveVariantActionBuilder.of(template);
     }
-    
 
     default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);

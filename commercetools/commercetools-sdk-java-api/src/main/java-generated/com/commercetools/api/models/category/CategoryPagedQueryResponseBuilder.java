@@ -1,101 +1,75 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.Category;
-import com.commercetools.api.models.category.CategoryPagedQueryResponse;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryPagedQueryResponseBuilder {
 
-    
-    
     private Long limit;
-    
-    
-    
+
     private Long count;
-    
-    
+
     @Nullable
     private Long total;
-    
-    
-    
+
     private Long offset;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.category.Category> results;
 
-    
-    public CategoryPagedQueryResponseBuilder limit( final Long limit) {
+    public CategoryPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
-    
-    
-    public CategoryPagedQueryResponseBuilder count( final Long count) {
+
+    public CategoryPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    
+
     public CategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-    
-    
-    public CategoryPagedQueryResponseBuilder offset( final Long offset) {
+
+    public CategoryPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    
-    public CategoryPagedQueryResponseBuilder results( final com.commercetools.api.models.category.Category ...results) {
+
+    public CategoryPagedQueryResponseBuilder results(final com.commercetools.api.models.category.Category... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    
-    public CategoryPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.category.Category> results) {
+
+    public CategoryPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.category.Category> results) {
         this.results = results;
         return this;
     }
 
-    
-    
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
-    
+
     @Nullable
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.category.Category> getResults(){
+
+    public java.util.List<com.commercetools.api.models.category.Category> getResults() {
         return this.results;
     }
 

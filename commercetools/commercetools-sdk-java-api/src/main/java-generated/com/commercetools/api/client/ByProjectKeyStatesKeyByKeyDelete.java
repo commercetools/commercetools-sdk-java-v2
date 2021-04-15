@@ -1,45 +1,31 @@
+
 package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
 
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Delete State by key</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyStatesKeyByKeyDelete extends ApiMethod<ByProjectKeyStatesKeyByKeyDelete, com.commercetools.api.models.state.State> implements com.commercetools.api.client.VersionedTrait<ByProjectKeyStatesKeyByKeyDelete>, com.commercetools.api.client.ConflictingTrait<ByProjectKeyStatesKeyByKeyDelete>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesKeyByKeyDelete>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesKeyByKeyDelete>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStatesKeyByKeyDelete> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyStatesKeyByKeyDelete
+        extends ApiMethod<ByProjectKeyStatesKeyByKeyDelete, com.commercetools.api.models.state.State>
+        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyStatesKeyByKeyDelete>,
+        com.commercetools.api.client.ConflictingTrait<ByProjectKeyStatesKeyByKeyDelete>,
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesKeyByKeyDelete>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesKeyByKeyDelete>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStatesKeyByKeyDelete> {
 
-    
     private String projectKey;
     private String key;
-    
 
     public ByProjectKeyStatesKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
@@ -57,59 +43,67 @@ public class ByProjectKeyStatesKeyByKeyDelete extends ApiMethod<ByProjectKeyStat
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/states/key=%s", this.projectKey, this.key);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(
+            final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
-    public String getKey() {return this.key;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getKey() {
+        return this.key;
+    }
 
     public List<String> getVersion() {
         return this.getQueryParam("version");
     }
-    
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-    
-    public void setKey(final String key) { this.key = key; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyStatesKeyByKeyDelete withVersion(final long version){
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public ByProjectKeyStatesKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
-    
-    public ByProjectKeyStatesKeyByKeyDelete addVersion(final long version){
+
+    public ByProjectKeyStatesKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
-    
-    public ByProjectKeyStatesKeyByKeyDelete withExpand(final String expand){
+
+    public ByProjectKeyStatesKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyStatesKeyByKeyDelete addExpand(final String expand){
+
+    public ByProjectKeyStatesKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
-    
-
     @Override
-    protected ByProjectKeyStatesKeyByKeyDelete copy()
-    {
+    protected ByProjectKeyStatesKeyByKeyDelete copy() {
         return new ByProjectKeyStatesKeyByKeyDelete(this);
     }
 }

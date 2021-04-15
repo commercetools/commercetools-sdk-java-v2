@@ -1,63 +1,50 @@
+
 package com.commercetools.api.models.graph_ql;
 
-import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
-import com.commercetools.api.models.graph_ql.GraphQLRequest;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class GraphQLRequestBuilder {
 
-    
-    
     private String query;
-    
-    
+
     @Nullable
     private String operationName;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
-    
-    public GraphQLRequestBuilder query( final String query) {
+    public GraphQLRequestBuilder query(final String query) {
         this.query = query;
         return this;
     }
-    
-    
+
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
         this.operationName = operationName;
         return this;
     }
-    
-    
-    public GraphQLRequestBuilder variables(@Nullable final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables) {
+
+    public GraphQLRequestBuilder variables(
+            @Nullable final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables) {
         this.variables = variables;
         return this;
     }
 
-    
-    
-    public String getQuery(){
+    public String getQuery() {
         return this.query;
     }
-    
-    
+
     @Nullable
-    public String getOperationName(){
+    public String getOperationName() {
         return this.operationName;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables(){
+    public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables() {
         return this.variables;
     }
 

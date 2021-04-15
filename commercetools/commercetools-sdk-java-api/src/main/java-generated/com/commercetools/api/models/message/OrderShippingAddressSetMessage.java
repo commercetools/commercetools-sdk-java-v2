@@ -1,50 +1,39 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderShippingAddressSetMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
+import javax.validation.Valid;
+
+import com.commercetools.api.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderShippingAddressSetMessageImpl.class)
 public interface OrderShippingAddressSetMessage extends Message {
 
     String ORDER_SHIPPING_ADDRESS_SET = "OrderShippingAddressSet";
 
-    
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-    
+
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();
 
-    
     public void setAddress(final Address address);
-    
-    
-    
-    public void setOldAddress(final Address oldAddress);
-    
 
-    public static OrderShippingAddressSetMessage of(){
+    public void setOldAddress(final Address oldAddress);
+
+    public static OrderShippingAddressSetMessage of() {
         return new OrderShippingAddressSetMessageImpl();
     }
-    
 
     public static OrderShippingAddressSetMessage of(final OrderShippingAddressSetMessage template) {
         OrderShippingAddressSetMessageImpl instance = new OrderShippingAddressSetMessageImpl();
@@ -63,14 +52,13 @@ public interface OrderShippingAddressSetMessage extends Message {
         return instance;
     }
 
-    public static OrderShippingAddressSetMessageBuilder builder(){
+    public static OrderShippingAddressSetMessageBuilder builder() {
         return OrderShippingAddressSetMessageBuilder.of();
     }
-    
-    public static OrderShippingAddressSetMessageBuilder builder(final OrderShippingAddressSetMessage template){
+
+    public static OrderShippingAddressSetMessageBuilder builder(final OrderShippingAddressSetMessage template) {
         return OrderShippingAddressSetMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderShippingAddressSetMessage(Function<OrderShippingAddressSetMessage, T> helper) {
         return helper.apply(this);

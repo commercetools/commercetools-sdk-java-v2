@@ -1,42 +1,32 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.api.models.cart_discount.StackingMode;
-import com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
     String CHANGE_STACKING_MODE = "changeStackingMode";
 
-    
     @NotNull
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();
 
-    
     public void setStackingMode(final StackingMode stackingMode);
-    
 
-    public static CartDiscountChangeStackingModeAction of(){
+    public static CartDiscountChangeStackingModeAction of() {
         return new CartDiscountChangeStackingModeActionImpl();
     }
-    
 
     public static CartDiscountChangeStackingModeAction of(final CartDiscountChangeStackingModeAction template) {
         CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
@@ -44,14 +34,14 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
         return instance;
     }
 
-    public static CartDiscountChangeStackingModeActionBuilder builder(){
+    public static CartDiscountChangeStackingModeActionBuilder builder() {
         return CartDiscountChangeStackingModeActionBuilder.of();
     }
-    
-    public static CartDiscountChangeStackingModeActionBuilder builder(final CartDiscountChangeStackingModeAction template){
+
+    public static CartDiscountChangeStackingModeActionBuilder builder(
+            final CartDiscountChangeStackingModeAction template) {
         return CartDiscountChangeStackingModeActionBuilder.of(template);
     }
-    
 
     default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);

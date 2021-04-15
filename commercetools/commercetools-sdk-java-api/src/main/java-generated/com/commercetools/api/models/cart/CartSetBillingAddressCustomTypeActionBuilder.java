@@ -1,49 +1,40 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartSetBillingAddressCustomTypeActionBuilder {
 
-    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    
-    public CartSetBillingAddressCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    public CartSetBillingAddressCustomTypeActionBuilder type(
+            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-    
-    
-    public CartSetBillingAddressCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+
+    public CartSetBillingAddressCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields(){
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
@@ -55,7 +46,8 @@ public final class CartSetBillingAddressCustomTypeActionBuilder {
         return new CartSetBillingAddressCustomTypeActionBuilder();
     }
 
-    public static CartSetBillingAddressCustomTypeActionBuilder of(final CartSetBillingAddressCustomTypeAction template) {
+    public static CartSetBillingAddressCustomTypeActionBuilder of(
+            final CartSetBillingAddressCustomTypeAction template) {
         CartSetBillingAddressCustomTypeActionBuilder builder = new CartSetBillingAddressCustomTypeActionBuilder();
         builder.type = template.getType();
         builder.fields = template.getFields();

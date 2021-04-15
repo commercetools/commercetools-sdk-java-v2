@@ -1,82 +1,62 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.error.ErrorByExtension;
-import com.commercetools.api.models.error.ErrorObject;
-import java.lang.Object;
-import com.commercetools.api.models.error.ExtensionBadResponseError;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionBadResponseErrorBuilder {
 
-    
-    
     private String message;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedMessage;
-    
-    
+
     @Nullable
     private java.lang.Object extensionExtraInfo;
-    
-    
-    
+
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
-    
-    public ExtensionBadResponseErrorBuilder message( final String message) {
+    public ExtensionBadResponseErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    
-    public ExtensionBadResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
+
+    public ExtensionBadResponseErrorBuilder localizedMessage(
+            @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
     }
-    
-    
+
     public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
         this.extensionExtraInfo = extensionExtraInfo;
         return this;
     }
-    
-    
-    public ExtensionBadResponseErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+
+    public ExtensionBadResponseErrorBuilder errorByExtension(
+            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
         this.errorByExtension = errorByExtension;
         return this;
     }
 
-    
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
+    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
     }
-    
-    
+
     @Nullable
-    public java.lang.Object getExtensionExtraInfo(){
+    public java.lang.Object getExtensionExtraInfo() {
         return this.extensionExtraInfo;
     }
-    
-    
-    
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
+
+    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
         return this.errorByExtension;
     }
 

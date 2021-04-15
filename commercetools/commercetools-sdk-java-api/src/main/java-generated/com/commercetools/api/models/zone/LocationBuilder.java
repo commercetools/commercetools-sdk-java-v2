@@ -1,47 +1,36 @@
+
 package com.commercetools.api.models.zone;
 
-
-import com.commercetools.api.models.zone.Location;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class LocationBuilder {
 
-    
-    
     private String country;
-    
-    
+
     @Nullable
     private String state;
 
-    
-    public LocationBuilder country( final String country) {
+    public LocationBuilder country(final String country) {
         this.country = country;
         return this;
     }
-    
-    
+
     public LocationBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
-    
-    
-    public String getCountry(){
+    public String getCountry() {
         return this.country;
     }
-    
-    
+
     @Nullable
-    public String getState(){
+    public String getState() {
         return this.state;
     }
 

@@ -1,45 +1,30 @@
+
 package com.commercetools.api.client;
-
-import io.vrap.rmf.base.client.utils.Utils;
-
-import java.io.InputStream;
-import java.io.IOException;
-
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
-import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import javax.annotation.Nullable;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import io.vrap.rmf.base.client.*;
-
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDApplyPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersEditsByIDApplyPost> {
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-    
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyOrdersEditsByIDApplyPost
+        extends ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDApplyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersEditsByIDApplyPost> {
+
     private String projectKey;
     private String ID;
-    
+
     private com.commercetools.api.models.order_edit.OrderEditApply orderEditApply;
 
-    public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.order_edit.OrderEditApply orderEditApply) {
+    public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID,
+            com.commercetools.api.models.order_edit.OrderEditApply orderEditApply) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
@@ -57,43 +42,50 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s/apply", this.projectKey, this.ID);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderEditApply);
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-    } catch(Exception e) {
-        e.printStackTrace();
-    }
-    
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderEditApply);
+            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client, Duration timeout){
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(final ApiHttpClient client){
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+            final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
-    public String getID() {return this.ID;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
+    public String getID() {
+        return this.ID;
+    }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-    
-    public void setID(final String ID) { this.ID = ID; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-
-    
+    public void setID(final String ID) {
+        this.ID = ID;
+    }
 
     @Override
-    protected ByProjectKeyOrdersEditsByIDApplyPost copy()
-    {
+    protected ByProjectKeyOrdersEditsByIDApplyPost copy() {
         return new ByProjectKeyOrdersEditsByIDApplyPost(this);
     }
 }

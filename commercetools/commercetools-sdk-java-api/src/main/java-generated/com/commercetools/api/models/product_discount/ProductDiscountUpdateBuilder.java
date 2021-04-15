@@ -1,53 +1,39 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
-import com.commercetools.api.models.product_discount.ProductDiscountUpdate;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountUpdateBuilder {
 
-    
-    
     private Long version;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions;
 
-    
-    public ProductDiscountUpdateBuilder version( final Long version) {
+    public ProductDiscountUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    
-    public ProductDiscountUpdateBuilder actions( final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction ...actions) {
+
+    public ProductDiscountUpdateBuilder actions(
+            final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    
-    public ProductDiscountUpdateBuilder actions( final java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
+
+    public ProductDiscountUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> getActions() {
         return this.actions;
     }
 

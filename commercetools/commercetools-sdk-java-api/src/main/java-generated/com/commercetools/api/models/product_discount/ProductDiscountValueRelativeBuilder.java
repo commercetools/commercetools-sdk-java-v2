@@ -1,31 +1,21 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.product_discount.ProductDiscountValue;
-import com.commercetools.api.models.product_discount.ProductDiscountValueRelative;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountValueRelativeBuilder {
 
-    
-    
     private Long permyriad;
 
-    
-    public ProductDiscountValueRelativeBuilder permyriad( final Long permyriad) {
+    public ProductDiscountValueRelativeBuilder permyriad(final Long permyriad) {
         this.permyriad = permyriad;
         return this;
     }
 
-    
-    
-    public Long getPermyriad(){
+    public Long getPermyriad() {
         return this.permyriad;
     }
 

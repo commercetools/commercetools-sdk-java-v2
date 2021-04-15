@@ -1,48 +1,37 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxAmountAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetCustomLineItemTaxAmountActionBuilder {
 
-    
-    
     private String customLineItemId;
-    
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
-    
-    public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemId( final String customLineItemId) {
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
-    
-    public StagedOrderSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(@Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
         return this;
     }
 
-    
-    
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;
     }
 
@@ -54,7 +43,8 @@ public final class StagedOrderSetCustomLineItemTaxAmountActionBuilder {
         return new StagedOrderSetCustomLineItemTaxAmountActionBuilder();
     }
 
-    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder of(final StagedOrderSetCustomLineItemTaxAmountAction template) {
+    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder of(
+            final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionBuilder builder = new StagedOrderSetCustomLineItemTaxAmountActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.externalTaxAmount = template.getExternalTaxAmount();

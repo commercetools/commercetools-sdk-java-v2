@@ -1,32 +1,21 @@
+
 package com.commercetools.api.models.state;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.state.StateUpdateAction;
-import com.commercetools.api.models.state.StateSetNameAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StateSetNameActionBuilder {
 
-    
-    
     private com.commercetools.api.models.common.LocalizedString name;
 
-    
-    public StateSetNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+    public StateSetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 

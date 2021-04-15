@@ -1,71 +1,50 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.cart.ProductPublishScope;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.api.models.message.ProductPublishedMessagePayload;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductPublishedMessagePayloadBuilder {
 
-    
-    
     private java.util.List<String> removedImageUrls;
-    
-    
-    
+
     private com.commercetools.api.models.product.ProductProjection productProjection;
-    
-    
-    
+
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
-    
-    public ProductPublishedMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
+    public ProductPublishedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
-    
-    
-    public ProductPublishedMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
+
+    public ProductPublishedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
-    
-    
-    public ProductPublishedMessagePayloadBuilder productProjection( final com.commercetools.api.models.product.ProductProjection productProjection) {
+
+    public ProductPublishedMessagePayloadBuilder productProjection(
+            final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
         return this;
     }
-    
-    
-    public ProductPublishedMessagePayloadBuilder scope( final com.commercetools.api.models.cart.ProductPublishScope scope) {
+
+    public ProductPublishedMessagePayloadBuilder scope(
+            final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;
         return this;
     }
 
-    
-    
-    public java.util.List<String> getRemovedImageUrls(){
+    public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }
-    
-    
-    
-    public com.commercetools.api.models.product.ProductProjection getProductProjection(){
+
+    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
-    
-    
-    
-    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
+
+    public com.commercetools.api.models.cart.ProductPublishScope getScope() {
         return this.scope;
     }
 

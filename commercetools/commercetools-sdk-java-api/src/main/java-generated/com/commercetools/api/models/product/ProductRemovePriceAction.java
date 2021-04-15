@@ -1,23 +1,18 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemovePriceActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductRemovePriceActionImpl.class)
 public interface ProductRemovePriceAction extends ProductUpdateAction {
 
@@ -29,23 +24,17 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-    
-    
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
-    
     public void setPriceId(final String priceId);
-    
-    
-    
-    public void setStaged(final Boolean staged);
-    
 
-    public static ProductRemovePriceAction of(){
+    public void setStaged(final Boolean staged);
+
+    public static ProductRemovePriceAction of() {
         return new ProductRemovePriceActionImpl();
     }
-    
 
     public static ProductRemovePriceAction of(final ProductRemovePriceAction template) {
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
@@ -54,14 +43,13 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductRemovePriceActionBuilder builder(){
+    public static ProductRemovePriceActionBuilder builder() {
         return ProductRemovePriceActionBuilder.of();
     }
-    
-    public static ProductRemovePriceActionBuilder builder(final ProductRemovePriceAction template){
+
+    public static ProductRemovePriceActionBuilder builder(final ProductRemovePriceAction template) {
         return ProductRemovePriceActionBuilder.of(template);
     }
-    
 
     default <T> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
         return helper.apply(this);

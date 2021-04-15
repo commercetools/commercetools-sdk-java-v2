@@ -1,23 +1,18 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
-import com.commercetools.api.models.product_discount.ProductDiscountChangeSortOrderActionImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountChangeSortOrderActionImpl.class)
 public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpdateAction {
 
@@ -31,14 +26,11 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
-    
     public void setSortOrder(final String sortOrder);
-    
 
-    public static ProductDiscountChangeSortOrderAction of(){
+    public static ProductDiscountChangeSortOrderAction of() {
         return new ProductDiscountChangeSortOrderActionImpl();
     }
-    
 
     public static ProductDiscountChangeSortOrderAction of(final ProductDiscountChangeSortOrderAction template) {
         ProductDiscountChangeSortOrderActionImpl instance = new ProductDiscountChangeSortOrderActionImpl();
@@ -46,14 +38,14 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
         return instance;
     }
 
-    public static ProductDiscountChangeSortOrderActionBuilder builder(){
+    public static ProductDiscountChangeSortOrderActionBuilder builder() {
         return ProductDiscountChangeSortOrderActionBuilder.of();
     }
-    
-    public static ProductDiscountChangeSortOrderActionBuilder builder(final ProductDiscountChangeSortOrderAction template){
+
+    public static ProductDiscountChangeSortOrderActionBuilder builder(
+            final ProductDiscountChangeSortOrderAction template) {
         return ProductDiscountChangeSortOrderActionBuilder.of(template);
     }
-    
 
     default <T> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);

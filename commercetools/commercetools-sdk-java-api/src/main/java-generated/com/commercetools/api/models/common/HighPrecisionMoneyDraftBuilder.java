@@ -1,80 +1,58 @@
+
 package com.commercetools.api.models.common;
 
-import com.commercetools.api.models.common.MoneyType;
-import com.commercetools.api.models.common.TypedMoneyDraft;
-import com.commercetools.api.models.common.HighPrecisionMoneyDraft;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class HighPrecisionMoneyDraftBuilder {
 
-    
-    
     private Long centAmount;
-    
-    
-    
+
     private String currencyCode;
-    
-    
+
     @Nullable
     private Integer fractionDigits;
-    
-    
-    
+
     private Long preciseAmount;
 
-    
-    public HighPrecisionMoneyDraftBuilder centAmount( final Long centAmount) {
+    public HighPrecisionMoneyDraftBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
-    
-    
-    public HighPrecisionMoneyDraftBuilder currencyCode( final String currencyCode) {
+
+    public HighPrecisionMoneyDraftBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-    
-    
+
     public HighPrecisionMoneyDraftBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
-    
-    
-    public HighPrecisionMoneyDraftBuilder preciseAmount( final Long preciseAmount) {
+
+    public HighPrecisionMoneyDraftBuilder preciseAmount(final Long preciseAmount) {
         this.preciseAmount = preciseAmount;
         return this;
     }
 
-    
-    
-    public Long getCentAmount(){
+    public Long getCentAmount() {
         return this.centAmount;
     }
-    
-    
-    
-    public String getCurrencyCode(){
+
+    public String getCurrencyCode() {
         return this.currencyCode;
     }
-    
-    
+
     @Nullable
-    public Integer getFractionDigits(){
+    public Integer getFractionDigits() {
         return this.fractionDigits;
     }
-    
-    
-    
-    public Long getPreciseAmount(){
+
+    public Long getPreciseAmount() {
         return this.preciseAmount;
     }
 

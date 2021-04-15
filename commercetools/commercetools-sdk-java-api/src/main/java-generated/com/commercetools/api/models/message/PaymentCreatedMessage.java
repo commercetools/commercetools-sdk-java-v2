@@ -1,43 +1,35 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.payment.Payment;
-import com.commercetools.api.models.message.PaymentCreatedMessageImpl;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.payment.Payment;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentCreatedMessageImpl.class)
 public interface PaymentCreatedMessage extends Message {
 
     String PAYMENT_CREATED = "PaymentCreated";
 
-    
     @NotNull
     @Valid
     @JsonProperty("payment")
     public Payment getPayment();
 
-    
     public void setPayment(final Payment payment);
-    
 
-    public static PaymentCreatedMessage of(){
+    public static PaymentCreatedMessage of() {
         return new PaymentCreatedMessageImpl();
     }
-    
 
     public static PaymentCreatedMessage of(final PaymentCreatedMessage template) {
         PaymentCreatedMessageImpl instance = new PaymentCreatedMessageImpl();
@@ -55,14 +47,13 @@ public interface PaymentCreatedMessage extends Message {
         return instance;
     }
 
-    public static PaymentCreatedMessageBuilder builder(){
+    public static PaymentCreatedMessageBuilder builder() {
         return PaymentCreatedMessageBuilder.of();
     }
-    
-    public static PaymentCreatedMessageBuilder builder(final PaymentCreatedMessage template){
+
+    public static PaymentCreatedMessageBuilder builder(final PaymentCreatedMessage template) {
         return PaymentCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withPaymentCreatedMessage(Function<PaymentCreatedMessage, T> helper) {
         return helper.apply(this);

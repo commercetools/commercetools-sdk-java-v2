@@ -1,101 +1,76 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.Extension;
-import com.commercetools.api.models.extension.ExtensionPagedQueryResponse;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionPagedQueryResponseBuilder {
 
-    
-    
     private Long limit;
-    
-    
-    
+
     private Long count;
-    
-    
+
     @Nullable
     private Long total;
-    
-    
-    
+
     private Long offset;
-    
-    
-    
+
     private java.util.List<com.commercetools.api.models.extension.Extension> results;
 
-    
-    public ExtensionPagedQueryResponseBuilder limit( final Long limit) {
+    public ExtensionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
-    
-    
-    public ExtensionPagedQueryResponseBuilder count( final Long count) {
+
+    public ExtensionPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    
+
     public ExtensionPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-    
-    
-    public ExtensionPagedQueryResponseBuilder offset( final Long offset) {
+
+    public ExtensionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    
-    public ExtensionPagedQueryResponseBuilder results( final com.commercetools.api.models.extension.Extension ...results) {
+
+    public ExtensionPagedQueryResponseBuilder results(
+            final com.commercetools.api.models.extension.Extension... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    
-    public ExtensionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.extension.Extension> results) {
+
+    public ExtensionPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.extension.Extension> results) {
         this.results = results;
         return this;
     }
 
-    
-    
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
-    
+
     @Nullable
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    
-    public java.util.List<com.commercetools.api.models.extension.Extension> getResults(){
+
+    public java.util.List<com.commercetools.api.models.extension.Extension> getResults() {
         return this.results;
     }
 

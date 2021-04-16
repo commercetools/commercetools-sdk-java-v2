@@ -6,9 +6,9 @@ import io.vrap.rmf.base.client.RequestCommand;
 
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {
-    T withLimit(final Integer limit);
+    T withLimit(final int limit);
 
-    T withOffset(final Integer offset);
+    T withOffset(final int offset);
 
     T withSort(final String sort);
 
@@ -16,5 +16,5 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
 
     T withExpand(final String expand);
 
-    T withWithTotal(final Boolean withTotal);
+    T withWithTotal(final boolean withTotal);
 }

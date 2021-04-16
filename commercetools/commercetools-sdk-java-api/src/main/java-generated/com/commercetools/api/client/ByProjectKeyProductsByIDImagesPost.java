@@ -110,11 +110,11 @@ public class ByProjectKeyProductsByIDImagesPost
         return copy().addQueryParam("filename", filename);
     }
 
-    public ByProjectKeyProductsByIDImagesPost withVariant(final Double variant) {
+    public ByProjectKeyProductsByIDImagesPost withVariant(final double variant) {
         return copy().withQueryParam("variant", variant);
     }
 
-    public ByProjectKeyProductsByIDImagesPost addVariant(final Double variant) {
+    public ByProjectKeyProductsByIDImagesPost addVariant(final double variant) {
         return copy().addQueryParam("variant", variant);
     }
 
@@ -126,11 +126,11 @@ public class ByProjectKeyProductsByIDImagesPost
         return copy().addQueryParam("sku", sku);
     }
 
-    public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged) {
+    public ByProjectKeyProductsByIDImagesPost withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyProductsByIDImagesPost addStaged(final Boolean staged) {
+    public ByProjectKeyProductsByIDImagesPost addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 

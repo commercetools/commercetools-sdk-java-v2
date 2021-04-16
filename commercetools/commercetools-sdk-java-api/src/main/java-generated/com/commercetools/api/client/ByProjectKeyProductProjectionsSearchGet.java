@@ -145,35 +145,35 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Boolean fuzzy) {
+    public ByProjectKeyProductProjectionsSearchGet withFuzzy(final boolean fuzzy) {
         return copy().withQueryParam("fuzzy", fuzzy);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addFuzzy(final Boolean fuzzy) {
+    public ByProjectKeyProductProjectionsSearchGet addFuzzy(final boolean fuzzy) {
         return copy().addQueryParam("fuzzy", fuzzy);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Double fuzzyLevel) {
+    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final double fuzzyLevel) {
         return copy().withQueryParam("fuzzyLevel", fuzzyLevel);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Double fuzzyLevel) {
+    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final double fuzzyLevel) {
         return copy().addQueryParam("fuzzyLevel", fuzzyLevel);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Boolean markMatchingVariants) {
+    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final boolean markMatchingVariants) {
         return copy().withQueryParam("markMatchingVariants", markMatchingVariants);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Boolean markMatchingVariants) {
+    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final boolean markMatchingVariants) {
         return copy().addQueryParam("markMatchingVariants", markMatchingVariants);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsSearchGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsSearchGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
@@ -217,27 +217,27 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withLimit(final Integer limit) {
+    public ByProjectKeyProductProjectionsSearchGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addLimit(final Integer limit) {
+    public ByProjectKeyProductProjectionsSearchGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withOffset(final Integer offset) {
+    public ByProjectKeyProductProjectionsSearchGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addOffset(final Integer offset) {
+    public ByProjectKeyProductProjectionsSearchGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

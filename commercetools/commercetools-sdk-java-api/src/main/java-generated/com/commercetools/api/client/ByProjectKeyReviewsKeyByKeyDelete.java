@@ -91,19 +91,19 @@ public class ByProjectKeyReviewsKeyByKeyDelete
         this.key = key;
     }
 
-    public ByProjectKeyReviewsKeyByKeyDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyReviewsKeyByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyReviewsKeyByKeyDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyReviewsKeyByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyReviewsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyReviewsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyReviewsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyReviewsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

@@ -91,19 +91,19 @@ public class ByProjectKeyReviewsByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyReviewsByIDDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyReviewsByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyReviewsByIDDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyReviewsByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyReviewsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyReviewsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyReviewsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyReviewsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

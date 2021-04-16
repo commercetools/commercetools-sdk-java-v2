@@ -111,27 +111,27 @@ public class ByProjectKeyTaxCategoriesGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyTaxCategoriesGet withLimit(final Integer limit) {
+    public ByProjectKeyTaxCategoriesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyTaxCategoriesGet addLimit(final Integer limit) {
+    public ByProjectKeyTaxCategoriesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyTaxCategoriesGet withOffset(final Integer offset) {
+    public ByProjectKeyTaxCategoriesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyTaxCategoriesGet addOffset(final Integer offset) {
+    public ByProjectKeyTaxCategoriesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyTaxCategoriesGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyTaxCategoriesGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyTaxCategoriesGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyTaxCategoriesGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

@@ -102,22 +102,22 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImport
     }
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(
-            final Double limit) {
+            final double limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(
-            final Double limit) {
+            final double limit) {
         return copy().addQueryParam("limit", limit);
     }
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
-            final Double offset) {
+            final double offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
-            final Double offset) {
+            final double offset) {
         return copy().addQueryParam("offset", offset);
     }
 

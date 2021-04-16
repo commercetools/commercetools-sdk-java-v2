@@ -10,8 +10,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyLineItemDraftBuilder {
 
+    @Nullable
     private String productId;
 
+    @Nullable
     private Long variantId;
 
     private Long quantity;
@@ -34,12 +36,12 @@ public final class MyLineItemDraftBuilder {
     @Nullable
     private String sku;
 
-    public MyLineItemDraftBuilder productId(final String productId) {
+    public MyLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
 
-    public MyLineItemDraftBuilder variantId(final Long variantId) {
+    public MyLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
@@ -82,10 +84,12 @@ public final class MyLineItemDraftBuilder {
         return this;
     }
 
+    @Nullable
     public String getProductId() {
         return this.productId;
     }
 
+    @Nullable
     public Long getVariantId() {
         return this.variantId;
     }

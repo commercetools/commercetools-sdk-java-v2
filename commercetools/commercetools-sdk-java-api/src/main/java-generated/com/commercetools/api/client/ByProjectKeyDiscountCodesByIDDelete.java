@@ -91,19 +91,19 @@ public class ByProjectKeyDiscountCodesByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyDiscountCodesByIDDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyDiscountCodesByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyDiscountCodesByIDDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyDiscountCodesByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyDiscountCodesByIDDelete withVersion(final Long version) {
+    public ByProjectKeyDiscountCodesByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyDiscountCodesByIDDelete addVersion(final Long version) {
+    public ByProjectKeyDiscountCodesByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

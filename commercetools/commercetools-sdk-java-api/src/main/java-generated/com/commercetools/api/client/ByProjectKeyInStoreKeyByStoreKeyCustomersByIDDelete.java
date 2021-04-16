@@ -104,19 +104,19 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends
         this.ID = ID;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withVersion(final Long version) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addVersion(final Long version) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

@@ -101,19 +101,19 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsG
         this.importSinkKey = importSinkKey;
     }
 
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit) {
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit) {
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final double limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset) {
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset) {
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final double offset) {
         return copy().addQueryParam("offset", offset);
     }
 

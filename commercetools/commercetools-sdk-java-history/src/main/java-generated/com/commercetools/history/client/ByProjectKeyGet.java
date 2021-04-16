@@ -138,19 +138,19 @@ public class ByProjectKeyGet
         return copy().addQueryParam("date.to", dateTo);
     }
 
-    public ByProjectKeyGet withLimit(final Integer limit) {
+    public ByProjectKeyGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyGet addLimit(final Integer limit) {
+    public ByProjectKeyGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyGet withOffset(final Integer offset) {
+    public ByProjectKeyGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyGet addOffset(final Integer offset) {
+    public ByProjectKeyGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -210,11 +210,11 @@ public class ByProjectKeyGet
         return copy().addQueryParam("customerId", customerId);
     }
 
-    public ByProjectKeyGet withExpand(final Boolean expand) {
+    public ByProjectKeyGet withExpand(final boolean expand) {
         return copy().withQueryParam("expand", expand);
     }
 
-    public ByProjectKeyGet addExpand(final Boolean expand) {
+    public ByProjectKeyGet addExpand(final boolean expand) {
         return copy().addQueryParam("expand", expand);
     }
 

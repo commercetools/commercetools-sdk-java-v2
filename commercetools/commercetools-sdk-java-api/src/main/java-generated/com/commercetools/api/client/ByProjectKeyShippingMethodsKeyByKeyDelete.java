@@ -87,11 +87,11 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyShippingMethodsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyShippingMethodsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyShippingMethodsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyShippingMethodsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

@@ -86,11 +86,11 @@ public class ByProjectKeyTaxCategoriesByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyTaxCategoriesByIDDelete withVersion(final Long version) {
+    public ByProjectKeyTaxCategoriesByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyTaxCategoriesByIDDelete addVersion(final Long version) {
+    public ByProjectKeyTaxCategoriesByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

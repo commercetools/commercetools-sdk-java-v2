@@ -83,19 +83,19 @@ public class ByProjectKeyImageSearchPost
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyImageSearchPost withLimit(final Integer limit) {
+    public ByProjectKeyImageSearchPost withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyImageSearchPost addLimit(final Integer limit) {
+    public ByProjectKeyImageSearchPost addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyImageSearchPost withOffset(final Integer offset) {
+    public ByProjectKeyImageSearchPost withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyImageSearchPost addOffset(final Integer offset) {
+    public ByProjectKeyImageSearchPost addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 

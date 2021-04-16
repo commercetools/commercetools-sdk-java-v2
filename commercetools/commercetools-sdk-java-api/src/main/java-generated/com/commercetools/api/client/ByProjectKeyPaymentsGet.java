@@ -110,27 +110,27 @@ public class ByProjectKeyPaymentsGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyPaymentsGet withLimit(final Integer limit) {
+    public ByProjectKeyPaymentsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyPaymentsGet addLimit(final Integer limit) {
+    public ByProjectKeyPaymentsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyPaymentsGet withOffset(final Integer offset) {
+    public ByProjectKeyPaymentsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyPaymentsGet addOffset(final Integer offset) {
+    public ByProjectKeyPaymentsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyPaymentsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyPaymentsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyPaymentsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyPaymentsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

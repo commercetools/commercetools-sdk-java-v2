@@ -86,11 +86,11 @@ public class ByProjectKeyTaxCategoriesKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyTaxCategoriesKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyTaxCategoriesKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyTaxCategoriesKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyTaxCategoriesKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

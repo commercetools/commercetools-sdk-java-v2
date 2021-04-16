@@ -111,11 +111,11 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends
         this.key = key;
     }
 
-    public ByProjectKeyProductProjectionsKeyByKeyGet withStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsKeyByKeyGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyProductProjectionsKeyByKeyGet addStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsKeyByKeyGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 

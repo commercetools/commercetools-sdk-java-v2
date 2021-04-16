@@ -9,5 +9,5 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DataerasureTrait<T> {
     List<String> getDataErasure();
 
-    T withDataErasure(final Boolean dataErasure);
+    T withDataErasure(final boolean dataErasure);
 }

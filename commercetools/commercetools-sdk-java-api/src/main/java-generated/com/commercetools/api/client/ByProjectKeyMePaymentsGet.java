@@ -109,27 +109,27 @@ public class ByProjectKeyMePaymentsGet
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyMePaymentsGet withLimit(final Integer limit) {
+    public ByProjectKeyMePaymentsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMePaymentsGet addLimit(final Integer limit) {
+    public ByProjectKeyMePaymentsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMePaymentsGet withOffset(final Integer offset) {
+    public ByProjectKeyMePaymentsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMePaymentsGet addOffset(final Integer offset) {
+    public ByProjectKeyMePaymentsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMePaymentsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMePaymentsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyMePaymentsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMePaymentsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

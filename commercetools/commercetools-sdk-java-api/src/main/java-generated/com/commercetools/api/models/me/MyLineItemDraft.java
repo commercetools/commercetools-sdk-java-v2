@@ -21,11 +21,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyLineItemDraftImpl.class)
 public interface MyLineItemDraft {
 
-    @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
-    @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 

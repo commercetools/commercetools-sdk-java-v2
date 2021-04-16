@@ -87,11 +87,11 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyMeShoppingListsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyMeShoppingListsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

@@ -109,27 +109,27 @@ public class ByProjectKeyApiClientsGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyApiClientsGet withLimit(final Integer limit) {
+    public ByProjectKeyApiClientsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyApiClientsGet addLimit(final Integer limit) {
+    public ByProjectKeyApiClientsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyApiClientsGet withOffset(final Integer offset) {
+    public ByProjectKeyApiClientsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyApiClientsGet addOffset(final Integer offset) {
+    public ByProjectKeyApiClientsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyApiClientsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyApiClientsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyApiClientsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyApiClientsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

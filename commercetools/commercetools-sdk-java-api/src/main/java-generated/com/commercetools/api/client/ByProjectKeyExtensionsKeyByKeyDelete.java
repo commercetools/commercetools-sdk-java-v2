@@ -86,11 +86,11 @@ public class ByProjectKeyExtensionsKeyByKeyDelete
         this.key = key;
     }
 
-    public ByProjectKeyExtensionsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyExtensionsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyExtensionsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyExtensionsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

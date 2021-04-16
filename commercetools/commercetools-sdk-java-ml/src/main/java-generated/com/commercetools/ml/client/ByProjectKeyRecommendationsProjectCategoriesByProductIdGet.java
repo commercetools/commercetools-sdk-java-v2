@@ -97,43 +97,43 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
         this.productId = productId;
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final Integer limit) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final Integer limit) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final Integer offset) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final Integer offset) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final Boolean staged) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final Boolean staged) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(final Double confidenceMin) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(final double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(final Double confidenceMin) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(final double confidenceMin) {
         return copy().addQueryParam("confidenceMin", confidenceMin);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final Double confidenceMax) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
     }
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(final Double confidenceMax) {
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(final double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
 

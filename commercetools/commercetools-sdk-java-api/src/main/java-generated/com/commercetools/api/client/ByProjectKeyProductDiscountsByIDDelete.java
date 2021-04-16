@@ -87,11 +87,11 @@ public class ByProjectKeyProductDiscountsByIDDelete extends
         this.ID = ID;
     }
 
-    public ByProjectKeyProductDiscountsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyProductDiscountsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyProductDiscountsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyProductDiscountsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

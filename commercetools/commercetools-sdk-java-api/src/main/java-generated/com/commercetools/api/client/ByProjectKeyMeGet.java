@@ -96,27 +96,27 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyMeGet withLimit(final Integer limit) {
+    public ByProjectKeyMeGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMeGet addLimit(final Integer limit) {
+    public ByProjectKeyMeGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMeGet withOffset(final Integer offset) {
+    public ByProjectKeyMeGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMeGet addOffset(final Integer offset) {
+    public ByProjectKeyMeGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMeGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMeGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyMeGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMeGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

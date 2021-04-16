@@ -86,11 +86,11 @@ public class ByProjectKeyChannelsByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyChannelsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyChannelsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyChannelsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyChannelsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

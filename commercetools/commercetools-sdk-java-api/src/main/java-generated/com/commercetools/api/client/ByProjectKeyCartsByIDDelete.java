@@ -91,19 +91,19 @@ public class ByProjectKeyCartsByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyCartsByIDDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyCartsByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyCartsByIDDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyCartsByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyCartsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyCartsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyCartsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyCartsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

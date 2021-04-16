@@ -103,35 +103,35 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
         return copy().addQueryParam("productName", productName);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Integer limit) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Integer offset) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Double confidenceMin) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final double confidenceMin) {
         return copy().addQueryParam("confidenceMin", confidenceMin);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
     }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Double confidenceMax) {
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
 

@@ -9,5 +9,5 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface VersionedTrait<T> {
     List<String> getVersion();
 
-    T withVersion(final Long version);
+    T withVersion(final long version);
 }

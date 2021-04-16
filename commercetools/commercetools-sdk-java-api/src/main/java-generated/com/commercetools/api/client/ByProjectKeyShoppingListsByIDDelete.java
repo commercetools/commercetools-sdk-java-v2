@@ -91,19 +91,19 @@ public class ByProjectKeyShoppingListsByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyShoppingListsByIDDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyShoppingListsByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyShoppingListsByIDDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyShoppingListsByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyShoppingListsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyShoppingListsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyShoppingListsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyShoppingListsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

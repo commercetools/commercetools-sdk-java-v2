@@ -109,27 +109,27 @@ public class ByProjectKeyZonesGet
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyZonesGet withLimit(final Integer limit) {
+    public ByProjectKeyZonesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyZonesGet addLimit(final Integer limit) {
+    public ByProjectKeyZonesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyZonesGet withOffset(final Integer offset) {
+    public ByProjectKeyZonesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyZonesGet addOffset(final Integer offset) {
+    public ByProjectKeyZonesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyZonesGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyZonesGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyZonesGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyZonesGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

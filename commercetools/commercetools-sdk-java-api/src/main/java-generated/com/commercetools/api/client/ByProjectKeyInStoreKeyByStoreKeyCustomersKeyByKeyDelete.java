@@ -106,19 +106,19 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

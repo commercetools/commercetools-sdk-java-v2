@@ -110,27 +110,27 @@ public class ByProjectKeyReviewsGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyReviewsGet withLimit(final Integer limit) {
+    public ByProjectKeyReviewsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyReviewsGet addLimit(final Integer limit) {
+    public ByProjectKeyReviewsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyReviewsGet withOffset(final Integer offset) {
+    public ByProjectKeyReviewsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyReviewsGet addOffset(final Integer offset) {
+    public ByProjectKeyReviewsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyReviewsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyReviewsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyReviewsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyReviewsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

@@ -110,27 +110,27 @@ public class ByProjectKeyChannelsGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyChannelsGet withLimit(final Integer limit) {
+    public ByProjectKeyChannelsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyChannelsGet addLimit(final Integer limit) {
+    public ByProjectKeyChannelsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyChannelsGet withOffset(final Integer offset) {
+    public ByProjectKeyChannelsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyChannelsGet addOffset(final Integer offset) {
+    public ByProjectKeyChannelsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyChannelsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyChannelsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyChannelsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyChannelsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

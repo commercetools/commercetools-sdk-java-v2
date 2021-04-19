@@ -19,6 +19,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
+          distribution: 'adopt'
           java-version: '8'
 
       - name: Retrieve branch name
@@ -106,6 +107,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
+          distribution: 'adopt'
           java-version: '8'
 
       - run: ./gradlew alljavadoc

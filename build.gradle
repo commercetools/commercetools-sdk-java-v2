@@ -186,9 +186,9 @@ subprojects { project ->
         testImplementation "ch.qos.logback:logback-classic:${versions.logback}"
         testImplementation 'org.skyscreamer:jsonassert:1.5.0'
         testImplementation "com.google.code.gson:gson:${versions.gson}"
-        testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
-        testImplementation 'org.mockito:mockito-inline:3.7.7'
-        testImplementation 'org.mockito:mockito-junit-jupiter:3.7.7'
+        testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.8"
+        testImplementation 'org.mockito:mockito-inline:3.9.0'
+        testImplementation 'org.mockito:mockito-junit-jupiter:3.9.0'
         testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
     }
 

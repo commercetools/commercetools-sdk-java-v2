@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -57,9 +58,12 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
                     e -> e.getValue().stream().map(v -> new AbstractMap.SimpleEntry<String, String>(e.getKey(), v) {
                     }))
                 .collect(Collectors.toList());
+
         return new ApiHttpRequest(ApiHttpMethod.valueOf(httpRequest.getHttpMethod().name()),
-            URI.create(httpRequest.getUrl()), new ApiHttpHeaders(headers),
-            SphereJsonUtils.toJsonString(request.httpRequestIntent().getBody()).getBytes(StandardCharsets.UTF_8));
+            URI.create(httpRequest.getUrl()).relativize(URI.create("/")), new ApiHttpHeaders(headers),
+            Optional.ofNullable(httpRequest.getBody())
+                    .map(body -> SphereJsonUtils.toJsonString(body).getBytes(StandardCharsets.UTF_8))
+                    .orElse(null));
     }
 
     @Override

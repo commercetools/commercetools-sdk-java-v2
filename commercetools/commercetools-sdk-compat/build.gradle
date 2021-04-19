@@ -4,9 +4,10 @@ dependencies {
     api "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
     implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
     implementation "javax.validation:validation-api:${versions.validation}"
+    api "org.slf4j:slf4j-api:${versions.slf4j}"
     api commons.lang3
 
-    integrationTestImplementation project(':commercetools:commercetools-http-client')
+    testImplementation project(':commercetools:commercetools-http-client')
 
     api project(':commercetools:commercetools-sdk-java-api')
     api "com.commercetools.sdk.jvm.core:commercetools-java-client-core:1.62.0"

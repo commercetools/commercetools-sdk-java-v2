@@ -22,10 +22,10 @@ public class CompatClientFactory {
         return CompatClient.of(ClientBuilder.of()
                 .defaultClient(clientConfig.getApiUrl())
                 .withClientCredentials(ClientCredentials.of()
-                                .withClientId(clientConfig.getClientId())
-                                .withClientSecret(clientConfig.getClientSecret())
-                                .build(),
-                        clientConfig.getAuthUrl())
+                        .withClientId(clientConfig.getClientId())
+                        .withClientSecret(clientConfig.getClientSecret())
+                        .build(),
+                    clientConfig.getAuthUrl())
                 .build());
     }
 }

@@ -28,7 +28,8 @@ public class CompatClient implements ApiHttpClient {
         return compatRequest.executeBlocking(client);
     }
 
-    public <O, TO> ApiHttpResponse<O> executeBlocking(SphereRequest<TO> request, Class<O> outputType, Duration duration) {
+    public <O, TO> ApiHttpResponse<O> executeBlocking(SphereRequest<TO> request, Class<O> outputType,
+            Duration duration) {
         final CompatRequest<O> compatRequest = new CompatRequest<>(client, request, outputType);
         return compatRequest.executeBlocking(client, duration);
     }

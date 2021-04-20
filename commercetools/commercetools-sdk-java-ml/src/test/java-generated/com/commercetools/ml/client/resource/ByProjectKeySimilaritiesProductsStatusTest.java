@@ -4,7 +4,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.error.ApiClientException;
 import io.vrap.rmf.base.client.VrapHttpClient;
-import com.commercetools.api.client.ApiRoot;
+import com.commercetools.ml.client.ApiRoot;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Assert;

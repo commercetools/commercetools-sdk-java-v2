@@ -10,3 +10,4 @@ dependencies {
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"
+sourceSets.test.java.srcDirs += "src/test/java-generated"

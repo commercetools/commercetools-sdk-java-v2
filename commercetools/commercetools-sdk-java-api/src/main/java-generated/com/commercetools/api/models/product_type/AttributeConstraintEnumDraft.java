@@ -44,6 +44,10 @@ public interface AttributeConstraintEnumDraft {
             public String name() {
                 return value.toUpperCase();
             }
+
+            public String toString() {
+                return value;
+            }
         });
     }
 

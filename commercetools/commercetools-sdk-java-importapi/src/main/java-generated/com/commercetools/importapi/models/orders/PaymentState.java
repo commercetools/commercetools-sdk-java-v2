@@ -63,6 +63,10 @@ public interface PaymentState {
             public String name() {
                 return value.toUpperCase();
             }
+
+            public String toString() {
+                return value;
+            }
         });
     }
 

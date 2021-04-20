@@ -1,28 +1,29 @@
-package com.commercetools.ml.client.resource;
 
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.error.ApiServerException;
-import io.vrap.rmf.base.client.error.ApiClientException;
-import io.vrap.rmf.base.client.VrapHttpClient;
-import com.commercetools.ml.client.ApiRoot;
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import org.assertj.core.api.Assertions;
+package com.commercetools.ml.client.resource;
 
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+
+import com.commercetools.ml.client.ApiRoot;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.assertj.core.api.Assertions;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @RunWith(JUnitParamsRunner.class)
 public class ByProjectKeyRecommendationsGeneralCategoriesTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
@@ -39,162 +40,116 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
 
     @Test
     @Parameters(method = "executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception{
-        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
-                       new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+        Mockito.when(httpClientMock.execute(Mockito.any()))
+                .thenReturn(CompletableFuture.completedFuture(
+                    new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(
-               () -> client.execute(httpRequest).get()).hasCauseInstanceOf(ApiServerException.class); 
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+                .hasCauseInstanceOf(ApiServerException.class);
     }
 
     @Test
     @Parameters(method = "executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception{
-        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
-                       new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+        Mockito.when(httpClientMock.execute(Mockito.any()))
+                .thenReturn(CompletableFuture.completedFuture(
+                    new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(
-           () -> client.execute(httpRequest).get()).hasCauseInstanceOf(ApiClientException.class);
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+                .hasCauseInstanceOf(ApiClientException.class);
     }
 
     private Object[] requestWithMethodParameters() {
-       return new Object [] {
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withProductImageUrl("productImageUrl")
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?productImageUrl=productImageUrl",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withProductName("productName")
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?productName=productName",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withLimit("limit")
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?limit=limit",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withOffset("offset")
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?offset=offset",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withConfidenceMin(0.7340351)
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?confidenceMin=0.7340351",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withConfidenceMax(0.30089796)
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories?confidenceMax=0.30089796",
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .createHttpRequest(),
-                   "get",
-                   "/test_projectKey/recommendations/general-categories",
-               }
-       };
+        return new Object[] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withProductImageUrl("productImageUrl")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?productImageUrl=productImageUrl", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withProductName("productName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?productName=productName", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withLimit(7)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withOffset(3)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?offset=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withConfidenceMin(0.7340351)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?confidenceMin=0.7340351", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recommendations()
+                                .generalCategories()
+                                .get()
+                                .withConfidenceMax(0.30089796)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/recommendations/general-categories?confidenceMax=0.30089796", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/recommendations/general-categories", } };
     }
 
     private Object[] executeMethodParameters() {
-       return new Object [] {
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withProductImageUrl("productImageUrl"),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withProductName("productName"),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withLimit("limit"),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withOffset("offset"),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withConfidenceMin(0.7340351),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get()
-                   .withConfidenceMax(0.30089796),
-               },
-               new Object[] {           
-                   apiRoot
-                   .withProjectKey("test_projectKey")
-                   .recommendations()
-                   .generalCategories()
-                   .get(),
-               }
-       };
+        return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withProductImageUrl("productImageUrl"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withProductName("productName"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withLimit(7), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withOffset(3), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withConfidenceMin(0.7340351), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recommendations()
+                        .generalCategories()
+                        .get()
+                        .withConfidenceMax(0.30089796), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").recommendations().generalCategories().get(), } };
     }
 }

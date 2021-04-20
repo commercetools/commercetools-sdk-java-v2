@@ -42,4 +42,4 @@ jobs:
       - name: Send code coverage report to Codecov.io
         run: bash <(curl -s https://codecov.io/bash) || true
         env:
-            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

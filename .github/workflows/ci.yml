@@ -1,6 +1,7 @@
 on:
   - push
   - workflow_dispatch
+  - pull_request
 
 name: CI
 
@@ -27,14 +28,25 @@ jobs:
           echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
           echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
-      - name: Run integration tests
+      - name: Run integration tests for PR
+        if: github.event_name == 'pull_request'
         run: ./gradlew clean build runMainMethodThreadLeakTest
         env:
-          CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
-          CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
-          CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
+          CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
+          CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+          CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY_PR }}
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
           CTP_JVM_SDK_LOG_LEVEL: OFF
+
+      - name: Run integration tests
+        if: github.event_name != 'pull_request'
+        run: ./gradlew clean build runMainMethodThreadLeakTest
+        env:
+            CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
+            CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
+            CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
+            SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+            CTP_JVM_SDK_LOG_LEVEL: OFF
 
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport

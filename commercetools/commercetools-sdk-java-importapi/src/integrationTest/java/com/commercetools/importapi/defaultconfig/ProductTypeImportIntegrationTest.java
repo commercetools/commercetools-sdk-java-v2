@@ -69,15 +69,16 @@ public class ProductTypeImportIntegrationTest {
             assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
         });
 
-        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
-                .importSinks()
-                .withImportSinkKeyValue(importSink.getKey())
-                .delete()
-                .executeBlocking()
-                .getBody();
-
-        Assert.assertNotNull(deletedImportSink);
-        Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());
+//
+//        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
+//                .importSinks()
+//                .withImportSinkKeyValue(importSink.getKey())
+//                .delete()
+//                .executeBlocking()
+//                .getBody();
+//
+//        Assert.assertNotNull(deletedImportSink);
+//        Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());
     }
 
 }

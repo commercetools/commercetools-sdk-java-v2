@@ -91,6 +91,10 @@ public class ApiHttpException extends BaseException {
         return response;
     }
 
+    public ApiHttpRequest getRequest() {
+        return request;
+    }
+
     @Override
     public final String getMessage() {
         return Optional.ofNullable(super.getMessage()).map(s -> "detailMessage: " + s + "\n").orElse("") + httpSummary()

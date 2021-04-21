@@ -51,6 +51,10 @@ public interface InventoryMode {
             public String name() {
                 return value.toUpperCase();
             }
+
+            public String toString() {
+                return value;
+            }
         });
     }
 

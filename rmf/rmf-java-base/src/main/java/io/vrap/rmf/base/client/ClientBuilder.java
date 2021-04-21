@@ -22,6 +22,7 @@ public class ClientBuilder {
     private URI apiBaseUrl;
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
+    private Supplier<RetryMiddleware> retryMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
     private List<Middleware> middlewares = new ArrayList<>();
@@ -59,6 +60,7 @@ public class ClientBuilder {
             Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
             middlewareStack.addAll(middlewares);
             return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
         };
@@ -135,6 +137,20 @@ public class ClientBuilder {
 
     public ClientBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
         return withErrorMiddleware(() -> errorMiddleware);
+    }
+
+
+    public ClientBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+        this.retryMiddleware = retryMiddleware;
+        return this;
+    }
+
+    public ClientBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+        return withRetryMiddleware(() -> retryMiddleware);
+    }
+
+    public ClientBuilder withRetryMiddleware(final int maxRetries) {
+        return withRetryMiddleware(new RetryMiddleware(maxRetries));
     }
 
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

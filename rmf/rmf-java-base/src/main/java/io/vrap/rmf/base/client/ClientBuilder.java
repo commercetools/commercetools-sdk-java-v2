@@ -139,7 +139,6 @@ public class ClientBuilder {
         return withErrorMiddleware(() -> errorMiddleware);
     }
 
-
     public ClientBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
         this.retryMiddleware = retryMiddleware;
         return this;

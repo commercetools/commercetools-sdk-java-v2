@@ -10,9 +10,7 @@ import java.util.function.Supplier;
 import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.http.*;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+import io.vrap.rmf.base.client.oauth2.*;
 
 import org.apache.commons.lang3.SystemUtils;
 
@@ -22,6 +20,7 @@ public class ClientBuilder {
     private URI apiBaseUrl;
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
+    private Supplier<RetryMiddleware> retryMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
     private List<Middleware> middlewares = new ArrayList<>();
@@ -59,6 +58,7 @@ public class ClientBuilder {
             Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
             middlewareStack.addAll(middlewares);
             return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
         };
@@ -99,38 +99,94 @@ public class ClientBuilder {
 
     public ClientBuilder defaultClient(final String apiBaseUrl, final ClientCredentials credentials,
             final String tokenEndpoint) {
-        return defaultClient(apiBaseUrl).withClientCredentials(credentials, tokenEndpoint);
+        return defaultClient(apiBaseUrl).withClientCredentialsFlow(credentials, tokenEndpoint);
     }
 
-    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final URI tokenEndpoint) {
-        return withClientCredentials(credentials, tokenEndpoint.toString());
-    }
-
-    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final URI tokenEndpoint,
-            VrapHttpClient httpClient) {
-        return withClientCredentials(credentials, tokenEndpoint.toString(), httpClient);
-    }
-
+    /**
+     * @deprecated use withClientCredentialsFlow instead
+     * @param credentials OAuth credentials
+     * @param tokenEndpoint OAuth endpoint
+     * @return client builder
+     */
+    @Deprecated
     public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint) {
-        this.oAuthMiddleware = () -> {
-            final TokenSupplier tokenSupplier = createClientCredentialsTokenSupplier(credentials, tokenEndpoint,
-                requireNonNull(httpClient));
-            final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
-            return OAuthMiddleware.of(oAuthHandler);
-        };
-
-        return this;
+        return withClientCredentialsFlow(credentials, tokenEndpoint);
     }
 
+    /**
+     * @deprecated use withClientCredentialsFlow instead
+     * @param credentials OAuth credentials
+     * @param tokenEndpoint OAuth endpoint
+     * @param httpClient HTTP client to be used
+     * @return client builder
+     */
+    @Deprecated
     public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
-        return withTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient));
+        return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {
+        return withClientCredentialsFlow(credentials, tokenEndpoint.toString());
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);
     }
 
     private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,
             final String tokenEndpoint, final VrapHttpClient httpClient) {
         return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
             credentials.getScopes(), tokenEndpoint, httpClient);
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {
+        return withTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, requireNonNull(httpClient)));
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return withTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient));
+    }
+
+    public ClientBuilder withStaticTokenFlow(final AuthenticationToken token) {
+        return withTokenSupplier(new StaticTokenSupplier(token));
+    }
+
+    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint) {
+        return withTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, requireNonNull(httpClient)));
+    }
+
+    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return withTokenSupplier(createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient));
+    }
+
+    private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,
+            final String tokenEndpoint, final VrapHttpClient httpClient) {
+        return new AnonymousSessionTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
+            credentials.getScopes(), tokenEndpoint, httpClient);
+    }
+
+    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint) {
+        return withTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint,
+            requireNonNull(httpClient)));
+    }
+
+    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint, VrapHttpClient httpClient) {
+        return withTokenSupplier(
+            createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient));
+    }
+
+    private TokenSupplier createGlobalCustomerPasswordTokenSupplier(final ClientCredentials credentials,
+            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
+        return new GlobalCustomerPasswordTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), email,
+            password, credentials.getScopes(), tokenEndpoint, httpClient);
     }
 
     public ClientBuilder addAcceptGZipMiddleware() {
@@ -148,6 +204,19 @@ public class ClientBuilder {
 
     public ClientBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
         return withErrorMiddleware(() -> errorMiddleware);
+    }
+
+    public ClientBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+        this.retryMiddleware = retryMiddleware;
+        return this;
+    }
+
+    public ClientBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+        return withRetryMiddleware(() -> retryMiddleware);
+    }
+
+    public ClientBuilder withRetryMiddleware(final int maxRetries) {
+        return withRetryMiddleware(new RetryMiddleware(maxRetries));
     }
 
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

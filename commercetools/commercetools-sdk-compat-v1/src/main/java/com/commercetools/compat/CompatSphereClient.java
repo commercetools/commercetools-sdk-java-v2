@@ -28,7 +28,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         this.client = ClientBuilder.of()
                 .defaultClient(resolve)
                 .addCorrelationIdProvider(new ApiCorrelationIdProvider(clientConfig.getProjectKey()))
-                .withClientCredentials(ClientCredentials.of()
+                .withClientCredentialsFlow(ClientCredentials.of()
                         .withClientId(clientConfig.getClientId())
                         .withClientSecret(clientConfig.getClientSecret())
                         .build(),

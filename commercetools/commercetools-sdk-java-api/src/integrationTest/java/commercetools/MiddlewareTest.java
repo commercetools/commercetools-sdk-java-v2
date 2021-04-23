@@ -74,7 +74,7 @@ public class MiddlewareTest {
             }
         })
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .withClientCredentials(credentials, ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), httpClient)
+                .withClientCredentialsFlow(credentials, ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), httpClient)
                 .build();
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET,

@@ -119,6 +119,12 @@ def pomConfig = {
 
 allprojects {
     apply plugin: 'com.diffplug.spotless'
+    apply plugin: 'jacoco'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
 
     spotless {
         def importOrderConfigFile = rootProject.file("src/eclipse/eclipse.importorder")
@@ -146,10 +152,6 @@ nexusPublishing {
 }
 
 subprojects { project ->
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
 
     apply plugin: 'idea'
 
@@ -299,4 +301,23 @@ task alljavadoc(type: Javadoc) {
     classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
     options.noTimestamp = true
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco/report.xml")
+        html.enabled false
+        csv.enabled false
+    }
+}
+
+codeCoverageReport.dependsOn {
+    subprojects*.test
 }

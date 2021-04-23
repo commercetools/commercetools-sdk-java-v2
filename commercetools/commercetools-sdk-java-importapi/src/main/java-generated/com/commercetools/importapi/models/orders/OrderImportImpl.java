@@ -23,8 +23,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderImportImpl implements OrderImport {
 
-    private String key;
-
     private String orderNumber;
 
     private com.commercetools.importapi.models.common.CustomerKeyReference customer;
@@ -70,7 +68,7 @@ public final class OrderImportImpl implements OrderImport {
     private java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses;
 
     @JsonCreator
-    OrderImportImpl(@JsonProperty("key") final String key, @JsonProperty("orderNumber") final String orderNumber,
+    OrderImportImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customer") final com.commercetools.importapi.models.common.CustomerKeyReference customer,
             @JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> lineItems,
@@ -92,7 +90,6 @@ public final class OrderImportImpl implements OrderImport {
             @JsonProperty("taxCalculationMode") final com.commercetools.importapi.models.orders.TaxCalculationMode taxCalculationMode,
             @JsonProperty("origin") final com.commercetools.importapi.models.orders.CartOrigin origin,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses) {
-        this.key = key;
         this.orderNumber = orderNumber;
         this.customer = customer;
         this.customerEmail = customerEmail;
@@ -120,12 +117,8 @@ public final class OrderImportImpl implements OrderImport {
     public OrderImportImpl() {
     }
 
-    public String getKey() {
-        return this.key;
-    }
-
     /**
-    *  <p>Maps to <code>Order.orderNumber</code>.</p>
+    *  <p>Maps to <code>Order.orderNumber</code>. A string that identifies an Order. Must be unique across a Project. Once it is set, it cannot be changed.</p>
     */
     public String getOrderNumber() {
         return this.orderNumber;
@@ -278,10 +271,6 @@ public final class OrderImportImpl implements OrderImport {
         return this.itemShippingAddresses;
     }
 
-    public void setKey(final String key) {
-        this.key = key;
-    }
-
     public void setOrderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
     }
@@ -399,8 +388,7 @@ public final class OrderImportImpl implements OrderImport {
 
         OrderImportImpl that = (OrderImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key)
-                .append(orderNumber, that.orderNumber)
+        return new EqualsBuilder().append(orderNumber, that.orderNumber)
                 .append(customer, that.customer)
                 .append(customerEmail, that.customerEmail)
                 .append(lineItems, that.lineItems)
@@ -427,8 +415,7 @@ public final class OrderImportImpl implements OrderImport {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
-                .append(orderNumber)
+        return new HashCodeBuilder(17, 37).append(orderNumber)
                 .append(customer)
                 .append(customerEmail)
                 .append(lineItems)

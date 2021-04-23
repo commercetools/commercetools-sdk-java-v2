@@ -10,9 +10,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderImportBuilder {
 
-    private String key;
-
-    @Nullable
     private String orderNumber;
 
     @Nullable
@@ -77,12 +74,7 @@ public final class OrderImportBuilder {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses;
 
-    public OrderImportBuilder key(final String key) {
-        this.key = key;
-        return this;
-    }
-
-    public OrderImportBuilder orderNumber(@Nullable final String orderNumber) {
+    public OrderImportBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
@@ -225,11 +217,6 @@ public final class OrderImportBuilder {
         return this;
     }
 
-    public String getKey() {
-        return this.key;
-    }
-
-    @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
@@ -339,7 +326,7 @@ public final class OrderImportBuilder {
     }
 
     public OrderImport build() {
-        return new OrderImportImpl(key, orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,
+        return new OrderImportImpl(orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, taxCalculationMode, origin,
             itemShippingAddresses);
@@ -351,7 +338,6 @@ public final class OrderImportBuilder {
 
     public static OrderImportBuilder of(final OrderImport template) {
         OrderImportBuilder builder = new OrderImportBuilder();
-        builder.key = template.getKey();
         builder.orderNumber = template.getOrderNumber();
         builder.customer = template.getCustomer();
         builder.customerEmail = template.getCustomerEmail();

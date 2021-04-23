@@ -129,12 +129,18 @@ public interface ReferenceTypeId {
         public String getJsonName() {
             return jsonName;
         }
+
+        public String toString() {
+            return jsonName;
+        }
     }
 
     @JsonValue
     String getJsonName();
 
     String name();
+
+    String toString();
 
     @JsonCreator
     public static ReferenceTypeId findEnum(String value) {

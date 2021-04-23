@@ -37,12 +37,18 @@ public interface AttributeConstraintEnum {
         public String getJsonName() {
             return jsonName;
         }
+
+        public String toString() {
+            return jsonName;
+        }
     }
 
     @JsonValue
     String getJsonName();
 
     String name();
+
+    String toString();
 
     @JsonCreator
     public static AttributeConstraintEnum findEnum(String value) {

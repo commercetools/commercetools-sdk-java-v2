@@ -32,12 +32,18 @@ public interface InventoryMode {
         public String getJsonName() {
             return jsonName;
         }
+
+        public String toString() {
+            return jsonName;
+        }
     }
 
     @JsonValue
     String getJsonName();
 
     String name();
+
+    String toString();
 
     @JsonCreator
     public static InventoryMode findEnum(String value) {

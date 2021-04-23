@@ -25,7 +25,7 @@ public class CompatTest {
                     new ApiHttpResponse<>(200, null, projectJson.getBytes(StandardCharsets.UTF_8))));
         ApiHttpClient client = ClientBuilder.of(httpClient).defaultClient("https://api.commercetools.com").build();
 
-        CompatClient compatClient = CompatClient.of(client);
+        CompatClient compatClient = CompatClient.of(client, "test");
         Project project = compatClient.execute(ProjectGet.of(), Project.class).get().getBody();
         Assertions.assertThat(project).isInstanceOf(Project.class);
         Assertions.assertThat(project.getKey()).isEqualTo("foo");
@@ -41,7 +41,7 @@ public class CompatTest {
 
         ApiHttpClient client = ClientBuilder.of(httpClient).defaultClient("https://api.commercetools.com").build();
 
-        CompatRequest<Project> request = CompatRequest.of(client, ProjectGet.of(), Project.class);
+        CompatRequest<Project> request = CompatRequest.of(client, "test", ProjectGet.of(), Project.class);
         Project project = request.executeBlocking().getBody();
 
         Assertions.assertThat(project).isInstanceOf(Project.class);

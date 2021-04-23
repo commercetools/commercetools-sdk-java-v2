@@ -19,11 +19,11 @@ import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-public class SphereCompatClient extends AutoCloseableService implements SphereClient {
+public class CompatSphereClient extends AutoCloseableService implements SphereClient {
     private final ApiHttpClient client;
     private final SphereClientConfig clientConfig;
 
-    private SphereCompatClient(SphereClientConfig clientConfig) {
+    private CompatSphereClient(SphereClientConfig clientConfig) {
         final URI resolve = URI.create(clientConfig.getApiUrl()).resolve("/" + clientConfig.getProjectKey() + "/");
         this.client = ClientBuilder.of()
                 .defaultClient(resolve)
@@ -38,13 +38,14 @@ public class SphereCompatClient extends AutoCloseableService implements SphereCl
         this.clientConfig = clientConfig;
     }
 
-    public static SphereCompatClient of(SphereClientConfig clientConfig) {
-        return new SphereCompatClient(clientConfig);
+    public static CompatSphereClient of(SphereClientConfig clientConfig) {
+        return new CompatSphereClient(clientConfig);
     }
 
     @Override
     public <T> CompletionStage<T> execute(SphereRequest<T> sphereRequest) {
-        final CompatRequest<JsonNode> compatRequest = new CompatRequest<>(client, sphereRequest, JsonNode.class);
+        final CompatRequest<JsonNode> compatRequest = CompatRequest.of(client, clientConfig.getProjectKey(),
+            sphereRequest, JsonNode.class);
 
         return compatRequest.send()
                 .thenApply(

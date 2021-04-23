@@ -9,28 +9,31 @@ import io.vrap.rmf.base.client.*;
 
 public class CompatClient implements ApiHttpClient {
     private final ApiHttpClient client;
+    private final String projectKey;
 
-    private CompatClient(ApiHttpClient client) {
+    private CompatClient(final ApiHttpClient client, final String projectKey) {
         this.client = client;
+        this.projectKey = projectKey;
     }
 
-    public static CompatClient of(ApiHttpClient client) {
-        return new CompatClient(client);
+    public static CompatClient of(final ApiHttpClient client, final String projectKey) {
+        return new CompatClient(client, projectKey);
     }
 
-    public <O, TO> CompletableFuture<ApiHttpResponse<O>> execute(SphereRequest<TO> request, Class<O> outputType) {
-        final CompatRequest<O> compatRequest = new CompatRequest<>(client, request, outputType);
+    public <O, TO> CompletableFuture<ApiHttpResponse<O>> execute(final SphereRequest<TO> request,
+            final Class<O> outputType) {
+        final CompatRequest<O> compatRequest = CompatRequest.of(client, projectKey, request, outputType);
         return compatRequest.execute(client);
     }
 
-    public <O, TO> ApiHttpResponse<O> executeBlocking(SphereRequest<TO> request, Class<O> outputType) {
-        final CompatRequest<O> compatRequest = new CompatRequest<>(client, request, outputType);
+    public <O, TO> ApiHttpResponse<O> executeBlocking(final SphereRequest<TO> request, final Class<O> outputType) {
+        final CompatRequest<O> compatRequest = CompatRequest.of(client, projectKey, request, outputType);
         return compatRequest.executeBlocking(client);
     }
 
-    public <O, TO> ApiHttpResponse<O> executeBlocking(SphereRequest<TO> request, Class<O> outputType,
+    public <O, TO> ApiHttpResponse<O> executeBlocking(final SphereRequest<TO> request, final Class<O> outputType,
             Duration duration) {
-        final CompatRequest<O> compatRequest = new CompatRequest<>(client, request, outputType);
+        final CompatRequest<O> compatRequest = CompatRequest.of(client, projectKey, request, outputType);
         return compatRequest.executeBlocking(client, duration);
     }
 

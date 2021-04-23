@@ -23,22 +23,26 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
 
     private final SphereRequest<?> request;
     private final Class<TResult> resultClass;
+    private final String projectKey;
 
-    public CompatRequest(final ApiHttpClient apiHttpClient, SphereRequest<?> request, Class<TResult> resultClass) {
+    private CompatRequest(final ApiHttpClient apiHttpClient, final String projectKey, SphereRequest<?> request,
+            final Class<TResult> resultClass) {
         super(apiHttpClient);
         this.request = request;
+        this.projectKey = projectKey;
         this.resultClass = resultClass;
     }
 
-    public CompatRequest(CompatRequest<TResult> t) {
+    private CompatRequest(CompatRequest<TResult> t) {
         super(t);
         this.request = t.request;
         this.resultClass = t.resultClass;
+        this.projectKey = t.projectKey;
     }
 
-    public static <TResult> CompatRequest<TResult> of(ApiHttpClient client, SphereRequest<?> request,
-            Class<TResult> resultClass) {
-        return new CompatRequest<>(client, request, resultClass);
+    public static <TResult> CompatRequest<TResult> of(final ApiHttpClient client, final String projectKey,
+            final SphereRequest<?> request, final Class<TResult> resultClass) {
+        return new CompatRequest<>(client, projectKey, request, resultClass);
     }
 
     @Override
@@ -49,7 +53,7 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
     @Override
     public ApiHttpRequest createHttpRequest() {
 
-        HttpRequest httpRequest = request.httpRequestIntent().toHttpRequest("");
+        HttpRequest httpRequest = request.httpRequestIntent().toHttpRequest("/" + projectKey);
         List<Map.Entry<String, String>> headers = httpRequest.getHeaders()
                 .getHeadersAsMap()
                 .entrySet()
@@ -59,8 +63,9 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
                     }))
                 .collect(Collectors.toList());
 
-        return new ApiHttpRequest(ApiHttpMethod.valueOf(httpRequest.getHttpMethod().name()),
-            URI.create(httpRequest.getUrl()).relativize(URI.create("/")), new ApiHttpHeaders(headers),
+        final URI resolve = URI.create(httpRequest.getUrl());
+        return new ApiHttpRequest(ApiHttpMethod.valueOf(httpRequest.getHttpMethod().name()), resolve,
+            new ApiHttpHeaders(headers),
             Optional.ofNullable(httpRequest.getBody())
                     .map(body -> SphereJsonUtils.toJsonString(body).getBytes(StandardCharsets.UTF_8))
                     .orElse(null));

@@ -26,6 +26,7 @@ public class CompatClientFactory {
                         .withClientSecret(clientConfig.getClientSecret())
                         .build(),
                     clientConfig.getAuthUrl())
-                .build());
+                .build(),
+            clientConfig.getProjectKey());
     }
 }

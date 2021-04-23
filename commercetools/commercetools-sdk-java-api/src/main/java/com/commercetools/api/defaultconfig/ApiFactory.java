@@ -153,7 +153,7 @@ public class ApiFactory {
             final List<Middleware> middlewares, @Nullable final CorrelationIdProvider correlationIdProvider) {
         return ClientBuilder.of(httpClientSupplier.get())
                 .defaultClient(apiEndpoint)
-                .withClientCredentials(credentials, tokenEndpoint)
+                .withClientCredentialsFlow(credentials, tokenEndpoint)
                 .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
                 .addCorrelationIdProvider(correlationIdProvider)
                 .addMiddlewares(middlewares)

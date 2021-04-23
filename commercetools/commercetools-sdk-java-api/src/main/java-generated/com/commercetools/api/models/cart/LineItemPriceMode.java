@@ -33,12 +33,18 @@ public interface LineItemPriceMode {
         public String getJsonName() {
             return jsonName;
         }
+
+        public String toString() {
+            return jsonName;
+        }
     }
 
     @JsonValue
     String getJsonName();
 
     String name();
+
+    String toString();
 
     @JsonCreator
     public static LineItemPriceMode findEnum(String value) {

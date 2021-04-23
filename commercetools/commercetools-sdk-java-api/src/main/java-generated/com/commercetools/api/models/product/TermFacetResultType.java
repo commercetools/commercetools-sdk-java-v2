@@ -45,12 +45,18 @@ public interface TermFacetResultType {
         public String getJsonName() {
             return jsonName;
         }
+
+        public String toString() {
+            return jsonName;
+        }
     }
 
     @JsonValue
     String getJsonName();
 
     String name();
+
+    String toString();
 
     @JsonCreator
     public static TermFacetResultType findEnum(String value) {

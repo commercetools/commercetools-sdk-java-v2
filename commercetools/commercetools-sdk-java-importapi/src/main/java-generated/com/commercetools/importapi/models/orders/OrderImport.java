@@ -12,7 +12,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
 import com.commercetools.importapi.models.common.CustomerKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
@@ -29,12 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImportImpl.class)
-public interface OrderImport extends ImportResource {
+public interface OrderImport {
 
     /**
-    *  <p>Maps to <code>Order.orderNumber</code>.</p>
+    *  <p>Maps to <code>Order.orderNumber</code>. A string that identifies an Order. Must be unique across a Project. Once it is set, it cannot be changed.</p>
     */
-
+    @NotNull
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
@@ -245,7 +244,6 @@ public interface OrderImport extends ImportResource {
 
     public static OrderImport of(final OrderImport template) {
         OrderImportImpl instance = new OrderImportImpl();
-        instance.setKey(template.getKey());
         instance.setOrderNumber(template.getOrderNumber());
         instance.setCustomer(template.getCustomer());
         instance.setCustomerEmail(template.getCustomerEmail());

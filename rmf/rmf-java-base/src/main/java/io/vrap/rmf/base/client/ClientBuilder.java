@@ -85,12 +85,16 @@ public class ClientBuilder {
         return this;
     }
 
-    public ClientBuilder defaultClient(final String apiBaseUrl) {
+    public ClientBuilder defaultClient(final URI apiBaseUrl) {
         return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()
                 .withSerializer(ResponseSerializer.of())
                 .withInternalLoggerFactory((request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic))
                 .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)
                 .addAcceptGZipMiddleware();
+    }
+
+    public ClientBuilder defaultClient(final String apiBaseUrl) {
+        return defaultClient(URI.create(apiBaseUrl));
     }
 
     public ClientBuilder defaultClient(final String apiBaseUrl, final ClientCredentials credentials,
@@ -120,6 +124,15 @@ public class ClientBuilder {
     public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {
+        return withClientCredentialsFlow(credentials, tokenEndpoint.toString());
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);
     }
 
     private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,

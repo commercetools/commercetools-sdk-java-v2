@@ -19,7 +19,7 @@ public class ApiHttpResponse<U> extends Base {
 
     public ApiHttpResponse(final int statusCode, final ApiHttpHeaders headers, final U body, final String message) {
         this.statusCode = statusCode;
-        this.headers = headers;
+        this.headers = Optional.ofNullable(headers).orElse(new ApiHttpHeaders());
         this.body = body;
         this.message = message;
     }

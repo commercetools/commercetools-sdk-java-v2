@@ -16,9 +16,9 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "5.12.1"
+    id "com.diffplug.spotless" version "5.12.4"
 
-    id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
+    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 import java.text.SimpleDateFormat
@@ -76,11 +76,11 @@ ext {
             logback: "1.2.3",
             findbugs: "3.0.2",
             jackson: "2.12.3",
-            junit: "4.12",
+            junit: "4.13.2",
             validation: "2.0.1.Final",
-            assertJ: "3.8.0",
+            assertJ: "3.19.0",
             gson: "2.8.6",
-            awaitility: "4.0.2",
+            awaitility: "4.0.3",
             failsafe: "2.4.0"
     ]
 

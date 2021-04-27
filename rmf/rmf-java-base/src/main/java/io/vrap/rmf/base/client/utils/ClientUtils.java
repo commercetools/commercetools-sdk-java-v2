@@ -83,7 +83,7 @@ public class ClientUtils {
             throw cause instanceof RuntimeException ? (RuntimeException) cause : new CompletionException(cause);
         }
         catch (final TimeoutException e) {
-            throw new RmfTimeoutException(e);
+            throw new RmfTimeoutException(e, request);
         }
     }
 

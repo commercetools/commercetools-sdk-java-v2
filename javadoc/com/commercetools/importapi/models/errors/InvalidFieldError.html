@@ -109,7 +109,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">InvalidFieldError</span>
 extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a></pre>
-<div class="block"><p>A field has an invalid value.</p></div>
+<div class="block"><p>A given field is not supported.
+  This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="/product#productimport">Product Import</a>, is sent to the Product Import endpoint.</p></div>
 </li>
 </ul>
 </div>
@@ -158,7 +159,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorO
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.Object&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldError.html#getAllowedValues--">getAllowedValues</a></span>()</code>
-<div class="block">A fixed set of allowed values for the field, if any.</div>
+<div class="block">The set of allowed values for the field, if any.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -273,7 +274,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorO
 <li class="blockList">
 <h4>getAllowedValues</h4>
 <pre>java.util.List&lt;java.lang.Object&gt;&nbsp;getAllowedValues()</pre>
-<div class="block"><p>A fixed set of allowed values for the field, if any.</p></div>
+<div class="block"><p>The set of allowed values for the field, if any.</p></div>
 </li>
 </ul>
 <a name="setField-java.lang.String-">

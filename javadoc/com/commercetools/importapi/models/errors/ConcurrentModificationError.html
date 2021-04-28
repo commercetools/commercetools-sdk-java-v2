@@ -109,9 +109,9 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">ConcurrentModificationError</span>
 extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a></pre>
-<div class="block"><p>The request conflicts with the current state of the involved resource(s). Typically, the request attempts to modify a resource
-  that is out of date, i.e. that has been modified by another client since the last time it was retrieved.
-  The client application should resolve the conflict (with or without involving the end-user) before retrying the request</p></div>
+<div class="block"><p>The request conflicts with the current state of the involved resources.
+  This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it.
+  The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p></div>
 </li>
 </ul>
 </div>
@@ -160,7 +160,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorO
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Object</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/errors/ConcurrentModificationError.html#getConflictedResource--">getConflictedResource</a></span>()</code>
-<div class="block">The conflicted resource.</div>
+<div class="block">The resource in conflict.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -270,7 +270,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/errors/ErrorO
 <li class="blockList">
 <h4>getConflictedResource</h4>
 <pre>java.lang.Object&nbsp;getConflictedResource()</pre>
-<div class="block"><p>The conflicted resource.</p></div>
+<div class="block"><p>The resource in conflict.</p></div>
 </li>
 </ul>
 <a name="setSpecifiedVersion-java.lang.Long-">

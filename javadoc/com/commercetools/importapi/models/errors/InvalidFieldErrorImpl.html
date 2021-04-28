@@ -114,7 +114,8 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">InvalidFieldErrorImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></pre>
-<div class="block"><p>A field has an invalid value.</p></div>
+<div class="block"><p>A given field is not supported.
+  This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="/product#productimport">Product Import</a>, is sent to the Product Import endpoint.</p></div>
 </li>
 </ul>
 </div>
@@ -172,7 +173,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/errors/Inv
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.Object&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldErrorImpl.html#getAllowedValues--">getAllowedValues</a></span>()</code>
-<div class="block">A fixed set of allowed values for the field, if any.</div>
+<div class="block">The set of allowed values for the field, if any.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -193,9 +194,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/errors/Inv
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldErrorImpl.html#getMessage--">getMessage</a></span>()</code>
-<div class="block">This is a placeholder for an actual platform error message.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldErrorImpl.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
@@ -294,7 +293,6 @@ implements <a href="../../../../../com/commercetools/importapi/models/errors/Inv
 <li class="blockList">
 <h4>getMessage</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getMessage()</pre>
-<div class="block"><p>This is a placeholder for an actual platform error message.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html#getMessage--">getMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a></code></dd>
@@ -336,7 +334,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/errors/Inv
 <li class="blockList">
 <h4>getAllowedValues</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.Object&gt;&nbsp;getAllowedValues()</pre>
-<div class="block"><p>A fixed set of allowed values for the field, if any.</p></div>
+<div class="block"><p>The set of allowed values for the field, if any.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldError.html#getAllowedValues--">getAllowedValues</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></code></dd>

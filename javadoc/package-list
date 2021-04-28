@@ -35,6 +35,7 @@ com.commercetools.api.models.tax_category
 com.commercetools.api.models.type
 com.commercetools.api.models.zone
 com.commercetools.api.product
+com.commercetools.compat
 com.commercetools.history.client
 com.commercetools.history.defaultconfig
 com.commercetools.history.models

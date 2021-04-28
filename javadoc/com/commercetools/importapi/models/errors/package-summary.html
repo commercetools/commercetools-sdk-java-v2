@@ -82,12 +82,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/AccessDeniedError.html" title="interface in com.commercetools.importapi.models.errors">AccessDeniedError</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This is the generic error code for access denied.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ConcurrentModificationError.html" title="interface in com.commercetools.importapi.models.errors">ConcurrentModificationError</a></td>
 <td class="colLast">
-<div class="block">The request conflicts with the current state of the involved resource(s).</div>
+<div class="block">The request conflicts with the current state of the involved resources.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -97,32 +99,30 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateAttributeValueError.html" title="interface in com.commercetools.importapi.models.errors">DuplicateAttributeValueError</a></td>
 <td class="colLast">
-<div class="block">The Unique AttributeConstraint was violated.</div>
+<div class="block">The <code>Unique</code> <a href="/../api/projects/productTypes#attributeconstraint-enum">Attribute Constraint</a> was violated.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateAttributeValuesError.html" title="interface in com.commercetools.importapi.models.errors">DuplicateAttributeValuesError</a></td>
 <td class="colLast">
-<div class="block">The CombinationUnique AttributeConstraint was violated.</div>
+<div class="block">The <code>CombinationUnique</code> <a href="/../api/projects/productTypes#attributeconstraint-enum">Attribute Constraint</a> was violated.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateFieldError.html" title="interface in com.commercetools.importapi.models.errors">DuplicateFieldError</a></td>
 <td class="colLast">
-<div class="block">A value for a field conflicts with an existing duplicate value.</div>
+<div class="block">The given value already exists for a field that is checked for unique values.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateVariantValuesError.html" title="interface in com.commercetools.importapi.models.errors">DuplicateVariantValuesError</a></td>
 <td class="colLast">
-<div class="block">A given combination of variant values conflicts with an existing one.</div>
+<div class="block">The given combination of values of a <a href="/../api/projects/products#productvariant">Product Variant</a> conflicts with an existing one.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a></td>
-<td class="colLast">
-<div class="block">An error.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ErrorResponse.html" title="interface in com.commercetools.importapi.models.errors">ErrorResponse</a></td>
@@ -145,25 +145,25 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></td>
 <td class="colLast">
-<div class="block">A field has an invalid value.</div>
+<div class="block">A given field is not supported.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidInput.html" title="interface in com.commercetools.importapi.models.errors">InvalidInput</a></td>
 <td class="colLast">
-<div class="block">Invalid input has been sent to the service.</div>
+<div class="block">An invalid input has been sent to the service.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidJsonInput.html" title="interface in com.commercetools.importapi.models.errors">InvalidJsonInput</a></td>
 <td class="colLast">
-<div class="block">Invalid JSON input has been sent to the service.</div>
+<div class="block">An invalid JSON input has been sent to the service.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidOperation.html" title="interface in com.commercetools.importapi.models.errors">InvalidOperation</a></td>
 <td class="colLast">
-<div class="block">The resources involved in the request are not in a valid state for the operation.</div>
+<div class="block">The resources in the request are not in the valid state for the operation.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -223,7 +223,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/AccessDeniedErrorImpl.html" title="class in com.commercetools.importapi.models.errors">AccessDeniedErrorImpl</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This is the generic error code for access denied.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ConcurrentModificationErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">ConcurrentModificationErrorBuilder</a></td>
@@ -232,7 +234,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ConcurrentModificationErrorImpl.html" title="class in com.commercetools.importapi.models.errors">ConcurrentModificationErrorImpl</a></td>
 <td class="colLast">
-<div class="block">The request conflicts with the current state of the involved resource(s).</div>
+<div class="block">The request conflicts with the current state of the involved resources.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -250,7 +252,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateAttributeValueErrorImpl.html" title="class in com.commercetools.importapi.models.errors">DuplicateAttributeValueErrorImpl</a></td>
 <td class="colLast">
-<div class="block">The Unique AttributeConstraint was violated.</div>
+<div class="block">The <code>Unique</code> <a href="/../api/projects/productTypes#attributeconstraint-enum">Attribute Constraint</a> was violated.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -260,7 +262,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateAttributeValuesErrorImpl.html" title="class in com.commercetools.importapi.models.errors">DuplicateAttributeValuesErrorImpl</a></td>
 <td class="colLast">
-<div class="block">The CombinationUnique AttributeConstraint was violated.</div>
+<div class="block">The <code>CombinationUnique</code> <a href="/../api/projects/productTypes#attributeconstraint-enum">Attribute Constraint</a> was violated.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -270,7 +272,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateFieldErrorImpl.html" title="class in com.commercetools.importapi.models.errors">DuplicateFieldErrorImpl</a></td>
 <td class="colLast">
-<div class="block">A value for a field conflicts with an existing duplicate value.</div>
+<div class="block">The given value already exists for a field that is checked for unique values.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -280,14 +282,12 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/DuplicateVariantValuesErrorImpl.html" title="class in com.commercetools.importapi.models.errors">DuplicateVariantValuesErrorImpl</a></td>
 <td class="colLast">
-<div class="block">A given combination of variant values conflicts with an existing one.</div>
+<div class="block">The given combination of values of a <a href="/../api/projects/products#productvariant">Product Variant</a> conflicts with an existing one.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ErrorObjectImpl.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectImpl</a></td>
-<td class="colLast">
-<div class="block">An error.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/ErrorResponseBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorResponseBuilder</a></td>
@@ -330,7 +330,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidFieldErrorImpl.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorImpl</a></td>
 <td class="colLast">
-<div class="block">A field has an invalid value.</div>
+<div class="block">A given field is not supported.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -340,7 +340,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidInputImpl.html" title="class in com.commercetools.importapi.models.errors">InvalidInputImpl</a></td>
 <td class="colLast">
-<div class="block">Invalid input has been sent to the service.</div>
+<div class="block">An invalid input has been sent to the service.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -350,7 +350,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidJsonInputImpl.html" title="class in com.commercetools.importapi.models.errors">InvalidJsonInputImpl</a></td>
 <td class="colLast">
-<div class="block">Invalid JSON input has been sent to the service.</div>
+<div class="block">An invalid JSON input has been sent to the service.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -360,7 +360,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/commercetools/importapi/models/errors/InvalidOperationImpl.html" title="class in com.commercetools.importapi.models.errors">InvalidOperationImpl</a></td>
 <td class="colLast">
-<div class="block">The resources involved in the request are not in a valid state for the operation.</div>
+<div class="block">The resources in the request are not in the valid state for the operation.</div>
 </td>
 </tr>
 <tr class="rowColor">

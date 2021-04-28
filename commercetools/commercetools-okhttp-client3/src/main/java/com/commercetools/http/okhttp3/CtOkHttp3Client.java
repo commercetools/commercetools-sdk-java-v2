@@ -2,10 +2,7 @@
 package com.commercetools.http.okhttp3;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -29,7 +26,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
             .connectTimeout(120, TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
-            .protocols(Arrays.asList(Protocol.HTTP_1_0, Protocol.HTTP_1_1))
+            .protocols(Collections.singletonList(Protocol.HTTP_1_1))
             .addInterceptor(new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;

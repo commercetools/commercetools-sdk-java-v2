@@ -28,7 +28,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
             .connectTimeout(120, TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
-            .protocols(Arrays.asList(Protocol.HTTP_1_1, Protocol.HTTP_1_0))
+            .protocols(Collections.singletonList(Protocol.HTTP_1_1))
             .addInterceptor(new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;

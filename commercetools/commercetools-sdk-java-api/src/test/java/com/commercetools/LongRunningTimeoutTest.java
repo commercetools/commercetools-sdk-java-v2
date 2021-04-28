@@ -27,9 +27,8 @@ import org.apache.commons.lang3.tuple.Pair;
 public class LongRunningTimeoutTest {
 
     /**
-     * This is a test if no threads are blocking the the termination of the application. Needs to be executed on the ci server.
-     * In case it has a leak, it just hangs.
-     * This is necessary, since a unit test cannot cover this termination problem.
+     * This is a test to check long running multiple calls to the API
+     * to check for timeout exceptions
      * @param args unused command line parameters
      */
     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {

@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Invalid input has been sent to the service. The client application should validate the input according to the
-*  constraints described in the error message before sending the request.</p>
+*  <p>An invalid input has been sent to the service. The client application should validate the input according to the
+*  constraints described in the error message before sending the request again.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InvalidInputImpl implements InvalidInput {
@@ -38,9 +38,6 @@ public final class InvalidInputImpl implements InvalidInput {
         return this.code;
     }
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     public String getMessage() {
         return this.message;
     }

@@ -58,7 +58,9 @@ public class ByProjectKeyImportSinksPost
     @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.importapi.models.importsinks.ImportSink.class),
+            request, timeout);
     }
 
     @Override

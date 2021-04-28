@@ -34,9 +34,6 @@ public final class GenericErrorImpl implements GenericError {
         return this.code;
     }
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     public String getMessage() {
         return this.message;
     }

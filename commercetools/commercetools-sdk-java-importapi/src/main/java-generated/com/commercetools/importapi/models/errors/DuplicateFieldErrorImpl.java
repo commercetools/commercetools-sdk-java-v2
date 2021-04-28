@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A value for a field conflicts with an existing duplicate value.</p>
+*  <p>The given value already exists for a field that is checked for unique values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
@@ -44,9 +44,6 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
         return this.code;
     }
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     public String getMessage() {
         return this.message;
     }

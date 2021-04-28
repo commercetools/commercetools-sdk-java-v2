@@ -45,7 +45,10 @@ public class ByProjectKeyImageSearchConfigGet extends
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class),
+            request, timeout);
     }
 
     @Override

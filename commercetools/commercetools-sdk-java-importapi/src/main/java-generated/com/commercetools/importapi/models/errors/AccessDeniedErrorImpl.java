@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>This is the generic error code for access denied. In case of a wrong scope, an <a href="#invalidscopeerror">InvalidScopeError</a> will be returned.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AccessDeniedErrorImpl implements AccessDeniedError {
 
@@ -34,9 +37,6 @@ public final class AccessDeniedErrorImpl implements AccessDeniedError {
         return this.code;
     }
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     public String getMessage() {
         return this.message;
     }

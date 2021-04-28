@@ -13,9 +13,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request conflicts with the current state of the involved resource(s). Typically, the request attempts to modify a resource
-*  that is out of date, i.e. that has been modified by another client since the last time it was retrieved.
-*  The client application should resolve the conflict (with or without involving the end-user) before retrying the request</p>
+*  <p>The request conflicts with the current state of the involved resources.
+*  This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it.
+*  The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
@@ -38,7 +38,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     public Long getCurrentVersion();
 
     /**
-    *  <p>The conflicted resource.</p>
+    *  <p>The resource in conflict.</p>
     */
 
     @JsonProperty("conflictedResource")

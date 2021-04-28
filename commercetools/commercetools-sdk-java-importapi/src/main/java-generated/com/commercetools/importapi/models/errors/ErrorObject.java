@@ -12,9 +12,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>An error.</p>
-*/
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
@@ -46,9 +43,6 @@ public interface ErrorObject {
     @JsonProperty("code")
     public String getCode();
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     @NotNull
     @JsonProperty("message")
     public String getMessage();

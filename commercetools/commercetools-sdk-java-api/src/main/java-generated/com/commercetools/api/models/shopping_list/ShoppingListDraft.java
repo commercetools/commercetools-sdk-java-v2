@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -78,6 +79,10 @@ public interface ShoppingListDraft {
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    @Valid
+    @JsonProperty("store")
+    public StoreResourceIdentifier getStore();
+
     public void setCustom(final CustomFieldsDraft custom);
 
     public void setCustomer(final CustomerResourceIdentifier customer);
@@ -104,6 +109,8 @@ public interface ShoppingListDraft {
 
     public void setAnonymousId(final String anonymousId);
 
+    public void setStore(final StoreResourceIdentifier store);
+
     public static ShoppingListDraft of() {
         return new ShoppingListDraftImpl();
     }
@@ -120,6 +127,7 @@ public interface ShoppingListDraft {
         instance.setSlug(template.getSlug());
         instance.setTextLineItems(template.getTextLineItems());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setStore(template.getStore());
         return instance;
     }
 

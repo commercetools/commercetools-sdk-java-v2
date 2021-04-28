@@ -27,15 +27,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
     private String storeKey;
     private String ID;
 
-    private com.commercetools.api.models.cart.CartUpdate cartUpdate;
+    private com.commercetools.api.models.me.MyCartUpdate myCartUpdate;
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey, String ID, com.commercetools.api.models.cart.CartUpdate cartUpdate) {
+            String storeKey, String ID, com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
-        this.cartUpdate = cartUpdate;
+        this.myCartUpdate = myCartUpdate;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost t) {
@@ -43,7 +43,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
         this.ID = t.ID;
-        this.cartUpdate = t.cartUpdate;
+        this.myCartUpdate = t.myCartUpdate;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCartUpdate);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {
@@ -68,7 +68,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
     @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.cart.Cart.class), request, timeout);
     }
 
     @Override

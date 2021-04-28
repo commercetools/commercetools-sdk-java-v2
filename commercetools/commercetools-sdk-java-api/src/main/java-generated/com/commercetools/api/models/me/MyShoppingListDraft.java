@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.api.models.shopping_list.TextLineItemDraft;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -52,6 +53,10 @@ public interface MyShoppingListDraft {
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
+    @Valid
+    @JsonProperty("store")
+    public StoreResourceIdentifier getStore();
+
     public void setName(final LocalizedString name);
 
     public void setDescription(final LocalizedString description);
@@ -70,6 +75,8 @@ public interface MyShoppingListDraft {
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
+    public void setStore(final StoreResourceIdentifier store);
+
     public static MyShoppingListDraft of() {
         return new MyShoppingListDraftImpl();
     }
@@ -82,6 +89,7 @@ public interface MyShoppingListDraft {
         instance.setTextLineItems(template.getTextLineItems());
         instance.setCustom(template.getCustom());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setStore(template.getStore());
         return instance;
     }
 

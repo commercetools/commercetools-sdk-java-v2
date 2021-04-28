@@ -51,7 +51,9 @@ public class ByProjectKeySubscriptionsKeyByKeyGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.subscription.Subscription.class),
+            request, timeout);
     }
 
     @Override

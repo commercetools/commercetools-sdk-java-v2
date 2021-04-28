@@ -29,4 +29,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder activeCart() {
         return new ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder shoppingLists() {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
 }

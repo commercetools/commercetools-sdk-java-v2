@@ -27,6 +27,9 @@ public final class MyShoppingListDraftBuilder {
     @Nullable
     private Long deleteDaysAfterLastModification;
 
+    @Nullable
+    private com.commercetools.api.models.store.StoreResourceIdentifier store;
+
     public MyShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -74,6 +77,12 @@ public final class MyShoppingListDraftBuilder {
         return this;
     }
 
+    public MyShoppingListDraftBuilder store(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+        this.store = store;
+        return this;
+    }
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -103,9 +112,14 @@ public final class MyShoppingListDraftBuilder {
         return this.deleteDaysAfterLastModification;
     }
 
+    @Nullable
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+        return this.store;
+    }
+
     public MyShoppingListDraft build() {
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
-            deleteDaysAfterLastModification);
+            deleteDaysAfterLastModification, store);
     }
 
     public static MyShoppingListDraftBuilder of() {
@@ -120,6 +134,7 @@ public final class MyShoppingListDraftBuilder {
         builder.textLineItems = template.getTextLineItems();
         builder.custom = template.getCustom();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.store = template.getStore();
         return builder;
     }
 

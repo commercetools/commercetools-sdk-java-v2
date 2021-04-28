@@ -53,7 +53,10 @@ public class ByProjectKeyCategoriesGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.category.CategoryPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.category.CategoryPagedQueryResponse.class), request,
+            timeout);
     }
 
     @Override

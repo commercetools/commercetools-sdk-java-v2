@@ -46,7 +46,9 @@ public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet, com.commercetool
     @Override
     public ApiHttpResponse<com.commercetools.api.models.project.Project> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.project.Project.class), request,
+            timeout);
     }
 
     @Override

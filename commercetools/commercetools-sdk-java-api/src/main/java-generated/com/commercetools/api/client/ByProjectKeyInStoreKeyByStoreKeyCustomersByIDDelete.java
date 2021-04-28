@@ -59,7 +59,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends
     @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.customer.Customer.class), request,
+            timeout);
     }
 
     @Override

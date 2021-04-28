@@ -36,6 +36,8 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.store.StoreResourceIdentifier store;
+
     @JsonCreator
     ShoppingListDraftImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,
@@ -46,7 +48,8 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems,
-            @JsonProperty("anonymousId") final String anonymousId) {
+            @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.custom = custom;
         this.customer = customer;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -57,6 +60,7 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
         this.slug = slug;
         this.textLineItems = textLineItems;
         this.anonymousId = anonymousId;
+        this.store = store;
     }
 
     public ShoppingListDraftImpl() {
@@ -119,6 +123,10 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
         return this.anonymousId;
     }
 
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+        return this.store;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -169,6 +177,10 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
         this.anonymousId = anonymousId;
     }
 
+    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -189,6 +201,7 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
                 .append(slug, that.slug)
                 .append(textLineItems, that.textLineItems)
                 .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
                 .isEquals();
     }
 
@@ -204,6 +217,7 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
                 .append(slug)
                 .append(textLineItems)
                 .append(anonymousId)
+                .append(store)
                 .toHashCode();
     }
 

@@ -53,7 +53,10 @@ public class ByProjectKeyShoppingListsGet extends
     @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse.class),
+            request, timeout);
     }
 
     @Override

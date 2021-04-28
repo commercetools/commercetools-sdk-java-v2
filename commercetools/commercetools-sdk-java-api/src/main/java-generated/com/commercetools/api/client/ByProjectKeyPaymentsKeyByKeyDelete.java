@@ -54,7 +54,9 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.payment.Payment.class), request,
+            timeout);
     }
 
     @Override

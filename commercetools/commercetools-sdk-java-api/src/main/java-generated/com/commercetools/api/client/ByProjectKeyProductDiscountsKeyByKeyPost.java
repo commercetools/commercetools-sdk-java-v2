@@ -64,7 +64,10 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
     @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.product_discount.ProductDiscount.class), request,
+            timeout);
     }
 
     @Override

@@ -53,7 +53,9 @@ public class ByProjectKeyShippingMethodsByIDDelete extends
     @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.shipping_method.ShippingMethod.class),
+            request, timeout);
     }
 
     @Override

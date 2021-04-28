@@ -54,7 +54,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
 
     @Override
     public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, java.lang.Object.class), request, timeout);
     }
 
     @Override

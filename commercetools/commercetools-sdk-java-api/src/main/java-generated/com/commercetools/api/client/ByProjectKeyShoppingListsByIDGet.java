@@ -51,7 +51,9 @@ public class ByProjectKeyShoppingListsByIDGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.shopping_list.ShoppingList.class),
+            request, timeout);
     }
 
     @Override

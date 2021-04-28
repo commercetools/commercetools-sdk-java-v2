@@ -53,7 +53,9 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete
     @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.order_edit.OrderEdit.class), request,
+            timeout);
     }
 
     @Override

@@ -14,6 +14,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -115,6 +116,10 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -153,6 +158,8 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
 
     public void setAnonymousId(final String anonymousId);
 
+    public void setStore(final StoreKeyReference store);
+
     public static ShoppingList of() {
         return new ShoppingListImpl();
     }
@@ -175,6 +182,7 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         instance.setSlug(template.getSlug());
         instance.setTextLineItems(template.getTextLineItems());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setStore(template.getStore());
         return instance;
     }
 

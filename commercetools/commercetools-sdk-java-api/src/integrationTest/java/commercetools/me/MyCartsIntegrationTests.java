@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.models.me.MyCart;
+import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -40,7 +40,7 @@ public class MyCartsIntegrationTests {
 
         MyCartDraft anonymousMyCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
-        MyCart myCart = apiAnonymousRoot.withProjectKey(getProjectKey())
+        Cart myCart = apiAnonymousRoot.withProjectKey(getProjectKey())
                 .me()
                 .carts()
                 .post(anonymousMyCartDraft)
@@ -49,7 +49,7 @@ public class MyCartsIntegrationTests {
 
         Assert.assertNotNull(myCart);
 
-        MyCart myCartGet = apiAnonymousRoot.withProjectKey(getProjectKey())
+        Cart myCartGet = apiAnonymousRoot.withProjectKey(getProjectKey())
                 .me()
                 .activeCart()
                 .get()

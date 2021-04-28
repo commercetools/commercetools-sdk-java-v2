@@ -39,6 +39,9 @@ public final class ShoppingListDraftBuilder {
     @Nullable
     private String anonymousId;
 
+    @Nullable
+    private com.commercetools.api.models.store.StoreResourceIdentifier store;
+
     public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
@@ -106,6 +109,12 @@ public final class ShoppingListDraftBuilder {
         return this;
     }
 
+    public ShoppingListDraftBuilder store(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+        this.store = store;
+        return this;
+    }
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
@@ -155,9 +164,14 @@ public final class ShoppingListDraftBuilder {
         return this.anonymousId;
     }
 
+    @Nullable
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+        return this.store;
+    }
+
     public ShoppingListDraft build() {
         return new ShoppingListDraftImpl(custom, customer, deleteDaysAfterLastModification, description, key, lineItems,
-            name, slug, textLineItems, anonymousId);
+            name, slug, textLineItems, anonymousId, store);
     }
 
     public static ShoppingListDraftBuilder of() {
@@ -176,6 +190,7 @@ public final class ShoppingListDraftBuilder {
         builder.slug = template.getSlug();
         builder.textLineItems = template.getTextLineItems();
         builder.anonymousId = template.getAnonymousId();
+        builder.store = template.getStore();
         return builder;
     }
 

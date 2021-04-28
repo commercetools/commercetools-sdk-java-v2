@@ -6,7 +6,7 @@ import static commercetools.cart.CartsFixtures.deleteCart;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
-import com.commercetools.api.models.me.MyCart;
+import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -14,24 +14,24 @@ import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
 public class MyCartsFixtures {
-    public static void withMeCart(final Consumer<MyCart> consumer) {
+    public static void withMeCart(final Consumer<Cart> consumer) {
         MyCartDraft myCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
-        MyCart myCart = createMeCart(myCartDraft);
+        Cart myCart = createMeCart(myCartDraft);
         consumer.accept(myCart);
         deleteCart(myCart.getId(), myCart.getVersion());
     }
 
-    public static void withUpdateableMeCart(final UnaryOperator<MyCart> operator) {
+    public static void withUpdateableMeCart(final UnaryOperator<Cart> operator) {
         MyCartDraft myCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
-        MyCart myCart = createMeCart(myCartDraft);
+        Cart myCart = createMeCart(myCartDraft);
         myCart = operator.apply(myCart);
         deleteCart(myCart.getId(), myCart.getVersion());
     }
 
-    public static MyCart createMeCart(final MyCartDraft myCartDraft) {
-        MyCart myCart = CommercetoolsTestUtils.getProjectRoot()
+    public static Cart createMeCart(final MyCartDraft myCartDraft) {
+        Cart myCart = CommercetoolsTestUtils.getProjectRoot()
                 .me()
                 .carts()
                 .post(myCartDraft)
@@ -44,7 +44,7 @@ public class MyCartsFixtures {
         return myCart;
     }
 
-    public static MyCart createCartWithCountry() {
+    public static Cart createCartWithCountry() {
         return createMeCart(MyCartDraftBuilder.of().country("DE").currency("EUR").build());
     }
 }

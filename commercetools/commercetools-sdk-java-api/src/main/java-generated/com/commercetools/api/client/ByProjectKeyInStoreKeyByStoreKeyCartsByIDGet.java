@@ -59,7 +59,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.cart.Cart.class), request, timeout);
     }
 
     @Override

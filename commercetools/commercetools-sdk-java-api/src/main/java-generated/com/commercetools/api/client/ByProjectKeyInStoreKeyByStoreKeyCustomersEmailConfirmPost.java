@@ -66,7 +66,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
     @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.fasterxml.jackson.databind.JsonNode.class), request, timeout);
     }
 
     @Override

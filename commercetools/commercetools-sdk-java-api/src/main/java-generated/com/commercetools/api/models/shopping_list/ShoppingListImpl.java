@@ -48,6 +48,8 @@ public final class ShoppingListImpl implements ShoppingList {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.store.StoreKeyReference store;
+
     @JsonCreator
     ShoppingListImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -63,7 +65,8 @@ public final class ShoppingListImpl implements ShoppingList {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems,
-            @JsonProperty("anonymousId") final String anonymousId) {
+            @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +83,7 @@ public final class ShoppingListImpl implements ShoppingList {
         this.slug = slug;
         this.textLineItems = textLineItems;
         this.anonymousId = anonymousId;
+        this.store = store;
     }
 
     public ShoppingListImpl() {
@@ -175,6 +179,10 @@ public final class ShoppingListImpl implements ShoppingList {
         return this.anonymousId;
     }
 
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -249,6 +257,10 @@ public final class ShoppingListImpl implements ShoppingList {
         this.anonymousId = anonymousId;
     }
 
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -275,6 +287,7 @@ public final class ShoppingListImpl implements ShoppingList {
                 .append(slug, that.slug)
                 .append(textLineItems, that.textLineItems)
                 .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
                 .isEquals();
     }
 
@@ -296,6 +309,7 @@ public final class ShoppingListImpl implements ShoppingList {
                 .append(slug)
                 .append(textLineItems)
                 .append(anonymousId)
+                .append(store)
                 .toHashCode();
     }
 

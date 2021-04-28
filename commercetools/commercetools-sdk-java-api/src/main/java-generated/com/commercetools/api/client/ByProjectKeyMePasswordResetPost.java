@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyMePasswordResetPost
-        extends ApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.me.MyCustomer>
+        extends ApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordResetPost>,
         com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePasswordResetPost> {
 
@@ -42,15 +42,17 @@ public class ByProjectKeyMePasswordResetPost
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.customer.Customer.class), request,
+            timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
 
     public String getProjectKey() {

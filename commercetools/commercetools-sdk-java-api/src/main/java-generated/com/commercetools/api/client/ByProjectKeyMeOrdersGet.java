@@ -51,7 +51,9 @@ public class ByProjectKeyMeOrdersGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.order.OrderPagedQueryResponse.class),
+            request, timeout);
     }
 
     @Override

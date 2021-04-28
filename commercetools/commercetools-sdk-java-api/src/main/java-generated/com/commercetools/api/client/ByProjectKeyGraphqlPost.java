@@ -59,7 +59,9 @@ public class ByProjectKeyGraphqlPost
     @Override
     public ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.graph_ql.GraphQLResponse.class),
+            request, timeout);
     }
 
     @Override

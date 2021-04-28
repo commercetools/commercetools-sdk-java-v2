@@ -53,7 +53,8 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.order.Order.class), request, timeout);
     }
 
     @Override

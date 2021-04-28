@@ -53,6 +53,9 @@ public final class ShoppingListBuilder {
     @Nullable
     private String anonymousId;
 
+    @Nullable
+    private com.commercetools.api.models.store.StoreKeyReference store;
+
     public ShoppingListBuilder id(final String id) {
         this.id = id;
         return this;
@@ -150,6 +153,11 @@ public final class ShoppingListBuilder {
         return this;
     }
 
+    public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -225,9 +233,15 @@ public final class ShoppingListBuilder {
         return this.anonymousId;
     }
 
+    @Nullable
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
     public ShoppingList build() {
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer,
-            deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId);
+            deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId,
+            store);
     }
 
     public static ShoppingListBuilder of() {
@@ -252,6 +266,7 @@ public final class ShoppingListBuilder {
         builder.slug = template.getSlug();
         builder.textLineItems = template.getTextLineItems();
         builder.anonymousId = template.getAnonymousId();
+        builder.store = template.getStore();
         return builder;
     }
 

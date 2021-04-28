@@ -52,7 +52,10 @@ public class ByProjectKeyPaymentsGet extends
     @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.PaymentPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.payment.PaymentPagedQueryResponse.class), request,
+            timeout);
     }
 
     @Override

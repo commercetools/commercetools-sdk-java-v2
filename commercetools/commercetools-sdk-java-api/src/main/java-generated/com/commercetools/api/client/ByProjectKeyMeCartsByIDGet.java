@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Get MyCart by ID</p>
+*  <p>Get Cart by ID</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyMeCartsByIDGet
-        extends ApiMethod<ByProjectKeyMeCartsByIDGet, com.commercetools.api.models.me.MyCart>
+        extends ApiMethod<ByProjectKeyMeCartsByIDGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsByIDGet>,
         com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsByIDGet> {
@@ -49,15 +49,16 @@ public class ByProjectKeyMeCartsByIDGet
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.cart.Cart.class), request, timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCart>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCart.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
 
     public String getProjectKey() {

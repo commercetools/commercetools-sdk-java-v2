@@ -53,7 +53,10 @@ public class ByProjectKeyInventoryGet
     @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.inventory.InventoryPagedQueryResponse.class), request,
+            timeout);
     }
 
     @Override

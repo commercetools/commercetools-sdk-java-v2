@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 *  <p>Delete my Customer</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.commercetools.api.models.me.MyCustomer>
+public class ByProjectKeyMeDelete
+        extends ApiMethod<ByProjectKeyMeDelete, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMeDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeDelete>,
@@ -46,15 +47,17 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.co
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.customer.Customer.class), request,
+            timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
 
     public String getProjectKey() {

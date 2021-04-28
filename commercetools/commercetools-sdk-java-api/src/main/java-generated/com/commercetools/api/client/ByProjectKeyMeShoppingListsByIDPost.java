@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Update MyShoppingList by ID</p>
+*  <p>Update ShoppingList by ID</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeShoppingListsByIDPost extends
-        ApiMethod<ByProjectKeyMeShoppingListsByIDPost, com.commercetools.api.models.shopping_list.MyShoppingList>
+public class ByProjectKeyMeShoppingListsByIDPost
+        extends ApiMethod<ByProjectKeyMeShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeShoppingListsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsByIDPost>,
@@ -62,16 +62,17 @@ public class ByProjectKeyMeShoppingListsByIDPost extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(
+    public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.api.models.shopping_list.ShoppingList.class),
+            request, timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.shopping_list.MyShoppingList.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
     public String getProjectKey() {

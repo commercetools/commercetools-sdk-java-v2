@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A given combination of variant values conflicts with an existing one.
-*  Every product variant must have a distinct combination of SKU, prices, and custom attribute values.</p>
+*  <p>The given combination of values of a <a href="/../api/projects/products#productvariant">Product Variant</a> conflicts with an existing one.
+*  Every <a href="/../api/projects/products#productvariant">Product Variant</a> must have a distinct combination of SKU, prices, and custom attribute values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)

@@ -51,7 +51,10 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request,
+            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class),
+            request, timeout);
     }
 
     @Override

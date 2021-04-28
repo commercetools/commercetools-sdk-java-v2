@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A field has an invalid value.</p>
+*  <p>A given field is not supported.
+*  This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="/product#productimport">Product Import</a>, is sent to the Product Import endpoint.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
@@ -36,7 +37,7 @@ public interface InvalidFieldError extends ErrorObject {
     public Object getInvalidValue();
 
     /**
-    *  <p>A fixed set of allowed values for the field, if any.</p>
+    *  <p>The set of allowed values for the field, if any.</p>
     */
 
     @JsonProperty("allowedValues")

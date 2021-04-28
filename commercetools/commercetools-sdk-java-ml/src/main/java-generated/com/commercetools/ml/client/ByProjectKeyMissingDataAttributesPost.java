@@ -54,7 +54,9 @@ public class ByProjectKeyMissingDataAttributesPost
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        ApiHttpRequest request = this.createHttpRequest();
+        return blockingWait(client.execute(request, com.commercetools.ml.models.common.TaskToken.class), request,
+            timeout);
     }
 
     @Override

@@ -14,9 +14,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Invalid JSON input has been sent to the service. Either the JSON is syntactically not correct, or the JSON does not
-*  conform to the expected shape (e.g. is missing a required field). The client application should validate the input
-*  according to the constraints described in the error message before sending the request.</p>
+*  <p>An invalid JSON input has been sent to the service.
+*  Either the JSON is syntactically incorrect or the JSON has an unexpected shape, for example, a required field is missing.
+*  The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InvalidJsonInputImpl implements InvalidJsonInput {
@@ -39,9 +39,6 @@ public final class InvalidJsonInputImpl implements InvalidJsonInput {
         return this.code;
     }
 
-    /**
-    *  <p>This is a placeholder for an actual platform error message.</p>
-    */
     public String getMessage() {
         return this.message;
     }

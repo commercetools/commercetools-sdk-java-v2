@@ -17,4 +17,6 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
     T withExpand(final String expand);
 
     T withWithTotal(final boolean withTotal);
+
+    T withPredicateVar(final String varName, final String predicateVar);
 }

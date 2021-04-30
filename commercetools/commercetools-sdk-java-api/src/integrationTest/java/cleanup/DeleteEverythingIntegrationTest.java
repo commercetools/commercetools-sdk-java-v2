@@ -1,29 +1,10 @@
 
 package cleanup;
 
-import com.commercetools.api.models.cart.CartPagedQueryResponse;
-import com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse;
+import com.commercetools.api.models.PagedQueryResourceRequest;
+import com.commercetools.api.models.ResourcePagedQueryResponse;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
-import com.commercetools.api.models.channel.ChannelPagedQueryResponse;
-import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
-import com.commercetools.api.models.customer.CustomerPagedQueryResponse;
-import com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse;
-import com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse;
-import com.commercetools.api.models.extension.ExtensionPagedQueryResponse;
-import com.commercetools.api.models.inventory.InventoryPagedQueryResponse;
-import com.commercetools.api.models.order.OrderPagedQueryResponse;
-import com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse;
-import com.commercetools.api.models.product.ProductPagedQueryResponse;
-import com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse;
-import com.commercetools.api.models.product_type.ProductTypePagedQueryResponse;
-import com.commercetools.api.models.review.ReviewPagedQueryResponse;
-import com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse;
-import com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse;
-import com.commercetools.api.models.state.StatePagedQueryResponse;
-import com.commercetools.api.models.store.StorePagedQueryResponse;
-import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
-import com.commercetools.api.models.type.TypePagedQueryResponse;
-import com.commercetools.api.models.zone.ZonePagedQueryResponse;
+import com.commercetools.api.models.common.BaseResource;
 import commercetools.cart.CartsFixtures;
 import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.category.CategoryFixtures;
@@ -48,286 +29,155 @@ import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.zone.ZoneFixtures;
 
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.error.NotFoundException;
 import org.junit.Test;
+
+import java.util.List;
+import java.util.concurrent.*;
+import java.util.function.Consumer;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project
  */
 public class DeleteEverythingIntegrationTest {
 
+    final int concurrency = 30;
+    final BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue<>(concurrency);
+    final ExecutorService threadPool = Executors.newFixedThreadPool(concurrency);
+
+    private void initWorkers() {
+        for (int i = 0; i < concurrency; i++) {
+            threadPool.execute(() -> {
+                try {
+                    while (!threadPool.isTerminated()) {
+                        Runnable runnable = blockingQueue.poll(10, TimeUnit.SECONDS);
+                        if (runnable == null) {
+                            break;
+                        }
+                        try {
+                            runnable.run();
+                        } catch (NotFoundException ignored) {}
+                    }
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+    }
+
     @Test
     public void execute() {
+        initWorkers();
         try {
             deleteAllExtensions();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllOrderEdits();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllOrders();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllCarts();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllShoppingLists();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllReviews();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllProductDiscounts();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllProducts();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllCategories();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllCartDiscounts();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllInventories();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllProductTypes();
-        }
-        catch (Exception e) {
-        }
-        try {
-            deleteAllTaxCategories();
-        }
-        catch (Exception e) {
-        }
-        try {
-            deleteAllDiscountCodes();
-        }
-        catch (Exception e) {
-        }
-        try {
-            deleteAllCustomObjects();
-        }
-        catch (Exception e) {
-        }
-        try {
-            deleteAllCustomers();
-        }
-        catch (Exception e) {
-        }
-        try {
-            deleteAllCustomerGroups();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllShippingMethods();
-        }
-        catch (Exception e) {
-        }
-        try {
+            deleteAllTaxCategories();
+            deleteAllDiscountCodes();
+            deleteAllCustomObjects();
+            deleteAllCustomers();
+            deleteAllCustomerGroups();
             deleteAllStates();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllStores();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllChannels();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllTypes();
-        }
-        catch (Exception e) {
-        }
-        try {
             deleteAllZones();
         }
-        catch (Exception e) {
-        }
+        catch (Exception ignored) {}
+        threadPool.shutdown();
+    }
+
+    private <T extends PagedQueryResourceRequest<T, TResult>, TResult extends ResourcePagedQueryResponse<TResource>, TResource extends BaseResource> void deleteAllResources(PagedQueryResourceRequest<T, TResult> request, Consumer<TResource> deleteFn) {
+        ApiHttpResponse<TResult> response = request.withLimit(100).executeBlocking();
+
+        do {
+            List<TResource> results = response.getBody().getResults();
+            results.forEach(deleteFn);
+            String lastId = results.get(results.size() - 1).getId();
+            response = request.withLimit(100).withSort("id ASC").withWhere("id > :lastId").withPredicateVar("lastId", lastId).executeBlocking();
+        } while (response.getBody().getCount() >= response.getBody().getLimit());
     }
 
     private void deleteAllZones() {
-        ZonePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().zones().get().executeBlocking().getBody();
-            response.getResults().forEach(zone -> {
-                ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().zones().get(), (zone) -> ZoneFixtures.deleteZone(zone.getId(),
+                zone.getVersion()));
     }
 
     private void deleteAllOrderEdits() {
-        OrderEditPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().orders().edits().get().executeBlocking().getBody();
-            response.getResults().forEach(orderEdit -> {
-                OrdersFixtures.deleteOrderEdit(orderEdit.getId(), orderEdit.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().orders().edits().get(), (orderEdit) -> OrdersFixtures.deleteOrderEdit(orderEdit.getId(),
+                orderEdit.getVersion()));
     }
 
     private void deleteAllOrders() {
-        OrderPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().orders().get().executeBlocking().getBody();
-            response.getResults().forEach(orderEdit -> {
-                OrdersFixtures.deleteOrder(orderEdit.getId(), orderEdit.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().orders().get(), (order) -> OrdersFixtures.deleteOrder(order.getId(),
+                order.getVersion()));
     }
 
     private void deleteAllCarts() {
-        CartPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().carts().get().executeBlocking().getBody();
-            response.getResults().forEach(cart -> {
-                CartsFixtures.deleteCart(cart.getId(), cart.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().carts().get(), (cart) -> CartsFixtures.deleteCart(cart.getId(),
+                cart.getVersion()));
     }
 
     private void deleteAllTypes() {
-        TypePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().types().get().executeBlocking().getBody();
-            response.getResults().forEach(type -> {
-                TypeFixtures.deleteType(type.getId(), type.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().types().get(), (type) -> TypeFixtures.deleteType(type.getId(),
+                type.getVersion()));
     }
 
     private void deleteAllStores() {
-        StorePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().stores().get().executeBlocking().getBody();
-            response.getResults().forEach(store -> {
-                StoreFixtures.deleteStore(store.getId(), store.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().stores().get(), (store) -> StoreFixtures.deleteStore(store.getId(),
+                store.getVersion()));
     }
 
     private void deleteAllStates() {
-        StatePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().states().get().executeBlocking().getBody();
-            response.getResults().forEach(state -> {
-                if (!state.getBuiltIn())
-                    StateFixtures.deleteState(state.getId(), state.getVersion());
-            });
-        } while (response.getResults().size() > 1);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().states().get(), (state) -> StateFixtures.deleteState(state.getId(),
+                state.getVersion()));
     }
 
     private void deleteAllShoppingLists() {
-        ShoppingListPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().shoppingLists().get().executeBlocking().getBody();
-            response.getResults().forEach(shoppingList -> {
-                ShoppingListFixtures.deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().shoppingLists().get(), (shoppingList) -> ShoppingListFixtures.deleteShoppingList(shoppingList.getId(),
+                shoppingList.getVersion()));
     }
 
     private void deleteAllShippingMethods() {
-        ShippingMethodPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().shippingMethods().get().executeBlocking().getBody();
-            response.getResults().forEach(shippingMethod -> {
-                ShippingMethodFixtures.deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().shippingMethods().get(), (shippingMethod) -> ShippingMethodFixtures.deleteShippingMethod(shippingMethod.getId(),
+                shippingMethod.getVersion()));
     }
 
     private void deleteAllExtensions() {
-        ExtensionPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().extensions().get().executeBlocking().getBody();
-            response.getResults().forEach(extension -> {
-                ExtensionFixtures.deleteExtension(extension.getId(), extension.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().extensions().get(), (extension) -> ExtensionFixtures.deleteExtension(extension.getId(),
+                extension.getVersion()));
     }
 
     private void deleteAllCustomerGroups() {
-        CustomerGroupPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().customerGroups().get().executeBlocking().getBody();
-            response.getResults().forEach(customerGroup -> {
-                CustomerGroupFixtures.deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().customerGroups().get(), (customerGroup) -> CustomerGroupFixtures.deleteCustomerGroup(customerGroup.getId(),
+                customerGroup.getVersion()));
     }
 
     private void deleteAllCustomers() {
-        CustomerPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().customers().get().executeBlocking().getBody();
-            response.getResults().forEach(customer -> {
-                CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().customers().get(), (customer) -> CustomerFixtures.deleteCustomer(customer.getId(),
+                customer.getVersion()));
     }
 
     private void deleteAllCustomObjects() {
-        CustomObjectPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().customObjects().get().executeBlocking().getBody();
-            response.getResults().forEach(customObject -> {
-                CustomObjectFixtures.deleteCustomObject(customObject.getContainer(), customObject.getKey(),
-                    customObject.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().customObjects().get(), (customObject) -> CustomObjectFixtures.deleteCustomObject(customObject.getContainer(),
+                customObject.getKey(), customObject.getVersion()));
     }
 
     private void deleteAllChannels() {
-        ChannelPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().channels().get().executeBlocking().getBody();
-            response.getResults().forEach(channel -> {
-                ChannelFixtures.deleteChannel(channel.getId(), channel.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().channels().get(), (channel) -> ChannelFixtures.deleteChannel(channel.getId(),
+                channel.getVersion()));
     }
 
     private void deleteAllCategories() {
@@ -342,88 +192,40 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllCartDiscounts() {
-        CartDiscountPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().cartDiscounts().get().executeBlocking().getBody();
-            response.getResults().forEach(cartDiscount -> {
-                CartDiscountFixtures.deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().cartDiscounts().get(), (cartDiscount) -> CartDiscountFixtures.deleteCartDiscount(cartDiscount.getId(),
+                cartDiscount.getVersion()));
     }
 
     private void deleteAllInventories() {
-        InventoryPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().inventory().get().executeBlocking().getBody();
-            response.getResults().forEach(inventory -> {
-                InventoryEntryFixtures.delete(inventory.getId());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().inventory().get(), (inventoryEntry) -> InventoryEntryFixtures.delete(inventoryEntry.getId()));
     }
 
     private void deleteAllProducts() {
-        ProductPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().products().get().executeBlocking().getBody();
-            response.getResults().forEach(ProductFixtures::deleteProduct);
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().products().get(), ProductFixtures::deleteProduct);
     }
 
     private void deleteAllProductDiscounts() {
-        ProductDiscountPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().productDiscounts().get().executeBlocking().getBody();
-            response.getResults().forEach(productDiscount -> {
-                ProductDiscountFixtures.deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().productDiscounts().get(), (productDiscount) -> ProductDiscountFixtures.deleteProductDiscount(productDiscount.getId(),
+                productDiscount.getVersion()));
     }
 
     private void deleteAllProductTypes() {
-        ProductTypePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().productTypes().get().executeBlocking().getBody();
-            response.getResults().forEach(productType -> {
-                ProductTypeFixtures.deleteProductType(productType.getId(), productType.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().productTypes().get(), (productType) -> ProductTypeFixtures.deleteProductType(productType.getId(),
+                productType.getVersion()));
     }
 
     private void deleteAllReviews() {
-        ReviewPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().reviews().get().executeBlocking().getBody();
-            response.getResults().forEach(review -> {
-                ReviewFixtures.delete(review.getId(), review.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().reviews().get(), (review) -> ReviewFixtures.delete(review.getId(),
+                review.getVersion()));
     }
 
     private void deleteAllTaxCategories() {
-        TaxCategoryPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().taxCategories().get().executeBlocking().getBody();
-            response.getResults().forEach(taxCategory -> {
-                TaxCategoryFixtures.deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().taxCategories().get(), (taxCategory) -> TaxCategoryFixtures.deleteTaxCategory(taxCategory.getId(),
+                taxCategory.getVersion()));
     }
 
     private void deleteAllDiscountCodes() {
-        DiscountCodePagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getProjectRoot().discountCodes().get().executeBlocking().getBody();
-            response.getResults().forEach(discountCode -> {
-                DiscountCodeFixtures.deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
-            });
-        } while (response.getResults().size() != 0);
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().discountCodes().get(), (discountCode) -> DiscountCodeFixtures.deleteDiscountCode(discountCode.getId(),
+                discountCode.getVersion()));
     }
 }

@@ -92,7 +92,7 @@ public final class ModifiedByImpl implements ModifiedBy {
     }
 
     /**
-    *  <p><code>true</code> if the change was made via Merchant Center or <a href="https://impex.europe-west1.gcp.commercetools.com/">ImPex</a>.</p>
+    *  <p><code>true</code> if the change was made via Merchant Center or <a href="https://impex.europe-west1.gcp.commercetools.com/">ImpEx</a>.</p>
     */
     public Boolean getIsPlatformClient() {
         return this.isPlatformClient;

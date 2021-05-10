@@ -1,6 +1,7 @@
 
 package cleanup;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.function.Consumer;
@@ -36,7 +37,10 @@ import commercetools.zone.ZoneFixtures;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
+
+import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project
@@ -78,45 +82,53 @@ public class DeleteEverythingIntegrationTest {
             deleteAllOrderEdits();
             deleteAllOrders();
             deleteAllCarts();
+            deleteAllDiscountCodes();
             deleteAllShoppingLists();
             deleteAllReviews();
             deleteAllProductDiscounts();
-            deleteAllProducts();
             deleteAllCategories();
+            deleteAllProducts();
             deleteAllCartDiscounts();
             deleteAllInventories();
             deleteAllProductTypes();
             deleteAllShippingMethods();
             deleteAllTaxCategories();
-            deleteAllDiscountCodes();
             deleteAllCustomObjects();
             deleteAllCustomers();
-            deleteAllCustomerGroups();
             deleteAllStates();
             deleteAllStores();
             deleteAllChannels();
+            deleteAllCustomerGroups();
             deleteAllTypes();
             deleteAllZones();
         }
-        catch (Exception ignored) {
+        catch (Exception e) {
+            System.out.println(e);
         }
         threadPool.shutdown();
     }
 
     private <T extends PagedQueryResourceRequest<T, TResult>, TResult extends ResourcePagedQueryResponse<TResource>, TResource extends BaseResource> void deleteAllResources(
             PagedQueryResourceRequest<T, TResult> request, Consumer<TResource> deleteFn) {
-        ApiHttpResponse<TResult> response = request.withLimit(100).executeBlocking();
+
+        ApiHttpResponse<TResult> response = request.withLimit(100).withSort("id ASC").executeBlocking();
 
         do {
             List<TResource> results = response.getBody().getResults();
-            results.forEach(deleteFn);
-            String lastId = results.get(results.size() - 1).getId();
-            response = request.withLimit(100)
-                    .withSort("id ASC")
-                    .withWhere("id > :lastId")
-                    .withPredicateVar("lastId", lastId)
-                    .executeBlocking();
+            if (results.size() > 0 ) {
+                results.forEach(deleteFn);
+                String lastId = results.get(results.size() - 1).getId();
+                response = request.withLimit(100)
+                        .withSort("id ASC")
+                        .withWhere("id > :lastId")
+                        .withPredicateVar("lastId", lastId)
+                        .executeBlocking();
+            }
         } while (response.getBody().getCount() >= response.getBody().getLimit());
+    }
+
+    private void checkDepends(Runnable block) {
+        assertEventually(Duration.ofSeconds(60), Duration.ofMillis(1000), block);
     }
 
     private void deleteAllZones() {
@@ -130,11 +142,14 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllOrders() {
+        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().orders().edits().get().executeBlocking().getBody().getCount()).isZero());
+
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().orders().get(),
             (order) -> OrdersFixtures.deleteOrder(order.getId(), order.getVersion()));
     }
 
     private void deleteAllCarts() {
+        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().orders().get().executeBlocking().getBody().getCount()).isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().carts().get(),
             (cart) -> CartsFixtures.deleteCart(cart.getId(), cart.getVersion()));
     }
@@ -150,7 +165,7 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllStates() {
-        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().states().get(),
+        deleteAllResources(CommercetoolsTestUtils.getProjectRoot().states().get().withWhere("initial = false"),
             (state) -> StateFixtures.deleteState(state.getId(), state.getVersion()));
     }
 
@@ -171,6 +186,7 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllCustomerGroups() {
+        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().customers().get().executeBlocking().getBody().getCount()).isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().customerGroups().get(),
             (customerGroup) -> CustomerGroupFixtures.deleteCustomerGroup(customerGroup.getId(),
                 customerGroup.getVersion()));
@@ -204,6 +220,8 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllCartDiscounts() {
+        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().discountCodes().get().executeBlocking().getBody().getCount()).isZero());
+
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().cartDiscounts().get(),
             (cartDiscount) -> CartDiscountFixtures.deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion()));
     }
@@ -218,6 +236,7 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllProductDiscounts() {
+        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().products().get().executeBlocking().getBody().getCount()).isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().productDiscounts().get(),
             (productDiscount) -> ProductDiscountFixtures.deleteProductDiscount(productDiscount.getId(),
                 productDiscount.getVersion()));

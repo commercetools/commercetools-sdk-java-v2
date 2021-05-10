@@ -1,6 +1,7 @@
 
 package commercetools.utils;
 
+import java.time.Duration;
 import java.util.UUID;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
@@ -69,5 +70,30 @@ public class CommercetoolsTestUtils {
 
     public static ApiHttpClient getClient() {
         return client;
+    }
+
+    public static void assertEventually(final Duration maxWaitTime, final Duration waitBeforeRetry,
+            final Runnable block) {
+        final long timeOutAt = System.currentTimeMillis() + maxWaitTime.toMillis();
+        while (true) {
+            try {
+                block.run();
+
+                // the block executed without throwing an exception, return
+                return;
+            }
+            catch (AssertionError e) {
+                if (System.currentTimeMillis() > timeOutAt) {
+                    throw e;
+                }
+            }
+
+            try {
+                Thread.sleep(waitBeforeRetry.toMillis());
+            }
+            catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

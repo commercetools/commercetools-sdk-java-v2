@@ -1,6 +1,8 @@
 
 package cleanup;
 
+import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
+
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.*;
@@ -39,8 +41,6 @@ import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
-
-import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project
@@ -115,7 +115,7 @@ public class DeleteEverythingIntegrationTest {
 
         do {
             List<TResource> results = response.getBody().getResults();
-            if (results.size() > 0 ) {
+            if (results.size() > 0) {
                 results.forEach(deleteFn);
                 String lastId = results.get(results.size() - 1).getId();
                 response = request.withLimit(100)
@@ -142,14 +142,19 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllOrders() {
-        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().orders().edits().get().executeBlocking().getBody().getCount()).isZero());
+        checkDepends(() -> Assertions.assertThat(
+            CommercetoolsTestUtils.getProjectRoot().orders().edits().get().executeBlocking().getBody().getCount())
+                .isZero());
 
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().orders().get(),
             (order) -> OrdersFixtures.deleteOrder(order.getId(), order.getVersion()));
     }
 
     private void deleteAllCarts() {
-        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().orders().get().executeBlocking().getBody().getCount()).isZero());
+        checkDepends(() -> Assertions
+                .assertThat(
+                    CommercetoolsTestUtils.getProjectRoot().orders().get().executeBlocking().getBody().getCount())
+                .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().carts().get(),
             (cart) -> CartsFixtures.deleteCart(cart.getId(), cart.getVersion()));
     }
@@ -186,7 +191,10 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllCustomerGroups() {
-        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().customers().get().executeBlocking().getBody().getCount()).isZero());
+        checkDepends(() -> Assertions
+                .assertThat(
+                    CommercetoolsTestUtils.getProjectRoot().customers().get().executeBlocking().getBody().getCount())
+                .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().customerGroups().get(),
             (customerGroup) -> CustomerGroupFixtures.deleteCustomerGroup(customerGroup.getId(),
                 customerGroup.getVersion()));
@@ -220,7 +228,9 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllCartDiscounts() {
-        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().discountCodes().get().executeBlocking().getBody().getCount()).isZero());
+        checkDepends(() -> Assertions.assertThat(
+            CommercetoolsTestUtils.getProjectRoot().discountCodes().get().executeBlocking().getBody().getCount())
+                .isZero());
 
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().cartDiscounts().get(),
             (cartDiscount) -> CartDiscountFixtures.deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion()));
@@ -236,7 +246,10 @@ public class DeleteEverythingIntegrationTest {
     }
 
     private void deleteAllProductDiscounts() {
-        checkDepends(() -> Assertions.assertThat(CommercetoolsTestUtils.getProjectRoot().products().get().executeBlocking().getBody().getCount()).isZero());
+        checkDepends(() -> Assertions
+                .assertThat(
+                    CommercetoolsTestUtils.getProjectRoot().products().get().executeBlocking().getBody().getCount())
+                .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectRoot().productDiscounts().get(),
             (productDiscount) -> ProductDiscountFixtures.deleteProductDiscount(productDiscount.getId(),
                 productDiscount.getVersion()));

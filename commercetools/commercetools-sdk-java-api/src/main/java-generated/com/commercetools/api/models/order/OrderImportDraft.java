@@ -14,7 +14,7 @@ import com.commercetools.api.models.cart.CustomLineItemDraft;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.RoundingMode;
 import com.commercetools.api.models.cart.TaxedPriceDraft;
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -80,11 +80,11 @@ public interface OrderImportDraft {
 
     @Valid
     @JsonProperty("shippingAddress")
-    public Address getShippingAddress();
+    public BaseAddress getShippingAddress();
 
     @Valid
     @JsonProperty("billingAddress")
-    public Address getBillingAddress();
+    public BaseAddress getBillingAddress();
 
     /**
     *  <p>Set when the customer is set and the customer is a member of a customer group.
@@ -151,7 +151,7 @@ public interface OrderImportDraft {
     */
     @Valid
     @JsonProperty("itemShippingAddresses")
-    public List<Address> getItemShippingAddresses();
+    public List<BaseAddress> getItemShippingAddresses();
 
     @Valid
     @JsonProperty("store")
@@ -184,9 +184,9 @@ public interface OrderImportDraft {
 
     public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
-    public void setShippingAddress(final Address shippingAddress);
+    public void setShippingAddress(final BaseAddress shippingAddress);
 
-    public void setBillingAddress(final Address billingAddress);
+    public void setBillingAddress(final BaseAddress billingAddress);
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
@@ -209,9 +209,9 @@ public interface OrderImportDraft {
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     @JsonIgnore
-    public void setItemShippingAddresses(final Address... itemShippingAddresses);
+    public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
-    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+    public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     public void setStore(final StoreResourceIdentifier store);
 

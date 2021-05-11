@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -42,7 +42,7 @@ public interface ChannelDraft {
 
     @Valid
     @JsonProperty("address")
-    public Address getAddress();
+    public BaseAddress getAddress();
 
     /**
     *  <p>The custom fields.</p>
@@ -66,7 +66,7 @@ public interface ChannelDraft {
 
     public void setDescription(final LocalizedString description);
 
-    public void setAddress(final Address address);
+    public void setAddress(final BaseAddress address);
 
     public void setCustom(final CustomFieldsDraft custom);
 

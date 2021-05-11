@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -28,7 +28,7 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
     @Valid
     @JsonProperty("address")
-    public Address getAddress();
+    public BaseAddress getAddress();
 
     @Valid
     @JsonProperty("parcels")
@@ -39,7 +39,7 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
     public void setItems(final List<DeliveryItem> items);
 
-    public void setAddress(final Address address);
+    public void setAddress(final BaseAddress address);
 
     @JsonIgnore
     public void setParcels(final ParcelDraft... parcels);

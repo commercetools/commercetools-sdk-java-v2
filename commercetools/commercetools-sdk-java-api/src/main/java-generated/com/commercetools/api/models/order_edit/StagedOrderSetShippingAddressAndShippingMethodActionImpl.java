@@ -19,7 +19,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
 
     private String action;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
@@ -27,7 +27,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
 
     @JsonCreator
     StagedOrderSetShippingAddressAndShippingMethodActionImpl(
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.address = address;
@@ -44,7 +44,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
         return this.action;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
@@ -56,7 +56,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
         return this.externalTaxRate;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

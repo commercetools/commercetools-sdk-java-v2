@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CartSetBillingAddressActionBuilder {
 
     @Nullable
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     public CartSetBillingAddressActionBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
+            @Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

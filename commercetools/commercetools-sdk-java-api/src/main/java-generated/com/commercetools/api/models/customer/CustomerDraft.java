@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartResourceIdentifier;
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -93,7 +93,7 @@ public interface CustomerDraft {
     */
     @Valid
     @JsonProperty("addresses")
-    public List<Address> getAddresses();
+    public List<BaseAddress> getAddresses();
 
     /**
     *  <p>The index of the address in the addresses array.
@@ -200,9 +200,9 @@ public interface CustomerDraft {
     public void setVatId(final String vatId);
 
     @JsonIgnore
-    public void setAddresses(final Address... addresses);
+    public void setAddresses(final BaseAddress... addresses);
 
-    public void setAddresses(final List<Address> addresses);
+    public void setAddresses(final List<BaseAddress> addresses);
 
     public void setDefaultShippingAddress(final Long defaultShippingAddress);
 

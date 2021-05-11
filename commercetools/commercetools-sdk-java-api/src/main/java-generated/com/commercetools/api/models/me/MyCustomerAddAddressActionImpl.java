@@ -18,10 +18,11 @@ public final class MyCustomerAddAddressActionImpl implements MyCustomerAddAddres
 
     private String action;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @JsonCreator
-    MyCustomerAddAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+    MyCustomerAddAddressActionImpl(
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         this.action = ADD_ADDRESS;
     }
@@ -34,11 +35,11 @@ public final class MyCustomerAddAddressActionImpl implements MyCustomerAddAddres
         return this.action;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddressBuilder {
+public final class BaseAddressBuilder {
 
     @Nullable
     private String key;
@@ -81,139 +81,123 @@ public final class AddressBuilder {
     @Nullable
     private String externalId;
 
-    @Nullable
-    private String id;
-
-    @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
-
-    public AddressBuilder key(@Nullable final String key) {
+    public BaseAddressBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
-    public AddressBuilder title(@Nullable final String title) {
+    public BaseAddressBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
 
-    public AddressBuilder salutation(@Nullable final String salutation) {
+    public BaseAddressBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
 
-    public AddressBuilder firstName(@Nullable final String firstName) {
+    public BaseAddressBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public AddressBuilder lastName(@Nullable final String lastName) {
+    public BaseAddressBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public AddressBuilder streetName(@Nullable final String streetName) {
+    public BaseAddressBuilder streetName(@Nullable final String streetName) {
         this.streetName = streetName;
         return this;
     }
 
-    public AddressBuilder streetNumber(@Nullable final String streetNumber) {
+    public BaseAddressBuilder streetNumber(@Nullable final String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
 
-    public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
+    public BaseAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
         return this;
     }
 
-    public AddressBuilder postalCode(@Nullable final String postalCode) {
+    public BaseAddressBuilder postalCode(@Nullable final String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
-    public AddressBuilder city(@Nullable final String city) {
+    public BaseAddressBuilder city(@Nullable final String city) {
         this.city = city;
         return this;
     }
 
-    public AddressBuilder region(@Nullable final String region) {
+    public BaseAddressBuilder region(@Nullable final String region) {
         this.region = region;
         return this;
     }
 
-    public AddressBuilder state(@Nullable final String state) {
+    public BaseAddressBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
-    public AddressBuilder country(final String country) {
+    public BaseAddressBuilder country(final String country) {
         this.country = country;
         return this;
     }
 
-    public AddressBuilder company(@Nullable final String company) {
+    public BaseAddressBuilder company(@Nullable final String company) {
         this.company = company;
         return this;
     }
 
-    public AddressBuilder department(@Nullable final String department) {
+    public BaseAddressBuilder department(@Nullable final String department) {
         this.department = department;
         return this;
     }
 
-    public AddressBuilder building(@Nullable final String building) {
+    public BaseAddressBuilder building(@Nullable final String building) {
         this.building = building;
         return this;
     }
 
-    public AddressBuilder apartment(@Nullable final String apartment) {
+    public BaseAddressBuilder apartment(@Nullable final String apartment) {
         this.apartment = apartment;
         return this;
     }
 
-    public AddressBuilder pOBox(@Nullable final String pOBox) {
+    public BaseAddressBuilder pOBox(@Nullable final String pOBox) {
         this.pOBox = pOBox;
         return this;
     }
 
-    public AddressBuilder phone(@Nullable final String phone) {
+    public BaseAddressBuilder phone(@Nullable final String phone) {
         this.phone = phone;
         return this;
     }
 
-    public AddressBuilder mobile(@Nullable final String mobile) {
+    public BaseAddressBuilder mobile(@Nullable final String mobile) {
         this.mobile = mobile;
         return this;
     }
 
-    public AddressBuilder email(@Nullable final String email) {
+    public BaseAddressBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
-    public AddressBuilder fax(@Nullable final String fax) {
+    public BaseAddressBuilder fax(@Nullable final String fax) {
         this.fax = fax;
         return this;
     }
 
-    public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
+    public BaseAddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
         return this;
     }
 
-    public AddressBuilder externalId(@Nullable final String externalId) {
+    public BaseAddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
-        return this;
-    }
-
-    public AddressBuilder id(@Nullable final String id) {
-        this.id = id;
-        return this;
-    }
-
-    public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
         return this;
     }
 
@@ -336,28 +320,18 @@ public final class AddressBuilder {
         return this.externalId;
     }
 
-    @Nullable
-    public String getId() {
-        return this.id;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
-    public Address build() {
-        return new AddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
+    public BaseAddress build() {
+        return new BaseAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, id, custom);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
     }
 
-    public static AddressBuilder of() {
-        return new AddressBuilder();
+    public static BaseAddressBuilder of() {
+        return new BaseAddressBuilder();
     }
 
-    public static AddressBuilder of(final Address template) {
-        AddressBuilder builder = new AddressBuilder();
+    public static BaseAddressBuilder of(final BaseAddress template) {
+        BaseAddressBuilder builder = new BaseAddressBuilder();
         builder.key = template.getKey();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
@@ -382,8 +356,6 @@ public final class AddressBuilder {
         builder.fax = template.getFax();
         builder.additionalAddressInfo = template.getAdditionalAddressInfo();
         builder.externalId = template.getExternalId();
-        builder.id = template.getId();
-        builder.custom = template.getCustom();
         return builder;
     }
 

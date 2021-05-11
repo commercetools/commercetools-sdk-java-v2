@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -117,11 +117,11 @@ public interface CartDraft {
     */
     @Valid
     @JsonProperty("shippingAddress")
-    public Address getShippingAddress();
+    public BaseAddress getShippingAddress();
 
     @Valid
     @JsonProperty("billingAddress")
-    public Address getBillingAddress();
+    public BaseAddress getBillingAddress();
 
     @Valid
     @JsonProperty("shippingMethod")
@@ -183,7 +183,7 @@ public interface CartDraft {
     */
     @Valid
     @JsonProperty("itemShippingAddresses")
-    public List<Address> getItemShippingAddresses();
+    public List<BaseAddress> getItemShippingAddresses();
 
     /**
     *  <p>The code of existing DiscountCodes.</p>
@@ -226,9 +226,9 @@ public interface CartDraft {
 
     public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
 
-    public void setShippingAddress(final Address shippingAddress);
+    public void setShippingAddress(final BaseAddress shippingAddress);
 
-    public void setBillingAddress(final Address billingAddress);
+    public void setBillingAddress(final BaseAddress billingAddress);
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
@@ -245,9 +245,9 @@ public interface CartDraft {
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
     @JsonIgnore
-    public void setItemShippingAddresses(final Address... itemShippingAddresses);
+    public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
-    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+    public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     @JsonIgnore
     public void setDiscountCodes(final String... discountCodes);

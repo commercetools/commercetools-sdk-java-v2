@@ -13,7 +13,7 @@ public final class StagedOrderSetDeliveryAddressActionBuilder {
     private String deliveryId;
 
     @Nullable
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     public StagedOrderSetDeliveryAddressActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
@@ -21,7 +21,7 @@ public final class StagedOrderSetDeliveryAddressActionBuilder {
     }
 
     public StagedOrderSetDeliveryAddressActionBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
+            @Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
@@ -31,7 +31,7 @@ public final class StagedOrderSetDeliveryAddressActionBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

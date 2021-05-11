@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder {
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
@@ -19,7 +19,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder {
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+            final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
@@ -36,7 +36,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder {
         return this;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

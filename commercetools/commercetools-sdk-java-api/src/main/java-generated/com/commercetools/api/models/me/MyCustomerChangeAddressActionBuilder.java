@@ -16,7 +16,7 @@ public final class MyCustomerChangeAddressActionBuilder {
     @Nullable
     private String addressKey;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     public MyCustomerChangeAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
@@ -28,7 +28,7 @@ public final class MyCustomerChangeAddressActionBuilder {
         return this;
     }
 
-    public MyCustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.Address address) {
+    public MyCustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
@@ -43,7 +43,7 @@ public final class MyCustomerChangeAddressActionBuilder {
         return this.addressKey;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

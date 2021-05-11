@@ -49,7 +49,7 @@ public final class CustomerDraftBuilder {
     private String vatId;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.Address> addresses;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     @Nullable
     private Long defaultShippingAddress;
@@ -154,13 +154,14 @@ public final class CustomerDraftBuilder {
         return this;
     }
 
-    public CustomerDraftBuilder addresses(@Nullable final com.commercetools.api.models.common.Address... addresses) {
+    public CustomerDraftBuilder addresses(
+            @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
 
     public CustomerDraftBuilder addresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Address> addresses) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
@@ -308,7 +309,7 @@ public final class CustomerDraftBuilder {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 

@@ -7,33 +7,28 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = AddressImpl.class)
-public interface Address extends BaseAddress {
-
-    @JsonProperty("id")
-    public String getId();
+@JsonDeserialize(as = AddressDraftImpl.class)
+public interface AddressDraft extends BaseAddress {
 
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
-    public void setId(final String id);
+    public void setCustom(final CustomFieldsDraft custom);
 
-    public void setCustom(final CustomFields custom);
-
-    public static Address of() {
-        return new AddressImpl();
+    public static AddressDraft of() {
+        return new AddressDraftImpl();
     }
 
-    public static Address of(final Address template) {
-        AddressImpl instance = new AddressImpl();
+    public static AddressDraft of(final AddressDraft template) {
+        AddressDraftImpl instance = new AddressDraftImpl();
         instance.setKey(template.getKey());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
@@ -58,20 +53,19 @@ public interface Address extends BaseAddress {
         instance.setFax(template.getFax());
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
-        instance.setId(template.getId());
         instance.setCustom(template.getCustom());
         return instance;
     }
 
-    public static AddressBuilder builder() {
-        return AddressBuilder.of();
+    public static AddressDraftBuilder builder() {
+        return AddressDraftBuilder.of();
     }
 
-    public static AddressBuilder builder(final Address template) {
-        return AddressBuilder.of(template);
+    public static AddressDraftBuilder builder(final AddressDraft template) {
+        return AddressDraftBuilder.of(template);
     }
 
-    default <T> T withAddress(Function<Address, T> helper) {
+    default <T> T withAddressDraft(Function<AddressDraft, T> helper) {
         return helper.apply(this);
     }
 }

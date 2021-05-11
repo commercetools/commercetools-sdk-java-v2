@@ -24,7 +24,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
 
     private com.commercetools.api.models.common.LocalizedString description;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
@@ -35,7 +35,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.key = key;
@@ -69,7 +69,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
         return this.description;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
@@ -104,7 +104,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
         this.description = description;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

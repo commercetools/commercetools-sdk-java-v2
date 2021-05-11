@@ -27,7 +27,7 @@ public final class InventoryEntryBuilder {
     private String sku;
 
     @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     private Long quantityOnStock;
 
@@ -79,7 +79,7 @@ public final class InventoryEntryBuilder {
     }
 
     public InventoryEntryBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
@@ -140,7 +140,7 @@ public final class InventoryEntryBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 

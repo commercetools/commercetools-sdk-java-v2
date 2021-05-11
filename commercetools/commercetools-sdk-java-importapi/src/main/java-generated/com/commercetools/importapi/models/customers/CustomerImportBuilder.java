@@ -55,8 +55,7 @@ public final class CustomerImportBuilder {
     @Nullable
     private com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup;
 
-    @Nullable
-    private java.util.List<com.commercetools.importapi.models.common.Address> addresses;
+    private java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses;
 
     @Nullable
     private Integer defaultBillingAddress;
@@ -165,13 +164,13 @@ public final class CustomerImportBuilder {
     }
 
     public CustomerImportBuilder addresses(
-            @Nullable final com.commercetools.importapi.models.common.Address... addresses) {
+            final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
 
     public CustomerImportBuilder addresses(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.Address> addresses) {
+            final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
@@ -293,8 +292,7 @@ public final class CustomerImportBuilder {
         return this.customerGroup;
     }
 
-    @Nullable
-    public java.util.List<com.commercetools.importapi.models.common.Address> getAddresses() {
+    public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
         return this.addresses;
     }
 

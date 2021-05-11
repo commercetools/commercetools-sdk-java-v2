@@ -20,14 +20,14 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
 
     @JsonCreator
     OrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels) {
         this.items = items;
         this.address = address;
@@ -47,7 +47,7 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
         return this.items;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
@@ -63,7 +63,7 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
         this.items = items;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

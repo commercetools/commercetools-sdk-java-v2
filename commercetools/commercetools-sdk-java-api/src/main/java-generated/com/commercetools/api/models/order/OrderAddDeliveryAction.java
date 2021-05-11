@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -25,7 +25,7 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
 
     @Valid
     @JsonProperty("address")
-    public Address getAddress();
+    public BaseAddress getAddress();
 
     @Valid
     @JsonProperty("parcels")
@@ -36,7 +36,7 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
 
     public void setItems(final List<DeliveryItem> items);
 
-    public void setAddress(final Address address);
+    public void setAddress(final BaseAddress address);
 
     @JsonIgnore
     public void setParcels(final ParcelDraft... parcels);

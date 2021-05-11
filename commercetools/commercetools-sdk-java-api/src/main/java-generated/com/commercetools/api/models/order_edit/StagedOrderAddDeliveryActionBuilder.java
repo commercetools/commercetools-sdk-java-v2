@@ -14,7 +14,7 @@ public final class StagedOrderAddDeliveryActionBuilder {
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
@@ -32,7 +32,7 @@ public final class StagedOrderAddDeliveryActionBuilder {
     }
 
     public StagedOrderAddDeliveryActionBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
+            @Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
@@ -55,7 +55,7 @@ public final class StagedOrderAddDeliveryActionBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

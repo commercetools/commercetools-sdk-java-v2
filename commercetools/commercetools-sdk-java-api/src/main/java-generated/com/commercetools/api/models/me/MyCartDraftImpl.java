@@ -26,9 +26,9 @@ public final class MyCartDraftImpl implements MyCartDraft {
 
     private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
 
-    private com.commercetools.api.models.common.Address shippingAddress;
+    private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
-    private com.commercetools.api.models.common.Address billingAddress;
+    private com.commercetools.api.models.common.BaseAddress billingAddress;
 
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
@@ -40,7 +40,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
 
     private Long deleteDaysAfterLastModification;
 
-    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
@@ -51,14 +51,14 @@ public final class MyCartDraftImpl implements MyCartDraft {
             @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("country") final String country,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
+            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
+            @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
+            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.currency = currency;
@@ -110,11 +110,11 @@ public final class MyCartDraftImpl implements MyCartDraft {
         return this.lineItems;
     }
 
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
-    public com.commercetools.api.models.common.Address getBillingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
 
@@ -152,7 +152,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
     *  <p>Contains addresses for orders with multiple shipping addresses.
     *  Each address must contain a key which is unique in this cart.</p>
     */
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
@@ -188,11 +188,11 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.lineItems = lineItems;
     }
 
-    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
 
-    public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
+    public void setBillingAddress(final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
     }
 
@@ -217,12 +217,13 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
-    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+    public void setItemShippingAddresses(
+            final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
         this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
     }
 
     public void setItemShippingAddresses(
-            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+            final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 

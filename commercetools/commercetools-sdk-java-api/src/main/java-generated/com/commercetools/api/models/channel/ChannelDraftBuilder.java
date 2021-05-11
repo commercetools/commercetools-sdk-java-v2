@@ -22,7 +22,7 @@ public final class ChannelDraftBuilder {
     private com.commercetools.api.models.common.LocalizedString description;
 
     @Nullable
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -57,7 +57,7 @@ public final class ChannelDraftBuilder {
         return this;
     }
 
-    public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
+    public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
@@ -92,7 +92,7 @@ public final class ChannelDraftBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 

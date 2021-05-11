@@ -34,7 +34,7 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
 
     private String vatId;
 
-    private java.util.List<com.commercetools.api.models.common.Address> addresses;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     private Long defaultShippingAddress;
 
@@ -52,7 +52,7 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
             @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,
             @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,
             @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,
-            @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
+            @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,
             @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
@@ -117,7 +117,7 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
     /**
     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
     */
-    public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 
@@ -188,11 +188,11 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
         this.vatId = vatId;
     }
 
-    public void setAddresses(final com.commercetools.api.models.common.Address... addresses) {
+    public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
     }
 
-    public void setAddresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
+    public void setAddresses(final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
         this.addresses = addresses;
     }
 

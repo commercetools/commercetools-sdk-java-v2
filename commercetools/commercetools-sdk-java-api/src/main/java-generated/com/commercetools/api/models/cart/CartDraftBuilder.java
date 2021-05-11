@@ -52,10 +52,10 @@ public final class CartDraftBuilder {
     private java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems;
 
     @Nullable
-    private com.commercetools.api.models.common.Address shippingAddress;
+    private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
     @Nullable
-    private com.commercetools.api.models.common.Address billingAddress;
+    private com.commercetools.api.models.common.BaseAddress billingAddress;
 
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
@@ -79,7 +79,7 @@ public final class CartDraftBuilder {
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     @Nullable
     private java.util.List<String> discountCodes;
@@ -172,12 +172,13 @@ public final class CartDraftBuilder {
     }
 
     public CartDraftBuilder shippingAddress(
-            @Nullable final com.commercetools.api.models.common.Address shippingAddress) {
+            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
 
-    public CartDraftBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
+    public CartDraftBuilder billingAddress(
+            @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
     }
@@ -221,13 +222,13 @@ public final class CartDraftBuilder {
     }
 
     public CartDraftBuilder itemShippingAddresses(
-            @Nullable final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
         this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
         return this;
     }
 
     public CartDraftBuilder itemShippingAddresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
         return this;
     }
@@ -312,12 +313,12 @@ public final class CartDraftBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getBillingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
 
@@ -357,7 +358,7 @@ public final class CartDraftBuilder {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 

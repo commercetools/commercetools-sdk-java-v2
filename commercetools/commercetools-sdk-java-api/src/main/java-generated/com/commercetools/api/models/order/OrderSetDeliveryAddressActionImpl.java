@@ -20,11 +20,11 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
 
     private String deliveryId;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @JsonCreator
     OrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
         this.deliveryId = deliveryId;
         this.address = address;
         this.action = SET_DELIVERY_ADDRESS;
@@ -42,7 +42,7 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
         return this.deliveryId;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
@@ -50,7 +50,7 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
         this.deliveryId = deliveryId;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

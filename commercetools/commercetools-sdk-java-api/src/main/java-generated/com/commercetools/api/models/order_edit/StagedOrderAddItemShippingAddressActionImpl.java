@@ -18,11 +18,11 @@ public final class StagedOrderAddItemShippingAddressActionImpl implements Staged
 
     private String action;
 
-    private com.commercetools.api.models.common.Address address;
+    private com.commercetools.api.models.common.BaseAddress address;
 
     @JsonCreator
     StagedOrderAddItemShippingAddressActionImpl(
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         this.action = ADD_ITEM_SHIPPING_ADDRESS;
     }
@@ -35,11 +35,11 @@ public final class StagedOrderAddItemShippingAddressActionImpl implements Staged
         return this.action;
     }
 
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
 

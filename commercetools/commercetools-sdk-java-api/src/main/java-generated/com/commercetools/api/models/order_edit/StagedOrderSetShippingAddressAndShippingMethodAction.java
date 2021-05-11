@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -26,7 +26,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     @NotNull
     @Valid
     @JsonProperty("address")
-    public Address getAddress();
+    public BaseAddress getAddress();
 
     @Valid
     @JsonProperty("shippingMethod")
@@ -36,7 +36,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
-    public void setAddress(final Address address);
+    public void setAddress(final BaseAddress address);
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 

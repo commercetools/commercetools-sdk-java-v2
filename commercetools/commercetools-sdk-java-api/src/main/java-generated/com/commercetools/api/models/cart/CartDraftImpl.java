@@ -44,9 +44,9 @@ public final class CartDraftImpl implements CartDraft {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems;
 
-    private com.commercetools.api.models.common.Address shippingAddress;
+    private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
-    private com.commercetools.api.models.common.Address billingAddress;
+    private com.commercetools.api.models.common.BaseAddress billingAddress;
 
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
@@ -62,7 +62,7 @@ public final class CartDraftImpl implements CartDraft {
 
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
-    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     private java.util.List<String> discountCodes;
 
@@ -80,8 +80,8 @@ public final class CartDraftImpl implements CartDraft {
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems,
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
+            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
+            @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
@@ -89,7 +89,7 @@ public final class CartDraftImpl implements CartDraft {
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
+            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
         this.currency = currency;
         this.key = key;
@@ -215,11 +215,11 @@ public final class CartDraftImpl implements CartDraft {
     /**
     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
     */
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
-    public com.commercetools.api.models.common.Address getBillingAddress() {
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
 
@@ -281,7 +281,7 @@ public final class CartDraftImpl implements CartDraft {
     *  The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
     *  Only the cart's <code>shippingAddress</code> is used for this.</p>
     */
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
@@ -358,11 +358,11 @@ public final class CartDraftImpl implements CartDraft {
         this.customLineItems = customLineItems;
     }
 
-    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
 
-    public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
+    public void setBillingAddress(final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
     }
 
@@ -396,12 +396,13 @@ public final class CartDraftImpl implements CartDraft {
         this.shippingRateInput = shippingRateInput;
     }
 
-    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+    public void setItemShippingAddresses(
+            final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
         this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
     }
 
     public void setItemShippingAddresses(
-            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+            final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 

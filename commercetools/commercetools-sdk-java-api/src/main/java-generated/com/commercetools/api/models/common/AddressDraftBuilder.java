@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddressBuilder {
+public final class AddressDraftBuilder {
 
     @Nullable
     private String key;
@@ -82,137 +82,129 @@ public final class AddressBuilder {
     private String externalId;
 
     @Nullable
-    private String id;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
-
-    public AddressBuilder key(@Nullable final String key) {
+    public AddressDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
-    public AddressBuilder title(@Nullable final String title) {
+    public AddressDraftBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
 
-    public AddressBuilder salutation(@Nullable final String salutation) {
+    public AddressDraftBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
 
-    public AddressBuilder firstName(@Nullable final String firstName) {
+    public AddressDraftBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public AddressBuilder lastName(@Nullable final String lastName) {
+    public AddressDraftBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public AddressBuilder streetName(@Nullable final String streetName) {
+    public AddressDraftBuilder streetName(@Nullable final String streetName) {
         this.streetName = streetName;
         return this;
     }
 
-    public AddressBuilder streetNumber(@Nullable final String streetNumber) {
+    public AddressDraftBuilder streetNumber(@Nullable final String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
 
-    public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
+    public AddressDraftBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
         return this;
     }
 
-    public AddressBuilder postalCode(@Nullable final String postalCode) {
+    public AddressDraftBuilder postalCode(@Nullable final String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
-    public AddressBuilder city(@Nullable final String city) {
+    public AddressDraftBuilder city(@Nullable final String city) {
         this.city = city;
         return this;
     }
 
-    public AddressBuilder region(@Nullable final String region) {
+    public AddressDraftBuilder region(@Nullable final String region) {
         this.region = region;
         return this;
     }
 
-    public AddressBuilder state(@Nullable final String state) {
+    public AddressDraftBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
-    public AddressBuilder country(final String country) {
+    public AddressDraftBuilder country(final String country) {
         this.country = country;
         return this;
     }
 
-    public AddressBuilder company(@Nullable final String company) {
+    public AddressDraftBuilder company(@Nullable final String company) {
         this.company = company;
         return this;
     }
 
-    public AddressBuilder department(@Nullable final String department) {
+    public AddressDraftBuilder department(@Nullable final String department) {
         this.department = department;
         return this;
     }
 
-    public AddressBuilder building(@Nullable final String building) {
+    public AddressDraftBuilder building(@Nullable final String building) {
         this.building = building;
         return this;
     }
 
-    public AddressBuilder apartment(@Nullable final String apartment) {
+    public AddressDraftBuilder apartment(@Nullable final String apartment) {
         this.apartment = apartment;
         return this;
     }
 
-    public AddressBuilder pOBox(@Nullable final String pOBox) {
+    public AddressDraftBuilder pOBox(@Nullable final String pOBox) {
         this.pOBox = pOBox;
         return this;
     }
 
-    public AddressBuilder phone(@Nullable final String phone) {
+    public AddressDraftBuilder phone(@Nullable final String phone) {
         this.phone = phone;
         return this;
     }
 
-    public AddressBuilder mobile(@Nullable final String mobile) {
+    public AddressDraftBuilder mobile(@Nullable final String mobile) {
         this.mobile = mobile;
         return this;
     }
 
-    public AddressBuilder email(@Nullable final String email) {
+    public AddressDraftBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
-    public AddressBuilder fax(@Nullable final String fax) {
+    public AddressDraftBuilder fax(@Nullable final String fax) {
         this.fax = fax;
         return this;
     }
 
-    public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
+    public AddressDraftBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
         return this;
     }
 
-    public AddressBuilder externalId(@Nullable final String externalId) {
+    public AddressDraftBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
 
-    public AddressBuilder id(@Nullable final String id) {
-        this.id = id;
-        return this;
-    }
-
-    public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public AddressDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -337,27 +329,22 @@ public final class AddressBuilder {
     }
 
     @Nullable
-    public String getId() {
-        return this.id;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
-    public Address build() {
-        return new AddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
+    public AddressDraft build() {
+        return new AddressDraftImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, id, custom);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
-    public static AddressBuilder of() {
-        return new AddressBuilder();
+    public static AddressDraftBuilder of() {
+        return new AddressDraftBuilder();
     }
 
-    public static AddressBuilder of(final Address template) {
-        AddressBuilder builder = new AddressBuilder();
+    public static AddressDraftBuilder of(final AddressDraft template) {
+        AddressDraftBuilder builder = new AddressDraftBuilder();
         builder.key = template.getKey();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
@@ -382,7 +369,6 @@ public final class AddressBuilder {
         builder.fax = template.getFax();
         builder.additionalAddressInfo = template.getAdditionalAddressInfo();
         builder.externalId = template.getExternalId();
-        builder.id = template.getId();
         builder.custom = template.getCustom();
         return builder;
     }

@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -23,9 +23,9 @@ public interface MyCustomerAddAddressAction extends MyCustomerUpdateAction {
     @NotNull
     @Valid
     @JsonProperty("address")
-    public Address getAddress();
+    public BaseAddress getAddress();
 
-    public void setAddress(final Address address);
+    public void setAddress(final BaseAddress address);
 
     public static MyCustomerAddAddressAction of() {
         return new MyCustomerAddAddressActionImpl();

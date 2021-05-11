@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
-import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -54,11 +54,11 @@ public interface MyCartDraft {
 
     @Valid
     @JsonProperty("shippingAddress")
-    public Address getShippingAddress();
+    public BaseAddress getShippingAddress();
 
     @Valid
     @JsonProperty("billingAddress")
-    public Address getBillingAddress();
+    public BaseAddress getBillingAddress();
 
     @Valid
     @JsonProperty("shippingMethod")
@@ -95,7 +95,7 @@ public interface MyCartDraft {
     */
     @Valid
     @JsonProperty("itemShippingAddresses")
-    public List<Address> getItemShippingAddresses();
+    public List<BaseAddress> getItemShippingAddresses();
 
     @Valid
     @JsonProperty("store")
@@ -118,9 +118,9 @@ public interface MyCartDraft {
 
     public void setLineItems(final List<MyLineItemDraft> lineItems);
 
-    public void setShippingAddress(final Address shippingAddress);
+    public void setShippingAddress(final BaseAddress shippingAddress);
 
-    public void setBillingAddress(final Address billingAddress);
+    public void setBillingAddress(final BaseAddress billingAddress);
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
@@ -133,9 +133,9 @@ public interface MyCartDraft {
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
     @JsonIgnore
-    public void setItemShippingAddresses(final Address... itemShippingAddresses);
+    public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
-    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+    public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     public void setStore(final StoreKeyReference store);
 

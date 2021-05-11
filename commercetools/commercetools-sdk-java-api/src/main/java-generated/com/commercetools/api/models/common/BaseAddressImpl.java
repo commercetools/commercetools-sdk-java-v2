@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddressImpl implements Address {
+public final class BaseAddressImpl implements BaseAddress {
 
     private String key;
 
@@ -64,12 +64,8 @@ public final class AddressImpl implements Address {
 
     private String externalId;
 
-    private String id;
-
-    private com.commercetools.api.models.type.CustomFields custom;
-
     @JsonCreator
-    AddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
+    BaseAddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
             @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
             @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
@@ -82,8 +78,7 @@ public final class AddressImpl implements Address {
             @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
             @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId, @JsonProperty("id") final String id,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("externalId") final String externalId) {
         this.key = key;
         this.title = title;
         this.salutation = salutation;
@@ -108,11 +103,9 @@ public final class AddressImpl implements Address {
         this.fax = fax;
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
-        this.id = id;
-        this.custom = custom;
     }
 
-    public AddressImpl() {
+    public BaseAddressImpl() {
     }
 
     public String getKey() {
@@ -214,14 +207,6 @@ public final class AddressImpl implements Address {
         return this.externalId;
     }
 
-    public String getId() {
-        return this.id;
-    }
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
     public void setKey(final String key) {
         this.key = key;
     }
@@ -318,14 +303,6 @@ public final class AddressImpl implements Address {
         this.externalId = externalId;
     }
 
-    public void setId(final String id) {
-        this.id = id;
-    }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -334,7 +311,7 @@ public final class AddressImpl implements Address {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        AddressImpl that = (AddressImpl) o;
+        BaseAddressImpl that = (BaseAddressImpl) o;
 
         return new EqualsBuilder().append(key, that.key)
                 .append(title, that.title)
@@ -360,8 +337,6 @@ public final class AddressImpl implements Address {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
-                .append(id, that.id)
-                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -391,8 +366,6 @@ public final class AddressImpl implements Address {
                 .append(fax)
                 .append(additionalAddressInfo)
                 .append(externalId)
-                .append(id)
-                .append(custom)
                 .toHashCode();
     }
 

@@ -21,6 +21,8 @@ import org.junit.Assert;
 
 public class CustomerFixtures {
 
+    public static final String TEST_CUSTOMER_PASSWORD = "test-customer-password";
+
     public static void withCustomer(final Consumer<Customer> consumer) {
         Customer customer = createCustomer();
         consumer.accept(customer);
@@ -34,12 +36,11 @@ public class CustomerFixtures {
     }
 
     public static Customer createCustomer() {
-
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
         CustomerDraft customerDraft = CustomerDraftBuilder.of()
                 .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
                 .key(CommercetoolsTestUtils.randomKey())
-                .password(CommercetoolsTestUtils.randomString())
+                .password(TEST_CUSTOMER_PASSWORD)
                 .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
                 .addresses(Arrays.asList(AddressBuilder.of().country("DE").build()))
                 .build();

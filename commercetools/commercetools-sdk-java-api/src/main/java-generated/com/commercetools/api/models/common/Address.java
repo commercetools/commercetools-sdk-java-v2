@@ -17,14 +17,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address extends BaseAddress {
 
-    @JsonProperty("id")
-    public String getId();
-
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
-    public void setId(final String id);
 
     public void setCustom(final CustomFields custom);
 
@@ -34,6 +29,7 @@ public interface Address extends BaseAddress {
 
     public static Address of(final Address template) {
         AddressImpl instance = new AddressImpl();
+        instance.setId(template.getId());
         instance.setKey(template.getKey());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
@@ -58,7 +54,6 @@ public interface Address extends BaseAddress {
         instance.setFax(template.getFax());
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
-        instance.setId(template.getId());
         instance.setCustom(template.getCustom());
         return instance;
     }

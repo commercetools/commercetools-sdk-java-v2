@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for a prduct.</p>
+*  <p>Import representation for a product.</p>
 *  <p>The import representation for a product is the most minimal representation required
 *  for creating a product in commercetools.</p>
 */

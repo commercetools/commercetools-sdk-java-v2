@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Import representation for a prduct.</p>
+*  <p>Import representation for a product.</p>
 *  <p>The import representation for a product is the most minimal representation required
 *  for creating a product in commercetools.</p>
 */

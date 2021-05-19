@@ -25,11 +25,17 @@ public interface OrderStateTransitionMessage extends Message {
     @JsonProperty("state")
     public StateReference getState();
 
+    @Valid
+    @JsonProperty("oldState")
+    public StateReference getOldState();
+
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();
 
     public void setState(final StateReference state);
+
+    public void setOldState(final StateReference oldState);
 
     public void setForce(final Boolean force);
 
@@ -50,6 +56,7 @@ public interface OrderStateTransitionMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setState(template.getState());
+        instance.setOldState(template.getOldState());
         instance.setForce(template.getForce());
         return instance;
     }

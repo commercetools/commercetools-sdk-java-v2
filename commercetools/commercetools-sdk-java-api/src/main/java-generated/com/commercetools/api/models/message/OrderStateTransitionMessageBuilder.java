@@ -35,6 +35,9 @@ public final class OrderStateTransitionMessageBuilder {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference oldState;
+
     private Boolean force;
 
     public OrderStateTransitionMessageBuilder id(final String id) {
@@ -95,6 +98,12 @@ public final class OrderStateTransitionMessageBuilder {
         return this;
     }
 
+    public OrderStateTransitionMessageBuilder oldState(
+            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
+        this.oldState = oldState;
+        return this;
+    }
+
     public OrderStateTransitionMessageBuilder force(final Boolean force) {
         this.force = force;
         return this;
@@ -147,13 +156,18 @@ public final class OrderStateTransitionMessageBuilder {
         return this.state;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getOldState() {
+        return this.oldState;
+    }
+
     public Boolean getForce() {
         return this.force;
     }
 
     public OrderStateTransitionMessage build() {
         return new OrderStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, oldState, force);
     }
 
     public static OrderStateTransitionMessageBuilder of() {
@@ -173,6 +187,7 @@ public final class OrderStateTransitionMessageBuilder {
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.state = template.getState();
+        builder.oldState = template.getOldState();
         builder.force = template.getForce();
         return builder;
     }

@@ -20,7 +20,7 @@ public final class TaxRateBuilder {
 
     private String state;
 
-    private com.commercetools.history.models.common.SubRate subRates;
+    private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     public TaxRateBuilder id(final String id) {
         this.id = id;
@@ -52,7 +52,12 @@ public final class TaxRateBuilder {
         return this;
     }
 
-    public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate subRates) {
+    public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate... subRates) {
+        this.subRates = new ArrayList<>(Arrays.asList(subRates));
+        return this;
+    }
+
+    public TaxRateBuilder subRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
@@ -81,7 +86,7 @@ public final class TaxRateBuilder {
         return this.state;
     }
 
-    public com.commercetools.history.models.common.SubRate getSubRates() {
+    public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates() {
         return this.subRates;
     }
 

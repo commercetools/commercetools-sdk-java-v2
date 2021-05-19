@@ -22,6 +22,10 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
+    private String variant;
+
+    private com.commercetools.history.models.common.TaxMode taxMode;
+
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     private com.commercetools.history.models.common.TaxRate previousValue;
@@ -29,10 +33,14 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
     @JsonCreator
     SetLineItemTaxRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("variant") final String variant,
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxRate nextValue,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxRate previousValue) {
         this.change = change;
         this.lineItem = lineItem;
+        this.variant = variant;
+        this.taxMode = taxMode;
         this.nextValue = nextValue;
         this.previousValue = previousValue;
         this.type = SET_LINE_ITEM_TAX_RATE_CHANGE;
@@ -57,6 +65,14 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
         return this.lineItem;
     }
 
+    public String getVariant() {
+        return this.variant;
+    }
+
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
     /**
     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
     */
@@ -77,6 +93,14 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
+    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -100,6 +124,8 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
+                .append(taxMode, that.taxMode)
                 .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
                 .isEquals();
@@ -110,6 +136,8 @@ public final class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateCha
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
                 .append(lineItem)
+                .append(variant)
+                .append(taxMode)
                 .append(nextValue)
                 .append(previousValue)
                 .toHashCode();

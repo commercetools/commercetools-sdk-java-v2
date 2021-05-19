@@ -24,6 +24,8 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
 
     private String customLineItemId;
 
+    private com.commercetools.history.models.common.TaxMode taxMode;
+
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     private com.commercetools.history.models.common.TaxRate previousValue;
@@ -32,11 +34,13 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
     SetCustomLineItemTaxRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxRate nextValue,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxRate previousValue) {
         this.change = change;
         this.customLineItem = customLineItem;
         this.customLineItemId = customLineItemId;
+        this.taxMode = taxMode;
         this.nextValue = nextValue;
         this.previousValue = previousValue;
         this.type = SET_CUSTOM_LINE_ITEM_TAX_RATE_CHANGE;
@@ -65,6 +69,10 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
         return this.customLineItemId;
     }
 
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
     /**
     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
     */
@@ -91,6 +99,10 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
         this.customLineItemId = customLineItemId;
     }
 
+    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
+    }
+
     public void setNextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
     }
@@ -113,6 +125,7 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
                 .append(change, that.change)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
+                .append(taxMode, that.taxMode)
                 .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
                 .isEquals();
@@ -124,6 +137,7 @@ public final class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineIt
                 .append(change)
                 .append(customLineItem)
                 .append(customLineItemId)
+                .append(taxMode)
                 .append(nextValue)
                 .append(previousValue)
                 .toHashCode();

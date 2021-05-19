@@ -31,14 +31,14 @@ public final class TaxRateImpl implements TaxRate {
 
     private String state;
 
-    private com.commercetools.history.models.common.SubRate subRates;
+    private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     @JsonCreator
     TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
             @JsonProperty("amount") final Integer amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final com.commercetools.history.models.common.SubRate subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.id = id;
         this.name = name;
         this.amount = amount;
@@ -87,7 +87,7 @@ public final class TaxRateImpl implements TaxRate {
         return this.state;
     }
 
-    public com.commercetools.history.models.common.SubRate getSubRates() {
+    public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates() {
         return this.subRates;
     }
 
@@ -115,7 +115,11 @@ public final class TaxRateImpl implements TaxRate {
         this.state = state;
     }
 
-    public void setSubRates(final com.commercetools.history.models.common.SubRate subRates) {
+    public void setSubRates(final com.commercetools.history.models.common.SubRate... subRates) {
+        this.subRates = new ArrayList<>(Arrays.asList(subRates));
+    }
+
+    public void setSubRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.subRates = subRates;
     }
 

@@ -30,7 +30,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
 
     private String sku;
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     private Long quantityOnStock;
 
@@ -49,7 +49,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("sku") final String sku,
-            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel,
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
             @JsonProperty("availableQuantity") final Long availableQuantity,
             @JsonProperty("restockableInDays") final Long restockableInDays,
@@ -113,7 +113,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
     /**
     *  <p>Optional connection to a particular supplier.</p>
     */
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
@@ -179,7 +179,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
         this.sku = sku;
     }
 
-    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
     }
 

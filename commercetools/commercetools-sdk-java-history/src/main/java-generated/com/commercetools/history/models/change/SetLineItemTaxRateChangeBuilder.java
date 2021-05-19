@@ -12,6 +12,10 @@ public final class SetLineItemTaxRateChangeBuilder {
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
+    private String variant;
+
+    private com.commercetools.history.models.common.TaxMode taxMode;
+
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     private com.commercetools.history.models.common.TaxRate previousValue;
@@ -24,6 +28,16 @@ public final class SetLineItemTaxRateChangeBuilder {
     public SetLineItemTaxRateChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
+        return this;
+    }
+
+    public SetLineItemTaxRateChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    public SetLineItemTaxRateChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
         return this;
     }
 
@@ -46,6 +60,14 @@ public final class SetLineItemTaxRateChangeBuilder {
         return this.lineItem;
     }
 
+    public String getVariant() {
+        return this.variant;
+    }
+
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
@@ -55,7 +77,7 @@ public final class SetLineItemTaxRateChangeBuilder {
     }
 
     public SetLineItemTaxRateChange build() {
-        return new SetLineItemTaxRateChangeImpl(change, lineItem, nextValue, previousValue);
+        return new SetLineItemTaxRateChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
     }
 
     public static SetLineItemTaxRateChangeBuilder of() {
@@ -66,6 +88,8 @@ public final class SetLineItemTaxRateChangeBuilder {
         SetLineItemTaxRateChangeBuilder builder = new SetLineItemTaxRateChangeBuilder();
         builder.change = template.getChange();
         builder.lineItem = template.getLineItem();
+        builder.variant = template.getVariant();
+        builder.taxMode = template.getTaxMode();
         builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
         return builder;

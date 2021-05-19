@@ -16,6 +16,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class BaseAddressImpl implements BaseAddress {
 
+    private String id;
+
     private String key;
 
     private String title;
@@ -65,9 +67,10 @@ public final class BaseAddressImpl implements BaseAddress {
     private String externalId;
 
     @JsonCreator
-    BaseAddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
-            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
-            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
+    BaseAddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
+            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
+            @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
             @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
             @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
@@ -79,6 +82,7 @@ public final class BaseAddressImpl implements BaseAddress {
             @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
             @JsonProperty("externalId") final String externalId) {
+        this.id = id;
         this.key = key;
         this.title = title;
         this.salutation = salutation;
@@ -106,6 +110,10 @@ public final class BaseAddressImpl implements BaseAddress {
     }
 
     public BaseAddressImpl() {
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public String getKey() {
@@ -205,6 +213,10 @@ public final class BaseAddressImpl implements BaseAddress {
 
     public String getExternalId() {
         return this.externalId;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
     }
 
     public void setKey(final String key) {
@@ -313,7 +325,8 @@ public final class BaseAddressImpl implements BaseAddress {
 
         BaseAddressImpl that = (BaseAddressImpl) o;
 
-        return new EqualsBuilder().append(key, that.key)
+        return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -342,7 +355,8 @@ public final class BaseAddressImpl implements BaseAddress {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(title)
                 .append(salutation)
                 .append(firstName)

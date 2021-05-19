@@ -51,7 +51,7 @@ public final class CustomerImportImpl implements CustomerImport {
 
     private com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup;
 
-    private java.util.List<com.commercetools.importapi.models.common.Address> addresses;
+    private java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses;
 
     private Integer defaultBillingAddress;
 
@@ -77,7 +77,7 @@ public final class CustomerImportImpl implements CustomerImport {
             @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup,
-            @JsonProperty("addresses") final java.util.List<com.commercetools.importapi.models.common.Address> addresses,
+            @JsonProperty("addresses") final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
@@ -230,7 +230,7 @@ public final class CustomerImportImpl implements CustomerImport {
     /**
     *  <p>Maps to <code>Customer.addresses</code>.</p>
     */
-    public java.util.List<com.commercetools.importapi.models.common.Address> getAddresses() {
+    public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
         return this.addresses;
     }
 
@@ -345,11 +345,12 @@ public final class CustomerImportImpl implements CustomerImport {
         this.customerGroup = customerGroup;
     }
 
-    public void setAddresses(final com.commercetools.importapi.models.common.Address... addresses) {
+    public void setAddresses(final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
     }
 
-    public void setAddresses(final java.util.List<com.commercetools.importapi.models.common.Address> addresses) {
+    public void setAddresses(
+            final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
         this.addresses = addresses;
     }
 

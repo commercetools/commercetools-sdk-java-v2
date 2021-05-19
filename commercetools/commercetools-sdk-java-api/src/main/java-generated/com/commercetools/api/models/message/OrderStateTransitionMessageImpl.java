@@ -40,6 +40,8 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private com.commercetools.api.models.state.StateReference oldState;
+
     private Boolean force;
 
     @JsonCreator
@@ -53,6 +55,7 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("oldState") final com.commercetools.api.models.state.StateReference oldState,
             @JsonProperty("force") final Boolean force) {
         this.id = id;
         this.version = version;
@@ -65,6 +68,7 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.state = state;
+        this.oldState = oldState;
         this.force = force;
         this.type = ORDER_STATE_TRANSITION;
     }
@@ -121,6 +125,10 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
         return this.state;
     }
 
+    public com.commercetools.api.models.state.StateReference getOldState() {
+        return this.oldState;
+    }
+
     public Boolean getForce() {
         return this.force;
     }
@@ -170,6 +178,10 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
         this.state = state;
     }
 
+    public void setOldState(final com.commercetools.api.models.state.StateReference oldState) {
+        this.oldState = oldState;
+    }
+
     public void setForce(final Boolean force) {
         this.force = force;
     }
@@ -196,6 +208,7 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(state, that.state)
+                .append(oldState, that.oldState)
                 .append(force, that.force)
                 .isEquals();
     }
@@ -214,6 +227,7 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(state)
+                .append(oldState)
                 .append(force)
                 .toHashCode();
     }

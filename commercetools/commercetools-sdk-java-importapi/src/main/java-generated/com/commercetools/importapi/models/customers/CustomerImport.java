@@ -9,7 +9,6 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.StoreKeyReference;
@@ -140,9 +139,10 @@ public interface CustomerImport extends ImportResource {
     /**
     *  <p>Maps to <code>Customer.addresses</code>.</p>
     */
+    @NotNull
     @Valid
     @JsonProperty("addresses")
-    public List<Address> getAddresses();
+    public List<CustomerAddress> getAddresses();
 
     /**
     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
@@ -220,9 +220,9 @@ public interface CustomerImport extends ImportResource {
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     @JsonIgnore
-    public void setAddresses(final Address... addresses);
+    public void setAddresses(final CustomerAddress... addresses);
 
-    public void setAddresses(final List<Address> addresses);
+    public void setAddresses(final List<CustomerAddress> addresses);
 
     public void setDefaultBillingAddress(final Integer defaultBillingAddress);
 

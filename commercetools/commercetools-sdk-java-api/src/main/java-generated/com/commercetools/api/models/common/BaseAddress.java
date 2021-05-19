@@ -16,6 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BaseAddressImpl.class)
 public interface BaseAddress {
 
+    @JsonProperty("id")
+    public String getId();
+
     @JsonProperty("key")
     public String getKey();
 
@@ -92,6 +95,8 @@ public interface BaseAddress {
     @JsonProperty("externalId")
     public String getExternalId();
 
+    public void setId(final String id);
+
     public void setKey(final String key);
 
     public void setTitle(final String title);
@@ -146,6 +151,7 @@ public interface BaseAddress {
 
     public static BaseAddress of(final BaseAddress template) {
         BaseAddressImpl instance = new BaseAddressImpl();
+        instance.setId(template.getId());
         instance.setKey(template.getKey());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());

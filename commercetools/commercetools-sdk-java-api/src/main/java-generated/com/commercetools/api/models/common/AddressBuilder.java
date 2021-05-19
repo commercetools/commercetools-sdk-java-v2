@@ -11,6 +11,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AddressBuilder {
 
     @Nullable
+    private String id;
+
+    @Nullable
     private String key;
 
     @Nullable
@@ -82,10 +85,12 @@ public final class AddressBuilder {
     private String externalId;
 
     @Nullable
-    private String id;
-
-    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    public AddressBuilder id(@Nullable final String id) {
+        this.id = id;
+        return this;
+    }
 
     public AddressBuilder key(@Nullable final String key) {
         this.key = key;
@@ -207,14 +212,14 @@ public final class AddressBuilder {
         return this;
     }
 
-    public AddressBuilder id(@Nullable final String id) {
-        this.id = id;
-        return this;
-    }
-
     public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
+    }
+
+    @Nullable
+    public String getId() {
+        return this.id;
     }
 
     @Nullable
@@ -337,19 +342,14 @@ public final class AddressBuilder {
     }
 
     @Nullable
-    public String getId() {
-        return this.id;
-    }
-
-    @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     public Address build() {
-        return new AddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
+        return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, id, custom);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     public static AddressBuilder of() {
@@ -358,6 +358,7 @@ public final class AddressBuilder {
 
     public static AddressBuilder of(final Address template) {
         AddressBuilder builder = new AddressBuilder();
+        builder.id = template.getId();
         builder.key = template.getKey();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
@@ -382,7 +383,6 @@ public final class AddressBuilder {
         builder.fax = template.getFax();
         builder.additionalAddressInfo = template.getAdditionalAddressInfo();
         builder.externalId = template.getExternalId();
-        builder.id = template.getId();
         builder.custom = template.getCustom();
         return builder;
     }

@@ -11,6 +11,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AddressDraftBuilder {
 
     @Nullable
+    private String id;
+
+    @Nullable
     private String key;
 
     @Nullable
@@ -83,6 +86,11 @@ public final class AddressDraftBuilder {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    public AddressDraftBuilder id(@Nullable final String id) {
+        this.id = id;
+        return this;
+    }
 
     public AddressDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -210,6 +218,11 @@ public final class AddressDraftBuilder {
     }
 
     @Nullable
+    public String getId() {
+        return this.id;
+    }
+
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -334,7 +347,7 @@ public final class AddressDraftBuilder {
     }
 
     public AddressDraft build() {
-        return new AddressDraftImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
+        return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
@@ -345,6 +358,7 @@ public final class AddressDraftBuilder {
 
     public static AddressDraftBuilder of(final AddressDraft template) {
         AddressDraftBuilder builder = new AddressDraftBuilder();
+        builder.id = template.getId();
         builder.key = template.getKey();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();

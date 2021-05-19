@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxRate;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -41,6 +42,10 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
+
     /**
     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
     */
@@ -63,6 +68,8 @@ public interface SetCustomLineItemTaxRateChange extends Change {
 
     public void setCustomLineItemId(final String customLineItemId);
 
+    public void setTaxMode(final TaxMode taxMode);
+
     public void setNextValue(final TaxRate nextValue);
 
     public void setPreviousValue(final TaxRate previousValue);
@@ -76,6 +83,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
         instance.setChange(template.getChange());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

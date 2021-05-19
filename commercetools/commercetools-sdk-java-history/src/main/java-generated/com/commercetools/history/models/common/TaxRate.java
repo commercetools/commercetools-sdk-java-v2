@@ -59,7 +59,7 @@ public interface TaxRate {
     @NotNull
     @Valid
     @JsonProperty("subRates")
-    public SubRate getSubRates();
+    public List<SubRate> getSubRates();
 
     public void setId(final String id);
 
@@ -73,7 +73,10 @@ public interface TaxRate {
 
     public void setState(final String state);
 
-    public void setSubRates(final SubRate subRates);
+    @JsonIgnore
+    public void setSubRates(final SubRate... subRates);
+
+    public void setSubRates(final List<SubRate> subRates);
 
     public static TaxRate of() {
         return new TaxRateImpl();

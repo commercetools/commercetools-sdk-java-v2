@@ -14,6 +14,8 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
 
     private String customLineItemId;
 
+    private com.commercetools.history.models.common.TaxMode taxMode;
+
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     private com.commercetools.history.models.common.TaxRate previousValue;
@@ -31,6 +33,12 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
 
     public SetCustomLineItemTaxRateChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    public SetCustomLineItemTaxRateChangeBuilder taxMode(
+            final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
         return this;
     }
 
@@ -58,6 +66,10 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
         return this.customLineItemId;
     }
 
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
@@ -67,7 +79,7 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
     }
 
     public SetCustomLineItemTaxRateChange build() {
-        return new SetCustomLineItemTaxRateChangeImpl(change, customLineItem, customLineItemId, nextValue,
+        return new SetCustomLineItemTaxRateChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
             previousValue);
     }
 
@@ -80,6 +92,7 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
         builder.change = template.getChange();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.taxMode = template.getTaxMode();
         builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
         return builder;

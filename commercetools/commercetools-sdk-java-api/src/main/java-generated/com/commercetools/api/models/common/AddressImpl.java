@@ -16,6 +16,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AddressImpl implements Address {
 
+    private String id;
+
     private String key;
 
     private String title;
@@ -64,14 +66,13 @@ public final class AddressImpl implements Address {
 
     private String externalId;
 
-    private String id;
-
     private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
-    AddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
-            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
-            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
+    AddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
+            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
+            @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
             @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
             @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
@@ -82,8 +83,9 @@ public final class AddressImpl implements Address {
             @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
             @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId, @JsonProperty("id") final String id,
+            @JsonProperty("externalId") final String externalId,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+        this.id = id;
         this.key = key;
         this.title = title;
         this.salutation = salutation;
@@ -108,11 +110,14 @@ public final class AddressImpl implements Address {
         this.fax = fax;
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
-        this.id = id;
         this.custom = custom;
     }
 
     public AddressImpl() {
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public String getKey() {
@@ -214,12 +219,12 @@ public final class AddressImpl implements Address {
         return this.externalId;
     }
 
-    public String getId() {
-        return this.id;
-    }
-
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
     }
 
     public void setKey(final String key) {
@@ -318,10 +323,6 @@ public final class AddressImpl implements Address {
         this.externalId = externalId;
     }
 
-    public void setId(final String id) {
-        this.id = id;
-    }
-
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -336,7 +337,8 @@ public final class AddressImpl implements Address {
 
         AddressImpl that = (AddressImpl) o;
 
-        return new EqualsBuilder().append(key, that.key)
+        return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -360,14 +362,14 @@ public final class AddressImpl implements Address {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
-                .append(id, that.id)
                 .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(title)
                 .append(salutation)
                 .append(firstName)
@@ -391,7 +393,6 @@ public final class AddressImpl implements Address {
                 .append(fax)
                 .append(additionalAddressInfo)
                 .append(externalId)
-                .append(id)
                 .append(custom)
                 .toHashCode();
     }

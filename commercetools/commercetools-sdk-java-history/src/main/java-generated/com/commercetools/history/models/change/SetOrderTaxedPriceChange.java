@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,6 +33,10 @@ public interface SetOrderTaxedPriceChange extends Change {
     public String getChange();
 
     @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
+
+    @NotNull
     @Valid
     @JsonProperty("nextValue")
     public TaxedItemPrice getNextValue();
@@ -42,6 +47,8 @@ public interface SetOrderTaxedPriceChange extends Change {
     public TaxedItemPrice getPreviousValue();
 
     public void setChange(final String change);
+
+    public void setTaxMode(final TaxMode taxMode);
 
     public void setNextValue(final TaxedItemPrice nextValue);
 
@@ -54,6 +61,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     public static SetOrderTaxedPriceChange of(final SetOrderTaxedPriceChange template) {
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
+        instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

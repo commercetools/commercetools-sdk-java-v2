@@ -29,6 +29,7 @@ public interface AddressDraft extends BaseAddress {
 
     public static AddressDraft of(final AddressDraft template) {
         AddressDraftImpl instance = new AddressDraftImpl();
+        instance.setId(template.getId());
         instance.setKey(template.getKey());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());

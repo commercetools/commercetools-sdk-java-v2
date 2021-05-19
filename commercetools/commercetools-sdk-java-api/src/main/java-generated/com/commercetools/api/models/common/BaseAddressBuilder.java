@@ -11,6 +11,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class BaseAddressBuilder {
 
     @Nullable
+    private String id;
+
+    @Nullable
     private String key;
 
     @Nullable
@@ -80,6 +83,11 @@ public final class BaseAddressBuilder {
 
     @Nullable
     private String externalId;
+
+    public BaseAddressBuilder id(@Nullable final String id) {
+        this.id = id;
+        return this;
+    }
 
     public BaseAddressBuilder key(@Nullable final String key) {
         this.key = key;
@@ -202,6 +210,11 @@ public final class BaseAddressBuilder {
     }
 
     @Nullable
+    public String getId() {
+        return this.id;
+    }
+
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -321,7 +334,7 @@ public final class BaseAddressBuilder {
     }
 
     public BaseAddress build() {
-        return new BaseAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
+        return new BaseAddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
     }
@@ -332,6 +345,7 @@ public final class BaseAddressBuilder {
 
     public static BaseAddressBuilder of(final BaseAddress template) {
         BaseAddressBuilder builder = new BaseAddressBuilder();
+        builder.id = template.getId();
         builder.key = template.getKey();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();

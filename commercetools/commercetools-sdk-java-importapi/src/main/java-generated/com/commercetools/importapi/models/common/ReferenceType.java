@@ -16,6 +16,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceType {
 
     /**
+    	<p>References a cart.</p>
+
+    */
+    ReferenceType CART = ReferenceTypeEnum.CART;
+    /**
     	<p>References a cart discount.</p>
 
     */
@@ -40,6 +45,21 @@ public interface ReferenceType {
 
     */
     ReferenceType CUSTOMER_GROUP = ReferenceTypeEnum.CUSTOMER_GROUP;
+    /**
+    	<p>References a discount code.</p>
+
+    */
+    ReferenceType DISCOUNT_CODE = ReferenceTypeEnum.DISCOUNT_CODE;
+    /**
+    	<p>References an order.</p>
+
+    */
+    ReferenceType ORDER = ReferenceTypeEnum.ORDER;
+    /**
+    	<p>References a payment</p>
+
+    */
+    ReferenceType PAYMENT = ReferenceTypeEnum.PAYMENT;
     /**
     	<p>References a price.</p>
 
@@ -92,6 +112,8 @@ public interface ReferenceType {
     ReferenceType TYPE = ReferenceTypeEnum.TYPE;
 
     enum ReferenceTypeEnum implements ReferenceType {
+        CART("cart"),
+
         CART_DISCOUNT("cart-discount"),
 
         CATEGORY("category"),
@@ -101,6 +123,12 @@ public interface ReferenceType {
         CUSTOMER("customer"),
 
         CUSTOMER_GROUP("customer-group"),
+
+        DISCOUNT_CODE("discount-code"),
+
+        ORDER("order"),
+
+        PAYMENT("payment"),
 
         PRICE("price"),
 

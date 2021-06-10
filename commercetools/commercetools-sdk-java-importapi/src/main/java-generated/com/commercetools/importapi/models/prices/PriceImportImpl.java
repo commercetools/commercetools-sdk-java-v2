@@ -83,7 +83,6 @@ public final class PriceImportImpl implements PriceImport {
 
     /**
     *  <p>Maps to <code>Price.value</code>.</p>
-    *  <p>The Import API <strong>only</strong> supports <code>centPrecision</code> prices.</p>
     */
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;

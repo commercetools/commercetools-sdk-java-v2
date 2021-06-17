@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/commercetools/api/models/common/AddressBuilder.html" title="class in com.commercetools.api.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/commercetools/api/models/common/AddressDraftImpl.html" title="class in com.commercetools.api.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/api/models/common/Asset.html" title="interface in com.commercetools.api.models.common"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>, <a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></dd>
 </dl>
 <hr>
 <br>
@@ -382,6 +382,13 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/common/Address.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/common/Address.html#builder-com.commercetools.api.models.common.Address-">builder</a>, <a href="../../../../../com/commercetools/api/models/common/Address.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/common/Address.html#of-com.commercetools.api.models.common.Address-">of</a>, <a href="../../../../../com/commercetools/api/models/common/Address.html#withAddress-java.util.function.Function-">withAddress</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.common.BaseAddress">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#builder-com.commercetools.api.models.common.BaseAddress-">builder</a>, <a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#of-com.commercetools.api.models.common.BaseAddress-">of</a>, <a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#withBaseAddress-java.util.function.Function-">withBaseAddress</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -422,7 +429,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getId()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getId--">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getId--">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -435,7 +442,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getKey()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getKey--">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getKey--">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -448,7 +455,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getTitle()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getTitle--">getTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getTitle--">getTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -461,7 +468,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getSalutation()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getSalutation--">getSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getSalutation--">getSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -474,7 +481,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getFirstName()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getFirstName--">getFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getFirstName--">getFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -487,7 +494,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getLastName()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getLastName--">getLastName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getLastName--">getLastName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -500,7 +507,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getStreetName()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getStreetName--">getStreetName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getStreetName--">getStreetName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -513,7 +520,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getStreetNumber()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getStreetNumber--">getStreetNumber</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getStreetNumber--">getStreetNumber</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -526,7 +533,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getAdditionalStreetInfo()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getAdditionalStreetInfo--">getAdditionalStreetInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getAdditionalStreetInfo--">getAdditionalStreetInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -539,7 +546,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getPostalCode()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getPostalCode--">getPostalCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getPostalCode--">getPostalCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -552,7 +559,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getCity()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getCity--">getCity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getCity--">getCity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -565,7 +572,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getRegion()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getRegion--">getRegion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getRegion--">getRegion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -578,7 +585,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getState()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getState--">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getState--">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -592,7 +599,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <div class="block"><p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getCountry--">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getCountry--">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -605,7 +612,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getCompany()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getCompany--">getCompany</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getCompany--">getCompany</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -618,7 +625,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getDepartment()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getDepartment--">getDepartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getDepartment--">getDepartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -631,7 +638,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getBuilding()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getBuilding--">getBuilding</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getBuilding--">getBuilding</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -644,7 +651,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getApartment()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getApartment--">getApartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getApartment--">getApartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -657,7 +664,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getPOBox()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getPOBox--">getPOBox</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getPOBox--">getPOBox</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -670,7 +677,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getPhone()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getPhone--">getPhone</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getPhone--">getPhone</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -683,7 +690,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getMobile()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getMobile--">getMobile</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getMobile--">getMobile</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -696,7 +703,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getEmail()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getEmail--">getEmail</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getEmail--">getEmail</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -709,7 +716,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getFax()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getFax--">getFax</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getFax--">getFax</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -722,7 +729,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getAdditionalAddressInfo()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getAdditionalAddressInfo--">getAdditionalAddressInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getAdditionalAddressInfo--">getAdditionalAddressInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -735,7 +742,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;java.lang.String&nbsp;getExternalId()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#getExternalId--">getExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#getExternalId--">getExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -761,7 +768,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setId(java.lang.String&nbsp;id)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setId-java.lang.String-">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setId-java.lang.String-">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -774,7 +781,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setKey(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setKey-java.lang.String-">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setKey-java.lang.String-">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -787,7 +794,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setTitle(java.lang.String&nbsp;title)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setTitle-java.lang.String-">setTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setTitle-java.lang.String-">setTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -800,7 +807,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setSalutation(java.lang.String&nbsp;salutation)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setSalutation-java.lang.String-">setSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setSalutation-java.lang.String-">setSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -813,7 +820,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setFirstName(java.lang.String&nbsp;firstName)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setFirstName-java.lang.String-">setFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setFirstName-java.lang.String-">setFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -826,7 +833,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setLastName(java.lang.String&nbsp;lastName)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setLastName-java.lang.String-">setLastName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setLastName-java.lang.String-">setLastName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -839,7 +846,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setStreetName(java.lang.String&nbsp;streetName)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setStreetName-java.lang.String-">setStreetName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setStreetName-java.lang.String-">setStreetName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -852,7 +859,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setStreetNumber(java.lang.String&nbsp;streetNumber)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setStreetNumber-java.lang.String-">setStreetNumber</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setStreetNumber-java.lang.String-">setStreetNumber</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -865,7 +872,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setAdditionalStreetInfo(java.lang.String&nbsp;additionalStreetInfo)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setAdditionalStreetInfo-java.lang.String-">setAdditionalStreetInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setAdditionalStreetInfo-java.lang.String-">setAdditionalStreetInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -878,7 +885,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setPostalCode(java.lang.String&nbsp;postalCode)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setPostalCode-java.lang.String-">setPostalCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setPostalCode-java.lang.String-">setPostalCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -891,7 +898,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setCity(java.lang.String&nbsp;city)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setCity-java.lang.String-">setCity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setCity-java.lang.String-">setCity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -904,7 +911,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setRegion(java.lang.String&nbsp;region)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setRegion-java.lang.String-">setRegion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setRegion-java.lang.String-">setRegion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -917,7 +924,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setState(java.lang.String&nbsp;state)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setState-java.lang.String-">setState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setState-java.lang.String-">setState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -930,7 +937,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setCountry(java.lang.String&nbsp;country)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setCountry-java.lang.String-">setCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setCountry-java.lang.String-">setCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -943,7 +950,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setCompany(java.lang.String&nbsp;company)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setCompany-java.lang.String-">setCompany</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setCompany-java.lang.String-">setCompany</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -956,7 +963,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setDepartment(java.lang.String&nbsp;department)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setDepartment-java.lang.String-">setDepartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setDepartment-java.lang.String-">setDepartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -969,7 +976,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setBuilding(java.lang.String&nbsp;building)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setBuilding-java.lang.String-">setBuilding</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setBuilding-java.lang.String-">setBuilding</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -982,7 +989,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setApartment(java.lang.String&nbsp;apartment)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setApartment-java.lang.String-">setApartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setApartment-java.lang.String-">setApartment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -995,7 +1002,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setPOBox(java.lang.String&nbsp;pOBox)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setPOBox-java.lang.String-">setPOBox</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setPOBox-java.lang.String-">setPOBox</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1008,7 +1015,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setPhone(java.lang.String&nbsp;phone)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setPhone-java.lang.String-">setPhone</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setPhone-java.lang.String-">setPhone</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1021,7 +1028,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setMobile(java.lang.String&nbsp;mobile)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setMobile-java.lang.String-">setMobile</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setMobile-java.lang.String-">setMobile</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1034,7 +1041,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setEmail(java.lang.String&nbsp;email)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setEmail-java.lang.String-">setEmail</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setEmail-java.lang.String-">setEmail</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1047,7 +1054,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setFax(java.lang.String&nbsp;fax)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setFax-java.lang.String-">setFax</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setFax-java.lang.String-">setFax</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1060,7 +1067,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setAdditionalAddressInfo(java.lang.String&nbsp;additionalAddressInfo)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setAdditionalAddressInfo-java.lang.String-">setAdditionalAddressInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setAdditionalAddressInfo-java.lang.String-">setAdditionalAddressInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1073,7 +1080,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 <pre>public&nbsp;void&nbsp;setExternalId(java.lang.String&nbsp;externalId)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/common/Address.html#setExternalId-java.lang.String-">setExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html#setExternalId-java.lang.String-">setExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1143,7 +1150,7 @@ implements <a href="../../../../../com/commercetools/api/models/common/Address.h
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/commercetools/api/models/common/AddressBuilder.html" title="class in com.commercetools.api.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/commercetools/api/models/common/AddressDraftImpl.html" title="class in com.commercetools.api.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/api/models/common/Asset.html" title="interface in com.commercetools.api.models.common"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

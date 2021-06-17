@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":9,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,20 +181,28 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#getPreviousValue--">getPreviousValue</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#getTaxMode--">getTaxMode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#nextValue-com.commercetools.history.models.common.TaxRate-">nextValue</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;nextValue)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#of-com.commercetools.history.models.change.SetCustomLineItemTaxRateChange-">of</a></span>(<a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemTaxRateChange</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#previousValue-com.commercetools.history.models.common.TaxRate-">previousValue</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;previousValue)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html#taxMode-com.commercetools.history.models.common.TaxMode-">taxMode</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -262,6 +270,15 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a>&nbsp;customLineItemId(java.lang.String&nbsp;customLineItemId)</pre>
 </li>
 </ul>
+<a name="taxMode-com.commercetools.history.models.common.TaxMode-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>taxMode</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/change/SetCustomLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemTaxRateChangeBuilder</a>&nbsp;taxMode(<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</pre>
+</li>
+</ul>
 <a name="nextValue-com.commercetools.history.models.common.TaxRate-">
 <!--   -->
 </a>
@@ -305,6 +322,15 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getCustomLineItemId</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getCustomLineItemId()</pre>
+</li>
+</ul>
+<a name="getTaxMode--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTaxMode</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;getTaxMode()</pre>
 </li>
 </ul>
 <a name="getNextValue--">

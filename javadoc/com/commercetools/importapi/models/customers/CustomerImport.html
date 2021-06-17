@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddressImpl.html" title="class in com.commercetools.importapi.models.customers"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -137,7 +137,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#builder-com.commercetools.importapi.models.customers.CustomerImport-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;</code></td>
+<td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getAddresses--">getAddresses</a></span>()</code>
 <div class="block">Maps to <code>Customer.addresses</code>.</div>
 </td>
@@ -278,11 +278,11 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-com.commercetools.importapi.models.common.Address...-">setAddresses</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>...&nbsp;addresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-com.commercetools.importapi.models.customers.CustomerAddress...-">setAddresses</a></span>(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>...&nbsp;addresses)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-java.util.List-">setAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;&nbsp;addresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-java.util.List-">setAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;&nbsp;addresses)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -572,8 +572,9 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>getAddresses</h4>
-<pre>@Valid
-@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;&nbsp;getAddresses()</pre>
+<pre>@NotNull
+ @Valid
+@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;&nbsp;getAddresses()</pre>
 <div class="block"><p>Maps to <code>Customer.addresses</code>.</p></div>
 </li>
 </ul>
@@ -782,13 +783,13 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <pre>void&nbsp;setCustomerGroup(<a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</pre>
 </li>
 </ul>
-<a name="setAddresses-com.commercetools.importapi.models.common.Address...-">
+<a name="setAddresses-com.commercetools.importapi.models.customers.CustomerAddress...-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setAddresses</h4>
-<pre>void&nbsp;setAddresses(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>...&nbsp;addresses)</pre>
+<pre>void&nbsp;setAddresses(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>...&nbsp;addresses)</pre>
 </li>
 </ul>
 <a name="setAddresses-java.util.List-">
@@ -797,7 +798,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>setAddresses</h4>
-<pre>void&nbsp;setAddresses(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;&nbsp;addresses)</pre>
+<pre>void&nbsp;setAddresses(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;&nbsp;addresses)</pre>
 </li>
 </ul>
 <a name="setDefaultBillingAddress-java.lang.Integer-">
@@ -952,7 +953,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../com/commercetools/importapi/models/customers/CustomerAddressImpl.html" title="class in com.commercetools.importapi.models.customers"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

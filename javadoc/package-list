@@ -57,6 +57,7 @@ com.commercetools.importapi.models.importrequests
 com.commercetools.importapi.models.importsinks
 com.commercetools.importapi.models.importsummaries
 com.commercetools.importapi.models.inventories
+com.commercetools.importapi.models.order_patches
 com.commercetools.importapi.models.orders
 com.commercetools.importapi.models.prices
 com.commercetools.importapi.models.productdrafts

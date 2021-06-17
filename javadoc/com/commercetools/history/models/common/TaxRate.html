@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/commercetools/history/models/common/TaxedItemPriceImpl.html" title="class in com.commercetools.history.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/commercetools/history/models/common/TaxMode.TaxModeEnum.html" title="enum in com.commercetools.history.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -164,7 +164,7 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a></code></td>
+<td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRate.html#getSubRates--">getSubRates</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -201,9 +201,13 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRate.html#setSubRates-com.commercetools.history.models.common.SubRate-">setSubRates</a></span>(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;subRates)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRate.html#setSubRates-java.util.List-">setSubRates</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRate.html#setSubRates-com.commercetools.history.models.common.SubRate...-">setSubRates</a></span>(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRate.html#withTaxRate-java.util.function.Function-">withTaxRate</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/history/models/common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -294,7 +298,7 @@ var activeTableTab = "activeTableTab";
 <h4>getSubRates</h4>
 <pre>@NotNull
  @Valid
-@NotNull @Valid <a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;getSubRates()</pre>
+@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;getSubRates()</pre>
 </li>
 </ul>
 <a name="setId-java.lang.String-">
@@ -351,13 +355,22 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;setState(java.lang.String&nbsp;state)</pre>
 </li>
 </ul>
-<a name="setSubRates-com.commercetools.history.models.common.SubRate-">
+<a name="setSubRates-com.commercetools.history.models.common.SubRate...-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setSubRates</h4>
-<pre>void&nbsp;setSubRates(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;subRates)</pre>
+<pre>void&nbsp;setSubRates(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</pre>
+</li>
+</ul>
+<a name="setSubRates-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubRates</h4>
+<pre>void&nbsp;setSubRates(java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</pre>
 </li>
 </ul>
 <a name="of--">
@@ -432,7 +445,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/commercetools/history/models/common/TaxedItemPriceImpl.html" title="class in com.commercetools.history.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/commercetools/history/models/common/TaxMode.TaxModeEnum.html" title="enum in com.commercetools.history.models.common"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

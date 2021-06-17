@@ -160,7 +160,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#getBillingAddress--">getBillingAddress</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -226,7 +226,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#getItemShippingAddresses--">getItemShippingAddresses</a></span>()</code>
 <div class="block">Contains addresses for carts with multiple shipping addresses.</div>
 </td>
@@ -254,7 +254,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </td>
 </tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#getShippingAddress--">getShippingAddress</a></span>()</code>
 <div class="block">The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</div>
 </td>
@@ -303,7 +303,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setBillingAddress-com.commercetools.api.models.common.BaseAddress-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;billingAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -359,11 +359,11 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </tr>
 <tr id="i42" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setItemShippingAddresses-com.commercetools.api.models.common.BaseAddress...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i43" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i44" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -387,7 +387,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </tr>
 <tr id="i49" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartDraftImpl.html#setShippingAddress-com.commercetools.api.models.common.BaseAddress-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i50" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -660,7 +660,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getShippingAddress</h4>
-<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;getShippingAddress()</pre>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;getShippingAddress()</pre>
 <div class="block"><p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -674,7 +674,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getBillingAddress</h4>
-<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;getBillingAddress()</pre>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;getBillingAddress()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#getBillingAddress--">getBillingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
@@ -789,7 +789,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getItemShippingAddresses</h4>
-<pre>public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;getItemShippingAddresses()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;getItemShippingAddresses()</pre>
 <div class="block"><p>Contains addresses for carts with multiple shipping addresses.
   Each address must contain a key which is unique in this cart.
   Line items will use these keys to reference the addresses under their <code>shippingDetails</code>.
@@ -1023,29 +1023,29 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </dl>
 </li>
 </ul>
-<a name="setShippingAddress-com.commercetools.api.models.common.Address-">
+<a name="setShippingAddress-com.commercetools.api.models.common.BaseAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setShippingAddress</h4>
-<pre>public&nbsp;void&nbsp;setShippingAddress(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</pre>
+<pre>public&nbsp;void&nbsp;setShippingAddress(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setShippingAddress-com.commercetools.api.models.common.BaseAddress-">setShippingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setBillingAddress-com.commercetools.api.models.common.Address-">
+<a name="setBillingAddress-com.commercetools.api.models.common.BaseAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setBillingAddress</h4>
-<pre>public&nbsp;void&nbsp;setBillingAddress(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</pre>
+<pre>public&nbsp;void&nbsp;setBillingAddress(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;billingAddress)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setBillingAddress-com.commercetools.api.models.common.BaseAddress-">setBillingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1140,16 +1140,16 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 </dl>
 </li>
 </ul>
-<a name="setItemShippingAddresses-com.commercetools.api.models.common.Address...-">
+<a name="setItemShippingAddresses-com.commercetools.api.models.common.BaseAddress...-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setItemShippingAddresses</h4>
-<pre>public&nbsp;void&nbsp;setItemShippingAddresses(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</pre>
+<pre>public&nbsp;void&nbsp;setItemShippingAddresses(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.BaseAddress...-">setItemShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1159,7 +1159,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/CartDraft.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setItemShippingAddresses</h4>
-<pre>public&nbsp;void&nbsp;setItemShippingAddresses(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</pre>
+<pre>public&nbsp;void&nbsp;setItemShippingAddresses(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;itemShippingAddresses)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a></code></dd>

@@ -146,11 +146,11 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#addresses-com.commercetools.api.models.common.Address...-">addresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;addresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#addresses-com.commercetools.api.models.common.BaseAddress...-">addresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;addresses)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#addresses-java.util.List-">addresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;addresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#addresses-java.util.List-">addresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;addresses)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraft.html" title="interface in com.commercetools.api.models.me">MyCustomerDraft</a></code></td>
@@ -185,7 +185,7 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#firstName-java.lang.String-">firstName</a></span>(java.lang.String&nbsp;firstName)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html#getAddresses--">getAddresses</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -411,14 +411,14 @@ extends java.lang.Object</pre>
                                     java.lang.String&nbsp;vatId)</pre>
 </li>
 </ul>
-<a name="addresses-com.commercetools.api.models.common.Address...-">
+<a name="addresses-com.commercetools.api.models.common.BaseAddress...-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addresses</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerDraftBuilder</a>&nbsp;addresses(@Nullable
-                                        <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;addresses)</pre>
+                                        <a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;addresses)</pre>
 </li>
 </ul>
 <a name="addresses-java.util.List-">
@@ -428,7 +428,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>addresses</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCustomerDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerDraftBuilder</a>&nbsp;addresses(@Nullable
-                                        java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;addresses)</pre>
+                                        java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;addresses)</pre>
 </li>
 </ul>
 <a name="defaultShippingAddress-java.lang.Long-">
@@ -586,7 +586,7 @@ public&nbsp;java.lang.String&nbsp;getVatId()</pre>
 <li class="blockList">
 <h4>getAddresses</h4>
 <pre>@Nullable
-public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;getAddresses()</pre>
+public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;getAddresses()</pre>
 </li>
 </ul>
 <a name="getDefaultShippingAddress--">

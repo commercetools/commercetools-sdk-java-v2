@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -183,24 +183,32 @@ implements <a href="../../../../../com/commercetools/history/models/change/SetOr
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#getPreviousValue--">getPreviousValue</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#getTaxMode--">getTaxMode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#setChange-java.lang.String-">setChange</a></span>(java.lang.String&nbsp;change)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#setNextValue-com.commercetools.history.models.common.TaxedItemPrice-">setNextValue</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;nextValue)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#setPreviousValue-com.commercetools.history.models.common.TaxedItemPrice-">setPreviousValue</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;previousValue)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChangeImpl.html#setTaxMode-com.commercetools.history.models.common.TaxMode-">setTaxMode</a></span>(<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -286,6 +294,19 @@ implements <a href="../../../../../com/commercetools/history/models/change/SetOr
 </dl>
 </li>
 </ul>
+<a name="getTaxMode--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTaxMode</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;getTaxMode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html#getTaxMode--">getTaxMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html" title="interface in com.commercetools.history.models.change">SetOrderTaxedPriceChange</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="getNextValue--">
 <!--   -->
 </a>
@@ -324,6 +345,19 @@ implements <a href="../../../../../com/commercetools/history/models/change/SetOr
 <dd><code><a href="../../../../../com/commercetools/history/models/change/Change.html#setChange-java.lang.String-">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/history/models/change/Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html#setChange-java.lang.String-">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html" title="interface in com.commercetools.history.models.change">SetOrderTaxedPriceChange</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setTaxMode-com.commercetools.history.models.common.TaxMode-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTaxMode</h4>
+<pre>public&nbsp;void&nbsp;setTaxMode(<a href="../../../../../com/commercetools/history/models/common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html#setTaxMode-com.commercetools.history.models.common.TaxMode-">setTaxMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/history/models/change/SetOrderTaxedPriceChange.html" title="interface in com.commercetools.history.models.change">SetOrderTaxedPriceChange</a></code></dd>
 </dl>
 </li>
 </ul>

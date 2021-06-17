@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":9,"i15":10,"i16":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":9,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,7 +181,7 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html#getState--">getState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a></code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html#getSubRates--">getSubRates</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
@@ -210,7 +210,11 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html#subRates-com.commercetools.history.models.common.SubRate-">subRates</a></span>(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;subRates)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html#subRates-java.util.List-">subRates</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html#subRates-com.commercetools.history.models.common.SubRate...-">subRates</a></span>(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -305,13 +309,22 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&nbsp;state(java.lang.String&nbsp;state)</pre>
 </li>
 </ul>
-<a name="subRates-com.commercetools.history.models.common.SubRate-">
+<a name="subRates-com.commercetools.history.models.common.SubRate...-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>subRates</h4>
-<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&nbsp;subRates(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;subRates)</pre>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&nbsp;subRates(<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</pre>
+</li>
+</ul>
+<a name="subRates-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>subRates</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&nbsp;subRates(java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</pre>
 </li>
 </ul>
 <a name="getId--">
@@ -374,7 +387,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSubRates</h4>
-<pre>public&nbsp;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&nbsp;getSubRates()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/history/models/common/SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;getSubRates()</pre>
 </li>
 </ul>
 <a name="build--">

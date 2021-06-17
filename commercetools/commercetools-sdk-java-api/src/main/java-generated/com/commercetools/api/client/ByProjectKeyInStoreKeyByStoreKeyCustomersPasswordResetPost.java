@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer>
         implements
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost> {
 
     private String projectKey;
     private String storeKey;

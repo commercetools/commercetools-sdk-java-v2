@@ -15,8 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost
         extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost, com.commercetools.api.models.cart.Cart>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost> {
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost> {
 
     private String projectKey;
     private String storeKey;

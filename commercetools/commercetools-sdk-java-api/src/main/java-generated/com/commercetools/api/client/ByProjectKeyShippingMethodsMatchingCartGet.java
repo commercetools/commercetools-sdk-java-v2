@@ -17,7 +17,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
         ApiMethod<ByProjectKeyShippingMethodsMatchingCartGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsMatchingCartGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsMatchingCartGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsMatchingCartGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsMatchingCartGet> {
 
     private String projectKey;
 

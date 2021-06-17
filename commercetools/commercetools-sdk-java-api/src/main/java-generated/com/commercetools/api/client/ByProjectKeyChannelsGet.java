@@ -24,7 +24,7 @@ public class ByProjectKeyChannelsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyChannelsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyChannelsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyChannelsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsGet> {
 
     private String projectKey;
 

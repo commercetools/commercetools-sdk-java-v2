@@ -20,8 +20,8 @@ public class ByProjectKeyTaxCategoriesByIDPost
         extends ApiMethod<ByProjectKeyTaxCategoriesByIDPost, com.commercetools.api.models.tax_category.TaxCategory>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyTaxCategoriesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyTaxCategoriesByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesByIDPost> {
 
     private String projectKey;
     private String ID;

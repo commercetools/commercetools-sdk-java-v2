@@ -18,7 +18,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsSuggestGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet> {
 
     private String projectKey;
 

@@ -23,7 +23,7 @@ public class ByProjectKeyCustomersByIDDelete
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCustomersByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomersByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersByIDDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomersByIDDelete> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomersByIDDelete> {
 
     private String projectKey;
     private String ID;

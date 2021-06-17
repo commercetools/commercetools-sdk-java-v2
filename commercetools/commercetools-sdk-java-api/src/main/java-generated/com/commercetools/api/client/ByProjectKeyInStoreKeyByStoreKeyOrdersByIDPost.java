@@ -22,8 +22,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost
         extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost> {
 
     private String projectKey;
     private String storeKey;

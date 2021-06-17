@@ -23,7 +23,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeCartsGet> {
 
     private String projectKey;
     private String storeKey;

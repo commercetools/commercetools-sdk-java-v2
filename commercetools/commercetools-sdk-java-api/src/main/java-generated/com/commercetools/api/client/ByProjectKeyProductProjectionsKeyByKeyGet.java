@@ -23,7 +23,7 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsKeyByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

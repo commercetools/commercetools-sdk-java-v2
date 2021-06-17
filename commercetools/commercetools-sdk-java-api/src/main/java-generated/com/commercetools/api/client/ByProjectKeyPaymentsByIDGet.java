@@ -20,7 +20,7 @@ public class ByProjectKeyPaymentsByIDGet
         extends ApiMethod<ByProjectKeyPaymentsByIDGet, com.commercetools.api.models.payment.Payment>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyPaymentsByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsByIDGet> {
 
     private String projectKey;
     private String ID;

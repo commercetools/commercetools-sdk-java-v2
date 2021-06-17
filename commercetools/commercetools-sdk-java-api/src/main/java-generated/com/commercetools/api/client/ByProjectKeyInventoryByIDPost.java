@@ -20,8 +20,8 @@ public class ByProjectKeyInventoryByIDPost
         extends ApiMethod<ByProjectKeyInventoryByIDPost, com.commercetools.api.models.inventory.InventoryEntry>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInventoryByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInventoryByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryByIDPost> {
 
     private String projectKey;
     private String ID;

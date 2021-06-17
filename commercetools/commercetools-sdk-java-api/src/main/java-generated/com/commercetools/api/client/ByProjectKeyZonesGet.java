@@ -24,7 +24,7 @@ public class ByProjectKeyZonesGet
         com.commercetools.api.client.PagingTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesGet> {
 
     private String projectKey;
 

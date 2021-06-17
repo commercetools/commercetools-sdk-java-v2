@@ -25,7 +25,7 @@ public class ByProjectKeyShippingMethodsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsGet> {
 
     private String projectKey;
 

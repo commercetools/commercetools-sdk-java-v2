@@ -20,7 +20,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyGet
         extends ApiMethod<ByProjectKeyCartDiscountsKeyByKeyGet, com.commercetools.api.models.cart_discount.CartDiscount>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsKeyByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCartDiscountsKeyByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartDiscountsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

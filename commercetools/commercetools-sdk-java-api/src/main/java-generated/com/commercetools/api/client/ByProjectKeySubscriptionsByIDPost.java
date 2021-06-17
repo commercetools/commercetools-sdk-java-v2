@@ -20,8 +20,8 @@ public class ByProjectKeySubscriptionsByIDPost
         extends ApiMethod<ByProjectKeySubscriptionsByIDPost, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeySubscriptionsByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDPost> {
 
     private String projectKey;
     private String ID;

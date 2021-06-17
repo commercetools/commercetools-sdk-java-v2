@@ -21,7 +21,7 @@ public class ByProjectKeyCartsKeyByKeyGet
         extends ApiMethod<ByProjectKeyCartsKeyByKeyGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartsKeyByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCartsKeyByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

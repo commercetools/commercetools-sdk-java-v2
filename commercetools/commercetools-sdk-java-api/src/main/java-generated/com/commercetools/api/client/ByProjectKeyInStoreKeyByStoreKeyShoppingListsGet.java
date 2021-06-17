@@ -25,7 +25,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet> {
 
     private String projectKey;
     private String storeKey;

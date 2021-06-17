@@ -23,7 +23,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsSearchGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSearchGet> {
 
     private String projectKey;
 

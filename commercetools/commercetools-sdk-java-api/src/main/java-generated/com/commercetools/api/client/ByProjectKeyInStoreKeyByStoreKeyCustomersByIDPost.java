@@ -22,8 +22,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost> {
 
     private String projectKey;
     private String storeKey;

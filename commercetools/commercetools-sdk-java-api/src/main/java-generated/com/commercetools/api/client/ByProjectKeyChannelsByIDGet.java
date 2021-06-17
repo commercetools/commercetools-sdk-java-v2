@@ -20,7 +20,7 @@ public class ByProjectKeyChannelsByIDGet
         extends ApiMethod<ByProjectKeyChannelsByIDGet, com.commercetools.api.models.channel.Channel>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyChannelsByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsByIDGet> {
 
     private String projectKey;
     private String ID;

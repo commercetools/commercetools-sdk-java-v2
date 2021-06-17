@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyChannelsPost
         extends ApiMethod<ByProjectKeyChannelsPost, com.commercetools.api.models.channel.Channel>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyChannelsPost> {
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyChannelsPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsPost> {
 
     private String projectKey;
 

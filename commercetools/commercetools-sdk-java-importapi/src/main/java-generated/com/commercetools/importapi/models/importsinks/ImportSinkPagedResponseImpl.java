@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This type represents a paged importsink result.</p>
+*  <p>Response to a query request for <a href="#importsink">ImportSinks</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse {
@@ -25,15 +25,18 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
 
     private Long count;
 
+    private Long total;
+
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
     @JsonCreator
     ImportSinkPagedResponseImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Long offset,
-            @JsonProperty("count") final Long count,
+            @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
             @JsonProperty("results") final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
         this.limit = limit;
         this.offset = offset;
         this.count = count;
+        this.total = total;
         this.results = results;
     }
 
@@ -62,6 +65,13 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
     }
 
     /**
+    *  <p>The total number of results matching the query.</p>
+    */
+    public Long getTotal() {
+        return this.total;
+    }
+
+    /**
     *  <p>The results for this paged response.</p>
     */
     public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults() {
@@ -78,6 +88,10 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
 
     public void setCount(final Long count) {
         this.count = count;
+    }
+
+    public void setTotal(final Long total) {
+        this.total = total;
     }
 
     public void setResults(final com.commercetools.importapi.models.importsinks.ImportSink... results) {
@@ -101,13 +115,19 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
         return new EqualsBuilder().append(limit, that.limit)
                 .append(offset, that.offset)
                 .append(count, that.count)
+                .append(total, that.total)
                 .append(results, that.results)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit).append(offset).append(count).append(results).toHashCode();
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
+                .append(count)
+                .append(total)
+                .append(results)
+                .toHashCode();
     }
 
 }

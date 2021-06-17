@@ -20,7 +20,7 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
         ApiMethod<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet> {
 
     private String projectKey;
     private String passwordToken;

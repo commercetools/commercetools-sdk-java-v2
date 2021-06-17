@@ -20,7 +20,7 @@ public class ByProjectKeySubscriptionsByIDGet
         extends ApiMethod<ByProjectKeySubscriptionsByIDGet, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeySubscriptionsByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDGet> {
 
     private String projectKey;
     private String ID;

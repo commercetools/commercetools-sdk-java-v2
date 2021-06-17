@@ -22,7 +22,7 @@ public class ByProjectKeyShippingMethodsByIDDelete extends
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyShippingMethodsByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsByIDDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsByIDDelete> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsByIDDelete> {
 
     private String projectKey;
     private String ID;

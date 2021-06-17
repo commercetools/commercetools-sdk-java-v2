@@ -16,8 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyMePasswordPost
         extends ApiMethod<ByProjectKeyMePasswordPost, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePasswordPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePasswordPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPost> {
 
     private String projectKey;
 

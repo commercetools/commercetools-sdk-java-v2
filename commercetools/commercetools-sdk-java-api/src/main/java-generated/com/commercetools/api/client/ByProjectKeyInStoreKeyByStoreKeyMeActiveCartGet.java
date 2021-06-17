@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet
         extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet> {
 
     private String projectKey;
     private String storeKey;

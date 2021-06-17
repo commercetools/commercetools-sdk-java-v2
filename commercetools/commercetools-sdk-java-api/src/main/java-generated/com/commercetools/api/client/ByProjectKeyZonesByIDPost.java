@@ -20,8 +20,8 @@ public class ByProjectKeyZonesByIDPost
         extends ApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesByIDPost> {
 
     private String projectKey;
     private String ID;

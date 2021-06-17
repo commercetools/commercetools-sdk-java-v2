@@ -20,7 +20,7 @@ public class ByProjectKeyTaxCategoriesByIDGet
         extends ApiMethod<ByProjectKeyTaxCategoriesByIDGet, com.commercetools.api.models.tax_category.TaxCategory>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyTaxCategoriesByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesByIDGet> {
 
     private String projectKey;
     private String ID;

@@ -19,7 +19,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyMeGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeGet> {
 
     private String projectKey;
 

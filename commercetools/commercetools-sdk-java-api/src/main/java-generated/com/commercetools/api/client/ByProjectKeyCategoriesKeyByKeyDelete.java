@@ -22,7 +22,7 @@ public class ByProjectKeyCategoriesKeyByKeyDelete
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCategoriesKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCategoriesKeyByKeyDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCategoriesKeyByKeyDelete> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCategoriesKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

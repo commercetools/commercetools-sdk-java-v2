@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode>
         implements
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
 
     private String projectKey;
     private String storeKey;

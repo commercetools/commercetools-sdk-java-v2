@@ -18,8 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCustomersEmailTokenPost
         extends ApiMethod<ByProjectKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailTokenPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomersEmailTokenPost> {
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailTokenPost> {
 
     private String projectKey;
 

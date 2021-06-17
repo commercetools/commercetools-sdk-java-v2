@@ -26,6 +26,11 @@ public interface ImportResourceType {
     */
     ImportResourceType ORDER = ImportResourceTypeEnum.ORDER;
     /**
+    	<p>The order patch import resource type.</p>
+
+    */
+    ImportResourceType ORDER_PATCH = ImportResourceTypeEnum.ORDER_PATCH;
+    /**
     	<p>The price import resource type.</p>
 
     */
@@ -64,6 +69,8 @@ public interface ImportResourceType {
         CATEGORY("category"),
 
         ORDER("order"),
+
+        ORDER_PATCH("order-patch"),
 
         PRICE("price"),
 

@@ -20,7 +20,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyGet extends
         ApiMethod<ByProjectKeyShippingMethodsKeyByKeyGet, com.commercetools.api.models.shipping_method.ShippingMethod>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsKeyByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsKeyByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

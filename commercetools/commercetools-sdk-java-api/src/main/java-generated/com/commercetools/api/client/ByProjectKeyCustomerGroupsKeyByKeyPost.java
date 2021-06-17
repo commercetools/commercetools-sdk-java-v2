@@ -20,8 +20,8 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost extends
         ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyPost, com.commercetools.api.models.customer_group.CustomerGroup>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomerGroupsKeyByKeyPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost> {
 
     private String projectKey;
     private String key;

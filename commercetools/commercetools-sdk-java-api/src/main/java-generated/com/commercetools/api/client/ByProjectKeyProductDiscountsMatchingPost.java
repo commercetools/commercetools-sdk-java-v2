@@ -15,8 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDiscountsMatchingPost extends
         ApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductDiscountsMatchingPost> {
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPost> {
 
     private String projectKey;
 

@@ -20,8 +20,8 @@ public class ByProjectKeyProductTypesKeyByKeyPost
         extends ApiMethod<ByProjectKeyProductTypesKeyByKeyPost, com.commercetools.api.models.product_type.ProductType>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductTypesKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesKeyByKeyPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductTypesKeyByKeyPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesKeyByKeyPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesKeyByKeyPost> {
 
     private String projectKey;
     private String key;

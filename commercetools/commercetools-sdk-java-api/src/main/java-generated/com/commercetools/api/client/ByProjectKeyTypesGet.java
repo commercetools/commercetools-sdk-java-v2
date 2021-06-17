@@ -24,7 +24,7 @@ public class ByProjectKeyTypesGet
         com.commercetools.api.client.PagingTrait<ByProjectKeyTypesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyTypesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTypesGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyTypesGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTypesGet> {
 
     private String projectKey;
 

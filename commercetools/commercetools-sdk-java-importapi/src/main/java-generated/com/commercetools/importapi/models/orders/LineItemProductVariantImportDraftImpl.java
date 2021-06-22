@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class LineItemProductVariantImportDraftImpl implements LineItemProductVariantImportDraft {
 
-    private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
+    private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     private String sku;
 
@@ -28,12 +28,12 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
 
     @JsonCreator
     LineItemProductVariantImportDraftImpl(
-            @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
+            @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product,
             @JsonProperty("sku") final String sku,
             @JsonProperty("prices") final java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices,
             @JsonProperty("attributes") final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes,
             @JsonProperty("images") final java.util.List<com.commercetools.importapi.models.common.Image> images) {
-        this.productVariant = productVariant;
+        this.product = product;
         this.sku = sku;
         this.prices = prices;
         this.attributes = attributes;
@@ -46,8 +46,8 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
     /**
     *  <p>Maps to <code>ProductVariant.product</code>.</p>
     */
-    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
-        return this.productVariant;
+    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
+        return this.product;
     }
 
     /**
@@ -78,9 +78,8 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
         return this.images;
     }
 
-    public void setProductVariant(
-            final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
-        this.productVariant = productVariant;
+    public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product) {
+        this.product = product;
     }
 
     public void setSku(final String sku) {
@@ -122,7 +121,7 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
 
         LineItemProductVariantImportDraftImpl that = (LineItemProductVariantImportDraftImpl) o;
 
-        return new EqualsBuilder().append(productVariant, that.productVariant)
+        return new EqualsBuilder().append(product, that.product)
                 .append(sku, that.sku)
                 .append(prices, that.prices)
                 .append(attributes, that.attributes)
@@ -132,7 +131,7 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productVariant)
+        return new HashCodeBuilder(17, 37).append(product)
                 .append(sku)
                 .append(prices)
                 .append(attributes)

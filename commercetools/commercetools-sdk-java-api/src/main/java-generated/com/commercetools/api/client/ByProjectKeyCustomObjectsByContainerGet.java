@@ -21,7 +21,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
         implements com.commercetools.api.client.QueryTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsByContainerGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsByContainerGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomObjectsByContainerGet> {
 
     private String projectKey;
     private String container;

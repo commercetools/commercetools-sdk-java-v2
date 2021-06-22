@@ -22,7 +22,7 @@ public class ByProjectKeyMePaymentsKeyByKeyDelete
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePaymentsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsKeyByKeyDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMePaymentsKeyByKeyDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePaymentsKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

@@ -22,7 +22,7 @@ public class ByProjectKeyZonesKeyByKeyDelete
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesKeyByKeyDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesKeyByKeyDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

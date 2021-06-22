@@ -20,7 +20,7 @@ public class ByProjectKeyInventoryByIDGet
         extends ApiMethod<ByProjectKeyInventoryByIDGet, com.commercetools.api.models.inventory.InventoryEntry>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryByIDGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryByIDGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInventoryByIDGet> {
 
     private String projectKey;
     private String ID;

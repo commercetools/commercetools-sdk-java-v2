@@ -25,7 +25,7 @@ public class ByProjectKeyOrdersEditsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyOrdersEditsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyOrdersEditsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersEditsGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersEditsGet> {
 
     private String projectKey;
 

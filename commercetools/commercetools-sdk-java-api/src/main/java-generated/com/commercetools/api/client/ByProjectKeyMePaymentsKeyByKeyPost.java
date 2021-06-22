@@ -20,8 +20,8 @@ public class ByProjectKeyMePaymentsKeyByKeyPost
         extends ApiMethod<ByProjectKeyMePaymentsKeyByKeyPost, com.commercetools.api.models.me.MyPayment>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePaymentsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMePaymentsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePaymentsKeyByKeyPost> {
 
     private String projectKey;
     private String key;

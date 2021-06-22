@@ -20,7 +20,7 @@ public class ByProjectKeyTaxCategoriesKeyByKeyGet
         extends ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet, com.commercetools.api.models.tax_category.TaxCategory>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyTaxCategoriesKeyByKeyGet> {
 
     private String projectKey;
     private String key;

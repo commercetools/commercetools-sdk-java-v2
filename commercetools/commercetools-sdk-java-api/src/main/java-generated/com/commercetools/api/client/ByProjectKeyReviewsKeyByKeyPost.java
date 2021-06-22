@@ -20,8 +20,8 @@ public class ByProjectKeyReviewsKeyByKeyPost
         extends ApiMethod<ByProjectKeyReviewsKeyByKeyPost, com.commercetools.api.models.review.Review>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyReviewsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsKeyByKeyPost> {
 
     private String projectKey;
     private String key;

@@ -17,7 +17,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
         ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsMatchingLocationGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsMatchingLocationGet> {
 
     private String projectKey;
 

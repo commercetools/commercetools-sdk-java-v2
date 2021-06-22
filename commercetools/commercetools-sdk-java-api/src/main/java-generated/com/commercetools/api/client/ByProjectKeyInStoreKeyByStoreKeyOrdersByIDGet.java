@@ -22,7 +22,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet
         extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet> {
 
     private String projectKey;
     private String storeKey;

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Response to a query request for <a href="#importsink">ImportSinks</a>.</p>
+*  <p>This type represents a paged importsink result.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportSinkPagedResponseImpl.class)
@@ -42,13 +42,6 @@ public interface ImportSinkPagedResponse {
     public Long getCount();
 
     /**
-    *  <p>The total number of results matching the query.</p>
-    */
-    @NotNull
-    @JsonProperty("total")
-    public Long getTotal();
-
-    /**
     *  <p>The results for this paged response.</p>
     */
     @NotNull
@@ -61,8 +54,6 @@ public interface ImportSinkPagedResponse {
     public void setOffset(final Long offset);
 
     public void setCount(final Long count);
-
-    public void setTotal(final Long total);
 
     @JsonIgnore
     public void setResults(final ImportSink... results);
@@ -78,7 +69,6 @@ public interface ImportSinkPagedResponse {
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
-        instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
         return instance;
     }

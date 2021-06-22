@@ -22,7 +22,7 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends
         com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeySubscriptionsKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

@@ -22,8 +22,8 @@ public class ByProjectKeyProductsPost
         extends ApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyProductsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsPost> {
 
     private String projectKey;
 

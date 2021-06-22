@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class LineItemProductVariantImportDraftBuilder {
 
     @Nullable
-    private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
+    private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     @Nullable
     private String sku;
@@ -25,9 +25,9 @@ public final class LineItemProductVariantImportDraftBuilder {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
-    public LineItemProductVariantImportDraftBuilder productVariant(
-            @Nullable final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
-        this.productVariant = productVariant;
+    public LineItemProductVariantImportDraftBuilder product(
+            @Nullable final com.commercetools.importapi.models.common.ProductKeyReference product) {
+        this.product = product;
         return this;
     }
 
@@ -73,8 +73,8 @@ public final class LineItemProductVariantImportDraftBuilder {
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
-        return this.productVariant;
+    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
+        return this.product;
     }
 
     @Nullable
@@ -98,7 +98,7 @@ public final class LineItemProductVariantImportDraftBuilder {
     }
 
     public LineItemProductVariantImportDraft build() {
-        return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);
+        return new LineItemProductVariantImportDraftImpl(product, sku, prices, attributes, images);
     }
 
     public static LineItemProductVariantImportDraftBuilder of() {
@@ -107,7 +107,7 @@ public final class LineItemProductVariantImportDraftBuilder {
 
     public static LineItemProductVariantImportDraftBuilder of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftBuilder builder = new LineItemProductVariantImportDraftBuilder();
-        builder.productVariant = template.getProductVariant();
+        builder.product = template.getProduct();
         builder.sku = template.getSku();
         builder.prices = template.getPrices();
         builder.attributes = template.getAttributes();

@@ -25,7 +25,7 @@ public class ByProjectKeyInventoryGet
         com.commercetools.api.client.PagingTrait<ByProjectKeyInventoryGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyInventoryGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInventoryGet> {
 
     private String projectKey;
 

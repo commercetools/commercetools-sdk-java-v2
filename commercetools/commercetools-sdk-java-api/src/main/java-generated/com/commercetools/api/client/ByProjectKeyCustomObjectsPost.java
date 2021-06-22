@@ -25,8 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyCustomObjectsPost
         extends ApiMethod<ByProjectKeyCustomObjectsPost, com.commercetools.api.models.custom_object.CustomObject>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomObjectsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomObjectsPost> {
 
     private String projectKey;
 

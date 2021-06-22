@@ -20,8 +20,8 @@ public class ByProjectKeyStoresKeyByKeyPost
         extends ApiMethod<ByProjectKeyStoresKeyByKeyPost, com.commercetools.api.models.store.Store>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStoresKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStoresKeyByKeyPost> {
 
     private String projectKey;
     private String key;

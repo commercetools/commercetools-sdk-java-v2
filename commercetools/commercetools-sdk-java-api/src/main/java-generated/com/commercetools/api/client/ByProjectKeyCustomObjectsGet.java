@@ -27,7 +27,7 @@ public class ByProjectKeyCustomObjectsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomObjectsGet> {
 
     private String projectKey;
 

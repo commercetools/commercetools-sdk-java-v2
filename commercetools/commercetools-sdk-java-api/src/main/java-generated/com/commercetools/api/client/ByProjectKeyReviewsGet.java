@@ -24,7 +24,7 @@ public class ByProjectKeyReviewsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsGet> {
 
     private String projectKey;
 

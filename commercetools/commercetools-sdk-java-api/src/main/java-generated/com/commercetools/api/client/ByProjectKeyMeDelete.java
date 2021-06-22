@@ -21,7 +21,7 @@ public class ByProjectKeyMeDelete
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMeDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeDelete> {
 
     private String projectKey;
 

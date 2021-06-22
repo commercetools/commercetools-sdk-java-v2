@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyDiscountCodesPost
         extends ApiMethod<ByProjectKeyDiscountCodesPost, com.commercetools.api.models.discount_code.DiscountCode>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyDiscountCodesPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyDiscountCodesPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyDiscountCodesPost> {
 
     private String projectKey;
 

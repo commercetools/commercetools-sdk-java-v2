@@ -23,7 +23,7 @@ public class ByProjectKeyProductProjectionsByIDGet
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsByIDGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsByIDGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsByIDGet> {
 
     private String projectKey;
     private String ID;

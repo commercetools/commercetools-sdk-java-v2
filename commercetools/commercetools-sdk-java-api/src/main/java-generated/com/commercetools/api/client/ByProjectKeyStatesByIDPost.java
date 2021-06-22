@@ -20,8 +20,8 @@ public class ByProjectKeyStatesByIDPost
         extends ApiMethod<ByProjectKeyStatesByIDPost, com.commercetools.api.models.state.State>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStatesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesByIDPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStatesByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesByIDPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesByIDPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStatesByIDPost> {
 
     private String projectKey;
     private String ID;

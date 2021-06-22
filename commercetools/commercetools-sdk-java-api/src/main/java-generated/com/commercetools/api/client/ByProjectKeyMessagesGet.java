@@ -24,7 +24,7 @@ public class ByProjectKeyMessagesGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyMessagesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyMessagesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMessagesGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMessagesGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMessagesGet> {
 
     private String projectKey;
 

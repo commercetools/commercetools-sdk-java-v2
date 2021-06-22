@@ -20,8 +20,8 @@ public class ByProjectKeyMeShoppingListsByIDPost
         extends ApiMethod<ByProjectKeyMeShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeShoppingListsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsByIDPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeShoppingListsByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsByIDPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsByIDPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeShoppingListsByIDPost> {
 
     private String projectKey;
     private String ID;

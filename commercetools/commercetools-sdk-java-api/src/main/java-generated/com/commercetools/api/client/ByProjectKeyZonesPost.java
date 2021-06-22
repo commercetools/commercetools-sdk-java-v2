@@ -18,8 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost, com.commercetools.api.models.zone.Zone>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyZonesPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesPost> {
 
     private String projectKey;
 

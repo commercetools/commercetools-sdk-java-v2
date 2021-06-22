@@ -20,7 +20,7 @@ public class ByProjectKeyReviewsByIDGet
         extends ApiMethod<ByProjectKeyReviewsByIDGet, com.commercetools.api.models.review.Review>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsByIDGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsByIDGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsByIDGet> {
 
     private String projectKey;
     private String ID;

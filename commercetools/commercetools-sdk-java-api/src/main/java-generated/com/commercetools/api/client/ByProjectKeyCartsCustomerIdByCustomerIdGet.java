@@ -23,7 +23,7 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet
         extends ApiMethod<ByProjectKeyCartsCustomerIdByCustomerIdGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartsCustomerIdByCustomerIdGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartsCustomerIdByCustomerIdGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartsCustomerIdByCustomerIdGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCartsCustomerIdByCustomerIdGet> {
 
     private String projectKey;
     private String customerId;

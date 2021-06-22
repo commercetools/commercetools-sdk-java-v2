@@ -20,8 +20,8 @@ public class ByProjectKeyZonesKeyByKeyPost
         extends ApiMethod<ByProjectKeyZonesKeyByKeyPost, com.commercetools.api.models.zone.Zone>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesKeyByKeyPost> {
 
     private String projectKey;
     private String key;

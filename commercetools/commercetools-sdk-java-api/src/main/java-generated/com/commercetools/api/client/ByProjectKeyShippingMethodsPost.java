@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyShippingMethodsPost
         extends ApiMethod<ByProjectKeyShippingMethodsPost, com.commercetools.api.models.shipping_method.ShippingMethod>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyShippingMethodsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsPost> {
 
     private String projectKey;
 

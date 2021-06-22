@@ -20,8 +20,8 @@ public class ByProjectKeyChannelsByIDPost
         extends ApiMethod<ByProjectKeyChannelsByIDPost, com.commercetools.api.models.channel.Channel>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsByIDPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsByIDPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsByIDPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyChannelsByIDPost> {
 
     private String projectKey;
     private String ID;

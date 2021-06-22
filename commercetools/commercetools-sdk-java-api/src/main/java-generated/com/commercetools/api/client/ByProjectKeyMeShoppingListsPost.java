@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyMeShoppingListsPost
         extends ApiMethod<ByProjectKeyMeShoppingListsPost, com.commercetools.api.models.shopping_list.ShoppingList>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyMeShoppingListsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeShoppingListsPost> {
 
     private String projectKey;
 

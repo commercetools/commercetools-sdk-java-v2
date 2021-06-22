@@ -20,8 +20,8 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         extends ApiMethod<ByProjectKeyMeCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeCartsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsKeyByKeyPost> {
 
     private String projectKey;
     private String key;

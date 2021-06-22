@@ -18,7 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyGraphqlPost
         extends ApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPost> {
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyGraphqlPost> {
 
     private String projectKey;
 

@@ -22,7 +22,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeShoppingListsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsKeyByKeyDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeShoppingListsKeyByKeyDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeShoppingListsKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

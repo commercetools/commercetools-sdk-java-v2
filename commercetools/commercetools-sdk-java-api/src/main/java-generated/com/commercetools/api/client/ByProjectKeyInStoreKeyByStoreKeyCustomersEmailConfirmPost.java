@@ -17,9 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.commercetools.api.models.customer.Customer>
+        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode>
         implements
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
 
     private String projectKey;
     private String storeKey;
@@ -63,17 +64,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.customer.Customer.class), request,
-            timeout);
+        return blockingWait(client.execute(request, com.fasterxml.jackson.databind.JsonNode.class), request, timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
+        return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

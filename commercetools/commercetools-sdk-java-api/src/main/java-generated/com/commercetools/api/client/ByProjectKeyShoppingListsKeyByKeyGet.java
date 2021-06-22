@@ -20,7 +20,7 @@ public class ByProjectKeyShoppingListsKeyByKeyGet
         extends ApiMethod<ByProjectKeyShoppingListsKeyByKeyGet, com.commercetools.api.models.shopping_list.ShoppingList>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShoppingListsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShoppingListsKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShoppingListsKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShoppingListsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

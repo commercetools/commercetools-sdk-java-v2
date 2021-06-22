@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyApiClientsByIDDelete
         extends ApiMethod<ByProjectKeyApiClientsByIDDelete, com.commercetools.api.models.api_client.ApiClient>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyApiClientsByIDDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyApiClientsByIDDelete> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyApiClientsByIDDelete> {
 
     private String projectKey;
     private String ID;

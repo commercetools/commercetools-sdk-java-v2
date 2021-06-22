@@ -23,8 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeySubscriptionsPost
         extends ApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsPost>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeySubscriptionsPost> {
 
     private String projectKey;
 

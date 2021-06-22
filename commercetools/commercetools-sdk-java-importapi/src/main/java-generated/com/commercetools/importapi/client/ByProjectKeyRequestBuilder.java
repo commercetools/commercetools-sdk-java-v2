@@ -55,10 +55,6 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
     }
 
-    public ByProjectKeyOrderPatchesRequestBuilder orderPatches() {
-        return new ByProjectKeyOrderPatchesRequestBuilder(apiHttpClient, projectKey);
-    }
-
     public ByProjectKeyCustomersRequestBuilder customers() {
         return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
     }

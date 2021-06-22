@@ -20,7 +20,7 @@ public class ByProjectKeyStatesKeyByKeyGet
         extends ApiMethod<ByProjectKeyStatesKeyByKeyGet, com.commercetools.api.models.state.State>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStatesKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStatesKeyByKeyGet> {
 
     private String projectKey;
     private String key;

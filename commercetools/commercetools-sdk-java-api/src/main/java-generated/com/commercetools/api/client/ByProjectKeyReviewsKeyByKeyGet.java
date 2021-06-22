@@ -20,7 +20,7 @@ public class ByProjectKeyReviewsKeyByKeyGet
         extends ApiMethod<ByProjectKeyReviewsKeyByKeyGet, com.commercetools.api.models.review.Review>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

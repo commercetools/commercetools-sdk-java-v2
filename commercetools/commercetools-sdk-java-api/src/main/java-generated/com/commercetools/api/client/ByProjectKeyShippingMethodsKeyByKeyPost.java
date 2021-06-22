@@ -20,8 +20,8 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends
         ApiMethod<ByProjectKeyShippingMethodsKeyByKeyPost, com.commercetools.api.models.shipping_method.ShippingMethod>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyShippingMethodsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsKeyByKeyPost>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsKeyByKeyPost> {
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsKeyByKeyPost>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsKeyByKeyPost> {
 
     private String projectKey;
     private String key;

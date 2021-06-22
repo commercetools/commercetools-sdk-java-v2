@@ -20,7 +20,7 @@ public class ByProjectKeyPaymentsKeyByKeyGet
         extends ApiMethod<ByProjectKeyPaymentsKeyByKeyGet, com.commercetools.api.models.payment.Payment>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyPaymentsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

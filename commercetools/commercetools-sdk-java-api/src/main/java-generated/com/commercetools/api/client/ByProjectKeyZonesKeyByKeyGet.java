@@ -20,7 +20,7 @@ public class ByProjectKeyZonesKeyByKeyGet
         extends ApiMethod<ByProjectKeyZonesKeyByKeyGet, com.commercetools.api.models.zone.Zone>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesKeyByKeyGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesKeyByKeyGet> {
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesKeyByKeyGet> {
 
     private String projectKey;
     private String key;

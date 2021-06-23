@@ -20,7 +20,7 @@ public class ByProjectKeySubscriptionsKeyByKeyGet
         extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyGet, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsKeyByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeySubscriptionsKeyByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyGet> {
 
     private String projectKey;
     private String key;

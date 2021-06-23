@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
         ApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsMatchingOrdereditGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsMatchingOrdereditGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsMatchingOrdereditGet> {
 
     private String projectKey;
 

@@ -75,6 +75,11 @@ public class ByProjectKeyImportSinksTest {
                         .get()
                         .withOffset(0.7475848)
                         .createHttpRequest(), "get", "/test_projectKey/import-sinks?offset=0.7475848", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .importSinks()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/import-sinks?sort=sort", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").importSinks().get().createHttpRequest(),
                         "get", "/test_projectKey/import-sinks", } };
     }
@@ -85,6 +90,7 @@ public class ByProjectKeyImportSinksTest {
                         apiRoot.withProjectKeyValue("test_projectKey").importSinks().get().withLimit(0.26748633), },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").importSinks().get().withOffset(0.7475848), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").importSinks().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").importSinks().get(), } };
     }
 }

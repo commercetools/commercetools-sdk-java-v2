@@ -20,7 +20,7 @@ public class ByProjectKeyProductTypesByIDGet
         extends ApiMethod<ByProjectKeyProductTypesByIDGet, com.commercetools.api.models.product_type.ProductType>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductTypesByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesByIDGet> {
 
     private String projectKey;
     private String ID;

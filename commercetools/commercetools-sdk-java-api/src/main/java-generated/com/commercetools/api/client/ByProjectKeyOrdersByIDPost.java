@@ -20,8 +20,8 @@ public class ByProjectKeyOrdersByIDPost
         extends ApiMethod<ByProjectKeyOrdersByIDPost, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersByIDPost> {
 
     private String projectKey;
     private String ID;

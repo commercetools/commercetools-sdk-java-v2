@@ -21,8 +21,8 @@ public class ByProjectKeyProductsByIDPost
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDPost> {
 
     private String projectKey;
     private String ID;

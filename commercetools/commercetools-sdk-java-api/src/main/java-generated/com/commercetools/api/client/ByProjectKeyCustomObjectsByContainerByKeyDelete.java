@@ -23,7 +23,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsByContainerByKeyDelete> {
 
     private String projectKey;
     private String container;

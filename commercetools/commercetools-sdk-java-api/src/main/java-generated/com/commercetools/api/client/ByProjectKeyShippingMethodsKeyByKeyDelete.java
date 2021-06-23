@@ -22,7 +22,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyShippingMethodsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsKeyByKeyDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyShippingMethodsKeyByKeyDelete> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsKeyByKeyDelete> {
 
     private String projectKey;
     private String key;

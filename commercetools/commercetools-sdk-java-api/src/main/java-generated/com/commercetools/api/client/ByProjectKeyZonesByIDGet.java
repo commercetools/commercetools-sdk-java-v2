@@ -20,7 +20,7 @@ public class ByProjectKeyZonesByIDGet
         extends ApiMethod<ByProjectKeyZonesByIDGet, com.commercetools.api.models.zone.Zone>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesByIDGet> {
 
     private String projectKey;
     private String ID;

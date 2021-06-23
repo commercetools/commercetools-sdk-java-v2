@@ -20,8 +20,8 @@ public class ByProjectKeyPaymentsByIDPost
         extends ApiMethod<ByProjectKeyPaymentsByIDPost, com.commercetools.api.models.payment.Payment>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyPaymentsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyPaymentsByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsByIDPost> {
 
     private String projectKey;
     private String ID;

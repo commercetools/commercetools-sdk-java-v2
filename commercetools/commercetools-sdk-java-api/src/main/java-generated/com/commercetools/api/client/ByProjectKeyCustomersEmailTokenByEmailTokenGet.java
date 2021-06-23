@@ -20,7 +20,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends
         ApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomersEmailTokenByEmailTokenGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailTokenByEmailTokenGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomersEmailTokenByEmailTokenGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomersEmailTokenByEmailTokenGet> {
 
     private String projectKey;
     private String emailToken;

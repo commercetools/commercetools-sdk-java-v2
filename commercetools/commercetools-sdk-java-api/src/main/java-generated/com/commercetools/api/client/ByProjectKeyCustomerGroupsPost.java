@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyCustomerGroupsPost
         extends ApiMethod<ByProjectKeyCustomerGroupsPost, com.commercetools.api.models.customer_group.CustomerGroup>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomerGroupsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomerGroupsPost> {
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomerGroupsPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsPost> {
 
     private String projectKey;
 

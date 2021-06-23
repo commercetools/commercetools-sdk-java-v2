@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyInventoryPost
         extends ApiMethod<ByProjectKeyInventoryPost, com.commercetools.api.models.inventory.InventoryEntry>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInventoryPost> {
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInventoryPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryPost> {
 
     private String projectKey;
 

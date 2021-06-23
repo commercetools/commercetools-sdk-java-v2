@@ -19,8 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ByProjectKeyReviewsPost
         extends ApiMethod<ByProjectKeyReviewsPost, com.commercetools.api.models.review.Review>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsPost> {
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyReviewsPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsPost> {
 
     private String projectKey;
 

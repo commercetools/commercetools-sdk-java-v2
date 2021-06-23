@@ -24,7 +24,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet
         extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet> {
 
     private String projectKey;
     private String storeKey;

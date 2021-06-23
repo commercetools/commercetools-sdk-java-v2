@@ -23,8 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductProjectionsSearchPost
         extends ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.fasterxml.jackson.databind.JsonNode>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductProjectionsSearchPost> {
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
 
     private String projectKey;
 

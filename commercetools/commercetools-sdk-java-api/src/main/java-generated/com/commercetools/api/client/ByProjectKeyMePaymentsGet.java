@@ -23,7 +23,7 @@ public class ByProjectKeyMePaymentsGet
         com.commercetools.api.client.PagingTrait<ByProjectKeyMePaymentsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyMePaymentsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePaymentsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMePaymentsGet> {
 
     private String projectKey;
 

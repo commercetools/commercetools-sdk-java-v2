@@ -20,7 +20,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends
         ApiMethod<ByProjectKeyCustomObjectsByContainerByKeyGet, com.commercetools.api.models.custom_object.CustomObject>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsByContainerByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsByContainerByKeyGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyCustomObjectsByContainerByKeyGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsByContainerByKeyGet> {
 
     private String projectKey;
     private String container;

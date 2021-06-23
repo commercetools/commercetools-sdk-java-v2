@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 
 import com.commercetools.importapi.models.common.Image;
-import com.commercetools.importapi.models.common.ProductKeyReference;
+import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -23,8 +23,8 @@ public interface LineItemProductVariantImportDraft {
     *  <p>Maps to <code>ProductVariant.product</code>.</p>
     */
     @Valid
-    @JsonProperty("product")
-    public ProductKeyReference getProduct();
+    @JsonProperty("productVariant")
+    public ProductVariantKeyReference getProductVariant();
 
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
@@ -54,7 +54,7 @@ public interface LineItemProductVariantImportDraft {
     @JsonProperty("images")
     public List<Image> getImages();
 
-    public void setProduct(final ProductKeyReference product);
+    public void setProductVariant(final ProductVariantKeyReference productVariant);
 
     public void setSku(final String sku);
 
@@ -79,7 +79,7 @@ public interface LineItemProductVariantImportDraft {
 
     public static LineItemProductVariantImportDraft of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftImpl instance = new LineItemProductVariantImportDraftImpl();
-        instance.setProduct(template.getProduct());
+        instance.setProductVariant(template.getProductVariant());
         instance.setSku(template.getSku());
         instance.setPrices(template.getPrices());
         instance.setAttributes(template.getAttributes());

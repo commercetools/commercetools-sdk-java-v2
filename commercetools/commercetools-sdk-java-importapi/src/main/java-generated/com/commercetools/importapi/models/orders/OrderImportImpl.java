@@ -118,7 +118,7 @@ public final class OrderImportImpl implements OrderImport {
     }
 
     /**
-    *  <p>Maps to <code>Order.orderNumber</code>. A string that identifies an Order. Must be unique across a Project. Once it is set, it cannot be changed.</p>
+    *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
     */
     public String getOrderNumber() {
         return this.orderNumber;

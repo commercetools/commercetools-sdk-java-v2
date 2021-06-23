@@ -25,7 +25,7 @@ public class ByProjectKeyProductDiscountsGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductDiscountsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyProductDiscountsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductDiscountsGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductDiscountsGet> {
 
     private String projectKey;
 

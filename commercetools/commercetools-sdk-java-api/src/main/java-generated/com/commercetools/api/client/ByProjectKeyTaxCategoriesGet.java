@@ -25,7 +25,7 @@ public class ByProjectKeyTaxCategoriesGet extends
         com.commercetools.api.client.PagingTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyTaxCategoriesGet> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesGet> {
 
     private String projectKey;
 

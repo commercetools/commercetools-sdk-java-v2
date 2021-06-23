@@ -20,8 +20,8 @@ public class ByProjectKeyDiscountCodesByIDPost
         extends ApiMethod<ByProjectKeyDiscountCodesByIDPost, com.commercetools.api.models.discount_code.DiscountCode>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyDiscountCodesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyDiscountCodesByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyDiscountCodesByIDPost> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyDiscountCodesByIDPost>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesByIDPost> {
 
     private String projectKey;
     private String ID;

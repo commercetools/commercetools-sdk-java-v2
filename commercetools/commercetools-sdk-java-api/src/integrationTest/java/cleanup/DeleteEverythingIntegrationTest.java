@@ -85,7 +85,6 @@ public class DeleteEverythingIntegrationTest {
             deleteAllDiscountCodes();
             deleteAllShoppingLists();
             deleteAllReviews();
-            deleteAllProductDiscounts();
             deleteAllCategories();
             deleteAllProducts();
             deleteAllCartDiscounts();
@@ -93,6 +92,7 @@ public class DeleteEverythingIntegrationTest {
             deleteAllProductTypes();
             deleteAllShippingMethods();
             deleteAllTaxCategories();
+            deleteAllProductDiscounts();
             deleteAllCustomObjects();
             deleteAllCustomers();
             deleteAllStates();

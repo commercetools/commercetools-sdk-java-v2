@@ -92,6 +92,9 @@ public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraf
         return this.shippingMethod;
     }
 
+    /**
+    *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+    */
     public java.util.List<com.commercetools.importapi.models.orders.Delivery> getDeliveries() {
         return this.deliveries;
     }

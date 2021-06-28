@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetDeliveryAddressCustomFieldActionBuilder {
+public final class StagedOrderSetDeliveryAddressCustomFieldActionBuilder {
 
     private String deliveryId;
 
@@ -18,18 +18,18 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionBuilder {
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    public OrderEditSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
-    public OrderEditSetDeliveryAddressCustomFieldActionBuilder type(
+    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
 
-    public OrderEditSetDeliveryAddressCustomFieldActionBuilder fields(
+    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
@@ -49,17 +49,17 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionBuilder {
         return this.fields;
     }
 
-    public OrderEditSetDeliveryAddressCustomFieldAction build() {
-        return new OrderEditSetDeliveryAddressCustomFieldActionImpl(deliveryId, type, fields);
+    public StagedOrderSetDeliveryAddressCustomFieldAction build() {
+        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, type, fields);
     }
 
-    public static OrderEditSetDeliveryAddressCustomFieldActionBuilder of() {
-        return new OrderEditSetDeliveryAddressCustomFieldActionBuilder();
+    public static StagedOrderSetDeliveryAddressCustomFieldActionBuilder of() {
+        return new StagedOrderSetDeliveryAddressCustomFieldActionBuilder();
     }
 
-    public static OrderEditSetDeliveryAddressCustomFieldActionBuilder of(
-            final OrderEditSetDeliveryAddressCustomFieldAction template) {
-        OrderEditSetDeliveryAddressCustomFieldActionBuilder builder = new OrderEditSetDeliveryAddressCustomFieldActionBuilder();
+    public static StagedOrderSetDeliveryAddressCustomFieldActionBuilder of(
+            final StagedOrderSetDeliveryAddressCustomFieldAction template) {
+        StagedOrderSetDeliveryAddressCustomFieldActionBuilder builder = new StagedOrderSetDeliveryAddressCustomFieldActionBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.type = template.getType();
         builder.fields = template.getFields();

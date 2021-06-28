@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -16,8 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = OrderEditSetDeliveryAddressCustomFieldActionImpl.class)
-public interface OrderEditSetDeliveryAddressCustomFieldAction extends OrderEditUpdateAction {
+@JsonDeserialize(as = StagedOrderSetDeliveryAddressCustomFieldActionImpl.class)
+public interface StagedOrderSetDeliveryAddressCustomFieldAction extends StagedOrderUpdateAction {
 
     String SET_DELIVERY_ADDRESS_CUSTOM_FIELD = "setDeliveryAddressCustomField";
 
@@ -39,30 +40,30 @@ public interface OrderEditSetDeliveryAddressCustomFieldAction extends OrderEditU
 
     public void setFields(final FieldContainer fields);
 
-    public static OrderEditSetDeliveryAddressCustomFieldAction of() {
-        return new OrderEditSetDeliveryAddressCustomFieldActionImpl();
+    public static StagedOrderSetDeliveryAddressCustomFieldAction of() {
+        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl();
     }
 
-    public static OrderEditSetDeliveryAddressCustomFieldAction of(
-            final OrderEditSetDeliveryAddressCustomFieldAction template) {
-        OrderEditSetDeliveryAddressCustomFieldActionImpl instance = new OrderEditSetDeliveryAddressCustomFieldActionImpl();
+    public static StagedOrderSetDeliveryAddressCustomFieldAction of(
+            final StagedOrderSetDeliveryAddressCustomFieldAction template) {
+        StagedOrderSetDeliveryAddressCustomFieldActionImpl instance = new StagedOrderSetDeliveryAddressCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
 
-    public static OrderEditSetDeliveryAddressCustomFieldActionBuilder builder() {
-        return OrderEditSetDeliveryAddressCustomFieldActionBuilder.of();
+    public static StagedOrderSetDeliveryAddressCustomFieldActionBuilder builder() {
+        return StagedOrderSetDeliveryAddressCustomFieldActionBuilder.of();
     }
 
-    public static OrderEditSetDeliveryAddressCustomFieldActionBuilder builder(
-            final OrderEditSetDeliveryAddressCustomFieldAction template) {
-        return OrderEditSetDeliveryAddressCustomFieldActionBuilder.of(template);
+    public static StagedOrderSetDeliveryAddressCustomFieldActionBuilder builder(
+            final StagedOrderSetDeliveryAddressCustomFieldAction template) {
+        return StagedOrderSetDeliveryAddressCustomFieldActionBuilder.of(template);
     }
 
-    default <T> T withOrderEditSetDeliveryAddressCustomFieldAction(
-            Function<OrderEditSetDeliveryAddressCustomFieldAction, T> helper) {
+    default <T> T withStagedOrderSetDeliveryAddressCustomFieldAction(
+            Function<StagedOrderSetDeliveryAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

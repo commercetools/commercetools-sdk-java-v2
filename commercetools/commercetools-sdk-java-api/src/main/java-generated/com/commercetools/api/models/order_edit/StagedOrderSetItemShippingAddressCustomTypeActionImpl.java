@@ -14,37 +14,37 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetDeliveryAddressCustomFieldActionImpl
-        implements OrderEditSetDeliveryAddressCustomFieldAction {
+public final class StagedOrderSetItemShippingAddressCustomTypeActionImpl
+        implements StagedOrderSetItemShippingAddressCustomTypeAction {
 
     private String action;
 
-    private String deliveryId;
+    private String addressKey;
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
-    OrderEditSetDeliveryAddressCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+    StagedOrderSetItemShippingAddressCustomTypeActionImpl(@JsonProperty("addressKey") final String addressKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
-        this.deliveryId = deliveryId;
+        this.addressKey = addressKey;
         this.type = type;
         this.fields = fields;
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
+        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
-    public OrderEditSetDeliveryAddressCustomFieldActionImpl() {
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
+    public StagedOrderSetItemShippingAddressCustomTypeActionImpl() {
+        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
     public String getAction() {
         return this.action;
     }
 
-    public String getDeliveryId() {
-        return this.deliveryId;
+    public String getAddressKey() {
+        return this.addressKey;
     }
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -55,8 +55,8 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionImpl
         return this.fields;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
+    public void setAddressKey(final String addressKey) {
+        this.addressKey = addressKey;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -75,10 +75,10 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetDeliveryAddressCustomFieldActionImpl that = (OrderEditSetDeliveryAddressCustomFieldActionImpl) o;
+        StagedOrderSetItemShippingAddressCustomTypeActionImpl that = (StagedOrderSetItemShippingAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(deliveryId, that.deliveryId)
+                .append(addressKey, that.addressKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -86,7 +86,7 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(addressKey).append(type).append(fields).toHashCode();
     }
 
 }

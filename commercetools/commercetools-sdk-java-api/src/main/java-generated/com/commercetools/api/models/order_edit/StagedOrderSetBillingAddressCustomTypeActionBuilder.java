@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetBillingAddressCustomTypeActionBuilder {
+public final class StagedOrderSetBillingAddressCustomTypeActionBuilder {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -16,13 +16,13 @@ public final class OrderEditSetBillingAddressCustomTypeActionBuilder {
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    public OrderEditSetBillingAddressCustomTypeActionBuilder type(
+    public StagedOrderSetBillingAddressCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
 
-    public OrderEditSetBillingAddressCustomTypeActionBuilder fields(
+    public StagedOrderSetBillingAddressCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
@@ -38,17 +38,17 @@ public final class OrderEditSetBillingAddressCustomTypeActionBuilder {
         return this.fields;
     }
 
-    public OrderEditSetBillingAddressCustomTypeAction build() {
-        return new OrderEditSetBillingAddressCustomTypeActionImpl(type, fields);
+    public StagedOrderSetBillingAddressCustomTypeAction build() {
+        return new StagedOrderSetBillingAddressCustomTypeActionImpl(type, fields);
     }
 
-    public static OrderEditSetBillingAddressCustomTypeActionBuilder of() {
-        return new OrderEditSetBillingAddressCustomTypeActionBuilder();
+    public static StagedOrderSetBillingAddressCustomTypeActionBuilder of() {
+        return new StagedOrderSetBillingAddressCustomTypeActionBuilder();
     }
 
-    public static OrderEditSetBillingAddressCustomTypeActionBuilder of(
-            final OrderEditSetBillingAddressCustomTypeAction template) {
-        OrderEditSetBillingAddressCustomTypeActionBuilder builder = new OrderEditSetBillingAddressCustomTypeActionBuilder();
+    public static StagedOrderSetBillingAddressCustomTypeActionBuilder of(
+            final StagedOrderSetBillingAddressCustomTypeAction template) {
+        StagedOrderSetBillingAddressCustomTypeActionBuilder builder = new StagedOrderSetBillingAddressCustomTypeActionBuilder();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

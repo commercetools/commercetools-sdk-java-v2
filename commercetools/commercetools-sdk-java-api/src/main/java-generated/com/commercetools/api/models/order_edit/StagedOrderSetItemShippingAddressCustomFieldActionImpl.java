@@ -14,36 +14,36 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
-        implements OrderEditSetDeliveryAddressCustomTypeAction {
+public final class StagedOrderSetItemShippingAddressCustomFieldActionImpl
+        implements StagedOrderSetItemShippingAddressCustomFieldAction {
 
     private String action;
 
-    private String deliveryId;
+    private String addressKey;
 
     private String name;
 
     private java.lang.Object value;
 
     @JsonCreator
-    OrderEditSetDeliveryAddressCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+    StagedOrderSetItemShippingAddressCustomFieldActionImpl(@JsonProperty("addressKey") final String addressKey,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
-        this.deliveryId = deliveryId;
+        this.addressKey = addressKey;
         this.name = name;
         this.value = value;
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
+        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }
 
-    public OrderEditSetDeliveryAddressCustomTypeActionImpl() {
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
+    public StagedOrderSetItemShippingAddressCustomFieldActionImpl() {
+        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }
 
     public String getAction() {
         return this.action;
     }
 
-    public String getDeliveryId() {
-        return this.deliveryId;
+    public String getAddressKey() {
+        return this.addressKey;
     }
 
     public String getName() {
@@ -54,8 +54,8 @@ public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
         return this.value;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
+    public void setAddressKey(final String addressKey) {
+        this.addressKey = addressKey;
     }
 
     public void setName(final String name) {
@@ -74,10 +74,10 @@ public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetDeliveryAddressCustomTypeActionImpl that = (OrderEditSetDeliveryAddressCustomTypeActionImpl) o;
+        StagedOrderSetItemShippingAddressCustomFieldActionImpl that = (StagedOrderSetItemShippingAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(deliveryId, that.deliveryId)
+                .append(addressKey, that.addressKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -85,7 +85,7 @@ public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(addressKey).append(name).append(value).toHashCode();
     }
 
 }

@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetShippingAddressCustomTypeActionImpl
-        implements OrderEditSetShippingAddressCustomTypeAction {
+public final class StagedOrderSetShippingAddressCustomTypeActionImpl
+        implements StagedOrderSetShippingAddressCustomTypeAction {
 
     private String action;
 
@@ -24,7 +24,7 @@ public final class OrderEditSetShippingAddressCustomTypeActionImpl
     private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
-    OrderEditSetShippingAddressCustomTypeActionImpl(
+    StagedOrderSetShippingAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
@@ -32,7 +32,7 @@ public final class OrderEditSetShippingAddressCustomTypeActionImpl
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
-    public OrderEditSetShippingAddressCustomTypeActionImpl() {
+    public StagedOrderSetShippingAddressCustomTypeActionImpl() {
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
@@ -64,7 +64,7 @@ public final class OrderEditSetShippingAddressCustomTypeActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetShippingAddressCustomTypeActionImpl that = (OrderEditSetShippingAddressCustomTypeActionImpl) o;
+        StagedOrderSetShippingAddressCustomTypeActionImpl that = (StagedOrderSetShippingAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
                 .append(type, that.type)

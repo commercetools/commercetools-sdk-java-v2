@@ -24,12 +24,16 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
+    private Boolean staged;
+
     @JsonCreator
     ProductVariantPatchImpl(
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
-            @JsonProperty("attributes") final com.commercetools.importapi.models.productvariants.Attributes attributes) {
+            @JsonProperty("attributes") final com.commercetools.importapi.models.productvariants.Attributes attributes,
+            @JsonProperty("staged") final Boolean staged) {
         this.productVariant = productVariant;
         this.attributes = attributes;
+        this.staged = staged;
     }
 
     public ProductVariantPatchImpl() {
@@ -55,6 +59,13 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
         return this.attributes;
     }
 
+    /**
+    *  <p>If <code>false</code>, the attribute changes are applied to both <a href="/../api/projects/productProjections#current--staged">current and staged projected representations</a> of the <a href="/../api/projects/products#product">Product</a>.</p>
+    */
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
     public void setProductVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
@@ -62,6 +73,10 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
     public void setAttributes(final com.commercetools.importapi.models.productvariants.Attributes attributes) {
         this.attributes = attributes;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
     }
 
     @Override
@@ -76,12 +91,13 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
         return new EqualsBuilder().append(productVariant, that.productVariant)
                 .append(attributes, that.attributes)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productVariant).append(attributes).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productVariant).append(attributes).append(staged).toHashCode();
     }
 
 }

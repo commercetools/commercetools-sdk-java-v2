@@ -43,9 +43,18 @@ public interface ProductVariantPatch {
     @JsonProperty("attributes")
     public Attributes getAttributes();
 
+    /**
+    *  <p>If <code>false</code>, the attribute changes are applied to both <a href="/../api/projects/productProjections#current--staged">current and staged projected representations</a> of the <a href="/../api/projects/products#product">Product</a>.</p>
+    */
+
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
     public void setProductVariant(final ProductVariantKeyReference productVariant);
 
     public void setAttributes(final Attributes attributes);
+
+    public void setStaged(final Boolean staged);
 
     public static ProductVariantPatch of() {
         return new ProductVariantPatchImpl();
@@ -55,6 +64,7 @@ public interface ProductVariantPatch {
         ProductVariantPatchImpl instance = new ProductVariantPatchImpl();
         instance.setProductVariant(template.getProductVariant());
         instance.setAttributes(template.getAttributes());
+        instance.setStaged(template.getStaged());
         return instance;
     }
 

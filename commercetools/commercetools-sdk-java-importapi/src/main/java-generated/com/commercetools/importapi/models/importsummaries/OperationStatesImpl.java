@@ -42,35 +42,35 @@ public final class OperationStatesImpl implements OperationStates {
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
+    *  <p>The number of resources in the <code>ValidationFailed</code> state.</p>
     */
     public Long getValidationFailed() {
         return this.validationFailed;
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>Unresolved</code>.</p>
+    *  <p>The number of resources in the <code>Unresolved</code> state.</p>
     */
     public Long getUnresolved() {
         return this.unresolved;
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>WaitForMasterVariant</code>.</p>
+    *  <p>The number of resources in the <code>WaitForMasterVariant</code> state.</p>
     */
     public Long getWaitForMasterVariant() {
         return this.waitForMasterVariant;
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>Imported</code>.</p>
+    *  <p>The number of resources in the <code>Imported</code> state.</p>
     */
     public Long getImported() {
         return this.imported;
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
+    *  <p>The number of resources in the <code>Rejected</code> state.</p>
     */
     public Long getRejected() {
         return this.rejected;

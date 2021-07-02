@@ -25,6 +25,9 @@ public interface TaxPortion {
     @JsonProperty("rate")
     public Double getRate();
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("amount")

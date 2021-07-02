@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>An import sink is the entry point for import resources from other systems.</p>
-*  <p>It has an unique key and is specific to an import resource type.</p>
+*  <p>Serves as the entry point of resources.
+*  An Import Sink is resource type-specific.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkImpl implements ImportSink {
@@ -47,37 +47,38 @@ public final class ImportSinkImpl implements ImportSink {
     }
 
     /**
-    *  <p>The unique key of the import sink.</p>
-    *  <p>Valid characters are: alphabetic characters (A-Z, a-z), numeric characters (0-9), underscores (_) and hyphens (-).</p>
+    *  <p>User-defined unique identifier for the ImportSink.
+    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The type of import resource sent to this import sink.
-    *  You can only send one resource type per import sink.</p>
+    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
+    *  Only the resources of this type can be imported through this ImportSink.
+    *  See <a href="#importresourcetype">ImportResourceType</a>.</p>
     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }
 
     /**
-    *  <p>The version of this resource.</p>
+    *  <p>The version of the ImportSink.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>When the import sink was created.</p>
+    *  <p>The time when the ImportSink was created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>When the import sink was modified.</p>
+    *  <p>The last time when the ImportSink was modified.</p>
     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;

@@ -14,35 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents a paged import operation result.</p>
+*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for Import Operations.
+*  Used as a response to a query request for Import Operations.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportOperationPagedResponseImpl.class)
 public interface ImportOperationPagedResponse {
 
     /**
-    *  <p>The maximum number of import operations returned for a page.</p>
+    *  <p>The number of results requested in the query request.</p>
     */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
+    *  <p>The number of elements skipped, not a page number.
+    *  Supplied by the client or the server default.</p>
     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>The actual number of results returned by this response.</p>
+    *  <p>The actual number of results returned.</p>
     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-    *  <p>The results for this paged response.</p>
+    *  <p>The array of Import Operations matching the query.</p>
     */
     @NotNull
     @Valid

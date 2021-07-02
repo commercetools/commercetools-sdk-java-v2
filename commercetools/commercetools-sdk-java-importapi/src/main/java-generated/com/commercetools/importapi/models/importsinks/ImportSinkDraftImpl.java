@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation sent to the server when creating or updating an import sink.</p>
+*  <p>The representation sent to the server when creating or updating an <a href="#importsink">ImportSink</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkDraftImpl implements ImportSinkDraft {
@@ -37,21 +37,24 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
     }
 
     /**
-    *  <p>The version of this resource.</p>
+    *  <p>The version of the ImportSinkDraft.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The unique key of the import sink.</p>
+    *  <p>User-defined unique identifier of the ImportSink.
+    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The type of import resource sent to this import sink.</p>
+    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
+    *  Only the resources of this type can be imported through this ImportSink.
+    *  See <a href="#importresourcetype">ImportResourceType</a>.</p>
     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;

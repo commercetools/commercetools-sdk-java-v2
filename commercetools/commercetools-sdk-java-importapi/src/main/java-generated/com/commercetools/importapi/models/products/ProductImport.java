@@ -20,9 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Import representation for a product.</p>
-*  <p>The import representation for a product is the most minimal representation required
-*  for creating a product in commercetools.</p>
+*  <p>The data representation for a Product to be imported that is persisted as a <a href="/../api/projects/products#product">Product</a> in the Project.</p>
+*  <p>This is the minimal representation required for creating a <a href="/../api/projects/products#product">Product</a> in commercetools.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductImportImpl.class)
@@ -37,10 +36,10 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-    *  <p>The product's product type. Maps to <code>Product.productType</code>.</p>
-    *  <p>The product type referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
+    *  Maps to <code>Product.productType</code>.
+    *  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the Product is associated.
+    *  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductType is created.</p>
     */
     @NotNull
     @Valid
@@ -48,7 +47,7 @@ public interface ProductImport extends ImportResource {
     public ProductTypeKeyReference getProductType();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project,
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project,
     *  but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
     */
     @NotNull
@@ -64,10 +63,9 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-    *  <p>An array of references to a categories by their keys. Maps to <code>Product.categories</code>.</p>
-    *  <p>The categories referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>Maps to <code>Product.categories</code>.
+    *  The References to the <a href="/../api/projects/categories#category">Categories</a> with which the Product is associated.
+    *  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Categories are created.</p>
     */
     @Valid
     @JsonProperty("categories")
@@ -110,10 +108,8 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-    *  <p>References a tax category by its key.</p>
-    *  <p>The tax category referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the Product is associated.
+    *  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary TaxCategory is created.</p>
     */
     @Valid
     @JsonProperty("taxCategory")
@@ -143,10 +139,8 @@ public interface ProductImport extends ImportResource {
     public SearchKeywords getSearchKeywords();
 
     /**
-    *  <p>References a state by its key.</p>
-    *  <p>The tax category referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the Product is associated.
+    *  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary State is created.</p>
     */
     @Valid
     @JsonProperty("state")

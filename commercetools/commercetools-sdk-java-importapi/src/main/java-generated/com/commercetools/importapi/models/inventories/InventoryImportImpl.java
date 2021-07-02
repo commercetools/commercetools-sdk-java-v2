@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for a inventory.</p>
+*  <p>The data representation for an Inventory to be imported that is persisted as a <a href="/../api/projects/inventory#top">Inventory</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryImportImpl implements InventoryImport {

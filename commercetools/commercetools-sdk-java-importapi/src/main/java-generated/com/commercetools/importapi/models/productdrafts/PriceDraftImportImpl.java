@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>The representation of a Price Draft for the import purpose.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PriceDraftImportImpl implements PriceDraftImport {
 
@@ -62,6 +65,9 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
     public PriceDraftImportImpl() {
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }

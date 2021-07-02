@@ -17,35 +17,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OperationStates {
 
     /**
-    *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
+    *  <p>The number of resources in the <code>ValidationFailed</code> state.</p>
     */
     @NotNull
     @JsonProperty("ValidationFailed")
     public Long getValidationFailed();
 
     /**
-    *  <p>The number of import operations that are in the state <code>Unresolved</code>.</p>
+    *  <p>The number of resources in the <code>Unresolved</code> state.</p>
     */
     @NotNull
     @JsonProperty("Unresolved")
     public Long getUnresolved();
 
     /**
-    *  <p>The number of import operations that are in the state <code>WaitForMasterVariant</code>.</p>
+    *  <p>The number of resources in the <code>WaitForMasterVariant</code> state.</p>
     */
     @NotNull
     @JsonProperty("WaitForMasterVariant")
     public Long getWaitForMasterVariant();
 
     /**
-    *  <p>The number of import operations that are in the state <code>Imported</code>.</p>
+    *  <p>The number of resources in the <code>Imported</code> state.</p>
     */
     @NotNull
     @JsonProperty("Imported")
     public Long getImported();
 
     /**
-    *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
+    *  <p>The number of resources in the <code>Rejected</code> state.</p>
     */
     @NotNull
     @JsonProperty("Rejected")

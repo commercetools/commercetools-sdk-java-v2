@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Tracks the status of a single import resource as it is imported into the commercetools project.</p>
+*  <p>Shows the import status of a specific resource.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportOperationImpl implements ImportOperation {
@@ -65,71 +65,70 @@ public final class ImportOperationImpl implements ImportOperation {
     }
 
     /**
-    *  <p>The import operation version.</p>
+    *  <p>The version of the ImportOperation.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The key of the import sink.</p>
+    *  <p>The key of the <a href="/import-sink#importsink">ImportSink</a>.</p>
     */
     public String getImportSinkKey() {
         return this.importSinkKey;
     }
 
     /**
-    *  <p>The key of the import resource.</p>
+    *  <p>The key of the resource.</p>
     */
     public String getResourceKey() {
         return this.resourceKey;
     }
 
     /**
-    *  <p>The identifier of the operaton that is to be commited</p>
+    *  <p>The ID of the ImportOperation.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The status of the import resource.</p>
+    *  <p>The import status of the resource. Set to <code>Rejected</code> or <code>ValidationFailed</code> if the import of the resource was not successful.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getState() {
         return this.state;
     }
 
     /**
-    *  <p>When the resource is successfully imported, this represents the imported resource version</p>
+    *  <p>The version of the impmorted resource when the import was successful.</p>
     */
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
 
     /**
-    *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
-    *  and this property contains the errors.</p>
+    *  <p>Contains an error if the import of the resource was not successful. See <a href="/error">Errors</a>.</p>
     */
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }
 
     /**
-    *  <p>When the import operation was created.</p>
+    *  <p>The time when the ImportOperation was created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>When the import operation was modified.</p>
+    *  <p>The last time When the ImportOperation was modified.</p>
     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>When the import operation expires.</p>
+    *  <p>The expiration time of the ImportOperation.</p>
     */
     public java.time.ZonedDateTime getExpiresAt() {
         return this.expiresAt;

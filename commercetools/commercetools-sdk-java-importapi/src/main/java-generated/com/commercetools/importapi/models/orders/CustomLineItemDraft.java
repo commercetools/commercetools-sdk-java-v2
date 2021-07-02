@@ -34,6 +34,9 @@ public interface CustomLineItemDraft {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -43,6 +46,9 @@ public interface CustomLineItemDraft {
     @JsonProperty("taxedPrice")
     public CustomLineItemTaxedPrice getTaxedPrice();
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")

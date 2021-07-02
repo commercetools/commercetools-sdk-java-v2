@@ -10,18 +10,18 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This enumeration describes the processing state of an import operation.</p>
+*  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>Unresolved</code>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ProcessingState {
 
     /**
-    	<p>The validation of the import resource failed.</p>
+    	<p>The validation of the resource failed.</p>
 
     */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    	<p>This is an initial state of the import resource, it might contain unresolved references and needs to be resolved further.</p>
+    	<p>There may be unresolved references and they need to be resolved further.</p>
 
     */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
@@ -31,12 +31,12 @@ public interface ProcessingState {
     */
     ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
-    	<p>The import resource was imported successfully.</p>
+    	<p>The resource was successfully imported.</p>
 
     */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    	<p>The import resource couldn't be imported after several retries.</p>
+    	<p>The resource could not be imported.</p>
 
     */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;

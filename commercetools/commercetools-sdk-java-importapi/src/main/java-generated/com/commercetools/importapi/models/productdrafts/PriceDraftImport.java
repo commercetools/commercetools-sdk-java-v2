@@ -20,10 +20,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>The representation of a Price Draft for the import purpose.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PriceDraftImportImpl.class)
 public interface PriceDraftImport {
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")

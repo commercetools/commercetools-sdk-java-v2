@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>An import summary describes the states of import resources of a given import sink.</p>
-*  <p>It is used to track the overall progress of import resources.</p>
+*  <p>Describes the status of an <a href="/import-sink#importsink">ImportSink</a> by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.
+*  Can be used to monitor the import progress per <a href="/import-sink">Import Sink</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSummaryImpl implements ImportSummary {
@@ -36,14 +36,14 @@ public final class ImportSummaryImpl implements ImportSummary {
     }
 
     /**
-    *  <p>The states summary for this import summary.</p>
+    *  <p>The import status of an <a href="/import-sink#importsink">ImportSink</a> given by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.</p>
     */
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
         return this.states;
     }
 
     /**
-    *  <p>The total number of import operations received for this import group.</p>
+    *  <p>The total number of <a href="/import-operation#importoperation">ImportOperations</a> received for this Import Summary.</p>
     */
     public Long getTotal() {
         return this.total;

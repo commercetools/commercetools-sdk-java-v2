@@ -18,9 +18,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Represents an individual line item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-*  <p>You cannot create an order which includes line operations that do not exist in the project or have been deleted.
-*  Products and variants referenced by a line item must already exist in the commercetools project.</p>
+*  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
+*  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted.
+*  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
@@ -69,20 +69,18 @@ public interface LineItemImportDraft {
     public List<ItemState> getState();
 
     /**
-    *  <p>References a supply channel. Maps to <code>LineItem.supplyChannel</code>.</p>
-    *  <p>The supply channel referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>Maps to <code>LineItem.supplyChannel</code>.
+    *  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
+    *  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Supply Channel is created.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelKeyReference getSupplyChannel();
 
     /**
-    *  <p>References a distribution channel. Maps to <code>LineItem.distributionChannel</code>.</p>
-    *  <p>The distribution channel referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>Maps to <code>LineItem.distributionChannel</code>.
+    *  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
+    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Distribution Channel is created.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")

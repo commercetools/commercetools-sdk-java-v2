@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>The representation of a Product Draft for the import purpose.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDraftImportImpl implements ProductDraftImport {
 
@@ -87,10 +90,10 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
     }
 
     /**
-    *  <p>The product's product type. Maps to <code>Product.productType</code>.</p>
-    *  <p>The product type referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
+    *  Maps to <code>Product.productType</code>.
+    *  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the ProductDraft is associated.
+    *  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductType is created.</p>
     */
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {
         return this.productType;
@@ -116,10 +119,8 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
     }
 
     /**
-    *  <p>An array of references to categories by their keys. Maps to <code>Product.categories</code>.</p>
-    *  <p>The categories referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/categories#category">Categories</a> with which the ProductDraft is associated.
+    *  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Categories are created.</p>
     */
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
         return this.categories;
@@ -162,25 +163,23 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
     }
 
     /**
-    *  <p>The master product variant.
-    *  Required if the <code>variants</code> array has product variants.</p>
+    *  <p>The master Product variant.
+    *  Required if the <code>variants</code> array contains a Product Variant.</p>
     */
     public com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport getMasterVariant() {
         return this.masterVariant;
     }
 
     /**
-    *  <p>An array of related product variants.</p>
+    *  <p>An array of related Product Variants.</p>
     */
     public java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> getVariants() {
         return this.variants;
     }
 
     /**
-    *  <p>References a tax category by its key.</p>
-    *  <p>The tax category referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the ProductDraft is associated.
+    *  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary TaxCategory is created.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
@@ -210,10 +209,8 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
     }
 
     /**
-    *  <p>References a state by its key.</p>
-    *  <p>The tax category referenced must already exist
-    *  in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the ProductDraft is associated.
+    *  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary State is created.</p>
     */
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
         return this.state;

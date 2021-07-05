@@ -44,6 +44,13 @@ public interface ImportOperationPagedResponse {
     public Long getCount();
 
     /**
+    *  <p>The total number of import operations matching the query.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+
+    /**
     *  <p>The array of Import Operations matching the query.</p>
     */
     @NotNull
@@ -56,6 +63,8 @@ public interface ImportOperationPagedResponse {
     public void setOffset(final Long offset);
 
     public void setCount(final Long count);
+
+    public void setTotal(final Long total);
 
     @JsonIgnore
     public void setResults(final ImportOperation... results);
@@ -71,6 +80,7 @@ public interface ImportOperationPagedResponse {
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
         return instance;
     }

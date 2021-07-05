@@ -14,6 +14,8 @@ public final class ImportOperationPagedResponseBuilder {
 
     private Long count;
 
+    private Long total;
+
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
@@ -28,6 +30,11 @@ public final class ImportOperationPagedResponseBuilder {
 
     public ImportOperationPagedResponseBuilder count(final Long count) {
         this.count = count;
+        return this;
+    }
+
+    public ImportOperationPagedResponseBuilder total(final Long total) {
+        this.total = total;
         return this;
     }
 
@@ -55,12 +62,16 @@ public final class ImportOperationPagedResponseBuilder {
         return this.count;
     }
 
+    public Long getTotal() {
+        return this.total;
+    }
+
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> getResults() {
         return this.results;
     }
 
     public ImportOperationPagedResponse build() {
-        return new ImportOperationPagedResponseImpl(limit, offset, count, results);
+        return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
     }
 
     public static ImportOperationPagedResponseBuilder of() {
@@ -72,6 +83,7 @@ public final class ImportOperationPagedResponseBuilder {
         builder.limit = template.getLimit();
         builder.offset = template.getOffset();
         builder.count = template.getCount();
+        builder.total = template.getTotal();
         builder.results = template.getResults();
         return builder;
     }

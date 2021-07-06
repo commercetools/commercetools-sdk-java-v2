@@ -3,6 +3,8 @@ package com.commercetools.importapi.models.importsinks;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
@@ -10,6 +12,7 @@ public final class ImportSinkBuilder {
 
     private String key;
 
+    @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     private Long version;
@@ -24,7 +27,7 @@ public final class ImportSinkBuilder {
     }
 
     public ImportSinkBuilder resourceType(
-            final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+            @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -48,6 +51,7 @@ public final class ImportSinkBuilder {
         return this.key;
     }
 
+    @Nullable
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }

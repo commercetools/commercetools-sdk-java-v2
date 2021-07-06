@@ -53,8 +53,7 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
 
     /**
     *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  Only the resources of this type can be imported through this ImportSink.
-    *  See <a href="#importresourcetype">ImportResourceType</a>.</p>
+    *  If not given, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;

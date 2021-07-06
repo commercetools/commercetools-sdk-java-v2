@@ -14,8 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Serves as the entry point of resources.
-*  An Import Sink is resource type-specific.</p>
+*  <p>Serves as the entry point of resources.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkImpl implements ImportSink {
@@ -55,9 +54,8 @@ public final class ImportSinkImpl implements ImportSink {
     }
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  Only the resources of this type can be imported through this ImportSink.
-    *  See <a href="#importresourcetype">ImportResourceType</a>.</p>
+    *  <p>The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.
+    *  If not present, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;

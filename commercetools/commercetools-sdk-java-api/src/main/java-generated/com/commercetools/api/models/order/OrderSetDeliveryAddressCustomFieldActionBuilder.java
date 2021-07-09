@@ -12,26 +12,23 @@ public final class OrderSetDeliveryAddressCustomFieldActionBuilder {
 
     private String deliveryId;
 
-    @Nullable
-    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+    private String name;
 
     @Nullable
-    private com.commercetools.api.models.type.FieldContainer fields;
+    private java.lang.Object value;
 
     public OrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
-    public OrderSetDeliveryAddressCustomFieldActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-        this.type = type;
+    public OrderSetDeliveryAddressCustomFieldActionBuilder name(final String name) {
+        this.name = name;
         return this;
     }
 
-    public OrderSetDeliveryAddressCustomFieldActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-        this.fields = fields;
+    public OrderSetDeliveryAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+        this.value = value;
         return this;
     }
 
@@ -39,18 +36,17 @@ public final class OrderSetDeliveryAddressCustomFieldActionBuilder {
         return this.deliveryId;
     }
 
-    @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
-        return this.type;
+    public String getName() {
+        return this.name;
     }
 
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
-        return this.fields;
+    public java.lang.Object getValue() {
+        return this.value;
     }
 
     public OrderSetDeliveryAddressCustomFieldAction build() {
-        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, type, fields);
+        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
     }
 
     public static OrderSetDeliveryAddressCustomFieldActionBuilder of() {
@@ -61,8 +57,8 @@ public final class OrderSetDeliveryAddressCustomFieldActionBuilder {
             final OrderSetDeliveryAddressCustomFieldAction template) {
         OrderSetDeliveryAddressCustomFieldActionBuilder builder = new OrderSetDeliveryAddressCustomFieldActionBuilder();
         builder.deliveryId = template.getDeliveryId();
-        builder.type = template.getType();
-        builder.fields = template.getFields();
+        builder.name = template.getName();
+        builder.value = template.getValue();
         return builder;
     }
 

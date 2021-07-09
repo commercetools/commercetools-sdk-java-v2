@@ -21,16 +21,17 @@ public final class StagedOrderSetDeliveryAddressCustomTypeActionImpl
 
     private String deliveryId;
 
-    private String name;
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private java.lang.Object value;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
     StagedOrderSetDeliveryAddressCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.deliveryId = deliveryId;
-        this.name = name;
-        this.value = value;
+        this.type = type;
+        this.fields = fields;
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
     }
 
@@ -46,24 +47,24 @@ public final class StagedOrderSetDeliveryAddressCustomTypeActionImpl
         return this.deliveryId;
     }
 
-    public String getName() {
-        return this.name;
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+        return this.type;
     }
 
-    public java.lang.Object getValue() {
-        return this.value;
+    public com.commercetools.api.models.type.FieldContainer getFields() {
+        return this.fields;
     }
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
 
-    public void setName(final String name) {
-        this.name = name;
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+        this.type = type;
     }
 
-    public void setValue(final java.lang.Object value) {
-        this.value = value;
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
+        this.fields = fields;
     }
 
     @Override
@@ -78,14 +79,14 @@ public final class StagedOrderSetDeliveryAddressCustomTypeActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
-                .append(name, that.name)
-                .append(value, that.value)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();
     }
 
 }

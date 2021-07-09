@@ -5,11 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -25,19 +22,18 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
-    @Valid
-    @JsonProperty("type")
-    public TypeResourceIdentifier getType();
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
-    @Valid
-    @JsonProperty("fields")
-    public FieldContainer getFields();
+    @JsonProperty("value")
+    public Object getValue();
 
     public void setDeliveryId(final String deliveryId);
 
-    public void setType(final TypeResourceIdentifier type);
+    public void setName(final String name);
 
-    public void setFields(final FieldContainer fields);
+    public void setValue(final Object value);
 
     public static CartSetDeliveryAddressCustomFieldAction of() {
         return new CartSetDeliveryAddressCustomFieldActionImpl();
@@ -46,8 +42,8 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
     public static CartSetDeliveryAddressCustomFieldAction of(final CartSetDeliveryAddressCustomFieldAction template) {
         CartSetDeliveryAddressCustomFieldActionImpl instance = new CartSetDeliveryAddressCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setType(template.getType());
-        instance.setFields(template.getFields());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
         return instance;
     }
 

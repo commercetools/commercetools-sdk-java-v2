@@ -20,17 +20,16 @@ public final class CartSetDeliveryAddressCustomFieldActionImpl implements CartSe
 
     private String deliveryId;
 
-    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+    private String name;
 
-    private com.commercetools.api.models.type.FieldContainer fields;
+    private java.lang.Object value;
 
     @JsonCreator
     CartSetDeliveryAddressCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.deliveryId = deliveryId;
-        this.type = type;
-        this.fields = fields;
+        this.name = name;
+        this.value = value;
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }
 
@@ -46,24 +45,24 @@ public final class CartSetDeliveryAddressCustomFieldActionImpl implements CartSe
         return this.deliveryId;
     }
 
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
-        return this.type;
+    public String getName() {
+        return this.name;
     }
 
-    public com.commercetools.api.models.type.FieldContainer getFields() {
-        return this.fields;
+    public java.lang.Object getValue() {
+        return this.value;
     }
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
 
-    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-        this.type = type;
+    public void setName(final String name) {
+        this.name = name;
     }
 
-    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
-        this.fields = fields;
+    public void setValue(final java.lang.Object value) {
+        this.value = value;
     }
 
     @Override
@@ -78,14 +77,14 @@ public final class CartSetDeliveryAddressCustomFieldActionImpl implements CartSe
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
-                .append(type, that.type)
-                .append(fields, that.fields)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
     }
 
 }

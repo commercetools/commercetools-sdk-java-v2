@@ -9,7 +9,6 @@ plugins {
 
     id 'idea'
 
-    id 'maven'
     id 'maven-publish'
     id 'signing'
 
@@ -155,7 +154,6 @@ subprojects { project ->
 
     apply plugin: 'idea'
 
-    apply plugin: 'maven'
     apply plugin: 'maven-publish'
     apply plugin: 'signing'
 

@@ -133,7 +133,7 @@ public class ProductIntegrationTests {
                     .withId(product.getId())
                     .images()
                     .post(imageFile)
-                    .withHeader(ApiHttpHeaders.CONTENT_TYPE, "image/gif")
+                    .contentType("image/gif")
                     .withSku(product.getMasterData().getCurrent().getMasterVariant().getSku())
                     .executeBlocking();
         });

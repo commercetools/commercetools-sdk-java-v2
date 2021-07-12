@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemPrice {
 
     /**
-    *  <p>Maps to <code>Price.value</code>.</p>
+    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
     */
     @NotNull
     @Valid

@@ -31,10 +31,16 @@ public final class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPr
     public CustomLineItemTaxedPriceImpl() {
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross() {
         return this.totalGross;
     }

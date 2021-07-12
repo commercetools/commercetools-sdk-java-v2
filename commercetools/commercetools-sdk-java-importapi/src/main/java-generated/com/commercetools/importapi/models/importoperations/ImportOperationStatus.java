@@ -14,29 +14,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>The validation status of a created operation.</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportOperationStatusImpl.class)
 public interface ImportOperationStatus {
 
     /**
-    *  <p>Id of the import operation.</p>
+    *  <p>The ID of the <a href="#importoperation">ImportOperation</a>.</p>
     */
 
     @JsonProperty("operationId")
     public String getOperationId();
 
     /**
-    *  <p>Validation state of the import operation.</p>
+    *  <p>The validation state of the <a href="#importoperation">ImportOperation</a>.</p>
     */
     @NotNull
     @JsonProperty("state")
     public ImportOperationState getState();
 
     /**
-    *  <p>Validation errors for the import operation.</p>
+    *  <p>The validation errors for the <a href="#importoperation">ImportOperation</a>.
+    *  See <a href="/error">Errors</a>.</p>
     */
     @Valid
     @JsonProperty("errors")

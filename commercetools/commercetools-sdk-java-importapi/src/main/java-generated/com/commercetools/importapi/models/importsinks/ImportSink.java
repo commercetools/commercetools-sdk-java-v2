@@ -15,45 +15,44 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An import sink is the entry point for import resources from other systems.</p>
-*  <p>It has an unique key and is specific to an import resource type.</p>
+*  <p>Serves as the entry point of resources.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportSinkImpl.class)
 public interface ImportSink {
 
     /**
-    *  <p>The unique key of the import sink.</p>
-    *  <p>Valid characters are: alphabetic characters (A-Z, a-z), numeric characters (0-9), underscores (_) and hyphens (-).</p>
+    *  <p>User-defined unique identifier for the ImportSink.
+    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>The type of import resource sent to this import sink.
-    *  You can only send one resource type per import sink.</p>
+    *  <p>The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.
+    *  If not present, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
     */
-    @NotNull
+
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
     /**
-    *  <p>The version of this resource.</p>
+    *  <p>The version of the ImportSink.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>When the import sink was created.</p>
+    *  <p>The time when the ImportSink was created.</p>
     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>When the import sink was modified.</p>
+    *  <p>The last time when the ImportSink was modified.</p>
     */
     @NotNull
     @JsonProperty("lastModifiedAt")

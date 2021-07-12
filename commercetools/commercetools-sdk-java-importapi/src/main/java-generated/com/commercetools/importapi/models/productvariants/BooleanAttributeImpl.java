@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This type represents an attribute which value is either &quot;true&quot; or &quot;false&quot;.</p>
+*  <p>This type represents an attribute whose value is either &quot;true&quot; or &quot;false&quot;.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class BooleanAttributeImpl implements BooleanAttribute {

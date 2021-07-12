@@ -41,6 +41,9 @@ public final class TaxPortionImpl implements TaxPortion {
         return this.rate;
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getAmount() {
         return this.amount;
     }

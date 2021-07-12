@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetShippingAddressCustomTypeActionBuilder {
+public final class StagedOrderSetShippingAddressCustomTypeActionBuilder {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -16,13 +16,13 @@ public final class OrderEditSetShippingAddressCustomTypeActionBuilder {
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    public OrderEditSetShippingAddressCustomTypeActionBuilder type(
+    public StagedOrderSetShippingAddressCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
 
-    public OrderEditSetShippingAddressCustomTypeActionBuilder fields(
+    public StagedOrderSetShippingAddressCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
@@ -38,17 +38,17 @@ public final class OrderEditSetShippingAddressCustomTypeActionBuilder {
         return this.fields;
     }
 
-    public OrderEditSetShippingAddressCustomTypeAction build() {
-        return new OrderEditSetShippingAddressCustomTypeActionImpl(type, fields);
+    public StagedOrderSetShippingAddressCustomTypeAction build() {
+        return new StagedOrderSetShippingAddressCustomTypeActionImpl(type, fields);
     }
 
-    public static OrderEditSetShippingAddressCustomTypeActionBuilder of() {
-        return new OrderEditSetShippingAddressCustomTypeActionBuilder();
+    public static StagedOrderSetShippingAddressCustomTypeActionBuilder of() {
+        return new StagedOrderSetShippingAddressCustomTypeActionBuilder();
     }
 
-    public static OrderEditSetShippingAddressCustomTypeActionBuilder of(
-            final OrderEditSetShippingAddressCustomTypeAction template) {
-        OrderEditSetShippingAddressCustomTypeActionBuilder builder = new OrderEditSetShippingAddressCustomTypeActionBuilder();
+    public static StagedOrderSetShippingAddressCustomTypeActionBuilder of(
+            final StagedOrderSetShippingAddressCustomTypeAction template) {
+        StagedOrderSetShippingAddressCustomTypeActionBuilder builder = new StagedOrderSetShippingAddressCustomTypeActionBuilder();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

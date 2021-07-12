@@ -4,10 +4,12 @@ package com.commercetools.ml.client;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.file.Files;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.*;
@@ -44,7 +46,13 @@ public class ByProjectKeyImageSearchPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            ApiHttpHeaders headers = getHeaders();
+            if (headers.getFirst(ApiHttpHeaders.CONTENT_TYPE) == null) {
+                final String mimeType = Optional.ofNullable(URLConnection.guessContentTypeFromName(file.getName()))
+                        .orElse("application/octet-stream");
+                headers = headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, mimeType);
+            }
+            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), headers,
                 Files.readAllBytes(file.toPath()));
         }
         catch (Exception e) {

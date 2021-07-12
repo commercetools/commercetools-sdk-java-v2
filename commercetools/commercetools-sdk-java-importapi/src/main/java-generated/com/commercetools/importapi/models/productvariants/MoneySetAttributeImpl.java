@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This type represents an attribute which value is a set of money objects.</p>
+*  <p>This type represents an attribute whose value is a set of money objects.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MoneySetAttributeImpl implements MoneySetAttribute {
@@ -50,6 +50,9 @@ public final class MoneySetAttributeImpl implements MoneySetAttribute {
         return this.type;
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
     }

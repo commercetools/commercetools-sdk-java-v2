@@ -59,7 +59,7 @@ public final class LineItemPriceImpl implements LineItemPrice {
     }
 
     /**
-    *  <p>Maps to <code>Price.value</code>.</p>
+    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
     */
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;

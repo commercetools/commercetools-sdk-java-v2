@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
-        implements OrderEditSetDeliveryAddressCustomTypeAction {
+public final class StagedOrderSetDeliveryAddressCustomFieldActionImpl
+        implements StagedOrderSetDeliveryAddressCustomFieldAction {
 
     private String action;
 
@@ -26,16 +26,16 @@ public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
     private java.lang.Object value;
 
     @JsonCreator
-    OrderEditSetDeliveryAddressCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+    StagedOrderSetDeliveryAddressCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.deliveryId = deliveryId;
         this.name = name;
         this.value = value;
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
+        this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }
 
-    public OrderEditSetDeliveryAddressCustomTypeActionImpl() {
-        this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
+    public StagedOrderSetDeliveryAddressCustomFieldActionImpl() {
+        this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }
 
     public String getAction() {
@@ -74,7 +74,7 @@ public final class OrderEditSetDeliveryAddressCustomTypeActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetDeliveryAddressCustomTypeActionImpl that = (OrderEditSetDeliveryAddressCustomTypeActionImpl) o;
+        StagedOrderSetDeliveryAddressCustomFieldActionImpl that = (StagedOrderSetDeliveryAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)

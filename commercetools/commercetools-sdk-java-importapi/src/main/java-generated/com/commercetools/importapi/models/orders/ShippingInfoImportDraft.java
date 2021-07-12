@@ -29,6 +29,9 @@ public interface ShippingInfoImportDraft {
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("price")
@@ -57,6 +60,9 @@ public interface ShippingInfoImportDraft {
     @JsonProperty("shippingMethod")
     public ShippingMethodKeyReference getShippingMethod();
 
+    /**
+    *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+    */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();

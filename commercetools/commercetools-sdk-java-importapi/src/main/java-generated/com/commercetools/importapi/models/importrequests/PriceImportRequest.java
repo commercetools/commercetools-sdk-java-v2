@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An import request for multiple price import resources.</p>
+*  <p>The request body to <a href="#import-prices">import Prices</a>. Contains data for <a href="/../api/projects/products#price">Prices</a> to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PriceImportRequestImpl.class)

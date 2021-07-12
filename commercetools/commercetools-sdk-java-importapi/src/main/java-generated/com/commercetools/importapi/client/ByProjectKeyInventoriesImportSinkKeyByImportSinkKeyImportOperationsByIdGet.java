@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Retrieves the import operation with the given id.</p>
+*  <p>Retrieves the ImportOperation of a given ID.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsByIdGet extends

@@ -14,11 +14,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for an order.</p>
-*  <p>In commercetools, you can import an order using the
+*  <p>The data representation for an Order to be imported that is persisted as an <a href="/../api/projects/orders#top">Order</a> in the Project.</p>
+*  <p>In commercetools, you can import an Order using the
 *  <a href="https://docs.commercetools.com/http-api-projects-orders-import.html#create-an-order-by-import">Create Order by Import</a>
-*  endpoint method instead of creating it from a cart.</p>
-*  <p>The order import draft is a snapshot of an order at the time it was imported.</p>
+*  endpoint method instead of creating it from a Cart.</p>
+*  <p>An OrderImport is a snapshot of an order at the time it was imported.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderImportImpl implements OrderImport {
@@ -124,9 +124,6 @@ public final class OrderImportImpl implements OrderImport {
         return this.orderNumber;
     }
 
-    /**
-    *  <p>References a customer by its key.</p>
-    */
     public com.commercetools.importapi.models.common.CustomerKeyReference getCustomer() {
         return this.customer;
     }
@@ -153,7 +150,7 @@ public final class OrderImportImpl implements OrderImport {
     }
 
     /**
-    *  <p>Maps to <code>Order.totalPrice</code>.</p>
+    *  <p>Maps to <code>Order.totalPrice</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
     */
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;

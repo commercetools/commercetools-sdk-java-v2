@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetBillingAddressCustomFieldActionImpl
-        implements OrderEditSetBillingAddressCustomFieldAction {
+public final class StagedOrderSetBillingAddressCustomFieldActionImpl
+        implements StagedOrderSetBillingAddressCustomFieldAction {
 
     private String action;
 
@@ -24,14 +24,14 @@ public final class OrderEditSetBillingAddressCustomFieldActionImpl
     private java.lang.Object value;
 
     @JsonCreator
-    OrderEditSetBillingAddressCustomFieldActionImpl(@JsonProperty("name") final String name,
+    StagedOrderSetBillingAddressCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
         this.name = name;
         this.value = value;
         this.action = SET_BILLING_ADDRESS_CUSTOM_FIELD;
     }
 
-    public OrderEditSetBillingAddressCustomFieldActionImpl() {
+    public StagedOrderSetBillingAddressCustomFieldActionImpl() {
         this.action = SET_BILLING_ADDRESS_CUSTOM_FIELD;
     }
 
@@ -63,7 +63,7 @@ public final class OrderEditSetBillingAddressCustomFieldActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetBillingAddressCustomFieldActionImpl that = (OrderEditSetBillingAddressCustomFieldActionImpl) o;
+        StagedOrderSetBillingAddressCustomFieldActionImpl that = (StagedOrderSetBillingAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
                 .append(name, that.name)

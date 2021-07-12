@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for a customer.</p>
+*  <p>The data representation for a Customer to be imported that is persisted as a <a href="/../api/projects/customers#top">Customer</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerImportImpl implements CustomerImport {
@@ -138,10 +138,7 @@ public final class CustomerImportImpl implements CustomerImport {
     }
 
     /**
-    *  <p>References stores by its keys.</p>
-    *  <p>The stores referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Stores are created.</p>
     */
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
         return this.stores;
@@ -218,10 +215,8 @@ public final class CustomerImportImpl implements CustomerImport {
     }
 
     /**
-    *  <p>References a customer group by its key.</p>
-    *  <p>The customer group referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
+    *  <p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Customer is associated.
+    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary CustomerGroup is created.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;

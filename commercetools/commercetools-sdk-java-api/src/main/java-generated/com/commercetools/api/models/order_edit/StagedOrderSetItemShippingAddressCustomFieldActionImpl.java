@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetItemShippingAddressCustomFieldActionImpl
-        implements OrderEditSetItemShippingAddressCustomFieldAction {
+public final class StagedOrderSetItemShippingAddressCustomFieldActionImpl
+        implements StagedOrderSetItemShippingAddressCustomFieldAction {
 
     private String action;
 
@@ -26,7 +26,7 @@ public final class OrderEditSetItemShippingAddressCustomFieldActionImpl
     private java.lang.Object value;
 
     @JsonCreator
-    OrderEditSetItemShippingAddressCustomFieldActionImpl(@JsonProperty("addressKey") final String addressKey,
+    StagedOrderSetItemShippingAddressCustomFieldActionImpl(@JsonProperty("addressKey") final String addressKey,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.addressKey = addressKey;
         this.name = name;
@@ -34,7 +34,7 @@ public final class OrderEditSetItemShippingAddressCustomFieldActionImpl
         this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }
 
-    public OrderEditSetItemShippingAddressCustomFieldActionImpl() {
+    public StagedOrderSetItemShippingAddressCustomFieldActionImpl() {
         this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }
 
@@ -74,7 +74,7 @@ public final class OrderEditSetItemShippingAddressCustomFieldActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetItemShippingAddressCustomFieldActionImpl that = (OrderEditSetItemShippingAddressCustomFieldActionImpl) o;
+        StagedOrderSetItemShippingAddressCustomFieldActionImpl that = (StagedOrderSetItemShippingAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
                 .append(addressKey, that.addressKey)

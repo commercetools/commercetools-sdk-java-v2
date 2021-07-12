@@ -113,7 +113,7 @@ public final class CustomerAddressImpl implements CustomerAddress {
 
     /**
     *  <p>User-defined identifier for the address.
-    *  It must follow the pattern [a-zA-Z0-9_-]{2,256}, and unique per customer.</p>
+    *  Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
     */
     public String getKey() {
         return this.key;

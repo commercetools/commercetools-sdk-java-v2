@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Import representation for a product type.</p>
+*  <p>The data representation for a ProductType to be imported that is persisted as a <a href="/../api/projects/productTypes#producttype">ProductType</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImportImpl.class)
@@ -36,7 +36,7 @@ public interface ProductTypeImport extends ImportResource {
     public String getDescription();
 
     /**
-    *  <p>The product type's attributes.</p>
+    *  <p>The <code>attributes</code> of <a href="/../api/projects/productTypes#producttype">ProductType</a>.</p>
     */
     @Valid
     @JsonProperty("attributes")

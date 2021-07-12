@@ -15,6 +15,9 @@ public final class ProductVariantPatchBuilder {
     @Nullable
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
+    @Nullable
+    private Boolean staged;
+
     public ProductVariantPatchBuilder productVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
@@ -27,6 +30,11 @@ public final class ProductVariantPatchBuilder {
         return this;
     }
 
+    public ProductVariantPatchBuilder staged(@Nullable final Boolean staged) {
+        this.staged = staged;
+        return this;
+    }
+
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
         return this.productVariant;
     }
@@ -36,8 +44,13 @@ public final class ProductVariantPatchBuilder {
         return this.attributes;
     }
 
+    @Nullable
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
     public ProductVariantPatch build() {
-        return new ProductVariantPatchImpl(productVariant, attributes);
+        return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
 
     public static ProductVariantPatchBuilder of() {
@@ -48,6 +61,7 @@ public final class ProductVariantPatchBuilder {
         ProductVariantPatchBuilder builder = new ProductVariantPatchBuilder();
         builder.productVariant = template.getProductVariant();
         builder.attributes = template.getAttributes();
+        builder.staged = template.getStaged();
         return builder;
     }
 

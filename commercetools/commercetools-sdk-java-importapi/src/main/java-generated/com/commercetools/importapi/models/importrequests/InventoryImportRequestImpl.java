@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>An import request for multiple inventory import resources.</p>
+*  <p>The request body to <a href="#import-inventories">import Inventories</a>. Contains data for <a href="/../api//projects/inventory#inventoryentry">Inventories</a> to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryImportRequestImpl implements InventoryImportRequest {

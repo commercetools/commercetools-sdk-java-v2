@@ -13,9 +13,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
-*  <p>The validation status of a created operation.</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportOperationStatusImpl implements ImportOperationStatus {
 
@@ -38,21 +35,22 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
     }
 
     /**
-    *  <p>Id of the import operation.</p>
+    *  <p>The ID of the <a href="#importoperation">ImportOperation</a>.</p>
     */
     public String getOperationId() {
         return this.operationId;
     }
 
     /**
-    *  <p>Validation state of the import operation.</p>
+    *  <p>The validation state of the <a href="#importoperation">ImportOperation</a>.</p>
     */
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
         return this.state;
     }
 
     /**
-    *  <p>Validation errors for the import operation.</p>
+    *  <p>The validation errors for the <a href="#importoperation">ImportOperation</a>.
+    *  See <a href="/error">Errors</a>.</p>
     */
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;

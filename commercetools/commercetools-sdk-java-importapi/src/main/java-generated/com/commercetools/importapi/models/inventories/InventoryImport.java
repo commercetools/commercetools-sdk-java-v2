@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Import representation for a inventory.</p>
+*  <p>The data representation for an Inventory to be imported that is persisted as a <a href="/../api/projects/inventory#top">Inventory</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryImportImpl.class)

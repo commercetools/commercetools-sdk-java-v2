@@ -14,7 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for an update to an Order. Use this type for importing updates to an existing Order into a commercetools project.</p>
+*  <p>Representation for an update of an <a href="/../api/projects/orders#order">Order</a>. Use this type to import updates for existing
+*  <a href="/../api/projects/orders#order">Orders</a> in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderPatchImportImpl implements OrderPatchImport {

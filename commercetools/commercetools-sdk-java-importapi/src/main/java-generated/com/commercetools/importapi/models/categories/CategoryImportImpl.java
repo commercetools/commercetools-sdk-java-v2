@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for a category.</p>
+*  <p>The data representation for a Category to be imported that is persisted as a <a href="/../api/projects/categories#category">Category</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryImportImpl implements CategoryImport {
@@ -100,9 +100,8 @@ public final class CategoryImportImpl implements CategoryImport {
 
     /**
     *  <p>Maps to <code>Category.parent</code>.
-    *  The parent category referenced must already exist
-    *  in the commercetools project, or the import operation
-    *  will have an <code>Unresolved</code> state.</p>
+    *  The Reference to the parent <a href="/../api/projects/categories#category">Category</a> with which the Category is associated.
+    *  If referenced Category does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Category is created.</p>
     */
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
         return this.parent;
@@ -148,7 +147,7 @@ public final class CategoryImportImpl implements CategoryImport {
     }
 
     /**
-    *  <p>The custom fields for this category.</p>
+    *  <p>The custom fields for this Category.</p>
     */
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;

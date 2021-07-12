@@ -14,37 +14,30 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetItemShippingAddressCustomTypeActionImpl
-        implements OrderEditSetItemShippingAddressCustomTypeAction {
+public final class StagedOrderSetBillingAddressCustomTypeActionImpl
+        implements StagedOrderSetBillingAddressCustomTypeAction {
 
     private String action;
-
-    private String addressKey;
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
-    OrderEditSetItemShippingAddressCustomTypeActionImpl(@JsonProperty("addressKey") final String addressKey,
+    StagedOrderSetBillingAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
-        this.addressKey = addressKey;
         this.type = type;
         this.fields = fields;
-        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
+        this.action = SET_BILLING_ADDRESS_CUSTOM_TYPE;
     }
 
-    public OrderEditSetItemShippingAddressCustomTypeActionImpl() {
-        this.action = SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE;
+    public StagedOrderSetBillingAddressCustomTypeActionImpl() {
+        this.action = SET_BILLING_ADDRESS_CUSTOM_TYPE;
     }
 
     public String getAction() {
         return this.action;
-    }
-
-    public String getAddressKey() {
-        return this.addressKey;
     }
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -53,10 +46,6 @@ public final class OrderEditSetItemShippingAddressCustomTypeActionImpl
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
-    }
-
-    public void setAddressKey(final String addressKey) {
-        this.addressKey = addressKey;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -75,10 +64,9 @@ public final class OrderEditSetItemShippingAddressCustomTypeActionImpl
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderEditSetItemShippingAddressCustomTypeActionImpl that = (OrderEditSetItemShippingAddressCustomTypeActionImpl) o;
+        StagedOrderSetBillingAddressCustomTypeActionImpl that = (StagedOrderSetBillingAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(addressKey, that.addressKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -86,7 +74,7 @@ public final class OrderEditSetItemShippingAddressCustomTypeActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(addressKey).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).toHashCode();
     }
 
 }

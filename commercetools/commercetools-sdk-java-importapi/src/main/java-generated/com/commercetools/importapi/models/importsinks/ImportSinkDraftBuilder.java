@@ -15,6 +15,7 @@ public final class ImportSinkDraftBuilder {
 
     private String key;
 
+    @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     public ImportSinkDraftBuilder version(@Nullable final Long version) {
@@ -28,7 +29,7 @@ public final class ImportSinkDraftBuilder {
     }
 
     public ImportSinkDraftBuilder resourceType(
-            final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+            @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -42,6 +43,7 @@ public final class ImportSinkDraftBuilder {
         return this.key;
     }
 
+    @Nullable
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }

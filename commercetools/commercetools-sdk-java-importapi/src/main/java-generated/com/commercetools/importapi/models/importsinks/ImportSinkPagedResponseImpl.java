@@ -14,7 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Response to a query request for <a href="#importsink">ImportSinks</a>.</p>
+*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for <a href="#importsink">ImportSinks</a>.
+*  Used as a response to a query request for <a href="#importsink">ImportSinks</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse {
@@ -44,21 +45,22 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
     }
 
     /**
-    *  <p>The maximum number of import operations returned for a page.</p>
+    *  <p>The number of results requested in the query request.</p>
     */
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
+    *  <p>The number of elements skipped, not a page number.
+    *  Supplied by the client or the server default.</p>
     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>The actual number of results returned by this response.</p>
+    *  <p>The actual number of results returned.</p>
     */
     public Long getCount() {
         return this.count;
@@ -72,7 +74,7 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
     }
 
     /**
-    *  <p>The results for this paged response.</p>
+    *  <p>The array of Import Sinks matching the query.</p>
     */
     public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults() {
         return this.results;

@@ -71,6 +71,10 @@ public class ByProjectKeyImportSinksGet extends
         return this.getQueryParam("offset");
     }
 
+    public List<String> getSort() {
+        return this.getQueryParam("sort");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
     }
@@ -89,6 +93,14 @@ public class ByProjectKeyImportSinksGet extends
 
     public ByProjectKeyImportSinksGet addOffset(final double offset) {
         return copy().addQueryParam("offset", offset);
+    }
+
+    public ByProjectKeyImportSinksGet withSort(final String sort) {
+        return copy().withQueryParam("sort", sort);
+    }
+
+    public ByProjectKeyImportSinksGet addSort(final String sort) {
+        return copy().addQueryParam("sort", sort);
     }
 
     @Override

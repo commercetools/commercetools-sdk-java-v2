@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import representation for a product type.</p>
+*  <p>The data representation for a ProductType to be imported that is persisted as a <a href="/../api/projects/productTypes#producttype">ProductType</a> in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeImportImpl implements ProductTypeImport {
@@ -59,7 +59,7 @@ public final class ProductTypeImportImpl implements ProductTypeImport {
     }
 
     /**
-    *  <p>The product type's attributes.</p>
+    *  <p>The <code>attributes</code> of <a href="/../api/projects/productTypes#producttype">ProductType</a>.</p>
     */
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
         return this.attributes;

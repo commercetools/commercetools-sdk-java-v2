@@ -81,6 +81,9 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         return this.name;
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getMoney() {
         return this.money;
     }
@@ -89,6 +92,9 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         return this.taxedPrice;
     }
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }

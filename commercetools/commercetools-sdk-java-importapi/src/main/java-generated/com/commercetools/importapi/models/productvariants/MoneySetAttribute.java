@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents an attribute which value is a set of money objects.</p>
+*  <p>This type represents an attribute whose value is a set of money objects.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
@@ -23,6 +23,9 @@ public interface MoneySetAttribute extends Attribute {
 
     String MONEY_SET = "money-set";
 
+    /**
+    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")

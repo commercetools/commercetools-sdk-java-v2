@@ -71,15 +71,13 @@ public class ByProjectKeyProductsByIDImagesTest {
                                 .withFilename("filename")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/products/test_ID/images?filename=filename", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .withId("test_ID")
-                                .images()
-                                .post(null)
-                                .withVariant(0.8538737)
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID/images?variant=0.8538737", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withId("test_ID")
+                        .images()
+                        .post(null)
+                        .withVariant(7)
+                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?variant=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
@@ -115,7 +113,7 @@ public class ByProjectKeyProductsByIDImagesTest {
                         .withId("test_ID")
                         .images()
                         .post(null)
-                        .withVariant(0.8538737), },
+                        .withVariant(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")

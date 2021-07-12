@@ -50,8 +50,8 @@ jobs:
 
       - name: Test examples
         run: |
-          cd examples/maven-okhttp3 && mvn verify
-          cd ../maven-okhttp4 && mvn verify
+          cd examples/maven-okhttp3 && mvn verify --no-transfer-progress -q
+          cd ../maven-okhttp4 && mvn verify --no-transfer-progress -q
 
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport

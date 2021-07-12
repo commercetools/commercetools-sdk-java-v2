@@ -19,20 +19,22 @@ public class CommercetoolsTestUtils {
     private static final ByProjectKeyRequestBuilder projectRoot;
 
     static {
-        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1 : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
-        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl() : System.getenv("CTP_AUTH_URL");
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
+                : System.getenv("CTP_AUTH_URL");
         String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if ("OFF".equals(logLevel)) {
             client = ApiFactory.defaultClient(
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    authURL, apiUrl);
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(), authURL,
+                apiUrl);
             projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
         }
         else {
             client = ApiFactory.defaultClient(
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                authURL, apiUrl);
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(), authURL,
+                apiUrl);
             projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
         }
     }

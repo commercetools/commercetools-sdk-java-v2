@@ -12,8 +12,6 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;

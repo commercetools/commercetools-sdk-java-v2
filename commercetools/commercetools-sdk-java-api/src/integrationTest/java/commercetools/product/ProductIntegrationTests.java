@@ -127,13 +127,17 @@ public class ProductIntegrationTests {
             }
 
             final ByProjectKeyRequestBuilder projectRoot = CommercetoolsTestUtils.getProjectRoot();
-            projectRoot.products()
+            final Product result = projectRoot.products()
                     .withId(product.getId())
                     .images()
                     .post(imageFile)
                     .contentType("image/gif")
                     .withSku(product.getMasterData().getCurrent().getMasterVariant().getSku())
-                    .executeBlocking();
+                    .executeBlocking()
+                    .getBody();
+
+            Assert.assertSame(1, result.getMasterData().getStaged().getMasterVariant().getImages().size()
+                    - product.getMasterData().getStaged().getMasterVariant().getImages().size());
         });
     }
 }

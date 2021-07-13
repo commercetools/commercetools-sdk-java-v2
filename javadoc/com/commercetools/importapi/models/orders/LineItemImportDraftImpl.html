@@ -114,9 +114,9 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">LineItemImportDraftImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></pre>
-<div class="block"><p>Represents an individual line item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-  <p>You cannot create an order which includes line operations that do not exist in the project or have been deleted.
-  Products and variants referenced by a line item must already exist in the commercetools project.</p></div>
+<div class="block"><p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
+  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted.
+  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p></div>
 </li>
 </ul>
 </div>
@@ -159,7 +159,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>
-<div class="block">References a distribution channel.</div>
+<div class="block">Maps to <code>LineItem.distributionChannel</code>.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -199,7 +199,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>
-<div class="block">References a supply channel.</div>
+<div class="block">Maps to <code>LineItem.supplyChannel</code>.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -398,10 +398,9 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <li class="blockList">
 <h4>getSupplyChannel</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;getSupplyChannel()</pre>
-<div class="block"><p>References a supply channel. Maps to <code>LineItem.supplyChannel</code>.</p>
-  <p>The supply channel referenced must already exist
-  in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>.
+  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
+  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Supply Channel is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getSupplyChannel--">getSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -415,10 +414,9 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <li class="blockList">
 <h4>getDistributionChannel</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;getDistributionChannel()</pre>
-<div class="block"><p>References a distribution channel. Maps to <code>LineItem.distributionChannel</code>.</p>
-  <p>The distribution channel referenced must already exist
-  in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>.
+  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
+  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Distribution Channel is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getDistributionChannel--">getDistributionChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>

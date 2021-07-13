@@ -114,8 +114,7 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">ImportSinkImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></pre>
-<div class="block"><p>An import sink is the entry point for import resources from other systems.</p>
-  <p>It has an unique key and is specific to an import resource type.</p></div>
+<div class="block"><p>Serves as the entry point of resources.</p></div>
 </li>
 </ul>
 </div>
@@ -158,31 +157,31 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkImpl.html#getCreatedAt--">getCreatedAt</a></span>()</code>
-<div class="block">When the import sink was created.</div>
+<div class="block">The time when the ImportSink was created.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkImpl.html#getKey--">getKey</a></span>()</code>
-<div class="block">The unique key of the import sink.</div>
+<div class="block">User-defined unique identifier for the ImportSink.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkImpl.html#getLastModifiedAt--">getLastModifiedAt</a></span>()</code>
-<div class="block">When the import sink was modified.</div>
+<div class="block">The last time when the ImportSink was modified.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkImpl.html#getResourceType--">getResourceType</a></span>()</code>
-<div class="block">The type of import resource sent to this import sink.</div>
+<div class="block">The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkImpl.html#getVersion--">getVersion</a></span>()</code>
-<div class="block">The version of this resource.</div>
+<div class="block">The version of the ImportSink.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -262,8 +261,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getKey</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getKey()</pre>
-<div class="block"><p>The unique key of the import sink.</p>
-  <p>Valid characters are: alphabetic characters (A-Z, a-z), numeric characters (0-9), underscores (_) and hyphens (-).</p></div>
+<div class="block"><p>User-defined unique identifier for the ImportSink.
+  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html#getKey--">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></code></dd>
@@ -277,8 +276,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getResourceType</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;getResourceType()</pre>
-<div class="block"><p>The type of import resource sent to this import sink.
-  You can only send one resource type per import sink.</p></div>
+<div class="block"><p>The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.
+  If not present, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html#getResourceType--">getResourceType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></code></dd>
@@ -292,7 +291,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getVersion</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getVersion()</pre>
-<div class="block"><p>The version of this resource.</p></div>
+<div class="block"><p>The version of the ImportSink.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html#getVersion--">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></code></dd>
@@ -306,7 +305,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getCreatedAt</h4>
 <pre>public&nbsp;java.time.ZonedDateTime&nbsp;getCreatedAt()</pre>
-<div class="block"><p>When the import sink was created.</p></div>
+<div class="block"><p>The time when the ImportSink was created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html#getCreatedAt--">getCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></code></dd>
@@ -320,7 +319,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getLastModifiedAt</h4>
 <pre>public&nbsp;java.time.ZonedDateTime&nbsp;getLastModifiedAt()</pre>
-<div class="block"><p>When the import sink was modified.</p></div>
+<div class="block"><p>The last time when the ImportSink was modified.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html#getLastModifiedAt--">getLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSink.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSink</a></code></dd>

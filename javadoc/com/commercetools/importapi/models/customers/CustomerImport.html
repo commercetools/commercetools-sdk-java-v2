@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">CustomerImport</span>
 extends <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></pre>
-<div class="block"><p>Import representation for a customer.</p></div>
+<div class="block"><p>The data representation for a Customer to be imported that is persisted as a <a href="/../api/projects/customers#top">Customer</a> in the Project.</p></div>
 </li>
 </ul>
 </div>
@@ -163,7 +163,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>
-<div class="block">References a customer group by its key.</div>
+<div class="block">The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Customer is associated.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -253,7 +253,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getStores--">getStores</a></span>()</code>
-<div class="block">References stores by its keys.</div>
+<div class="block">The References to the Stores with which the Customer is associated.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
@@ -446,10 +446,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <h4>getStores</h4>
 <pre>@Valid
 @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;getStores()</pre>
-<div class="block"><p>References stores by its keys.</p>
-  <p>The stores referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Stores are created.</p></div>
 </li>
 </ul>
 <a name="getFirstName--">
@@ -560,10 +557,8 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <h4>getCustomerGroup</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;getCustomerGroup()</pre>
-<div class="block"><p>References a customer group by its key.</p>
-  <p>The customer group referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Customer is associated.
+  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary CustomerGroup is created.</p></div>
 </li>
 </ul>
 <a name="getAddresses--">

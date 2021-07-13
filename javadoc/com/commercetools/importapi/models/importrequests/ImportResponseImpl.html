@@ -114,8 +114,8 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">ImportResponseImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></pre>
-<div class="block"><p>The import response contains an import operation for each import resource sent with an import request. Use it for tracking the progress of imports to a commercetools project.</p>
-  <p>This is a generic parent type. In practice, send a specific import request type (<code>CategoryImportRequest</code>, <code>OrderImportRequest</code>, etc.) to an import sink with a matching import type.</p></div>
+<div class="block"><p>A list of the ID's and validation statuses of newly created <a href="#importoperation">ImportOperations</a>.
+  Used as a response at each resource-specific import endpoint, for example, at <a href="/category#import-categories">Import Categories</a> and <a href="/product-type#import-producttypes">Import ProductTypes</a>.</p></div>
 </li>
 </ul>
 </div>

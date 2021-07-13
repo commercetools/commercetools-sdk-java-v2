@@ -104,7 +104,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">ProcessingState</span></pre>
-<div class="block"><p>This enumeration describes the processing state of an import operation.</p></div>
+<div class="block"><p>Represents the status of a resource under an import process. Every resource has the initial state <code>Unresolved</code>.</p></div>
 </li>
 </ul>
 </div>
@@ -145,25 +145,25 @@ var activeTableTab = "activeTableTab";
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html#IMPORTED">IMPORTED</a></span></code>
-<div class="block">The import resource was imported successfully.</div>
+<div class="block">The resource was successfully imported.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html#REJECTED">REJECTED</a></span></code>
-<div class="block">The import resource couldn't be imported after several retries.</div>
+<div class="block">The resource could not be imported.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html#UNRESOLVED">UNRESOLVED</a></span></code>
-<div class="block">This is an initial state of the import resource, it might contain unresolved references and needs to be resolved further.</div>
+<div class="block">There may be unresolved references and they need to be resolved further.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html#VALIDATION_FAILED">VALIDATION_FAILED</a></span></code>
-<div class="block">The validation of the import resource failed.</div>
+<div class="block">The validation of the resource failed.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -233,7 +233,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>VALIDATION_FAILED</h4>
 <pre>static final&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> VALIDATION_FAILED</pre>
-<div class="block"><p>The validation of the import resource failed.</p></div>
+<div class="block"><p>The validation of the resource failed.</p></div>
 </li>
 </ul>
 <a name="UNRESOLVED">
@@ -243,7 +243,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>UNRESOLVED</h4>
 <pre>static final&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> UNRESOLVED</pre>
-<div class="block"><p>This is an initial state of the import resource, it might contain unresolved references and needs to be resolved further.</p></div>
+<div class="block"><p>There may be unresolved references and they need to be resolved further.</p></div>
 </li>
 </ul>
 <a name="WAIT_FOR_MASTER_VARIANT">
@@ -263,7 +263,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>IMPORTED</h4>
 <pre>static final&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> IMPORTED</pre>
-<div class="block"><p>The import resource was imported successfully.</p></div>
+<div class="block"><p>The resource was successfully imported.</p></div>
 </li>
 </ul>
 <a name="REJECTED">
@@ -273,7 +273,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>REJECTED</h4>
 <pre>static final&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> REJECTED</pre>
-<div class="block"><p>The import resource couldn't be imported after several retries.</p></div>
+<div class="block"><p>The resource could not be imported.</p></div>
 </li>
 </ul>
 </li>

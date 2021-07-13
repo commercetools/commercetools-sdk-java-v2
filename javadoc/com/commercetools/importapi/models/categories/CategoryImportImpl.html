@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">CategoryImportImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></pre>
-<div class="block"><p>Import representation for a category.</p></div>
+<div class="block"><p>The data representation for a Category to be imported that is persisted as a <a href="/../api/projects/categories#category">Category</a> in the Project.</p></div>
 </li>
 </ul>
 </div>
@@ -161,7 +161,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/categories
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportImpl.html#getCustom--">getCustom</a></span>()</code>
-<div class="block">The custom fields for this category.</div>
+<div class="block">The custom fields for this Category.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -395,9 +395,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/categories
 <h4>getParent</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&nbsp;getParent()</pre>
 <div class="block"><p>Maps to <code>Category.parent</code>.
-  The parent category referenced must already exist
-  in the commercetools project, or the import operation
-  will have an <code>Unresolved</code> state.</p></div>
+  The Reference to the parent <a href="/../api/projects/categories#category">Category</a> with which the Category is associated.
+  If referenced Category does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Category is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getParent--">getParent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></code></dd>
@@ -494,7 +493,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/categories
 <li class="blockList">
 <h4>getCustom</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;getCustom()</pre>
-<div class="block"><p>The custom fields for this category.</p></div>
+<div class="block"><p>The custom fields for this Category.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getCustom--">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></code></dd>

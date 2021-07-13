@@ -114,8 +114,8 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">ImportSummaryImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></pre>
-<div class="block"><p>An import summary describes the states of import resources of a given import sink.</p>
-  <p>It is used to track the overall progress of import resources.</p></div>
+<div class="block"><p>Describes the status of an <a href="/import-sink#importsink">ImportSink</a> by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.
+  Can be used to monitor the import progress per <a href="/import-sink">Import Sink</a>.</p></div>
 </li>
 </ul>
 </div>
@@ -158,13 +158,13 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsumm
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/importsummaries/OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummaryImpl.html#getStates--">getStates</a></span>()</code>
-<div class="block">The states summary for this import summary.</div>
+<div class="block">The import status of an <a href="/import-sink#importsink">ImportSink</a> given by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummaryImpl.html#getTotal--">getTotal</a></span>()</code>
-<div class="block">The total number of import operations received for this import group.</div>
+<div class="block">The total number of <a href="/import-operation#importoperation">ImportOperations</a> received for this Import Summary.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -232,7 +232,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsumm
 <li class="blockList">
 <h4>getStates</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/importsummaries/OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;getStates()</pre>
-<div class="block"><p>The states summary for this import summary.</p></div>
+<div class="block"><p>The import status of an <a href="/import-sink#importsink">ImportSink</a> given by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummary.html#getStates--">getStates</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></code></dd>
@@ -246,7 +246,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsumm
 <li class="blockList">
 <h4>getTotal</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getTotal()</pre>
-<div class="block"><p>The total number of import operations received for this import group.</p></div>
+<div class="block"><p>The total number of <a href="/import-operation#importoperation">ImportOperations</a> received for this Import Summary.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummary.html#getTotal--">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsummaries/ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></code></dd>

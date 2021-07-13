@@ -104,7 +104,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">ImportOperation</span></pre>
-<div class="block"><p>Tracks the status of a single import resource as it is imported into the commercetools project.</p></div>
+<div class="block"><p>Shows the import status of a specific resource.</p></div>
 </li>
 </ul>
 </div>
@@ -134,62 +134,61 @@ var activeTableTab = "activeTableTab";
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getCreatedAt--">getCreatedAt</a></span>()</code>
-<div class="block">When the import operation was created.</div>
+<div class="block">The time when the ImportOperation was created.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getErrors--">getErrors</a></span>()</code>
-<div class="block">If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
-  and this property contains the errors.</div>
+<div class="block">Contains an error if the import of the resource was not successful.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getExpiresAt--">getExpiresAt</a></span>()</code>
-<div class="block">When the import operation expires.</div>
+<div class="block">The expiration time of the ImportOperation.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getId--">getId</a></span>()</code>
-<div class="block">The identifier of the operaton that is to be commited</div>
+<div class="block">The ID of the ImportOperation.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getImportSinkKey--">getImportSinkKey</a></span>()</code>
-<div class="block">The key of the import sink.</div>
+<div class="block">The key of the <a href="/import-sink#importsink">ImportSink</a>.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getLastModifiedAt--">getLastModifiedAt</a></span>()</code>
-<div class="block">When the import operation was modified.</div>
+<div class="block">The last time When the ImportOperation was modified.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getResourceKey--">getResourceKey</a></span>()</code>
-<div class="block">The key of the import resource.</div>
+<div class="block">The key of the resource.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getResourceVersion--">getResourceVersion</a></span>()</code>
-<div class="block">When the resource is successfully imported, this represents the imported resource version</div>
+<div class="block">The version of the impmorted resource when the import was successful.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getState--">getState</a></span>()</code>
-<div class="block">The status of the import resource.</div>
+<div class="block">The import status of the resource.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html#getVersion--">getVersion</a></span>()</code>
-<div class="block">The import operation version.</div>
+<div class="block">The version of the ImportOperation.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -271,7 +270,7 @@ var activeTableTab = "activeTableTab";
 <h4>getVersion</h4>
 <pre>@NotNull
 @NotNull java.lang.Long&nbsp;getVersion()</pre>
-<div class="block"><p>The import operation version.</p></div>
+<div class="block"><p>The version of the ImportOperation.</p></div>
 </li>
 </ul>
 <a name="getImportSinkKey--">
@@ -282,7 +281,7 @@ var activeTableTab = "activeTableTab";
 <h4>getImportSinkKey</h4>
 <pre>@NotNull
 @NotNull java.lang.String&nbsp;getImportSinkKey()</pre>
-<div class="block"><p>The key of the import sink.</p></div>
+<div class="block"><p>The key of the <a href="/import-sink#importsink">ImportSink</a>.</p></div>
 </li>
 </ul>
 <a name="getResourceKey--">
@@ -293,7 +292,7 @@ var activeTableTab = "activeTableTab";
 <h4>getResourceKey</h4>
 <pre>@NotNull
 @NotNull java.lang.String&nbsp;getResourceKey()</pre>
-<div class="block"><p>The key of the import resource.</p></div>
+<div class="block"><p>The key of the resource.</p></div>
 </li>
 </ul>
 <a name="getId--">
@@ -304,7 +303,7 @@ var activeTableTab = "activeTableTab";
 <h4>getId</h4>
 <pre>@NotNull
 @NotNull java.lang.String&nbsp;getId()</pre>
-<div class="block"><p>The identifier of the operaton that is to be commited</p></div>
+<div class="block"><p>The ID of the ImportOperation.</p></div>
 </li>
 </ul>
 <a name="getState--">
@@ -315,7 +314,7 @@ var activeTableTab = "activeTableTab";
 <h4>getState</h4>
 <pre>@NotNull
 @NotNull <a href="../../../../../com/commercetools/importapi/models/common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;getState()</pre>
-<div class="block"><p>The status of the import resource.</p></div>
+<div class="block"><p>The import status of the resource. Set to <code>Rejected</code> or <code>ValidationFailed</code> if the import of the resource was not successful.</p></div>
 </li>
 </ul>
 <a name="getResourceVersion--">
@@ -325,7 +324,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getResourceVersion</h4>
 <pre>java.lang.Long&nbsp;getResourceVersion()</pre>
-<div class="block"><p>When the resource is successfully imported, this represents the imported resource version</p></div>
+<div class="block"><p>The version of the impmorted resource when the import was successful.</p></div>
 </li>
 </ul>
 <a name="getErrors--">
@@ -336,8 +335,7 @@ var activeTableTab = "activeTableTab";
 <h4>getErrors</h4>
 <pre>@Valid
 @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&nbsp;getErrors()</pre>
-<div class="block"><p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
-  and this property contains the errors.</p></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See <a href="/error">Errors</a>.</p></div>
 </li>
 </ul>
 <a name="getCreatedAt--">
@@ -348,7 +346,7 @@ var activeTableTab = "activeTableTab";
 <h4>getCreatedAt</h4>
 <pre>@NotNull
 @NotNull java.time.ZonedDateTime&nbsp;getCreatedAt()</pre>
-<div class="block"><p>When the import operation was created.</p></div>
+<div class="block"><p>The time when the ImportOperation was created.</p></div>
 </li>
 </ul>
 <a name="getLastModifiedAt--">
@@ -359,7 +357,7 @@ var activeTableTab = "activeTableTab";
 <h4>getLastModifiedAt</h4>
 <pre>@NotNull
 @NotNull java.time.ZonedDateTime&nbsp;getLastModifiedAt()</pre>
-<div class="block"><p>When the import operation was modified.</p></div>
+<div class="block"><p>The last time When the ImportOperation was modified.</p></div>
 </li>
 </ul>
 <a name="getExpiresAt--">
@@ -370,7 +368,7 @@ var activeTableTab = "activeTableTab";
 <h4>getExpiresAt</h4>
 <pre>@NotNull
 @NotNull java.time.ZonedDateTime&nbsp;getExpiresAt()</pre>
-<div class="block"><p>When the import operation expires.</p></div>
+<div class="block"><p>The expiration time of the ImportOperation.</p></div>
 </li>
 </ul>
 <a name="setVersion-java.lang.Long-">

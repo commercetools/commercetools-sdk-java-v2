@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">CategoryImport</span>
 extends <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></pre>
-<div class="block"><p>Import representation for a category.</p></div>
+<div class="block"><p>The data representation for a Category to be imported that is persisted as a <a href="/../api/projects/categories#category">Category</a> in the Project.</p></div>
 </li>
 </ul>
 </div>
@@ -143,7 +143,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getCustom--">getCustom</a></span>()</code>
-<div class="block">The custom fields for this category.</div>
+<div class="block">The custom fields for this Category.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -327,9 +327,8 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&nbsp;getParent()</pre>
 <div class="block"><p>Maps to <code>Category.parent</code>.
-  The parent category referenced must already exist
-  in the commercetools project, or the import operation
-  will have an <code>Unresolved</code> state.</p></div>
+  The Reference to the parent <a href="/../api/projects/categories#category">Category</a> with which the Category is associated.
+  If referenced Category does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Category is created.</p></div>
 </li>
 </ul>
 <a name="getOrderHint--">
@@ -403,7 +402,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <h4>getCustom</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;getCustom()</pre>
-<div class="block"><p>The custom fields for this category.</p></div>
+<div class="block"><p>The custom fields for this Category.</p></div>
 </li>
 </ul>
 <a name="setName-com.commercetools.importapi.models.common.LocalizedString-">

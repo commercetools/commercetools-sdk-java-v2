@@ -159,12 +159,12 @@ extends <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAc
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#getDeliveryId--">getDeliveryId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#getFields--">getFields</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>@NotNull java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#getType--">getType</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetDeliveryAddressCustomFieldAction</a></code></td>
@@ -180,11 +180,11 @@ extends <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAc
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#setFields-com.commercetools.api.models.type.FieldContainer-">setFields</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#setType-com.commercetools.api.models.type.TypeResourceIdentifier-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetDeliveryAddressCustomFieldAction.html#setValue-java.lang.Object-">setValue</a></span>(java.lang.Object&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
@@ -250,24 +250,23 @@ extends <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAc
 @NotNull java.lang.String&nbsp;getDeliveryId()</pre>
 </li>
 </ul>
-<a name="getType--">
+<a name="getName--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getType</h4>
-<pre>@Valid
-@Valid <a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;getType()</pre>
+<h4>getName</h4>
+<pre>@NotNull
+@NotNull java.lang.String&nbsp;getName()</pre>
 </li>
 </ul>
-<a name="getFields--">
+<a name="getValue--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getFields</h4>
-<pre>@Valid
-@Valid <a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;getFields()</pre>
+<h4>getValue</h4>
+<pre>java.lang.Object&nbsp;getValue()</pre>
 </li>
 </ul>
 <a name="setDeliveryId-java.lang.String-">
@@ -279,22 +278,22 @@ extends <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAc
 <pre>void&nbsp;setDeliveryId(java.lang.String&nbsp;deliveryId)</pre>
 </li>
 </ul>
-<a name="setType-com.commercetools.api.models.type.TypeResourceIdentifier-">
+<a name="setName-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setType</h4>
-<pre>void&nbsp;setType(<a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</pre>
+<h4>setName</h4>
+<pre>void&nbsp;setName(java.lang.String&nbsp;name)</pre>
 </li>
 </ul>
-<a name="setFields-com.commercetools.api.models.type.FieldContainer-">
+<a name="setValue-java.lang.Object-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setFields</h4>
-<pre>void&nbsp;setFields(<a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</pre>
+<h4>setValue</h4>
+<pre>void&nbsp;setValue(java.lang.Object&nbsp;value)</pre>
 </li>
 </ul>
 <a name="of--">

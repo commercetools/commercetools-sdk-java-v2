@@ -114,9 +114,8 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">ProductImportImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></pre>
-<div class="block"><p>Import representation for a product.</p>
-  <p>The import representation for a product is the most minimal representation required
-  for creating a product in commercetools.</p></div>
+<div class="block"><p>The data representation for a Product to be imported that is persisted as a <a href="/../api/projects/products#product">Product</a> in the Project.</p>
+  <p>This is the minimal representation required for creating a <a href="/../api/projects/products#product">Product</a> in commercetools.</p></div>
 </li>
 </ul>
 </div>
@@ -159,7 +158,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/ProductImportImpl.html#getCategories--">getCategories</a></span>()</code>
-<div class="block">An array of references to a categories by their keys.</div>
+<div class="block">Maps to <code>Product.categories</code>.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -199,7 +198,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/ProductImportImpl.html#getProductType--">getProductType</a></span>()</code>
-<div class="block">The product's product type.</div>
+<div class="block">The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -223,13 +222,13 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/ProductImportImpl.html#getState--">getState</a></span>()</code>
-<div class="block">References a state by its key.</div>
+<div class="block">The Reference to the <a href="/../api/projects/states#state">State</a> with which the Product is associated.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/ProductImportImpl.html#getTaxCategory--">getTaxCategory</a></span>()</code>
-<div class="block">References a tax category by its key.</div>
+<div class="block">The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the Product is associated.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -379,10 +378,10 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <li class="blockList">
 <h4>getProductType</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;getProductType()</pre>
-<div class="block"><p>The product's product type. Maps to <code>Product.productType</code>.</p>
-  <p>The product type referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
+  Maps to <code>Product.productType</code>.
+  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the Product is associated.
+  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductType is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html#getProductType--">getProductType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -396,7 +395,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <li class="blockList">
 <h4>getSlug</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;getSlug()</pre>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project,
+<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project,
   but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -425,10 +424,9 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <li class="blockList">
 <h4>getCategories</h4>
 <pre>public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;getCategories()</pre>
-<div class="block"><p>An array of references to a categories by their keys. Maps to <code>Product.categories</code>.</p>
-  <p>The categories referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>Product.categories</code>.
+  The References to the <a href="/../api/projects/categories#category">Categories</a> with which the Product is associated.
+  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Categories are created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html#getCategories--">getCategories</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -499,10 +497,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <li class="blockList">
 <h4>getTaxCategory</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;getTaxCategory()</pre>
-<div class="block"><p>References a tax category by its key.</p>
-  <p>The tax category referenced must already exist
-  in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the Product is associated.
+  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary TaxCategory is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html#getTaxCategory--">getTaxCategory</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -546,10 +542,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/products/P
 <li class="blockList">
 <h4>getState</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;getState()</pre>
-<div class="block"><p>References a state by its key.</p>
-  <p>The tax category referenced must already exist
-  in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the Product is associated.
+  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary State is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html#getState--">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/products/ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>

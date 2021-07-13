@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":6,"i5":10,"i6":6,"i7":10,"i8":10,"i9":6,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":6,"i5":6,"i6":10,"i7":6,"i8":10,"i9":10,"i10":6,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -199,107 +199,113 @@ implements <a href="../../../../../io/vrap/rmf/base/client/RequestCommand.html" 
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#contentType-java.lang.String-">contentType</a></span>(java.lang.String&nbsp;contentType)</code>
+<div class="block">set specific content type</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>protected abstract <a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#copy--">copy</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest--">createHttpRequest</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.concurrent.CompletableFuture&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>abstract java.util.concurrent.CompletableFuture&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#execute-io.vrap.rmf.base.client.ApiHttpClient-">execute</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking-io.vrap.rmf.base.client.ApiHttpClient-">executeBlocking</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>abstract <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking-io.vrap.rmf.base.client.ApiHttpClient-java.time.Duration-">executeBlocking</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
                java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">TResult</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking-java.time.Duration-">executeBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;java.lang.String,java.lang.String&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriString--">getQueryParamUriString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>java.util.concurrent.CompletableFuture&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#send--">send</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking--">sendBlocking</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking-java.time.Duration-">sendBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a></span>(java.lang.String&nbsp;key,
           java.lang.String&nbsp;value)</code>
 <div class="block">set the header with the specified value</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers)</code>
 <div class="block">set the headers</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a></span>(java.lang.String&nbsp;key)</code>
 <div class="block">removes the specified header</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a></span>(java.lang.String&nbsp;key)</code>
 <div class="block">removes the specified query parameter</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>&lt;V&gt;&nbsp;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a></span>(java.lang.String&nbsp;key,
               V&nbsp;value)</code>
 <div class="block">set the query parameter with the specified value</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></span>(java.util.List&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;java.lang.String,java.lang.String&gt;&gt;&nbsp;queryParams)</code>
 <div class="block">set the query parameters</div>
@@ -436,6 +442,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/RequestCommand.html" 
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>headers</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="contentType-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>contentType</h4>
+<pre>public&nbsp;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.html" title="type parameter in ApiMethod">T</a>&nbsp;contentType(java.lang.String&nbsp;contentType)</pre>
+<div class="block">set specific content type</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>contentType</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>

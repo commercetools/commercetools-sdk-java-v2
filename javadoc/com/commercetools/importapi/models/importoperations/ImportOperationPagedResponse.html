@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -104,7 +104,8 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">ImportOperationPagedResponse</span></pre>
-<div class="block"><p>This type represents a paged import operation result.</p></div>
+<div class="block"><p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for Import Operations.
+  Used as a response to a query request for Import Operations.</p></div>
 </li>
 </ul>
 </div>
@@ -134,56 +135,66 @@ var activeTableTab = "activeTableTab";
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#getCount--">getCount</a></span>()</code>
-<div class="block">The actual number of results returned by this response.</div>
+<div class="block">The actual number of results returned.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#getLimit--">getLimit</a></span>()</code>
-<div class="block">The maximum number of import operations returned for a page.</div>
+<div class="block">The number of results requested in the query request.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#getOffset--">getOffset</a></span>()</code>
-<div class="block">The offset supplied by the client or the server default.</div>
+<div class="block">The number of elements skipped, not a page number.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#getResults--">getResults</a></span>()</code>
-<div class="block">The results for this paged response.</div>
+<div class="block">The array of Import Operations matching the query.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>@NotNull java.lang.Long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#getTotal--">getTotal</a></span>()</code>
+<div class="block">The total number of import operations matching the query.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#of-com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setCount-java.lang.Long-">setCount</a></span>(java.lang.Long&nbsp;count)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#of-com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setLimit-java.lang.Integer-">setLimit</a></span>(java.lang.Integer&nbsp;limit)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setCount-java.lang.Long-">setCount</a></span>(java.lang.Long&nbsp;count)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setOffset-java.lang.Long-">setOffset</a></span>(java.lang.Long&nbsp;offset)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setLimit-java.lang.Integer-">setLimit</a></span>(java.lang.Integer&nbsp;limit)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setResults-com.commercetools.importapi.models.importoperations.ImportOperation...-">setResults</a></span>(<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>...&nbsp;results)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setOffset-java.lang.Long-">setOffset</a></span>(java.lang.Long&nbsp;offset)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setResults-java.util.List-">setResults</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;&nbsp;results)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setResults-com.commercetools.importapi.models.importoperations.ImportOperation...-">setResults</a></span>(<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>...&nbsp;results)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setResults-java.util.List-">setResults</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;&nbsp;results)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#setTotal-java.lang.Long-">setTotal</a></span>(java.lang.Long&nbsp;total)</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html#withImportOperationPagedResponse-java.util.function.Function-">withImportOperationPagedResponse</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperationPagedResponse.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationPagedResponse</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -210,7 +221,7 @@ var activeTableTab = "activeTableTab";
 <h4>getLimit</h4>
 <pre>@NotNull
 @NotNull java.lang.Integer&nbsp;getLimit()</pre>
-<div class="block"><p>The maximum number of import operations returned for a page.</p></div>
+<div class="block"><p>The number of results requested in the query request.</p></div>
 </li>
 </ul>
 <a name="getOffset--">
@@ -221,7 +232,8 @@ var activeTableTab = "activeTableTab";
 <h4>getOffset</h4>
 <pre>@NotNull
 @NotNull java.lang.Long&nbsp;getOffset()</pre>
-<div class="block"><p>The offset supplied by the client or the server default. It is the number of elements skipped.</p></div>
+<div class="block"><p>The number of elements skipped, not a page number.
+  Supplied by the client or the server default.</p></div>
 </li>
 </ul>
 <a name="getCount--">
@@ -232,7 +244,18 @@ var activeTableTab = "activeTableTab";
 <h4>getCount</h4>
 <pre>@NotNull
 @NotNull java.lang.Long&nbsp;getCount()</pre>
-<div class="block"><p>The actual number of results returned by this response.</p></div>
+<div class="block"><p>The actual number of results returned.</p></div>
+</li>
+</ul>
+<a name="getTotal--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTotal</h4>
+<pre>@NotNull
+@NotNull java.lang.Long&nbsp;getTotal()</pre>
+<div class="block"><p>The total number of import operations matching the query.</p></div>
 </li>
 </ul>
 <a name="getResults--">
@@ -244,7 +267,7 @@ var activeTableTab = "activeTableTab";
 <pre>@NotNull
  @Valid
 @NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/importoperations/ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;&nbsp;getResults()</pre>
-<div class="block"><p>The results for this paged response.</p></div>
+<div class="block"><p>The array of Import Operations matching the query.</p></div>
 </li>
 </ul>
 <a name="setLimit-java.lang.Integer-">
@@ -272,6 +295,15 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>setCount</h4>
 <pre>void&nbsp;setCount(java.lang.Long&nbsp;count)</pre>
+</li>
+</ul>
+<a name="setTotal-java.lang.Long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTotal</h4>
+<pre>void&nbsp;setTotal(java.lang.Long&nbsp;total)</pre>
 </li>
 </ul>
 <a name="setResults-com.commercetools.importapi.models.importoperations.ImportOperation...-">

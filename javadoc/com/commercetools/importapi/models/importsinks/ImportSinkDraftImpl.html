@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">ImportSinkDraftImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></pre>
-<div class="block"><p>The representation sent to the server when creating or updating an import sink.</p></div>
+<div class="block"><p>The representation sent to the server when creating or updating an <a href="#importsink">ImportSink</a>.</p></div>
 </li>
 </ul>
 </div>
@@ -157,19 +157,19 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraftImpl.html#getKey--">getKey</a></span>()</code>
-<div class="block">The unique key of the import sink.</div>
+<div class="block">User-defined unique identifier of the ImportSink.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraftImpl.html#getResourceType--">getResourceType</a></span>()</code>
-<div class="block">The type of import resource sent to this import sink.</div>
+<div class="block">The <a href="#importresourcetype">resource type</a> to be imported.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraftImpl.html#getVersion--">getVersion</a></span>()</code>
-<div class="block">The version of this resource.</div>
+<div class="block">The version of the ImportSinkDraft.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -241,7 +241,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getVersion</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getVersion()</pre>
-<div class="block"><p>The version of this resource.</p></div>
+<div class="block"><p>The version of the ImportSinkDraft.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#getVersion--">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></code></dd>
@@ -255,7 +255,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getKey</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getKey()</pre>
-<div class="block"><p>The unique key of the import sink.</p></div>
+<div class="block"><p>User-defined unique identifier of the ImportSink.
+  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#getKey--">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></code></dd>
@@ -269,7 +270,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/importsink
 <li class="blockList">
 <h4>getResourceType</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;getResourceType()</pre>
-<div class="block"><p>The type of import resource sent to this import sink.</p></div>
+<div class="block"><p>The <a href="#importresourcetype">resource type</a> to be imported.
+  If not given, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#getResourceType--">getResourceType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/importsinks/ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></code></dd>

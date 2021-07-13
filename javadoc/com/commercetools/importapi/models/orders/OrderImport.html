@@ -104,11 +104,11 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">OrderImport</span></pre>
-<div class="block"><p>Import representation for an order.</p>
-  <p>In commercetools, you can import an order using the
+<div class="block"><p>The data representation for an Order to be imported that is persisted as an <a href="/../api/projects/orders#top">Order</a> in the Project.</p>
+  <p>In commercetools, you can import an Order using the
   <a href="https://docs.commercetools.com/http-api-projects-orders-import.html#create-an-order-by-import">Create Order by Import</a>
-  endpoint method instead of creating it from a cart.</p>
-  <p>The order import draft is a snapshot of an order at the time it was imported.</p></div>
+  endpoint method instead of creating it from a Cart.</p>
+  <p>An OrderImport is a snapshot of an order at the time it was imported.</p></div>
 </li>
 </ul>
 </div>
@@ -161,9 +161,7 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/OrderImport.html#getCustomer--">getCustomer</a></span>()</code>
-<div class="block">References a customer by its key.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/OrderImport.html#getCustomer--">getCustomer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -413,7 +411,6 @@ var activeTableTab = "activeTableTab";
 <h4>getCustomer</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/importapi/models/common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a>&nbsp;getCustomer()</pre>
-<div class="block"><p>References a customer by its key.</p></div>
 </li>
 </ul>
 <a name="getCustomerEmail--">
@@ -457,7 +454,7 @@ var activeTableTab = "activeTableTab";
 <pre>@NotNull
  @Valid
 @NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;getTotalPrice()</pre>
-<div class="block"><p>Maps to <code>Order.totalPrice</code>.</p></div>
+<div class="block"><p>Maps to <code>Order.totalPrice</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p></div>
 </li>
 </ul>
 <a name="getTaxedPrice--">

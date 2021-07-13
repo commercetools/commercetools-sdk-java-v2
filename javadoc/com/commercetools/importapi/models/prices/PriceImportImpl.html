@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">PriceImportImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></pre>
-<div class="block"><p>Imports a product variant's prices.</p></div>
+<div class="block"><p>The data representation for a Price to be imported that is persisted as a <a href="/../api/projects/products#price">Price</a> in the Project.</p></div>
 </li>
 </ul>
 </div>
@@ -157,7 +157,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/prices/PriceImportImpl.html#getChannel--">getChannel</a></span>()</code>
-<div class="block">References a channel by its key.</div>
+<div class="block">The Reference to the <a href="/../api/projects/channels#channel">Channel</a> with which the Price is associated.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -175,7 +175,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/prices/PriceImportImpl.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>
-<div class="block">References a customer group by its key.</div>
+<div class="block">The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Price is associated.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -191,13 +191,13 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/prices/PriceImportImpl.html#getProduct--">getProduct</a></span>()</code>
-<div class="block">The product in which this product variant containong the price is contained.</div>
+<div class="block">The Product in which the Product Variant containing this Price is contained.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/prices/PriceImportImpl.html#getProductVariant--">getProductVariant</a></span>()</code>
-<div class="block">The product variant in which this price is contained.</div>
+<div class="block">The ProductVariant in which this Price is contained.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -363,7 +363,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <li class="blockList">
 <h4>getValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;getValue()</pre>
-<div class="block"><p>Maps to <code>Price.value</code>.</p></div>
+<div class="block"><p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html#getValue--">getValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></code></dd>
@@ -419,10 +419,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <li class="blockList">
 <h4>getCustomerGroup</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;getCustomerGroup()</pre>
-<div class="block"><p>References a customer group by its key.</p>
-  <p>The customer group referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Price is associated.
+  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary CustomerGroup is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html#getCustomerGroup--">getCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></code></dd>
@@ -436,10 +434,8 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <li class="blockList">
 <h4>getChannel</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;getChannel()</pre>
-<div class="block"><p>References a channel by its key.</p>
-  <p>The channel referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Reference to the <a href="/../api/projects/channels#channel">Channel</a> with which the Price is associated.
+  If referenced Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Channel is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html#getChannel--">getChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></code></dd>
@@ -509,10 +505,9 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <li class="blockList">
 <h4>getProductVariant</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;getProductVariant()</pre>
-<div class="block"><p>The product variant in which this price is contained.</p>
-  <p>The product variant referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The ProductVariant in which this Price is contained.
+  The Reference to the <a href="/../api/projects/products#productvariant">ProductVariant</a> with which the Price is associated.
+  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductVariant is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html#getProductVariant--">getProductVariant</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></code></dd>
@@ -526,10 +521,9 @@ implements <a href="../../../../../com/commercetools/importapi/models/prices/Pri
 <li class="blockList">
 <h4>getProduct</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;getProduct()</pre>
-<div class="block"><p>The product in which this product variant containong the price is contained. Maps to <code>ProductVariant.product</code>.</p>
-  <p>The product referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
+<div class="block"><p>The Product in which the Product Variant containing this Price is contained. Maps to <code>ProductVariant.product</code>.
+  The Reference to the <a href="/../api/projects/products#product">Product</a> with which the Price is associated.
+  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Product is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html#getProduct--">getProduct</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/prices/PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a></code></dd>

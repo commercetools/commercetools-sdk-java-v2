@@ -129,6 +129,19 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult>
         return c;
     }
 
+    /**
+     * set specific content type
+     * @param contentType
+     * @return
+     */
+    public T contentType(final String contentType) {
+        T c = copy();
+        ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers
+                .withHeader(ApiHttpHeaders.CONTENT_TYPE, contentType);
+
+        return c;
+    }
+
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }

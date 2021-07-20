@@ -8,26 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkDraftBuilder {
+public final class ImportSinkUpdateDraftBuilder {
 
-    private String key;
+    private Long version;
 
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
-    public ImportSinkDraftBuilder key(final String key) {
-        this.key = key;
+    public ImportSinkUpdateDraftBuilder version(final Long version) {
+        this.version = version;
         return this;
     }
 
-    public ImportSinkDraftBuilder resourceType(
+    public ImportSinkUpdateDraftBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
 
-    public String getKey() {
-        return this.key;
+    public Long getVersion() {
+        return this.version;
     }
 
     @Nullable
@@ -35,17 +35,17 @@ public final class ImportSinkDraftBuilder {
         return this.resourceType;
     }
 
-    public ImportSinkDraft build() {
-        return new ImportSinkDraftImpl(key, resourceType);
+    public ImportSinkUpdateDraft build() {
+        return new ImportSinkUpdateDraftImpl(version, resourceType);
     }
 
-    public static ImportSinkDraftBuilder of() {
-        return new ImportSinkDraftBuilder();
+    public static ImportSinkUpdateDraftBuilder of() {
+        return new ImportSinkUpdateDraftBuilder();
     }
 
-    public static ImportSinkDraftBuilder of(final ImportSinkDraft template) {
-        ImportSinkDraftBuilder builder = new ImportSinkDraftBuilder();
-        builder.key = template.getKey();
+    public static ImportSinkUpdateDraftBuilder of(final ImportSinkUpdateDraft template) {
+        ImportSinkUpdateDraftBuilder builder = new ImportSinkUpdateDraftBuilder();
+        builder.version = template.getVersion();
         builder.resourceType = template.getResourceType();
         return builder;
     }

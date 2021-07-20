@@ -24,21 +24,22 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends
     private String projectKey;
     private String importSinkKey;
 
-    private com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft;
+    private com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft importSinkUpdateDraft;
 
     public ByProjectKeyImportSinksByImportSinkKeyPut(final ApiHttpClient apiHttpClient, String projectKey,
-            String importSinkKey, com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft) {
+            String importSinkKey,
+            com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft importSinkUpdateDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
-        this.importSinkDraft = importSinkDraft;
+        this.importSinkUpdateDraft = importSinkUpdateDraft;
     }
 
     public ByProjectKeyImportSinksByImportSinkKeyPut(ByProjectKeyImportSinksByImportSinkKeyPut t) {
         super(t);
         this.projectKey = t.projectKey;
         this.importSinkKey = t.importSinkKey;
-        this.importSinkDraft = t.importSinkDraft;
+        this.importSinkUpdateDraft = t.importSinkUpdateDraft;
     }
 
     @Override
@@ -49,7 +50,7 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(importSinkDraft);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(importSinkUpdateDraft);
             return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

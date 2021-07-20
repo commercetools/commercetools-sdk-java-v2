@@ -19,8 +19,9 @@ public class ByProjectKeyImportSinksByImportSinkKeyRequestBuilder {
     }
 
     public ByProjectKeyImportSinksByImportSinkKeyPut put(
-            com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft) {
-        return new ByProjectKeyImportSinksByImportSinkKeyPut(apiHttpClient, projectKey, importSinkKey, importSinkDraft);
+            com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft importSinkUpdateDraft) {
+        return new ByProjectKeyImportSinksByImportSinkKeyPut(apiHttpClient, projectKey, importSinkKey,
+            importSinkUpdateDraft);
     }
 
     public ByProjectKeyImportSinksByImportSinkKeyGet get() {

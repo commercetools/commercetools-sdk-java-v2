@@ -14,19 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The representation sent to the server when creating an <a href="#importsink">ImportSink</a>.</p>
+*  <p>The representation sent to the server when updating an <a href="#importsink">ImportSink</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = ImportSinkDraftImpl.class)
-public interface ImportSinkDraft {
+@JsonDeserialize(as = ImportSinkUpdateDraftImpl.class)
+public interface ImportSinkUpdateDraft {
 
     /**
-    *  <p>User-defined unique identifier of the ImportSink.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    *  <p>Current version of the ImportSink.</p>
     */
     @NotNull
-    @JsonProperty("key")
-    public String getKey();
+    @JsonProperty("version")
+    public Long getVersion();
 
     /**
     *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
@@ -36,30 +35,30 @@ public interface ImportSinkDraft {
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
-    public void setKey(final String key);
+    public void setVersion(final Long version);
 
     public void setResourceType(final ImportResourceType resourceType);
 
-    public static ImportSinkDraft of() {
-        return new ImportSinkDraftImpl();
+    public static ImportSinkUpdateDraft of() {
+        return new ImportSinkUpdateDraftImpl();
     }
 
-    public static ImportSinkDraft of(final ImportSinkDraft template) {
-        ImportSinkDraftImpl instance = new ImportSinkDraftImpl();
-        instance.setKey(template.getKey());
+    public static ImportSinkUpdateDraft of(final ImportSinkUpdateDraft template) {
+        ImportSinkUpdateDraftImpl instance = new ImportSinkUpdateDraftImpl();
+        instance.setVersion(template.getVersion());
         instance.setResourceType(template.getResourceType());
         return instance;
     }
 
-    public static ImportSinkDraftBuilder builder() {
-        return ImportSinkDraftBuilder.of();
+    public static ImportSinkUpdateDraftBuilder builder() {
+        return ImportSinkUpdateDraftBuilder.of();
     }
 
-    public static ImportSinkDraftBuilder builder(final ImportSinkDraft template) {
-        return ImportSinkDraftBuilder.of(template);
+    public static ImportSinkUpdateDraftBuilder builder(final ImportSinkUpdateDraft template) {
+        return ImportSinkUpdateDraftBuilder.of(template);
     }
 
-    default <T> T withImportSinkDraft(Function<ImportSinkDraft, T> helper) {
+    default <T> T withImportSinkUpdateDraft(Function<ImportSinkUpdateDraft, T> helper) {
         return helper.apply(this);
     }
 }

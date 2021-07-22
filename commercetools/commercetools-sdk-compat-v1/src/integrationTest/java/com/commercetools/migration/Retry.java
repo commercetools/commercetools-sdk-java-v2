@@ -4,6 +4,7 @@ package com.commercetools.migration;
 import static io.sphere.sdk.http.HttpStatusCode.*;
 import static java.util.Collections.singletonList;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -22,6 +23,7 @@ import io.sphere.sdk.retry.RetryAction;
 import io.sphere.sdk.retry.RetryPredicate;
 import io.sphere.sdk.retry.RetryRule;
 import io.vrap.rmf.base.client.ClientBuilder;
+import io.vrap.rmf.base.client.http.RetryMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class Retry implements MigrateExample {
@@ -46,7 +48,7 @@ public class Retry implements MigrateExample {
                         ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                         ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
                     .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
-                    .withRetryMiddleware(5)
+                    .withRetryMiddleware(new RetryMiddleware(5, 100, 2000, Arrays.asList(502, 503, 504)))
                     .build());
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();

@@ -33,6 +33,8 @@ public final class ImportOperationImpl implements ImportOperation {
 
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    private java.util.List<com.commercetools.importapi.models.common.KeyReference> unresolvedReferences;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
@@ -46,6 +48,7 @@ public final class ImportOperationImpl implements ImportOperation {
             @JsonProperty("state") final com.commercetools.importapi.models.common.ProcessingState state,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("errors") final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors,
+            @JsonProperty("unresolvedReferences") final java.util.List<com.commercetools.importapi.models.common.KeyReference> unresolvedReferences,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
@@ -56,6 +59,7 @@ public final class ImportOperationImpl implements ImportOperation {
         this.state = state;
         this.resourceVersion = resourceVersion;
         this.errors = errors;
+        this.unresolvedReferences = unresolvedReferences;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
         this.expiresAt = expiresAt;
@@ -114,6 +118,13 @@ public final class ImportOperationImpl implements ImportOperation {
     }
 
     /**
+    *  <p>In case of unresolved status this array will show the unresolved references</p>
+    */
+    public java.util.List<com.commercetools.importapi.models.common.KeyReference> getUnresolvedReferences() {
+        return this.unresolvedReferences;
+    }
+
+    /**
     *  <p>The time when the ImportOperation was created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
@@ -166,6 +177,16 @@ public final class ImportOperationImpl implements ImportOperation {
         this.errors = errors;
     }
 
+    public void setUnresolvedReferences(
+            final com.commercetools.importapi.models.common.KeyReference... unresolvedReferences) {
+        this.unresolvedReferences = new ArrayList<>(Arrays.asList(unresolvedReferences));
+    }
+
+    public void setUnresolvedReferences(
+            final java.util.List<com.commercetools.importapi.models.common.KeyReference> unresolvedReferences) {
+        this.unresolvedReferences = unresolvedReferences;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
@@ -195,6 +216,7 @@ public final class ImportOperationImpl implements ImportOperation {
                 .append(state, that.state)
                 .append(resourceVersion, that.resourceVersion)
                 .append(errors, that.errors)
+                .append(unresolvedReferences, that.unresolvedReferences)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(expiresAt, that.expiresAt)
@@ -210,6 +232,7 @@ public final class ImportOperationImpl implements ImportOperation {
                 .append(state)
                 .append(resourceVersion)
                 .append(errors)
+                .append(unresolvedReferences)
                 .append(createdAt)
                 .append(lastModifiedAt)
                 .append(expiresAt)

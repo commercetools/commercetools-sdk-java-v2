@@ -1,4 +1,4 @@
-def ctpJvmSdkVersion = "1.62.0"
+def ctpJvmSdkVersion = "2.0.0"
 
 dependencies {
 

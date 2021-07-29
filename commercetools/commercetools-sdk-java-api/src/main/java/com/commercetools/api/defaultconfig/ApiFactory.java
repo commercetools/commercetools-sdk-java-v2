@@ -20,29 +20,44 @@ public class ApiFactory {
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint) {
-        return createForProject(projectKey, () -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint,
-            apiEndpoint, new ArrayList<>(), new ApiCorrelationIdProvider(projectKey)));
+        return ApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey))
+                .buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final List<Middleware> middlewares) {
-        return createForProject(projectKey, () -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint,
-            apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey)));
+        return ApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey))
+                .addMiddlewares(middlewares)
+                .buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final VrapHttpClient httpClient, final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final List<Middleware> middlewares) {
-        return createForProject(projectKey, () -> defaultClient(() -> httpClient, credentials, tokenEndpoint,
-            apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey)));
+        return ApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey))
+                .addMiddlewares(middlewares)
+                .buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final VrapHttpClient httpClient, final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final List<Middleware> middlewares, CorrelationIdProvider correlationIdProvider) {
-        return createForProject(projectKey, () -> defaultClient(() -> httpClient, credentials, tokenEndpoint,
-            apiEndpoint, middlewares, correlationIdProvider));
+        return ApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,

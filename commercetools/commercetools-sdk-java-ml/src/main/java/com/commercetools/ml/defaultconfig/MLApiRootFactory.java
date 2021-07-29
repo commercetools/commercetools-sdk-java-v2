@@ -20,8 +20,9 @@ public class MLApiRootFactory {
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint) {
-        return createForProject(projectKey, () -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint,
-            apiEndpoint, new ArrayList<>(), new MLCorrelationIdProvider(projectKey)));
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
@@ -31,26 +32,32 @@ public class MLApiRootFactory {
 
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint,
-            new ArrayList<>(), null));
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .build();
     }
 
     public static ApiRoot create(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return create(
-            () -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null));
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .build();
     }
 
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint, final CorrelationIdProvider correlationIdProvider) {
-        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint,
-            new ArrayList<>(), correlationIdProvider));
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .build();
     }
 
     public static ApiRoot create(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint, final CorrelationIdProvider correlationIdProvider) {
-        return create(() -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(),
-            correlationIdProvider));
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .build();
     }
 
     public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
@@ -59,55 +66,79 @@ public class MLApiRootFactory {
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint, final List<Middleware> middlewares) {
-        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares, null);
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addMiddlewares(middlewares)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint, final CorrelationIdProvider correlationIdProvider) {
-        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(),
-            correlationIdProvider);
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint, final List<Middleware> middlewares,
             final CorrelationIdProvider correlationIdProvider) {
-        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares,
-            correlationIdProvider);
+        return MLApiRootBuilder.of()
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint, final CorrelationIdProvider correlationIdProvider) {
-        return defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(),
-            correlationIdProvider);
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint, final List<Middleware> middlewares) {
-        return defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, null);
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addMiddlewares(middlewares)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint, final List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares,
-            correlationIdProvider);
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint, final Supplier<String> userAgentSupplier,
             final List<Middleware> middlewares, @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, userAgentSupplier, middlewares,
-            correlationIdProvider);
+        return MLApiRootBuilder.of(httpClient)
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .withUserAgentSupplier(userAgentSupplier)
+                .addMiddlewares(middlewares)
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final Supplier<VrapHttpClient> httpClientSupplier,

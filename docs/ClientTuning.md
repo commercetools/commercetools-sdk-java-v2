@@ -20,18 +20,12 @@ The RetryMiddleware configures a Client to handle failures like gateway timeouts
 A best practice example to retry on gateway timeouts and similar problems
 
 ```java
-ApiRoot apiRoot = ApiFactory.create(
-        ClientCredentials.of()
-            .withClientId(CommercetoolsTestUtils.getClientId())
-            .withClientSecret(CommercetoolsTestUtils.getClientSecret())
-            .build(),
-        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-        Lists.newArrayList(
-            new RetryMiddleware(3, Arrays.asList(502, 503, 504))
-        )
-);
-
+ApiRoot apiRoot = ApiRootBuilder.of()
+        .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+            ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+        .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+        .build();
 ```
 
 ## Configure the underlying http client
@@ -42,16 +36,16 @@ The `ApiFactory` has create methods which allow to pass a preconfigured HTTP cli
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 
-Proxy proxy = new Proxy(Proxy.Type.HTTP,new InetSocketAddress("proxy", 8080));
+Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
 VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
-ApiRoot apiRoot = ApiFactory.create(
-        httpClient,
-        ClientCredentials.of().withClientId(getClientId())
-                .withClientSecret(getClientSecret())
-                .withScopes(getScopes())
-                .build(),
-        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl()
-);
+ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .withScopes("your-scopes")
+                    .build(),
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .build();
 ```

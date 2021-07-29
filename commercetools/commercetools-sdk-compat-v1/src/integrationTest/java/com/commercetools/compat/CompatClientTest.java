@@ -2,7 +2,7 @@
 package com.commercetools.compat;
 
 import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.project.Project;
 
@@ -36,8 +36,9 @@ public class CompatClientTest {
 
     @Test
     public void compatClientWithApiRoot() {
-        ApiRoot root = ApiFactory.create(
-            () -> CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()));
+        ApiRoot root = ApiRootBuilder
+                .of(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()))
+                .build();
 
         Project project = root.withProjectKey(CommercetoolsTestUtils.getProjectKey()).get().executeBlocking().getBody();
         Assertions.assertThat(project).isInstanceOf(Project.class);
@@ -46,8 +47,9 @@ public class CompatClientTest {
 
     @Test
     public void compatClientWithApiRootCategories() {
-        ApiRoot root = ApiFactory.create(
-            () -> CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()));
+        ApiRoot root = ApiRootBuilder
+                .of(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()))
+                .build();
 
         CategoryPagedQueryResponse response = root.withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .categories()

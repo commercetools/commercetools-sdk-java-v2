@@ -126,22 +126,22 @@ public class HistoryApiFactory {
     public static ApiHttpClient defaultClient(final Supplier<VrapHttpClient> httpClientSupplier,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final List<Middleware> middlewares, @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return ClientBuilder.of(httpClientSupplier.get())
+        return HistoryApiRootBuilder.of(httpClientSupplier.get())
                 .defaultClient(apiEndpoint, credentials, tokenEndpoint)
                 .addCorrelationIdProvider(correlationIdProvider)
                 .addMiddlewares(middlewares)
-                .build();
+                .buildClient();
     }
 
     public static ApiHttpClient defaultClient(final Supplier<VrapHttpClient> httpClientSupplier,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final Supplier<String> userAgentSupplier, final List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return ClientBuilder.of(httpClientSupplier.get())
+        return HistoryApiRootBuilder.of(httpClientSupplier.get())
                 .defaultClient(apiEndpoint, credentials, tokenEndpoint)
                 .addCorrelationIdProvider(correlationIdProvider)
                 .withUserAgentSupplier(userAgentSupplier)
                 .addMiddlewares(middlewares)
-                .build();
+                .buildClient();
     }
 }

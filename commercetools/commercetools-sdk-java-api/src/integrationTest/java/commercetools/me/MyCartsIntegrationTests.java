@@ -6,7 +6,7 @@ import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
 import java.util.concurrent.ExecutionException;
 
 import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
@@ -36,7 +36,7 @@ public class MyCartsIntegrationTests {
                 .withApiBaseUrl("https://api.europe-west1.gcp.commercetools.com/")
                 .withTokenSupplier(staticTokenSupplier)
                 .build();
-        ApiRoot apiAnonymousRoot = ApiFactory.create(() -> apiAnonymousHttpClient);
+        ApiRoot apiAnonymousRoot = ApiRootBuilder.of(apiAnonymousHttpClient).build();
 
         MyCartDraft anonymousMyCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 

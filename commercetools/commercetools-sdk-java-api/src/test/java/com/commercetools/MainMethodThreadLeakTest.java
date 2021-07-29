@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.project.Project;
 
@@ -25,13 +25,15 @@ public class MainMethodThreadLeakTest {
      */
     public static void main(String[] args)
             throws InterruptedException, ExecutionException, TimeoutException, IOException {
-        final ApiRoot client = ApiFactory.create(
-            ClientCredentials.of()
-                    .withClientId(getClientId())
-                    .withClientSecret(getClientSecret())
-                    .withScopes(getScopes())
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        final ApiRoot client = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId(getClientId())
+                            .withClientSecret(getClientSecret())
+                            .withScopes(getScopes())
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build();
         final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(getProjectKey())
                 .get()
                 .execute();

@@ -219,6 +219,10 @@ public class ClientBuilder {
         return withRetryMiddleware(new RetryMiddleware(maxRetries));
     }
 
+    public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
+        return withRetryMiddleware(new RetryMiddleware(maxRetries, statusCodes));
+    }
+
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {
         this.oAuthMiddleware = oAuthMiddleware;
         return this;

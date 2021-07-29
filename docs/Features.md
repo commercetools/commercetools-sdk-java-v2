@@ -58,16 +58,17 @@ which has the request and the next middleware as an argument and returns a Compl
 example shows how to add an additional header.
 
 ```java
-ApiRoot t = ApiFactory.create(
-        ClientCredentials.of().withClientId(CommercetoolsTestUtils.getClientId())
-                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
-                .build(),
-        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-        Lists.newArrayList(
-                (request, next) -> next.apply(request.addHeader("X-FOO", "Bar"))
-        )
-);
+ApiRoot apiRoot = ApiRootBuilder.of()
+        .defaultClient(
+                ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
+        .build();
+
 ```
 
 The authentication, logging and other functionality has been implemented in middlewares and is added by default to the HandlerStack

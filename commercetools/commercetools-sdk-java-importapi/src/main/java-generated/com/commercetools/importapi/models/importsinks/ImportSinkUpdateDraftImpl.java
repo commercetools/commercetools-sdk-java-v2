@@ -14,31 +14,30 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation sent to the server when creating an <a href="#importsink">ImportSink</a>.</p>
+*  <p>The representation sent to the server when updating an <a href="#importsink">ImportSink</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkDraftImpl implements ImportSinkDraft {
+public final class ImportSinkUpdateDraftImpl implements ImportSinkUpdateDraft {
 
-    private String key;
+    private Long version;
 
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     @JsonCreator
-    ImportSinkDraftImpl(@JsonProperty("key") final String key,
+    ImportSinkUpdateDraftImpl(@JsonProperty("version") final Long version,
             @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
-        this.key = key;
+        this.version = version;
         this.resourceType = resourceType;
     }
 
-    public ImportSinkDraftImpl() {
+    public ImportSinkUpdateDraftImpl() {
     }
 
     /**
-    *  <p>User-defined unique identifier of the ImportSink.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    *  <p>Current version of the ImportSink.</p>
     */
-    public String getKey() {
-        return this.key;
+    public Long getVersion() {
+        return this.version;
     }
 
     /**
@@ -49,8 +48,8 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
         return this.resourceType;
     }
 
-    public void setKey(final String key) {
-        this.key = key;
+    public void setVersion(final Long version) {
+        this.version = version;
     }
 
     public void setResourceType(final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
@@ -65,14 +64,14 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ImportSinkDraftImpl that = (ImportSinkDraftImpl) o;
+        ImportSinkUpdateDraftImpl that = (ImportSinkUpdateDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(resourceType, that.resourceType).isEquals();
+        return new EqualsBuilder().append(version, that.version).append(resourceType, that.resourceType).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(resourceType).toHashCode();
+        return new HashCodeBuilder(17, 37).append(version).append(resourceType).toHashCode();
     }
 
 }

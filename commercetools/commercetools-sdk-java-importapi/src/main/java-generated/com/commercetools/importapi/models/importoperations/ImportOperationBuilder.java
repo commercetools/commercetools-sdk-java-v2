@@ -26,6 +26,9 @@ public final class ImportOperationBuilder {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    @Nullable
+    private java.util.List<com.commercetools.importapi.models.common.KeyReference> unresolvedReferences;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
@@ -74,6 +77,18 @@ public final class ImportOperationBuilder {
         return this;
     }
 
+    public ImportOperationBuilder unresolvedReferences(
+            @Nullable final com.commercetools.importapi.models.common.KeyReference... unresolvedReferences) {
+        this.unresolvedReferences = new ArrayList<>(Arrays.asList(unresolvedReferences));
+        return this;
+    }
+
+    public ImportOperationBuilder unresolvedReferences(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.KeyReference> unresolvedReferences) {
+        this.unresolvedReferences = unresolvedReferences;
+        return this;
+    }
+
     public ImportOperationBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -119,6 +134,11 @@ public final class ImportOperationBuilder {
         return this.errors;
     }
 
+    @Nullable
+    public java.util.List<com.commercetools.importapi.models.common.KeyReference> getUnresolvedReferences() {
+        return this.unresolvedReferences;
+    }
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
@@ -133,7 +153,7 @@ public final class ImportOperationBuilder {
 
     public ImportOperation build() {
         return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
-            createdAt, lastModifiedAt, expiresAt);
+            unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }
 
     public static ImportOperationBuilder of() {
@@ -149,6 +169,7 @@ public final class ImportOperationBuilder {
         builder.state = template.getState();
         builder.resourceVersion = template.getResourceVersion();
         builder.errors = template.getErrors();
+        builder.unresolvedReferences = template.getUnresolvedReferences();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.expiresAt = template.getExpiresAt();

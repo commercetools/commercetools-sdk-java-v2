@@ -23,7 +23,7 @@ public final class OrderImportDraftBuilder {
     private java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems;
+    private java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems;
 
     private com.commercetools.api.models.common.Money totalPrice;
 
@@ -103,13 +103,13 @@ public final class OrderImportDraftBuilder {
     }
 
     public OrderImportDraftBuilder customLineItems(
-            @Nullable final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {
+            @Nullable final com.commercetools.api.models.cart.CustomLineItemImportDraft... customLineItems) {
         this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
         return this;
     }
 
     public OrderImportDraftBuilder customLineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems) {
+            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems) {
         this.customLineItems = customLineItems;
         return this;
     }
@@ -238,7 +238,7 @@ public final class OrderImportDraftBuilder {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
+    public java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 

@@ -97,6 +97,10 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
         return this.getQueryParam("state");
     }
 
+    public List<String> getDebug() {
+        return this.getQueryParam("debug");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
     }
@@ -147,6 +151,14 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(
             final ProcessingState state) {
         return copy().addQueryParam("state", state);
+    }
+
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {
+        return copy().withQueryParam("debug", debug);
+    }
+
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {
+        return copy().addQueryParam("debug", debug);
     }
 
     @Override

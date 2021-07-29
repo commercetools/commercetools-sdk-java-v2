@@ -42,6 +42,8 @@ public final class ProjectImpl implements Project {
 
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
+    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
+
     @JsonCreator
     ProjectImpl(@JsonProperty("version") final Long version, @JsonProperty("key") final String key,
             @JsonProperty("name") final String name, @JsonProperty("countries") final java.util.List<String> countries,
@@ -53,7 +55,8 @@ public final class ProjectImpl implements Project {
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
             @JsonProperty("carts") final com.commercetools.api.models.project.CartsConfiguration carts,
-            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
+            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
+            @JsonProperty("shoppingLists") final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -67,6 +70,7 @@ public final class ProjectImpl implements Project {
         this.externalOAuth = externalOAuth;
         this.carts = carts;
         this.searchIndexing = searchIndexing;
+        this.shoppingLists = shoppingLists;
     }
 
     public ProjectImpl() {
@@ -142,6 +146,10 @@ public final class ProjectImpl implements Project {
         return this.searchIndexing;
     }
 
+    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
+        return this.shoppingLists;
+    }
+
     public void setVersion(final Long version) {
         this.version = version;
     }
@@ -208,6 +216,10 @@ public final class ProjectImpl implements Project {
         this.searchIndexing = searchIndexing;
     }
 
+    public void setShoppingLists(final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
+        this.shoppingLists = shoppingLists;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -231,6 +243,7 @@ public final class ProjectImpl implements Project {
                 .append(externalOAuth, that.externalOAuth)
                 .append(carts, that.carts)
                 .append(searchIndexing, that.searchIndexing)
+                .append(shoppingLists, that.shoppingLists)
                 .isEquals();
     }
 
@@ -249,6 +262,7 @@ public final class ProjectImpl implements Project {
                 .append(externalOAuth)
                 .append(carts)
                 .append(searchIndexing)
+                .append(shoppingLists)
                 .toHashCode();
     }
 

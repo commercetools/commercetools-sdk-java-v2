@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
@@ -26,7 +26,7 @@ public class SearchTest {
 
     @Test
     public void postSearch() {
-        final ByProjectKeyRequestBuilder project = ApiFactory.createForProject("test", this::createClient);
+        final ByProjectKeyRequestBuilder project = ApiRootBuilder.createForProject("test", createClient());
         ApiHttpRequest request = project.productProjections()
                 .search()
                 .post()

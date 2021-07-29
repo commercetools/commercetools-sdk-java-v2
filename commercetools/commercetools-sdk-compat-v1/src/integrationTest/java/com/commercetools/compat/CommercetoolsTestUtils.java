@@ -4,7 +4,7 @@ package com.commercetools.compat;
 import java.util.UUID;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
@@ -19,18 +19,12 @@ public class CommercetoolsTestUtils {
 
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
-        if ("OFF".equals(logLevel)) {
-            client = ApiFactory.defaultClient(
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-            projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
-        }
-        else {
-            client = ApiFactory.defaultClient(
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-            projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
-        }
+        ApiRootBuilder builder = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        client = builder.buildClient();
+        projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
     }
 
     public static String randomString() {

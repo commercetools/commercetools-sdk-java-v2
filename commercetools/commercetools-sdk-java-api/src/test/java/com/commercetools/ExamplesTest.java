@@ -1,20 +1,25 @@
 
 package com.commercetools;
 
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -23,13 +28,15 @@ import org.junit.Test;
 public class ExamplesTest {
 
     public ApiRoot createClient() {
-        ApiRoot apiRoot = ApiFactory.create(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build();
 
         return apiRoot;
     }
@@ -46,13 +53,15 @@ public class ExamplesTest {
     }
 
     public void usage() {
-        ApiRoot apiRoot = ApiFactory.create(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build();
 
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .name(LocalizedStringBuilder.of().addValue("en", "name").build())
@@ -97,12 +106,11 @@ public class ExamplesTest {
                 .getBody();
 
         // Delete Category by id
-        Long version = 1L;
         Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withId(category.getId())
                 .delete()
-                .withVersion(version)
+                .withVersion(1)
                 .executeBlocking()
                 .getBody();
 
@@ -132,6 +140,43 @@ public class ExamplesTest {
                 .withVersion(category.getVersion())
                 .executeBlocking()
                 .getBody();
+    }
+
+    public void middleware() {
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
+                .build();
+    }
+
+    public void retry() {
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .build();
+    }
+
+    public void proxy() {
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
+        VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
+
+        ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build();
     }
 
     @Test

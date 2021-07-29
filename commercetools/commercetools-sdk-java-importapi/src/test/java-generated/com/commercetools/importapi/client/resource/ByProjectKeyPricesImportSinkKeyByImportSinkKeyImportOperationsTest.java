@@ -116,6 +116,16 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsTest 
                                 .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
                                 .importOperations()
                                 .get()
+                                .withDebug(true)
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/prices/importSinkKey=test_importSinkKey/import-operations?debug=true", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .prices()
+                                .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
+                                .importOperations()
+                                .get()
                                 .createHttpRequest(),
                         "get", "/test_projectKey/prices/importSinkKey=test_importSinkKey/import-operations", } };
     }
@@ -152,6 +162,12 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsTest 
                         .importOperations()
                         .get()
                         .withState(com.commercetools.importapi.models.common.ProcessingState.findEnum("state")), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .prices()
+                        .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
+                        .importOperations()
+                        .get()
+                        .withDebug(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .prices()
                         .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")

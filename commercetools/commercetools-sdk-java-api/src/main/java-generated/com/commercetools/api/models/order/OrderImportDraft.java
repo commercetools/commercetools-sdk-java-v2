@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartOrigin;
-import com.commercetools.api.models.cart.CustomLineItemDraft;
+import com.commercetools.api.models.cart.CustomLineItemImportDraft;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.RoundingMode;
 import com.commercetools.api.models.cart.TaxedPriceDraft;
@@ -63,7 +63,7 @@ public interface OrderImportDraft {
     */
     @Valid
     @JsonProperty("customLineItems")
-    public List<CustomLineItemDraft> getCustomLineItems();
+    public List<CustomLineItemImportDraft> getCustomLineItems();
 
     @NotNull
     @Valid
@@ -176,9 +176,9 @@ public interface OrderImportDraft {
     public void setLineItems(final List<LineItemImportDraft> lineItems);
 
     @JsonIgnore
-    public void setCustomLineItems(final CustomLineItemDraft... customLineItems);
+    public void setCustomLineItems(final CustomLineItemImportDraft... customLineItems);
 
-    public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
+    public void setCustomLineItems(final List<CustomLineItemImportDraft> customLineItems);
 
     public void setTotalPrice(final Money totalPrice);
 

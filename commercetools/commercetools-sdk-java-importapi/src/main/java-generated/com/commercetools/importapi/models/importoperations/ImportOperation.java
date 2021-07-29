@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
@@ -73,6 +74,13 @@ public interface ImportOperation {
     public List<ErrorObject> getErrors();
 
     /**
+    *  <p>In case of unresolved status this array will show the unresolved references</p>
+    */
+    @Valid
+    @JsonProperty("unresolvedReferences")
+    public List<KeyReference> getUnresolvedReferences();
+
+    /**
     *  <p>The time when the ImportOperation was created.</p>
     */
     @NotNull
@@ -110,6 +118,11 @@ public interface ImportOperation {
 
     public void setErrors(final List<ErrorObject> errors);
 
+    @JsonIgnore
+    public void setUnresolvedReferences(final KeyReference... unresolvedReferences);
+
+    public void setUnresolvedReferences(final List<KeyReference> unresolvedReferences);
+
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
@@ -129,6 +142,7 @@ public interface ImportOperation {
         instance.setState(template.getState());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setErrors(template.getErrors());
+        instance.setUnresolvedReferences(template.getUnresolvedReferences());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setExpiresAt(template.getExpiresAt());

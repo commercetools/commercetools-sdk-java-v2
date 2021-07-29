@@ -117,6 +117,16 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperat
                                 .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
                                 .importOperations()
                                 .get()
+                                .withDebug(true)
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/product-variants/importSinkKey=test_importSinkKey/import-operations?debug=true", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .productVariants()
+                                .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
+                                .importOperations()
+                                .get()
                                 .createHttpRequest(),
                         "get",
                         "/test_projectKey/product-variants/importSinkKey=test_importSinkKey/import-operations", } };
@@ -154,6 +164,12 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperat
                         .importOperations()
                         .get()
                         .withState(com.commercetools.importapi.models.common.ProcessingState.findEnum("state")), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .productVariants()
+                        .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")
+                        .importOperations()
+                        .get()
+                        .withDebug(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .productVariants()
                         .importSinkKeyWithImportSinkKeyValue("test_importSinkKey")

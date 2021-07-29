@@ -8,25 +8,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AssetDimensionsBuilder {
 
-    private Double w;
+    private Integer w;
 
-    private Double h;
+    private Integer h;
 
-    public AssetDimensionsBuilder w(final Double w) {
+    public AssetDimensionsBuilder w(final Integer w) {
         this.w = w;
         return this;
     }
 
-    public AssetDimensionsBuilder h(final Double h) {
+    public AssetDimensionsBuilder h(final Integer h) {
         this.h = h;
         return this;
     }
 
-    public Double getW() {
+    public Integer getW() {
         return this.w;
     }
 
-    public Double getH() {
+    public Integer getH() {
         return this.h;
     }
 

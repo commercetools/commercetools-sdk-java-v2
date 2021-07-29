@@ -8,9 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import com.commercetools.api.client.ApiInternalLoggerFactory;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 
@@ -22,8 +21,6 @@ import io.sphere.sdk.queries.PagedQueryResult;
 import io.sphere.sdk.retry.RetryAction;
 import io.sphere.sdk.retry.RetryPredicate;
 import io.sphere.sdk.retry.RetryRule;
-import io.vrap.rmf.base.client.ClientBuilder;
-import io.vrap.rmf.base.client.http.RetryMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class Retry implements MigrateExample {
@@ -42,14 +39,12 @@ public class Retry implements MigrateExample {
 
     @Override
     public void v2() {
-        final ByProjectKeyRequestBuilder projectClient = ApiFactory.createForProject("projectKey",
-            () -> ClientBuilder.of()
-                    .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-                        ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                    .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
-                    .withRetryMiddleware(new RetryMiddleware(5, 100, 2000, Arrays.asList(502, 503, 504)))
-                    .build());
+        final ByProjectKeyRequestBuilder projectClient = ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .buildForProject("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();
     }

@@ -36,9 +36,7 @@ public class CompatClientTest {
 
     @Test
     public void compatClientWithApiRoot() {
-        ApiRoot root = ApiRootBuilder
-                .of(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()))
-                .build();
+        ApiRoot root = ApiRoot.fromClient(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()));
 
         Project project = root.withProjectKey(CommercetoolsTestUtils.getProjectKey()).get().executeBlocking().getBody();
         Assertions.assertThat(project).isInstanceOf(Project.class);
@@ -47,9 +45,7 @@ public class CompatClientTest {
 
     @Test
     public void compatClientWithApiRootCategories() {
-        ApiRoot root = ApiRootBuilder
-                .of(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()))
-                .build();
+        ApiRoot root = ApiRoot.fromClient(CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()));
 
         CategoryPagedQueryResponse response = root.withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .categories()

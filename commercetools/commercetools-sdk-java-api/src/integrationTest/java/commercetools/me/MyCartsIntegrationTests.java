@@ -13,8 +13,7 @@ import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
-import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,19 +23,15 @@ public class MyCartsIntegrationTests {
 
     @Test
     public void signInWithAnonymousCartWithNewActiveCart() throws ExecutionException, InterruptedException {
-        AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
-            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret(), null,
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
-            vrapHttpClient);
-
-        final StaticTokenSupplier staticTokenSupplier = new StaticTokenSupplier(
-            anonymousSessionTokenSupplier.getToken().get());
-
-        final ApiHttpClient apiAnonymousHttpClient = ClientBuilder.of(vrapHttpClient)
-                .withApiBaseUrl("https://api.europe-west1.gcp.commercetools.com/")
-                .withTokenSupplier(staticTokenSupplier)
+        ApiRoot apiAnonymousRoot = ApiRootBuilder.of(vrapHttpClient)
+                .defaultClient("https://api.europe-west1.gcp.commercetools.com/")
+                .withAnonymousSessionFlow(
+                    ClientCredentials.of()
+                            .withClientId(CommercetoolsTestUtils.getClientId())
+                            .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                            .build(),
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token")
                 .build();
-        ApiRoot apiAnonymousRoot = ApiRootBuilder.of(apiAnonymousHttpClient).build();
 
         MyCartDraft anonymousMyCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 

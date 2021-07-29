@@ -91,6 +91,10 @@ public interface Project {
     @JsonProperty("searchIndexing")
     public SearchIndexingConfiguration getSearchIndexing();
 
+    @Valid
+    @JsonProperty("shoppingLists")
+    public ShoppingListsConfiguration getShoppingLists();
+
     public void setVersion(final Long version);
 
     public void setKey(final String key);
@@ -126,6 +130,8 @@ public interface Project {
 
     public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
 
+    public void setShoppingLists(final ShoppingListsConfiguration shoppingLists);
+
     public static Project of() {
         return new ProjectImpl();
     }
@@ -145,6 +151,7 @@ public interface Project {
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setCarts(template.getCarts());
         instance.setSearchIndexing(template.getSearchIndexing());
+        instance.setShoppingLists(template.getShoppingLists());
         return instance;
     }
 

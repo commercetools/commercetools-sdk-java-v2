@@ -24,7 +24,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
 
     private java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems;
 
-    private java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems;
+    private java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems;
 
     private com.commercetools.api.models.common.Money totalPrice;
 
@@ -65,7 +65,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
             @JsonProperty("customerId") final String customerId,
             @JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems,
-            @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems,
+            @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
@@ -143,7 +143,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
     /**
     *  <p>If not given <code>lineItems</code> must not be empty.</p>
     */
-    public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
+    public java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 
@@ -268,12 +268,13 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
         this.lineItems = lineItems;
     }
 
-    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {
+    public void setCustomLineItems(
+            final com.commercetools.api.models.cart.CustomLineItemImportDraft... customLineItems) {
         this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
 
     public void setCustomLineItems(
-            final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems) {
+            final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems) {
         this.customLineItems = customLineItems;
     }
 

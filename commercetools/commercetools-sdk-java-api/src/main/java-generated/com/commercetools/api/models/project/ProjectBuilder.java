@@ -40,6 +40,9 @@ public final class ProjectBuilder {
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
+    @Nullable
+    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
+
     public ProjectBuilder version(final Long version) {
         this.version = version;
         return this;
@@ -123,6 +126,12 @@ public final class ProjectBuilder {
         return this;
     }
 
+    public ProjectBuilder shoppingLists(
+            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
+        this.shoppingLists = shoppingLists;
+        return this;
+    }
+
     public Long getVersion() {
         return this.version;
     }
@@ -179,9 +188,14 @@ public final class ProjectBuilder {
         return this.searchIndexing;
     }
 
+    @Nullable
+    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
+        return this.shoppingLists;
+    }
+
     public Project build() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            shippingRateInputType, externalOAuth, carts, searchIndexing);
+            shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
     }
 
     public static ProjectBuilder of() {
@@ -203,6 +217,7 @@ public final class ProjectBuilder {
         builder.externalOAuth = template.getExternalOAuth();
         builder.carts = template.getCarts();
         builder.searchIndexing = template.getSearchIndexing();
+        builder.shoppingLists = template.getShoppingLists();
         return builder;
     }
 

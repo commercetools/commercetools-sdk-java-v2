@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.defaultconfig;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -33,16 +32,12 @@ public class ImportApiFactory {
 
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return ImportApiRootBuilder.of()
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .build();
+        return ImportApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).build();
     }
 
     public static ApiRoot create(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return ImportApiRootBuilder.of(httpClient)
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .build();
+        return ImportApiRootBuilder.of(httpClient).defaultClient(apiEndpoint, credentials, tokenEndpoint).build();
     }
 
     public static ApiRoot create(final VrapHttpClient httpClient, final ClientCredentials credentials,
@@ -85,9 +80,7 @@ public class ImportApiFactory {
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return ImportApiRootBuilder.of()
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .buildClient();
+        return ImportApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
@@ -100,9 +93,7 @@ public class ImportApiFactory {
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return ImportApiRootBuilder.of(httpClient)
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .buildClient();
+        return ImportApiRootBuilder.of(httpClient).defaultClient(apiEndpoint, credentials, tokenEndpoint).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

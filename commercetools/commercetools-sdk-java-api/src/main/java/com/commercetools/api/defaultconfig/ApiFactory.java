@@ -1,7 +1,6 @@
 
 package com.commercetools.api.defaultconfig;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -10,7 +9,6 @@ import javax.annotation.Nullable;
 import com.commercetools.api.client.*;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.http.Middleware;

@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.defaultconfig;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -9,7 +8,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.ml.client.ApiRoot;
 import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
-import com.commercetools.ml.client.MLCorrelationIdProvider;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
@@ -20,9 +18,7 @@ public class MLApiRootFactory {
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint) {
-        return MLApiRootBuilder.of()
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .buildForProject(projectKey);
+        return MLApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).buildForProject(projectKey);
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,
@@ -32,16 +28,12 @@ public class MLApiRootFactory {
 
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return MLApiRootBuilder.of()
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .build();
+        return MLApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).build();
     }
 
     public static ApiRoot create(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return MLApiRootBuilder.of(httpClient)
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .build();
+        return MLApiRootBuilder.of(httpClient).defaultClient(apiEndpoint, credentials, tokenEndpoint).build();
     }
 
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
@@ -66,9 +58,7 @@ public class MLApiRootFactory {
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
-        return MLApiRootBuilder.of()
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .buildClient();
+        return MLApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
@@ -81,9 +71,7 @@ public class MLApiRootFactory {
 
     public static ApiHttpClient defaultClient(final VrapHttpClient httpClient, final ClientCredentials credentials,
             final String tokenEndpoint, final String apiEndpoint) {
-        return MLApiRootBuilder.of(httpClient)
-                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
-                .buildClient();
+        return MLApiRootBuilder.of(httpClient).defaultClient(apiEndpoint, credentials, tokenEndpoint).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

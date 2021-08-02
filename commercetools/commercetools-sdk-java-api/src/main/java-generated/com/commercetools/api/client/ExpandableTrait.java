@@ -10,4 +10,7 @@ public interface ExpandableTrait<T> {
     List<String> getExpand();
 
     T withExpand(final String expand);
+
+    T addExpand(final String expand);
+
 }

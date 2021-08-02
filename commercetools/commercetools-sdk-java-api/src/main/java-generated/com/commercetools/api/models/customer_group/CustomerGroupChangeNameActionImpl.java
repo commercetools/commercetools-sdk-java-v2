@@ -34,6 +34,9 @@ public final class CustomerGroupChangeNameActionImpl implements CustomerGroupCha
         return this.action;
     }
 
+    /**
+    *  <p>User-defined unique name for the customer group.</p>
+    */
     public String getName() {
         return this.name;
     }

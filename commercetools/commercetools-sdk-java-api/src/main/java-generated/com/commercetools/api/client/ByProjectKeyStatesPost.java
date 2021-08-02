@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Create State</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, com.commercetools.api.models.state.State>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesPost>,

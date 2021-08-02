@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Delete State by key</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyStatesKeyByKeyDelete
         extends ApiMethod<ByProjectKeyStatesKeyByKeyDelete, com.commercetools.api.models.state.State>

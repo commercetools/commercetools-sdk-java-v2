@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get Zone by key</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyZonesKeyByKeyGet
         extends ApiMethod<ByProjectKeyZonesKeyByKeyGet, com.commercetools.api.models.zone.Zone>

@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Query subscriptions</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeySubscriptionsGet extends
         ApiMethod<ByProjectKeySubscriptionsGet, com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>

@@ -17,7 +17,7 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
 
     @JsonProperty("key")

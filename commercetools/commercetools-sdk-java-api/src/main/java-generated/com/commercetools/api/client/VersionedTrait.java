@@ -10,4 +10,7 @@ public interface VersionedTrait<T> {
     List<String> getVersion();
 
     T withVersion(final long version);
+
+    T addVersion(final long version);
+
 }

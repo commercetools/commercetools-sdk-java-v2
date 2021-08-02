@@ -15,7 +15,14 @@ public interface PagingTrait<T> {
 
     T withLimit(final int limit);
 
+    T addLimit(final int limit);
+
     T withOffset(final int offset);
 
+    T addOffset(final int offset);
+
     T withWithTotal(final boolean withTotal);
+
+    T addWithTotal(final boolean withTotal);
+
 }

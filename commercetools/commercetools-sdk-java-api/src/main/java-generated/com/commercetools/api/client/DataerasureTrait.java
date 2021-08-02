@@ -10,4 +10,7 @@ public interface DataerasureTrait<T> {
     List<String> getDataErasure();
 
     T withDataErasure(final boolean dataErasure);
+
+    T addDataErasure(final boolean dataErasure);
+
 }

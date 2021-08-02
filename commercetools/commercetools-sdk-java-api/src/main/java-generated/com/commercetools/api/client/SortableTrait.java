@@ -10,4 +10,7 @@ public interface SortableTrait<T> {
     List<String> getSort();
 
     T withSort(final String sort);
+
+    T addSort(final String sort);
+
 }

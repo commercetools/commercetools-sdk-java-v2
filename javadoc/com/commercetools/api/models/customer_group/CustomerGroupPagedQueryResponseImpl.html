@@ -114,6 +114,7 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">CustomerGroupPagedQueryResponseImpl</span>
 extends java.lang.Object
 implements <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></pre>
+<div class="block"><p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p></div>
 </li>
 </ul>
 </div>
@@ -155,23 +156,33 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getCount--">getCount</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getCount--">getCount</a></span>()</code>
+<div class="block">The actual number of results returned.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getLimit--">getLimit</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getLimit--">getLimit</a></span>()</code>
+<div class="block">The number of results requested in the query request.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getOffset--">getOffset</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getOffset--">getOffset</a></span>()</code>
+<div class="block">The offset supplied by the client or the server default.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getResults--">getResults</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getResults--">getResults</a></span>()</code>
+<div class="block">The array of <a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getTotal--">getTotal</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponseImpl.html#getTotal--">getTotal</a></span>()</code>
+<div class="block">The total number of results matching the query.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
@@ -247,6 +258,23 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getOffset--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOffset</h4>
+<pre>public&nbsp;java.lang.Long&nbsp;getOffset()</pre>
+<div class="block"><p>The offset supplied by the client or the server default.
+  It is the number of elements skipped, not a page number.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getOffset--">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html#getOffset--">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
 <a name="getLimit--">
 <!--   -->
 </a>
@@ -254,6 +282,7 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <li class="blockList">
 <h4>getLimit</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getLimit()</pre>
+<div class="block"><p>The number of results requested in the query request.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getLimit--">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
@@ -269,6 +298,7 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <li class="blockList">
 <h4>getCount</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getCount()</pre>
+<div class="block"><p>The actual number of results returned.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getCount--">getCount</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
@@ -284,26 +314,16 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <li class="blockList">
 <h4>getTotal</h4>
 <pre>public&nbsp;java.lang.Long&nbsp;getTotal()</pre>
+<div class="block"><p>The total number of results matching the query.
+  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
+  This field is returned by default.
+  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
+  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/contract#queries">limit</a>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getTotal--">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html#getTotal--">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="getOffset--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getOffset</h4>
-<pre>public&nbsp;java.lang.Long&nbsp;getOffset()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getOffset--">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html#getOffset--">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -314,11 +334,25 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <li class="blockList">
 <h4>getResults</h4>
 <pre>public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;&nbsp;getResults()</pre>
+<div class="block"><p>The array of <a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#getResults--">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html#getResults--">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="setOffset-java.lang.Long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOffset</h4>
+<pre>public&nbsp;void&nbsp;setOffset(java.lang.Long&nbsp;offset)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#setOffset-java.lang.Long-">setOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -358,19 +392,6 @@ implements <a href="../../../../../com/commercetools/api/models/customer_group/C
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#setTotal-java.lang.Long-">setTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setOffset-java.lang.Long-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setOffset</h4>
-<pre>public&nbsp;void&nbsp;setOffset(java.lang.Long&nbsp;offset)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html#setOffset-java.lang.Long-">setOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a></code></dd>
 </dl>
 </li>
 </ul>

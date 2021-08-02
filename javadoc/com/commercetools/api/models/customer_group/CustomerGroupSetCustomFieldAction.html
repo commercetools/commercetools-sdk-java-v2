@@ -160,7 +160,9 @@ extends <a href="../../../../../com/commercetools/api/models/customer_group/Cust
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Object</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupSetCustomFieldAction.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupSetCustomFieldAction.html#getValue--">getValue</a></span>()</code>
+<div class="block">Value must be of type <a href="/../api/projects/custom-fields#value">Value</a>.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupSetCustomFieldAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupSetCustomFieldAction</a></code></td>
@@ -249,6 +251,10 @@ extends <a href="../../../../../com/commercetools/api/models/customer_group/Cust
 <li class="blockList">
 <h4>getValue</h4>
 <pre>java.lang.Object&nbsp;getValue()</pre>
+<div class="block"><p>Value must be of type <a href="/../api/projects/custom-fields#value">Value</a>.
+  If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#400-bad-request-1">InvalidOperation</a> error.
+  If <code>value</code> is provided, set the <code>value</code> of the field defined by the <code>name</code>.</p></div>
 </li>
 </ul>
 <a name="setName-java.lang.String-">

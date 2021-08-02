@@ -109,6 +109,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">CustomerGroupSetCustomTypeAction</span>
 extends <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a></pre>
+<div class="block"><p>This action sets or removes the custom type for an existing customer group.
+  If present, this action overwrites any existing <a href="/../api/projects/custom-fields#custom">custom</a> type and fields.</p></div>
 </li>
 </ul>
 </div>
@@ -157,13 +159,13 @@ extends <a href="../../../../../com/commercetools/api/models/customer_group/Cust
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupSetCustomTypeAction.html#getFields--">getFields</a></span>()</code>
-<div class="block">A valid JSON object, based on the FieldDefinitions of the Type.</div>
+<div class="block">A valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupSetCustomTypeAction.html#getType--">getType</a></span>()</code>
-<div class="block">If absent, the custom type and any existing CustomFields are removed.</div>
+<div class="block">If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -244,7 +246,7 @@ extends <a href="../../../../../com/commercetools/api/models/customer_group/Cust
 <h4>getType</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;getType()</pre>
-<div class="block"><p>If absent, the custom type and any existing CustomFields are removed.</p></div>
+<div class="block"><p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p></div>
 </li>
 </ul>
 <a name="getFields--">
@@ -255,8 +257,8 @@ extends <a href="../../../../../com/commercetools/api/models/customer_group/Cust
 <h4>getFields</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;getFields()</pre>
-<div class="block"><p>A valid JSON object, based on the FieldDefinitions of the Type.
-  Sets the custom fields to this value.</p></div>
+<div class="block"><p>A valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
+  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p></div>
 </li>
 </ul>
 <a name="setType-com.commercetools.api.models.type.TypeResourceIdentifier-">

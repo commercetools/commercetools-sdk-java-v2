@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10,"i15":10,"i16":42,"i17":42,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10,"i15":10,"i16":42,"i17":42,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -323,25 +323,30 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware-io.vrap.rmf.base.client.http.RetryMiddleware-">withRetryMiddleware</a></span>(<a href="../../../../../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware-int-java.util.List-">withRetryMiddleware</a></span>(int&nbsp;maxRetries,
+                   java.util.List&lt;java.lang.Integer&gt;&nbsp;statusCodes)</code>&nbsp;</td>
 </tr>
 <tr id="i37" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware-java.util.function.Supplier-">withRetryMiddleware</a></span>(java.util.function.Supplier&lt;<a href="../../../../../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware-io.vrap.rmf.base.client.http.RetryMiddleware-">withRetryMiddleware</a></span>(<a href="../../../../../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</code>&nbsp;</td>
 </tr>
 <tr id="i38" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withSerializer-io.vrap.rmf.base.client.ResponseSerializer-">withSerializer</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware-java.util.function.Supplier-">withRetryMiddleware</a></span>(java.util.function.Supplier&lt;<a href="../../../../../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</code>&nbsp;</td>
 </tr>
 <tr id="i39" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withStaticTokenFlow-io.vrap.rmf.base.client.AuthenticationToken-">withStaticTokenFlow</a></span>(<a href="../../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withSerializer-io.vrap.rmf.base.client.ResponseSerializer-">withSerializer</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code>&nbsp;</td>
 </tr>
 <tr id="i40" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withTokenSupplier-io.vrap.rmf.base.client.oauth2.TokenSupplier-">withTokenSupplier</a></span>(<a href="../../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withStaticTokenFlow-io.vrap.rmf.base.client.AuthenticationToken-">withStaticTokenFlow</a></span>(<a href="../../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code>&nbsp;</td>
 </tr>
 <tr id="i41" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withTokenSupplier-io.vrap.rmf.base.client.oauth2.TokenSupplier-">withTokenSupplier</a></span>(<a href="../../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code>&nbsp;</td>
+</tr>
+<tr id="i42" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html#withUserAgentSupplier-java.util.function.Supplier-">withUserAgentSupplier</a></span>(java.util.function.Supplier&lt;java.lang.String&gt;&nbsp;userAgentSupplier)</code>&nbsp;</td>
 </tr>
@@ -669,6 +674,16 @@ public&nbsp;<a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" 
 <li class="blockList">
 <h4>withRetryMiddleware</h4>
 <pre>public&nbsp;<a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a>&nbsp;withRetryMiddleware(int&nbsp;maxRetries)</pre>
+</li>
+</ul>
+<a name="withRetryMiddleware-int-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withRetryMiddleware</h4>
+<pre>public&nbsp;<a href="../../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a>&nbsp;withRetryMiddleware(int&nbsp;maxRetries,
+                                         java.util.List&lt;java.lang.Integer&gt;&nbsp;statusCodes)</pre>
 </li>
 </ul>
 <a name="withOAuthMiddleware-java.util.function.Supplier-">

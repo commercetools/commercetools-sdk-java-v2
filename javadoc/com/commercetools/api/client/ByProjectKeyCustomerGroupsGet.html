@@ -119,7 +119,6 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">ByProjectKeyCustomerGroupsGet</span>
 extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>,<a href="../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a>&gt;
 implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>,<a href="../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;, <a href="../../../../com/commercetools/api/client/SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;, <a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;, <a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;, <a href="../../../../com/commercetools/api/client/Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;</pre>
-<div class="block"><p>Query customer-groups</p></div>
 </li>
 </ul>
 </div>
@@ -404,6 +403,19 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <pre>public&nbsp;java.lang.String&nbsp;getProjectKey()</pre>
 </li>
 </ul>
+<a name="getWhere--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWhere</h4>
+<pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getWhere()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#getWhere--">getWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
 <a name="getExpand--">
 <!--   -->
 </a>
@@ -469,19 +481,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 </dl>
 </li>
 </ul>
-<a name="getWhere--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getWhere</h4>
-<pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getWhere()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#getWhere--">getWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
 <a name="setProjectKey-java.lang.String-">
 <!--   -->
 </a>
@@ -489,6 +488,30 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>setProjectKey</h4>
 <pre>public&nbsp;void&nbsp;setProjectKey(java.lang.String&nbsp;projectKey)</pre>
+</li>
+</ul>
+<a name="withWhere-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withWhere</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&nbsp;withWhere(java.lang.String&nbsp;where)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>,<a href="../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addWhere-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addWhere</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&nbsp;addWhere(java.lang.String&nbsp;where)</pre>
 </li>
 </ul>
 <a name="withExpand-java.lang.String-">
@@ -609,30 +632,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>addWithTotal</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&nbsp;addWithTotal(boolean&nbsp;withTotal)</pre>
-</li>
-</ul>
-<a name="withWhere-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>withWhere</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&nbsp;withWhere(java.lang.String&nbsp;where)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>,<a href="../../../../com/commercetools/api/models/customer_group/CustomerGroupPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addWhere-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addWhere</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCustomerGroupsGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsGet</a>&nbsp;addWhere(java.lang.String&nbsp;where)</pre>
 </li>
 </ul>
 <a name="withPredicateVar-java.lang.String-java.lang.String-">

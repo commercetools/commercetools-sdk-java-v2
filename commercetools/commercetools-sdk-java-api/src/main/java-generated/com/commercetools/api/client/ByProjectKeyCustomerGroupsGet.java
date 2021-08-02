@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Query customer-groups</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCustomerGroupsGet extends
         ApiMethod<ByProjectKeyCustomerGroupsGet, com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>
@@ -70,6 +67,10 @@ public class ByProjectKeyCustomerGroupsGet extends
         return this.projectKey;
     }
 
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -90,12 +91,16 @@ public class ByProjectKeyCustomerGroupsGet extends
         return this.getQueryParam("withTotal");
     }
 
-    public List<String> getWhere() {
-        return this.getQueryParam("where");
-    }
-
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyCustomerGroupsGet withWhere(final String where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    public ByProjectKeyCustomerGroupsGet addWhere(final String where) {
+        return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyCustomerGroupsGet withExpand(final String expand) {
@@ -136,14 +141,6 @@ public class ByProjectKeyCustomerGroupsGet extends
 
     public ByProjectKeyCustomerGroupsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
-    }
-
-    public ByProjectKeyCustomerGroupsGet withWhere(final String where) {
-        return copy().withQueryParam("where", where);
-    }
-
-    public ByProjectKeyCustomerGroupsGet addWhere(final String where) {
-        return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyCustomerGroupsGet withPredicateVar(final String varName, final String predicateVar) {

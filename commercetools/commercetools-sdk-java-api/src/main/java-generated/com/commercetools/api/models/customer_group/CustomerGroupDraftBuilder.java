@@ -16,7 +16,7 @@ public final class CustomerGroupDraftBuilder {
     private String groupName;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -28,7 +28,8 @@ public final class CustomerGroupDraftBuilder {
         return this;
     }
 
-    public CustomerGroupDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public CustomerGroupDraftBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -43,7 +44,7 @@ public final class CustomerGroupDraftBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

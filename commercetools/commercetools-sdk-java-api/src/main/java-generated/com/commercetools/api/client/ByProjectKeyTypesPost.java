@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Create Type</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost, com.commercetools.api.models.type.Type>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTypesPost>,

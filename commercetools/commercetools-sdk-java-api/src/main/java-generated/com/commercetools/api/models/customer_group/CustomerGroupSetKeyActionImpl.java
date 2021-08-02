@@ -35,7 +35,7 @@ public final class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyA
     }
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
     public String getKey() {
         return this.key;

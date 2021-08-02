@@ -20,11 +20,11 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
 
     private String groupName;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.groupName = groupName;
         this.custom = custom;
@@ -34,17 +34,21 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
     }
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
     public String getKey() {
         return this.key;
     }
 
+    /**
+    *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> in the project.
+    *  If not, a <code>DuplicateField</code> <a href="/../api/errors#400-bad-request-1">error</a> is thrown.</p>
+    */
     public String getGroupName() {
         return this.groupName;
     }
 
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -56,7 +60,7 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
         this.groupName = groupName;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

@@ -27,6 +27,7 @@ public class ClientBuilder {
     private Supplier<HandlerStack> stack;
     private VrapHttpClient httpClient;
     private ResponseSerializer serializer;
+    public static final String userAgent  = "commercetools-sdk-java-v2/";
 
     public static ClientBuilder of() {
         return new ClientBuilder();
@@ -307,7 +308,7 @@ public class ClientBuilder {
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;
         String sdkVersion = BuildInfo.VERSION;
-        return "commercetools-java-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch
+        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch
                 + ")";
     }
 }

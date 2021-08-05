@@ -3,10 +3,17 @@ package commercetools.api_client;
 
 import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
+import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.category.CategoryPagedQueryResponse;
+import commercetools.category.CategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ClientBuilder;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 public class ApiClientIntegrationTests {
 
@@ -47,4 +54,11 @@ public class ApiClientIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), apiClient.getId());
         });
     }
+
+    @Test
+    public void userAgent() {
+        String clientWithUserAgent = ClientBuilder.buildDefaultUserAgent();
+        Assert.assertTrue(clientWithUserAgent.contains(ClientBuilder.userAgent));
+    }
+
 }

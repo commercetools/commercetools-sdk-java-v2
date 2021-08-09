@@ -80,10 +80,16 @@ public class ByProjectKeyDiscountCodesPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyDiscountCodesPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyDiscountCodesPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

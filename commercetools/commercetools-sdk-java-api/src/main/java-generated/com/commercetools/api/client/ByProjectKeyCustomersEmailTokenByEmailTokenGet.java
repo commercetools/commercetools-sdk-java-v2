@@ -80,10 +80,16 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends
         this.emailToken = emailToken;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

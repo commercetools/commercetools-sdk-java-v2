@@ -98,10 +98,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet extends
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

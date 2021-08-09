@@ -79,10 +79,16 @@ public class ByProjectKeyDiscountCodesByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyDiscountCodesByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyDiscountCodesByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

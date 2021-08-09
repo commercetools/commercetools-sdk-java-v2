@@ -92,10 +92,16 @@ public class ByProjectKeyInventoryByIDPost
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInventoryByIDPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInventoryByIDPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

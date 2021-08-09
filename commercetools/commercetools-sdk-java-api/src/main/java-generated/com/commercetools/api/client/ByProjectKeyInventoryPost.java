@@ -80,10 +80,16 @@ public class ByProjectKeyInventoryPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInventoryPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInventoryPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

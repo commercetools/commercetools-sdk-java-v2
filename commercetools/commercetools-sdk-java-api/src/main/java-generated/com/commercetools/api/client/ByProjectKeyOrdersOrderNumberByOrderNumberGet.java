@@ -83,10 +83,16 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
         this.orderNumber = orderNumber;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

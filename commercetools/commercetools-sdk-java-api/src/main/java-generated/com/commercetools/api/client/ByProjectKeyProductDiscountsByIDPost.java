@@ -94,10 +94,16 @@ public class ByProjectKeyProductDiscountsByIDPost extends
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyProductDiscountsByIDPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyProductDiscountsByIDPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

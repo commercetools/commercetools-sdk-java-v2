@@ -92,10 +92,16 @@ public class ByProjectKeyCategoriesKeyByKeyPost
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCategoriesKeyByKeyPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCategoriesKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

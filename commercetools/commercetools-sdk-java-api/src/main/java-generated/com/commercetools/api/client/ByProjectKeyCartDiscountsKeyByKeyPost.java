@@ -92,10 +92,16 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

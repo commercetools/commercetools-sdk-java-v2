@@ -78,10 +78,16 @@ public class ByProjectKeyOrdersByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyOrdersByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyOrdersByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

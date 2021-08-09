@@ -112,34 +112,58 @@ public class ByProjectKeyProductsByIDImagesPost
         this.ID = ID;
     }
 
+    /**
+     * set filename with the specificied value
+     */
     public ByProjectKeyProductsByIDImagesPost withFilename(final String filename) {
         return copy().withQueryParam("filename", filename);
     }
 
+    /**
+     * add additional filename query parameter
+     */
     public ByProjectKeyProductsByIDImagesPost addFilename(final String filename) {
         return copy().addQueryParam("filename", filename);
     }
 
+    /**
+     * set variant with the specificied value
+     */
     public ByProjectKeyProductsByIDImagesPost withVariant(final long variant) {
         return copy().withQueryParam("variant", variant);
     }
 
+    /**
+     * add additional variant query parameter
+     */
     public ByProjectKeyProductsByIDImagesPost addVariant(final long variant) {
         return copy().addQueryParam("variant", variant);
     }
 
+    /**
+     * set sku with the specificied value
+     */
     public ByProjectKeyProductsByIDImagesPost withSku(final String sku) {
         return copy().withQueryParam("sku", sku);
     }
 
+    /**
+     * add additional sku query parameter
+     */
     public ByProjectKeyProductsByIDImagesPost addSku(final String sku) {
         return copy().addQueryParam("sku", sku);
     }
 
+    /**
+     * set staged with the specificied value
+     */
     public ByProjectKeyProductsByIDImagesPost withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
+    /**
+     * add additional staged query parameter
+     */
     public ByProjectKeyProductsByIDImagesPost addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }

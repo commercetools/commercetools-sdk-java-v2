@@ -80,10 +80,16 @@ public class ByProjectKeyApiClientsPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyApiClientsPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyApiClientsPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

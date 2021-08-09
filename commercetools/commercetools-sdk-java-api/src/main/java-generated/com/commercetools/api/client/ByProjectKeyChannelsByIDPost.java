@@ -92,10 +92,16 @@ public class ByProjectKeyChannelsByIDPost
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyChannelsByIDPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyChannelsByIDPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

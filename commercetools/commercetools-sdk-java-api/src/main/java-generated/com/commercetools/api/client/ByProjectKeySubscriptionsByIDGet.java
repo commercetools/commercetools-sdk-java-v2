@@ -82,10 +82,16 @@ public class ByProjectKeySubscriptionsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeySubscriptionsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeySubscriptionsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

@@ -80,10 +80,16 @@ public class ByProjectKeyProductTypesPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyProductTypesPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyProductTypesPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

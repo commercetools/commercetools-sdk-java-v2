@@ -80,10 +80,16 @@ public class ByProjectKeyCustomerGroupsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomerGroupsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomerGroupsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

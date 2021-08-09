@@ -91,10 +91,16 @@ public class ByProjectKeyZonesByIDPost
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyZonesByIDPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyZonesByIDPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

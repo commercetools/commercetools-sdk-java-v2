@@ -85,10 +85,16 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet
         this.customerId = customerId;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

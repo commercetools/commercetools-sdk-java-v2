@@ -92,10 +92,16 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyOrdersEditsKeyByKeyPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyOrdersEditsKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

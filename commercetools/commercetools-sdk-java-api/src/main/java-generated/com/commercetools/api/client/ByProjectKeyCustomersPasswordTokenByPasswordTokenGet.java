@@ -81,10 +81,16 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
         this.passwordToken = passwordToken;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

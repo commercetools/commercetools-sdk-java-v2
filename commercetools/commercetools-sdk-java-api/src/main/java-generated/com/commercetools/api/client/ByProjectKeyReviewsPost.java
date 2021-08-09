@@ -80,10 +80,16 @@ public class ByProjectKeyReviewsPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyReviewsPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyReviewsPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

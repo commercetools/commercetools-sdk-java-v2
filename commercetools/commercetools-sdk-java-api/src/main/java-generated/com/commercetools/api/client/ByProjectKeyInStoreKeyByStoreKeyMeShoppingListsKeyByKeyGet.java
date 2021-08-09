@@ -97,10 +97,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet extends
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

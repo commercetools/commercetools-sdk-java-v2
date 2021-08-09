@@ -6,31 +6,40 @@ import io.vrap.rmf.base.client.RequestCommand;
 
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {
-    T withLimit(final int limit);
+    PagedQueryResourceRequest<T, TResult> withLimit(final int limit);
 
-    T addLimit(final int limit);
+    PagedQueryResourceRequest<T, TResult> addLimit(final int limit);
 
-    T withOffset(final int offset);
+    PagedQueryResourceRequest<T, TResult> withOffset(final int offset);
 
-    T addOffset(final int offset);
+    PagedQueryResourceRequest<T, TResult> addOffset(final int offset);
 
-    T withSort(final String sort);
+    PagedQueryResourceRequest<T, TResult> withSort(final String sort);
 
-    T addSort(final String sort);
+    PagedQueryResourceRequest<T, TResult> addSort(final String sort);
 
-    T withWhere(final String where);
+    PagedQueryResourceRequest<T, TResult> withWhere(final String where);
 
-    T addWhere(final String where);
+    PagedQueryResourceRequest<T, TResult> addWhere(final String where);
 
-    T withExpand(final String expand);
+    PagedQueryResourceRequest<T, TResult> withExpand(final String expand);
 
-    T addExpand(final String expand);
+    PagedQueryResourceRequest<T, TResult> addExpand(final String expand);
 
-    T withWithTotal(final boolean withTotal);
+    PagedQueryResourceRequest<T, TResult> withWithTotal(final boolean withTotal);
 
-    T addWithTotal(final boolean withTotal);
+    PagedQueryResourceRequest<T, TResult> addWithTotal(final boolean withTotal);
 
-    T withPredicateVar(final String varName, final String predicateVar);
+    PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName, final String predicateVar);
 
-    T addPredicateVar(final String varName, final String predicateVar);
+    PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final String predicateVar);
+
+    default PagedQueryResourceRequest<T, TResult> asPagedQueryResourceRequest() {
+        return this;
+    }
+
+    @SuppressWarnings("unchecked")
+    default T asPagedQueryResourceRequestToBaseType() {
+        return (T) this;
+    }
 }

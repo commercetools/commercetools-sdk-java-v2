@@ -79,10 +79,16 @@ public class ByProjectKeyTaxCategoriesByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyTaxCategoriesByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyTaxCategoriesByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

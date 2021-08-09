@@ -88,18 +88,30 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
         this.storeKey = storeKey;
     }
 
+    /**
+     * set cartId with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final String cartId) {
         return copy().withQueryParam("cartId", cartId);
     }
 
+    /**
+     * add additional cartId query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final String cartId) {
         return copy().addQueryParam("cartId", cartId);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

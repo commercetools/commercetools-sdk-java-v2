@@ -80,10 +80,16 @@ public class ByProjectKeyShippingMethodsByIDGet extends
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShippingMethodsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShippingMethodsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

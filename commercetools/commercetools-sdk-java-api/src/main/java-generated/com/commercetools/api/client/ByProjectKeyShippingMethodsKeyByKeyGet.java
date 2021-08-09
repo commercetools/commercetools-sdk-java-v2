@@ -80,10 +80,16 @@ public class ByProjectKeyShippingMethodsKeyByKeyGet extends
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShippingMethodsKeyByKeyGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShippingMethodsKeyByKeyGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

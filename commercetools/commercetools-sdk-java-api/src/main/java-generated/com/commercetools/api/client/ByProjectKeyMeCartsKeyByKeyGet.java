@@ -78,10 +78,16 @@ public class ByProjectKeyMeCartsKeyByKeyGet
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyMeCartsKeyByKeyGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyMeCartsKeyByKeyGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

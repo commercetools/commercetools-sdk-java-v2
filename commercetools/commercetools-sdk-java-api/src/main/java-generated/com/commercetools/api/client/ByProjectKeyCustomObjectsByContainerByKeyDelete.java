@@ -105,26 +105,44 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         this.key = key;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

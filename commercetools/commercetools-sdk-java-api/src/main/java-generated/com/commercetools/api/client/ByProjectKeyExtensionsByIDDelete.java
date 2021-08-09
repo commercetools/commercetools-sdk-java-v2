@@ -85,18 +85,30 @@ public class ByProjectKeyExtensionsByIDDelete
         this.ID = ID;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyExtensionsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyExtensionsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyExtensionsByIDDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyExtensionsByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

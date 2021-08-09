@@ -103,26 +103,44 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends
         this.ID = ID;
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

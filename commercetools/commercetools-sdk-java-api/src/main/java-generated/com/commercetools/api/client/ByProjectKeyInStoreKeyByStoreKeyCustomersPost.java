@@ -102,10 +102,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends
         this.storeKey = storeKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

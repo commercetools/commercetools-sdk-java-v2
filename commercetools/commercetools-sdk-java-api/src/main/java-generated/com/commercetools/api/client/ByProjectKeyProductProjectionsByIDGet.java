@@ -113,66 +113,114 @@ public class ByProjectKeyProductProjectionsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set staged with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
+    /**
+     * add additional staged query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
+    /**
+     * set priceCurrency with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final String priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
     }
 
+    /**
+     * add additional priceCurrency query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final String priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
 
+    /**
+     * set priceCountry with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCountry(final String priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
     }
 
+    /**
+     * add additional priceCountry query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCountry(final String priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
     }
 
+    /**
+     * set priceCustomerGroup with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
+    /**
+     * set priceChannel with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceChannel(final String priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
     }
 
+    /**
+     * add additional priceChannel query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceChannel(final String priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
     }
 
+    /**
+     * set localeProjection with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final String localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
     }
 
+    /**
+     * add additional localeProjection query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addLocaleProjection(final String localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
     }
 
+    /**
+     * set storeProjection with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withStoreProjection(final String storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
     }
 
+    /**
+     * add additional storeProjection query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addStoreProjection(final String storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

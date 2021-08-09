@@ -84,18 +84,30 @@ public class ByProjectKeyStatesKeyByKeyDelete
         this.key = key;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyStatesKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyStatesKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyStatesKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyStatesKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

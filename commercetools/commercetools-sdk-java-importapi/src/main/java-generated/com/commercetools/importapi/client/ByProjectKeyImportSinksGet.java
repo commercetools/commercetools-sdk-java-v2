@@ -79,26 +79,44 @@ public class ByProjectKeyImportSinksGet extends
         this.projectKey = projectKey;
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyImportSinksGet withLimit(final double limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyImportSinksGet addLimit(final double limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyImportSinksGet withOffset(final double offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyImportSinksGet addOffset(final double offset) {
         return copy().addQueryParam("offset", offset);
     }
 
+    /**
+     * set sort with the specificied value
+     */
     public ByProjectKeyImportSinksGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
 
+    /**
+     * add additional sort query parameter
+     */
     public ByProjectKeyImportSinksGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }

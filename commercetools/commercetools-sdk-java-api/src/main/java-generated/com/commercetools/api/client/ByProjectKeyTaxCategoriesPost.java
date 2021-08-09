@@ -80,10 +80,16 @@ public class ByProjectKeyTaxCategoriesPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyTaxCategoriesPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyTaxCategoriesPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

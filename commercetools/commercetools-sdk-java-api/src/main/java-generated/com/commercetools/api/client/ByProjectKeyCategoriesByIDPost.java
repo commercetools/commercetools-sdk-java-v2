@@ -92,10 +92,16 @@ public class ByProjectKeyCategoriesByIDPost
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCategoriesByIDPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCategoriesByIDPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

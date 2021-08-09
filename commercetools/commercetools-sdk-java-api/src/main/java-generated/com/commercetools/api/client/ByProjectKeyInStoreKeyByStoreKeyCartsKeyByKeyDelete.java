@@ -102,26 +102,44 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
         this.key = key;
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

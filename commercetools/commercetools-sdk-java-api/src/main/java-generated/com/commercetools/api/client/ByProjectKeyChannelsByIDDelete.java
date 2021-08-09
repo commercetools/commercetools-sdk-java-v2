@@ -85,18 +85,30 @@ public class ByProjectKeyChannelsByIDDelete
         this.ID = ID;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyChannelsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyChannelsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyChannelsByIDDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyChannelsByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

@@ -79,10 +79,16 @@ public class ByProjectKeyPaymentsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyPaymentsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyPaymentsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

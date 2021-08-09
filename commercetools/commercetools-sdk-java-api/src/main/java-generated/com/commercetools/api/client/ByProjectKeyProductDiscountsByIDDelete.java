@@ -87,18 +87,30 @@ public class ByProjectKeyProductDiscountsByIDDelete extends
         this.ID = ID;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyProductDiscountsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyProductDiscountsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyProductDiscountsByIDDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyProductDiscountsByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

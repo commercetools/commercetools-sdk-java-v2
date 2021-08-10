@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductVariantChannelAvailabilityMapBuilder
         implements Builder<ProductVariantChannelAvailabilityMap> {
 
-    private Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values;
+    private Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values = new HashMap<>();
 
     public ProductVariantChannelAvailabilityMapBuilder values(
             final Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values) {

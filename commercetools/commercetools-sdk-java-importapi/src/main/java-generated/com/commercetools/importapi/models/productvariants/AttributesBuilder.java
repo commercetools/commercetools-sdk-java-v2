@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributesBuilder implements Builder<Attributes> {
 
-    private Map<String, com.commercetools.importapi.models.productvariants.Attribute> values;
+    private Map<String, com.commercetools.importapi.models.productvariants.Attribute> values = new HashMap<>();
 
     public AttributesBuilder values(
             final Map<String, com.commercetools.importapi.models.productvariants.Attribute> values) {

@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
 
-    private Map<String, String> values;
+    private Map<String, String> values = new HashMap<>();
 
     public CategoryOrderHintsBuilder values(final Map<String, String> values) {
         this.values = values;

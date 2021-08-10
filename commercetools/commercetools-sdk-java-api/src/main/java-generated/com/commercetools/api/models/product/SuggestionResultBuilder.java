@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SuggestionResultBuilder implements Builder<SuggestionResult> {
 
-    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
+    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     public SuggestionResultBuilder values(
             final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {

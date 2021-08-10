@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FieldContainerBuilder implements Builder<FieldContainer> {
 
-    private Map<String, java.lang.Object> values;
+    private Map<String, java.lang.Object> values = new HashMap<>();
 
     public FieldContainerBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;

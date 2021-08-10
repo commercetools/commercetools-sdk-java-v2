@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListSetTextLineItemDescriptionActionBuilder {
+public final class ShoppingListSetTextLineItemDescriptionActionBuilder
+        implements Builder<ShoppingListSetTextLineItemDescriptionAction> {
 
     private String textLineItemId;
 
@@ -36,6 +38,14 @@ public final class ShoppingListSetTextLineItemDescriptionActionBuilder {
     }
 
     public ShoppingListSetTextLineItemDescriptionAction build() {
+        Objects.requireNonNull(textLineItemId);
+        return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
+    }
+
+    /**
+     * builds ShoppingListSetTextLineItemDescriptionAction without checking for non null required values
+     */
+    public ShoppingListSetTextLineItemDescriptionAction buildUnchecked() {
         return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
     }
 

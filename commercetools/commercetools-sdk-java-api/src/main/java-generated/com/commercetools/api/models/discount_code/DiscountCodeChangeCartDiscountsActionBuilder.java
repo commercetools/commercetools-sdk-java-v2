@@ -3,10 +3,12 @@ package com.commercetools.api.models.discount_code;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeChangeCartDiscountsActionBuilder {
+public final class DiscountCodeChangeCartDiscountsActionBuilder
+        implements Builder<DiscountCodeChangeCartDiscountsAction> {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
@@ -27,6 +29,14 @@ public final class DiscountCodeChangeCartDiscountsActionBuilder {
     }
 
     public DiscountCodeChangeCartDiscountsAction build() {
+        Objects.requireNonNull(cartDiscounts);
+        return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
+    }
+
+    /**
+     * builds DiscountCodeChangeCartDiscountsAction without checking for non null required values
+     */
+    public DiscountCodeChangeCartDiscountsAction buildUnchecked() {
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
     }
 

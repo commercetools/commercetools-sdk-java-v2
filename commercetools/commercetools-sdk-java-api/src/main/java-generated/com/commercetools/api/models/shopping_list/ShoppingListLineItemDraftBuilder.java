@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListLineItemDraftBuilder {
+public final class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
 
     @Nullable
     private java.time.ZonedDateTime addedAt;
@@ -90,6 +91,13 @@ public final class ShoppingListLineItemDraftBuilder {
     }
 
     public ShoppingListLineItemDraft build() {
+        return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
+    }
+
+    /**
+     * builds ShoppingListLineItemDraft without checking for non null required values
+     */
+    public ShoppingListLineItemDraft buildUnchecked() {
         return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
     }
 

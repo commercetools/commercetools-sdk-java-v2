@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountValueAbsoluteDraftBuilder {
+public final class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscountValueAbsoluteDraft> {
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
@@ -26,6 +27,14 @@ public final class CartDiscountValueAbsoluteDraftBuilder {
     }
 
     public CartDiscountValueAbsoluteDraft build() {
+        Objects.requireNonNull(money);
+        return new CartDiscountValueAbsoluteDraftImpl(money);
+    }
+
+    /**
+     * builds CartDiscountValueAbsoluteDraft without checking for non null required values
+     */
+    public CartDiscountValueAbsoluteDraft buildUnchecked() {
         return new CartDiscountValueAbsoluteDraftImpl(money);
     }
 

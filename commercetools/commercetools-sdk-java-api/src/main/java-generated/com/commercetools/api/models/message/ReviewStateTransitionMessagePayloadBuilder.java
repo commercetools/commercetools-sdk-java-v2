@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewStateTransitionMessagePayloadBuilder {
+public final class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference oldState;
 
@@ -78,6 +79,20 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
     }
 
     public ReviewStateTransitionMessagePayload build() {
+        Objects.requireNonNull(oldState);
+        Objects.requireNonNull(newState);
+        Objects.requireNonNull(oldIncludedInStatistics);
+        Objects.requireNonNull(newIncludedInStatistics);
+        Objects.requireNonNull(target);
+        Objects.requireNonNull(force);
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
+            newIncludedInStatistics, target, force);
+    }
+
+    /**
+     * builds ReviewStateTransitionMessagePayload without checking for non null required values
+     */
+    public ReviewStateTransitionMessagePayload buildUnchecked() {
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
             newIncludedInStatistics, target, force);
     }

@@ -3,10 +3,11 @@ package com.commercetools.ml.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantBuilder {
+public final class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private com.commercetools.ml.models.common.ProductReference product;
 
@@ -42,6 +43,16 @@ public final class ProductVariantBuilder {
     }
 
     public ProductVariant build() {
+        Objects.requireNonNull(product);
+        Objects.requireNonNull(staged);
+        Objects.requireNonNull(variantId);
+        return new ProductVariantImpl(product, staged, variantId);
+    }
+
+    /**
+     * builds ProductVariant without checking for non null required values
+     */
+    public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(product, staged, variantId);
     }
 

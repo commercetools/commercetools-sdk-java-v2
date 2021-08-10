@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetOrderNumberActionBuilder {
+public final class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrderSetOrderNumberAction> {
 
     @Nullable
     private String orderNumber;
@@ -24,6 +25,13 @@ public final class StagedOrderSetOrderNumberActionBuilder {
     }
 
     public StagedOrderSetOrderNumberAction build() {
+        return new StagedOrderSetOrderNumberActionImpl(orderNumber);
+    }
+
+    /**
+     * builds StagedOrderSetOrderNumberAction without checking for non null required values
+     */
+    public StagedOrderSetOrderNumberAction buildUnchecked() {
         return new StagedOrderSetOrderNumberActionImpl(orderNumber);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelReferenceBuilder {
+public final class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class ChannelReferenceBuilder {
     }
 
     public ChannelReference build() {
+        Objects.requireNonNull(id);
+        return new ChannelReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ChannelReference without checking for non null required values
+     */
+    public ChannelReference buildUnchecked() {
         return new ChannelReferenceImpl(id, obj);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCountryChangeBuilder {
+public final class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetCountryChangeBuilder {
     }
 
     public SetCountryChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetCountryChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetCountryChange without checking for non null required values
+     */
+    public SetCountryChange buildUnchecked() {
         return new SetCountryChangeImpl(change, previousValue, nextValue);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importsummaries;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSummaryBuilder {
+public final class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
 
@@ -32,6 +33,15 @@ public final class ImportSummaryBuilder {
     }
 
     public ImportSummary build() {
+        Objects.requireNonNull(states);
+        Objects.requireNonNull(total);
+        return new ImportSummaryImpl(states, total);
+    }
+
+    /**
+     * builds ImportSummary without checking for non null required values
+     */
+    public ImportSummary buildUnchecked() {
         return new ImportSummaryImpl(states, total);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionBuilder {
+public final class ExtensionBuilder implements Builder<Extension> {
 
     private String id;
 
@@ -136,6 +137,20 @@ public final class ExtensionBuilder {
     }
 
     public Extension build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(destination);
+        Objects.requireNonNull(triggers);
+        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
+            triggers, timeoutInMs);
+    }
+
+    /**
+     * builds Extension without checking for non null required values
+     */
+    public Extension buildUnchecked() {
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
             triggers, timeoutInMs);
     }

@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListChangeNameActionBuilder {
+public final class MyShoppingListChangeNameActionBuilder implements Builder<MyShoppingListChangeNameAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -20,6 +21,14 @@ public final class MyShoppingListChangeNameActionBuilder {
     }
 
     public MyShoppingListChangeNameAction build() {
+        Objects.requireNonNull(name);
+        return new MyShoppingListChangeNameActionImpl(name);
+    }
+
+    /**
+     * builds MyShoppingListChangeNameAction without checking for non null required values
+     */
+    public MyShoppingListChangeNameAction buildUnchecked() {
         return new MyShoppingListChangeNameActionImpl(name);
     }
 

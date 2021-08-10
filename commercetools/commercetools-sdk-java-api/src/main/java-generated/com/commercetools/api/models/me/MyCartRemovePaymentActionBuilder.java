@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartRemovePaymentActionBuilder {
+public final class MyCartRemovePaymentActionBuilder implements Builder<MyCartRemovePaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
@@ -21,6 +22,14 @@ public final class MyCartRemovePaymentActionBuilder {
     }
 
     public MyCartRemovePaymentAction build() {
+        Objects.requireNonNull(payment);
+        return new MyCartRemovePaymentActionImpl(payment);
+    }
+
+    /**
+     * builds MyCartRemovePaymentAction without checking for non null required values
+     */
+    public MyCartRemovePaymentAction buildUnchecked() {
         return new MyCartRemovePaymentActionImpl(payment);
     }
 

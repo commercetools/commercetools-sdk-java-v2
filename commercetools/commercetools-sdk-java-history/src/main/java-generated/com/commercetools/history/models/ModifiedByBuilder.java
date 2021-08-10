@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ModifiedByBuilder {
+public final class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     private String id;
 
@@ -83,6 +84,16 @@ public final class ModifiedByBuilder {
     }
 
     public ModifiedBy build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(isPlatformClient);
+        return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
+    }
+
+    /**
+     * builds ModifiedBy without checking for non null required values
+     */
+    public ModifiedBy buildUnchecked() {
         return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
     }
 

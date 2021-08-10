@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerResourceIdentifierBuilder {
+public final class CustomerResourceIdentifierBuilder implements Builder<CustomerResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class CustomerResourceIdentifierBuilder {
     }
 
     public CustomerResourceIdentifier build() {
+        return new CustomerResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds CustomerResourceIdentifier without checking for non null required values
+     */
+    public CustomerResourceIdentifier buildUnchecked() {
         return new CustomerResourceIdentifierImpl(id, key);
     }
 

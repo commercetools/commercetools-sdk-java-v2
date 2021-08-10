@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReturnItemBuilder {
+public final class ReturnItemBuilder implements Builder<ReturnItem> {
 
     private String id;
 
@@ -99,6 +100,21 @@ public final class ReturnItemBuilder {
     }
 
     public ReturnItem build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(comment);
+        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(createdAt);
+        return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
+    }
+
+    /**
+     * builds ReturnItem without checking for non null required values
+     */
+    public ReturnItem buildUnchecked() {
         return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
     }
 

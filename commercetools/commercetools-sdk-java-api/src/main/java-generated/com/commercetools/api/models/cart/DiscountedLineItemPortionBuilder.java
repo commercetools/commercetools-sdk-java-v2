@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedLineItemPortionBuilder {
+public final class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineItemPortion> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
 
@@ -33,6 +34,15 @@ public final class DiscountedLineItemPortionBuilder {
     }
 
     public DiscountedLineItemPortion build() {
+        Objects.requireNonNull(discount);
+        Objects.requireNonNull(discountedAmount);
+        return new DiscountedLineItemPortionImpl(discount, discountedAmount);
+    }
+
+    /**
+     * builds DiscountedLineItemPortion without checking for non null required values
+     */
+    public DiscountedLineItemPortion buildUnchecked() {
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);
     }
 

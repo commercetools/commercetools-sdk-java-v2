@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeBuilder {
+public final class ProductTypeBuilder implements Builder<ProductType> {
 
     private String id;
 
@@ -137,6 +138,20 @@ public final class ProductTypeBuilder {
     }
 
     public ProductType build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(description);
+        return new ProductTypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            description, attributes);
+    }
+
+    /**
+     * builds ProductType without checking for non null required values
+     */
+    public ProductType buildUnchecked() {
         return new ProductTypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             description, attributes);
     }

@@ -3,10 +3,12 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeDefinitionTypeConflictErrorBuilder {
+public final class AttributeDefinitionTypeConflictErrorBuilder
+        implements Builder<AttributeDefinitionTypeConflictError> {
 
     private String message;
 
@@ -54,6 +56,18 @@ public final class AttributeDefinitionTypeConflictErrorBuilder {
     }
 
     public AttributeDefinitionTypeConflictError build() {
+        Objects.requireNonNull(message);
+        Objects.requireNonNull(conflictingProductTypeId);
+        Objects.requireNonNull(conflictingProductTypeName);
+        Objects.requireNonNull(conflictingAttributeName);
+        return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
+            conflictingProductTypeName, conflictingAttributeName);
+    }
+
+    /**
+     * builds AttributeDefinitionTypeConflictError without checking for non null required values
+     */
+    public AttributeDefinitionTypeConflictError buildUnchecked() {
         return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }

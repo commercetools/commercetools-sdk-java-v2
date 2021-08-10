@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountDraftBuilder {
+public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -174,6 +175,19 @@ public final class CartDiscountDraftBuilder {
     }
 
     public CartDiscountDraft build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(value);
+        Objects.requireNonNull(cartPredicate);
+        Objects.requireNonNull(sortOrder);
+        Objects.requireNonNull(requiresDiscountCode);
+        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
+            validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+    }
+
+    /**
+     * builds CartDiscountDraft without checking for non null required values
+     */
+    public CartDiscountDraft buildUnchecked() {
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
             validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }

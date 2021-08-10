@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDeletedMessageBuilder {
+public final class OrderDeletedMessageBuilder implements Builder<OrderDeletedMessage> {
 
     private String id;
 
@@ -141,6 +142,22 @@ public final class OrderDeletedMessageBuilder {
     }
 
     public OrderDeletedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(order);
+        return new OrderDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
+    }
+
+    /**
+     * builds OrderDeletedMessage without checking for non null required values
+     */
+    public OrderDeletedMessage buildUnchecked() {
         return new OrderDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
     }

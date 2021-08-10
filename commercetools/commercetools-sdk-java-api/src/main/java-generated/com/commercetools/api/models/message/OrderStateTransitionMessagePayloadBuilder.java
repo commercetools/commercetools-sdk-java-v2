@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderStateTransitionMessagePayloadBuilder {
+public final class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference state;
 
@@ -32,6 +33,15 @@ public final class OrderStateTransitionMessagePayloadBuilder {
     }
 
     public OrderStateTransitionMessagePayload build() {
+        Objects.requireNonNull(state);
+        Objects.requireNonNull(force);
+        return new OrderStateTransitionMessagePayloadImpl(state, force);
+    }
+
+    /**
+     * builds OrderStateTransitionMessagePayload without checking for non null required values
+     */
+    public OrderStateTransitionMessagePayload buildUnchecked() {
         return new OrderStateTransitionMessagePayloadImpl(state, force);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeLabelChangeBuilder {
+public final class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     private String change;
 
@@ -65,6 +66,18 @@ public final class ChangeLabelChangeBuilder {
     }
 
     public ChangeLabelChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(fieldName);
+        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeLabelChange without checking for non null required values
+     */
+    public ChangeLabelChange buildUnchecked() {
         return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 

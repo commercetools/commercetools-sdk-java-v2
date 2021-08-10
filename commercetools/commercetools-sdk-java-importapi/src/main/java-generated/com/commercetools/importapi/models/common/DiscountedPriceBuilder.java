@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedPriceBuilder {
+public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -32,6 +33,15 @@ public final class DiscountedPriceBuilder {
     }
 
     public DiscountedPrice build() {
+        Objects.requireNonNull(value);
+        Objects.requireNonNull(discount);
+        return new DiscountedPriceImpl(value, discount);
+    }
+
+    /**
+     * builds DiscountedPrice without checking for non null required values
+     */
+    public DiscountedPrice buildUnchecked() {
         return new DiscountedPriceImpl(value, discount);
     }
 

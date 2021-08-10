@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductChangeNameActionBuilder {
+public final class ProductChangeNameActionBuilder implements Builder<ProductChangeNameAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -35,6 +36,14 @@ public final class ProductChangeNameActionBuilder {
     }
 
     public ProductChangeNameAction build() {
+        Objects.requireNonNull(name);
+        return new ProductChangeNameActionImpl(name, staged);
+    }
+
+    /**
+     * builds ProductChangeNameAction without checking for non null required values
+     */
+    public ProductChangeNameAction buildUnchecked() {
         return new ProductChangeNameActionImpl(name, staged);
     }
 

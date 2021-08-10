@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingImagesSearchRequestBuilder {
+public final class MissingImagesSearchRequestBuilder implements Builder<MissingImagesSearchRequest> {
 
     @Nullable
     private Long limit;
@@ -138,6 +139,14 @@ public final class MissingImagesSearchRequestBuilder {
     }
 
     public MissingImagesSearchRequest build() {
+        return new MissingImagesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants,
+            autoThreshold, threshold, productIds, productTypeIds);
+    }
+
+    /**
+     * builds MissingImagesSearchRequest without checking for non null required values
+     */
+    public MissingImagesSearchRequest buildUnchecked() {
         return new MissingImagesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants,
             autoThreshold, threshold, productIds, productTypeIds);
     }

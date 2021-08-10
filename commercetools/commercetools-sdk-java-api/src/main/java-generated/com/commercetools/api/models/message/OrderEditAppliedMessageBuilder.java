@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditAppliedMessageBuilder {
+public final class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedMessage> {
 
     private String id;
 
@@ -153,6 +154,23 @@ public final class OrderEditAppliedMessageBuilder {
     }
 
     public OrderEditAppliedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(edit);
+        Objects.requireNonNull(result);
+        return new OrderEditAppliedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, edit, result);
+    }
+
+    /**
+     * builds OrderEditAppliedMessage without checking for non null required values
+     */
+    public OrderEditAppliedMessage buildUnchecked() {
         return new OrderEditAppliedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, edit, result);
     }

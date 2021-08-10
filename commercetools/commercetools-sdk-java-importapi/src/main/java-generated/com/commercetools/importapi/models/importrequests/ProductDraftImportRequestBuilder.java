@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDraftImportRequestBuilder {
+public final class ProductDraftImportRequestBuilder implements Builder<ProductDraftImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources;
 
@@ -27,6 +28,14 @@ public final class ProductDraftImportRequestBuilder {
     }
 
     public ProductDraftImportRequest build() {
+        Objects.requireNonNull(resources);
+        return new ProductDraftImportRequestImpl(resources);
+    }
+
+    /**
+     * builds ProductDraftImportRequest without checking for non null required values
+     */
+    public ProductDraftImportRequest buildUnchecked() {
         return new ProductDraftImportRequestImpl(resources);
     }
 

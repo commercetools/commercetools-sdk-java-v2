@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeLocalizedNameChangeBuilder {
+public final class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalizedNameChange> {
 
     private String change;
 
@@ -44,6 +45,16 @@ public final class ChangeLocalizedNameChangeBuilder {
     }
 
     public ChangeLocalizedNameChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeLocalizedNameChange without checking for non null required values
+     */
+    public ChangeLocalizedNameChange buildUnchecked() {
         return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);
     }
 

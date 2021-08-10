@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageDimensionsBuilder {
+public final class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     private Integer w;
 
@@ -31,6 +32,15 @@ public final class ImageDimensionsBuilder {
     }
 
     public ImageDimensions build() {
+        Objects.requireNonNull(w);
+        Objects.requireNonNull(h);
+        return new ImageDimensionsImpl(w, h);
+    }
+
+    /**
+     * builds ImageDimensions without checking for non null required values
+     */
+    public ImageDimensions buildUnchecked() {
         return new ImageDimensionsImpl(w, h);
     }
 

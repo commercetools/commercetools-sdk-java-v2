@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetShippingMethodActionBuilder {
+public final class StagedOrderSetShippingMethodActionBuilder implements Builder<StagedOrderSetShippingMethodAction> {
 
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
@@ -39,6 +40,13 @@ public final class StagedOrderSetShippingMethodActionBuilder {
     }
 
     public StagedOrderSetShippingMethodAction build() {
+        return new StagedOrderSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
+    }
+
+    /**
+     * builds StagedOrderSetShippingMethodAction without checking for non null required values
+     */
+    public StagedOrderSetShippingMethodAction buildUnchecked() {
         return new StagedOrderSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
 

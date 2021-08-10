@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelTrackingDataUpdatedMessageBuilder {
+public final class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTrackingDataUpdatedMessage> {
 
     private String id;
 
@@ -167,6 +168,24 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
     }
 
     public ParcelTrackingDataUpdatedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(parcelId);
+        return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
+            trackingData);
+    }
+
+    /**
+     * builds ParcelTrackingDataUpdatedMessage without checking for non null required values
+     */
+    public ParcelTrackingDataUpdatedMessage buildUnchecked() {
         return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
             trackingData);

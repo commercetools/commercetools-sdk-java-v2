@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importsummaries;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OperationStatesBuilder {
+public final class OperationStatesBuilder implements Builder<OperationStates> {
 
     private Long ValidationFailed;
 
@@ -64,6 +65,18 @@ public final class OperationStatesBuilder {
     }
 
     public OperationStates build() {
+        Objects.requireNonNull(ValidationFailed);
+        Objects.requireNonNull(Unresolved);
+        Objects.requireNonNull(WaitForMasterVariant);
+        Objects.requireNonNull(Imported);
+        Objects.requireNonNull(Rejected);
+        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
+    }
+
+    /**
+     * builds OperationStates without checking for non null required values
+     */
+    public OperationStates buildUnchecked() {
         return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemTaxAmountChangeBuilder {
+public final class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCustomLineItemTaxAmountChange> {
 
     private String change;
 
@@ -79,6 +80,20 @@ public final class SetCustomLineItemTaxAmountChangeBuilder {
     }
 
     public SetCustomLineItemTaxAmountChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(customLineItem);
+        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(taxMode);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetCustomLineItemTaxAmountChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemTaxAmountChange without checking for non null required values
+     */
+    public SetCustomLineItemTaxAmountChange buildUnchecked() {
         return new SetCustomLineItemTaxAmountChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
             previousValue);
     }

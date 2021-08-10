@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSignInResultBuilder {
+public final class CustomerSignInResultBuilder implements Builder<CustomerSignInResult> {
 
     private com.commercetools.api.models.customer.Customer customer;
 
@@ -35,6 +36,14 @@ public final class CustomerSignInResultBuilder {
     }
 
     public CustomerSignInResult build() {
+        Objects.requireNonNull(customer);
+        return new CustomerSignInResultImpl(customer, cart);
+    }
+
+    /**
+     * builds CustomerSignInResult without checking for non null required values
+     */
+    public CustomerSignInResult buildUnchecked() {
         return new CustomerSignInResultImpl(customer, cart);
     }
 

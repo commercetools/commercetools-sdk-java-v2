@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewRatingSetMessageBuilder {
+public final class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMessage> {
 
     private String id;
 
@@ -180,6 +181,23 @@ public final class ReviewRatingSetMessageBuilder {
     }
 
     public ReviewRatingSetMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(includedInStatistics);
+        return new ReviewRatingSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldRating, newRating,
+            includedInStatistics, target);
+    }
+
+    /**
+     * builds ReviewRatingSetMessage without checking for non null required values
+     */
+    public ReviewRatingSetMessage buildUnchecked() {
         return new ReviewRatingSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldRating, newRating,
             includedInStatistics, target);

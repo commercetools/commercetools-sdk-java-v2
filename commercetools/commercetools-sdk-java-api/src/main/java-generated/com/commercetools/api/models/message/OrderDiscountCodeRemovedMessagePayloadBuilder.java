@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDiscountCodeRemovedMessagePayloadBuilder {
+public final class OrderDiscountCodeRemovedMessagePayloadBuilder
+        implements Builder<OrderDiscountCodeRemovedMessagePayload> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
@@ -21,6 +23,14 @@ public final class OrderDiscountCodeRemovedMessagePayloadBuilder {
     }
 
     public OrderDiscountCodeRemovedMessagePayload build() {
+        Objects.requireNonNull(discountCode);
+        return new OrderDiscountCodeRemovedMessagePayloadImpl(discountCode);
+    }
+
+    /**
+     * builds OrderDiscountCodeRemovedMessagePayload without checking for non null required values
+     */
+    public OrderDiscountCodeRemovedMessagePayload buildUnchecked() {
         return new OrderDiscountCodeRemovedMessagePayloadImpl(discountCode);
     }
 

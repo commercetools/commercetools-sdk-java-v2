@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetExternalIdChangeBuilder {
+public final class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetExternalIdChangeBuilder {
     }
 
     public SetExternalIdChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetExternalIdChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetExternalIdChange without checking for non null required values
+     */
+    public SetExternalIdChange buildUnchecked() {
         return new SetExternalIdChangeImpl(change, previousValue, nextValue);
     }
 

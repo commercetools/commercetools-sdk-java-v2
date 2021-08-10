@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewStateTransitionMessageBuilder {
+public final class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateTransitionMessage> {
 
     private String id;
 
@@ -198,6 +199,28 @@ public final class ReviewStateTransitionMessageBuilder {
     }
 
     public ReviewStateTransitionMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(oldState);
+        Objects.requireNonNull(newState);
+        Objects.requireNonNull(oldIncludedInStatistics);
+        Objects.requireNonNull(newIncludedInStatistics);
+        Objects.requireNonNull(target);
+        Objects.requireNonNull(force);
+        return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,
+            oldIncludedInStatistics, newIncludedInStatistics, target, force);
+    }
+
+    /**
+     * builds ReviewStateTransitionMessage without checking for non null required values
+     */
+    public ReviewStateTransitionMessage buildUnchecked() {
         return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,
             oldIncludedInStatistics, newIncludedInStatistics, target, force);

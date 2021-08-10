@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelItemsUpdatedMessageBuilder {
+public final class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpdatedMessage> {
 
     private String id;
 
@@ -189,6 +190,25 @@ public final class ParcelItemsUpdatedMessageBuilder {
     }
 
     public ParcelItemsUpdatedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(items);
+        Objects.requireNonNull(oldItems);
+        return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
+            oldItems);
+    }
+
+    /**
+     * builds ParcelItemsUpdatedMessage without checking for non null required values
+     */
+    public ParcelItemsUpdatedMessage buildUnchecked() {
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
             oldItems);

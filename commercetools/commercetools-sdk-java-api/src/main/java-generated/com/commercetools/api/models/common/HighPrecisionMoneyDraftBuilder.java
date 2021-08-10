@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class HighPrecisionMoneyDraftBuilder {
+public final class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMoneyDraft> {
 
     private Long centAmount;
 
@@ -57,6 +58,16 @@ public final class HighPrecisionMoneyDraftBuilder {
     }
 
     public HighPrecisionMoneyDraft build() {
+        Objects.requireNonNull(centAmount);
+        Objects.requireNonNull(currencyCode);
+        Objects.requireNonNull(preciseAmount);
+        return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
+    }
+
+    /**
+     * builds HighPrecisionMoneyDraft without checking for non null required values
+     */
+    public HighPrecisionMoneyDraft buildUnchecked() {
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 

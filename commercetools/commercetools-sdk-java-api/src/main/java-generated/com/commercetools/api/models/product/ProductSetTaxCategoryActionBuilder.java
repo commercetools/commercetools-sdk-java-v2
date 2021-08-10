@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetTaxCategoryActionBuilder {
+public final class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTaxCategoryAction> {
 
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -25,6 +26,13 @@ public final class ProductSetTaxCategoryActionBuilder {
     }
 
     public ProductSetTaxCategoryAction build() {
+        return new ProductSetTaxCategoryActionImpl(taxCategory);
+    }
+
+    /**
+     * builds ProductSetTaxCategoryAction without checking for non null required values
+     */
+    public ProductSetTaxCategoryAction buildUnchecked() {
         return new ProductSetTaxCategoryActionImpl(taxCategory);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelSetAddressCustomTypeActionBuilder {
+public final class ChannelSetAddressCustomTypeActionBuilder implements Builder<ChannelSetAddressCustomTypeAction> {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -39,6 +40,13 @@ public final class ChannelSetAddressCustomTypeActionBuilder {
     }
 
     public ChannelSetAddressCustomTypeAction build() {
+        return new ChannelSetAddressCustomTypeActionImpl(type, fields);
+    }
+
+    /**
+     * builds ChannelSetAddressCustomTypeAction without checking for non null required values
+     */
+    public ChannelSetAddressCustomTypeAction buildUnchecked() {
         return new ChannelSetAddressCustomTypeActionImpl(type, fields);
     }
 

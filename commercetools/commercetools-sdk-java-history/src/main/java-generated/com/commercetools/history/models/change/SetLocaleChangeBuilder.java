@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLocaleChangeBuilder {
+public final class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetLocaleChangeBuilder {
     }
 
     public SetLocaleChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetLocaleChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetLocaleChange without checking for non null required values
+     */
+    public SetLocaleChange buildUnchecked() {
         return new SetLocaleChangeImpl(change, previousValue, nextValue);
     }
 

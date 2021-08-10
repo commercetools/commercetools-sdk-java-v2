@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetChangeValueBuilder {
+public final class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     private String id;
 
@@ -31,6 +32,15 @@ public final class AssetChangeValueBuilder {
     }
 
     public AssetChangeValue build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(name);
+        return new AssetChangeValueImpl(id, name);
+    }
+
+    /**
+     * builds AssetChangeValue without checking for non null required values
+     */
+    public AssetChangeValue buildUnchecked() {
         return new AssetChangeValueImpl(id, name);
     }
 

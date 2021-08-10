@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LastModifiedByBuilder {
+public final class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     @Nullable
     private String clientId;
@@ -64,6 +65,13 @@ public final class LastModifiedByBuilder {
     }
 
     public LastModifiedBy build() {
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
+    }
+
+    /**
+     * builds LastModifiedBy without checking for non null required values
+     */
+    public LastModifiedBy buildUnchecked() {
         return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 

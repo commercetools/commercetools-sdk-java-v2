@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodDraftBuilder {
+public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
 
     @Nullable
     private String key;
@@ -130,6 +131,18 @@ public final class ShippingMethodDraftBuilder {
     }
 
     public ShippingMethodDraft build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(taxCategory);
+        Objects.requireNonNull(zoneRates);
+        Objects.requireNonNull(isDefault);
+        return new ShippingMethodDraftImpl(key, name, description, localizedDescription, taxCategory, zoneRates,
+            isDefault, predicate, custom);
+    }
+
+    /**
+     * builds ShippingMethodDraft without checking for non null required values
+     */
+    public ShippingMethodDraft buildUnchecked() {
         return new ShippingMethodDraftImpl(key, name, description, localizedDescription, taxCategory, zoneRates,
             isDefault, predicate, custom);
     }

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartBuilder {
+public final class CartBuilder implements Builder<Cart> {
 
     private String id;
 
@@ -463,6 +464,30 @@ public final class CartBuilder {
     }
 
     public Cart build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(lineItems);
+        Objects.requireNonNull(customLineItems);
+        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(cartState);
+        Objects.requireNonNull(taxMode);
+        Objects.requireNonNull(taxRoundingMode);
+        Objects.requireNonNull(taxCalculationMode);
+        Objects.requireNonNull(refusedGifts);
+        Objects.requireNonNull(origin);
+        return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
+            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
+            shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
+            country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
+            refusedGifts, origin, shippingRateInput, itemShippingAddresses);
+    }
+
+    /**
+     * builds Cart without checking for non null required values
+     */
+    public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,

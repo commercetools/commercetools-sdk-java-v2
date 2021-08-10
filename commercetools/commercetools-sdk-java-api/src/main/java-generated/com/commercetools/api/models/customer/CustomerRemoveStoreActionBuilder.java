@@ -3,10 +3,11 @@ package com.commercetools.api.models.customer;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerRemoveStoreActionBuilder {
+public final class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveStoreAction> {
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
@@ -21,6 +22,14 @@ public final class CustomerRemoveStoreActionBuilder {
     }
 
     public CustomerRemoveStoreAction build() {
+        Objects.requireNonNull(store);
+        return new CustomerRemoveStoreActionImpl(store);
+    }
+
+    /**
+     * builds CustomerRemoveStoreAction without checking for non null required values
+     */
+    public CustomerRemoveStoreAction buildUnchecked() {
         return new CustomerRemoveStoreActionImpl(store);
     }
 

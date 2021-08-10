@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductsTaskStatusBuilder {
+public final class SimilarProductsTaskStatusBuilder implements Builder<SimilarProductsTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
@@ -47,6 +48,15 @@ public final class SimilarProductsTaskStatusBuilder {
     }
 
     public SimilarProductsTaskStatus build() {
+        Objects.requireNonNull(state);
+        Objects.requireNonNull(result);
+        return new SimilarProductsTaskStatusImpl(state, expires, result);
+    }
+
+    /**
+     * builds SimilarProductsTaskStatus without checking for non null required values
+     */
+    public SimilarProductsTaskStatus buildUnchecked() {
         return new SimilarProductsTaskStatusImpl(state, expires, result);
     }
 

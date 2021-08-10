@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryChangeAssetNameActionBuilder {
+public final class CategoryChangeAssetNameActionBuilder implements Builder<CategoryChangeAssetNameAction> {
 
     @Nullable
     private String assetId;
@@ -48,6 +49,14 @@ public final class CategoryChangeAssetNameActionBuilder {
     }
 
     public CategoryChangeAssetNameAction build() {
+        Objects.requireNonNull(name);
+        return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
+    }
+
+    /**
+     * builds CategoryChangeAssetNameAction without checking for non null required values
+     */
+    public CategoryChangeAssetNameAction buildUnchecked() {
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
     }
 

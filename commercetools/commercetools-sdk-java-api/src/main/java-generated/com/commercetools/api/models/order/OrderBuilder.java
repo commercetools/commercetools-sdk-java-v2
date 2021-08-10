@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderBuilder {
+public final class OrderBuilder implements Builder<Order> {
 
     private String id;
 
@@ -568,6 +569,30 @@ public final class OrderBuilder {
     }
 
     public Order build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(lineItems);
+        Objects.requireNonNull(customLineItems);
+        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(orderState);
+        Objects.requireNonNull(syncInfo);
+        Objects.requireNonNull(lastMessageSequenceNumber);
+        Objects.requireNonNull(origin);
+        Objects.requireNonNull(refusedGifts);
+        return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
+            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
+            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
+            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
+            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
+            shippingRateInput, itemShippingAddresses, refusedGifts);
+    }
+
+    /**
+     * builds Order without checking for non null required values
+     */
+    public Order buildUnchecked() {
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

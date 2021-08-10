@@ -3,10 +3,11 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderRemoveDiscountCodeActionBuilder {
+public final class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<StagedOrderRemoveDiscountCodeAction> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
@@ -21,6 +22,14 @@ public final class StagedOrderRemoveDiscountCodeActionBuilder {
     }
 
     public StagedOrderRemoveDiscountCodeAction build() {
+        Objects.requireNonNull(discountCode);
+        return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
+    }
+
+    /**
+     * builds StagedOrderRemoveDiscountCodeAction without checking for non null required values
+     */
+    public StagedOrderRemoveDiscountCodeAction buildUnchecked() {
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
     }
 

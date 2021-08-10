@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MatchingPriceNotFoundErrorBuilder {
+public final class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceNotFoundError> {
 
     private String message;
 
@@ -98,6 +99,17 @@ public final class MatchingPriceNotFoundErrorBuilder {
     }
 
     public MatchingPriceNotFoundError build() {
+        Objects.requireNonNull(message);
+        Objects.requireNonNull(productId);
+        Objects.requireNonNull(variantId);
+        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
+            channel);
+    }
+
+    /**
+     * builds MatchingPriceNotFoundError without checking for non null required values
+     */
+    public MatchingPriceNotFoundError buildUnchecked() {
         return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
             channel);
     }

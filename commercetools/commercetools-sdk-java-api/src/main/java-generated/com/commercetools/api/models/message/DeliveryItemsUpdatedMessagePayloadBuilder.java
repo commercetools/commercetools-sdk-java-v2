@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryItemsUpdatedMessagePayloadBuilder {
+public final class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<DeliveryItemsUpdatedMessagePayload> {
 
     private String deliveryId;
 
@@ -56,6 +57,16 @@ public final class DeliveryItemsUpdatedMessagePayloadBuilder {
     }
 
     public DeliveryItemsUpdatedMessagePayload build() {
+        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(items);
+        Objects.requireNonNull(oldItems);
+        return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
+    }
+
+    /**
+     * builds DeliveryItemsUpdatedMessagePayload without checking for non null required values
+     */
+    public DeliveryItemsUpdatedMessagePayload buildUnchecked() {
         return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
     }
 

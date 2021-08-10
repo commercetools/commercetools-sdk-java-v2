@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ItemStateBuilder {
+public final class ItemStateBuilder implements Builder<ItemState> {
 
     private Integer quantity;
 
@@ -31,6 +32,15 @@ public final class ItemStateBuilder {
     }
 
     public ItemState build() {
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(state);
+        return new ItemStateImpl(quantity, state);
+    }
+
+    /**
+     * builds ItemState without checking for non null required values
+     */
+    public ItemState buildUnchecked() {
         return new ItemStateImpl(quantity, state);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDiscountCodeStateSetMessageBuilder {
+public final class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDiscountCodeStateSetMessage> {
 
     private String id;
 
@@ -169,6 +170,24 @@ public final class OrderDiscountCodeStateSetMessageBuilder {
     }
 
     public OrderDiscountCodeStateSetMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(discountCode);
+        Objects.requireNonNull(state);
+        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
+            oldState);
+    }
+
+    /**
+     * builds OrderDiscountCodeStateSetMessage without checking for non null required values
+     */
+    public OrderDiscountCodeStateSetMessage buildUnchecked() {
         return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
             oldState);

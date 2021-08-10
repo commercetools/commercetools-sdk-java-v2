@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryAddressSetMessagePayloadBuilder {
+public final class DeliveryAddressSetMessagePayloadBuilder implements Builder<DeliveryAddressSetMessagePayload> {
 
     private String deliveryId;
 
@@ -50,6 +51,14 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
     }
 
     public DeliveryAddressSetMessagePayload build() {
+        Objects.requireNonNull(deliveryId);
+        return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress);
+    }
+
+    /**
+     * builds DeliveryAddressSetMessagePayload without checking for non null required values
+     */
+    public DeliveryAddressSetMessagePayload buildUnchecked() {
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress);
     }
 

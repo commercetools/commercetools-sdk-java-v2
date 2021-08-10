@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemStateTransitionMessageBuilder {
+public final class LineItemStateTransitionMessageBuilder implements Builder<LineItemStateTransitionMessage> {
 
     private String id;
 
@@ -188,6 +189,27 @@ public final class LineItemStateTransitionMessageBuilder {
     }
 
     public LineItemStateTransitionMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(transitionDate);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(fromState);
+        Objects.requireNonNull(toState);
+        return new LineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, transitionDate,
+            quantity, fromState, toState);
+    }
+
+    /**
+     * builds LineItemStateTransitionMessage without checking for non null required values
+     */
+    public LineItemStateTransitionMessage buildUnchecked() {
         return new LineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, transitionDate,
             quantity, fromState, toState);

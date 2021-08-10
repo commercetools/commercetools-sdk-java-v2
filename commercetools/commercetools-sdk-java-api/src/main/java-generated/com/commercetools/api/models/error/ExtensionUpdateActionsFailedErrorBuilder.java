@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionUpdateActionsFailedErrorBuilder {
+public final class ExtensionUpdateActionsFailedErrorBuilder implements Builder<ExtensionUpdateActionsFailedError> {
 
     private String message;
 
@@ -62,6 +63,16 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
     }
 
     public ExtensionUpdateActionsFailedError build() {
+        Objects.requireNonNull(message);
+        Objects.requireNonNull(errorByExtension);
+        return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
+            errorByExtension);
+    }
+
+    /**
+     * builds ExtensionUpdateActionsFailedError without checking for non null required values
+     */
+    public ExtensionUpdateActionsFailedError buildUnchecked() {
         return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
             errorByExtension);
     }

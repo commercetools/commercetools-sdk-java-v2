@@ -3,10 +3,11 @@ package com.commercetools.history.models;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordBuilder {
+public final class RecordBuilder implements Builder<Record> {
 
     private Integer version;
 
@@ -124,6 +125,24 @@ public final class RecordBuilder {
     }
 
     public Record build() {
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(previousVersion);
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(modifiedBy);
+        Objects.requireNonNull(modifiedAt);
+        Objects.requireNonNull(label);
+        Objects.requireNonNull(previousLabel);
+        Objects.requireNonNull(changes);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(withoutChanges);
+        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
+            resource, withoutChanges);
+    }
+
+    /**
+     * builds Record without checking for non null required values
+     */
+    public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
             resource, withoutChanges);
     }

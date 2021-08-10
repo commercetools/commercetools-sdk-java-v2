@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductProjectionBuilder {
+public final class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     private String id;
 
@@ -300,6 +301,25 @@ public final class ProductProjectionBuilder {
     }
 
     public ProductProjection build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(productType);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(slug);
+        Objects.requireNonNull(categories);
+        Objects.requireNonNull(masterVariant);
+        Objects.requireNonNull(variants);
+        return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
+            slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
+            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);
+    }
+
+    /**
+     * builds ProductProjection without checking for non null required values
+     */
+    public ProductProjection buildUnchecked() {
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
             slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
             hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);

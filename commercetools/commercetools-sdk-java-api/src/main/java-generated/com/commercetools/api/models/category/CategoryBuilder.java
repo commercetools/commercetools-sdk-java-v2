@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryBuilder {
+public final class CategoryBuilder implements Builder<Category> {
 
     private String id;
 
@@ -257,6 +258,23 @@ public final class CategoryBuilder {
     }
 
     public Category build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(slug);
+        Objects.requireNonNull(ancestors);
+        Objects.requireNonNull(orderHint);
+        return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
+            description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
+            assets, key);
+    }
+
+    /**
+     * builds Category without checking for non null required values
+     */
+    public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
             assets, key);

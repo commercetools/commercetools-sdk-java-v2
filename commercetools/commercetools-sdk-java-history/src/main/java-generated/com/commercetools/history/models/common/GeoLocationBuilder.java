@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GeoLocationBuilder {
+public final class GeoLocationBuilder implements Builder<GeoLocation> {
 
     private String type;
 
@@ -36,6 +37,15 @@ public final class GeoLocationBuilder {
     }
 
     public GeoLocation build() {
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(coordinates);
+        return new GeoLocationImpl(type, coordinates);
+    }
+
+    /**
+     * builds GeoLocation without checking for non null required values
+     */
+    public GeoLocation buildUnchecked() {
         return new GeoLocationImpl(type, coordinates);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAddedMessageBuilder {
+public final class ProductVariantAddedMessageBuilder implements Builder<ProductVariantAddedMessage> {
 
     private String id;
 
@@ -153,6 +154,23 @@ public final class ProductVariantAddedMessageBuilder {
     }
 
     public ProductVariantAddedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(variant);
+        Objects.requireNonNull(staged);
+        return new ProductVariantAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, staged);
+    }
+
+    /**
+     * builds ProductVariantAddedMessage without checking for non null required values
+     */
+    public ProductVariantAddedMessage buildUnchecked() {
         return new ProductVariantAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, staged);
     }

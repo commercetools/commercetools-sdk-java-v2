@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddressBuilder {
+public final class AddressBuilder implements Builder<Address> {
 
     private String id;
 
@@ -284,6 +285,40 @@ public final class AddressBuilder {
     }
 
     public Address build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(title);
+        Objects.requireNonNull(salutation);
+        Objects.requireNonNull(firstName);
+        Objects.requireNonNull(lastName);
+        Objects.requireNonNull(streetName);
+        Objects.requireNonNull(streetNumber);
+        Objects.requireNonNull(additionalStreetInfo);
+        Objects.requireNonNull(postalCode);
+        Objects.requireNonNull(city);
+        Objects.requireNonNull(region);
+        Objects.requireNonNull(state);
+        Objects.requireNonNull(country);
+        Objects.requireNonNull(company);
+        Objects.requireNonNull(department);
+        Objects.requireNonNull(building);
+        Objects.requireNonNull(apartment);
+        Objects.requireNonNull(pOBox);
+        Objects.requireNonNull(phone);
+        Objects.requireNonNull(mobile);
+        Objects.requireNonNull(email);
+        Objects.requireNonNull(fax);
+        Objects.requireNonNull(additionalAddressInfo);
+        Objects.requireNonNull(externalId);
+        return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+    }
+
+    /**
+     * builds Address without checking for non null required values
+     */
+    public Address buildUnchecked() {
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);

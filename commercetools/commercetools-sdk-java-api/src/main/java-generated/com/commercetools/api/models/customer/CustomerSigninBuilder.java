@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSigninBuilder {
+public final class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     private String email;
 
@@ -103,6 +104,16 @@ public final class CustomerSigninBuilder {
     }
 
     public CustomerSignin build() {
+        Objects.requireNonNull(email);
+        Objects.requireNonNull(password);
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
+            anonymousId, updateProductData);
+    }
+
+    /**
+     * builds CustomerSignin without checking for non null required values
+     */
+    public CustomerSignin buildUnchecked() {
         return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
             anonymousId, updateProductData);
     }

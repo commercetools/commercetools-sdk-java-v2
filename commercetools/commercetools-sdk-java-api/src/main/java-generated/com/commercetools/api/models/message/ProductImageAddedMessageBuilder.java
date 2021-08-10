@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductImageAddedMessageBuilder {
+public final class ProductImageAddedMessageBuilder implements Builder<ProductImageAddedMessage> {
 
     private String id;
 
@@ -163,6 +164,24 @@ public final class ProductImageAddedMessageBuilder {
     }
 
     public ProductImageAddedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(image);
+        Objects.requireNonNull(staged);
+        return new ProductImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, image, staged);
+    }
+
+    /**
+     * builds ProductImageAddedMessage without checking for non null required values
+     */
+    public ProductImageAddedMessage buildUnchecked() {
         return new ProductImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, image, staged);
     }

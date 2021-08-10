@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantPatchBuilder {
+public final class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
 
@@ -50,6 +51,14 @@ public final class ProductVariantPatchBuilder {
     }
 
     public ProductVariantPatch build() {
+        Objects.requireNonNull(productVariant);
+        return new ProductVariantPatchImpl(productVariant, attributes, staged);
+    }
+
+    /**
+     * builds ProductVariantPatch without checking for non null required values
+     */
+    public ProductVariantPatch buildUnchecked() {
         return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
 

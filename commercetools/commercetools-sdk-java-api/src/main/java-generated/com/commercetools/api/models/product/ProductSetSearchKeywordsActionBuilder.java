@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetSearchKeywordsActionBuilder {
+public final class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSetSearchKeywordsAction> {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
@@ -36,6 +37,14 @@ public final class ProductSetSearchKeywordsActionBuilder {
     }
 
     public ProductSetSearchKeywordsAction build() {
+        Objects.requireNonNull(searchKeywords);
+        return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);
+    }
+
+    /**
+     * builds ProductSetSearchKeywordsAction without checking for non null required values
+     */
+    public ProductSetSearchKeywordsAction buildUnchecked() {
         return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);
     }
 

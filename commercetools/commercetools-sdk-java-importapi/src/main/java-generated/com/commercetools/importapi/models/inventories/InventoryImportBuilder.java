@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryImportBuilder {
+public final class InventoryImportBuilder implements Builder<InventoryImport> {
 
     private String key;
 
@@ -98,6 +99,17 @@ public final class InventoryImportBuilder {
     }
 
     public InventoryImport build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(sku);
+        Objects.requireNonNull(quantityOnStock);
+        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
+            custom);
+    }
+
+    /**
+     * builds InventoryImport without checking for non null required values
+     */
+    public InventoryImport buildUnchecked() {
         return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
             custom);
     }

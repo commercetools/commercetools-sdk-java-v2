@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkUpdateDraftBuilder {
+public final class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpdateDraft> {
 
     private Long version;
 
@@ -36,6 +37,14 @@ public final class ImportSinkUpdateDraftBuilder {
     }
 
     public ImportSinkUpdateDraft build() {
+        Objects.requireNonNull(version);
+        return new ImportSinkUpdateDraftImpl(version, resourceType);
+    }
+
+    /**
+     * builds ImportSinkUpdateDraft without checking for non null required values
+     */
+    public ImportSinkUpdateDraft buildUnchecked() {
         return new ImportSinkUpdateDraftImpl(version, resourceType);
     }
 

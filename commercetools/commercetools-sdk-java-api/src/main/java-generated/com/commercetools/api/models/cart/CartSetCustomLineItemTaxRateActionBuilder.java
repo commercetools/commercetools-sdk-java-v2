@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetCustomLineItemTaxRateActionBuilder {
+public final class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSetCustomLineItemTaxRateAction> {
 
     private String customLineItemId;
 
@@ -36,6 +37,14 @@ public final class CartSetCustomLineItemTaxRateActionBuilder {
     }
 
     public CartSetCustomLineItemTaxRateAction build() {
+        Objects.requireNonNull(customLineItemId);
+        return new CartSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
+    }
+
+    /**
+     * builds CartSetCustomLineItemTaxRateAction without checking for non null required values
+     */
+    public CartSetCustomLineItemTaxRateAction buildUnchecked() {
         return new CartSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangePredicateChangeBuilder {
+public final class ChangePredicateChangeBuilder implements Builder<ChangePredicateChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class ChangePredicateChangeBuilder {
     }
 
     public ChangePredicateChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new ChangePredicateChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangePredicateChange without checking for non null required values
+     */
+    public ChangePredicateChange buildUnchecked() {
         return new ChangePredicateChangeImpl(change, previousValue, nextValue);
     }
 

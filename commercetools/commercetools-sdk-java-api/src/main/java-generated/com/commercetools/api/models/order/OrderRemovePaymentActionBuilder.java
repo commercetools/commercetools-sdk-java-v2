@@ -3,10 +3,11 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderRemovePaymentActionBuilder {
+public final class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
@@ -21,6 +22,14 @@ public final class OrderRemovePaymentActionBuilder {
     }
 
     public OrderRemovePaymentAction build() {
+        Objects.requireNonNull(payment);
+        return new OrderRemovePaymentActionImpl(payment);
+    }
+
+    /**
+     * builds OrderRemovePaymentAction without checking for non null required values
+     */
+    public OrderRemovePaymentAction buildUnchecked() {
         return new OrderRemovePaymentActionImpl(payment);
     }
 

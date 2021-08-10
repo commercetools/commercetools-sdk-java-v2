@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importoperations;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportOperationPagedResponseBuilder {
+public final class ImportOperationPagedResponseBuilder implements Builder<ImportOperationPagedResponse> {
 
     private Integer limit;
 
@@ -71,6 +72,18 @@ public final class ImportOperationPagedResponseBuilder {
     }
 
     public ImportOperationPagedResponse build() {
+        Objects.requireNonNull(limit);
+        Objects.requireNonNull(offset);
+        Objects.requireNonNull(count);
+        Objects.requireNonNull(total);
+        Objects.requireNonNull(results);
+        return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
+    }
+
+    /**
+     * builds ImportOperationPagedResponse without checking for non null required values
+     */
+    public ImportOperationPagedResponse buildUnchecked() {
         return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
     }
 

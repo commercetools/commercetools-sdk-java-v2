@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelMeasurementsBuilder {
+public final class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     private Integer heightInMillimeter;
 
@@ -53,6 +54,17 @@ public final class ParcelMeasurementsBuilder {
     }
 
     public ParcelMeasurements build() {
+        Objects.requireNonNull(heightInMillimeter);
+        Objects.requireNonNull(lengthInMillimeter);
+        Objects.requireNonNull(widthInMillimeter);
+        Objects.requireNonNull(weightInGram);
+        return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
+    }
+
+    /**
+     * builds ParcelMeasurements without checking for non null required values
+     */
+    public ParcelMeasurements buildUnchecked() {
         return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
     }
 

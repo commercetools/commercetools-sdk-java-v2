@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryParcelDraftBuilder {
+public final class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> {
 
     @Nullable
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
@@ -59,6 +60,13 @@ public final class DeliveryParcelDraftBuilder {
     }
 
     public DeliveryParcelDraft build() {
+        return new DeliveryParcelDraftImpl(measurements, trackingData, items);
+    }
+
+    /**
+     * builds DeliveryParcelDraft without checking for non null required values
+     */
+    public DeliveryParcelDraft buildUnchecked() {
         return new DeliveryParcelDraftImpl(measurements, trackingData, items);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.orders;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemTaxedPriceBuilder {
+public final class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTaxedPrice> {
 
     private com.commercetools.importapi.models.common.TypedMoney totalNet;
 
@@ -33,6 +34,15 @@ public final class CustomLineItemTaxedPriceBuilder {
     }
 
     public CustomLineItemTaxedPrice build() {
+        Objects.requireNonNull(totalNet);
+        Objects.requireNonNull(totalGross);
+        return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);
+    }
+
+    /**
+     * builds CustomLineItemTaxedPrice without checking for non null required values
+     */
+    public CustomLineItemTaxedPrice buildUnchecked() {
         return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);
     }
 

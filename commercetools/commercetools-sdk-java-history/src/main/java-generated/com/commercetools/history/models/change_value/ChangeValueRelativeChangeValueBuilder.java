@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeValueRelativeChangeValueBuilder {
+public final class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValueRelativeChangeValue> {
 
     private Integer permyriad;
 
@@ -20,6 +21,14 @@ public final class ChangeValueRelativeChangeValueBuilder {
     }
 
     public ChangeValueRelativeChangeValue build() {
+        Objects.requireNonNull(permyriad);
+        return new ChangeValueRelativeChangeValueImpl(permyriad);
+    }
+
+    /**
+     * builds ChangeValueRelativeChangeValue without checking for non null required values
+     */
+    public ChangeValueRelativeChangeValue buildUnchecked() {
         return new ChangeValueRelativeChangeValueImpl(permyriad);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetReservationsChangeBuilder {
+public final class SetReservationsChangeBuilder implements Builder<SetReservationsChange> {
 
     private String change;
 
@@ -56,6 +57,16 @@ public final class SetReservationsChangeBuilder {
     }
 
     public SetReservationsChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetReservationsChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetReservationsChange without checking for non null required values
+     */
+    public SetReservationsChange buildUnchecked() {
         return new SetReservationsChangeImpl(change, nextValue, previousValue);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewCreatedMessagePayloadBuilder {
+public final class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreatedMessagePayload> {
 
     private com.commercetools.api.models.review.Review review;
 
@@ -20,6 +21,14 @@ public final class ReviewCreatedMessagePayloadBuilder {
     }
 
     public ReviewCreatedMessagePayload build() {
+        Objects.requireNonNull(review);
+        return new ReviewCreatedMessagePayloadImpl(review);
+    }
+
+    /**
+     * builds ReviewCreatedMessagePayload without checking for non null required values
+     */
+    public ReviewCreatedMessagePayload buildUnchecked() {
         return new ReviewCreatedMessagePayloadImpl(review);
     }
 

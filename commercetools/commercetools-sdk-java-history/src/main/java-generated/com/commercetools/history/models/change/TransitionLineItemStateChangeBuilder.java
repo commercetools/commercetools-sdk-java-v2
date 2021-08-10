@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TransitionLineItemStateChangeBuilder {
+public final class TransitionLineItemStateChangeBuilder implements Builder<TransitionLineItemStateChange> {
 
     private String change;
 
@@ -78,6 +79,18 @@ public final class TransitionLineItemStateChangeBuilder {
     }
 
     public TransitionLineItemStateChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(stateId);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new TransitionLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
+    }
+
+    /**
+     * builds TransitionLineItemStateChange without checking for non null required values
+     */
+    public TransitionLineItemStateChange buildUnchecked() {
         return new TransitionLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
     }
 

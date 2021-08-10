@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderTransitionCustomLineItemStateActionBuilder {
+public final class OrderTransitionCustomLineItemStateActionBuilder
+        implements Builder<OrderTransitionCustomLineItemStateAction> {
 
     private String customLineItemId;
 
@@ -71,6 +73,18 @@ public final class OrderTransitionCustomLineItemStateActionBuilder {
     }
 
     public OrderTransitionCustomLineItemStateAction build() {
+        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(fromState);
+        Objects.requireNonNull(toState);
+        return new OrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,
+            actualTransitionDate);
+    }
+
+    /**
+     * builds OrderTransitionCustomLineItemStateAction without checking for non null required values
+     */
+    public OrderTransitionCustomLineItemStateAction buildUnchecked() {
         return new OrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

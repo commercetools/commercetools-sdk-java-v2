@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ScopedPriceBuilder {
+public final class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     private String id;
 
@@ -137,6 +138,17 @@ public final class ScopedPriceBuilder {
     }
 
     public ScopedPrice build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(value);
+        Objects.requireNonNull(currentValue);
+        return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,
+            discounted, custom);
+    }
+
+    /**
+     * builds ScopedPrice without checking for non null required values
+     */
+    public ScopedPrice buildUnchecked() {
         return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,
             discounted, custom);
     }

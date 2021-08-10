@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListAddTextLineItemActionBuilder {
+public final class ShoppingListAddTextLineItemActionBuilder implements Builder<ShoppingListAddTextLineItemAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -77,6 +78,14 @@ public final class ShoppingListAddTextLineItemActionBuilder {
     }
 
     public ShoppingListAddTextLineItemAction build() {
+        Objects.requireNonNull(name);
+        return new ShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
+    }
+
+    /**
+     * builds ShoppingListAddTextLineItemAction without checking for non null required values
+     */
+    public ShoppingListAddTextLineItemAction buildUnchecked() {
         return new ShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
     }
 

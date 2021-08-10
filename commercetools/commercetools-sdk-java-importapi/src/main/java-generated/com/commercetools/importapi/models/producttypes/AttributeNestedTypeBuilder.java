@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.producttypes;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeNestedTypeBuilder {
+public final class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> {
 
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
 
@@ -21,6 +22,14 @@ public final class AttributeNestedTypeBuilder {
     }
 
     public AttributeNestedType build() {
+        Objects.requireNonNull(typeReference);
+        return new AttributeNestedTypeImpl(typeReference);
+    }
+
+    /**
+     * builds AttributeNestedType without checking for non null required values
+     */
+    public AttributeNestedType buildUnchecked() {
         return new AttributeNestedTypeImpl(typeReference);
     }
 

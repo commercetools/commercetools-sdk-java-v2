@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetCustomerGroupActionBuilder {
+public final class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustomerGroupAction> {
 
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
@@ -25,6 +26,13 @@ public final class CartSetCustomerGroupActionBuilder {
     }
 
     public CartSetCustomerGroupAction build() {
+        return new CartSetCustomerGroupActionImpl(customerGroup);
+    }
+
+    /**
+     * builds CartSetCustomerGroupAction without checking for non null required values
+     */
+    public CartSetCustomerGroupAction buildUnchecked() {
         return new CartSetCustomerGroupActionImpl(customerGroup);
     }
 

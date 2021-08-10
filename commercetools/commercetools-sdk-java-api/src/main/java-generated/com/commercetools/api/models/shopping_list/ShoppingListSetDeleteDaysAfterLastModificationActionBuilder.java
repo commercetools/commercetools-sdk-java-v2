@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder {
+public final class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
+        implements Builder<ShoppingListSetDeleteDaysAfterLastModificationAction> {
 
     @Nullable
     private Long deleteDaysAfterLastModification;
@@ -25,6 +27,13 @@ public final class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder {
     }
 
     public ShoppingListSetDeleteDaysAfterLastModificationAction build() {
+        return new ShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
+    }
+
+    /**
+     * builds ShoppingListSetDeleteDaysAfterLastModificationAction without checking for non null required values
+     */
+    public ShoppingListSetDeleteDaysAfterLastModificationAction buildUnchecked() {
         return new ShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
 

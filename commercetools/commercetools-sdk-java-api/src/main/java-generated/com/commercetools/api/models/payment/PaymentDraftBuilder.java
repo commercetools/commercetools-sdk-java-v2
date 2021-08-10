@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentDraftBuilder {
+public final class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
@@ -226,6 +227,16 @@ public final class PaymentDraftBuilder {
     }
 
     public PaymentDraft build() {
+        Objects.requireNonNull(amountPlanned);
+        return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
+            authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions,
+            interfaceInteractions, custom, key);
+    }
+
+    /**
+     * builds PaymentDraft without checking for non null required values
+     */
+    public PaymentDraft buildUnchecked() {
         return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
             authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions,
             interfaceInteractions, custom, key);

@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeLocalizedEnumValueBuilder {
+public final class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLocalizedEnumValue> {
 
     private String key;
 
@@ -31,6 +32,15 @@ public final class AttributeLocalizedEnumValueBuilder {
     }
 
     public AttributeLocalizedEnumValue build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(label);
+        return new AttributeLocalizedEnumValueImpl(key, label);
+    }
+
+    /**
+     * builds AttributeLocalizedEnumValue without checking for non null required values
+     */
+    public AttributeLocalizedEnumValue buildUnchecked() {
         return new AttributeLocalizedEnumValueImpl(key, label);
     }
 

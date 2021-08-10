@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class VariantBuilder {
+public final class VariantBuilder implements Builder<Variant> {
 
     private Integer id;
 
@@ -42,6 +43,16 @@ public final class VariantBuilder {
     }
 
     public Variant build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(sku);
+        Objects.requireNonNull(key);
+        return new VariantImpl(id, sku, key);
+    }
+
+    /**
+     * builds Variant without checking for non null required values
+     */
+    public Variant buildUnchecked() {
         return new VariantImpl(id, sku, key);
     }
 

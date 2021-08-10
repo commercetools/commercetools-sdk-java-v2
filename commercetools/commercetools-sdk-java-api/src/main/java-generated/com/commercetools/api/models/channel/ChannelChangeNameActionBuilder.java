@@ -3,10 +3,11 @@ package com.commercetools.api.models.channel;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelChangeNameActionBuilder {
+public final class ChannelChangeNameActionBuilder implements Builder<ChannelChangeNameAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -20,6 +21,14 @@ public final class ChannelChangeNameActionBuilder {
     }
 
     public ChannelChangeNameAction build() {
+        Objects.requireNonNull(name);
+        return new ChannelChangeNameActionImpl(name);
+    }
+
+    /**
+     * builds ChannelChangeNameAction without checking for non null required values
+     */
+    public ChannelChangeNameAction buildUnchecked() {
         return new ChannelChangeNameActionImpl(name);
     }
 

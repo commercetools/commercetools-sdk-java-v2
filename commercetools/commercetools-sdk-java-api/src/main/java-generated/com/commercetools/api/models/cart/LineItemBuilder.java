@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemBuilder {
+public final class LineItemBuilder implements Builder<LineItem> {
 
     private String id;
 
@@ -277,6 +278,27 @@ public final class LineItemBuilder {
     }
 
     public LineItem build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(productId);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(productType);
+        Objects.requireNonNull(variant);
+        Objects.requireNonNull(price);
+        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(state);
+        Objects.requireNonNull(discountedPricePerQuantity);
+        Objects.requireNonNull(priceMode);
+        Objects.requireNonNull(lineItemMode);
+        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
+            quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
+            priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+    }
+
+    /**
+     * builds LineItem without checking for non null required values
+     */
+    public LineItem buildUnchecked() {
         return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
             quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
             priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);

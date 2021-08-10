@@ -3,10 +3,12 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeChangeAttributeConstraintActionBuilder {
+public final class ProductTypeChangeAttributeConstraintActionBuilder
+        implements Builder<ProductTypeChangeAttributeConstraintAction> {
 
     private String attributeName;
 
@@ -32,6 +34,15 @@ public final class ProductTypeChangeAttributeConstraintActionBuilder {
     }
 
     public ProductTypeChangeAttributeConstraintAction build() {
+        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(newValue);
+        return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);
+    }
+
+    /**
+     * builds ProductTypeChangeAttributeConstraintAction without checking for non null required values
+     */
+    public ProductTypeChangeAttributeConstraintAction buildUnchecked() {
         return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);
     }
 

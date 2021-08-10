@@ -3,10 +3,11 @@ package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductPairBuilder {
+public final class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     private Double confidence;
 
@@ -38,6 +39,15 @@ public final class SimilarProductPairBuilder {
     }
 
     public SimilarProductPair build() {
+        Objects.requireNonNull(confidence);
+        Objects.requireNonNull(products);
+        return new SimilarProductPairImpl(confidence, products);
+    }
+
+    /**
+     * builds SimilarProductPair without checking for non null required values
+     */
+    public SimilarProductPair buildUnchecked() {
         return new SimilarProductPairImpl(confidence, products);
     }
 

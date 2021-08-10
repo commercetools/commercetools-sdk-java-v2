@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributesBuilder {
+public final class AttributesBuilder implements Builder<Attributes> {
 
     private Map<String, com.commercetools.importapi.models.productvariants.Attribute> values;
 
@@ -30,6 +31,14 @@ public final class AttributesBuilder {
     }
 
     public Attributes build() {
+        Objects.requireNonNull(values);
+        return new AttributesImpl(values);
+    }
+
+    /**
+     * builds Attributes without checking for non null required values
+     */
+    public Attributes buildUnchecked() {
         return new AttributesImpl(values);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDateOfBirthChangeBuilder {
+public final class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetDateOfBirthChangeBuilder {
     }
 
     public SetDateOfBirthChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetDateOfBirthChange without checking for non null required values
+     */
+    public SetDateOfBirthChange buildUnchecked() {
         return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);
     }
 

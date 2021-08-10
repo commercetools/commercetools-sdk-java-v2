@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddToCategoryChangeBuilder {
+public final class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> {
 
     private String change;
 
@@ -66,6 +67,17 @@ public final class AddToCategoryChangeBuilder {
     }
 
     public AddToCategoryChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(category);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
+    }
+
+    /**
+     * builds AddToCategoryChange without checking for non null required values
+     */
+    public AddToCategoryChange buildUnchecked() {
         return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 

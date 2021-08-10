@@ -3,10 +3,12 @@ package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListChangeTextLineItemQuantityActionBuilder {
+public final class ShoppingListChangeTextLineItemQuantityActionBuilder
+        implements Builder<ShoppingListChangeTextLineItemQuantityAction> {
 
     private String textLineItemId;
 
@@ -31,6 +33,15 @@ public final class ShoppingListChangeTextLineItemQuantityActionBuilder {
     }
 
     public ShoppingListChangeTextLineItemQuantityAction build() {
+        Objects.requireNonNull(textLineItemId);
+        Objects.requireNonNull(quantity);
+        return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, quantity);
+    }
+
+    /**
+     * builds ShoppingListChangeTextLineItemQuantityAction without checking for non null required values
+     */
+    public ShoppingListChangeTextLineItemQuantityAction buildUnchecked() {
         return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, quantity);
     }
 

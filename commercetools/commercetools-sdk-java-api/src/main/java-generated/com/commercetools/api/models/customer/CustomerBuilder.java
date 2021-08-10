@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerBuilder {
+public final class CustomerBuilder implements Builder<Customer> {
 
     private String id;
 
@@ -395,6 +396,24 @@ public final class CustomerBuilder {
     }
 
     public Customer build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(email);
+        Objects.requireNonNull(password);
+        Objects.requireNonNull(addresses);
+        Objects.requireNonNull(isEmailVerified);
+        return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
+            email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
+            defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
+            externalId, customerGroup, custom, locale, salutation, key, stores);
+    }
+
+    /**
+     * builds Customer without checking for non null required values
+     */
+    public Customer buildUnchecked() {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,

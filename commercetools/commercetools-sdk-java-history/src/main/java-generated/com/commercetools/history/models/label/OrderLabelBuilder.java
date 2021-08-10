@@ -3,10 +3,11 @@ package com.commercetools.history.models.label;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderLabelBuilder {
+public final class OrderLabelBuilder implements Builder<OrderLabel> {
 
     private String customerEmail;
 
@@ -31,6 +32,15 @@ public final class OrderLabelBuilder {
     }
 
     public OrderLabel build() {
+        Objects.requireNonNull(customerEmail);
+        Objects.requireNonNull(orderNumber);
+        return new OrderLabelImpl(customerEmail, orderNumber);
+    }
+
+    /**
+     * builds OrderLabel without checking for non null required values
+     */
+    public OrderLabel buildUnchecked() {
         return new OrderLabelImpl(customerEmail, orderNumber);
     }
 

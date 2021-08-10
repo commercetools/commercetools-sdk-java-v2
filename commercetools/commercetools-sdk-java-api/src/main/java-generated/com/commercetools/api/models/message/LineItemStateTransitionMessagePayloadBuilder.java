@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemStateTransitionMessagePayloadBuilder {
+public final class LineItemStateTransitionMessagePayloadBuilder
+        implements Builder<LineItemStateTransitionMessagePayload> {
 
     private String lineItemId;
 
@@ -66,6 +68,18 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
     }
 
     public LineItemStateTransitionMessagePayload build() {
+        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(transitionDate);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(fromState);
+        Objects.requireNonNull(toState);
+        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
+    }
+
+    /**
+     * builds LineItemStateTransitionMessagePayload without checking for non null required values
+     */
+    public LineItemStateTransitionMessagePayload buildUnchecked() {
         return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
     }
 

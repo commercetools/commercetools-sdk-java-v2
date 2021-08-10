@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldExpandedValueBuilder {
+public final class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpandedValue> {
 
     private String name;
 
@@ -42,6 +43,16 @@ public final class CustomFieldExpandedValueBuilder {
     }
 
     public CustomFieldExpandedValue build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(value);
+        Objects.requireNonNull(label);
+        return new CustomFieldExpandedValueImpl(name, value, label);
+    }
+
+    /**
+     * builds CustomFieldExpandedValue without checking for non null required values
+     */
+    public CustomFieldExpandedValue buildUnchecked() {
         return new CustomFieldExpandedValueImpl(name, value, label);
     }
 

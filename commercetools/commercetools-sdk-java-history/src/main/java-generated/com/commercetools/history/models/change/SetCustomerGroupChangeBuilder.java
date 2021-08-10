@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomerGroupChangeBuilder {
+public final class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupChange> {
 
     private String change;
 
@@ -43,6 +44,16 @@ public final class SetCustomerGroupChangeBuilder {
     }
 
     public SetCustomerGroupChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetCustomerGroupChange without checking for non null required values
+     */
+    public SetCustomerGroupChange buildUnchecked() {
         return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);
     }
 

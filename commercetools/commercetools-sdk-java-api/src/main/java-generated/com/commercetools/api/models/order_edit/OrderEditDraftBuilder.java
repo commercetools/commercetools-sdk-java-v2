@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditDraftBuilder {
+public final class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     @Nullable
     private String key;
@@ -94,6 +95,14 @@ public final class OrderEditDraftBuilder {
     }
 
     public OrderEditDraft build() {
+        Objects.requireNonNull(resource);
+        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
+    }
+
+    /**
+     * builds OrderEditDraft without checking for non null required values
+     */
+    public OrderEditDraft buildUnchecked() {
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
 

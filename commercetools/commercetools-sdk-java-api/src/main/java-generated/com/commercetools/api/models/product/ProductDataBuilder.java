@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDataBuilder {
+public final class ProductDataBuilder implements Builder<ProductData> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -158,6 +159,20 @@ public final class ProductDataBuilder {
     }
 
     public ProductData build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(categories);
+        Objects.requireNonNull(slug);
+        Objects.requireNonNull(masterVariant);
+        Objects.requireNonNull(variants);
+        Objects.requireNonNull(searchKeywords);
+        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
+            metaKeywords, masterVariant, variants, searchKeywords);
+    }
+
+    /**
+     * builds ProductData without checking for non null required values
+     */
+    public ProductData buildUnchecked() {
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
             metaKeywords, masterVariant, variants, searchKeywords);
     }

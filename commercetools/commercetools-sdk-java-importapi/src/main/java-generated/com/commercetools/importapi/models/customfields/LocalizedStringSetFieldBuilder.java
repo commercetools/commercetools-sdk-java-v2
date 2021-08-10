@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedStringSetFieldBuilder {
+public final class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSetField> {
 
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
@@ -27,6 +28,14 @@ public final class LocalizedStringSetFieldBuilder {
     }
 
     public LocalizedStringSetField build() {
+        Objects.requireNonNull(value);
+        return new LocalizedStringSetFieldImpl(value);
+    }
+
+    /**
+     * builds LocalizedStringSetField without checking for non null required values
+     */
+    public LocalizedStringSetField buildUnchecked() {
         return new LocalizedStringSetFieldImpl(value);
     }
 

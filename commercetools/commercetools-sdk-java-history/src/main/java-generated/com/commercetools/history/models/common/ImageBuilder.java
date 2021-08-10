@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageBuilder {
+public final class ImageBuilder implements Builder<Image> {
 
     private String url;
 
@@ -42,6 +43,16 @@ public final class ImageBuilder {
     }
 
     public Image build() {
+        Objects.requireNonNull(url);
+        Objects.requireNonNull(dimensions);
+        Objects.requireNonNull(label);
+        return new ImageImpl(url, dimensions, label);
+    }
+
+    /**
+     * builds Image without checking for non null required values
+     */
+    public Image buildUnchecked() {
         return new ImageImpl(url, dimensions, label);
     }
 

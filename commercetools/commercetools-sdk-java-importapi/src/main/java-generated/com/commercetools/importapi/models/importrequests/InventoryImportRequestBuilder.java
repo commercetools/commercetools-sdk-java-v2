@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryImportRequestBuilder {
+public final class InventoryImportRequestBuilder implements Builder<InventoryImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources;
 
@@ -27,6 +28,14 @@ public final class InventoryImportRequestBuilder {
     }
 
     public InventoryImportRequest build() {
+        Objects.requireNonNull(resources);
+        return new InventoryImportRequestImpl(resources);
+    }
+
+    /**
+     * builds InventoryImportRequest without checking for non null required values
+     */
+    public InventoryImportRequest buildUnchecked() {
         return new InventoryImportRequestImpl(resources);
     }
 

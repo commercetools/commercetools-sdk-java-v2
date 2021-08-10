@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class VariantValuesBuilder {
+public final class VariantValuesBuilder implements Builder<VariantValues> {
 
     @Nullable
     private String sku;
@@ -59,6 +60,15 @@ public final class VariantValuesBuilder {
     }
 
     public VariantValues build() {
+        Objects.requireNonNull(prices);
+        Objects.requireNonNull(attributes);
+        return new VariantValuesImpl(sku, prices, attributes);
+    }
+
+    /**
+     * builds VariantValues without checking for non null required values
+     */
+    public VariantValues buildUnchecked() {
         return new VariantValuesImpl(sku, prices, attributes);
     }
 

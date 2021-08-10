@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectBuilder {
+public final class ProjectBuilder implements Builder<Project> {
 
     private Long version;
 
@@ -194,6 +195,23 @@ public final class ProjectBuilder {
     }
 
     public Project build() {
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(countries);
+        Objects.requireNonNull(currencies);
+        Objects.requireNonNull(languages);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(messages);
+        Objects.requireNonNull(carts);
+        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
+            shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
+    }
+
+    /**
+     * builds Project without checking for non null required values
+     */
+    public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
             shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
     }

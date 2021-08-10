@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentStatusInterfaceCodeSetMessagePayloadBuilder {
+public final class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
+        implements Builder<PaymentStatusInterfaceCodeSetMessagePayload> {
 
     private String paymentId;
 
@@ -31,6 +33,15 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadBuilder {
     }
 
     public PaymentStatusInterfaceCodeSetMessagePayload build() {
+        Objects.requireNonNull(paymentId);
+        Objects.requireNonNull(interfaceCode);
+        return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
+    }
+
+    /**
+     * builds PaymentStatusInterfaceCodeSetMessagePayload without checking for non null required values
+     */
+    public PaymentStatusInterfaceCodeSetMessagePayload buildUnchecked() {
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
     }
 

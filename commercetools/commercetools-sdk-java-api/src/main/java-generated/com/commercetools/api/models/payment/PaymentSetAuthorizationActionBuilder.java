@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetAuthorizationActionBuilder {
+public final class PaymentSetAuthorizationActionBuilder implements Builder<PaymentSetAuthorizationAction> {
 
     @Nullable
     private com.commercetools.api.models.common.Money amount;
@@ -38,6 +39,13 @@ public final class PaymentSetAuthorizationActionBuilder {
     }
 
     public PaymentSetAuthorizationAction build() {
+        return new PaymentSetAuthorizationActionImpl(amount, until);
+    }
+
+    /**
+     * builds PaymentSetAuthorizationAction without checking for non null required values
+     */
+    public PaymentSetAuthorizationAction buildUnchecked() {
         return new PaymentSetAuthorizationActionImpl(amount, until);
     }
 

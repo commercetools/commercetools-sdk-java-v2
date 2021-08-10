@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateSetTransitionsActionBuilder {
+public final class StateSetTransitionsActionBuilder implements Builder<StateSetTransitionsAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
@@ -31,6 +32,13 @@ public final class StateSetTransitionsActionBuilder {
     }
 
     public StateSetTransitionsAction build() {
+        return new StateSetTransitionsActionImpl(transitions);
+    }
+
+    /**
+     * builds StateSetTransitionsAction without checking for non null required values
+     */
+    public StateSetTransitionsAction buildUnchecked() {
         return new StateSetTransitionsActionImpl(transitions);
     }
 

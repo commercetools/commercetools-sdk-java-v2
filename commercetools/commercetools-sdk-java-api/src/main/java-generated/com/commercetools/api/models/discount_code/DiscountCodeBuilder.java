@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeBuilder {
+public final class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     private String id;
 
@@ -260,6 +261,24 @@ public final class DiscountCodeBuilder {
     }
 
     public DiscountCode build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(code);
+        Objects.requireNonNull(cartDiscounts);
+        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(references);
+        Objects.requireNonNull(groups);
+        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
+            description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
+            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
+    }
+
+    /**
+     * builds DiscountCode without checking for non null required values
+     */
+    public DiscountCode buildUnchecked() {
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);

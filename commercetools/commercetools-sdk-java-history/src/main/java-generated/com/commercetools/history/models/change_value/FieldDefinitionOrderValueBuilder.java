@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FieldDefinitionOrderValueBuilder {
+public final class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinitionOrderValue> {
 
     private String name;
 
@@ -31,6 +32,15 @@ public final class FieldDefinitionOrderValueBuilder {
     }
 
     public FieldDefinitionOrderValue build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(label);
+        return new FieldDefinitionOrderValueImpl(name, label);
+    }
+
+    /**
+     * builds FieldDefinitionOrderValue without checking for non null required values
+     */
+    public FieldDefinitionOrderValue buildUnchecked() {
         return new FieldDefinitionOrderValueImpl(name, label);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeBuilder {
+public final class TypeBuilder implements Builder<Type> {
 
     private String id;
 
@@ -151,6 +152,22 @@ public final class TypeBuilder {
     }
 
     public Type build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(resourceTypeIds);
+        Objects.requireNonNull(fieldDefinitions);
+        return new TypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
+            resourceTypeIds, fieldDefinitions);
+    }
+
+    /**
+     * builds Type without checking for non null required values
+     */
+    public Type buildUnchecked() {
         return new TypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
             resourceTypeIds, fieldDefinitions);
     }

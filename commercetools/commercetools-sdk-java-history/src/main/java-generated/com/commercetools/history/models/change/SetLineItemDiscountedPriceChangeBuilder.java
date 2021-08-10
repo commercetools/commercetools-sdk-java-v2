@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemDiscountedPriceChangeBuilder {
+public final class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineItemDiscountedPriceChange> {
 
     private String change;
 
@@ -67,6 +68,18 @@ public final class SetLineItemDiscountedPriceChangeBuilder {
     }
 
     public SetLineItemDiscountedPriceChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(lineItem);
+        Objects.requireNonNull(variant);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemDiscountedPriceChange without checking for non null required values
+     */
+    public SetLineItemDiscountedPriceChange buildUnchecked() {
         return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

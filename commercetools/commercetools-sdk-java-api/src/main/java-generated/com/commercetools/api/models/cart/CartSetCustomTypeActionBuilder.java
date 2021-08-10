@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetCustomTypeActionBuilder {
+public final class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomTypeAction> {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -39,6 +40,13 @@ public final class CartSetCustomTypeActionBuilder {
     }
 
     public CartSetCustomTypeAction build() {
+        return new CartSetCustomTypeActionImpl(type, fields);
+    }
+
+    /**
+     * builds CartSetCustomTypeAction without checking for non null required values
+     */
+    public CartSetCustomTypeAction buildUnchecked() {
         return new CartSetCustomTypeActionImpl(type, fields);
     }
 

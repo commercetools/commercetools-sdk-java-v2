@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FacetResultRangeBuilder {
+public final class FacetResultRangeBuilder implements Builder<FacetResultRange> {
 
     private Double from;
 
@@ -123,6 +124,22 @@ public final class FacetResultRangeBuilder {
     }
 
     public FacetResultRange build() {
+        Objects.requireNonNull(from);
+        Objects.requireNonNull(fromStr);
+        Objects.requireNonNull(to);
+        Objects.requireNonNull(toStr);
+        Objects.requireNonNull(count);
+        Objects.requireNonNull(total);
+        Objects.requireNonNull(min);
+        Objects.requireNonNull(max);
+        Objects.requireNonNull(mean);
+        return new FacetResultRangeImpl(from, fromStr, to, toStr, count, productCount, total, min, max, mean);
+    }
+
+    /**
+     * builds FacetResultRange without checking for non null required values
+     */
+    public FacetResultRange buildUnchecked() {
         return new FacetResultRangeImpl(from, fromStr, to, toStr, count, productCount, total, min, max, mean);
     }
 

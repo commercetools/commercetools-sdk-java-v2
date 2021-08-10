@@ -3,10 +3,11 @@ package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductSearchRequestMetaBuilder {
+public final class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarProductSearchRequestMeta> {
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
 
@@ -21,6 +22,14 @@ public final class SimilarProductSearchRequestMetaBuilder {
     }
 
     public SimilarProductSearchRequestMeta build() {
+        Objects.requireNonNull(similarityMeasures);
+        return new SimilarProductSearchRequestMetaImpl(similarityMeasures);
+    }
+
+    /**
+     * builds SimilarProductSearchRequestMeta without checking for non null required values
+     */
+    public SimilarProductSearchRequestMeta buildUnchecked() {
         return new SimilarProductSearchRequestMetaImpl(similarityMeasures);
     }
 

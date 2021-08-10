@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExternalTaxRateDraftBuilder {
+public final class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft> {
 
     private String name;
 
@@ -92,6 +93,15 @@ public final class ExternalTaxRateDraftBuilder {
     }
 
     public ExternalTaxRateDraft build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(country);
+        return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
+    }
+
+    /**
+     * builds ExternalTaxRateDraft without checking for non null required values
+     */
+    public ExternalTaxRateDraft buildUnchecked() {
         return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
     }
 

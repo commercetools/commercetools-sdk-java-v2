@@ -3,10 +3,11 @@ package com.commercetools.api.models.customer_group;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupUpdateBuilder {
+public final class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class CustomerGroupUpdateBuilder {
     }
 
     public CustomerGroupUpdate build() {
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(actions);
+        return new CustomerGroupUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds CustomerGroupUpdate without checking for non null required values
+     */
+    public CustomerGroupUpdate buildUnchecked() {
         return new CustomerGroupUpdateImpl(version, actions);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDeletedMessageBuilder {
+public final class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessage> {
 
     private String id;
 
@@ -158,6 +159,24 @@ public final class ProductDeletedMessageBuilder {
     }
 
     public ProductDeletedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(removedImageUrls);
+        Objects.requireNonNull(currentProjection);
+        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
+            currentProjection);
+    }
+
+    /**
+     * builds ProductDeletedMessage without checking for non null required values
+     */
+    public ProductDeletedMessage buildUnchecked() {
         return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
             currentProjection);

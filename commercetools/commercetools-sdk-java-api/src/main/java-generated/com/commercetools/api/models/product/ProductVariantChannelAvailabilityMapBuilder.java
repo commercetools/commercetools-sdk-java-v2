@@ -3,10 +3,12 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantChannelAvailabilityMapBuilder {
+public final class ProductVariantChannelAvailabilityMapBuilder
+        implements Builder<ProductVariantChannelAvailabilityMap> {
 
     private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
 
@@ -30,6 +32,14 @@ public final class ProductVariantChannelAvailabilityMapBuilder {
     }
 
     public ProductVariantChannelAvailabilityMap build() {
+        Objects.requireNonNull(values);
+        return new ProductVariantChannelAvailabilityMapImpl(values);
+    }
+
+    /**
+     * builds ProductVariantChannelAvailabilityMap without checking for non null required values
+     */
+    public ProductVariantChannelAvailabilityMap buildUnchecked() {
         return new ProductVariantChannelAvailabilityMapImpl(values);
     }
 

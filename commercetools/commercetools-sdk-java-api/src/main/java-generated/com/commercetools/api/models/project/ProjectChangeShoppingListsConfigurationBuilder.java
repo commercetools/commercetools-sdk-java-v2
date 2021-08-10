@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeShoppingListsConfigurationBuilder {
+public final class ProjectChangeShoppingListsConfigurationBuilder
+        implements Builder<ProjectChangeShoppingListsConfiguration> {
 
     @Nullable
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
@@ -25,6 +27,13 @@ public final class ProjectChangeShoppingListsConfigurationBuilder {
     }
 
     public ProjectChangeShoppingListsConfiguration build() {
+        return new ProjectChangeShoppingListsConfigurationImpl(shoppingListsConfiguration);
+    }
+
+    /**
+     * builds ProjectChangeShoppingListsConfiguration without checking for non null required values
+     */
+    public ProjectChangeShoppingListsConfiguration buildUnchecked() {
         return new ProjectChangeShoppingListsConfigurationImpl(shoppingListsConfiguration);
     }
 

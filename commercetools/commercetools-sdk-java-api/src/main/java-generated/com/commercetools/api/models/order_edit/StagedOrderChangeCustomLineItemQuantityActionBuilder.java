@@ -3,10 +3,12 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderChangeCustomLineItemQuantityActionBuilder {
+public final class StagedOrderChangeCustomLineItemQuantityActionBuilder
+        implements Builder<StagedOrderChangeCustomLineItemQuantityAction> {
 
     private String customLineItemId;
 
@@ -31,6 +33,15 @@ public final class StagedOrderChangeCustomLineItemQuantityActionBuilder {
     }
 
     public StagedOrderChangeCustomLineItemQuantityAction build() {
+        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(quantity);
+        return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
+    }
+
+    /**
+     * builds StagedOrderChangeCustomLineItemQuantityAction without checking for non null required values
+     */
+    public StagedOrderChangeCustomLineItemQuantityAction buildUnchecked() {
         return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
 

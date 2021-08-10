@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomerSetMessagePayloadBuilder {
+public final class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCustomerSetMessagePayload> {
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference customer;
@@ -67,6 +68,13 @@ public final class OrderCustomerSetMessagePayloadBuilder {
     }
 
     public OrderCustomerSetMessagePayload build() {
+        return new OrderCustomerSetMessagePayloadImpl(customer, customerGroup, oldCustomer, oldCustomerGroup);
+    }
+
+    /**
+     * builds OrderCustomerSetMessagePayload without checking for non null required values
+     */
+    public OrderCustomerSetMessagePayload buildUnchecked() {
         return new OrderCustomerSetMessagePayloadImpl(customer, customerGroup, oldCustomer, oldCustomerGroup);
     }
 

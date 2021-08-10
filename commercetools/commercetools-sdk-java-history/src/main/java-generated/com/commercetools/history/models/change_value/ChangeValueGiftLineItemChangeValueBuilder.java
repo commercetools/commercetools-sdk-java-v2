@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeValueGiftLineItemChangeValueBuilder {
+public final class ChangeValueGiftLineItemChangeValueBuilder implements Builder<ChangeValueGiftLineItemChangeValue> {
 
     private com.commercetools.history.models.common.Reference product;
 
@@ -56,6 +57,17 @@ public final class ChangeValueGiftLineItemChangeValueBuilder {
     }
 
     public ChangeValueGiftLineItemChangeValue build() {
+        Objects.requireNonNull(product);
+        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(supplyChannel);
+        Objects.requireNonNull(distributionChannel);
+        return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);
+    }
+
+    /**
+     * builds ChangeValueGiftLineItemChangeValue without checking for non null required values
+     */
+    public ChangeValueGiftLineItemChangeValue buildUnchecked() {
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);
     }
 

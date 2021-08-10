@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListLineItemValueBuilder {
+public final class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLineItemValue> {
 
     private String id;
 
@@ -42,6 +43,16 @@ public final class ShoppingListLineItemValueBuilder {
     }
 
     public ShoppingListLineItemValue build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(variantId);
+        return new ShoppingListLineItemValueImpl(id, name, variantId);
+    }
+
+    /**
+     * builds ShoppingListLineItemValue without checking for non null required values
+     */
+    public ShoppingListLineItemValue buildUnchecked() {
         return new ShoppingListLineItemValueImpl(id, name, variantId);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MessageDeliveryBuilder {
+public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
 
     private String projectKey;
 
@@ -125,6 +126,23 @@ public final class MessageDeliveryBuilder {
     }
 
     public MessageDelivery build() {
+        Objects.requireNonNull(projectKey);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(payloadNotIncluded);
+        return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
+            lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
+    }
+
+    /**
+     * builds MessageDelivery without checking for non null required values
+     */
+    public MessageDelivery buildUnchecked() {
         return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
             lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }

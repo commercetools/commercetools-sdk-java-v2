@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddTaxRateChangeBuilder {
+public final class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     private String change;
 
@@ -31,6 +32,15 @@ public final class AddTaxRateChangeBuilder {
     }
 
     public AddTaxRateChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(nextValue);
+        return new AddTaxRateChangeImpl(change, nextValue);
+    }
+
+    /**
+     * builds AddTaxRateChange without checking for non null required values
+     */
+    public AddTaxRateChange buildUnchecked() {
         return new AddTaxRateChangeImpl(change, nextValue);
     }
 

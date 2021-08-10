@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeAttributeConstraintChangeBuilder {
+public final class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAttributeConstraintChange> {
 
     private String change;
 
@@ -55,6 +56,17 @@ public final class ChangeAttributeConstraintChangeBuilder {
     }
 
     public ChangeAttributeConstraintChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeAttributeConstraintChange without checking for non null required values
+     */
+    public ChangeAttributeConstraintChange buildUnchecked() {
         return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);
     }
 

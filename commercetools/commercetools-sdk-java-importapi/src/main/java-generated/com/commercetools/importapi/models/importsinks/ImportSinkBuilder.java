@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkBuilder {
+public final class ImportSinkBuilder implements Builder<ImportSink> {
 
     private String key;
 
@@ -69,6 +70,17 @@ public final class ImportSinkBuilder {
     }
 
     public ImportSink build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        return new ImportSinkImpl(key, resourceType, version, createdAt, lastModifiedAt);
+    }
+
+    /**
+     * builds ImportSink without checking for non null required values
+     */
+    public ImportSink buildUnchecked() {
         return new ImportSinkImpl(key, resourceType, version, createdAt, lastModifiedAt);
     }
 

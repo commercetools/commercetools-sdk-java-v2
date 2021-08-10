@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartSetCountryActionBuilder {
+public final class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAction> {
 
     @Nullable
     private String country;
@@ -24,6 +25,13 @@ public final class MyCartSetCountryActionBuilder {
     }
 
     public MyCartSetCountryAction build() {
+        return new MyCartSetCountryActionImpl(country);
+    }
+
+    /**
+     * builds MyCartSetCountryAction without checking for non null required values
+     */
+    public MyCartSetCountryAction buildUnchecked() {
         return new MyCartSetCountryActionImpl(country);
     }
 

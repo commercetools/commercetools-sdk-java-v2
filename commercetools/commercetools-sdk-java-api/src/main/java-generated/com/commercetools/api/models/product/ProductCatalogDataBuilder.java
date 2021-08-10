@@ -3,10 +3,11 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductCatalogDataBuilder {
+public final class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     private Boolean published;
 
@@ -53,6 +54,17 @@ public final class ProductCatalogDataBuilder {
     }
 
     public ProductCatalogData build() {
+        Objects.requireNonNull(published);
+        Objects.requireNonNull(current);
+        Objects.requireNonNull(staged);
+        Objects.requireNonNull(hasStagedChanges);
+        return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
+    }
+
+    /**
+     * builds ProductCatalogData without checking for non null required values
+     */
+    public ProductCatalogData buildUnchecked() {
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
     }
 

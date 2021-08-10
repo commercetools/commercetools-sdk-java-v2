@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocationBuilder {
+public final class LocationBuilder implements Builder<Location> {
 
     private String country;
 
@@ -31,6 +32,15 @@ public final class LocationBuilder {
     }
 
     public Location build() {
+        Objects.requireNonNull(country);
+        Objects.requireNonNull(state);
+        return new LocationImpl(country, state);
+    }
+
+    /**
+     * builds Location without checking for non null required values
+     */
+    public Location buildUnchecked() {
         return new LocationImpl(country, state);
     }
 

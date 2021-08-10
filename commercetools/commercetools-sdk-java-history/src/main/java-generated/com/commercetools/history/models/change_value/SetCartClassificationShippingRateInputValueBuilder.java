@@ -3,10 +3,12 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCartClassificationShippingRateInputValueBuilder {
+public final class SetCartClassificationShippingRateInputValueBuilder
+        implements Builder<SetCartClassificationShippingRateInputValue> {
 
     private String type;
 
@@ -43,6 +45,16 @@ public final class SetCartClassificationShippingRateInputValueBuilder {
     }
 
     public SetCartClassificationShippingRateInputValue build() {
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(label);
+        return new SetCartClassificationShippingRateInputValueImpl(type, key, label);
+    }
+
+    /**
+     * builds SetCartClassificationShippingRateInputValue without checking for non null required values
+     */
+    public SetCartClassificationShippingRateInputValue buildUnchecked() {
         return new SetCartClassificationShippingRateInputValueImpl(type, key, label);
     }
 

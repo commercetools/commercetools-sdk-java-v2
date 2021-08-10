@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartAddItemShippingAddressActionBuilder {
+public final class CartAddItemShippingAddressActionBuilder implements Builder<CartAddItemShippingAddressAction> {
 
     private com.commercetools.api.models.common.BaseAddress address;
 
@@ -21,6 +22,14 @@ public final class CartAddItemShippingAddressActionBuilder {
     }
 
     public CartAddItemShippingAddressAction build() {
+        Objects.requireNonNull(address);
+        return new CartAddItemShippingAddressActionImpl(address);
+    }
+
+    /**
+     * builds CartAddItemShippingAddressAction without checking for non null required values
+     */
+    public CartAddItemShippingAddressAction buildUnchecked() {
         return new CartAddItemShippingAddressActionImpl(address);
     }
 

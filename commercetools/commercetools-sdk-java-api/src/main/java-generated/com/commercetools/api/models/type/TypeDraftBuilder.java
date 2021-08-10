@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeDraftBuilder {
+public final class TypeDraftBuilder implements Builder<TypeDraft> {
 
     private String key;
 
@@ -84,6 +85,16 @@ public final class TypeDraftBuilder {
     }
 
     public TypeDraft build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(resourceTypeIds);
+        return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
+    }
+
+    /**
+     * builds TypeDraft without checking for non null required values
+     */
+    public TypeDraft buildUnchecked() {
         return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
     }
 

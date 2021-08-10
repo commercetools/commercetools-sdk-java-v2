@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListDraftBuilder {
+public final class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -118,6 +119,15 @@ public final class MyShoppingListDraftBuilder {
     }
 
     public MyShoppingListDraft build() {
+        Objects.requireNonNull(name);
+        return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
+            deleteDaysAfterLastModification, store);
+    }
+
+    /**
+     * builds MyShoppingListDraft without checking for non null required values
+     */
+    public MyShoppingListDraft buildUnchecked() {
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
             deleteDaysAfterLastModification, store);
     }

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingAttributesBuilder {
+public final class MissingAttributesBuilder implements Builder<MissingAttributes> {
 
     private com.commercetools.ml.models.common.ProductReference product;
 
@@ -108,6 +109,18 @@ public final class MissingAttributesBuilder {
     }
 
     public MissingAttributes build() {
+        Objects.requireNonNull(product);
+        Objects.requireNonNull(productType);
+        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(missingAttributeValues);
+        return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,
+            attributeCount, attributeCoverage);
+    }
+
+    /**
+     * builds MissingAttributes without checking for non null required values
+     */
+    public MissingAttributes buildUnchecked() {
         return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,
             attributeCount, attributeCoverage);
     }

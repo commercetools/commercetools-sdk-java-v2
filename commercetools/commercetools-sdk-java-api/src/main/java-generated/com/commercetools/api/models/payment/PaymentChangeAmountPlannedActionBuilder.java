@@ -3,10 +3,11 @@ package com.commercetools.api.models.payment;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentChangeAmountPlannedActionBuilder {
+public final class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentChangeAmountPlannedAction> {
 
     private com.commercetools.api.models.common.Money amount;
 
@@ -20,6 +21,14 @@ public final class PaymentChangeAmountPlannedActionBuilder {
     }
 
     public PaymentChangeAmountPlannedAction build() {
+        Objects.requireNonNull(amount);
+        return new PaymentChangeAmountPlannedActionImpl(amount);
+    }
+
+    /**
+     * builds PaymentChangeAmountPlannedAction without checking for non null required values
+     */
+    public PaymentChangeAmountPlannedAction buildUnchecked() {
         return new PaymentChangeAmountPlannedActionImpl(amount);
     }
 

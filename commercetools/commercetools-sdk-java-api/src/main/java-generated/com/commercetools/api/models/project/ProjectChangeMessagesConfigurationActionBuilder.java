@@ -3,10 +3,12 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeMessagesConfigurationActionBuilder {
+public final class ProjectChangeMessagesConfigurationActionBuilder
+        implements Builder<ProjectChangeMessagesConfigurationAction> {
 
     private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
 
@@ -21,6 +23,14 @@ public final class ProjectChangeMessagesConfigurationActionBuilder {
     }
 
     public ProjectChangeMessagesConfigurationAction build() {
+        Objects.requireNonNull(messagesConfiguration);
+        return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);
+    }
+
+    /**
+     * builds ProjectChangeMessagesConfigurationAction without checking for non null required values
+     */
+    public ProjectChangeMessagesConfigurationAction buildUnchecked() {
         return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);
     }
 

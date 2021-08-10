@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryDraftBuilder {
+public final class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -174,6 +175,16 @@ public final class CategoryDraftBuilder {
     }
 
     public CategoryDraft build() {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(slug);
+        return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,
+            metaKeywords, custom, assets, key);
+    }
+
+    /**
+     * builds CategoryDraft without checking for non null required values
+     */
+    public CategoryDraft buildUnchecked() {
         return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,
             metaKeywords, custom, assets, key);
     }

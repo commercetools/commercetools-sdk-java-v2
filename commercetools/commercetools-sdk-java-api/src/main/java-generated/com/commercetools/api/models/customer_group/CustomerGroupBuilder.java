@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupBuilder {
+public final class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     private String id;
 
@@ -119,6 +120,19 @@ public final class CustomerGroupBuilder {
     }
 
     public CustomerGroup build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(name);
+        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            custom);
+    }
+
+    /**
+     * builds CustomerGroup without checking for non null required values
+     */
+    public CustomerGroup buildUnchecked() {
         return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             custom);
     }

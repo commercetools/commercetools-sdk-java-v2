@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetDraftBuilder {
+public final class AssetDraftBuilder implements Builder<AssetDraft> {
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
@@ -96,6 +97,15 @@ public final class AssetDraftBuilder {
     }
 
     public AssetDraft build() {
+        Objects.requireNonNull(sources);
+        Objects.requireNonNull(name);
+        return new AssetDraftImpl(sources, name, description, tags, custom, key);
+    }
+
+    /**
+     * builds AssetDraft without checking for non null required values
+     */
+    public AssetDraft buildUnchecked() {
         return new AssetDraftImpl(sources, name, description, tags, custom, key);
     }
 

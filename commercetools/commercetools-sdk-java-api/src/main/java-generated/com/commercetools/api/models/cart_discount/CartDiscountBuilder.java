@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountBuilder {
+public final class CartDiscountBuilder implements Builder<CartDiscount> {
 
     private String id;
 
@@ -257,6 +258,27 @@ public final class CartDiscountBuilder {
     }
 
     public CartDiscount build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(value);
+        Objects.requireNonNull(cartPredicate);
+        Objects.requireNonNull(sortOrder);
+        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(requiresDiscountCode);
+        Objects.requireNonNull(references);
+        Objects.requireNonNull(stackingMode);
+        return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
+            description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
+            references, stackingMode, custom);
+    }
+
+    /**
+     * builds CartDiscount without checking for non null required values
+     */
+    public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
             references, stackingMode, custom);

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelChangeValueBuilder {
+public final class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     private String id;
 
@@ -31,6 +32,15 @@ public final class ParcelChangeValueBuilder {
     }
 
     public ParcelChangeValue build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(createdAt);
+        return new ParcelChangeValueImpl(id, createdAt);
+    }
+
+    /**
+     * builds ParcelChangeValue without checking for non null required values
+     */
+    public ParcelChangeValue buildUnchecked() {
         return new ParcelChangeValueImpl(id, createdAt);
     }
 

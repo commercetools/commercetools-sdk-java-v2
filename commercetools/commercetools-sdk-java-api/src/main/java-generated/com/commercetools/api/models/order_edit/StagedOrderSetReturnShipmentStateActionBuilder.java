@@ -3,10 +3,12 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetReturnShipmentStateActionBuilder {
+public final class StagedOrderSetReturnShipmentStateActionBuilder
+        implements Builder<StagedOrderSetReturnShipmentStateAction> {
 
     private String returnItemId;
 
@@ -32,6 +34,15 @@ public final class StagedOrderSetReturnShipmentStateActionBuilder {
     }
 
     public StagedOrderSetReturnShipmentStateAction build() {
+        Objects.requireNonNull(returnItemId);
+        Objects.requireNonNull(shipmentState);
+        return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
+    }
+
+    /**
+     * builds StagedOrderSetReturnShipmentStateAction without checking for non null required values
+     */
+    public StagedOrderSetReturnShipmentStateAction buildUnchecked() {
         return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
 

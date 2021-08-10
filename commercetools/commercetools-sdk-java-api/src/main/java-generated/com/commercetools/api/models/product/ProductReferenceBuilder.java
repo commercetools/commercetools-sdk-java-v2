@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductReferenceBuilder {
+public final class ProductReferenceBuilder implements Builder<ProductReference> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class ProductReferenceBuilder {
     }
 
     public ProductReference build() {
+        Objects.requireNonNull(id);
+        return new ProductReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ProductReference without checking for non null required values
+     */
+    public ProductReference buildUnchecked() {
         return new ProductReferenceImpl(id, obj);
     }
 

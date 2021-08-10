@@ -3,10 +3,11 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryOrderHintsBuilder {
+public final class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
 
     private Map<String, String> values;
 
@@ -28,6 +29,14 @@ public final class CategoryOrderHintsBuilder {
     }
 
     public CategoryOrderHints build() {
+        Objects.requireNonNull(values);
+        return new CategoryOrderHintsImpl(values);
+    }
+
+    /**
+     * builds CategoryOrderHints without checking for non null required values
+     */
+    public CategoryOrderHints buildUnchecked() {
         return new CategoryOrderHintsImpl(values);
     }
 

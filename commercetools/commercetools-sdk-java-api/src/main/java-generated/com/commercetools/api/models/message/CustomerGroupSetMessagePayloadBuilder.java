@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupSetMessagePayloadBuilder {
+public final class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGroupSetMessagePayload> {
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
@@ -21,6 +22,14 @@ public final class CustomerGroupSetMessagePayloadBuilder {
     }
 
     public CustomerGroupSetMessagePayload build() {
+        Objects.requireNonNull(customerGroup);
+        return new CustomerGroupSetMessagePayloadImpl(customerGroup);
+    }
+
+    /**
+     * builds CustomerGroupSetMessagePayload without checking for non null required values
+     */
+    public CustomerGroupSetMessagePayload buildUnchecked() {
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);
     }
 

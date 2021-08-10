@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionBuilder {
+public final class SubscriptionBuilder implements Builder<Subscription> {
 
     private String id;
 
@@ -163,6 +164,23 @@ public final class SubscriptionBuilder {
     }
 
     public Subscription build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(changes);
+        Objects.requireNonNull(destination);
+        Objects.requireNonNull(messages);
+        Objects.requireNonNull(format);
+        Objects.requireNonNull(status);
+        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
+            destination, key, messages, format, status);
+    }
+
+    /**
+     * builds Subscription without checking for non null required values
+     */
+    public Subscription buildUnchecked() {
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
             destination, key, messages, format, status);
     }

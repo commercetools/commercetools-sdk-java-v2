@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddShoppingListActionBuilder {
+public final class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOrderAddShoppingListAction> {
 
     private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
 
@@ -51,6 +52,14 @@ public final class StagedOrderAddShoppingListActionBuilder {
     }
 
     public StagedOrderAddShoppingListAction build() {
+        Objects.requireNonNull(shoppingList);
+        return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
+    }
+
+    /**
+     * builds StagedOrderAddShoppingListAction without checking for non null required values
+     */
+    public StagedOrderAddShoppingListAction buildUnchecked() {
         return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 

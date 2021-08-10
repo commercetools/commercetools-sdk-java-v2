@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLResponseBuilder {
+public final class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     @Nullable
     private java.lang.Object data;
@@ -43,6 +44,13 @@ public final class GraphQLResponseBuilder {
     }
 
     public GraphQLResponse build() {
+        return new GraphQLResponseImpl(data, errors);
+    }
+
+    /**
+     * builds GraphQLResponse without checking for non null required values
+     */
+    public GraphQLResponse buildUnchecked() {
         return new GraphQLResponseImpl(data, errors);
     }
 

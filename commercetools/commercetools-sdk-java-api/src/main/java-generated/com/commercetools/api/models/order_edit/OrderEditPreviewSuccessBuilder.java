@@ -3,10 +3,11 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditPreviewSuccessBuilder {
+public final class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewSuccess> {
 
     private com.commercetools.api.models.order_edit.StagedOrder preview;
 
@@ -38,6 +39,15 @@ public final class OrderEditPreviewSuccessBuilder {
     }
 
     public OrderEditPreviewSuccess build() {
+        Objects.requireNonNull(preview);
+        Objects.requireNonNull(messagePayloads);
+        return new OrderEditPreviewSuccessImpl(preview, messagePayloads);
+    }
+
+    /**
+     * builds OrderEditPreviewSuccess without checking for non null required values
+     */
+    public OrderEditPreviewSuccess buildUnchecked() {
         return new OrderEditPreviewSuccessImpl(preview, messagePayloads);
     }
 

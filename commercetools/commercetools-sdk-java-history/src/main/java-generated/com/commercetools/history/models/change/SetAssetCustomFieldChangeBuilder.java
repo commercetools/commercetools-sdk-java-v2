@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetAssetCustomFieldChangeBuilder {
+public final class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomFieldChange> {
 
     private String change;
 
@@ -76,6 +77,19 @@ public final class SetAssetCustomFieldChangeBuilder {
     }
 
     public SetAssetCustomFieldChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(customTypeId);
+        Objects.requireNonNull(asset);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetAssetCustomFieldChange without checking for non null required values
+     */
+    public SetAssetCustomFieldChange buildUnchecked() {
         return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
     }
 

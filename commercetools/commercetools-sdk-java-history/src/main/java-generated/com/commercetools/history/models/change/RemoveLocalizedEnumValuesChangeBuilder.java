@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveLocalizedEnumValuesChangeBuilder {
+public final class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLocalizedEnumValuesChange> {
 
     private String change;
 
@@ -43,6 +44,16 @@ public final class RemoveLocalizedEnumValuesChangeBuilder {
     }
 
     public RemoveLocalizedEnumValuesChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(previousValue);
+        return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
+    }
+
+    /**
+     * builds RemoveLocalizedEnumValuesChange without checking for non null required values
+     */
+    public RemoveLocalizedEnumValuesChange buildUnchecked() {
         return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 

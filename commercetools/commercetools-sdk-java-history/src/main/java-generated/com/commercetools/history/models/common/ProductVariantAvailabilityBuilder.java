@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAvailabilityBuilder {
+public final class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
 
     private Boolean isOnStock;
 
@@ -54,6 +55,17 @@ public final class ProductVariantAvailabilityBuilder {
     }
 
     public ProductVariantAvailability build() {
+        Objects.requireNonNull(isOnStock);
+        Objects.requireNonNull(restockableInDays);
+        Objects.requireNonNull(availableQuantity);
+        Objects.requireNonNull(channels);
+        return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
+    }
+
+    /**
+     * builds ProductVariantAvailability without checking for non null required values
+     */
+    public ProductVariantAvailability buildUnchecked() {
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 

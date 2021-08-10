@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddedToCategoryMessagePayloadBuilder {
+public final class ProductAddedToCategoryMessagePayloadBuilder
+        implements Builder<ProductAddedToCategoryMessagePayload> {
 
     private com.commercetools.api.models.category.CategoryReference category;
 
@@ -32,6 +34,15 @@ public final class ProductAddedToCategoryMessagePayloadBuilder {
     }
 
     public ProductAddedToCategoryMessagePayload build() {
+        Objects.requireNonNull(category);
+        Objects.requireNonNull(staged);
+        return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
+    }
+
+    /**
+     * builds ProductAddedToCategoryMessagePayload without checking for non null required values
+     */
+    public ProductAddedToCategoryMessagePayload buildUnchecked() {
         return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
     }
 

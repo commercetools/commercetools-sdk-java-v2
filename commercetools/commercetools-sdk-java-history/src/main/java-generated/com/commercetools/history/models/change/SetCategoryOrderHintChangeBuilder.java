@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCategoryOrderHintChangeBuilder {
+public final class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrderHintChange> {
 
     private String change;
 
@@ -66,6 +67,18 @@ public final class SetCategoryOrderHintChangeBuilder {
     }
 
     public SetCategoryOrderHintChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(catalogData);
+        Objects.requireNonNull(categoryId);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetCategoryOrderHintChange without checking for non null required values
+     */
+    public SetCategoryOrderHintChange buildUnchecked() {
         return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
     }
 

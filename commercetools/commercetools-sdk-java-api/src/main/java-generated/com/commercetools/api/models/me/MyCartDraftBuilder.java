@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartDraftBuilder {
+public final class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     private String currency;
 
@@ -228,6 +229,16 @@ public final class MyCartDraftBuilder {
     }
 
     public MyCartDraft build() {
+        Objects.requireNonNull(currency);
+        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
+            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
+            itemShippingAddresses, store, discountCodes);
+    }
+
+    /**
+     * builds MyCartDraft without checking for non null required values
+     */
+    public MyCartDraft buildUnchecked() {
         return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
             billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
             itemShippingAddresses, store, discountCodes);

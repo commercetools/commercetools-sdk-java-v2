@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPublishActionBuilder {
+public final class ProductPublishActionBuilder implements Builder<ProductPublishAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ProductPublishScope scope;
@@ -25,6 +26,13 @@ public final class ProductPublishActionBuilder {
     }
 
     public ProductPublishAction build() {
+        return new ProductPublishActionImpl(scope);
+    }
+
+    /**
+     * builds ProductPublishAction without checking for non null required values
+     */
+    public ProductPublishAction buildUnchecked() {
         return new ProductPublishActionImpl(scope);
     }
 

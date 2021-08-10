@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetAttributeChangeBuilder {
+public final class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     private String change;
 
@@ -53,6 +54,17 @@ public final class SetAttributeChangeBuilder {
     }
 
     public SetAttributeChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(catalogData);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetAttributeChange without checking for non null required values
+     */
+    public SetAttributeChange buildUnchecked() {
         return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

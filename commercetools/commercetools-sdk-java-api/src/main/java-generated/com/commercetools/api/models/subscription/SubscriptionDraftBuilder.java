@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionDraftBuilder {
+public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
@@ -90,6 +91,14 @@ public final class SubscriptionDraftBuilder {
     }
 
     public SubscriptionDraft build() {
+        Objects.requireNonNull(destination);
+        return new SubscriptionDraftImpl(changes, destination, key, messages, format);
+    }
+
+    /**
+     * builds SubscriptionDraft without checking for non null required values
+     */
+    public SubscriptionDraft buildUnchecked() {
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
 

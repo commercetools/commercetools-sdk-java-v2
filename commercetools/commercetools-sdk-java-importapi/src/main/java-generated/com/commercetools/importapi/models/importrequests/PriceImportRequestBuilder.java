@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceImportRequestBuilder {
+public final class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
 
@@ -27,6 +28,14 @@ public final class PriceImportRequestBuilder {
     }
 
     public PriceImportRequest build() {
+        Objects.requireNonNull(resources);
+        return new PriceImportRequestImpl(resources);
+    }
+
+    /**
+     * builds PriceImportRequest without checking for non null required values
+     */
+    public PriceImportRequest buildUnchecked() {
         return new PriceImportRequestImpl(resources);
     }
 

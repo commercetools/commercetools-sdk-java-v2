@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetOrderTotalTaxActionBuilder {
+public final class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedOrderSetOrderTotalTaxAction> {
 
     private com.commercetools.api.models.common.Money externalTotalGross;
 
@@ -43,6 +44,14 @@ public final class StagedOrderSetOrderTotalTaxActionBuilder {
     }
 
     public StagedOrderSetOrderTotalTaxAction build() {
+        Objects.requireNonNull(externalTotalGross);
+        return new StagedOrderSetOrderTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
+    }
+
+    /**
+     * builds StagedOrderSetOrderTotalTaxAction without checking for non null required values
+     */
+    public StagedOrderSetOrderTotalTaxAction buildUnchecked() {
         return new StagedOrderSetOrderTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
 

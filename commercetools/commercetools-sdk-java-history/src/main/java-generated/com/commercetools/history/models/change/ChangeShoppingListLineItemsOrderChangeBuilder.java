@@ -3,10 +3,12 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeShoppingListLineItemsOrderChangeBuilder {
+public final class ChangeShoppingListLineItemsOrderChangeBuilder
+        implements Builder<ChangeShoppingListLineItemsOrderChange> {
 
     private String change;
 
@@ -56,6 +58,16 @@ public final class ChangeShoppingListLineItemsOrderChangeBuilder {
     }
 
     public ChangeShoppingListLineItemsOrderChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new ChangeShoppingListLineItemsOrderChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeShoppingListLineItemsOrderChange without checking for non null required values
+     */
+    public ChangeShoppingListLineItemsOrderChange buildUnchecked() {
         return new ChangeShoppingListLineItemsOrderChangeImpl(change, previousValue, nextValue);
     }
 

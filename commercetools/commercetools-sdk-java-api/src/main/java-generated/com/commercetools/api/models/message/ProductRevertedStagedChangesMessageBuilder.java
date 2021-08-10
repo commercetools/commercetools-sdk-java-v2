@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRevertedStagedChangesMessageBuilder {
+public final class ProductRevertedStagedChangesMessageBuilder implements Builder<ProductRevertedStagedChangesMessage> {
 
     private String id;
 
@@ -147,6 +148,22 @@ public final class ProductRevertedStagedChangesMessageBuilder {
     }
 
     public ProductRevertedStagedChangesMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(removedImageUrls);
+        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);
+    }
+
+    /**
+     * builds ProductRevertedStagedChangesMessage without checking for non null required values
+     */
+    public ProductRevertedStagedChangesMessage buildUnchecked() {
         return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);
     }

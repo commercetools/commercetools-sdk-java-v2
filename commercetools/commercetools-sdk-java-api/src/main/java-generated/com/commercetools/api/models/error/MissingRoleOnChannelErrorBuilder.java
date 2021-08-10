@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingRoleOnChannelErrorBuilder {
+public final class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnChannelError> {
 
     private String message;
 
@@ -48,6 +49,15 @@ public final class MissingRoleOnChannelErrorBuilder {
     }
 
     public MissingRoleOnChannelError build() {
+        Objects.requireNonNull(message);
+        Objects.requireNonNull(missingRole);
+        return new MissingRoleOnChannelErrorImpl(message, channel, missingRole);
+    }
+
+    /**
+     * builds MissingRoleOnChannelError without checking for non null required values
+     */
+    public MissingRoleOnChannelError buildUnchecked() {
         return new MissingRoleOnChannelErrorImpl(message, channel, missingRole);
     }
 

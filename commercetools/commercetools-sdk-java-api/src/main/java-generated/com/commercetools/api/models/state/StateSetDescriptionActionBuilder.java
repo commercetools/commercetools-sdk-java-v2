@@ -3,10 +3,11 @@ package com.commercetools.api.models.state;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateSetDescriptionActionBuilder {
+public final class StateSetDescriptionActionBuilder implements Builder<StateSetDescriptionAction> {
 
     private com.commercetools.api.models.common.LocalizedString description;
 
@@ -21,6 +22,14 @@ public final class StateSetDescriptionActionBuilder {
     }
 
     public StateSetDescriptionAction build() {
+        Objects.requireNonNull(description);
+        return new StateSetDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds StateSetDescriptionAction without checking for non null required values
+     */
+    public StateSetDescriptionAction buildUnchecked() {
         return new StateSetDescriptionActionImpl(description);
     }
 

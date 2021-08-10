@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetParcelTrackingDataChangeBuilder {
+public final class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrackingDataChange> {
 
     private String change;
 
@@ -56,6 +57,17 @@ public final class SetParcelTrackingDataChangeBuilder {
     }
 
     public SetParcelTrackingDataChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(parcel);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetParcelTrackingDataChangeImpl(change, parcel, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetParcelTrackingDataChange without checking for non null required values
+     */
+    public SetParcelTrackingDataChange buildUnchecked() {
         return new SetParcelTrackingDataChangeImpl(change, parcel, nextValue, previousValue);
     }
 

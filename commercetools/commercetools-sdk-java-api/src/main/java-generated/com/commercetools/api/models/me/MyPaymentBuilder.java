@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyPaymentBuilder {
+public final class MyPaymentBuilder implements Builder<MyPayment> {
 
     private String id;
 
@@ -112,6 +113,19 @@ public final class MyPaymentBuilder {
     }
 
     public MyPayment build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(amountPlanned);
+        Objects.requireNonNull(paymentMethodInfo);
+        Objects.requireNonNull(transactions);
+        return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions,
+            custom);
+    }
+
+    /**
+     * builds MyPayment without checking for non null required values
+     */
+    public MyPayment buildUnchecked() {
         return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions,
             custom);
     }

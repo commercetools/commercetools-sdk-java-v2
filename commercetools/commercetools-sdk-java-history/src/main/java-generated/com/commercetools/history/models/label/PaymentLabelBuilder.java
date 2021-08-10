@@ -3,10 +3,11 @@ package com.commercetools.history.models.label;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentLabelBuilder {
+public final class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     private String key;
 
@@ -31,6 +32,15 @@ public final class PaymentLabelBuilder {
     }
 
     public PaymentLabel build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(amountPlanned);
+        return new PaymentLabelImpl(key, amountPlanned);
+    }
+
+    /**
+     * builds PaymentLabel without checking for non null required values
+     */
+    public PaymentLabel buildUnchecked() {
         return new PaymentLabelImpl(key, amountPlanned);
     }
 

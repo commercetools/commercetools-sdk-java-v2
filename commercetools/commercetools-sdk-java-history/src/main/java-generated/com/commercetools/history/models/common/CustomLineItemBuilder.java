@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemBuilder {
+public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
 
@@ -86,6 +87,20 @@ public final class CustomLineItemBuilder {
     }
 
     public CustomLineItem build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(money);
+        Objects.requireNonNull(taxedPrice);
+        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(slug);
+        Objects.requireNonNull(quantity);
+        return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
+    }
+
+    /**
+     * builds CustomLineItem without checking for non null required values
+     */
+    public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
     }
 

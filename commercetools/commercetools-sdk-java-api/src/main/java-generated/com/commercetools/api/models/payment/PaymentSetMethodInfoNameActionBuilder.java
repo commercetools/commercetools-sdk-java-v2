@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetMethodInfoNameActionBuilder {
+public final class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSetMethodInfoNameAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
@@ -25,6 +26,13 @@ public final class PaymentSetMethodInfoNameActionBuilder {
     }
 
     public PaymentSetMethodInfoNameAction build() {
+        return new PaymentSetMethodInfoNameActionImpl(name);
+    }
+
+    /**
+     * builds PaymentSetMethodInfoNameAction without checking for non null required values
+     */
+    public PaymentSetMethodInfoNameAction buildUnchecked() {
         return new PaymentSetMethodInfoNameActionImpl(name);
     }
 

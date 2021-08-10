@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntrySetExpectedDeliveryActionBuilder {
+public final class InventoryEntrySetExpectedDeliveryActionBuilder
+        implements Builder<InventoryEntrySetExpectedDeliveryAction> {
 
     @Nullable
     private java.time.ZonedDateTime expectedDelivery;
@@ -25,6 +27,13 @@ public final class InventoryEntrySetExpectedDeliveryActionBuilder {
     }
 
     public InventoryEntrySetExpectedDeliveryAction build() {
+        return new InventoryEntrySetExpectedDeliveryActionImpl(expectedDelivery);
+    }
+
+    /**
+     * builds InventoryEntrySetExpectedDeliveryAction without checking for non null required values
+     */
+    public InventoryEntrySetExpectedDeliveryAction buildUnchecked() {
         return new InventoryEntrySetExpectedDeliveryActionImpl(expectedDelivery);
     }
 

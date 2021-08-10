@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductBuilder {
+public final class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     @Nullable
     private com.commercetools.ml.models.common.ProductReference product;
@@ -51,6 +52,13 @@ public final class SimilarProductBuilder {
     }
 
     public SimilarProduct build() {
+        return new SimilarProductImpl(product, variantId, meta);
+    }
+
+    /**
+     * builds SimilarProduct without checking for non null required values
+     */
+    public SimilarProduct buildUnchecked() {
         return new SimilarProductImpl(product, variantId, meta);
     }
 

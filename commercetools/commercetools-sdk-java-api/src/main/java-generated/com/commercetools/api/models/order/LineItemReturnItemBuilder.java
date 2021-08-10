@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemReturnItemBuilder {
+public final class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
 
     private String id;
 
@@ -103,6 +104,21 @@ public final class LineItemReturnItemBuilder {
     }
 
     public LineItemReturnItem build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lineItemId);
+        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
+            lineItemId);
+    }
+
+    /**
+     * builds LineItemReturnItem without checking for non null required values
+     */
+    public LineItemReturnItem buildUnchecked() {
         return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
             lineItemId);
     }

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddInterfaceInteractionChangeBuilder {
+public final class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfaceInteractionChange> {
 
     private String change;
 
@@ -32,6 +33,15 @@ public final class AddInterfaceInteractionChangeBuilder {
     }
 
     public AddInterfaceInteractionChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(nextValue);
+        return new AddInterfaceInteractionChangeImpl(change, nextValue);
+    }
+
+    /**
+     * builds AddInterfaceInteractionChange without checking for non null required values
+     */
+    public AddInterfaceInteractionChange buildUnchecked() {
         return new AddInterfaceInteractionChangeImpl(change, nextValue);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomBuilder {
+public final class CustomBuilder implements Builder<Custom> {
 
     private com.commercetools.importapi.models.common.TypeKeyReference type;
 
@@ -35,6 +36,14 @@ public final class CustomBuilder {
     }
 
     public Custom build() {
+        Objects.requireNonNull(type);
+        return new CustomImpl(type, fields);
+    }
+
+    /**
+     * builds Custom without checking for non null required values
+     */
+    public Custom buildUnchecked() {
         return new CustomImpl(type, fields);
     }
 

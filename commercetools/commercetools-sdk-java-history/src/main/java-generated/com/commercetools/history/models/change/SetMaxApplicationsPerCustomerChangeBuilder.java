@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetMaxApplicationsPerCustomerChangeBuilder {
+public final class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMaxApplicationsPerCustomerChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetMaxApplicationsPerCustomerChangeBuilder {
     }
 
     public SetMaxApplicationsPerCustomerChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(nextValue);
+        return new SetMaxApplicationsPerCustomerChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetMaxApplicationsPerCustomerChange without checking for non null required values
+     */
+    public SetMaxApplicationsPerCustomerChange buildUnchecked() {
         return new SetMaxApplicationsPerCustomerChangeImpl(change, previousValue, nextValue);
     }
 

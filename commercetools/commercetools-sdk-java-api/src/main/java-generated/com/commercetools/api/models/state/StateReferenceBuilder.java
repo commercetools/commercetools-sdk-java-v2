@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateReferenceBuilder {
+public final class StateReferenceBuilder implements Builder<StateReference> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class StateReferenceBuilder {
     }
 
     public StateReference build() {
+        Objects.requireNonNull(id);
+        return new StateReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds StateReference without checking for non null required values
+     */
+    public StateReference buildUnchecked() {
         return new StateReferenceImpl(id, obj);
     }
 

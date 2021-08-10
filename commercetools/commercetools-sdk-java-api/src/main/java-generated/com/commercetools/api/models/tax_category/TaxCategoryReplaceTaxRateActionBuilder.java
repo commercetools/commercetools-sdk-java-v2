@@ -3,10 +3,11 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryReplaceTaxRateActionBuilder {
+public final class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCategoryReplaceTaxRateAction> {
 
     private String taxRateId;
 
@@ -32,6 +33,15 @@ public final class TaxCategoryReplaceTaxRateActionBuilder {
     }
 
     public TaxCategoryReplaceTaxRateAction build() {
+        Objects.requireNonNull(taxRateId);
+        Objects.requireNonNull(taxRate);
+        return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
+    }
+
+    /**
+     * builds TaxCategoryReplaceTaxRateAction without checking for non null required values
+     */
+    public TaxCategoryReplaceTaxRateAction buildUnchecked() {
         return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
     }
 

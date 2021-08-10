@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TransactionBuilder {
+public final class TransactionBuilder implements Builder<Transaction> {
 
     private String id;
 
@@ -83,6 +84,16 @@ public final class TransactionBuilder {
     }
 
     public Transaction build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(amount);
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
+    }
+
+    /**
+     * builds Transaction without checking for non null required values
+     */
+    public Transaction buildUnchecked() {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
     }
 

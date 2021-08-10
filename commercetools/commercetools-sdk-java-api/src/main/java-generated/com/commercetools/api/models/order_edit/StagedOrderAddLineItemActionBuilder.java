@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddLineItemActionBuilder {
+public final class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderAddLineItemAction> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -174,6 +175,14 @@ public final class StagedOrderAddLineItemActionBuilder {
     }
 
     public StagedOrderAddLineItemAction build() {
+        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,
+            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+    }
+
+    /**
+     * builds StagedOrderAddLineItemAction without checking for non null required values
+     */
+    public StagedOrderAddLineItemAction buildUnchecked() {
         return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,
             sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }

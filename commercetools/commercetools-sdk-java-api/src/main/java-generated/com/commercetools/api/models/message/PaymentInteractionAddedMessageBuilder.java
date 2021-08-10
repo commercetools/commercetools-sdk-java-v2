@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentInteractionAddedMessageBuilder {
+public final class PaymentInteractionAddedMessageBuilder implements Builder<PaymentInteractionAddedMessage> {
 
     private String id;
 
@@ -143,6 +144,22 @@ public final class PaymentInteractionAddedMessageBuilder {
     }
 
     public PaymentInteractionAddedMessage build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(sequenceNumber);
+        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(interaction);
+        return new PaymentInteractionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, interaction);
+    }
+
+    /**
+     * builds PaymentInteractionAddedMessage without checking for non null required values
+     */
+    public PaymentInteractionAddedMessage buildUnchecked() {
         return new PaymentInteractionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, interaction);
     }

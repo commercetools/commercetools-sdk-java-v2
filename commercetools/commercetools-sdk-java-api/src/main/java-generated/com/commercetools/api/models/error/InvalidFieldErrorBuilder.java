@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidFieldErrorBuilder {
+public final class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     private String message;
 
@@ -62,6 +63,16 @@ public final class InvalidFieldErrorBuilder {
     }
 
     public InvalidFieldError build() {
+        Objects.requireNonNull(message);
+        Objects.requireNonNull(field);
+        Objects.requireNonNull(invalidValue);
+        return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues);
+    }
+
+    /**
+     * builds InvalidFieldError without checking for non null required values
+     */
+    public InvalidFieldError buildUnchecked() {
         return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryImportBuilder {
+public final class CategoryImportBuilder implements Builder<CategoryImport> {
 
     private String key;
 
@@ -172,6 +173,17 @@ public final class CategoryImportBuilder {
     }
 
     public CategoryImport build() {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(slug);
+        return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,
+            metaDescription, metaKeywords, assets, custom);
+    }
+
+    /**
+     * builds CategoryImport without checking for non null required values
+     */
+    public CategoryImport buildUnchecked() {
         return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,
             metaDescription, metaKeywords, assets, custom);
     }

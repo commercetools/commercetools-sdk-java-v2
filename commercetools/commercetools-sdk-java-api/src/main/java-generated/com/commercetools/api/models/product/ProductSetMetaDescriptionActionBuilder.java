@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetMetaDescriptionActionBuilder {
+public final class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSetMetaDescriptionAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
@@ -38,6 +39,13 @@ public final class ProductSetMetaDescriptionActionBuilder {
     }
 
     public ProductSetMetaDescriptionAction build() {
+        return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);
+    }
+
+    /**
+     * builds ProductSetMetaDescriptionAction without checking for non null required values
+     */
+    public ProductSetMetaDescriptionAction buildUnchecked() {
         return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);
     }
 

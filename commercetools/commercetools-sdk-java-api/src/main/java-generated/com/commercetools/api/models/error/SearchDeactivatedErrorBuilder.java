@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchDeactivatedErrorBuilder {
+public final class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class SearchDeactivatedErrorBuilder {
     }
 
     public SearchDeactivatedError build() {
+        Objects.requireNonNull(message);
+        return new SearchDeactivatedErrorImpl(message);
+    }
+
+    /**
+     * builds SearchDeactivatedError without checking for non null required values
+     */
+    public SearchDeactivatedError buildUnchecked() {
         return new SearchDeactivatedErrorImpl(message);
     }
 

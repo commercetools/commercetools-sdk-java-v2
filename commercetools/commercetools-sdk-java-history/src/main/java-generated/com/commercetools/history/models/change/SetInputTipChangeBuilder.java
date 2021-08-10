@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetInputTipChangeBuilder {
+public final class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     private String change;
 
@@ -54,6 +55,17 @@ public final class SetInputTipChangeBuilder {
     }
 
     public SetInputTipChange build() {
+        Objects.requireNonNull(change);
+        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(previousValue);
+        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetInputTipChange without checking for non null required values
+     */
+    public SetInputTipChange buildUnchecked() {
         return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);
     }
 

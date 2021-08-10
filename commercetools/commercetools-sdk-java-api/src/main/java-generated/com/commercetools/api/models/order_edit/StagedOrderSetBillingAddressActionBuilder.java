@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetBillingAddressActionBuilder {
+public final class StagedOrderSetBillingAddressActionBuilder implements Builder<StagedOrderSetBillingAddressAction> {
 
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
@@ -25,6 +26,13 @@ public final class StagedOrderSetBillingAddressActionBuilder {
     }
 
     public StagedOrderSetBillingAddressAction build() {
+        return new StagedOrderSetBillingAddressActionImpl(address);
+    }
+
+    /**
+     * builds StagedOrderSetBillingAddressAction without checking for non null required values
+     */
+    public StagedOrderSetBillingAddressAction buildUnchecked() {
         return new StagedOrderSetBillingAddressActionImpl(address);
     }
 

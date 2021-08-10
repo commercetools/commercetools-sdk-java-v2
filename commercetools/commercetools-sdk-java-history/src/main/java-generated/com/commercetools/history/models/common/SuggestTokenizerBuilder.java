@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SuggestTokenizerBuilder {
+public final class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
 
     private String type;
 
@@ -20,6 +21,14 @@ public final class SuggestTokenizerBuilder {
     }
 
     public SuggestTokenizer build() {
+        Objects.requireNonNull(type);
+        return new SuggestTokenizerImpl(type);
+    }
+
+    /**
+     * builds SuggestTokenizer without checking for non null required values
+     */
+    public SuggestTokenizer buildUnchecked() {
         return new SuggestTokenizerImpl(type);
     }
 

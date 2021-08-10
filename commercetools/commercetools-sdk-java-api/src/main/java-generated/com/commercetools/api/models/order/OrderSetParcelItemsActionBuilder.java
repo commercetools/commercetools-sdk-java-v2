@@ -3,10 +3,11 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetParcelItemsActionBuilder {
+public final class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelItemsAction> {
 
     private String parcelId;
 
@@ -37,6 +38,15 @@ public final class OrderSetParcelItemsActionBuilder {
     }
 
     public OrderSetParcelItemsAction build() {
+        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(items);
+        return new OrderSetParcelItemsActionImpl(parcelId, items);
+    }
+
+    /**
+     * builds OrderSetParcelItemsAction without checking for non null required values
+     */
+    public OrderSetParcelItemsAction buildUnchecked() {
         return new OrderSetParcelItemsActionImpl(parcelId, items);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderBuilder {
+public final class StagedOrderBuilder implements Builder<StagedOrder> {
 
     private String id;
 
@@ -575,6 +576,30 @@ public final class StagedOrderBuilder {
     }
 
     public StagedOrder build() {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(version);
+        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(lineItems);
+        Objects.requireNonNull(customLineItems);
+        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(orderState);
+        Objects.requireNonNull(syncInfo);
+        Objects.requireNonNull(lastMessageSequenceNumber);
+        Objects.requireNonNull(origin);
+        Objects.requireNonNull(refusedGifts);
+        return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
+            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
+            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
+            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
+            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
+            shippingRateInput, itemShippingAddresses, refusedGifts);
+    }
+
+    /**
+     * builds StagedOrder without checking for non null required values
+     */
+    public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

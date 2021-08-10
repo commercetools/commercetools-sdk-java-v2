@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentAddInterfaceInteractionActionBuilder {
+public final class PaymentAddInterfaceInteractionActionBuilder
+        implements Builder<PaymentAddInterfaceInteractionAction> {
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
@@ -37,6 +39,14 @@ public final class PaymentAddInterfaceInteractionActionBuilder {
     }
 
     public PaymentAddInterfaceInteractionAction build() {
+        Objects.requireNonNull(type);
+        return new PaymentAddInterfaceInteractionActionImpl(type, fields);
+    }
+
+    /**
+     * builds PaymentAddInterfaceInteractionAction without checking for non null required values
+     */
+    public PaymentAddInterfaceInteractionAction buildUnchecked() {
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);
     }
 

@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder {
+public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
+        implements Builder<StagedOrderSetShippingAddressAndCustomShippingMethodAction> {
 
     private com.commercetools.api.models.common.BaseAddress address;
 
@@ -75,6 +77,17 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBui
     }
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodAction build() {
+        Objects.requireNonNull(address);
+        Objects.requireNonNull(shippingMethodName);
+        Objects.requireNonNull(shippingRate);
+        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,
+            shippingRate, taxCategory, externalTaxRate);
+    }
+
+    /**
+     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction without checking for non null required values
+     */
+    public StagedOrderSetShippingAddressAndCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,
             shippingRate, taxCategory, externalTaxRate);
     }

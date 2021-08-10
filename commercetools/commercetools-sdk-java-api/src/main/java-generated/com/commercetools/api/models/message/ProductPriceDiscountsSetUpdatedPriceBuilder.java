@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceDiscountsSetUpdatedPriceBuilder {
+public final class ProductPriceDiscountsSetUpdatedPriceBuilder
+        implements Builder<ProductPriceDiscountsSetUpdatedPrice> {
 
     private Integer variantId;
 
@@ -84,6 +86,16 @@ public final class ProductPriceDiscountsSetUpdatedPriceBuilder {
     }
 
     public ProductPriceDiscountsSetUpdatedPrice build() {
+        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(priceId);
+        Objects.requireNonNull(staged);
+        return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
+    }
+
+    /**
+     * builds ProductPriceDiscountsSetUpdatedPrice without checking for non null required values
+     */
+    public ProductPriceDiscountsSetUpdatedPrice buildUnchecked() {
         return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
     }
 

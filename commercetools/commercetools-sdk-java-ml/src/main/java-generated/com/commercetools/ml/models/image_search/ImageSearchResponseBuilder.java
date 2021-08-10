@@ -3,10 +3,11 @@ package com.commercetools.ml.models.image_search;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageSearchResponseBuilder {
+public final class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> {
 
     private Integer count;
 
@@ -59,6 +60,17 @@ public final class ImageSearchResponseBuilder {
     }
 
     public ImageSearchResponse build() {
+        Objects.requireNonNull(count);
+        Objects.requireNonNull(offset);
+        Objects.requireNonNull(total);
+        Objects.requireNonNull(results);
+        return new ImageSearchResponseImpl(count, offset, total, results);
+    }
+
+    /**
+     * builds ImageSearchResponse without checking for non null required values
+     */
+    public ImageSearchResponse buildUnchecked() {
         return new ImageSearchResponseImpl(count, offset, total, results);
     }
 

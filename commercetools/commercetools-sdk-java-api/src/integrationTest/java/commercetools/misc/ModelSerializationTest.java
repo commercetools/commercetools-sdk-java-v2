@@ -48,6 +48,7 @@ public class ModelSerializationTest {
                         .build())
                 .sources(Arrays.asList(AssetSourceBuilder.of()
                         .contentType("application/json")
+                        .uri("https://commercetools.com")
                         .dimensions(AssetDimensionsBuilder.of().h(10).w(5).build())
                         .build()))
                 .tags(Arrays.asList("tag 1", "tag 2"))
@@ -107,6 +108,7 @@ public class ModelSerializationTest {
                 .key(key)
                 .name(localizedString)
                 .sources(Arrays.asList(AssetSourceBuilder.of()
+                        .uri("https://commercetools.com")
                         .contentType("application/json")
                         .dimensions(AssetDimensionsBuilder.of().h(10).w(5).build())
                         .build()))
@@ -118,6 +120,7 @@ public class ModelSerializationTest {
         Category category = CategoryBuilder.of()
                 .key(key)
                 .id(id)
+                .version(1L)
                 .ancestors(Arrays.asList(reference))
                 .assets(Arrays.asList(asset))
                 .custom(customFields)
@@ -131,6 +134,8 @@ public class ModelSerializationTest {
                 .parent(reference)
                 .slug(localizedString)
                 .createdAt(
+                    ZonedDateTime.of(2019, 12, 12, 12, 12, 12, 12, ZoneId.ofOffset("UTC", ZoneOffset.ofHours(1))))
+                .lastModifiedAt(
                     ZonedDateTime.of(2019, 12, 12, 12, 12, 12, 12, ZoneId.ofOffset("UTC", ZoneOffset.ofHours(1))))
                 .build();
 

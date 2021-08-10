@@ -4,6 +4,7 @@ package commercetools.api_client;
 import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.junit.Assert;
 import org.junit.Test;
 

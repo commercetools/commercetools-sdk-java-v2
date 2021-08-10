@@ -54,11 +54,4 @@ public class ApiClientIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), apiClient.getId());
         });
     }
-
-    @Test
-    public void userAgent() {
-        String clientWithUserAgent = ClientBuilder.buildDefaultUserAgent();
-        Assert.assertTrue(clientWithUserAgent.contains(ClientBuilder.userAgent));
-    }
-
 }

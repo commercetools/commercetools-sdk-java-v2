@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.oauth2.*;
 
 import org.apache.commons.lang3.SystemUtils;
 
-public class ClientBuilder {
+public class ClientBuilder implements Builder<ApiHttpClient> {
     public static final String COMMERCETOOLS = "commercetools";
 
     private URI apiBaseUrl;

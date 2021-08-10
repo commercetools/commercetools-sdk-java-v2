@@ -16,6 +16,7 @@ public final class PaymentDraftBuilder {
     @Nullable
     private String anonymousId;
 
+    @Deprecated
     @Nullable
     private String externalId;
 
@@ -65,6 +66,7 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    @Deprecated
     public PaymentDraftBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
@@ -158,6 +160,7 @@ public final class PaymentDraftBuilder {
         return this.anonymousId;
     }
 
+    @Deprecated
     @Nullable
     public String getExternalId() {
         return this.externalId;

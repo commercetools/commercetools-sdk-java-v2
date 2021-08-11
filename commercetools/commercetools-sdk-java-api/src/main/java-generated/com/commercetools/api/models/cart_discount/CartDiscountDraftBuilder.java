@@ -37,6 +37,7 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    @Nullable
     private Boolean requiresDiscountCode;
 
     @Nullable
@@ -98,7 +99,7 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
         return this;
     }
 
-    public CartDiscountDraftBuilder requiresDiscountCode(final Boolean requiresDiscountCode) {
+    public CartDiscountDraftBuilder requiresDiscountCode(@Nullable final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
         return this;
     }
@@ -160,6 +161,7 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
         return this.validUntil;
     }
 
+    @Nullable
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
@@ -179,7 +181,6 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
         Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
         Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
         Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
-        Objects.requireNonNull(requiresDiscountCode, CartDiscountDraft.class + ": requiresDiscountCode is missing");
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
             validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }

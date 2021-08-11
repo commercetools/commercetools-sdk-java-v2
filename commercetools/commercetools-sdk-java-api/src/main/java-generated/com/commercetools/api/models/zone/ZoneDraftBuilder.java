@@ -19,6 +19,7 @@ public final class ZoneDraftBuilder implements Builder<ZoneDraft> {
     @Nullable
     private String description;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
     public ZoneDraftBuilder key(@Nullable final String key) {
@@ -36,12 +37,13 @@ public final class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this;
     }
 
-    public ZoneDraftBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
+    public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
 
-    public ZoneDraftBuilder locations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+    public ZoneDraftBuilder locations(
+            @Nullable final java.util.List<com.commercetools.api.models.zone.Location> locations) {
         this.locations = locations;
         return this;
     }
@@ -60,13 +62,13 @@ public final class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this.description;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
         return this.locations;
     }
 
     public ZoneDraft build() {
         Objects.requireNonNull(name, ZoneDraft.class + ": name is missing");
-        Objects.requireNonNull(locations, ZoneDraft.class + ": locations is missing");
         return new ZoneDraftImpl(key, name, description, locations);
     }
 

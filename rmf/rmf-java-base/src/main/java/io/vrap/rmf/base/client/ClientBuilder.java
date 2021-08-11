@@ -16,6 +16,7 @@ import org.apache.commons.lang3.SystemUtils;
 
 public class ClientBuilder {
     public static final String COMMERCETOOLS = "commercetools";
+    public static final String userAgent  = "commercetools-sdk-java-v2/";
 
     private URI apiBaseUrl;
     private Supplier<ErrorMiddleware> errorMiddleware;
@@ -27,7 +28,6 @@ public class ClientBuilder {
     private Supplier<HandlerStack> stack;
     private VrapHttpClient httpClient;
     private ResponseSerializer serializer;
-    public static final String userAgent  = "commercetools-sdk-java-v2/";
 
     public static ClientBuilder of() {
         return new ClientBuilder();
@@ -308,7 +308,6 @@ public class ClientBuilder {
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;
         String sdkVersion = BuildInfo.VERSION;
-        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch
-                + ")";
+        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
     }
 }

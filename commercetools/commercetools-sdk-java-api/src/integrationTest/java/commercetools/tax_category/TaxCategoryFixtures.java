@@ -29,7 +29,7 @@ public class TaxCategoryFixtures {
                 .name(CommercetoolsTestUtils.randomString())
                 .key(CommercetoolsTestUtils.randomKey())
                 .description(CommercetoolsTestUtils.randomString())
-                .rates(Arrays.asList(TaxRateDraftBuilder.of()
+                .rates(TaxRateDraftBuilder.of()
                         .name(CommercetoolsTestUtils.randomString())
                         .amount(0.19)
                         .includedInPrice(true)
@@ -37,7 +37,7 @@ public class TaxCategoryFixtures {
                         .state("Berlin")
                         .subRates(Arrays.asList(
                             SubRateBuilder.of().name(CommercetoolsTestUtils.randomString()).amount(0.19).build()))
-                        .build()))
+                        .build())
                 .build();
 
         TaxCategory taxCategory = CommercetoolsTestUtils.getProjectRoot()

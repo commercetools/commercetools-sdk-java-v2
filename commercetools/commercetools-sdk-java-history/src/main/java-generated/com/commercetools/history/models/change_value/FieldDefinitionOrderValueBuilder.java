@@ -32,8 +32,8 @@ public final class FieldDefinitionOrderValueBuilder implements Builder<FieldDefi
     }
 
     public FieldDefinitionOrderValue build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(name, FieldDefinitionOrderValue.class + ": name is missing");
+        Objects.requireNonNull(label, FieldDefinitionOrderValue.class + ": label is missing");
         return new FieldDefinitionOrderValueImpl(name, label);
     }
 

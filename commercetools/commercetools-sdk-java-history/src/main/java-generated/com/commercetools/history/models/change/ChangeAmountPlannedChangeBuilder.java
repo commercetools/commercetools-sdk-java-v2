@@ -44,9 +44,9 @@ public final class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmo
     }
 
     public ChangeAmountPlannedChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeAmountPlannedChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeAmountPlannedChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeAmountPlannedChange.class + ": nextValue is missing");
         return new ChangeAmountPlannedChangeImpl(change, previousValue, nextValue);
     }
 

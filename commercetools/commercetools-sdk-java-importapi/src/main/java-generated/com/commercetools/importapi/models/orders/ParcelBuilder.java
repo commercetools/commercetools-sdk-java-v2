@@ -81,8 +81,8 @@ public final class ParcelBuilder implements Builder<Parcel> {
     }
 
     public Parcel build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(id, Parcel.class + ": id is missing");
+        Objects.requireNonNull(createdAt, Parcel.class + ": createdAt is missing");
         return new ParcelImpl(id, createdAt, measurements, trackingData, items);
     }
 

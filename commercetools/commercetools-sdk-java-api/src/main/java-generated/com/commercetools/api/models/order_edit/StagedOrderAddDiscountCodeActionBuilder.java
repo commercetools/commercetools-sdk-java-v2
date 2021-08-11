@@ -21,7 +21,7 @@ public final class StagedOrderAddDiscountCodeActionBuilder implements Builder<St
     }
 
     public StagedOrderAddDiscountCodeAction build() {
-        Objects.requireNonNull(code);
+        Objects.requireNonNull(code, StagedOrderAddDiscountCodeAction.class + ": code is missing");
         return new StagedOrderAddDiscountCodeActionImpl(code);
     }
 

@@ -101,7 +101,7 @@ public final class ProductSetAssetCustomFieldActionBuilder implements Builder<Pr
     }
 
     public ProductSetAssetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductSetAssetCustomFieldAction.class + ": name is missing");
         return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);
     }
 

@@ -21,7 +21,7 @@ public final class InvalidScopeErrorBuilder implements Builder<InvalidScopeError
     }
 
     public InvalidScopeError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidScopeError.class + ": message is missing");
         return new InvalidScopeErrorImpl(message);
     }
 

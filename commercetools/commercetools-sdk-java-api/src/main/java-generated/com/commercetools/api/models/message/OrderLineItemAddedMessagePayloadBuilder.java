@@ -32,8 +32,8 @@ public final class OrderLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     public OrderLineItemAddedMessagePayload build() {
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(addedQuantity);
+        Objects.requireNonNull(lineItem, OrderLineItemAddedMessagePayload.class + ": lineItem is missing");
+        Objects.requireNonNull(addedQuantity, OrderLineItemAddedMessagePayload.class + ": addedQuantity is missing");
         return new OrderLineItemAddedMessagePayloadImpl(lineItem, addedQuantity);
     }
 

@@ -41,7 +41,7 @@ public final class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAtt
     }
 
     public DateTimeSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, DateTimeSetAttribute.class + ": value is missing");
         return new DateTimeSetAttributeImpl(name, value);
     }
 

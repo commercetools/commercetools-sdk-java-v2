@@ -285,31 +285,31 @@ public final class AddressBuilder implements Builder<Address> {
     }
 
     public Address build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(title);
-        Objects.requireNonNull(salutation);
-        Objects.requireNonNull(firstName);
-        Objects.requireNonNull(lastName);
-        Objects.requireNonNull(streetName);
-        Objects.requireNonNull(streetNumber);
-        Objects.requireNonNull(additionalStreetInfo);
-        Objects.requireNonNull(postalCode);
-        Objects.requireNonNull(city);
-        Objects.requireNonNull(region);
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(country);
-        Objects.requireNonNull(company);
-        Objects.requireNonNull(department);
-        Objects.requireNonNull(building);
-        Objects.requireNonNull(apartment);
-        Objects.requireNonNull(pOBox);
-        Objects.requireNonNull(phone);
-        Objects.requireNonNull(mobile);
-        Objects.requireNonNull(email);
-        Objects.requireNonNull(fax);
-        Objects.requireNonNull(additionalAddressInfo);
-        Objects.requireNonNull(externalId);
+        Objects.requireNonNull(id, Address.class + ": id is missing");
+        Objects.requireNonNull(key, Address.class + ": key is missing");
+        Objects.requireNonNull(title, Address.class + ": title is missing");
+        Objects.requireNonNull(salutation, Address.class + ": salutation is missing");
+        Objects.requireNonNull(firstName, Address.class + ": firstName is missing");
+        Objects.requireNonNull(lastName, Address.class + ": lastName is missing");
+        Objects.requireNonNull(streetName, Address.class + ": streetName is missing");
+        Objects.requireNonNull(streetNumber, Address.class + ": streetNumber is missing");
+        Objects.requireNonNull(additionalStreetInfo, Address.class + ": additionalStreetInfo is missing");
+        Objects.requireNonNull(postalCode, Address.class + ": postalCode is missing");
+        Objects.requireNonNull(city, Address.class + ": city is missing");
+        Objects.requireNonNull(region, Address.class + ": region is missing");
+        Objects.requireNonNull(state, Address.class + ": state is missing");
+        Objects.requireNonNull(country, Address.class + ": country is missing");
+        Objects.requireNonNull(company, Address.class + ": company is missing");
+        Objects.requireNonNull(department, Address.class + ": department is missing");
+        Objects.requireNonNull(building, Address.class + ": building is missing");
+        Objects.requireNonNull(apartment, Address.class + ": apartment is missing");
+        Objects.requireNonNull(pOBox, Address.class + ": pOBox is missing");
+        Objects.requireNonNull(phone, Address.class + ": phone is missing");
+        Objects.requireNonNull(mobile, Address.class + ": mobile is missing");
+        Objects.requireNonNull(email, Address.class + ": email is missing");
+        Objects.requireNonNull(fax, Address.class + ": fax is missing");
+        Objects.requireNonNull(additionalAddressInfo, Address.class + ": additionalAddressInfo is missing");
+        Objects.requireNonNull(externalId, Address.class + ": externalId is missing");
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);

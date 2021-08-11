@@ -154,15 +154,16 @@ public final class ParcelRemovedFromDeliveryMessageBuilder implements Builder<Pa
     }
 
     public ParcelRemovedFromDeliveryMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(parcel);
+        Objects.requireNonNull(id, ParcelRemovedFromDeliveryMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelRemovedFromDeliveryMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelRemovedFromDeliveryMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelRemovedFromDeliveryMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelRemovedFromDeliveryMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelRemovedFromDeliveryMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ParcelRemovedFromDeliveryMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, ParcelRemovedFromDeliveryMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcel, ParcelRemovedFromDeliveryMessage.class + ": parcel is missing");
         return new ParcelRemovedFromDeliveryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcel);
     }

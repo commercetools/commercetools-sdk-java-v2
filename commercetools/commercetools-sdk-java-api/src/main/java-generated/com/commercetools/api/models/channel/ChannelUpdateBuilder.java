@@ -38,8 +38,8 @@ public final class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     public ChannelUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ChannelUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ChannelUpdate.class + ": actions is missing");
         return new ChannelUpdateImpl(version, actions);
     }
 

@@ -21,7 +21,7 @@ public final class SearchIndexingInProgressErrorBuilder implements Builder<Searc
     }
 
     public SearchIndexingInProgressError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SearchIndexingInProgressError.class + ": message is missing");
         return new SearchIndexingInProgressErrorImpl(message);
     }
 

@@ -51,7 +51,7 @@ public final class DeliveryAddressSetMessagePayloadBuilder implements Builder<De
     }
 
     public DeliveryAddressSetMessagePayload build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, DeliveryAddressSetMessagePayload.class + ": deliveryId is missing");
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress);
     }
 

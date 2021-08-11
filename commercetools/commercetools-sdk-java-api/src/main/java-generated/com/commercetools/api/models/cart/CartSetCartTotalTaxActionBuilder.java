@@ -44,7 +44,7 @@ public final class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCa
     }
 
     public CartSetCartTotalTaxAction build() {
-        Objects.requireNonNull(externalTotalGross);
+        Objects.requireNonNull(externalTotalGross, CartSetCartTotalTaxAction.class + ": externalTotalGross is missing");
         return new CartSetCartTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
 

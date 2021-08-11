@@ -52,7 +52,8 @@ public final class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     public CartSetItemShippingAddressCustomTypeAction build() {
-        Objects.requireNonNull(addressKey);
+        Objects.requireNonNull(addressKey,
+            CartSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
         return new CartSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
 

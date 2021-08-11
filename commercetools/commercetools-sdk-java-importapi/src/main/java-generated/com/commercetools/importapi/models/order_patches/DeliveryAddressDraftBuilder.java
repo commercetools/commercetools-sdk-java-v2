@@ -37,7 +37,7 @@ public final class DeliveryAddressDraftBuilder implements Builder<DeliveryAddres
     }
 
     public DeliveryAddressDraft build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, DeliveryAddressDraft.class + ": deliveryId is missing");
         return new DeliveryAddressDraftImpl(deliveryId, address);
     }
 

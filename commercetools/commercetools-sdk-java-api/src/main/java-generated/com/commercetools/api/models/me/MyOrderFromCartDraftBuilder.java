@@ -32,8 +32,8 @@ public final class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCar
     }
 
     public MyOrderFromCartDraft build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
+        Objects.requireNonNull(id, MyOrderFromCartDraft.class + ": id is missing");
+        Objects.requireNonNull(version, MyOrderFromCartDraft.class + ": version is missing");
         return new MyOrderFromCartDraftImpl(id, version);
     }
 

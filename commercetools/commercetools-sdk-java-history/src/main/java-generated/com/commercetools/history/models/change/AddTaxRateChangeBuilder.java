@@ -32,8 +32,8 @@ public final class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> 
     }
 
     public AddTaxRateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddTaxRateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddTaxRateChange.class + ": nextValue is missing");
         return new AddTaxRateChangeImpl(change, nextValue);
     }
 

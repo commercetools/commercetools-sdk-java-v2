@@ -49,7 +49,7 @@ public final class ProductSetCategoryOrderHintActionBuilder implements Builder<P
     }
 
     public ProductSetCategoryOrderHintAction build() {
-        Objects.requireNonNull(categoryId);
+        Objects.requireNonNull(categoryId, ProductSetCategoryOrderHintAction.class + ": categoryId is missing");
         return new ProductSetCategoryOrderHintActionImpl(categoryId, orderHint, staged);
     }
 

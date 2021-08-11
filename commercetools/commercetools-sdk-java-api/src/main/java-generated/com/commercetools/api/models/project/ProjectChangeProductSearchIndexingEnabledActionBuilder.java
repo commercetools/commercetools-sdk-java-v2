@@ -22,7 +22,7 @@ public final class ProjectChangeProductSearchIndexingEnabledActionBuilder
     }
 
     public ProjectChangeProductSearchIndexingEnabledAction build() {
-        Objects.requireNonNull(enabled);
+        Objects.requireNonNull(enabled, ProjectChangeProductSearchIndexingEnabledAction.class + ": enabled is missing");
         return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
     }
 

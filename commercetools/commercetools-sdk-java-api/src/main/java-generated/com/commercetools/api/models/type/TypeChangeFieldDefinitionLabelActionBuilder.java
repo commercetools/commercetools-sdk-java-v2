@@ -34,8 +34,8 @@ public final class TypeChangeFieldDefinitionLabelActionBuilder
     }
 
     public TypeChangeFieldDefinitionLabelAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(fieldName, TypeChangeFieldDefinitionLabelAction.class + ": fieldName is missing");
+        Objects.requireNonNull(label, TypeChangeFieldDefinitionLabelAction.class + ": label is missing");
         return new TypeChangeFieldDefinitionLabelActionImpl(fieldName, label);
     }
 

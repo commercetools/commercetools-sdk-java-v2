@@ -142,14 +142,14 @@ public final class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemo
     }
 
     public DeliveryRemovedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(delivery);
+        Objects.requireNonNull(id, DeliveryRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(delivery, DeliveryRemovedMessage.class + ": delivery is missing");
         return new DeliveryRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
     }

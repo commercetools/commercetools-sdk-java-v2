@@ -54,10 +54,10 @@ public final class ReservationBuilder implements Builder<Reservation> {
     }
 
     public Reservation build() {
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(owner);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(checkoutStartedAt);
+        Objects.requireNonNull(quantity, Reservation.class + ": quantity is missing");
+        Objects.requireNonNull(owner, Reservation.class + ": owner is missing");
+        Objects.requireNonNull(createdAt, Reservation.class + ": createdAt is missing");
+        Objects.requireNonNull(checkoutStartedAt, Reservation.class + ": checkoutStartedAt is missing");
         return new ReservationImpl(quantity, owner, createdAt, checkoutStartedAt);
     }
 

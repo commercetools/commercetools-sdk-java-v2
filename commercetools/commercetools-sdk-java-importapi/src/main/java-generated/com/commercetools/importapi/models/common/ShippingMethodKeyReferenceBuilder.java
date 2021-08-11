@@ -21,7 +21,7 @@ public final class ShippingMethodKeyReferenceBuilder implements Builder<Shipping
     }
 
     public ShippingMethodKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ShippingMethodKeyReference.class + ": key is missing");
         return new ShippingMethodKeyReferenceImpl(key);
     }
 

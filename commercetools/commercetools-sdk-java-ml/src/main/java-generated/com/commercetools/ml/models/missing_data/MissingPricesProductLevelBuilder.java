@@ -32,8 +32,8 @@ public final class MissingPricesProductLevelBuilder implements Builder<MissingPr
     }
 
     public MissingPricesProductLevel build() {
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(missingPrices);
+        Objects.requireNonNull(total, MissingPricesProductLevel.class + ": total is missing");
+        Objects.requireNonNull(missingPrices, MissingPricesProductLevel.class + ": missingPrices is missing");
         return new MissingPricesProductLevelImpl(total, missingPrices);
     }
 

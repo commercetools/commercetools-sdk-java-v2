@@ -44,9 +44,9 @@ public final class RemoveLocationChangeBuilder implements Builder<RemoveLocation
     }
 
     public RemoveLocationChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveLocationChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveLocationChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveLocationChange.class + ": nextValue is missing");
         return new RemoveLocationChangeImpl(change, previousValue, nextValue);
     }
 

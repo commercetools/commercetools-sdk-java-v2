@@ -21,7 +21,7 @@ public final class InventoryEntryRemoveQuantityActionBuilder implements Builder<
     }
 
     public InventoryEntryRemoveQuantityAction build() {
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(quantity, InventoryEntryRemoveQuantityAction.class + ": quantity is missing");
         return new InventoryEntryRemoveQuantityActionImpl(quantity);
     }
 

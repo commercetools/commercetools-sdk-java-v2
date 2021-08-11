@@ -188,10 +188,10 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     public ProductImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(key, ProductImport.class + ": key is missing");
+        Objects.requireNonNull(name, ProductImport.class + ": name is missing");
+        Objects.requireNonNull(productType, ProductImport.class + ": productType is missing");
+        Objects.requireNonNull(slug, ProductImport.class + ": slug is missing");
         return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,
             metaKeywords, taxCategory, searchKeywords, state, publish);
     }

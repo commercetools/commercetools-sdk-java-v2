@@ -142,14 +142,14 @@ public final class CustomerCreatedMessageBuilder implements Builder<CustomerCrea
     }
 
     public CustomerCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(customer);
+        Objects.requireNonNull(id, CustomerCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customer, CustomerCreatedMessage.class + ": customer is missing");
         return new CustomerCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer);
     }

@@ -43,9 +43,9 @@ public final class SetValidUntilChangeBuilder implements Builder<SetValidUntilCh
     }
 
     public SetValidUntilChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetValidUntilChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetValidUntilChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetValidUntilChange.class + ": nextValue is missing");
         return new SetValidUntilChangeImpl(change, previousValue, nextValue);
     }
 

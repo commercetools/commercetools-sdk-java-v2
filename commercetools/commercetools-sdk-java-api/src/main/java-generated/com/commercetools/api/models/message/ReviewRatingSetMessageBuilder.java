@@ -181,14 +181,15 @@ public final class ReviewRatingSetMessageBuilder implements Builder<ReviewRating
     }
 
     public ReviewRatingSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(includedInStatistics);
+        Objects.requireNonNull(id, ReviewRatingSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReviewRatingSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReviewRatingSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReviewRatingSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReviewRatingSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReviewRatingSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReviewRatingSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(includedInStatistics,
+            ReviewRatingSetMessage.class + ": includedInStatistics is missing");
         return new ReviewRatingSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldRating, newRating,
             includedInStatistics, target);

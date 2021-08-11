@@ -177,16 +177,16 @@ public final class DeliveryItemsUpdatedMessageBuilder implements Builder<Deliver
     }
 
     public DeliveryItemsUpdatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(oldItems);
+        Objects.requireNonNull(id, DeliveryItemsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryItemsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryItemsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryItemsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryItemsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryItemsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryItemsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, DeliveryItemsUpdatedMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, DeliveryItemsUpdatedMessage.class + ": items is missing");
+        Objects.requireNonNull(oldItems, DeliveryItemsUpdatedMessage.class + ": oldItems is missing");
         return new DeliveryItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems);
     }

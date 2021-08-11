@@ -62,7 +62,7 @@ public final class ProductRemoveImageActionBuilder implements Builder<ProductRem
     }
 
     public ProductRemoveImageAction build() {
-        Objects.requireNonNull(imageUrl);
+        Objects.requireNonNull(imageUrl, ProductRemoveImageAction.class + ": imageUrl is missing");
         return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);
     }
 

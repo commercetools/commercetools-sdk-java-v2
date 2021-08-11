@@ -175,11 +175,11 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
     }
 
     public CartDiscountDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(cartPredicate);
-        Objects.requireNonNull(sortOrder);
-        Objects.requireNonNull(requiresDiscountCode);
+        Objects.requireNonNull(name, CartDiscountDraft.class + ": name is missing");
+        Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
+        Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
+        Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
+        Objects.requireNonNull(requiresDiscountCode, CartDiscountDraft.class + ": requiresDiscountCode is missing");
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
             validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }

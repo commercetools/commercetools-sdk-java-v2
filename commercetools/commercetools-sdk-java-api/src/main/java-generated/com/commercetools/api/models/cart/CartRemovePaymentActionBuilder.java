@@ -22,7 +22,7 @@ public final class CartRemovePaymentActionBuilder implements Builder<CartRemoveP
     }
 
     public CartRemovePaymentAction build() {
-        Objects.requireNonNull(payment);
+        Objects.requireNonNull(payment, CartRemovePaymentAction.class + ": payment is missing");
         return new CartRemovePaymentActionImpl(payment);
     }
 

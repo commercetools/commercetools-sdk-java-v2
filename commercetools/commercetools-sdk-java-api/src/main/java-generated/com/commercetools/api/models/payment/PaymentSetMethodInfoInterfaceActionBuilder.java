@@ -21,7 +21,7 @@ public final class PaymentSetMethodInfoInterfaceActionBuilder implements Builder
     }
 
     public PaymentSetMethodInfoInterfaceAction build() {
-        Objects.requireNonNull(_interface);
+        Objects.requireNonNull(_interface, PaymentSetMethodInfoInterfaceAction.class + ": interface is missing");
         return new PaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
 

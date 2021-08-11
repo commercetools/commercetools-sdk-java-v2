@@ -21,7 +21,7 @@ public final class OrderRemoveParcelFromDeliveryActionBuilder implements Builder
     }
 
     public OrderRemoveParcelFromDeliveryAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, OrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 

@@ -65,11 +65,11 @@ public final class SetCustomFieldChangeBuilder implements Builder<SetCustomField
     }
 
     public SetCustomFieldChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(customTypeId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId, SetCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(nextValue, SetCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomFieldChange.class + ": previousValue is missing");
         return new SetCustomFieldChangeImpl(change, name, customTypeId, nextValue, previousValue);
     }
 

@@ -33,8 +33,8 @@ public final class RemoveAddressChangeBuilder implements Builder<RemoveAddressCh
     }
 
     public RemoveAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveAddressChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveAddressChange.class + ": previousValue is missing");
         return new RemoveAddressChangeImpl(change, previousValue);
     }
 

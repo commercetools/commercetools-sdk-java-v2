@@ -38,8 +38,8 @@ public final class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     public CategoryUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, CategoryUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, CategoryUpdate.class + ": actions is missing");
         return new CategoryUpdateImpl(version, actions);
     }
 

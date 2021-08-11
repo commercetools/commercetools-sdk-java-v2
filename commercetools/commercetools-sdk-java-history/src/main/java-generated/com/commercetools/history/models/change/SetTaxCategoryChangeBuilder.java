@@ -44,9 +44,9 @@ public final class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategory
     }
 
     public SetTaxCategoryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetTaxCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetTaxCategoryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetTaxCategoryChange.class + ": nextValue is missing");
         return new SetTaxCategoryChangeImpl(change, previousValue, nextValue);
     }
 

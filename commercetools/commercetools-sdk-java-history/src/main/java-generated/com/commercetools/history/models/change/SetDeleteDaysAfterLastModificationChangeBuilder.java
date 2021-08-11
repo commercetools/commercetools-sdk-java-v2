@@ -44,9 +44,10 @@ public final class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     public SetDeleteDaysAfterLastModificationChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetDeleteDaysAfterLastModificationChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue,
+            SetDeleteDaysAfterLastModificationChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDeleteDaysAfterLastModificationChange.class + ": nextValue is missing");
         return new SetDeleteDaysAfterLastModificationChangeImpl(change, previousValue, nextValue);
     }
 

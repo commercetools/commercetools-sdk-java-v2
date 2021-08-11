@@ -47,8 +47,8 @@ public final class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     public CartValueTier build() {
-        Objects.requireNonNull(minimumCentAmount);
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(minimumCentAmount, CartValueTier.class + ": minimumCentAmount is missing");
+        Objects.requireNonNull(price, CartValueTier.class + ": price is missing");
         return new CartValueTierImpl(minimumCentAmount, price, isMatching);
     }
 

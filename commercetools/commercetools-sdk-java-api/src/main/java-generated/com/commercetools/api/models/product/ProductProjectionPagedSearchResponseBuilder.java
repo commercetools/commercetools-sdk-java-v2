@@ -89,11 +89,11 @@ public final class ProductProjectionPagedSearchResponseBuilder
     }
 
     public ProductProjectionPagedSearchResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
-        Objects.requireNonNull(facets);
+        Objects.requireNonNull(limit, ProductProjectionPagedSearchResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ProductProjectionPagedSearchResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ProductProjectionPagedSearchResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProductProjectionPagedSearchResponse.class + ": results is missing");
+        Objects.requireNonNull(facets, ProductProjectionPagedSearchResponse.class + ": facets is missing");
         return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
     }
 

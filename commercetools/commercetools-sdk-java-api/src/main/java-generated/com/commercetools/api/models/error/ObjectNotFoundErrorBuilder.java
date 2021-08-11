@@ -21,7 +21,7 @@ public final class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundE
     }
 
     public ObjectNotFoundError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ObjectNotFoundError.class + ": message is missing");
         return new ObjectNotFoundErrorImpl(message);
     }
 

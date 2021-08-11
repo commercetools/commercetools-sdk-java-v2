@@ -44,9 +44,9 @@ public final class SetShippingRateChangeBuilder implements Builder<SetShippingRa
     }
 
     public SetShippingRateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetShippingRateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetShippingRateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetShippingRateChange.class + ": previousValue is missing");
         return new SetShippingRateChangeImpl(change, nextValue, previousValue);
     }
 

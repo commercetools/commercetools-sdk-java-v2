@@ -36,7 +36,7 @@ public final class CustomerSignInResultBuilder implements Builder<CustomerSignIn
     }
 
     public CustomerSignInResult build() {
-        Objects.requireNonNull(customer);
+        Objects.requireNonNull(customer, CustomerSignInResult.class + ": customer is missing");
         return new CustomerSignInResultImpl(customer, cart);
     }
 

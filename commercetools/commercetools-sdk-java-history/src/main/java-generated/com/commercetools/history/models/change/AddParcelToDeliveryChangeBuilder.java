@@ -43,9 +43,9 @@ public final class AddParcelToDeliveryChangeBuilder implements Builder<AddParcel
     }
 
     public AddParcelToDeliveryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddParcelToDeliveryChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, AddParcelToDeliveryChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(nextValue, AddParcelToDeliveryChange.class + ": nextValue is missing");
         return new AddParcelToDeliveryChangeImpl(change, deliveryId, nextValue);
     }
 

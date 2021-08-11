@@ -190,14 +190,14 @@ public final class StateBuilder implements Builder<State> {
     }
 
     public State build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(initial);
-        Objects.requireNonNull(builtIn);
+        Objects.requireNonNull(id, State.class + ": id is missing");
+        Objects.requireNonNull(version, State.class + ": version is missing");
+        Objects.requireNonNull(createdAt, State.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, State.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, State.class + ": key is missing");
+        Objects.requireNonNull(type, State.class + ": type is missing");
+        Objects.requireNonNull(initial, State.class + ": initial is missing");
+        Objects.requireNonNull(builtIn, State.class + ": builtIn is missing");
         return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,
             description, initial, builtIn, roles, transitions);
     }

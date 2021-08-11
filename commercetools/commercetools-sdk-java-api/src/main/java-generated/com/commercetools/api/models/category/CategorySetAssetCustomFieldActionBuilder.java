@@ -62,7 +62,7 @@ public final class CategorySetAssetCustomFieldActionBuilder implements Builder<C
     }
 
     public CategorySetAssetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CategorySetAssetCustomFieldAction.class + ": name is missing");
         return new CategorySetAssetCustomFieldActionImpl(assetId, assetKey, name, value);
     }
 

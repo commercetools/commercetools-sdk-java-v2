@@ -86,9 +86,9 @@ public final class ProductPriceDiscountsSetUpdatedPriceBuilder
     }
 
     public ProductPriceDiscountsSetUpdatedPrice build() {
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(variantId, ProductPriceDiscountsSetUpdatedPrice.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceDiscountsSetUpdatedPrice.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceDiscountsSetUpdatedPrice.class + ": staged is missing");
         return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
     }
 

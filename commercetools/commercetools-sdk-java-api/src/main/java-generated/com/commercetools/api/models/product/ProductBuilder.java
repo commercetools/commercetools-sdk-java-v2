@@ -160,12 +160,12 @@ public final class ProductBuilder implements Builder<Product> {
     }
 
     public Product build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(masterData);
+        Objects.requireNonNull(id, Product.class + ": id is missing");
+        Objects.requireNonNull(version, Product.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Product.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Product.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(productType, Product.class + ": productType is missing");
+        Objects.requireNonNull(masterData, Product.class + ": masterData is missing");
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
             masterData, taxCategory, state, reviewRatingStatistics);
     }

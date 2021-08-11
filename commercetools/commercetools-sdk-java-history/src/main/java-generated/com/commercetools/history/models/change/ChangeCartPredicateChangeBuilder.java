@@ -43,9 +43,9 @@ public final class ChangeCartPredicateChangeBuilder implements Builder<ChangeCar
     }
 
     public ChangeCartPredicateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeCartPredicateChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeCartPredicateChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeCartPredicateChange.class + ": nextValue is missing");
         return new ChangeCartPredicateChangeImpl(change, previousValue, nextValue);
     }
 

@@ -99,9 +99,9 @@ public final class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     public InventoryImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(sku);
-        Objects.requireNonNull(quantityOnStock);
+        Objects.requireNonNull(key, InventoryImport.class + ": key is missing");
+        Objects.requireNonNull(sku, InventoryImport.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryImport.class + ": quantityOnStock is missing");
         return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
             custom);
     }

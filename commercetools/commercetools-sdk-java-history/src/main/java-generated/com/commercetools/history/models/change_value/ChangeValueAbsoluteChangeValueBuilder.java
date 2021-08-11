@@ -27,7 +27,7 @@ public final class ChangeValueAbsoluteChangeValueBuilder implements Builder<Chan
     }
 
     public ChangeValueAbsoluteChangeValue build() {
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(money, ChangeValueAbsoluteChangeValue.class + ": money is missing");
         return new ChangeValueAbsoluteChangeValueImpl(money);
     }
 

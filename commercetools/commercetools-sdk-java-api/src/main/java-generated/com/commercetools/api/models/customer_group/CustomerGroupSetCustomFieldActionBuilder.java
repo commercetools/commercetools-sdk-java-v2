@@ -36,7 +36,7 @@ public final class CustomerGroupSetCustomFieldActionBuilder implements Builder<C
     }
 
     public CustomerGroupSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CustomerGroupSetCustomFieldAction.class + ": name is missing");
         return new CustomerGroupSetCustomFieldActionImpl(name, value);
     }
 

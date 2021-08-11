@@ -44,9 +44,9 @@ public final class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeCh
     }
 
     public SetCustomTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetCustomTypeChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomTypeChange.class + ": previousValue is missing");
         return new SetCustomTypeChangeImpl(change, nextValue, previousValue);
     }
 

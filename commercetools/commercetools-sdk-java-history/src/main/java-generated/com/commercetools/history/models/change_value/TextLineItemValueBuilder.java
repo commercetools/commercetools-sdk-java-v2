@@ -32,8 +32,8 @@ public final class TextLineItemValueBuilder implements Builder<TextLineItemValue
     }
 
     public TextLineItemValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, TextLineItemValue.class + ": id is missing");
+        Objects.requireNonNull(name, TextLineItemValue.class + ": name is missing");
         return new TextLineItemValueImpl(id, name);
     }
 

@@ -206,16 +206,19 @@ public final class ProductPriceExternalDiscountSetMessageBuilder
     }
 
     public ProductPriceExternalDiscountSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(id, ProductPriceExternalDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPriceExternalDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPriceExternalDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            ProductPriceExternalDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            ProductPriceExternalDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPriceExternalDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductPriceExternalDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variantId, ProductPriceExternalDiscountSetMessage.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceExternalDiscountSetMessage.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceExternalDiscountSetMessage.class + ": staged is missing");
         return new ProductPriceExternalDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId,
             variantKey, sku, priceId, discounted, staged);

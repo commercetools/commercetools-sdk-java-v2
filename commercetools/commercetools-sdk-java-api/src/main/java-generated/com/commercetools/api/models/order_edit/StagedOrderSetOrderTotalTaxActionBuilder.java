@@ -44,7 +44,8 @@ public final class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<S
     }
 
     public StagedOrderSetOrderTotalTaxAction build() {
-        Objects.requireNonNull(externalTotalGross);
+        Objects.requireNonNull(externalTotalGross,
+            StagedOrderSetOrderTotalTaxAction.class + ": externalTotalGross is missing");
         return new StagedOrderSetOrderTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
 

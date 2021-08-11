@@ -37,7 +37,7 @@ public final class ParcelTrackingDataBuilder implements Builder<ParcelTrackingDa
     }
 
     public ParcelTrackingData build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, ParcelTrackingData.class + ": parcelId is missing");
         return new ParcelTrackingDataImpl(parcelId, trackingData);
     }
 

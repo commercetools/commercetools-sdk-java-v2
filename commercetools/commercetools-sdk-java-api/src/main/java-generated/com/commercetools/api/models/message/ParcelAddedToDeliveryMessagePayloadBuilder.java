@@ -33,8 +33,8 @@ public final class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder
     }
 
     public ParcelAddedToDeliveryMessagePayload build() {
-        Objects.requireNonNull(delivery);
-        Objects.requireNonNull(parcel);
+        Objects.requireNonNull(delivery, ParcelAddedToDeliveryMessagePayload.class + ": delivery is missing");
+        Objects.requireNonNull(parcel, ParcelAddedToDeliveryMessagePayload.class + ": parcel is missing");
         return new ParcelAddedToDeliveryMessagePayloadImpl(delivery, parcel);
     }
 

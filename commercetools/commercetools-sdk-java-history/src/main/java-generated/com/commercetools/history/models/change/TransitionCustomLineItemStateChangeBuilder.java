@@ -79,11 +79,11 @@ public final class TransitionCustomLineItemStateChangeBuilder implements Builder
     }
 
     public TransitionCustomLineItemStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(stateId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, TransitionCustomLineItemStateChange.class + ": change is missing");
+        Objects.requireNonNull(lineItemId, TransitionCustomLineItemStateChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(stateId, TransitionCustomLineItemStateChange.class + ": stateId is missing");
+        Objects.requireNonNull(nextValue, TransitionCustomLineItemStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, TransitionCustomLineItemStateChange.class + ": previousValue is missing");
         return new TransitionCustomLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
     }
 

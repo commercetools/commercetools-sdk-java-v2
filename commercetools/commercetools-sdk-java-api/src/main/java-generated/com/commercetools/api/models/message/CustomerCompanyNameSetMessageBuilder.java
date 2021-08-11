@@ -142,14 +142,14 @@ public final class CustomerCompanyNameSetMessageBuilder implements Builder<Custo
     }
 
     public CustomerCompanyNameSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(companyName);
+        Objects.requireNonNull(id, CustomerCompanyNameSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerCompanyNameSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerCompanyNameSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerCompanyNameSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerCompanyNameSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerCompanyNameSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerCompanyNameSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(companyName, CustomerCompanyNameSetMessage.class + ": companyName is missing");
         return new CustomerCompanyNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, companyName);
     }

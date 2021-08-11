@@ -79,12 +79,14 @@ public final class ReviewStateTransitionMessagePayloadBuilder implements Builder
     }
 
     public ReviewStateTransitionMessagePayload build() {
-        Objects.requireNonNull(oldState);
-        Objects.requireNonNull(newState);
-        Objects.requireNonNull(oldIncludedInStatistics);
-        Objects.requireNonNull(newIncludedInStatistics);
-        Objects.requireNonNull(target);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(oldState, ReviewStateTransitionMessagePayload.class + ": oldState is missing");
+        Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
+        Objects.requireNonNull(oldIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(target, ReviewStateTransitionMessagePayload.class + ": target is missing");
+        Objects.requireNonNull(force, ReviewStateTransitionMessagePayload.class + ": force is missing");
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
             newIncludedInStatistics, target, force);
     }

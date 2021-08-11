@@ -55,7 +55,7 @@ public final class OrderAddReturnInfoActionBuilder implements Builder<OrderAddRe
     }
 
     public OrderAddReturnInfoAction build() {
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(items, OrderAddReturnInfoAction.class + ": items is missing");
         return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 

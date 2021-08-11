@@ -44,9 +44,9 @@ public final class MissingImagesTaskStatusBuilder implements Builder<MissingImag
     }
 
     public MissingImagesTaskStatus build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(expires);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(state, MissingImagesTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(expires, MissingImagesTaskStatus.class + ": expires is missing");
+        Objects.requireNonNull(result, MissingImagesTaskStatus.class + ": result is missing");
         return new MissingImagesTaskStatusImpl(state, expires, result);
     }
 

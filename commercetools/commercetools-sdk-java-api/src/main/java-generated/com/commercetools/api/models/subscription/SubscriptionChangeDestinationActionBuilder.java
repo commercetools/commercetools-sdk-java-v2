@@ -22,7 +22,7 @@ public final class SubscriptionChangeDestinationActionBuilder implements Builder
     }
 
     public SubscriptionChangeDestinationAction build() {
-        Objects.requireNonNull(destination);
+        Objects.requireNonNull(destination, SubscriptionChangeDestinationAction.class + ": destination is missing");
         return new SubscriptionChangeDestinationActionImpl(destination);
     }
 

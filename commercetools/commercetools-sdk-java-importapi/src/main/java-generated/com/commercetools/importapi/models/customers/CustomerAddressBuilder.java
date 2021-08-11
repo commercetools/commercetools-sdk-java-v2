@@ -320,8 +320,8 @@ public final class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     public CustomerAddress build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(country);
+        Objects.requireNonNull(key, CustomerAddress.class + ": key is missing");
+        Objects.requireNonNull(country, CustomerAddress.class + ": country is missing");
         return new CustomerAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);

@@ -171,7 +171,7 @@ public final class ShoppingListDraftBuilder implements Builder<ShoppingListDraft
     }
 
     public ShoppingListDraft build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ShoppingListDraft.class + ": name is missing");
         return new ShoppingListDraftImpl(custom, customer, deleteDaysAfterLastModification, description, key, lineItems,
             name, slug, textLineItems, anonymousId, store);
     }

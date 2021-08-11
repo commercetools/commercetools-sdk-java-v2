@@ -54,10 +54,10 @@ public final class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     public SqsDestination build() {
-        Objects.requireNonNull(accessKey);
-        Objects.requireNonNull(accessSecret);
-        Objects.requireNonNull(queueUrl);
-        Objects.requireNonNull(region);
+        Objects.requireNonNull(accessKey, SqsDestination.class + ": accessKey is missing");
+        Objects.requireNonNull(accessSecret, SqsDestination.class + ": accessSecret is missing");
+        Objects.requireNonNull(queueUrl, SqsDestination.class + ": queueUrl is missing");
+        Objects.requireNonNull(region, SqsDestination.class + ": region is missing");
         return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region);
     }
 

@@ -48,8 +48,8 @@ public final class SimilarProductsTaskStatusBuilder implements Builder<SimilarPr
     }
 
     public SimilarProductsTaskStatus build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(state, SimilarProductsTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");
         return new SimilarProductsTaskStatusImpl(state, expires, result);
     }
 

@@ -156,15 +156,19 @@ public final class PaymentTransactionStateChangedMessageBuilder
     }
 
     public PaymentTransactionStateChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(transactionId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(id, PaymentTransactionStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentTransactionStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentTransactionStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentTransactionStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentTransactionStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentTransactionStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentTransactionStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(transactionId,
+            PaymentTransactionStateChangedMessage.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentTransactionStateChangedMessage.class + ": state is missing");
         return new PaymentTransactionStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transactionId,
             state);

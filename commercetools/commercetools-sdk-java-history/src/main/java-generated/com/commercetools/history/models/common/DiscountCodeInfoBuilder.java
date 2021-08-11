@@ -32,8 +32,8 @@ public final class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> 
     }
 
     public DiscountCodeInfo build() {
-        Objects.requireNonNull(discountCode);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(discountCode, DiscountCodeInfo.class + ": discountCode is missing");
+        Objects.requireNonNull(state, DiscountCodeInfo.class + ": state is missing");
         return new DiscountCodeInfoImpl(discountCode, state);
     }
 

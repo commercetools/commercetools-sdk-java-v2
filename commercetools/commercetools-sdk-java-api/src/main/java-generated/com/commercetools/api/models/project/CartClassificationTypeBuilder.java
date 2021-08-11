@@ -28,7 +28,7 @@ public final class CartClassificationTypeBuilder implements Builder<CartClassifi
     }
 
     public CartClassificationType build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, CartClassificationType.class + ": values is missing");
         return new CartClassificationTypeImpl(values);
     }
 

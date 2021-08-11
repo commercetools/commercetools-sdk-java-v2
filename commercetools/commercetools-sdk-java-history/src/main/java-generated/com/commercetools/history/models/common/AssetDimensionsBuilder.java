@@ -32,8 +32,8 @@ public final class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     public AssetDimensions build() {
-        Objects.requireNonNull(w);
-        Objects.requireNonNull(h);
+        Objects.requireNonNull(w, AssetDimensions.class + ": w is missing");
+        Objects.requireNonNull(h, AssetDimensions.class + ": h is missing");
         return new AssetDimensionsImpl(w, h);
     }
 

@@ -45,9 +45,9 @@ public final class RemoveShoppingListLineItemChangeBuilder implements Builder<Re
     }
 
     public RemoveShoppingListLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveShoppingListLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveShoppingListLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveShoppingListLineItemChange.class + ": nextValue is missing");
         return new RemoveShoppingListLineItemChangeImpl(change, previousValue, nextValue);
     }
 

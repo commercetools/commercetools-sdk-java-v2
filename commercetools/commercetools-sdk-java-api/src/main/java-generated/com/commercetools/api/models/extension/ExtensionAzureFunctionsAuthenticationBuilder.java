@@ -22,7 +22,7 @@ public final class ExtensionAzureFunctionsAuthenticationBuilder
     }
 
     public ExtensionAzureFunctionsAuthentication build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ExtensionAzureFunctionsAuthentication.class + ": key is missing");
         return new ExtensionAzureFunctionsAuthenticationImpl(key);
     }
 

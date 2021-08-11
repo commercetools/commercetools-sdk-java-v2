@@ -57,9 +57,9 @@ public final class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<
     }
 
     public DeliveryItemsUpdatedMessagePayload build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(oldItems);
+        Objects.requireNonNull(deliveryId, DeliveryItemsUpdatedMessagePayload.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, DeliveryItemsUpdatedMessagePayload.class + ": items is missing");
+        Objects.requireNonNull(oldItems, DeliveryItemsUpdatedMessagePayload.class + ": oldItems is missing");
         return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
     }
 

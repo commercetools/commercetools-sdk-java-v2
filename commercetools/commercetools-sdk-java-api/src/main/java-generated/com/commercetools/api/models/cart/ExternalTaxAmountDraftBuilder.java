@@ -32,8 +32,8 @@ public final class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxA
     }
 
     public ExternalTaxAmountDraft build() {
-        Objects.requireNonNull(totalGross);
-        Objects.requireNonNull(taxRate);
+        Objects.requireNonNull(totalGross, ExternalTaxAmountDraft.class + ": totalGross is missing");
+        Objects.requireNonNull(taxRate, ExternalTaxAmountDraft.class + ": taxRate is missing");
         return new ExternalTaxAmountDraftImpl(totalGross, taxRate);
     }
 

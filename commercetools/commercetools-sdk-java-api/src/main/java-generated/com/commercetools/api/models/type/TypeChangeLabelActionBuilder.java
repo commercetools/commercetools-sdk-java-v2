@@ -32,8 +32,8 @@ public final class TypeChangeLabelActionBuilder implements Builder<TypeChangeLab
     }
 
     public TypeChangeLabelAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(fieldName, TypeChangeLabelAction.class + ": fieldName is missing");
+        Objects.requireNonNull(label, TypeChangeLabelAction.class + ": label is missing");
         return new TypeChangeLabelActionImpl(fieldName, label);
     }
 

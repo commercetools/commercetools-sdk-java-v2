@@ -44,9 +44,9 @@ public final class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTy
     }
 
     public ChangeStateTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeStateTypeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeStateTypeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeStateTypeChange.class + ": nextValue is missing");
         return new ChangeStateTypeChangeImpl(change, previousValue, nextValue);
     }
 

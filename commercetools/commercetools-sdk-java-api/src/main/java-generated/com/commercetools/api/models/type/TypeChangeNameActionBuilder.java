@@ -21,7 +21,7 @@ public final class TypeChangeNameActionBuilder implements Builder<TypeChangeName
     }
 
     public TypeChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, TypeChangeNameAction.class + ": name is missing");
         return new TypeChangeNameActionImpl(name);
     }
 

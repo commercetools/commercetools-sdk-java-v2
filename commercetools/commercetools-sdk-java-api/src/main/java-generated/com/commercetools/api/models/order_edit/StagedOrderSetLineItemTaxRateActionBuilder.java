@@ -37,7 +37,7 @@ public final class StagedOrderSetLineItemTaxRateActionBuilder implements Builder
     }
 
     public StagedOrderSetLineItemTaxRateAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTaxRateAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate);
     }
 

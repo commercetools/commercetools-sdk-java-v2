@@ -21,7 +21,7 @@ public final class InvalidInputErrorBuilder implements Builder<InvalidInputError
     }
 
     public InvalidInputError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidInputError.class + ": message is missing");
         return new InvalidInputErrorImpl(message);
     }
 

@@ -22,7 +22,7 @@ public final class CategoryCreatedMessagePayloadBuilder implements Builder<Categ
     }
 
     public CategoryCreatedMessagePayload build() {
-        Objects.requireNonNull(category);
+        Objects.requireNonNull(category, CategoryCreatedMessagePayload.class + ": category is missing");
         return new CategoryCreatedMessagePayloadImpl(category);
     }
 

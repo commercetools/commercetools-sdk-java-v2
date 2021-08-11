@@ -21,7 +21,8 @@ public final class ProjectChangeMessagesEnabledActionBuilder implements Builder<
     }
 
     public ProjectChangeMessagesEnabledAction build() {
-        Objects.requireNonNull(messagesEnabled);
+        Objects.requireNonNull(messagesEnabled,
+            ProjectChangeMessagesEnabledAction.class + ": messagesEnabled is missing");
         return new ProjectChangeMessagesEnabledActionImpl(messagesEnabled);
     }
 

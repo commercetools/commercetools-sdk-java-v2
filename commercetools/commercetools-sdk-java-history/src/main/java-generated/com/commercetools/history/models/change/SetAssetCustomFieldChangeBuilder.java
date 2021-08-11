@@ -77,12 +77,12 @@ public final class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetC
     }
 
     public SetAssetCustomFieldChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(customTypeId);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetAssetCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId, SetAssetCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(asset, SetAssetCustomFieldChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetCustomFieldChange.class + ": previousValue is missing");
         return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
     }
 

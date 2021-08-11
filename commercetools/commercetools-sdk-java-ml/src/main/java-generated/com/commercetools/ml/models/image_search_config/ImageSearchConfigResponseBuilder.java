@@ -33,8 +33,8 @@ public final class ImageSearchConfigResponseBuilder implements Builder<ImageSear
     }
 
     public ImageSearchConfigResponse build() {
-        Objects.requireNonNull(status);
-        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(status, ImageSearchConfigResponse.class + ": status is missing");
+        Objects.requireNonNull(lastModifiedAt, ImageSearchConfigResponse.class + ": lastModifiedAt is missing");
         return new ImageSearchConfigResponseImpl(status, lastModifiedAt);
     }
 

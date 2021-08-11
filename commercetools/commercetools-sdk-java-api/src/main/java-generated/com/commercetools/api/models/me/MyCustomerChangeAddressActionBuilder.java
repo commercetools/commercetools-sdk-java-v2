@@ -49,7 +49,7 @@ public final class MyCustomerChangeAddressActionBuilder implements Builder<MyCus
     }
 
     public MyCustomerChangeAddressAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, MyCustomerChangeAddressAction.class + ": address is missing");
         return new MyCustomerChangeAddressActionImpl(addressId, addressKey, address);
     }
 

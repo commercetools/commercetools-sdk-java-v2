@@ -67,11 +67,11 @@ public final class SetVariantAvailabilityChangeBuilder implements Builder<SetVar
     }
 
     public SetVariantAvailabilityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetVariantAvailabilityChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetVariantAvailabilityChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetVariantAvailabilityChange.class + ": variant is missing");
+        Objects.requireNonNull(previousValue, SetVariantAvailabilityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetVariantAvailabilityChange.class + ": nextValue is missing");
         return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
     }
 

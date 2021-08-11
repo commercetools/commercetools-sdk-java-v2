@@ -36,7 +36,7 @@ public final class ErrorByExtensionBuilder implements Builder<ErrorByExtension> 
     }
 
     public ErrorByExtension build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ErrorByExtension.class + ": id is missing");
         return new ErrorByExtensionImpl(id, key);
     }
 

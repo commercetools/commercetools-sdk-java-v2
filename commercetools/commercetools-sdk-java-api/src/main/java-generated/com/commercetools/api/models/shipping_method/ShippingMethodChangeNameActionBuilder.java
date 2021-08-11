@@ -21,7 +21,7 @@ public final class ShippingMethodChangeNameActionBuilder implements Builder<Ship
     }
 
     public ShippingMethodChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ShippingMethodChangeNameAction.class + ": name is missing");
         return new ShippingMethodChangeNameActionImpl(name);
     }
 

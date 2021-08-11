@@ -52,7 +52,8 @@ public final class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     public StagedOrderSetDeliveryAddressCustomTypeAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId,
+            StagedOrderSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
         return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
     }
 

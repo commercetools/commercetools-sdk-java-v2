@@ -74,10 +74,10 @@ public final class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQue
     }
 
     public ZonePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ZonePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ZonePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ZonePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ZonePagedQueryResponse.class + ": results is missing");
         return new ZonePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

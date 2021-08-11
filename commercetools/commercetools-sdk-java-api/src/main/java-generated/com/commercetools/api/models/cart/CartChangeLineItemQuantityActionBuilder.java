@@ -62,8 +62,8 @@ public final class CartChangeLineItemQuantityActionBuilder implements Builder<Ca
     }
 
     public CartChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(lineItemId, CartChangeLineItemQuantityAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, CartChangeLineItemQuantityAction.class + ": quantity is missing");
         return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
 

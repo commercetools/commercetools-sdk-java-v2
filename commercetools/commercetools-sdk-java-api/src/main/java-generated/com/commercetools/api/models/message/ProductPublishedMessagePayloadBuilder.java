@@ -50,9 +50,11 @@ public final class ProductPublishedMessagePayloadBuilder implements Builder<Prod
     }
 
     public ProductPublishedMessagePayload build() {
-        Objects.requireNonNull(removedImageUrls);
-        Objects.requireNonNull(productProjection);
-        Objects.requireNonNull(scope);
+        Objects.requireNonNull(removedImageUrls,
+            ProductPublishedMessagePayload.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(productProjection,
+            ProductPublishedMessagePayload.class + ": productProjection is missing");
+        Objects.requireNonNull(scope, ProductPublishedMessagePayload.class + ": scope is missing");
         return new ProductPublishedMessagePayloadImpl(removedImageUrls, productProjection, scope);
     }
 

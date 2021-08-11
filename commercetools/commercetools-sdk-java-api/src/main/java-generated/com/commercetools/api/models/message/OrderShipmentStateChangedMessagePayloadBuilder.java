@@ -39,7 +39,8 @@ public final class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     public OrderShipmentStateChangedMessagePayload build() {
-        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(shipmentState,
+            OrderShipmentStateChangedMessagePayload.class + ": shipmentState is missing");
         return new OrderShipmentStateChangedMessagePayloadImpl(shipmentState, oldShipmentState);
     }
 

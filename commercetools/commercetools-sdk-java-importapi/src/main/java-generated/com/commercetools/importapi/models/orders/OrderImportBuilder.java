@@ -327,8 +327,8 @@ public final class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     public OrderImport build() {
-        Objects.requireNonNull(orderNumber);
-        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(orderNumber, OrderImport.class + ": orderNumber is missing");
+        Objects.requireNonNull(totalPrice, OrderImport.class + ": totalPrice is missing");
         return new OrderImportImpl(orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, taxCalculationMode, origin,

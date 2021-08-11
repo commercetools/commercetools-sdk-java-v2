@@ -21,7 +21,7 @@ public final class ChannelKeyReferenceBuilder implements Builder<ChannelKeyRefer
     }
 
     public ChannelKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ChannelKeyReference.class + ": key is missing");
         return new ChannelKeyReferenceImpl(key);
     }
 

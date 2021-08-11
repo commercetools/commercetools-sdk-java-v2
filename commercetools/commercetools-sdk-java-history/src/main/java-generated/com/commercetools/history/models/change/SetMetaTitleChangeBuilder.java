@@ -45,9 +45,9 @@ public final class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChan
     }
 
     public SetMetaTitleChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMetaTitleChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMetaTitleChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMetaTitleChange.class + ": nextValue is missing");
         return new SetMetaTitleChangeImpl(change, previousValue, nextValue);
     }
 

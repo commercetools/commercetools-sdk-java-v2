@@ -75,7 +75,7 @@ public final class ProductSetAssetKeyActionBuilder implements Builder<ProductSet
     }
 
     public ProductSetAssetKeyAction build() {
-        Objects.requireNonNull(assetId);
+        Objects.requireNonNull(assetId, ProductSetAssetKeyAction.class + ": assetId is missing");
         return new ProductSetAssetKeyActionImpl(variantId, sku, staged, assetId, assetKey);
     }
 

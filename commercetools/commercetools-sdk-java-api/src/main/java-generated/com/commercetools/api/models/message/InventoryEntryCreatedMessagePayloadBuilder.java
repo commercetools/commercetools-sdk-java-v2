@@ -22,7 +22,8 @@ public final class InventoryEntryCreatedMessagePayloadBuilder implements Builder
     }
 
     public InventoryEntryCreatedMessagePayload build() {
-        Objects.requireNonNull(inventoryEntry);
+        Objects.requireNonNull(inventoryEntry,
+            InventoryEntryCreatedMessagePayload.class + ": inventoryEntry is missing");
         return new InventoryEntryCreatedMessagePayloadImpl(inventoryEntry);
     }
 

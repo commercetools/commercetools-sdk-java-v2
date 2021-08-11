@@ -328,10 +328,10 @@ public final class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     public CustomerImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(email);
-        Objects.requireNonNull(password);
-        Objects.requireNonNull(addresses);
+        Objects.requireNonNull(key, CustomerImport.class + ": key is missing");
+        Objects.requireNonNull(email, CustomerImport.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerImport.class + ": password is missing");
+        Objects.requireNonNull(addresses, CustomerImport.class + ": addresses is missing");
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
             defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);

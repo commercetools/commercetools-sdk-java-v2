@@ -51,8 +51,9 @@ public final class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     public OrderDiscountCodeStateSetMessagePayload build() {
-        Objects.requireNonNull(discountCode);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(discountCode,
+            OrderDiscountCodeStateSetMessagePayload.class + ": discountCode is missing");
+        Objects.requireNonNull(state, OrderDiscountCodeStateSetMessagePayload.class + ": state is missing");
         return new OrderDiscountCodeStateSetMessagePayloadImpl(discountCode, state, oldState);
     }
 

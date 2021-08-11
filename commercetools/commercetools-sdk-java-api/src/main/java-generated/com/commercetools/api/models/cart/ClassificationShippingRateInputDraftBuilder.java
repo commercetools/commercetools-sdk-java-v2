@@ -22,7 +22,7 @@ public final class ClassificationShippingRateInputDraftBuilder
     }
 
     public ClassificationShippingRateInputDraft build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ClassificationShippingRateInputDraft.class + ": key is missing");
         return new ClassificationShippingRateInputDraftImpl(key);
     }
 

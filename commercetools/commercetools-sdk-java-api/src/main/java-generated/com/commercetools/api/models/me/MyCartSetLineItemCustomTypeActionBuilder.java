@@ -51,7 +51,7 @@ public final class MyCartSetLineItemCustomTypeActionBuilder implements Builder<M
     }
 
     public MyCartSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, MyCartSetLineItemCustomTypeAction.class + ": lineItemId is missing");
         return new MyCartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 

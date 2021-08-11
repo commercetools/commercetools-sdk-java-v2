@@ -28,7 +28,7 @@ public final class ProductTypeImportRequestBuilder implements Builder<ProductTyp
     }
 
     public ProductTypeImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, ProductTypeImportRequest.class + ": resources is missing");
         return new ProductTypeImportRequestImpl(resources);
     }
 

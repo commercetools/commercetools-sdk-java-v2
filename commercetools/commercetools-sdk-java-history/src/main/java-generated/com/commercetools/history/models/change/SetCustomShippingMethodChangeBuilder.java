@@ -45,9 +45,9 @@ public final class SetCustomShippingMethodChangeBuilder implements Builder<SetCu
     }
 
     public SetCustomShippingMethodChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomShippingMethodChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetCustomShippingMethodChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomShippingMethodChange.class + ": previousValue is missing");
         return new SetCustomShippingMethodChangeImpl(change, nextValue, previousValue);
     }
 

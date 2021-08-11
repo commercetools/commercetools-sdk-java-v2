@@ -21,7 +21,7 @@ public final class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategory
     }
 
     public TaxCategoryKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, TaxCategoryKeyReference.class + ": key is missing");
         return new TaxCategoryKeyReferenceImpl(key);
     }
 

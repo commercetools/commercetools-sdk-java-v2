@@ -57,9 +57,9 @@ public final class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetO
     }
 
     public ChangeAssetOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeAssetOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeAssetOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeAssetOrderChange.class + ": nextValue is missing");
         return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
     }
 

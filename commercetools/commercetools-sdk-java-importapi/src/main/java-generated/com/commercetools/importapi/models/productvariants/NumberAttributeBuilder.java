@@ -36,7 +36,7 @@ public final class NumberAttributeBuilder implements Builder<NumberAttribute> {
     }
 
     public NumberAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, NumberAttribute.class + ": value is missing");
         return new NumberAttributeImpl(name, value);
     }
 

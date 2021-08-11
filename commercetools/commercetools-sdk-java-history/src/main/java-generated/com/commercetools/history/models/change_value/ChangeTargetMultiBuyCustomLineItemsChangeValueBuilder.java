@@ -67,11 +67,16 @@ public final class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValue build() {
-        Objects.requireNonNull(predicate);
-        Objects.requireNonNull(triggerQuantity);
-        Objects.requireNonNull(discountedQuantity);
-        Objects.requireNonNull(maxOccurrence);
-        Objects.requireNonNull(selectionMode);
+        Objects.requireNonNull(predicate,
+            ChangeTargetMultiBuyCustomLineItemsChangeValue.class + ": predicate is missing");
+        Objects.requireNonNull(triggerQuantity,
+            ChangeTargetMultiBuyCustomLineItemsChangeValue.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity,
+            ChangeTargetMultiBuyCustomLineItemsChangeValue.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(maxOccurrence,
+            ChangeTargetMultiBuyCustomLineItemsChangeValue.class + ": maxOccurrence is missing");
+        Objects.requireNonNull(selectionMode,
+            ChangeTargetMultiBuyCustomLineItemsChangeValue.class + ": selectionMode is missing");
         return new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,
             maxOccurrence, selectionMode);
     }

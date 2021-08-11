@@ -159,13 +159,13 @@ public final class OrderShippingInfoSetMessageBuilder implements Builder<OrderSh
     }
 
     public OrderShippingInfoSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, OrderShippingInfoSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShippingInfoSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShippingInfoSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShippingInfoSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShippingInfoSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShippingInfoSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderShippingInfoSetMessage.class + ": resourceVersion is missing");
         return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
     }

@@ -62,7 +62,7 @@ public final class ProductAddExternalImageActionBuilder implements Builder<Produ
     }
 
     public ProductAddExternalImageAction build() {
-        Objects.requireNonNull(image);
+        Objects.requireNonNull(image, ProductAddExternalImageAction.class + ": image is missing");
         return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);
     }
 

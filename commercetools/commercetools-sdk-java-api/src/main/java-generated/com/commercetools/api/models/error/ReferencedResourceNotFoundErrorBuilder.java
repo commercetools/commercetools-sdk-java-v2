@@ -61,8 +61,8 @@ public final class ReferencedResourceNotFoundErrorBuilder implements Builder<Ref
     }
 
     public ReferencedResourceNotFoundError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(typeId);
+        Objects.requireNonNull(message, ReferencedResourceNotFoundError.class + ": message is missing");
+        Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
         return new ReferencedResourceNotFoundErrorImpl(message, typeId, id, key);
     }
 

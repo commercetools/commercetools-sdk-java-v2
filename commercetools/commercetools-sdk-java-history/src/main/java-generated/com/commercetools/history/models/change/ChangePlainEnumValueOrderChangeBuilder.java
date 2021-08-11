@@ -68,10 +68,10 @@ public final class ChangePlainEnumValueOrderChangeBuilder implements Builder<Cha
     }
 
     public ChangePlainEnumValueOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangePlainEnumValueOrderChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, ChangePlainEnumValueOrderChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangePlainEnumValueOrderChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangePlainEnumValueOrderChange.class + ": previousValue is missing");
         return new ChangePlainEnumValueOrderChangeImpl(change, attributeName, nextValue, previousValue);
     }
 

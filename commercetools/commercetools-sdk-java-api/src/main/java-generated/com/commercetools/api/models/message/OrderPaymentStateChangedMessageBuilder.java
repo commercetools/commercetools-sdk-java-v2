@@ -158,14 +158,14 @@ public final class OrderPaymentStateChangedMessageBuilder implements Builder<Ord
     }
 
     public OrderPaymentStateChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(id, OrderPaymentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderPaymentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderPaymentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderPaymentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderPaymentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderPaymentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderPaymentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentState, OrderPaymentStateChangedMessage.class + ": paymentState is missing");
         return new OrderPaymentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentState,
             oldPaymentState);

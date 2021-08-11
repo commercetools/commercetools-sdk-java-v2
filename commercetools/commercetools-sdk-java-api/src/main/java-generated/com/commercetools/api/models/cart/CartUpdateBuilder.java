@@ -37,8 +37,8 @@ public final class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     public CartUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, CartUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, CartUpdate.class + ": actions is missing");
         return new CartUpdateImpl(version, actions);
     }
 

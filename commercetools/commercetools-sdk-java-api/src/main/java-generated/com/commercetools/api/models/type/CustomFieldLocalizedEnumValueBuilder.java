@@ -32,8 +32,8 @@ public final class CustomFieldLocalizedEnumValueBuilder implements Builder<Custo
     }
 
     public CustomFieldLocalizedEnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, CustomFieldLocalizedEnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, CustomFieldLocalizedEnumValue.class + ": label is missing");
         return new CustomFieldLocalizedEnumValueImpl(key, label);
     }
 

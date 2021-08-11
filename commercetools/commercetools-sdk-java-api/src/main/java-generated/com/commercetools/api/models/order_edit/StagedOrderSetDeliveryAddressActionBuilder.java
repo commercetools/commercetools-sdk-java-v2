@@ -37,7 +37,7 @@ public final class StagedOrderSetDeliveryAddressActionBuilder implements Builder
     }
 
     public StagedOrderSetDeliveryAddressAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryAddressAction.class + ": deliveryId is missing");
         return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);
     }
 

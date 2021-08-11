@@ -36,7 +36,7 @@ public final class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCu
     }
 
     public MyCustomerSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyCustomerSetCustomFieldAction.class + ": name is missing");
         return new MyCustomerSetCustomFieldActionImpl(name, value);
     }
 

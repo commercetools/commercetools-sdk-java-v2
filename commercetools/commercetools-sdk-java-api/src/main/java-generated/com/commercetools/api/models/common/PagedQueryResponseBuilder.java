@@ -88,10 +88,10 @@ public final class PagedQueryResponseBuilder implements Builder<PagedQueryRespon
     }
 
     public PagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, PagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, PagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, PagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, PagedQueryResponse.class + ": results is missing");
         return new PagedQueryResponseImpl(limit, count, total, offset, results, meta);
     }
 

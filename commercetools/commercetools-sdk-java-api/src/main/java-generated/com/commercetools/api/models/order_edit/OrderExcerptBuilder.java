@@ -47,8 +47,8 @@ public final class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     public OrderExcerpt build() {
-        Objects.requireNonNull(totalPrice);
-        Objects.requireNonNull(version);
+        Objects.requireNonNull(totalPrice, OrderExcerpt.class + ": totalPrice is missing");
+        Objects.requireNonNull(version, OrderExcerpt.class + ": version is missing");
         return new OrderExcerptImpl(totalPrice, taxedPrice, version);
     }
 

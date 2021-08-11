@@ -31,7 +31,7 @@ public final class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     public FieldContainer build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, FieldContainer.class + ": values are missing");
         return new FieldContainerImpl(values);
     }
 

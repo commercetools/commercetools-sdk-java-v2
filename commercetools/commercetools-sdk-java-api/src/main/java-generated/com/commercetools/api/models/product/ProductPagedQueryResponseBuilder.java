@@ -75,10 +75,10 @@ public final class ProductPagedQueryResponseBuilder implements Builder<ProductPa
     }
 
     public ProductPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ProductPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ProductPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ProductPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProductPagedQueryResponse.class + ": results is missing");
         return new ProductPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

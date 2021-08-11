@@ -32,8 +32,9 @@ public final class CartChangeCustomLineItemMoneyActionBuilder implements Builder
     }
 
     public CartChangeCustomLineItemMoneyAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(customLineItemId,
+            CartChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(money, CartChangeCustomLineItemMoneyAction.class + ": money is missing");
         return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
     }
 

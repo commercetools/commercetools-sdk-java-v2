@@ -21,7 +21,7 @@ public final class CustomerChangeEmailActionBuilder implements Builder<CustomerC
     }
 
     public CustomerChangeEmailAction build() {
-        Objects.requireNonNull(email);
+        Objects.requireNonNull(email, CustomerChangeEmailAction.class + ": email is missing");
         return new CustomerChangeEmailActionImpl(email);
     }
 

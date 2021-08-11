@@ -21,7 +21,7 @@ public final class CartDiscountKeyReferenceBuilder implements Builder<CartDiscou
     }
 
     public CartDiscountKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, CartDiscountKeyReference.class + ": key is missing");
         return new CartDiscountKeyReferenceImpl(key);
     }
 

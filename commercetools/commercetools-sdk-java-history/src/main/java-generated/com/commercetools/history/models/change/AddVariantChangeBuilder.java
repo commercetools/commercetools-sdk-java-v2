@@ -54,10 +54,10 @@ public final class AddVariantChangeBuilder implements Builder<AddVariantChange> 
     }
 
     public AddVariantChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddVariantChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, AddVariantChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, AddVariantChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddVariantChange.class + ": nextValue is missing");
         return new AddVariantChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

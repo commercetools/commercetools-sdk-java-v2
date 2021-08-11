@@ -22,7 +22,7 @@ public final class AttributeReferenceTypeBuilder implements Builder<AttributeRef
     }
 
     public AttributeReferenceType build() {
-        Objects.requireNonNull(referenceTypeId);
+        Objects.requireNonNull(referenceTypeId, AttributeReferenceType.class + ": referenceTypeId is missing");
         return new AttributeReferenceTypeImpl(referenceTypeId);
     }
 

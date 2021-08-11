@@ -55,10 +55,10 @@ public final class ChangeMasterVariantChangeBuilder implements Builder<ChangeMas
     }
 
     public ChangeMasterVariantChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeMasterVariantChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, ChangeMasterVariantChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, ChangeMasterVariantChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeMasterVariantChange.class + ": nextValue is missing");
         return new ChangeMasterVariantChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

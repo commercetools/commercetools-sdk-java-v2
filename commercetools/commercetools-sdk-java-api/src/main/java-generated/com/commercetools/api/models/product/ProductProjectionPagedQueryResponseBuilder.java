@@ -76,10 +76,10 @@ public final class ProductProjectionPagedQueryResponseBuilder implements Builder
     }
 
     public ProductProjectionPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ProductProjectionPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ProductProjectionPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ProductProjectionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProductProjectionPagedQueryResponse.class + ": results is missing");
         return new ProductProjectionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

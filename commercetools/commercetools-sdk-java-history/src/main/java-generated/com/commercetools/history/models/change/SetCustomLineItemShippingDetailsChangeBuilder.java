@@ -57,10 +57,12 @@ public final class SetCustomLineItemShippingDetailsChangeBuilder
     }
 
     public SetCustomLineItemShippingDetailsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomLineItemShippingDetailsChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemShippingDetailsChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemShippingDetailsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetCustomLineItemShippingDetailsChange.class + ": previousValue is missing");
         return new SetCustomLineItemShippingDetailsChangeImpl(change, customLineItemId, nextValue, previousValue);
     }
 

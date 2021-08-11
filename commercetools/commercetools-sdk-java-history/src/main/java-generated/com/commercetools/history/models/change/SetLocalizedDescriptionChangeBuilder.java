@@ -45,9 +45,9 @@ public final class SetLocalizedDescriptionChangeBuilder implements Builder<SetLo
     }
 
     public SetLocalizedDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetLocalizedDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetLocalizedDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetLocalizedDescriptionChange.class + ": nextValue is missing");
         return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

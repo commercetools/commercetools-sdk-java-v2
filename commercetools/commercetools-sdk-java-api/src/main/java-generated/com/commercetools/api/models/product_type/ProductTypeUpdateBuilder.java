@@ -39,8 +39,8 @@ public final class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate
     }
 
     public ProductTypeUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ProductTypeUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ProductTypeUpdate.class + ": actions is missing");
         return new ProductTypeUpdateImpl(version, actions);
     }
 

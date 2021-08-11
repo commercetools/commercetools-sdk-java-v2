@@ -21,7 +21,7 @@ public final class WeakPasswordErrorBuilder implements Builder<WeakPasswordError
     }
 
     public WeakPasswordError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, WeakPasswordError.class + ": message is missing");
         return new WeakPasswordErrorImpl(message);
     }
 

@@ -43,9 +43,9 @@ public final class InvalidItemShippingDetailsErrorBuilder implements Builder<Inv
     }
 
     public InvalidItemShippingDetailsError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(subject);
-        Objects.requireNonNull(itemId);
+        Objects.requireNonNull(message, InvalidItemShippingDetailsError.class + ": message is missing");
+        Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");
+        Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");
         return new InvalidItemShippingDetailsErrorImpl(message, subject, itemId);
     }
 

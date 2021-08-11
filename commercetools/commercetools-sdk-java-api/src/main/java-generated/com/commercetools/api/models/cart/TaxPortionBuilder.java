@@ -47,8 +47,8 @@ public final class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     public TaxPortion build() {
-        Objects.requireNonNull(rate);
-        Objects.requireNonNull(amount);
+        Objects.requireNonNull(rate, TaxPortion.class + ": rate is missing");
+        Objects.requireNonNull(amount, TaxPortion.class + ": amount is missing");
         return new TaxPortionImpl(name, rate, amount);
     }
 

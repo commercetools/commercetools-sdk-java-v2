@@ -21,7 +21,7 @@ public final class ScoreShippingRateInputDraftBuilder implements Builder<ScoreSh
     }
 
     public ScoreShippingRateInputDraft build() {
-        Objects.requireNonNull(score);
+        Objects.requireNonNull(score, ScoreShippingRateInputDraft.class + ": score is missing");
         return new ScoreShippingRateInputDraftImpl(score);
     }
 

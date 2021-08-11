@@ -56,10 +56,10 @@ public final class SetProductPriceCustomTypeChangeBuilder implements Builder<Set
     }
 
     public SetProductPriceCustomTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetProductPriceCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetProductPriceCustomTypeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetProductPriceCustomTypeChange.class + ": nextValue is missing");
         return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

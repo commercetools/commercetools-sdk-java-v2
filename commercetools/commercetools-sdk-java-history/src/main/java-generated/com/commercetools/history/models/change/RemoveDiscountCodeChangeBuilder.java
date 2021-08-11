@@ -33,8 +33,8 @@ public final class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDisc
     }
 
     public RemoveDiscountCodeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveDiscountCodeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveDiscountCodeChange.class + ": previousValue is missing");
         return new RemoveDiscountCodeChangeImpl(change, previousValue);
     }
 

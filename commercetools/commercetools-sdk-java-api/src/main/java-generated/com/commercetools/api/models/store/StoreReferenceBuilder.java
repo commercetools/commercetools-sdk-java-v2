@@ -36,7 +36,7 @@ public final class StoreReferenceBuilder implements Builder<StoreReference> {
     }
 
     public StoreReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, StoreReference.class + ": id is missing");
         return new StoreReferenceImpl(id, obj);
     }
 

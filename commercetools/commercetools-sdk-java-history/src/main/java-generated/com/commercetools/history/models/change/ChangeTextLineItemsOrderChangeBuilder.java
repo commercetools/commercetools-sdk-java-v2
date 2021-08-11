@@ -57,9 +57,9 @@ public final class ChangeTextLineItemsOrderChangeBuilder implements Builder<Chan
     }
 
     public ChangeTextLineItemsOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeTextLineItemsOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeTextLineItemsOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTextLineItemsOrderChange.class + ": nextValue is missing");
         return new ChangeTextLineItemsOrderChangeImpl(change, previousValue, nextValue);
     }
 

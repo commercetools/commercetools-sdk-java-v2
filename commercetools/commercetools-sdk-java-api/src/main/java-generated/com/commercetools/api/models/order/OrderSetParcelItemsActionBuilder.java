@@ -38,8 +38,8 @@ public final class OrderSetParcelItemsActionBuilder implements Builder<OrderSetP
     }
 
     public OrderSetParcelItemsAction build() {
-        Objects.requireNonNull(parcelId);
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(parcelId, OrderSetParcelItemsAction.class + ": parcelId is missing");
+        Objects.requireNonNull(items, OrderSetParcelItemsAction.class + ": items is missing");
         return new OrderSetParcelItemsActionImpl(parcelId, items);
     }
 

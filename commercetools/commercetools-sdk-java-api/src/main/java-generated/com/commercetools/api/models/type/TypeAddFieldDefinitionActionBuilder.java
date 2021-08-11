@@ -22,7 +22,7 @@ public final class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAd
     }
 
     public TypeAddFieldDefinitionAction build() {
-        Objects.requireNonNull(fieldDefinition);
+        Objects.requireNonNull(fieldDefinition, TypeAddFieldDefinitionAction.class + ": fieldDefinition is missing");
         return new TypeAddFieldDefinitionActionImpl(fieldDefinition);
     }
 

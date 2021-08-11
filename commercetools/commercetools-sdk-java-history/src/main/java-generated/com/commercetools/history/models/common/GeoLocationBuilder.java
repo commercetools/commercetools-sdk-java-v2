@@ -37,8 +37,8 @@ public final class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     public GeoLocation build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(coordinates);
+        Objects.requireNonNull(type, GeoLocation.class + ": type is missing");
+        Objects.requireNonNull(coordinates, GeoLocation.class + ": coordinates is missing");
         return new GeoLocationImpl(type, coordinates);
     }
 

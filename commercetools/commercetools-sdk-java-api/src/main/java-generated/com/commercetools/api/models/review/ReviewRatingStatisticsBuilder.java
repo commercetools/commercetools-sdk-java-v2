@@ -65,11 +65,11 @@ public final class ReviewRatingStatisticsBuilder implements Builder<ReviewRating
     }
 
     public ReviewRatingStatistics build() {
-        Objects.requireNonNull(averageRating);
-        Objects.requireNonNull(highestRating);
-        Objects.requireNonNull(lowestRating);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(ratingsDistribution);
+        Objects.requireNonNull(averageRating, ReviewRatingStatistics.class + ": averageRating is missing");
+        Objects.requireNonNull(highestRating, ReviewRatingStatistics.class + ": highestRating is missing");
+        Objects.requireNonNull(lowestRating, ReviewRatingStatistics.class + ": lowestRating is missing");
+        Objects.requireNonNull(count, ReviewRatingStatistics.class + ": count is missing");
+        Objects.requireNonNull(ratingsDistribution, ReviewRatingStatistics.class + ": ratingsDistribution is missing");
         return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
     }
 

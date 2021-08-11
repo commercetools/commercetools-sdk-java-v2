@@ -189,12 +189,12 @@ public final class ChannelBuilder implements Builder<Channel> {
     }
 
     public Channel build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(roles);
+        Objects.requireNonNull(id, Channel.class + ": id is missing");
+        Objects.requireNonNull(version, Channel.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Channel.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Channel.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Channel.class + ": key is missing");
+        Objects.requireNonNull(roles, Channel.class + ": roles is missing");
         return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,
             description, address, reviewRatingStatistics, custom, geoLocation);
     }

@@ -26,7 +26,7 @@ public final class ProjectChangeLanguagesActionBuilder implements Builder<Projec
     }
 
     public ProjectChangeLanguagesAction build() {
-        Objects.requireNonNull(languages);
+        Objects.requireNonNull(languages, ProjectChangeLanguagesAction.class + ": languages is missing");
         return new ProjectChangeLanguagesActionImpl(languages);
     }
 

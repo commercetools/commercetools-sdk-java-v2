@@ -41,7 +41,7 @@ public final class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> 
     }
 
     public TimeSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, TimeSetAttribute.class + ": value is missing");
         return new TimeSetAttributeImpl(name, value);
     }
 

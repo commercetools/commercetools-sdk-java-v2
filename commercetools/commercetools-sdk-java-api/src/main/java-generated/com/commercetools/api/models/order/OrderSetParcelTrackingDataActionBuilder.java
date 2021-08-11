@@ -37,7 +37,7 @@ public final class OrderSetParcelTrackingDataActionBuilder implements Builder<Or
     }
 
     public OrderSetParcelTrackingDataAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, OrderSetParcelTrackingDataAction.class + ": parcelId is missing");
         return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 

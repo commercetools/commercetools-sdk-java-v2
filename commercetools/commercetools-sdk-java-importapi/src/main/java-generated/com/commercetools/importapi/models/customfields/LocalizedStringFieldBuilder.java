@@ -21,7 +21,7 @@ public final class LocalizedStringFieldBuilder implements Builder<LocalizedStrin
     }
 
     public LocalizedStringField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizedStringField.class + ": value is missing");
         return new LocalizedStringFieldImpl(value);
     }
 

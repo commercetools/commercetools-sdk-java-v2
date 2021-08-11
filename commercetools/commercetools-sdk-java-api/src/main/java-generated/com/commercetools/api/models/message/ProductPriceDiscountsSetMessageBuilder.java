@@ -150,14 +150,14 @@ public final class ProductPriceDiscountsSetMessageBuilder implements Builder<Pro
     }
 
     public ProductPriceDiscountsSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(updatedPrices);
+        Objects.requireNonNull(id, ProductPriceDiscountsSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPriceDiscountsSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPriceDiscountsSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductPriceDiscountsSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductPriceDiscountsSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPriceDiscountsSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductPriceDiscountsSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(updatedPrices, ProductPriceDiscountsSetMessage.class + ": updatedPrices is missing");
         return new ProductPriceDiscountsSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, updatedPrices);
     }

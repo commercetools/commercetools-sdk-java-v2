@@ -38,8 +38,9 @@ public final class ProductDeletedMessagePayloadBuilder implements Builder<Produc
     }
 
     public ProductDeletedMessagePayload build() {
-        Objects.requireNonNull(removedImageUrls);
-        Objects.requireNonNull(currentProjection);
+        Objects.requireNonNull(removedImageUrls, ProductDeletedMessagePayload.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(currentProjection,
+            ProductDeletedMessagePayload.class + ": currentProjection is missing");
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
     }
 

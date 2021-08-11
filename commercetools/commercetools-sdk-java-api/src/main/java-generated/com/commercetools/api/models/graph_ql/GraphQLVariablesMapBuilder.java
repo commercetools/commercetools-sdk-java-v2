@@ -29,7 +29,7 @@ public final class GraphQLVariablesMapBuilder implements Builder<GraphQLVariable
     }
 
     public GraphQLVariablesMap build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, GraphQLVariablesMap.class + ": values are missing");
         return new GraphQLVariablesMapImpl(values);
     }
 

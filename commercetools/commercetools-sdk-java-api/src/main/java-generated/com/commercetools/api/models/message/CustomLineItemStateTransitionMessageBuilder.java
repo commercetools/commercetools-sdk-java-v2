@@ -190,18 +190,23 @@ public final class CustomLineItemStateTransitionMessageBuilder
     }
 
     public CustomLineItemStateTransitionMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(transitionDate);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(id, CustomLineItemStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomLineItemStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomLineItemStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            CustomLineItemStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            CustomLineItemStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomLineItemStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            CustomLineItemStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customLineItemId,
+            CustomLineItemStateTransitionMessage.class + ": customLineItemId is missing");
+        Objects.requireNonNull(transitionDate,
+            CustomLineItemStateTransitionMessage.class + ": transitionDate is missing");
+        Objects.requireNonNull(quantity, CustomLineItemStateTransitionMessage.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, CustomLineItemStateTransitionMessage.class + ": fromState is missing");
+        Objects.requireNonNull(toState, CustomLineItemStateTransitionMessage.class + ": toState is missing");
         return new CustomLineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
             transitionDate, quantity, fromState, toState);

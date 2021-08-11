@@ -21,7 +21,7 @@ public final class StateChangeTypeActionBuilder implements Builder<StateChangeTy
     }
 
     public StateChangeTypeAction build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, StateChangeTypeAction.class + ": type is missing");
         return new StateChangeTypeActionImpl(type);
     }
 

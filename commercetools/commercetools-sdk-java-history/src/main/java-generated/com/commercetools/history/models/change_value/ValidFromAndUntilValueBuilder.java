@@ -32,8 +32,8 @@ public final class ValidFromAndUntilValueBuilder implements Builder<ValidFromAnd
     }
 
     public ValidFromAndUntilValue build() {
-        Objects.requireNonNull(validFrom);
-        Objects.requireNonNull(validUntil);
+        Objects.requireNonNull(validFrom, ValidFromAndUntilValue.class + ": validFrom is missing");
+        Objects.requireNonNull(validUntil, ValidFromAndUntilValue.class + ": validUntil is missing");
         return new ValidFromAndUntilValueImpl(validFrom, validUntil);
     }
 

@@ -37,7 +37,7 @@ public final class ShippingMethodReferenceBuilder implements Builder<ShippingMet
     }
 
     public ShippingMethodReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ShippingMethodReference.class + ": id is missing");
         return new ShippingMethodReferenceImpl(id, obj);
     }
 

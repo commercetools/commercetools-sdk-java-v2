@@ -43,9 +43,9 @@ public final class SetAddressChangeBuilder implements Builder<SetAddressChange> 
     }
 
     public SetAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAddressChange.class + ": previousValue is missing");
         return new SetAddressChangeImpl(change, nextValue, previousValue);
     }
 

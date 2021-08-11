@@ -42,7 +42,7 @@ public final class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     public ParcelItems build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, ParcelItems.class + ": parcelId is missing");
         return new ParcelItemsImpl(parcelId, items);
     }
 

@@ -38,8 +38,8 @@ public final class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     public ReviewUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ReviewUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ReviewUpdate.class + ": actions is missing");
         return new ReviewUpdateImpl(version, actions);
     }
 

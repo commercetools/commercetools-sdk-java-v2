@@ -43,9 +43,9 @@ public final class SetRatingChangeBuilder implements Builder<SetRatingChange> {
     }
 
     public SetRatingChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetRatingChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetRatingChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetRatingChange.class + ": nextValue is missing");
         return new SetRatingChangeImpl(change, previousValue, nextValue);
     }
 

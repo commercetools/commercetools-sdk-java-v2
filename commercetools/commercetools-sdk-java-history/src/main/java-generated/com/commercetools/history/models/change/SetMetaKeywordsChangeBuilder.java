@@ -45,9 +45,9 @@ public final class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywor
     }
 
     public SetMetaKeywordsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMetaKeywordsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMetaKeywordsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMetaKeywordsChange.class + ": nextValue is missing");
         return new SetMetaKeywordsChangeImpl(change, previousValue, nextValue);
     }
 

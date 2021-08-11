@@ -22,7 +22,7 @@ public final class MyPaymentAddTransactionActionBuilder implements Builder<MyPay
     }
 
     public MyPaymentAddTransactionAction build() {
-        Objects.requireNonNull(transaction);
+        Objects.requireNonNull(transaction, MyPaymentAddTransactionAction.class + ": transaction is missing");
         return new MyPaymentAddTransactionActionImpl(transaction);
     }
 

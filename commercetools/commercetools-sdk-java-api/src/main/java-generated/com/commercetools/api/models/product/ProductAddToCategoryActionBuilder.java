@@ -50,7 +50,7 @@ public final class ProductAddToCategoryActionBuilder implements Builder<ProductA
     }
 
     public ProductAddToCategoryAction build() {
-        Objects.requireNonNull(category);
+        Objects.requireNonNull(category, ProductAddToCategoryAction.class + ": category is missing");
         return new ProductAddToCategoryActionImpl(category, orderHint, staged);
     }
 

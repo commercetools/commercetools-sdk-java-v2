@@ -176,17 +176,22 @@ public final class InventoryEntryQuantitySetMessageBuilder implements Builder<In
     }
 
     public InventoryEntryQuantitySetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(oldQuantityOnStock);
-        Objects.requireNonNull(newQuantityOnStock);
-        Objects.requireNonNull(oldAvailableQuantity);
-        Objects.requireNonNull(newAvailableQuantity);
+        Objects.requireNonNull(id, InventoryEntryQuantitySetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntryQuantitySetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntryQuantitySetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntryQuantitySetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, InventoryEntryQuantitySetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, InventoryEntryQuantitySetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            InventoryEntryQuantitySetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(oldQuantityOnStock,
+            InventoryEntryQuantitySetMessage.class + ": oldQuantityOnStock is missing");
+        Objects.requireNonNull(newQuantityOnStock,
+            InventoryEntryQuantitySetMessage.class + ": newQuantityOnStock is missing");
+        Objects.requireNonNull(oldAvailableQuantity,
+            InventoryEntryQuantitySetMessage.class + ": oldAvailableQuantity is missing");
+        Objects.requireNonNull(newAvailableQuantity,
+            InventoryEntryQuantitySetMessage.class + ": newAvailableQuantity is missing");
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
             newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);

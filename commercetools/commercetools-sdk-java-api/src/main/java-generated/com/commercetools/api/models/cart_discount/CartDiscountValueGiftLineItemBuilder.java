@@ -63,8 +63,8 @@ public final class CartDiscountValueGiftLineItemBuilder implements Builder<CartD
     }
 
     public CartDiscountValueGiftLineItem build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(product, CartDiscountValueGiftLineItem.class + ": product is missing");
+        Objects.requireNonNull(variantId, CartDiscountValueGiftLineItem.class + ": variantId is missing");
         return new CartDiscountValueGiftLineItemImpl(product, variantId, supplyChannel, distributionChannel);
     }
 

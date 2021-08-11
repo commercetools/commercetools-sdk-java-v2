@@ -159,13 +159,13 @@ public final class OrderCustomerGroupSetMessageBuilder implements Builder<OrderC
     }
 
     public OrderCustomerGroupSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, OrderCustomerGroupSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomerGroupSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomerGroupSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderCustomerGroupSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderCustomerGroupSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomerGroupSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderCustomerGroupSetMessage.class + ": resourceVersion is missing");
         return new OrderCustomerGroupSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customerGroup,
             oldCustomerGroup);

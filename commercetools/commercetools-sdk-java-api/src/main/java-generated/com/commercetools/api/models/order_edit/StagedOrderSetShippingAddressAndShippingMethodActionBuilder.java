@@ -53,7 +53,8 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     public StagedOrderSetShippingAddressAndShippingMethodAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address,
+            StagedOrderSetShippingAddressAndShippingMethodAction.class + ": address is missing");
         return new StagedOrderSetShippingAddressAndShippingMethodActionImpl(address, shippingMethod, externalTaxRate);
     }
 

@@ -21,7 +21,7 @@ public final class StringLabelBuilder implements Builder<StringLabel> {
     }
 
     public StringLabel build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, StringLabel.class + ": value is missing");
         return new StringLabelImpl(value);
     }
 

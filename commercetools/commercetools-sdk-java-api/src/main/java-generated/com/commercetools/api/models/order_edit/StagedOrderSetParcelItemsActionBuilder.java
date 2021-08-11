@@ -39,8 +39,8 @@ public final class StagedOrderSetParcelItemsActionBuilder implements Builder<Sta
     }
 
     public StagedOrderSetParcelItemsAction build() {
-        Objects.requireNonNull(parcelId);
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelItemsAction.class + ": parcelId is missing");
+        Objects.requireNonNull(items, StagedOrderSetParcelItemsAction.class + ": items is missing");
         return new StagedOrderSetParcelItemsActionImpl(parcelId, items);
     }
 

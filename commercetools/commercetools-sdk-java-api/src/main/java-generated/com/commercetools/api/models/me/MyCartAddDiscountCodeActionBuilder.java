@@ -21,7 +21,7 @@ public final class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartA
     }
 
     public MyCartAddDiscountCodeAction build() {
-        Objects.requireNonNull(code);
+        Objects.requireNonNull(code, MyCartAddDiscountCodeAction.class + ": code is missing");
         return new MyCartAddDiscountCodeActionImpl(code);
     }
 

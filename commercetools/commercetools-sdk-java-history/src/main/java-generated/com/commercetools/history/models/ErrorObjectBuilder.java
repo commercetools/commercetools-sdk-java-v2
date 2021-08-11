@@ -32,8 +32,8 @@ public final class ErrorObjectBuilder implements Builder<ErrorObject> {
     }
 
     public ErrorObject build() {
-        Objects.requireNonNull(code);
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(code, ErrorObject.class + ": code is missing");
+        Objects.requireNonNull(message, ErrorObject.class + ": message is missing");
         return new ErrorObjectImpl(code, message);
     }
 

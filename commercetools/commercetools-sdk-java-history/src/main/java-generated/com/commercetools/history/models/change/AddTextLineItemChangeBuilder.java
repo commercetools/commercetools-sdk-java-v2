@@ -33,8 +33,8 @@ public final class AddTextLineItemChangeBuilder implements Builder<AddTextLineIt
     }
 
     public AddTextLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddTextLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddTextLineItemChange.class + ": nextValue is missing");
         return new AddTextLineItemChangeImpl(change, nextValue);
     }
 

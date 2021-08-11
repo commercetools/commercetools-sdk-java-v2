@@ -22,7 +22,7 @@ public final class CustomerCompanyNameSetMessagePayloadBuilder
     }
 
     public CustomerCompanyNameSetMessagePayload build() {
-        Objects.requireNonNull(companyName);
+        Objects.requireNonNull(companyName, CustomerCompanyNameSetMessagePayload.class + ": companyName is missing");
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
     }
 

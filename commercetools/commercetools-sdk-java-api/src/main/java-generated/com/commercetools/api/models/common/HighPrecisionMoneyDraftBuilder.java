@@ -58,9 +58,9 @@ public final class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisi
     }
 
     public HighPrecisionMoneyDraft build() {
-        Objects.requireNonNull(centAmount);
-        Objects.requireNonNull(currencyCode);
-        Objects.requireNonNull(preciseAmount);
+        Objects.requireNonNull(centAmount, HighPrecisionMoneyDraft.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, HighPrecisionMoneyDraft.class + ": currencyCode is missing");
+        Objects.requireNonNull(preciseAmount, HighPrecisionMoneyDraft.class + ": preciseAmount is missing");
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 

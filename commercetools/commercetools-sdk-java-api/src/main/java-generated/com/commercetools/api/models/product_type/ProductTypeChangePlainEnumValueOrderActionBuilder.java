@@ -40,8 +40,9 @@ public final class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     public ProductTypeChangePlainEnumValueOrderAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangePlainEnumValueOrderAction.class + ": attributeName is missing");
+        Objects.requireNonNull(values, ProductTypeChangePlainEnumValueOrderAction.class + ": values is missing");
         return new ProductTypeChangePlainEnumValueOrderActionImpl(attributeName, values);
     }
 

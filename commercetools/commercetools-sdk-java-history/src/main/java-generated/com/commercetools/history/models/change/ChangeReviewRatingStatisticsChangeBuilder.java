@@ -45,9 +45,9 @@ public final class ChangeReviewRatingStatisticsChangeBuilder implements Builder<
     }
 
     public ChangeReviewRatingStatisticsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeReviewRatingStatisticsChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeReviewRatingStatisticsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeReviewRatingStatisticsChange.class + ": previousValue is missing");
         return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);
     }
 

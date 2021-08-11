@@ -36,7 +36,7 @@ public final class CartDiscountSetCustomFieldActionBuilder implements Builder<Ca
     }
 
     public CartDiscountSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CartDiscountSetCustomFieldAction.class + ": name is missing");
         return new CartDiscountSetCustomFieldActionImpl(name, value);
     }
 

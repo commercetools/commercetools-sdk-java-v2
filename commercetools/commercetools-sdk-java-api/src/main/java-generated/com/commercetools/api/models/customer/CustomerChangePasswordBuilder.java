@@ -54,10 +54,10 @@ public final class CustomerChangePasswordBuilder implements Builder<CustomerChan
     }
 
     public CustomerChangePassword build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(currentPassword);
-        Objects.requireNonNull(newPassword);
+        Objects.requireNonNull(id, CustomerChangePassword.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerChangePassword.class + ": version is missing");
+        Objects.requireNonNull(currentPassword, CustomerChangePassword.class + ": currentPassword is missing");
+        Objects.requireNonNull(newPassword, CustomerChangePassword.class + ": newPassword is missing");
         return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);
     }
 

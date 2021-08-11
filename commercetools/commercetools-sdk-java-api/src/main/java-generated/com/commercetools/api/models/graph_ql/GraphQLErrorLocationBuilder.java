@@ -32,8 +32,8 @@ public final class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLo
     }
 
     public GraphQLErrorLocation build() {
-        Objects.requireNonNull(line);
-        Objects.requireNonNull(column);
+        Objects.requireNonNull(line, GraphQLErrorLocation.class + ": line is missing");
+        Objects.requireNonNull(column, GraphQLErrorLocation.class + ": column is missing");
         return new GraphQLErrorLocationImpl(line, column);
     }
 

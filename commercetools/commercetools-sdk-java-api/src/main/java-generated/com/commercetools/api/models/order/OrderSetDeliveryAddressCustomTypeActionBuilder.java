@@ -52,7 +52,7 @@ public final class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     public OrderSetDeliveryAddressCustomTypeAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
         return new OrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
     }
 

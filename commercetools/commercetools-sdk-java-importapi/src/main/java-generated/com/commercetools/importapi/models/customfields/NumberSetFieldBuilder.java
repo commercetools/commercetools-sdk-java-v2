@@ -26,7 +26,7 @@ public final class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     public NumberSetField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, NumberSetField.class + ": value is missing");
         return new NumberSetFieldImpl(value);
     }
 

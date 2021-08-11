@@ -49,7 +49,7 @@ public final class CategoryChangeAssetNameActionBuilder implements Builder<Categ
     }
 
     public CategoryChangeAssetNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CategoryChangeAssetNameAction.class + ": name is missing");
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
     }
 

@@ -50,7 +50,7 @@ public final class CustomerGroupDraftBuilder implements Builder<CustomerGroupDra
     }
 
     public CustomerGroupDraft build() {
-        Objects.requireNonNull(groupName);
+        Objects.requireNonNull(groupName, CustomerGroupDraft.class + ": groupName is missing");
         return new CustomerGroupDraftImpl(key, groupName, custom);
     }
 

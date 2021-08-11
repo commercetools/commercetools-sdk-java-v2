@@ -144,14 +144,14 @@ public final class PaymentTransactionAddedMessageBuilder implements Builder<Paym
     }
 
     public PaymentTransactionAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(transaction);
+        Objects.requireNonNull(id, PaymentTransactionAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentTransactionAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentTransactionAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, PaymentTransactionAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, PaymentTransactionAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentTransactionAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, PaymentTransactionAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(transaction, PaymentTransactionAddedMessage.class + ": transaction is missing");
         return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transaction);
     }

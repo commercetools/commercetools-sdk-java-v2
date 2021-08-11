@@ -44,9 +44,9 @@ public final class SetBillingAddressChangeBuilder implements Builder<SetBillingA
     }
 
     public SetBillingAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetBillingAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetBillingAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetBillingAddressChange.class + ": previousValue is missing");
         return new SetBillingAddressChangeImpl(change, nextValue, previousValue);
     }
 

@@ -21,7 +21,7 @@ public final class OrderDeletedMessagePayloadBuilder implements Builder<OrderDel
     }
 
     public OrderDeletedMessagePayload build() {
-        Objects.requireNonNull(order);
+        Objects.requireNonNull(order, OrderDeletedMessagePayload.class + ": order is missing");
         return new OrderDeletedMessagePayloadImpl(order);
     }
 

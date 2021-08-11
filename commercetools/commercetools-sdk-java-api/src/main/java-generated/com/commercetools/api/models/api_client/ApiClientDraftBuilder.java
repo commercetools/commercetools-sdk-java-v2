@@ -47,8 +47,8 @@ public final class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     public ApiClientDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(scope);
+        Objects.requireNonNull(name, ApiClientDraft.class + ": name is missing");
+        Objects.requireNonNull(scope, ApiClientDraft.class + ": scope is missing");
         return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation);
     }
 

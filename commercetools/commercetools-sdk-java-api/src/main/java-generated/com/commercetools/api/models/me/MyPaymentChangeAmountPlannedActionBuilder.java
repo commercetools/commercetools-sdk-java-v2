@@ -21,7 +21,7 @@ public final class MyPaymentChangeAmountPlannedActionBuilder implements Builder<
     }
 
     public MyPaymentChangeAmountPlannedAction build() {
-        Objects.requireNonNull(amount);
+        Objects.requireNonNull(amount, MyPaymentChangeAmountPlannedAction.class + ": amount is missing");
         return new MyPaymentChangeAmountPlannedActionImpl(amount);
     }
 

@@ -32,8 +32,8 @@ public final class PayloadNotIncludedBuilder implements Builder<PayloadNotInclud
     }
 
     public PayloadNotIncluded build() {
-        Objects.requireNonNull(reason);
-        Objects.requireNonNull(payloadType);
+        Objects.requireNonNull(reason, PayloadNotIncluded.class + ": reason is missing");
+        Objects.requireNonNull(payloadType, PayloadNotIncluded.class + ": payloadType is missing");
         return new PayloadNotIncludedImpl(reason, payloadType);
     }
 

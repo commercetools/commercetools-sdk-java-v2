@@ -21,7 +21,7 @@ public final class ProductDiscountKeyReferenceBuilder implements Builder<Product
     }
 
     public ProductDiscountKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ProductDiscountKeyReference.class + ": key is missing");
         return new ProductDiscountKeyReferenceImpl(key);
     }
 

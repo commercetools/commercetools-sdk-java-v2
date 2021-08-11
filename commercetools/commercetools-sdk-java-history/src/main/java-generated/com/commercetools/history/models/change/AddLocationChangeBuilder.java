@@ -44,9 +44,9 @@ public final class AddLocationChangeBuilder implements Builder<AddLocationChange
     }
 
     public AddLocationChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddLocationChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddLocationChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddLocationChange.class + ": nextValue is missing");
         return new AddLocationChangeImpl(change, previousValue, nextValue);
     }
 

@@ -51,7 +51,7 @@ public final class ProductVariantPatchBuilder implements Builder<ProductVariantP
     }
 
     public ProductVariantPatch build() {
-        Objects.requireNonNull(productVariant);
+        Objects.requireNonNull(productVariant, ProductVariantPatch.class + ": productVariant is missing");
         return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
 

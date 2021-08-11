@@ -23,7 +23,8 @@ public final class CartDiscountChangeRequiresDiscountCodeActionBuilder
     }
 
     public CartDiscountChangeRequiresDiscountCodeAction build() {
-        Objects.requireNonNull(requiresDiscountCode);
+        Objects.requireNonNull(requiresDiscountCode,
+            CartDiscountChangeRequiresDiscountCodeAction.class + ": requiresDiscountCode is missing");
         return new CartDiscountChangeRequiresDiscountCodeActionImpl(requiresDiscountCode);
     }
 

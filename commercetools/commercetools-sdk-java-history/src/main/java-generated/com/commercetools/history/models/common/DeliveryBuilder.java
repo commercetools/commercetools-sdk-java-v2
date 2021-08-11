@@ -75,11 +75,11 @@ public final class DeliveryBuilder implements Builder<Delivery> {
     }
 
     public Delivery build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(parcels);
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(id, Delivery.class + ": id is missing");
+        Objects.requireNonNull(createdAt, Delivery.class + ": createdAt is missing");
+        Objects.requireNonNull(items, Delivery.class + ": items is missing");
+        Objects.requireNonNull(parcels, Delivery.class + ": parcels is missing");
+        Objects.requireNonNull(address, Delivery.class + ": address is missing");
         return new DeliveryImpl(id, createdAt, items, parcels, address);
     }
 

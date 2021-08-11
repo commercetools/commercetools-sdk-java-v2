@@ -44,9 +44,9 @@ public final class RemoveLocalizedEnumValuesChangeBuilder implements Builder<Rem
     }
 
     public RemoveLocalizedEnumValuesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveLocalizedEnumValuesChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, RemoveLocalizedEnumValuesChange.class + ": attributeName is missing");
+        Objects.requireNonNull(previousValue, RemoveLocalizedEnumValuesChange.class + ": previousValue is missing");
         return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 

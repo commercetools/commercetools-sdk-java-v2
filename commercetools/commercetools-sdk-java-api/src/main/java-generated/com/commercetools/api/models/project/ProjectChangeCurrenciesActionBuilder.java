@@ -26,7 +26,7 @@ public final class ProjectChangeCurrenciesActionBuilder implements Builder<Proje
     }
 
     public ProjectChangeCurrenciesAction build() {
-        Objects.requireNonNull(currencies);
+        Objects.requireNonNull(currencies, ProjectChangeCurrenciesAction.class + ": currencies is missing");
         return new ProjectChangeCurrenciesActionImpl(currencies);
     }
 

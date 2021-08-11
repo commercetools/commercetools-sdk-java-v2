@@ -32,8 +32,8 @@ public final class TaskTokenBuilder implements Builder<TaskToken> {
     }
 
     public TaskToken build() {
-        Objects.requireNonNull(taskId);
-        Objects.requireNonNull(uriPath);
+        Objects.requireNonNull(taskId, TaskToken.class + ": taskId is missing");
+        Objects.requireNonNull(uriPath, TaskToken.class + ": uriPath is missing");
         return new TaskTokenImpl(taskId, uriPath);
     }
 

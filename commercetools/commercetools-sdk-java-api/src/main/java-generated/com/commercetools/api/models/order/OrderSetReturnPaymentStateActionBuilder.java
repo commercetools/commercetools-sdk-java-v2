@@ -33,8 +33,8 @@ public final class OrderSetReturnPaymentStateActionBuilder implements Builder<Or
     }
 
     public OrderSetReturnPaymentStateAction build() {
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(returnItemId, OrderSetReturnPaymentStateAction.class + ": returnItemId is missing");
+        Objects.requireNonNull(paymentState, OrderSetReturnPaymentStateAction.class + ": paymentState is missing");
         return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
     }
 

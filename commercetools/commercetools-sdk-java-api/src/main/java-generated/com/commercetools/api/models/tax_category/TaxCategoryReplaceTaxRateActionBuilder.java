@@ -33,8 +33,8 @@ public final class TaxCategoryReplaceTaxRateActionBuilder implements Builder<Tax
     }
 
     public TaxCategoryReplaceTaxRateAction build() {
-        Objects.requireNonNull(taxRateId);
-        Objects.requireNonNull(taxRate);
+        Objects.requireNonNull(taxRateId, TaxCategoryReplaceTaxRateAction.class + ": taxRateId is missing");
+        Objects.requireNonNull(taxRate, TaxCategoryReplaceTaxRateAction.class + ": taxRate is missing");
         return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
     }
 

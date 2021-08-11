@@ -23,7 +23,7 @@ public final class PaymentTransactionAddedMessagePayloadBuilder
     }
 
     public PaymentTransactionAddedMessagePayload build() {
-        Objects.requireNonNull(transaction);
+        Objects.requireNonNull(transaction, PaymentTransactionAddedMessagePayload.class + ": transaction is missing");
         return new PaymentTransactionAddedMessagePayloadImpl(transaction);
     }
 

@@ -91,7 +91,7 @@ public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft
     }
 
     public SubscriptionDraft build() {
-        Objects.requireNonNull(destination);
+        Objects.requireNonNull(destination, SubscriptionDraft.class + ": destination is missing");
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
 

@@ -33,8 +33,8 @@ public final class OrderSetReturnShipmentStateActionBuilder implements Builder<O
     }
 
     public OrderSetReturnShipmentStateAction build() {
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(returnItemId, OrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
+        Objects.requireNonNull(shipmentState, OrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
         return new OrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
 

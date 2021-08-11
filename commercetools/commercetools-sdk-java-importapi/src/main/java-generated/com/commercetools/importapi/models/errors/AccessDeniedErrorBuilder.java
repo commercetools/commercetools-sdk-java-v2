@@ -21,7 +21,7 @@ public final class AccessDeniedErrorBuilder implements Builder<AccessDeniedError
     }
 
     public AccessDeniedError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, AccessDeniedError.class + ": message is missing");
         return new AccessDeniedErrorImpl(message);
     }
 

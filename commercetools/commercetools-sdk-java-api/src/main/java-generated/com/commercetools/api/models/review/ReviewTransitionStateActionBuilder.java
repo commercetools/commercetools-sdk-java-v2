@@ -37,7 +37,7 @@ public final class ReviewTransitionStateActionBuilder implements Builder<ReviewT
     }
 
     public ReviewTransitionStateAction build() {
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(state, ReviewTransitionStateAction.class + ": state is missing");
         return new ReviewTransitionStateActionImpl(state, force);
     }
 

@@ -68,11 +68,11 @@ public final class SetLineItemProductSlugChangeBuilder implements Builder<SetLin
     }
 
     public SetLineItemProductSlugChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemProductSlugChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemProductSlugChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemProductSlugChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemProductSlugChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemProductSlugChange.class + ": previousValue is missing");
         return new SetLineItemProductSlugChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

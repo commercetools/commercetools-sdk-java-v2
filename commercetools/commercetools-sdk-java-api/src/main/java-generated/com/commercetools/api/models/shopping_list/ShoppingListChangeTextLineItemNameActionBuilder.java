@@ -34,8 +34,9 @@ public final class ShoppingListChangeTextLineItemNameActionBuilder
     }
 
     public ShoppingListChangeTextLineItemNameAction build() {
-        Objects.requireNonNull(textLineItemId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(textLineItemId,
+            ShoppingListChangeTextLineItemNameAction.class + ": textLineItemId is missing");
+        Objects.requireNonNull(name, ShoppingListChangeTextLineItemNameAction.class + ": name is missing");
         return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);
     }
 

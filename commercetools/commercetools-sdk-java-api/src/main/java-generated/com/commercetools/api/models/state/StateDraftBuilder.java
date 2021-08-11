@@ -113,8 +113,8 @@ public final class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     public StateDraft build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(key, StateDraft.class + ": key is missing");
+        Objects.requireNonNull(type, StateDraft.class + ": type is missing");
         return new StateDraftImpl(key, type, name, description, initial, roles, transitions);
     }
 

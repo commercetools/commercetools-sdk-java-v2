@@ -38,8 +38,8 @@ public final class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     public MyPaymentUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, MyPaymentUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, MyPaymentUpdate.class + ": actions is missing");
         return new MyPaymentUpdateImpl(version, actions);
     }
 

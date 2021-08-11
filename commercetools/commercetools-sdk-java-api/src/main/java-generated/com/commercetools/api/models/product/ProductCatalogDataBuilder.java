@@ -54,10 +54,10 @@ public final class ProductCatalogDataBuilder implements Builder<ProductCatalogDa
     }
 
     public ProductCatalogData build() {
-        Objects.requireNonNull(published);
-        Objects.requireNonNull(current);
-        Objects.requireNonNull(staged);
-        Objects.requireNonNull(hasStagedChanges);
+        Objects.requireNonNull(published, ProductCatalogData.class + ": published is missing");
+        Objects.requireNonNull(current, ProductCatalogData.class + ": current is missing");
+        Objects.requireNonNull(staged, ProductCatalogData.class + ": staged is missing");
+        Objects.requireNonNull(hasStagedChanges, ProductCatalogData.class + ": hasStagedChanges is missing");
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
     }
 

@@ -37,7 +37,7 @@ public final class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     public SearchKeyword build() {
-        Objects.requireNonNull(text);
+        Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 

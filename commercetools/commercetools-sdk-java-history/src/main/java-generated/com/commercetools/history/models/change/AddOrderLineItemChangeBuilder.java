@@ -44,9 +44,9 @@ public final class AddOrderLineItemChangeBuilder implements Builder<AddOrderLine
     }
 
     public AddOrderLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddOrderLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddOrderLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddOrderLineItemChange.class + ": nextValue is missing");
         return new AddOrderLineItemChangeImpl(change, previousValue, nextValue);
     }
 

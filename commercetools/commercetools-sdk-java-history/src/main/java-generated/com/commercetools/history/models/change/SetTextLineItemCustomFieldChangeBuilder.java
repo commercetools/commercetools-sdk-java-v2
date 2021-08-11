@@ -77,12 +77,12 @@ public final class SetTextLineItemCustomFieldChangeBuilder implements Builder<Se
     }
 
     public SetTextLineItemCustomFieldChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(customTypeId);
-        Objects.requireNonNull(textLineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetTextLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetTextLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId, SetTextLineItemCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(textLineItem, SetTextLineItemCustomFieldChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(nextValue, SetTextLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetTextLineItemCustomFieldChange.class + ": previousValue is missing");
         return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,
             previousValue);
     }

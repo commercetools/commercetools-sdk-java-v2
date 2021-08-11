@@ -56,10 +56,11 @@ public final class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     public ChangeShoppingListLineItemQuantityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeShoppingListLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, ChangeShoppingListLineItemQuantityChange.class + ": lineItem is missing");
+        Objects.requireNonNull(previousValue,
+            ChangeShoppingListLineItemQuantityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeShoppingListLineItemQuantityChange.class + ": nextValue is missing");
         return new ChangeShoppingListLineItemQuantityChangeImpl(change, lineItem, previousValue, nextValue);
     }
 

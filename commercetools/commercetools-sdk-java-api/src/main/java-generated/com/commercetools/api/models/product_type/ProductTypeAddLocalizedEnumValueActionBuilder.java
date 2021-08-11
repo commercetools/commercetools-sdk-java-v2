@@ -34,8 +34,9 @@ public final class ProductTypeAddLocalizedEnumValueActionBuilder
     }
 
     public ProductTypeAddLocalizedEnumValueAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(attributeName,
+            ProductTypeAddLocalizedEnumValueAction.class + ": attributeName is missing");
+        Objects.requireNonNull(value, ProductTypeAddLocalizedEnumValueAction.class + ": value is missing");
         return new ProductTypeAddLocalizedEnumValueActionImpl(attributeName, value);
     }
 

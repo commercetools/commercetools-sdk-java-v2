@@ -37,7 +37,7 @@ public final class StagedOrderSetLineItemPriceActionBuilder implements Builder<S
     }
 
     public StagedOrderSetLineItemPriceAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemPriceAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 

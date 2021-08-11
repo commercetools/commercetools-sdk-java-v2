@@ -43,9 +43,9 @@ public final class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     public UnknownChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, UnknownChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, UnknownChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, UnknownChange.class + ": nextValue is missing");
         return new UnknownChangeImpl(change, previousValue, nextValue);
     }
 

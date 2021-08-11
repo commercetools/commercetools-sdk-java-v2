@@ -43,9 +43,9 @@ public final class SetExpectedDeliveryChangeBuilder implements Builder<SetExpect
     }
 
     public SetExpectedDeliveryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetExpectedDeliveryChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetExpectedDeliveryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetExpectedDeliveryChange.class + ": nextValue is missing");
         return new SetExpectedDeliveryChangeImpl(change, previousValue, nextValue);
     }
 

@@ -21,7 +21,7 @@ public final class StateKeyReferenceBuilder implements Builder<StateKeyReference
     }
 
     public StateKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, StateKeyReference.class + ": key is missing");
         return new StateKeyReferenceImpl(key);
     }
 

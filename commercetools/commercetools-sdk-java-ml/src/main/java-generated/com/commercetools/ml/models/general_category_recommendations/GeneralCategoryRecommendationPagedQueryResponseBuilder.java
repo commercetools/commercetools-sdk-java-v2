@@ -62,10 +62,10 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     public GeneralCategoryRecommendationPagedQueryResponse build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, GeneralCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
     }
 

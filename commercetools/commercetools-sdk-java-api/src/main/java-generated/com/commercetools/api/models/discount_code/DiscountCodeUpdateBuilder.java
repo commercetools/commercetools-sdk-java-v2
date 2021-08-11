@@ -39,8 +39,8 @@ public final class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpda
     }
 
     public DiscountCodeUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, DiscountCodeUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, DiscountCodeUpdate.class + ": actions is missing");
         return new DiscountCodeUpdateImpl(version, actions);
     }
 

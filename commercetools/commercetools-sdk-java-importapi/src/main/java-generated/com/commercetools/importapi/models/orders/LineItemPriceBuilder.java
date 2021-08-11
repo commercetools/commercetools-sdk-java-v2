@@ -136,7 +136,7 @@ public final class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     public LineItemPrice build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LineItemPrice.class + ": value is missing");
         return new LineItemPriceImpl(value, country, validFrom, validUntil, customerGroup, channel, discounted, tiers,
             custom);
     }

@@ -34,8 +34,8 @@ public final class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     public PaymentStatusStateTransitionMessagePayload build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(state, PaymentStatusStateTransitionMessagePayload.class + ": state is missing");
+        Objects.requireNonNull(force, PaymentStatusStateTransitionMessagePayload.class + ": force is missing");
         return new PaymentStatusStateTransitionMessagePayloadImpl(state, force);
     }
 

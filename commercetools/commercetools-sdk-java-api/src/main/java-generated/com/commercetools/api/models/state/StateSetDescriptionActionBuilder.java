@@ -22,7 +22,7 @@ public final class StateSetDescriptionActionBuilder implements Builder<StateSetD
     }
 
     public StateSetDescriptionAction build() {
-        Objects.requireNonNull(description);
+        Objects.requireNonNull(description, StateSetDescriptionAction.class + ": description is missing");
         return new StateSetDescriptionActionImpl(description);
     }
 

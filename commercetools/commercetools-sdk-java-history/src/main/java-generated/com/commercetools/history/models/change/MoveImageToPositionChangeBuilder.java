@@ -68,10 +68,10 @@ public final class MoveImageToPositionChangeBuilder implements Builder<MoveImage
     }
 
     public MoveImageToPositionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, MoveImageToPositionChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, MoveImageToPositionChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, MoveImageToPositionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, MoveImageToPositionChange.class + ": nextValue is missing");
         return new MoveImageToPositionChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

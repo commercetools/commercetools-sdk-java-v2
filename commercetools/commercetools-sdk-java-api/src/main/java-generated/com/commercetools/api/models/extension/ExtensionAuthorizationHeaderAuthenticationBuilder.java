@@ -22,7 +22,8 @@ public final class ExtensionAuthorizationHeaderAuthenticationBuilder
     }
 
     public ExtensionAuthorizationHeaderAuthentication build() {
-        Objects.requireNonNull(headerValue);
+        Objects.requireNonNull(headerValue,
+            ExtensionAuthorizationHeaderAuthentication.class + ": headerValue is missing");
         return new ExtensionAuthorizationHeaderAuthenticationImpl(headerValue);
     }
 

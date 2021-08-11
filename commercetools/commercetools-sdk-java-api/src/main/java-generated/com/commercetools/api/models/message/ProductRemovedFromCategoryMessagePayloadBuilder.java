@@ -34,8 +34,8 @@ public final class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     public ProductRemovedFromCategoryMessagePayload build() {
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(category, ProductRemovedFromCategoryMessagePayload.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductRemovedFromCategoryMessagePayload.class + ": staged is missing");
         return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);
     }
 

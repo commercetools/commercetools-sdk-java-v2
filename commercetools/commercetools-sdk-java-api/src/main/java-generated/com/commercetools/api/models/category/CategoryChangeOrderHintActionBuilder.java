@@ -21,7 +21,7 @@ public final class CategoryChangeOrderHintActionBuilder implements Builder<Categ
     }
 
     public CategoryChangeOrderHintAction build() {
-        Objects.requireNonNull(orderHint);
+        Objects.requireNonNull(orderHint, CategoryChangeOrderHintAction.class + ": orderHint is missing");
         return new CategoryChangeOrderHintActionImpl(orderHint);
     }
 

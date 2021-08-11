@@ -56,10 +56,10 @@ public final class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKe
     }
 
     public SetSearchKeywordsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetSearchKeywordsChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetSearchKeywordsChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetSearchKeywordsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSearchKeywordsChange.class + ": nextValue is missing");
         return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

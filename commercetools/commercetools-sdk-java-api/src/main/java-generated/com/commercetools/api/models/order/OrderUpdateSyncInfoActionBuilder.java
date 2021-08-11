@@ -50,7 +50,7 @@ public final class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpda
     }
 
     public OrderUpdateSyncInfoAction build() {
-        Objects.requireNonNull(channel);
+        Objects.requireNonNull(channel, OrderUpdateSyncInfoAction.class + ": channel is missing");
         return new OrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
     }
 

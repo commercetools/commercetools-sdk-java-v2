@@ -21,7 +21,7 @@ public final class CartDiscountValueRelativeBuilder implements Builder<CartDisco
     }
 
     public CartDiscountValueRelative build() {
-        Objects.requireNonNull(permyriad);
+        Objects.requireNonNull(permyriad, CartDiscountValueRelative.class + ": permyriad is missing");
         return new CartDiscountValueRelativeImpl(permyriad);
     }
 

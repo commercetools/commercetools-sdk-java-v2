@@ -50,7 +50,7 @@ public final class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     public GraphQLRequest build() {
-        Objects.requireNonNull(query);
+        Objects.requireNonNull(query, GraphQLRequest.class + ": query is missing");
         return new GraphQLRequestImpl(query, operationName, variables);
     }
 

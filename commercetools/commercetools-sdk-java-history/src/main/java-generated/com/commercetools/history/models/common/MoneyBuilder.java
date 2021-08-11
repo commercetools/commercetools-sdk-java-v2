@@ -54,10 +54,10 @@ public final class MoneyBuilder implements Builder<Money> {
     }
 
     public Money build() {
-        Objects.requireNonNull(currencyCode);
-        Objects.requireNonNull(centAmount);
-        Objects.requireNonNull(fractionDigits);
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
+        Objects.requireNonNull(centAmount, Money.class + ": centAmount is missing");
+        Objects.requireNonNull(fractionDigits, Money.class + ": fractionDigits is missing");
+        Objects.requireNonNull(type, Money.class + ": type is missing");
         return new MoneyImpl(currencyCode, centAmount, fractionDigits, type);
     }
 

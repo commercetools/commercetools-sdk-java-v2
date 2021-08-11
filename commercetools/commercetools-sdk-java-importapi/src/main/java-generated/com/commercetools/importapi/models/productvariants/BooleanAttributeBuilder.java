@@ -36,7 +36,7 @@ public final class BooleanAttributeBuilder implements Builder<BooleanAttribute> 
     }
 
     public BooleanAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, BooleanAttribute.class + ": value is missing");
         return new BooleanAttributeImpl(name, value);
     }
 

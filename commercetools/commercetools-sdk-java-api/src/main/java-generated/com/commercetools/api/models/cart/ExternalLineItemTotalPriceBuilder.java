@@ -32,8 +32,8 @@ public final class ExternalLineItemTotalPriceBuilder implements Builder<External
     }
 
     public ExternalLineItemTotalPrice build() {
-        Objects.requireNonNull(price);
-        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(price, ExternalLineItemTotalPrice.class + ": price is missing");
+        Objects.requireNonNull(totalPrice, ExternalLineItemTotalPrice.class + ": totalPrice is missing");
         return new ExternalLineItemTotalPriceImpl(price, totalPrice);
     }
 

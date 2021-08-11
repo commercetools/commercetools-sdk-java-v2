@@ -116,13 +116,13 @@ public final class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     public CustomObject build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(container);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(id, CustomObject.class + ": id is missing");
+        Objects.requireNonNull(version, CustomObject.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomObject.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomObject.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(container, CustomObject.class + ": container is missing");
+        Objects.requireNonNull(key, CustomObject.class + ": key is missing");
+        Objects.requireNonNull(value, CustomObject.class + ": value is missing");
         return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
             value);
     }

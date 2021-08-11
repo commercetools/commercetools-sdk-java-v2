@@ -37,7 +37,7 @@ public final class ProductTypeSetInputTipActionBuilder implements Builder<Produc
     }
 
     public ProductTypeSetInputTipAction build() {
-        Objects.requireNonNull(attributeName);
+        Objects.requireNonNull(attributeName, ProductTypeSetInputTipAction.class + ": attributeName is missing");
         return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
     }
 

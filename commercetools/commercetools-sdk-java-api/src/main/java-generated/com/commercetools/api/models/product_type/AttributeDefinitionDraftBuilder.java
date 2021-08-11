@@ -111,10 +111,10 @@ public final class AttributeDefinitionDraftBuilder implements Builder<AttributeD
     }
 
     public AttributeDefinitionDraft build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(label);
-        Objects.requireNonNull(isRequired);
+        Objects.requireNonNull(type, AttributeDefinitionDraft.class + ": type is missing");
+        Objects.requireNonNull(name, AttributeDefinitionDraft.class + ": name is missing");
+        Objects.requireNonNull(label, AttributeDefinitionDraft.class + ": label is missing");
+        Objects.requireNonNull(isRequired, AttributeDefinitionDraft.class + ": isRequired is missing");
         return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
             isSearchable);
     }

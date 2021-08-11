@@ -26,7 +26,7 @@ public final class DiscountCodeChangeGroupsActionBuilder implements Builder<Disc
     }
 
     public DiscountCodeChangeGroupsAction build() {
-        Objects.requireNonNull(groups);
+        Objects.requireNonNull(groups, DiscountCodeChangeGroupsAction.class + ": groups is missing");
         return new DiscountCodeChangeGroupsActionImpl(groups);
     }
 

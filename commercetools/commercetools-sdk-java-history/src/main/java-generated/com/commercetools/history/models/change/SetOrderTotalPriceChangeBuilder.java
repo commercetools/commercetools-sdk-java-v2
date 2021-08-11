@@ -44,9 +44,9 @@ public final class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTo
     }
 
     public SetOrderTotalPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetOrderTotalPriceChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetOrderTotalPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderTotalPriceChange.class + ": previousValue is missing");
         return new SetOrderTotalPriceChangeImpl(change, nextValue, previousValue);
     }
 

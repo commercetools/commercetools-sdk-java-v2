@@ -217,8 +217,8 @@ public final class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     public MyCustomerDraft build() {
-        Objects.requireNonNull(email);
-        Objects.requireNonNull(password);
+        Objects.requireNonNull(email, MyCustomerDraft.class + ": email is missing");
+        Objects.requireNonNull(password, MyCustomerDraft.class + ": password is missing");
         return new MyCustomerDraftImpl(email, password, firstName, lastName, middleName, title, dateOfBirth,
             companyName, vatId, addresses, defaultShippingAddress, defaultBillingAddress, custom, locale, stores);
     }

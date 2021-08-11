@@ -97,9 +97,9 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     public ApiClient build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(scope);
+        Objects.requireNonNull(id, ApiClient.class + ": id is missing");
+        Objects.requireNonNull(name, ApiClient.class + ": name is missing");
+        Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");
         return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);
     }
 

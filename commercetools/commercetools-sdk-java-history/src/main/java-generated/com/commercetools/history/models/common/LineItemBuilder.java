@@ -120,16 +120,16 @@ public final class LineItemBuilder implements Builder<LineItem> {
     }
 
     public LineItem build() {
-        Objects.requireNonNull(addedAt);
-        Objects.requireNonNull(custom);
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(productId);
-        Objects.requireNonNull(productSlug);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(addedAt, LineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(custom, LineItem.class + ": custom is missing");
+        Objects.requireNonNull(id, LineItem.class + ": id is missing");
+        Objects.requireNonNull(name, LineItem.class + ": name is missing");
+        Objects.requireNonNull(productId, LineItem.class + ": productId is missing");
+        Objects.requireNonNull(productSlug, LineItem.class + ": productSlug is missing");
+        Objects.requireNonNull(productType, LineItem.class + ": productType is missing");
+        Objects.requireNonNull(quantity, LineItem.class + ": quantity is missing");
+        Objects.requireNonNull(variant, LineItem.class + ": variant is missing");
+        Objects.requireNonNull(variantId, LineItem.class + ": variantId is missing");
         return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,
             variantId);
     }

@@ -21,7 +21,7 @@ public final class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> 
     }
 
     public SyntaxErrorError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SyntaxErrorError.class + ": message is missing");
         return new SyntaxErrorErrorImpl(message);
     }
 

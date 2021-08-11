@@ -41,7 +41,7 @@ public final class NumberSetAttributeBuilder implements Builder<NumberSetAttribu
     }
 
     public NumberSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, NumberSetAttribute.class + ": value is missing");
         return new NumberSetAttributeImpl(name, value);
     }
 

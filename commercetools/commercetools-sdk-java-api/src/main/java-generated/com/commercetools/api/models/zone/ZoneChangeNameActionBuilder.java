@@ -21,7 +21,7 @@ public final class ZoneChangeNameActionBuilder implements Builder<ZoneChangeName
     }
 
     public ZoneChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ZoneChangeNameAction.class + ": name is missing");
         return new ZoneChangeNameActionImpl(name);
     }
 

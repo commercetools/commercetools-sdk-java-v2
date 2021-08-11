@@ -142,14 +142,14 @@ public final class CustomerEmailChangedMessageBuilder implements Builder<Custome
     }
 
     public CustomerEmailChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(email);
+        Objects.requireNonNull(id, CustomerEmailChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerEmailChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerEmailChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerEmailChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerEmailChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerEmailChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerEmailChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(email, CustomerEmailChangedMessage.class + ": email is missing");
         return new CustomerEmailChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
     }

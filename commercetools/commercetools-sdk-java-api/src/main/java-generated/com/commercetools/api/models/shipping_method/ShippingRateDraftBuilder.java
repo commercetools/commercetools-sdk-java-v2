@@ -56,7 +56,7 @@ public final class ShippingRateDraftBuilder implements Builder<ShippingRateDraft
     }
 
     public ShippingRateDraft build() {
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(price, ShippingRateDraft.class + ": price is missing");
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 

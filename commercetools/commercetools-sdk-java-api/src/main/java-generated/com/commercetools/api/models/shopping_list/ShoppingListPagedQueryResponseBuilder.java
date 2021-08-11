@@ -76,10 +76,10 @@ public final class ShoppingListPagedQueryResponseBuilder implements Builder<Shop
     }
 
     public ShoppingListPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ShoppingListPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ShoppingListPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ShoppingListPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ShoppingListPagedQueryResponse.class + ": results is missing");
         return new ShoppingListPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

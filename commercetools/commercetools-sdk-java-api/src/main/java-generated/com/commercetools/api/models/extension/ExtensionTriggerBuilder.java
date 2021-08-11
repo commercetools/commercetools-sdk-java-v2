@@ -39,8 +39,8 @@ public final class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> 
     }
 
     public ExtensionTrigger build() {
-        Objects.requireNonNull(resourceTypeId);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(resourceTypeId, ExtensionTrigger.class + ": resourceTypeId is missing");
+        Objects.requireNonNull(actions, ExtensionTrigger.class + ": actions is missing");
         return new ExtensionTriggerImpl(resourceTypeId, actions);
     }
 

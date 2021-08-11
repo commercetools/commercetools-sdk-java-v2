@@ -43,9 +43,9 @@ public final class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     }
 
     public ChangeKeyChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeKeyChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeKeyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeKeyChange.class + ": nextValue is missing");
         return new ChangeKeyChangeImpl(change, previousValue, nextValue);
     }
 

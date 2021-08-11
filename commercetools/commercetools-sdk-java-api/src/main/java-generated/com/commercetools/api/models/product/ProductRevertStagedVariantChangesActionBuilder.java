@@ -22,7 +22,7 @@ public final class ProductRevertStagedVariantChangesActionBuilder
     }
 
     public ProductRevertStagedVariantChangesAction build() {
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(variantId, ProductRevertStagedVariantChangesAction.class + ": variantId is missing");
         return new ProductRevertStagedVariantChangesActionImpl(variantId);
     }
 

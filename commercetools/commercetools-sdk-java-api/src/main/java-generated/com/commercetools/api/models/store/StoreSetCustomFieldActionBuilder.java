@@ -36,7 +36,7 @@ public final class StoreSetCustomFieldActionBuilder implements Builder<StoreSetC
     }
 
     public StoreSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, StoreSetCustomFieldAction.class + ": name is missing");
         return new StoreSetCustomFieldActionImpl(name, value);
     }
 

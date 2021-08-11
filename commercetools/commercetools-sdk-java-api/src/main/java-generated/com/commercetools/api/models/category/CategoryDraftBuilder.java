@@ -175,8 +175,8 @@ public final class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     public CategoryDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(name, CategoryDraft.class + ": name is missing");
+        Objects.requireNonNull(slug, CategoryDraft.class + ": slug is missing");
         return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,
             metaKeywords, custom, assets, key);
     }

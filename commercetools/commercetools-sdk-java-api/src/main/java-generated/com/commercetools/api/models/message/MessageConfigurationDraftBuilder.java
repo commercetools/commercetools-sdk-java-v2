@@ -32,8 +32,9 @@ public final class MessageConfigurationDraftBuilder implements Builder<MessageCo
     }
 
     public MessageConfigurationDraft build() {
-        Objects.requireNonNull(enabled);
-        Objects.requireNonNull(deleteDaysAfterCreation);
+        Objects.requireNonNull(enabled, MessageConfigurationDraft.class + ": enabled is missing");
+        Objects.requireNonNull(deleteDaysAfterCreation,
+            MessageConfigurationDraft.class + ": deleteDaysAfterCreation is missing");
         return new MessageConfigurationDraftImpl(enabled, deleteDaysAfterCreation);
     }
 

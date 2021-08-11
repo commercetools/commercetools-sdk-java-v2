@@ -177,8 +177,8 @@ public final class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft
     }
 
     public DiscountCodeDraft build() {
-        Objects.requireNonNull(code);
-        Objects.requireNonNull(cartDiscounts);
+        Objects.requireNonNull(code, DiscountCodeDraft.class + ": code is missing");
+        Objects.requireNonNull(cartDiscounts, DiscountCodeDraft.class + ": cartDiscounts is missing");
         return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,
             maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
     }

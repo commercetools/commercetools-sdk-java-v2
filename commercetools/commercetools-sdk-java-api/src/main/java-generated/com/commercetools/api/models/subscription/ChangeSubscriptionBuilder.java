@@ -21,7 +21,7 @@ public final class ChangeSubscriptionBuilder implements Builder<ChangeSubscripti
     }
 
     public ChangeSubscription build() {
-        Objects.requireNonNull(resourceTypeId);
+        Objects.requireNonNull(resourceTypeId, ChangeSubscription.class + ": resourceTypeId is missing");
         return new ChangeSubscriptionImpl(resourceTypeId);
     }
 

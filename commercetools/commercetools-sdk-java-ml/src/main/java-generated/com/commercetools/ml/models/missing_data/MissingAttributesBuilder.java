@@ -109,10 +109,10 @@ public final class MissingAttributesBuilder implements Builder<MissingAttributes
     }
 
     public MissingAttributes build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(missingAttributeValues);
+        Objects.requireNonNull(product, MissingAttributes.class + ": product is missing");
+        Objects.requireNonNull(productType, MissingAttributes.class + ": productType is missing");
+        Objects.requireNonNull(variantId, MissingAttributes.class + ": variantId is missing");
+        Objects.requireNonNull(missingAttributeValues, MissingAttributes.class + ": missingAttributeValues is missing");
         return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,
             attributeCount, attributeCoverage);
     }

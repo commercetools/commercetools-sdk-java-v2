@@ -22,7 +22,8 @@ public final class CartDiscountChangeCartPredicateActionBuilder
     }
 
     public CartDiscountChangeCartPredicateAction build() {
-        Objects.requireNonNull(cartPredicate);
+        Objects.requireNonNull(cartPredicate,
+            CartDiscountChangeCartPredicateAction.class + ": cartPredicate is missing");
         return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);
     }
 

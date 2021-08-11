@@ -21,7 +21,7 @@ public final class ProductTypeReferenceBuilder implements Builder<ProductTypeRef
     }
 
     public ProductTypeReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ProductTypeReference.class + ": id is missing");
         return new ProductTypeReferenceImpl(id);
     }
 

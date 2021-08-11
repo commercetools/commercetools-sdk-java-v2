@@ -55,9 +55,9 @@ public final class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     public GraphQLError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(locations);
-        Objects.requireNonNull(path);
+        Objects.requireNonNull(message, GraphQLError.class + ": message is missing");
+        Objects.requireNonNull(locations, GraphQLError.class + ": locations is missing");
+        Objects.requireNonNull(path, GraphQLError.class + ": path is missing");
         return new GraphQLErrorImpl(message, locations, path);
     }
 

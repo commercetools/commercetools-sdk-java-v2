@@ -21,7 +21,7 @@ public final class LanguageUsedInStoresErrorBuilder implements Builder<LanguageU
     }
 
     public LanguageUsedInStoresError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, LanguageUsedInStoresError.class + ": message is missing");
         return new LanguageUsedInStoresErrorImpl(message);
     }
 

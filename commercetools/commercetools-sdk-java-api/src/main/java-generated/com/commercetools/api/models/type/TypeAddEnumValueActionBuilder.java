@@ -32,8 +32,8 @@ public final class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumV
     }
 
     public TypeAddEnumValueAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(fieldName, TypeAddEnumValueAction.class + ": fieldName is missing");
+        Objects.requireNonNull(value, TypeAddEnumValueAction.class + ": value is missing");
         return new TypeAddEnumValueActionImpl(fieldName, value);
     }
 

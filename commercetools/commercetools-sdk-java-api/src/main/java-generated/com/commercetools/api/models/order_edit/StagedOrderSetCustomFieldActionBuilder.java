@@ -36,7 +36,7 @@ public final class StagedOrderSetCustomFieldActionBuilder implements Builder<Sta
     }
 
     public StagedOrderSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, StagedOrderSetCustomFieldAction.class + ": name is missing");
         return new StagedOrderSetCustomFieldActionImpl(name, value);
     }
 

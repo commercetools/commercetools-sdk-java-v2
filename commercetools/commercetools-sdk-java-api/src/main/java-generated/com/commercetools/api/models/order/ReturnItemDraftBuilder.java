@@ -74,8 +74,8 @@ public final class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     public ReturnItemDraft build() {
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(quantity, ReturnItemDraft.class + ": quantity is missing");
+        Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
         return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
     }
 

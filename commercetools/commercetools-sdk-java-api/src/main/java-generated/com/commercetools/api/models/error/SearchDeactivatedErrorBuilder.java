@@ -21,7 +21,7 @@ public final class SearchDeactivatedErrorBuilder implements Builder<SearchDeacti
     }
 
     public SearchDeactivatedError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SearchDeactivatedError.class + ": message is missing");
         return new SearchDeactivatedErrorImpl(message);
     }
 

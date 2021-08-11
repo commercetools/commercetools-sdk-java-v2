@@ -43,9 +43,11 @@ public final class ProductVariantChannelAvailabilityBuilder implements Builder<P
     }
 
     public ProductVariantChannelAvailability build() {
-        Objects.requireNonNull(isOnStock);
-        Objects.requireNonNull(restockableInDays);
-        Objects.requireNonNull(availableQuantity);
+        Objects.requireNonNull(isOnStock, ProductVariantChannelAvailability.class + ": isOnStock is missing");
+        Objects.requireNonNull(restockableInDays,
+            ProductVariantChannelAvailability.class + ": restockableInDays is missing");
+        Objects.requireNonNull(availableQuantity,
+            ProductVariantChannelAvailability.class + ": availableQuantity is missing");
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
 

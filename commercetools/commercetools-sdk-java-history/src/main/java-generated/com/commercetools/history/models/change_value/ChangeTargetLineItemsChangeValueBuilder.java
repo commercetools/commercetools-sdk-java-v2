@@ -21,7 +21,7 @@ public final class ChangeTargetLineItemsChangeValueBuilder implements Builder<Ch
     }
 
     public ChangeTargetLineItemsChangeValue build() {
-        Objects.requireNonNull(predicate);
+        Objects.requireNonNull(predicate, ChangeTargetLineItemsChangeValue.class + ": predicate is missing");
         return new ChangeTargetLineItemsChangeValueImpl(predicate);
     }
 

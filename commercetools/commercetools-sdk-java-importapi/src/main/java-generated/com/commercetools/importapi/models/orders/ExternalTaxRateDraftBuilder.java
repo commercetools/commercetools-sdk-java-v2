@@ -93,8 +93,8 @@ public final class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRat
     }
 
     public ExternalTaxRateDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(country);
+        Objects.requireNonNull(name, ExternalTaxRateDraft.class + ": name is missing");
+        Objects.requireNonNull(country, ExternalTaxRateDraft.class + ": country is missing");
         return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
     }
 

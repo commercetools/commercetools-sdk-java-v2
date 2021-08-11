@@ -21,7 +21,7 @@ public final class StateChangeKeyActionBuilder implements Builder<StateChangeKey
     }
 
     public StateChangeKeyAction build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, StateChangeKeyAction.class + ": key is missing");
         return new StateChangeKeyActionImpl(key);
     }
 

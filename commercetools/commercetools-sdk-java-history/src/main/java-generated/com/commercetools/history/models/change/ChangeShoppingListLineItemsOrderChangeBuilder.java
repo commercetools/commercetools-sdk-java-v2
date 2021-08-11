@@ -58,9 +58,10 @@ public final class ChangeShoppingListLineItemsOrderChangeBuilder
     }
 
     public ChangeShoppingListLineItemsOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeShoppingListLineItemsOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue,
+            ChangeShoppingListLineItemsOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeShoppingListLineItemsOrderChange.class + ": nextValue is missing");
         return new ChangeShoppingListLineItemsOrderChangeImpl(change, previousValue, nextValue);
     }
 

@@ -74,11 +74,11 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     public ProjectCategoryRecommendationPagedQueryResponse build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
-        Objects.requireNonNull(meta);
+        Objects.requireNonNull(count, ProjectCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ProjectCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, ProjectCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProjectCategoryRecommendationPagedQueryResponse.class + ": results is missing");
+        Objects.requireNonNull(meta, ProjectCategoryRecommendationPagedQueryResponse.class + ": meta is missing");
         return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
     }
 

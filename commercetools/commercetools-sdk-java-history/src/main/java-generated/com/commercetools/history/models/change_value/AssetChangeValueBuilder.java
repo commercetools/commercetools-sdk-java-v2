@@ -32,8 +32,8 @@ public final class AssetChangeValueBuilder implements Builder<AssetChangeValue> 
     }
 
     public AssetChangeValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, AssetChangeValue.class + ": id is missing");
+        Objects.requireNonNull(name, AssetChangeValue.class + ": name is missing");
         return new AssetChangeValueImpl(id, name);
     }
 

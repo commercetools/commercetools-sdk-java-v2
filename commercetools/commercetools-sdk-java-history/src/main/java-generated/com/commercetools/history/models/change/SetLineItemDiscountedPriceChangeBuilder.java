@@ -68,11 +68,11 @@ public final class SetLineItemDiscountedPriceChangeBuilder implements Builder<Se
     }
 
     public SetLineItemDiscountedPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemDiscountedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemDiscountedPriceChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemDiscountedPriceChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemDiscountedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemDiscountedPriceChange.class + ": previousValue is missing");
         return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

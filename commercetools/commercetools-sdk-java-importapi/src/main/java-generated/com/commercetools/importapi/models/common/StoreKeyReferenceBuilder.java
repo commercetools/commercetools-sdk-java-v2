@@ -21,7 +21,7 @@ public final class StoreKeyReferenceBuilder implements Builder<StoreKeyReference
     }
 
     public StoreKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, StoreKeyReference.class + ": key is missing");
         return new StoreKeyReferenceImpl(key);
     }
 

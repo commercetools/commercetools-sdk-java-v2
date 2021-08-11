@@ -32,8 +32,8 @@ public final class MissingPricesBuilder implements Builder<MissingPrices> {
     }
 
     public MissingPrices build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(product, MissingPrices.class + ": product is missing");
+        Objects.requireNonNull(variantId, MissingPrices.class + ": variantId is missing");
         return new MissingPricesImpl(product, variantId);
     }
 

@@ -183,10 +183,10 @@ public final class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     public PriceImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(productVariant);
-        Objects.requireNonNull(product);
+        Objects.requireNonNull(key, PriceImport.class + ": key is missing");
+        Objects.requireNonNull(value, PriceImport.class + ": value is missing");
+        Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");
+        Objects.requireNonNull(product, PriceImport.class + ": product is missing");
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
             publish, tiers, custom, productVariant, product);
     }

@@ -34,8 +34,8 @@ public final class CustomLineItemTaxedPriceBuilder implements Builder<CustomLine
     }
 
     public CustomLineItemTaxedPrice build() {
-        Objects.requireNonNull(totalNet);
-        Objects.requireNonNull(totalGross);
+        Objects.requireNonNull(totalNet, CustomLineItemTaxedPrice.class + ": totalNet is missing");
+        Objects.requireNonNull(totalGross, CustomLineItemTaxedPrice.class + ": totalGross is missing");
         return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);
     }
 

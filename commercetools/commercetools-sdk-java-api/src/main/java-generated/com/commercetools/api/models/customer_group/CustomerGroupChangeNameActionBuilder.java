@@ -21,7 +21,7 @@ public final class CustomerGroupChangeNameActionBuilder implements Builder<Custo
     }
 
     public CustomerGroupChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CustomerGroupChangeNameAction.class + ": name is missing");
         return new CustomerGroupChangeNameActionImpl(name);
     }
 

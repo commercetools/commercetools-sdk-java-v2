@@ -36,7 +36,7 @@ public final class ReviewSetCustomFieldActionBuilder implements Builder<ReviewSe
     }
 
     public ReviewSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ReviewSetCustomFieldAction.class + ": name is missing");
         return new ReviewSetCustomFieldActionImpl(name, value);
     }
 

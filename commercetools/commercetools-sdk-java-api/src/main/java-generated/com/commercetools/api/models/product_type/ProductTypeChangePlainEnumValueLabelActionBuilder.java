@@ -34,8 +34,9 @@ public final class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     public ProductTypeChangePlainEnumValueLabelAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(newValue);
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangePlainEnumValueLabelAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newValue, ProductTypeChangePlainEnumValueLabelAction.class + ": newValue is missing");
         return new ProductTypeChangePlainEnumValueLabelActionImpl(attributeName, newValue);
     }
 

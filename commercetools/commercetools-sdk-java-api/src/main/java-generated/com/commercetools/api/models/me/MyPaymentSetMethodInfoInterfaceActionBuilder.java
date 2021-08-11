@@ -22,7 +22,7 @@ public final class MyPaymentSetMethodInfoInterfaceActionBuilder
     }
 
     public MyPaymentSetMethodInfoInterfaceAction build() {
-        Objects.requireNonNull(_interface);
+        Objects.requireNonNull(_interface, MyPaymentSetMethodInfoInterfaceAction.class + ": interface is missing");
         return new MyPaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
 

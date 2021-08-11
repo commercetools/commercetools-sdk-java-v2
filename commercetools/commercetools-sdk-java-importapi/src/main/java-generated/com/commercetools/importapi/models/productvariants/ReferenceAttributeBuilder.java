@@ -36,7 +36,7 @@ public final class ReferenceAttributeBuilder implements Builder<ReferenceAttribu
     }
 
     public ReferenceAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, ReferenceAttribute.class + ": value is missing");
         return new ReferenceAttributeImpl(name, value);
     }
 

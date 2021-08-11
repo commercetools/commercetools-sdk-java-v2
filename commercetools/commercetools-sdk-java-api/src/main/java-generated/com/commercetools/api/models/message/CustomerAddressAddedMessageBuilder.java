@@ -142,14 +142,14 @@ public final class CustomerAddressAddedMessageBuilder implements Builder<Custome
     }
 
     public CustomerAddressAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(id, CustomerAddressAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerAddressAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerAddressAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerAddressAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerAddressAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerAddressAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerAddressAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(address, CustomerAddressAddedMessage.class + ": address is missing");
         return new CustomerAddressAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
     }

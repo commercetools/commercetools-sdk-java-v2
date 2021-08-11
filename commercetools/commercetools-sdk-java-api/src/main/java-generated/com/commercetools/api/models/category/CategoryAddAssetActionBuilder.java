@@ -36,7 +36,7 @@ public final class CategoryAddAssetActionBuilder implements Builder<CategoryAddA
     }
 
     public CategoryAddAssetAction build() {
-        Objects.requireNonNull(asset);
+        Objects.requireNonNull(asset, CategoryAddAssetAction.class + ": asset is missing");
         return new CategoryAddAssetActionImpl(asset, position);
     }
 

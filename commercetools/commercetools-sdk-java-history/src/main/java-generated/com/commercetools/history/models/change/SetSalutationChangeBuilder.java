@@ -43,9 +43,9 @@ public final class SetSalutationChangeBuilder implements Builder<SetSalutationCh
     }
 
     public SetSalutationChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetSalutationChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetSalutationChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSalutationChange.class + ": nextValue is missing");
         return new SetSalutationChangeImpl(change, previousValue, nextValue);
     }
 

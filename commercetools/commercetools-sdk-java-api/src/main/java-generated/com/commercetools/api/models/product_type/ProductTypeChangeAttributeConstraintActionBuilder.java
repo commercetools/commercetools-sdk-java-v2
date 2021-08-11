@@ -34,8 +34,9 @@ public final class ProductTypeChangeAttributeConstraintActionBuilder
     }
 
     public ProductTypeChangeAttributeConstraintAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(newValue);
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangeAttributeConstraintAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newValue, ProductTypeChangeAttributeConstraintAction.class + ": newValue is missing");
         return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);
     }
 

@@ -75,7 +75,7 @@ public final class ProductAddAssetActionBuilder implements Builder<ProductAddAss
     }
 
     public ProductAddAssetAction build() {
-        Objects.requireNonNull(asset);
+        Objects.requireNonNull(asset, ProductAddAssetAction.class + ": asset is missing");
         return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
     }
 

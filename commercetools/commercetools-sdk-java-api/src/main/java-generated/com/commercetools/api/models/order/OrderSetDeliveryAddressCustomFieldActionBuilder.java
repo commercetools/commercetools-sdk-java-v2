@@ -48,8 +48,8 @@ public final class OrderSetDeliveryAddressCustomFieldActionBuilder
     }
 
     public OrderSetDeliveryAddressCustomFieldAction build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressCustomFieldAction.class + ": deliveryId is missing");
+        Objects.requireNonNull(name, OrderSetDeliveryAddressCustomFieldAction.class + ": name is missing");
         return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
     }
 

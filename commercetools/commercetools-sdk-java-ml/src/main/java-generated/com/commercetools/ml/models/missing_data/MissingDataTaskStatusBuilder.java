@@ -44,9 +44,9 @@ public final class MissingDataTaskStatusBuilder implements Builder<MissingDataTa
     }
 
     public MissingDataTaskStatus build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(expires);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(state, MissingDataTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(expires, MissingDataTaskStatus.class + ": expires is missing");
+        Objects.requireNonNull(result, MissingDataTaskStatus.class + ": result is missing");
         return new MissingDataTaskStatusImpl(state, expires, result);
     }
 

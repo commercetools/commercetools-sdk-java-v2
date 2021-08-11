@@ -21,7 +21,7 @@ public final class PaymentSetInterfaceIdActionBuilder implements Builder<Payment
     }
 
     public PaymentSetInterfaceIdAction build() {
-        Objects.requireNonNull(interfaceId);
+        Objects.requireNonNull(interfaceId, PaymentSetInterfaceIdAction.class + ": interfaceId is missing");
         return new PaymentSetInterfaceIdActionImpl(interfaceId);
     }
 

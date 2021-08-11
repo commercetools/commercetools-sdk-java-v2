@@ -28,7 +28,7 @@ public final class AttributeLocalizedEnumTypeBuilder implements Builder<Attribut
     }
 
     public AttributeLocalizedEnumType build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, AttributeLocalizedEnumType.class + ": values is missing");
         return new AttributeLocalizedEnumTypeImpl(values);
     }
 

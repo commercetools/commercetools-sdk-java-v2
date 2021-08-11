@@ -104,13 +104,13 @@ public final class CustomLineItemReturnItemBuilder implements Builder<CustomLine
     }
 
     public CustomLineItemReturnItem build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(shipmentState);
-        Objects.requireNonNull(paymentState);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(id, CustomLineItemReturnItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, CustomLineItemReturnItem.class + ": quantity is missing");
+        Objects.requireNonNull(shipmentState, CustomLineItemReturnItem.class + ": shipmentState is missing");
+        Objects.requireNonNull(paymentState, CustomLineItemReturnItem.class + ": paymentState is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomLineItemReturnItem.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(createdAt, CustomLineItemReturnItem.class + ": createdAt is missing");
+        Objects.requireNonNull(customLineItemId, CustomLineItemReturnItem.class + ": customLineItemId is missing");
         return new CustomLineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt,
             createdAt, customLineItemId);
     }

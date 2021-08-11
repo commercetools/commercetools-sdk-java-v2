@@ -63,7 +63,8 @@ public final class ReviewRatingSetMessagePayloadBuilder implements Builder<Revie
     }
 
     public ReviewRatingSetMessagePayload build() {
-        Objects.requireNonNull(includedInStatistics);
+        Objects.requireNonNull(includedInStatistics,
+            ReviewRatingSetMessagePayload.class + ": includedInStatistics is missing");
         return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
     }
 

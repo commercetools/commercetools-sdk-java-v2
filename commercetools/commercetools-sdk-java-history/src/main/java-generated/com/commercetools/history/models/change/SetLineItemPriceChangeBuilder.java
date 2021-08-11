@@ -56,10 +56,10 @@ public final class SetLineItemPriceChangeBuilder implements Builder<SetLineItemP
     }
 
     public SetLineItemPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemPriceChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemPriceChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetLineItemPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemPriceChange.class + ": previousValue is missing");
         return new SetLineItemPriceChangeImpl(change, lineItem, nextValue, previousValue);
     }
 

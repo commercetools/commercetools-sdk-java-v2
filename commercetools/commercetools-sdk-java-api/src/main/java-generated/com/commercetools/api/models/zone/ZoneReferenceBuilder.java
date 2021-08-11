@@ -36,7 +36,7 @@ public final class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     public ZoneReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ZoneReference.class + ": id is missing");
         return new ZoneReferenceImpl(id, obj);
     }
 

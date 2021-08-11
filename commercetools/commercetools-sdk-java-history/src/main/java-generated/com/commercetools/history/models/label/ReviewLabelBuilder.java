@@ -32,8 +32,8 @@ public final class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     public ReviewLabel build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(title);
+        Objects.requireNonNull(key, ReviewLabel.class + ": key is missing");
+        Objects.requireNonNull(title, ReviewLabel.class + ": title is missing");
         return new ReviewLabelImpl(key, title);
     }
 

@@ -31,7 +31,7 @@ public final class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     }
 
     public SearchKeywords build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, SearchKeywords.class + ": values are missing");
         return new SearchKeywordsImpl(values);
     }
 

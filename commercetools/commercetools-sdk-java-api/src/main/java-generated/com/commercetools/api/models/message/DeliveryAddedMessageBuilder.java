@@ -142,14 +142,14 @@ public final class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedM
     }
 
     public DeliveryAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(delivery);
+        Objects.requireNonNull(id, DeliveryAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(delivery, DeliveryAddedMessage.class + ": delivery is missing");
         return new DeliveryAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
     }

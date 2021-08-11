@@ -68,11 +68,12 @@ public final class LineItemStateTransitionMessagePayloadBuilder
     }
 
     public LineItemStateTransitionMessagePayload build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(transitionDate);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(lineItemId, LineItemStateTransitionMessagePayload.class + ": lineItemId is missing");
+        Objects.requireNonNull(transitionDate,
+            LineItemStateTransitionMessagePayload.class + ": transitionDate is missing");
+        Objects.requireNonNull(quantity, LineItemStateTransitionMessagePayload.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, LineItemStateTransitionMessagePayload.class + ": fromState is missing");
+        Objects.requireNonNull(toState, LineItemStateTransitionMessagePayload.class + ": toState is missing");
         return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
     }
 

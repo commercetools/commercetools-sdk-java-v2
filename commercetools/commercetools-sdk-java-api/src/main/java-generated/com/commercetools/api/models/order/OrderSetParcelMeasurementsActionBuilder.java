@@ -37,7 +37,7 @@ public final class OrderSetParcelMeasurementsActionBuilder implements Builder<Or
     }
 
     public OrderSetParcelMeasurementsAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, OrderSetParcelMeasurementsAction.class + ": parcelId is missing");
         return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 

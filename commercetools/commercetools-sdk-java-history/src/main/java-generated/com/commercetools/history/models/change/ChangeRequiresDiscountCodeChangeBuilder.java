@@ -43,9 +43,9 @@ public final class ChangeRequiresDiscountCodeChangeBuilder implements Builder<Ch
     }
 
     public ChangeRequiresDiscountCodeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeRequiresDiscountCodeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeRequiresDiscountCodeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeRequiresDiscountCodeChange.class + ": nextValue is missing");
         return new ChangeRequiresDiscountCodeChangeImpl(change, previousValue, nextValue);
     }
 

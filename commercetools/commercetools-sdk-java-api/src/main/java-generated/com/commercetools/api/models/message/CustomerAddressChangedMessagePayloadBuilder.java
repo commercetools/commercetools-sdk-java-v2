@@ -23,7 +23,7 @@ public final class CustomerAddressChangedMessagePayloadBuilder
     }
 
     public CustomerAddressChangedMessagePayload build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, CustomerAddressChangedMessagePayload.class + ": address is missing");
         return new CustomerAddressChangedMessagePayloadImpl(address);
     }
 

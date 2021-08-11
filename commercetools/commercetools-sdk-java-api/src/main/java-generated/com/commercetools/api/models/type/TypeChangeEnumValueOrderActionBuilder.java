@@ -37,8 +37,8 @@ public final class TypeChangeEnumValueOrderActionBuilder implements Builder<Type
     }
 
     public TypeChangeEnumValueOrderAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(keys);
+        Objects.requireNonNull(fieldName, TypeChangeEnumValueOrderAction.class + ": fieldName is missing");
+        Objects.requireNonNull(keys, TypeChangeEnumValueOrderAction.class + ": keys is missing");
         return new TypeChangeEnumValueOrderActionImpl(fieldName, keys);
     }
 

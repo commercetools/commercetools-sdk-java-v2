@@ -22,7 +22,7 @@ public final class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCate
     }
 
     public TaxCategoryAddTaxRateAction build() {
-        Objects.requireNonNull(taxRate);
+        Objects.requireNonNull(taxRate, TaxCategoryAddTaxRateAction.class + ": taxRate is missing");
         return new TaxCategoryAddTaxRateActionImpl(taxRate);
     }
 

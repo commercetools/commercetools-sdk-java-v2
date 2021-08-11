@@ -22,7 +22,7 @@ public final class AttributeNestedTypeBuilder implements Builder<AttributeNested
     }
 
     public AttributeNestedType build() {
-        Objects.requireNonNull(typeReference);
+        Objects.requireNonNull(typeReference, AttributeNestedType.class + ": typeReference is missing");
         return new AttributeNestedTypeImpl(typeReference);
     }
 

@@ -34,8 +34,8 @@ public final class TypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     public TypeChangeLocalizedEnumValueLabelAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueLabelAction.class + ": fieldName is missing");
+        Objects.requireNonNull(value, TypeChangeLocalizedEnumValueLabelAction.class + ": value is missing");
         return new TypeChangeLocalizedEnumValueLabelActionImpl(fieldName, value);
     }
 

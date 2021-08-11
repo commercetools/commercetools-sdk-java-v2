@@ -78,7 +78,7 @@ public final class CartRemoveLineItemActionBuilder implements Builder<CartRemove
     }
 
     public CartRemoveLineItemAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, CartRemoveLineItemAction.class + ": lineItemId is missing");
         return new CartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }

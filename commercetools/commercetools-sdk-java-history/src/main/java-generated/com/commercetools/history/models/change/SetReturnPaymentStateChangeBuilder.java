@@ -45,9 +45,9 @@ public final class SetReturnPaymentStateChangeBuilder implements Builder<SetRetu
     }
 
     public SetReturnPaymentStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetReturnPaymentStateChange.class + ": previousValue is missing");
         return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);
     }
 

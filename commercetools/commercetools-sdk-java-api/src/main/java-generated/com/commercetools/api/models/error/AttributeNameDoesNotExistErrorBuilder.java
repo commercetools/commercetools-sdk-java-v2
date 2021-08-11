@@ -32,8 +32,9 @@ public final class AttributeNameDoesNotExistErrorBuilder implements Builder<Attr
     }
 
     public AttributeNameDoesNotExistError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(invalidAttributeName);
+        Objects.requireNonNull(message, AttributeNameDoesNotExistError.class + ": message is missing");
+        Objects.requireNonNull(invalidAttributeName,
+            AttributeNameDoesNotExistError.class + ": invalidAttributeName is missing");
         return new AttributeNameDoesNotExistErrorImpl(message, invalidAttributeName);
     }
 

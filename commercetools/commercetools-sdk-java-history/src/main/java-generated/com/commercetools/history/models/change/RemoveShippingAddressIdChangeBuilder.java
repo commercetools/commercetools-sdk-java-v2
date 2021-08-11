@@ -64,10 +64,10 @@ public final class RemoveShippingAddressIdChangeBuilder implements Builder<Remov
     }
 
     public RemoveShippingAddressIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(change, RemoveShippingAddressIdChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, RemoveShippingAddressIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, RemoveShippingAddressIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(address, RemoveShippingAddressIdChange.class + ": address is missing");
         return new RemoveShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 

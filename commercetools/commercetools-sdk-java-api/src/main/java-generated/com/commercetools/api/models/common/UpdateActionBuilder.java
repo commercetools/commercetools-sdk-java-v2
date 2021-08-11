@@ -21,7 +21,7 @@ public final class UpdateActionBuilder implements Builder<UpdateAction> {
     }
 
     public UpdateAction build() {
-        Objects.requireNonNull(action);
+        Objects.requireNonNull(action, UpdateAction.class + ": action is missing");
         return new UpdateActionImpl(action);
     }
 

@@ -43,9 +43,9 @@ public final class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameCh
     }
 
     public SetAuthorNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetAuthorNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetAuthorNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetAuthorNameChange.class + ": nextValue is missing");
         return new SetAuthorNameChangeImpl(change, previousValue, nextValue);
     }
 

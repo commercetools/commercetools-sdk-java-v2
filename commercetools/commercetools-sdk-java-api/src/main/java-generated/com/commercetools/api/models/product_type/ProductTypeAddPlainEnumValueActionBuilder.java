@@ -33,8 +33,8 @@ public final class ProductTypeAddPlainEnumValueActionBuilder implements Builder<
     }
 
     public ProductTypeAddPlainEnumValueAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(attributeName, ProductTypeAddPlainEnumValueAction.class + ": attributeName is missing");
+        Objects.requireNonNull(value, ProductTypeAddPlainEnumValueAction.class + ": value is missing");
         return new ProductTypeAddPlainEnumValueActionImpl(attributeName, value);
     }
 

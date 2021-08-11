@@ -22,7 +22,7 @@ public final class StagedOrderChangeOrderStateActionBuilder implements Builder<S
     }
 
     public StagedOrderChangeOrderStateAction build() {
-        Objects.requireNonNull(orderState);
+        Objects.requireNonNull(orderState, StagedOrderChangeOrderStateAction.class + ": orderState is missing");
         return new StagedOrderChangeOrderStateActionImpl(orderState);
     }
 

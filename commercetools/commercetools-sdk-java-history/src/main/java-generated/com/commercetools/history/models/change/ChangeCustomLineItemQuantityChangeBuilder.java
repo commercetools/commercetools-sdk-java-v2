@@ -66,11 +66,13 @@ public final class ChangeCustomLineItemQuantityChangeBuilder implements Builder<
     }
 
     public ChangeCustomLineItemQuantityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customLineItem);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeCustomLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem,
+            ChangeCustomLineItemQuantityChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            ChangeCustomLineItemQuantityChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, ChangeCustomLineItemQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeCustomLineItemQuantityChange.class + ": previousValue is missing");
         return new ChangeCustomLineItemQuantityChangeImpl(change, customLineItem, customLineItemId, nextValue,
             previousValue);
     }

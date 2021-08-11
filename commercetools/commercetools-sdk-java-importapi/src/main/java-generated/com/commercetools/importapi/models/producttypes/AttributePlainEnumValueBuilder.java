@@ -32,8 +32,8 @@ public final class AttributePlainEnumValueBuilder implements Builder<AttributePl
     }
 
     public AttributePlainEnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, AttributePlainEnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, AttributePlainEnumValue.class + ": label is missing");
         return new AttributePlainEnumValueImpl(key, label);
     }
 

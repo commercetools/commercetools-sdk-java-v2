@@ -21,7 +21,7 @@ public final class SearchFacetPathNotFoundErrorBuilder implements Builder<Search
     }
 
     public SearchFacetPathNotFoundError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SearchFacetPathNotFoundError.class + ": message is missing");
         return new SearchFacetPathNotFoundErrorImpl(message);
     }
 

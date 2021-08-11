@@ -146,8 +146,8 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     public QueryPrice build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(id, QueryPrice.class + ": id is missing");
+        Objects.requireNonNull(value, QueryPrice.class + ": value is missing");
         return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
             tiers);
     }

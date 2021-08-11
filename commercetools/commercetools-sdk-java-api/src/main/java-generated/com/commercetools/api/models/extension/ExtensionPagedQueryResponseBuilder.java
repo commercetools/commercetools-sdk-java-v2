@@ -76,10 +76,10 @@ public final class ExtensionPagedQueryResponseBuilder implements Builder<Extensi
     }
 
     public ExtensionPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ExtensionPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ExtensionPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ExtensionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ExtensionPagedQueryResponse.class + ": results is missing");
         return new ExtensionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

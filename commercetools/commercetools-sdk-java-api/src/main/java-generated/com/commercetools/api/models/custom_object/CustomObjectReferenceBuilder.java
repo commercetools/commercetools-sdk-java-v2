@@ -37,7 +37,7 @@ public final class CustomObjectReferenceBuilder implements Builder<CustomObjectR
     }
 
     public CustomObjectReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, CustomObjectReference.class + ": id is missing");
         return new CustomObjectReferenceImpl(id, obj);
     }
 

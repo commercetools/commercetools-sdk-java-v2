@@ -55,10 +55,10 @@ public final class ProductVariantAvailabilityBuilder implements Builder<ProductV
     }
 
     public ProductVariantAvailability build() {
-        Objects.requireNonNull(isOnStock);
-        Objects.requireNonNull(restockableInDays);
-        Objects.requireNonNull(availableQuantity);
-        Objects.requireNonNull(channels);
+        Objects.requireNonNull(isOnStock, ProductVariantAvailability.class + ": isOnStock is missing");
+        Objects.requireNonNull(restockableInDays, ProductVariantAvailability.class + ": restockableInDays is missing");
+        Objects.requireNonNull(availableQuantity, ProductVariantAvailability.class + ": availableQuantity is missing");
+        Objects.requireNonNull(channels, ProductVariantAvailability.class + ": channels is missing");
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 

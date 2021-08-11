@@ -142,14 +142,14 @@ public final class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetM
     }
 
     public OrderStoreSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(store);
+        Objects.requireNonNull(id, OrderStoreSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStoreSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStoreSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStoreSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStoreSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStoreSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStoreSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(store, OrderStoreSetMessage.class + ": store is missing");
         return new OrderStoreSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, store);
     }

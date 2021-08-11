@@ -22,7 +22,7 @@ public final class CategoryChangeParentActionBuilder implements Builder<Category
     }
 
     public CategoryChangeParentAction build() {
-        Objects.requireNonNull(parent);
+        Objects.requireNonNull(parent, CategoryChangeParentAction.class + ": parent is missing");
         return new CategoryChangeParentActionImpl(parent);
     }
 

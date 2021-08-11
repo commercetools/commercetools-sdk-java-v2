@@ -88,8 +88,8 @@ public final class InventoryEntryDraftBuilder implements Builder<InventoryEntryD
     }
 
     public InventoryEntryDraft build() {
-        Objects.requireNonNull(sku);
-        Objects.requireNonNull(quantityOnStock);
+        Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
         return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
             custom);
     }

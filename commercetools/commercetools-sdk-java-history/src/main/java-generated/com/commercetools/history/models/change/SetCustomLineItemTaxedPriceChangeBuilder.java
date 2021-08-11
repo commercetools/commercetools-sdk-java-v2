@@ -68,11 +68,12 @@ public final class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<S
     }
 
     public SetCustomLineItemTaxedPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customLineItem);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomLineItemTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem, SetCustomLineItemTaxedPriceChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTaxedPriceChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTaxedPriceChange.class + ": previousValue is missing");
         return new SetCustomLineItemTaxedPriceChangeImpl(change, customLineItem, customLineItemId, nextValue,
             previousValue);
     }

@@ -79,11 +79,11 @@ public final class TransitionLineItemStateChangeBuilder implements Builder<Trans
     }
 
     public TransitionLineItemStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(stateId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, TransitionLineItemStateChange.class + ": change is missing");
+        Objects.requireNonNull(lineItemId, TransitionLineItemStateChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(stateId, TransitionLineItemStateChange.class + ": stateId is missing");
+        Objects.requireNonNull(nextValue, TransitionLineItemStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, TransitionLineItemStateChange.class + ": previousValue is missing");
         return new TransitionLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
     }
 

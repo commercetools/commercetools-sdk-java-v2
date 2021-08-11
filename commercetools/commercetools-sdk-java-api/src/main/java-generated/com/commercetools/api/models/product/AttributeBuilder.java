@@ -32,8 +32,8 @@ public final class AttributeBuilder implements Builder<Attribute> {
     }
 
     public Attribute build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(name, Attribute.class + ": name is missing");
+        Objects.requireNonNull(value, Attribute.class + ": value is missing");
         return new AttributeImpl(name, value);
     }
 

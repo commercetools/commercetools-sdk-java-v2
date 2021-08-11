@@ -32,8 +32,8 @@ public final class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     public CustomFields build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(fields);
+        Objects.requireNonNull(type, CustomFields.class + ": type is missing");
+        Objects.requireNonNull(fields, CustomFields.class + ": fields is missing");
         return new CustomFieldsImpl(type, fields);
     }
 

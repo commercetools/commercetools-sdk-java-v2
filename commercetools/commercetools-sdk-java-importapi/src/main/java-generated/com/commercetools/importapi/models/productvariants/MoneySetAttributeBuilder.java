@@ -42,7 +42,7 @@ public final class MoneySetAttributeBuilder implements Builder<MoneySetAttribute
     }
 
     public MoneySetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, MoneySetAttribute.class + ": value is missing");
         return new MoneySetAttributeImpl(name, value);
     }
 

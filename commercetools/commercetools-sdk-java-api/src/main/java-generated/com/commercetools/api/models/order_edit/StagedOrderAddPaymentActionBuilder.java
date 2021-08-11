@@ -22,7 +22,7 @@ public final class StagedOrderAddPaymentActionBuilder implements Builder<StagedO
     }
 
     public StagedOrderAddPaymentAction build() {
-        Objects.requireNonNull(payment);
+        Objects.requireNonNull(payment, StagedOrderAddPaymentAction.class + ": payment is missing");
         return new StagedOrderAddPaymentActionImpl(payment);
     }
 

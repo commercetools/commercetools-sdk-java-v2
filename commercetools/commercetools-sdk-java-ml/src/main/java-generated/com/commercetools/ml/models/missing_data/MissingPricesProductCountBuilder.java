@@ -32,8 +32,8 @@ public final class MissingPricesProductCountBuilder implements Builder<MissingPr
     }
 
     public MissingPricesProductCount build() {
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(missingPrices);
+        Objects.requireNonNull(total, MissingPricesProductCount.class + ": total is missing");
+        Objects.requireNonNull(missingPrices, MissingPricesProductCount.class + ": missingPrices is missing");
         return new MissingPricesProductCountImpl(total, missingPrices);
     }
 

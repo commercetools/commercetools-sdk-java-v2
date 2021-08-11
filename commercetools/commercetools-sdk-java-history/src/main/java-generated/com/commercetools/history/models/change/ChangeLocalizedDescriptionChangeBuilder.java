@@ -45,9 +45,9 @@ public final class ChangeLocalizedDescriptionChangeBuilder implements Builder<Ch
     }
 
     public ChangeLocalizedDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeLocalizedDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeLocalizedDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeLocalizedDescriptionChange.class + ": nextValue is missing");
         return new ChangeLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

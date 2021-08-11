@@ -36,7 +36,7 @@ public final class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     public MoneyAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, MoneyAttribute.class + ": value is missing");
         return new MoneyAttributeImpl(name, value);
     }
 

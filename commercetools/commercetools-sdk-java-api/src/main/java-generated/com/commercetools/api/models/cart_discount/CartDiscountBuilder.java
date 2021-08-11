@@ -258,18 +258,18 @@ public final class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     public CartDiscount build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(cartPredicate);
-        Objects.requireNonNull(sortOrder);
-        Objects.requireNonNull(isActive);
-        Objects.requireNonNull(requiresDiscountCode);
-        Objects.requireNonNull(references);
-        Objects.requireNonNull(stackingMode);
+        Objects.requireNonNull(id, CartDiscount.class + ": id is missing");
+        Objects.requireNonNull(version, CartDiscount.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CartDiscount.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CartDiscount.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, CartDiscount.class + ": name is missing");
+        Objects.requireNonNull(value, CartDiscount.class + ": value is missing");
+        Objects.requireNonNull(cartPredicate, CartDiscount.class + ": cartPredicate is missing");
+        Objects.requireNonNull(sortOrder, CartDiscount.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, CartDiscount.class + ": isActive is missing");
+        Objects.requireNonNull(requiresDiscountCode, CartDiscount.class + ": requiresDiscountCode is missing");
+        Objects.requireNonNull(references, CartDiscount.class + ": references is missing");
+        Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
             references, stackingMode, custom);

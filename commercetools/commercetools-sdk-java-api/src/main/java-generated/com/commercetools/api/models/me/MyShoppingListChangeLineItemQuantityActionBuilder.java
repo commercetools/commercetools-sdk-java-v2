@@ -33,8 +33,9 @@ public final class MyShoppingListChangeLineItemQuantityActionBuilder
     }
 
     public MyShoppingListChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(lineItemId,
+            MyShoppingListChangeLineItemQuantityAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, MyShoppingListChangeLineItemQuantityAction.class + ": quantity is missing");
         return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);
     }
 

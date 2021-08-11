@@ -55,10 +55,14 @@ public final class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     public InventoryEntryQuantitySetMessagePayload build() {
-        Objects.requireNonNull(oldQuantityOnStock);
-        Objects.requireNonNull(newQuantityOnStock);
-        Objects.requireNonNull(oldAvailableQuantity);
-        Objects.requireNonNull(newAvailableQuantity);
+        Objects.requireNonNull(oldQuantityOnStock,
+            InventoryEntryQuantitySetMessagePayload.class + ": oldQuantityOnStock is missing");
+        Objects.requireNonNull(newQuantityOnStock,
+            InventoryEntryQuantitySetMessagePayload.class + ": newQuantityOnStock is missing");
+        Objects.requireNonNull(oldAvailableQuantity,
+            InventoryEntryQuantitySetMessagePayload.class + ": oldAvailableQuantity is missing");
+        Objects.requireNonNull(newAvailableQuantity,
+            InventoryEntryQuantitySetMessagePayload.class + ": newAvailableQuantity is missing");
         return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
             oldAvailableQuantity, newAvailableQuantity);
     }

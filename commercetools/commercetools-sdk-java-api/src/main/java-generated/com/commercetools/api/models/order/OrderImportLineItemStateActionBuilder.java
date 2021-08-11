@@ -38,8 +38,8 @@ public final class OrderImportLineItemStateActionBuilder implements Builder<Orde
     }
 
     public OrderImportLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(lineItemId, OrderImportLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(state, OrderImportLineItemStateAction.class + ": state is missing");
         return new OrderImportLineItemStateActionImpl(lineItemId, state);
     }
 

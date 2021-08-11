@@ -28,7 +28,7 @@ public final class ItemShippingDetailsDraftBuilder implements Builder<ItemShippi
     }
 
     public ItemShippingDetailsDraft build() {
-        Objects.requireNonNull(targets);
+        Objects.requireNonNull(targets, ItemShippingDetailsDraft.class + ": targets is missing");
         return new ItemShippingDetailsDraftImpl(targets);
     }
 

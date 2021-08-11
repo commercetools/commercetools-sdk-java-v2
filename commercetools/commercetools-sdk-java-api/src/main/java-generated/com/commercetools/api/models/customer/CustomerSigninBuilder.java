@@ -104,8 +104,8 @@ public final class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     public CustomerSignin build() {
-        Objects.requireNonNull(email);
-        Objects.requireNonNull(password);
+        Objects.requireNonNull(email, CustomerSignin.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerSignin.class + ": password is missing");
         return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
             anonymousId, updateProductData);
     }

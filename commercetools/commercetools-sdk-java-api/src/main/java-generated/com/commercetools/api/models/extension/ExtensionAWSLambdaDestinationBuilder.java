@@ -43,9 +43,9 @@ public final class ExtensionAWSLambdaDestinationBuilder implements Builder<Exten
     }
 
     public ExtensionAWSLambdaDestination build() {
-        Objects.requireNonNull(arn);
-        Objects.requireNonNull(accessKey);
-        Objects.requireNonNull(accessSecret);
+        Objects.requireNonNull(arn, ExtensionAWSLambdaDestination.class + ": arn is missing");
+        Objects.requireNonNull(accessKey, ExtensionAWSLambdaDestination.class + ": accessKey is missing");
+        Objects.requireNonNull(accessSecret, ExtensionAWSLambdaDestination.class + ": accessSecret is missing");
         return new ExtensionAWSLambdaDestinationImpl(arn, accessKey, accessSecret);
     }
 

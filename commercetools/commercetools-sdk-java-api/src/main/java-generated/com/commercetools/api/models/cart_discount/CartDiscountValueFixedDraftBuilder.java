@@ -27,7 +27,7 @@ public final class CartDiscountValueFixedDraftBuilder implements Builder<CartDis
     }
 
     public CartDiscountValueFixedDraft build() {
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(money, CartDiscountValueFixedDraft.class + ": money is missing");
         return new CartDiscountValueFixedDraftImpl(money);
     }
 

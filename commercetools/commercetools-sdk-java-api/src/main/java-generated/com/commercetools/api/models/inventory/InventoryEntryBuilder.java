@@ -169,13 +169,13 @@ public final class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     public InventoryEntry build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sku);
-        Objects.requireNonNull(quantityOnStock);
-        Objects.requireNonNull(availableQuantity);
+        Objects.requireNonNull(id, InventoryEntry.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntry.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntry.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntry.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sku, InventoryEntry.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
+        Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sku,
             supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }

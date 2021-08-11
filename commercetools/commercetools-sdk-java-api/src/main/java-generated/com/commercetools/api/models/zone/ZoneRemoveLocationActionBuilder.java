@@ -21,7 +21,7 @@ public final class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemove
     }
 
     public ZoneRemoveLocationAction build() {
-        Objects.requireNonNull(location);
+        Objects.requireNonNull(location, ZoneRemoveLocationAction.class + ": location is missing");
         return new ZoneRemoveLocationActionImpl(location);
     }
 

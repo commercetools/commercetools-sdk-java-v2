@@ -22,7 +22,8 @@ public final class SimilarProductSearchRequestMetaBuilder implements Builder<Sim
     }
 
     public SimilarProductSearchRequestMeta build() {
-        Objects.requireNonNull(similarityMeasures);
+        Objects.requireNonNull(similarityMeasures,
+            SimilarProductSearchRequestMeta.class + ": similarityMeasures is missing");
         return new SimilarProductSearchRequestMetaImpl(similarityMeasures);
     }
 

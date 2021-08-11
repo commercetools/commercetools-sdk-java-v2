@@ -45,9 +45,9 @@ public final class ChangeStackingModeChangeBuilder implements Builder<ChangeStac
     }
 
     public ChangeStackingModeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeStackingModeChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeStackingModeChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeStackingModeChange.class + ": previousValue is missing");
         return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);
     }
 

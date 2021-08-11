@@ -76,10 +76,10 @@ public final class CustomObjectPagedQueryResponseBuilder implements Builder<Cust
     }
 
     public CustomObjectPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, CustomObjectPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomObjectPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CustomObjectPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CustomObjectPagedQueryResponse.class + ": results is missing");
         return new CustomObjectPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

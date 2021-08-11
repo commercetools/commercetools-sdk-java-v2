@@ -21,7 +21,7 @@ public final class CategoryKeyReferenceBuilder implements Builder<CategoryKeyRef
     }
 
     public CategoryKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, CategoryKeyReference.class + ": key is missing");
         return new CategoryKeyReferenceImpl(key);
     }
 

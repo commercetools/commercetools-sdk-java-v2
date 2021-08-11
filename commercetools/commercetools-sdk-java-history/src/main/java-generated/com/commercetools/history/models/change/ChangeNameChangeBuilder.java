@@ -43,9 +43,9 @@ public final class ChangeNameChangeBuilder implements Builder<ChangeNameChange> 
     }
 
     public ChangeNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeNameChange.class + ": nextValue is missing");
         return new ChangeNameChangeImpl(change, previousValue, nextValue);
     }
 

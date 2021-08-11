@@ -21,7 +21,7 @@ public final class ShippingRatePriceTierBuilder implements Builder<ShippingRateP
     }
 
     public ShippingRatePriceTier build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, ShippingRatePriceTier.class + ": type is missing");
         return new ShippingRatePriceTierImpl(type);
     }
 

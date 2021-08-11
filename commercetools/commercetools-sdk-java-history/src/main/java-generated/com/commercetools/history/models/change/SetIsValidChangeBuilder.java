@@ -43,9 +43,9 @@ public final class SetIsValidChangeBuilder implements Builder<SetIsValidChange> 
     }
 
     public SetIsValidChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetIsValidChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetIsValidChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetIsValidChange.class + ": nextValue is missing");
         return new SetIsValidChangeImpl(change, previousValue, nextValue);
     }
 

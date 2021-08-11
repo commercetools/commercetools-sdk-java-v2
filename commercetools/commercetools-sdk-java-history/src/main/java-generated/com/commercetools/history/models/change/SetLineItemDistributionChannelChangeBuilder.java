@@ -69,11 +69,12 @@ public final class SetLineItemDistributionChannelChangeBuilder
     }
 
     public SetLineItemDistributionChannelChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemDistributionChannelChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemDistributionChannelChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemDistributionChannelChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemDistributionChannelChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetLineItemDistributionChannelChange.class + ": previousValue is missing");
         return new SetLineItemDistributionChannelChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

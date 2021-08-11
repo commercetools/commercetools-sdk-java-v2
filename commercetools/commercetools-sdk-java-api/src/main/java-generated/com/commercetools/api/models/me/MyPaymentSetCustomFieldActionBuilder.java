@@ -36,7 +36,7 @@ public final class MyPaymentSetCustomFieldActionBuilder implements Builder<MyPay
     }
 
     public MyPaymentSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyPaymentSetCustomFieldAction.class + ": name is missing");
         return new MyPaymentSetCustomFieldActionImpl(name, value);
     }
 

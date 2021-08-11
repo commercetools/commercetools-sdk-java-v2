@@ -36,7 +36,7 @@ public final class ConcurrentModificationErrorBuilder implements Builder<Concurr
     }
 
     public ConcurrentModificationError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");
         return new ConcurrentModificationErrorImpl(message, currentVersion);
     }
 

@@ -21,7 +21,7 @@ public final class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange
     }
 
     public VerifyEmailChange build() {
-        Objects.requireNonNull(change);
+        Objects.requireNonNull(change, VerifyEmailChange.class + ": change is missing");
         return new VerifyEmailChangeImpl(change);
     }
 

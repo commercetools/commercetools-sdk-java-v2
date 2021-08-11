@@ -45,9 +45,9 @@ public final class InvalidStateTransitionErrorBuilder implements Builder<Invalid
     }
 
     public InvalidStateTransitionError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(currentState);
-        Objects.requireNonNull(newState);
+        Objects.requireNonNull(message, InvalidStateTransitionError.class + ": message is missing");
+        Objects.requireNonNull(currentState, InvalidStateTransitionError.class + ": currentState is missing");
+        Objects.requireNonNull(newState, InvalidStateTransitionError.class + ": newState is missing");
         return new InvalidStateTransitionErrorImpl(message, currentState, newState);
     }
 

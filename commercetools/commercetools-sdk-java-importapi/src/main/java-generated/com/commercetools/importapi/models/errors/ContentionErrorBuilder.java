@@ -21,7 +21,7 @@ public final class ContentionErrorBuilder implements Builder<ContentionError> {
     }
 
     public ContentionError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ContentionError.class + ": message is missing");
         return new ContentionErrorImpl(message);
     }
 

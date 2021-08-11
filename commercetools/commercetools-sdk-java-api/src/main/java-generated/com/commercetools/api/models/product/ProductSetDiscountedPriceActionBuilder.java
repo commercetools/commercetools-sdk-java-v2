@@ -50,7 +50,7 @@ public final class ProductSetDiscountedPriceActionBuilder implements Builder<Pro
     }
 
     public ProductSetDiscountedPriceAction build() {
-        Objects.requireNonNull(priceId);
+        Objects.requireNonNull(priceId, ProductSetDiscountedPriceAction.class + ": priceId is missing");
         return new ProductSetDiscountedPriceActionImpl(priceId, staged, discounted);
     }
 

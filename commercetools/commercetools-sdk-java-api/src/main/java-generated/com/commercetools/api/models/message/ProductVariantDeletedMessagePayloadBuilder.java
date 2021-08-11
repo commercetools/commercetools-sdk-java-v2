@@ -38,8 +38,9 @@ public final class ProductVariantDeletedMessagePayloadBuilder implements Builder
     }
 
     public ProductVariantDeletedMessagePayload build() {
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(removedImageUrls);
+        Objects.requireNonNull(variant, ProductVariantDeletedMessagePayload.class + ": variant is missing");
+        Objects.requireNonNull(removedImageUrls,
+            ProductVariantDeletedMessagePayload.class + ": removedImageUrls is missing");
         return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);
     }
 

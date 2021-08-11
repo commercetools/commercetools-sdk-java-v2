@@ -44,9 +44,9 @@ public final class SetCustomerGroupChangeBuilder implements Builder<SetCustomerG
     }
 
     public SetCustomerGroupChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCustomerGroupChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomerGroupChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomerGroupChange.class + ": nextValue is missing");
         return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);
     }
 

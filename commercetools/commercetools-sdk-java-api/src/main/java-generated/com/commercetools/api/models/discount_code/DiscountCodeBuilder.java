@@ -261,15 +261,15 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     public DiscountCode build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(code);
-        Objects.requireNonNull(cartDiscounts);
-        Objects.requireNonNull(isActive);
-        Objects.requireNonNull(references);
-        Objects.requireNonNull(groups);
+        Objects.requireNonNull(id, DiscountCode.class + ": id is missing");
+        Objects.requireNonNull(version, DiscountCode.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DiscountCode.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DiscountCode.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(code, DiscountCode.class + ": code is missing");
+        Objects.requireNonNull(cartDiscounts, DiscountCode.class + ": cartDiscounts is missing");
+        Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
+        Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
+        Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);

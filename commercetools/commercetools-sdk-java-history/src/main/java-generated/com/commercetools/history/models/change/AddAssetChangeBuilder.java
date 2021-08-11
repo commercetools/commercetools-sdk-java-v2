@@ -43,9 +43,9 @@ public final class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     public AddAssetChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, AddAssetChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddAssetChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddAssetChange.class + ": previousValue is missing");
         return new AddAssetChangeImpl(change, nextValue, previousValue);
     }
 

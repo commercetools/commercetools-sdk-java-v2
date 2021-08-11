@@ -36,7 +36,7 @@ public final class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateE
     }
 
     public ResourceUpdateError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ResourceUpdateError.class + ": message is missing");
         return new ResourceUpdateErrorImpl(message, resource);
     }
 

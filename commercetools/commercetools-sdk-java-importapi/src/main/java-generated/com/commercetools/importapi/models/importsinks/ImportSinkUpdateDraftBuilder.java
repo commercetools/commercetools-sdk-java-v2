@@ -37,7 +37,7 @@ public final class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpd
     }
 
     public ImportSinkUpdateDraft build() {
-        Objects.requireNonNull(version);
+        Objects.requireNonNull(version, ImportSinkUpdateDraft.class + ": version is missing");
         return new ImportSinkUpdateDraftImpl(version, resourceType);
     }
 

@@ -39,8 +39,8 @@ public final class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     public ZoneRateDraft build() {
-        Objects.requireNonNull(zone);
-        Objects.requireNonNull(shippingRates);
+        Objects.requireNonNull(zone, ZoneRateDraft.class + ": zone is missing");
+        Objects.requireNonNull(shippingRates, ZoneRateDraft.class + ": shippingRates is missing");
         return new ZoneRateDraftImpl(zone, shippingRates);
     }
 

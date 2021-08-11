@@ -76,10 +76,10 @@ public final class DiscountCodePagedQueryResponseBuilder implements Builder<Disc
     }
 
     public DiscountCodePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, DiscountCodePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, DiscountCodePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, DiscountCodePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, DiscountCodePagedQueryResponse.class + ": results is missing");
         return new DiscountCodePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

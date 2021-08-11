@@ -56,7 +56,7 @@ public final class StagedOrderAddReturnInfoActionBuilder implements Builder<Stag
     }
 
     public StagedOrderAddReturnInfoAction build() {
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 

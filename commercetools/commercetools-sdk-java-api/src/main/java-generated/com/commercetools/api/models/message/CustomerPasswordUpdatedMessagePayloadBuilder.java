@@ -22,7 +22,7 @@ public final class CustomerPasswordUpdatedMessagePayloadBuilder
     }
 
     public CustomerPasswordUpdatedMessagePayload build() {
-        Objects.requireNonNull(reset);
+        Objects.requireNonNull(reset, CustomerPasswordUpdatedMessagePayload.class + ": reset is missing");
         return new CustomerPasswordUpdatedMessagePayloadImpl(reset);
     }
 

@@ -22,7 +22,7 @@ public final class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<
     }
 
     public OrderReturnInfoAddedMessagePayload build() {
-        Objects.requireNonNull(returnInfo);
+        Objects.requireNonNull(returnInfo, OrderReturnInfoAddedMessagePayload.class + ": returnInfo is missing");
         return new OrderReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
 

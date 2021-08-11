@@ -49,7 +49,7 @@ public final class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAc
     }
 
     public ProductSetSkuAction build() {
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(variantId, ProductSetSkuAction.class + ": variantId is missing");
         return new ProductSetSkuActionImpl(variantId, sku, staged);
     }
 

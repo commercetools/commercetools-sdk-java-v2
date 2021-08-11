@@ -73,10 +73,11 @@ public final class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     public OrderTransitionCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(customLineItemId,
+            OrderTransitionCustomLineItemStateAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(quantity, OrderTransitionCustomLineItemStateAction.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, OrderTransitionCustomLineItemStateAction.class + ": fromState is missing");
+        Objects.requireNonNull(toState, OrderTransitionCustomLineItemStateAction.class + ": toState is missing");
         return new OrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

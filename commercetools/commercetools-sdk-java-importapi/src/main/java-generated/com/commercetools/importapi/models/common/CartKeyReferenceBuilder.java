@@ -21,7 +21,7 @@ public final class CartKeyReferenceBuilder implements Builder<CartKeyReference> 
     }
 
     public CartKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, CartKeyReference.class + ": key is missing");
         return new CartKeyReferenceImpl(key);
     }
 

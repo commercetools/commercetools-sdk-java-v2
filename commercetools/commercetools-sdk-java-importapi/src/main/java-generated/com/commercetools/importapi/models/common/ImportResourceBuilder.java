@@ -21,7 +21,7 @@ public final class ImportResourceBuilder implements Builder<ImportResource> {
     }
 
     public ImportResource build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ImportResource.class + ": key is missing");
         return new ImportResourceImpl(key);
     }
 

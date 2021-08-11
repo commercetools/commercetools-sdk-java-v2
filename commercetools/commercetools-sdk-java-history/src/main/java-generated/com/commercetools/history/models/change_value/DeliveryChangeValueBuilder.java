@@ -55,9 +55,9 @@ public final class DeliveryChangeValueBuilder implements Builder<DeliveryChangeV
     }
 
     public DeliveryChangeValue build() {
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(address);
-        Objects.requireNonNull(parcels);
+        Objects.requireNonNull(items, DeliveryChangeValue.class + ": items is missing");
+        Objects.requireNonNull(address, DeliveryChangeValue.class + ": address is missing");
+        Objects.requireNonNull(parcels, DeliveryChangeValue.class + ": parcels is missing");
         return new DeliveryChangeValueImpl(items, address, parcels);
     }
 

@@ -37,7 +37,7 @@ public final class CartSetBillingAddressCustomFieldActionBuilder
     }
 
     public CartSetBillingAddressCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CartSetBillingAddressCustomFieldAction.class + ": name is missing");
         return new CartSetBillingAddressCustomFieldActionImpl(name, value);
     }
 

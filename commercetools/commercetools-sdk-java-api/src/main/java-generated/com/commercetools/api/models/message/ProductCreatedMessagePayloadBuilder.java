@@ -22,7 +22,8 @@ public final class ProductCreatedMessagePayloadBuilder implements Builder<Produc
     }
 
     public ProductCreatedMessagePayload build() {
-        Objects.requireNonNull(productProjection);
+        Objects.requireNonNull(productProjection,
+            ProductCreatedMessagePayload.class + ": productProjection is missing");
         return new ProductCreatedMessagePayloadImpl(productProjection);
     }
 

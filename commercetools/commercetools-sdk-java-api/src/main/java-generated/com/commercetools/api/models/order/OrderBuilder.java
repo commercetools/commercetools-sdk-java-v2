@@ -569,18 +569,18 @@ public final class OrderBuilder implements Builder<Order> {
     }
 
     public Order build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(lineItems);
-        Objects.requireNonNull(customLineItems);
-        Objects.requireNonNull(totalPrice);
-        Objects.requireNonNull(orderState);
-        Objects.requireNonNull(syncInfo);
-        Objects.requireNonNull(lastMessageSequenceNumber);
-        Objects.requireNonNull(origin);
-        Objects.requireNonNull(refusedGifts);
+        Objects.requireNonNull(id, Order.class + ": id is missing");
+        Objects.requireNonNull(version, Order.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Order.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Order.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, Order.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, Order.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, Order.class + ": totalPrice is missing");
+        Objects.requireNonNull(orderState, Order.class + ": orderState is missing");
+        Objects.requireNonNull(syncInfo, Order.class + ": syncInfo is missing");
+        Objects.requireNonNull(lastMessageSequenceNumber, Order.class + ": lastMessageSequenceNumber is missing");
+        Objects.requireNonNull(origin, Order.class + ": origin is missing");
+        Objects.requireNonNull(refusedGifts, Order.class + ": refusedGifts is missing");
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

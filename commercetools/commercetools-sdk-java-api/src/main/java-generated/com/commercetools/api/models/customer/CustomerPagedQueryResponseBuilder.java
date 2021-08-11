@@ -75,10 +75,10 @@ public final class CustomerPagedQueryResponseBuilder implements Builder<Customer
     }
 
     public CustomerPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, CustomerPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomerPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CustomerPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CustomerPagedQueryResponse.class + ": results is missing");
         return new CustomerPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

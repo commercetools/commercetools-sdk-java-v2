@@ -58,10 +58,13 @@ public final class AttributeDefinitionAlreadyExistsErrorBuilder
     }
 
     public AttributeDefinitionAlreadyExistsError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(conflictingProductTypeId);
-        Objects.requireNonNull(conflictingProductTypeName);
-        Objects.requireNonNull(conflictingAttributeName);
+        Objects.requireNonNull(message, AttributeDefinitionAlreadyExistsError.class + ": message is missing");
+        Objects.requireNonNull(conflictingProductTypeId,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeId is missing");
+        Objects.requireNonNull(conflictingProductTypeName,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeName is missing");
+        Objects.requireNonNull(conflictingAttributeName,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingAttributeName is missing");
         return new AttributeDefinitionAlreadyExistsErrorImpl(message, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }

@@ -43,9 +43,9 @@ public final class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameCh
     }
 
     public SetMiddleNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMiddleNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMiddleNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMiddleNameChange.class + ": nextValue is missing");
         return new SetMiddleNameChangeImpl(change, previousValue, nextValue);
     }
 

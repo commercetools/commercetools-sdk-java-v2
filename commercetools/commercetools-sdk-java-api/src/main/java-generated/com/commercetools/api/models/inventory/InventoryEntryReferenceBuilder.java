@@ -37,7 +37,7 @@ public final class InventoryEntryReferenceBuilder implements Builder<InventoryEn
     }
 
     public InventoryEntryReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, InventoryEntryReference.class + ": id is missing");
         return new InventoryEntryReferenceImpl(id, obj);
     }
 

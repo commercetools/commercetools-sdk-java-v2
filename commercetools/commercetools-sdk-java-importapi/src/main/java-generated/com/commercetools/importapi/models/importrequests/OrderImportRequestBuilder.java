@@ -28,7 +28,7 @@ public final class OrderImportRequestBuilder implements Builder<OrderImportReque
     }
 
     public OrderImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, OrderImportRequest.class + ": resources is missing");
         return new OrderImportRequestImpl(resources);
     }
 

@@ -36,7 +36,7 @@ public final class EnumAttributeBuilder implements Builder<EnumAttribute> {
     }
 
     public EnumAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, EnumAttribute.class + ": value is missing");
         return new EnumAttributeImpl(name, value);
     }
 

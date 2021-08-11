@@ -77,12 +77,12 @@ public final class SetDiscountedPriceChangeBuilder implements Builder<SetDiscoun
     }
 
     public SetDiscountedPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetDiscountedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetDiscountedPriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetDiscountedPriceChange.class + ": variant is missing");
+        Objects.requireNonNull(priceId, SetDiscountedPriceChange.class + ": priceId is missing");
+        Objects.requireNonNull(previousValue, SetDiscountedPriceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDiscountedPriceChange.class + ": nextValue is missing");
         return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
     }
 

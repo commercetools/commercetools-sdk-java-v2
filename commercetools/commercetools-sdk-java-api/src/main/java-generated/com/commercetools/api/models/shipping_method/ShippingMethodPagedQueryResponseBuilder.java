@@ -80,8 +80,8 @@ public final class ShippingMethodPagedQueryResponseBuilder implements Builder<Sh
     }
 
     public ShippingMethodPagedQueryResponse build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(count, ShippingMethodPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(results, ShippingMethodPagedQueryResponse.class + ": results is missing");
         return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

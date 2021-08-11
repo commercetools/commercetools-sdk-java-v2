@@ -21,7 +21,7 @@ public final class CartDiscountValueRelativeDraftBuilder implements Builder<Cart
     }
 
     public CartDiscountValueRelativeDraft build() {
-        Objects.requireNonNull(permyriad);
+        Objects.requireNonNull(permyriad, CartDiscountValueRelativeDraft.class + ": permyriad is missing");
         return new CartDiscountValueRelativeDraftImpl(permyriad);
     }
 

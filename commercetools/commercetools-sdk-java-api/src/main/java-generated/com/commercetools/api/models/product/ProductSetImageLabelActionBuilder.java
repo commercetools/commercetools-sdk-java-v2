@@ -75,7 +75,7 @@ public final class ProductSetImageLabelActionBuilder implements Builder<ProductS
     }
 
     public ProductSetImageLabelAction build() {
-        Objects.requireNonNull(imageUrl);
+        Objects.requireNonNull(imageUrl, ProductSetImageLabelAction.class + ": imageUrl is missing");
         return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);
     }
 

@@ -32,8 +32,8 @@ public final class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     public OrderLabel build() {
-        Objects.requireNonNull(customerEmail);
-        Objects.requireNonNull(orderNumber);
+        Objects.requireNonNull(customerEmail, OrderLabel.class + ": customerEmail is missing");
+        Objects.requireNonNull(orderNumber, OrderLabel.class + ": orderNumber is missing");
         return new OrderLabelImpl(customerEmail, orderNumber);
     }
 

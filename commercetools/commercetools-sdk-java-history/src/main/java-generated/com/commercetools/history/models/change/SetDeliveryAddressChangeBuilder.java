@@ -55,10 +55,10 @@ public final class SetDeliveryAddressChangeBuilder implements Builder<SetDeliver
     }
 
     public SetDeliveryAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetDeliveryAddressChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, SetDeliveryAddressChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(nextValue, SetDeliveryAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDeliveryAddressChange.class + ": previousValue is missing");
         return new SetDeliveryAddressChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 

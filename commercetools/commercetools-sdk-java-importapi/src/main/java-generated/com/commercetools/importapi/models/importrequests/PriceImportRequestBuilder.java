@@ -28,7 +28,7 @@ public final class PriceImportRequestBuilder implements Builder<PriceImportReque
     }
 
     public PriceImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, PriceImportRequest.class + ": resources is missing");
         return new PriceImportRequestImpl(resources);
     }
 

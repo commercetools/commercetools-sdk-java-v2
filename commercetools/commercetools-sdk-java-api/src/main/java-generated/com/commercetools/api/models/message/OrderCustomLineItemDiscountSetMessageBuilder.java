@@ -176,15 +176,20 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder
     }
 
     public OrderCustomLineItemDiscountSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(discountedPricePerQuantity);
+        Objects.requireNonNull(id, OrderCustomLineItemDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomLineItemDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomLineItemDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            OrderCustomLineItemDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            OrderCustomLineItemDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomLineItemDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderCustomLineItemDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessage.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
         return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
             discountedPricePerQuantity, taxedPrice);

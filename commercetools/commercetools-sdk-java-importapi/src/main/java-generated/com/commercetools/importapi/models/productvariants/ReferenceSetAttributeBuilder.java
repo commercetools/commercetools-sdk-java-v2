@@ -42,7 +42,7 @@ public final class ReferenceSetAttributeBuilder implements Builder<ReferenceSetA
     }
 
     public ReferenceSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, ReferenceSetAttribute.class + ": value is missing");
         return new ReferenceSetAttributeImpl(name, value);
     }
 

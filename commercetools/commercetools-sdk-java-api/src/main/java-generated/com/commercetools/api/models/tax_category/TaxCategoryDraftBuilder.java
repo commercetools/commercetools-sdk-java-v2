@@ -66,8 +66,8 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
     }
 
     public TaxCategoryDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(rates);
+        Objects.requireNonNull(name, TaxCategoryDraft.class + ": name is missing");
+        Objects.requireNonNull(rates, TaxCategoryDraft.class + ": rates is missing");
         return new TaxCategoryDraftImpl(name, description, rates, key);
     }
 

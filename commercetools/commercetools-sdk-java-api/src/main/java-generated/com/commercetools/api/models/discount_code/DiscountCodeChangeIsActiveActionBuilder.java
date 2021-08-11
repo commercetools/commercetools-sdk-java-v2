@@ -21,7 +21,7 @@ public final class DiscountCodeChangeIsActiveActionBuilder implements Builder<Di
     }
 
     public DiscountCodeChangeIsActiveAction build() {
-        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(isActive, DiscountCodeChangeIsActiveAction.class + ": isActive is missing");
         return new DiscountCodeChangeIsActiveActionImpl(isActive);
     }
 

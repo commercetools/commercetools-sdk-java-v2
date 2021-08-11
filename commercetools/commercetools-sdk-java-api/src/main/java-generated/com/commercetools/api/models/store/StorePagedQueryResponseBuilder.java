@@ -75,10 +75,10 @@ public final class StorePagedQueryResponseBuilder implements Builder<StorePagedQ
     }
 
     public StorePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, StorePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, StorePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, StorePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, StorePagedQueryResponse.class + ": results is missing");
         return new StorePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

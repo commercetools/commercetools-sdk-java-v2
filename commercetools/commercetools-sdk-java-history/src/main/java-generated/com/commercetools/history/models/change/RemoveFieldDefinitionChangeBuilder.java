@@ -33,8 +33,8 @@ public final class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveF
     }
 
     public RemoveFieldDefinitionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveFieldDefinitionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveFieldDefinitionChange.class + ": previousValue is missing");
         return new RemoveFieldDefinitionChangeImpl(change, previousValue);
     }
 

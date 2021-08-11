@@ -21,7 +21,7 @@ public final class DeliveryCloudEventsFormatBuilder implements Builder<DeliveryC
     }
 
     public DeliveryCloudEventsFormat build() {
-        Objects.requireNonNull(cloudEventsVersion);
+        Objects.requireNonNull(cloudEventsVersion, DeliveryCloudEventsFormat.class + ": cloudEventsVersion is missing");
         return new DeliveryCloudEventsFormatImpl(cloudEventsVersion);
     }
 

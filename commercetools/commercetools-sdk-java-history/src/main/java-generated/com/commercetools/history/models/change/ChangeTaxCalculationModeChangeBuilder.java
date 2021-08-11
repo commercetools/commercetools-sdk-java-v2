@@ -45,9 +45,9 @@ public final class ChangeTaxCalculationModeChangeBuilder implements Builder<Chan
     }
 
     public ChangeTaxCalculationModeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeTaxCalculationModeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeTaxCalculationModeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTaxCalculationModeChange.class + ": nextValue is missing");
         return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);
     }
 

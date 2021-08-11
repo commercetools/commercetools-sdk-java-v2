@@ -33,8 +33,9 @@ public final class DiscountedLineItemPriceForQuantityBuilder implements Builder<
     }
 
     public DiscountedLineItemPriceForQuantity build() {
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(discountedPrice);
+        Objects.requireNonNull(quantity, DiscountedLineItemPriceForQuantity.class + ": quantity is missing");
+        Objects.requireNonNull(discountedPrice,
+            DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
 

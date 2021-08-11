@@ -41,7 +41,7 @@ public final class LocalizableEnumSetAttributeBuilder implements Builder<Localiz
     }
 
     public LocalizableEnumSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizableEnumSetAttribute.class + ": value is missing");
         return new LocalizableEnumSetAttributeImpl(name, value);
     }
 

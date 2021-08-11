@@ -28,7 +28,7 @@ public final class CategoryImportRequestBuilder implements Builder<CategoryImpor
     }
 
     public CategoryImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, CategoryImportRequest.class + ": resources is missing");
         return new CategoryImportRequestImpl(resources);
     }
 

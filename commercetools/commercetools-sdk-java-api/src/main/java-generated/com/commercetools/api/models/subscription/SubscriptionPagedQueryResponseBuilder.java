@@ -76,10 +76,10 @@ public final class SubscriptionPagedQueryResponseBuilder implements Builder<Subs
     }
 
     public SubscriptionPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, SubscriptionPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, SubscriptionPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, SubscriptionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, SubscriptionPagedQueryResponse.class + ": results is missing");
         return new SubscriptionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

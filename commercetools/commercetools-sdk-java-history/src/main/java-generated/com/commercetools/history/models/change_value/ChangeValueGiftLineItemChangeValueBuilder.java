@@ -57,10 +57,11 @@ public final class ChangeValueGiftLineItemChangeValueBuilder implements Builder<
     }
 
     public ChangeValueGiftLineItemChangeValue build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(supplyChannel);
-        Objects.requireNonNull(distributionChannel);
+        Objects.requireNonNull(product, ChangeValueGiftLineItemChangeValue.class + ": product is missing");
+        Objects.requireNonNull(variantId, ChangeValueGiftLineItemChangeValue.class + ": variantId is missing");
+        Objects.requireNonNull(supplyChannel, ChangeValueGiftLineItemChangeValue.class + ": supplyChannel is missing");
+        Objects.requireNonNull(distributionChannel,
+            ChangeValueGiftLineItemChangeValue.class + ": distributionChannel is missing");
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);
     }
 

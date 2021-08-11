@@ -63,7 +63,7 @@ public final class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     public CartScoreTier build() {
-        Objects.requireNonNull(score);
+        Objects.requireNonNull(score, CartScoreTier.class + ": score is missing");
         return new CartScoreTierImpl(score, price, priceFunction, isMatching);
     }
 

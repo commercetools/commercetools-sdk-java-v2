@@ -43,9 +43,9 @@ public final class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrd
     }
 
     public ChangeSortOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeSortOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeSortOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeSortOrderChange.class + ": nextValue is missing");
         return new ChangeSortOrderChangeImpl(change, previousValue, nextValue);
     }
 

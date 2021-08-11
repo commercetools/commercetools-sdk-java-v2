@@ -54,10 +54,10 @@ public final class SetImageLabelChangeBuilder implements Builder<SetImageLabelCh
     }
 
     public SetImageLabelChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetImageLabelChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetImageLabelChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetImageLabelChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetImageLabelChange.class + ": nextValue is missing");
         return new SetImageLabelChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

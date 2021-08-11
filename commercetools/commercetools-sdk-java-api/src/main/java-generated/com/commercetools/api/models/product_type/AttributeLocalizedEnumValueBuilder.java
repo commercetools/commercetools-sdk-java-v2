@@ -32,8 +32,8 @@ public final class AttributeLocalizedEnumValueBuilder implements Builder<Attribu
     }
 
     public AttributeLocalizedEnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, AttributeLocalizedEnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, AttributeLocalizedEnumValue.class + ": label is missing");
         return new AttributeLocalizedEnumValueImpl(key, label);
     }
 

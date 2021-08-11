@@ -38,8 +38,8 @@ public final class ProductUpdateBuilder implements Builder<ProductUpdate> {
     }
 
     public ProductUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ProductUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ProductUpdate.class + ": actions is missing");
         return new ProductUpdateImpl(version, actions);
     }
 

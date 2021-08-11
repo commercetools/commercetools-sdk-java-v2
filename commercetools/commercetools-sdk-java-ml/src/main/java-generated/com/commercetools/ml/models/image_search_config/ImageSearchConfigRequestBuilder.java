@@ -28,7 +28,7 @@ public final class ImageSearchConfigRequestBuilder implements Builder<ImageSearc
     }
 
     public ImageSearchConfigRequest build() {
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(actions, ImageSearchConfigRequest.class + ": actions is missing");
         return new ImageSearchConfigRequestImpl(actions);
     }
 

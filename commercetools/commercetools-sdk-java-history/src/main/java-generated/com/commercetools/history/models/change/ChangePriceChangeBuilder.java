@@ -65,11 +65,11 @@ public final class ChangePriceChangeBuilder implements Builder<ChangePriceChange
     }
 
     public ChangePriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangePriceChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, ChangePriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(priceId, ChangePriceChange.class + ": priceId is missing");
+        Objects.requireNonNull(previousValue, ChangePriceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangePriceChange.class + ": nextValue is missing");
         return new ChangePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
     }
 

@@ -38,8 +38,8 @@ public final class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
     }
 
     public MyCartUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, MyCartUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, MyCartUpdate.class + ": actions is missing");
         return new MyCartUpdateImpl(version, actions);
     }
 

@@ -21,7 +21,7 @@ public final class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemo
     }
 
     public OrderRemoveDeliveryAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, OrderRemoveDeliveryAction.class + ": deliveryId is missing");
         return new OrderRemoveDeliveryActionImpl(deliveryId);
     }
 

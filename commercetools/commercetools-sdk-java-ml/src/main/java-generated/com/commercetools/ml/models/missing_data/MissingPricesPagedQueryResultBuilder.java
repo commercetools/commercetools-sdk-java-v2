@@ -73,11 +73,11 @@ public final class MissingPricesPagedQueryResultBuilder implements Builder<Missi
     }
 
     public MissingPricesPagedQueryResult build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
-        Objects.requireNonNull(meta);
+        Objects.requireNonNull(count, MissingPricesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingPricesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingPricesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingPricesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingPricesPagedQueryResult.class + ": meta is missing");
         return new MissingPricesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

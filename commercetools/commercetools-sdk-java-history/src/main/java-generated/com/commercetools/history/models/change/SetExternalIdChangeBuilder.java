@@ -43,9 +43,9 @@ public final class SetExternalIdChangeBuilder implements Builder<SetExternalIdCh
     }
 
     public SetExternalIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetExternalIdChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetExternalIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetExternalIdChange.class + ": nextValue is missing");
         return new SetExternalIdChangeImpl(change, previousValue, nextValue);
     }
 

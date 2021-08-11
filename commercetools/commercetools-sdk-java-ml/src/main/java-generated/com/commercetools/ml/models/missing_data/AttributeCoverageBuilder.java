@@ -32,8 +32,8 @@ public final class AttributeCoverageBuilder implements Builder<AttributeCoverage
     }
 
     public AttributeCoverage build() {
-        Objects.requireNonNull(names);
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(names, AttributeCoverage.class + ": names is missing");
+        Objects.requireNonNull(values, AttributeCoverage.class + ": values is missing");
         return new AttributeCoverageImpl(names, values);
     }
 

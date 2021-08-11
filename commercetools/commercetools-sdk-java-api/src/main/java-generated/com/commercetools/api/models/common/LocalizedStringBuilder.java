@@ -29,7 +29,7 @@ public final class LocalizedStringBuilder implements Builder<LocalizedString> {
     }
 
     public LocalizedString build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, LocalizedString.class + ": values are missing");
         return new LocalizedStringImpl(values);
     }
 

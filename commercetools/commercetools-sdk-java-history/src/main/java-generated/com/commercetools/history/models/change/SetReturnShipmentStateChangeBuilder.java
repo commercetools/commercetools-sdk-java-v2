@@ -45,9 +45,9 @@ public final class SetReturnShipmentStateChangeBuilder implements Builder<SetRet
     }
 
     public SetReturnShipmentStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetReturnShipmentStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetReturnShipmentStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetReturnShipmentStateChange.class + ": previousValue is missing");
         return new SetReturnShipmentStateChangeImpl(change, nextValue, previousValue);
     }
 

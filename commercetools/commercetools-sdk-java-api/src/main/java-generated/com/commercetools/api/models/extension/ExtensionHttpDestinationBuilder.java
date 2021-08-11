@@ -37,7 +37,7 @@ public final class ExtensionHttpDestinationBuilder implements Builder<ExtensionH
     }
 
     public ExtensionHttpDestination build() {
-        Objects.requireNonNull(url);
+        Objects.requireNonNull(url, ExtensionHttpDestination.class + ": url is missing");
         return new ExtensionHttpDestinationImpl(url, authentication);
     }
 

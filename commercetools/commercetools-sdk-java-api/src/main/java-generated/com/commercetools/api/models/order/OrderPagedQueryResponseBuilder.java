@@ -75,10 +75,10 @@ public final class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQ
     }
 
     public OrderPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, OrderPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, OrderPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, OrderPagedQueryResponse.class + ": results is missing");
         return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

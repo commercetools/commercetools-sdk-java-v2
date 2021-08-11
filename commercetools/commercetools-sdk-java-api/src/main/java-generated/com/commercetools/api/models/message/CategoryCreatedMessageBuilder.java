@@ -142,14 +142,14 @@ public final class CategoryCreatedMessageBuilder implements Builder<CategoryCrea
     }
 
     public CategoryCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(category);
+        Objects.requireNonNull(id, CategoryCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CategoryCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CategoryCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CategoryCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CategoryCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CategoryCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CategoryCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(category, CategoryCreatedMessage.class + ": category is missing");
         return new CategoryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category);
     }

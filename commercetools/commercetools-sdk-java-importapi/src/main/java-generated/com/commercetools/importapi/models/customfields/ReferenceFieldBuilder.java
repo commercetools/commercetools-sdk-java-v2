@@ -21,7 +21,7 @@ public final class ReferenceFieldBuilder implements Builder<ReferenceField> {
     }
 
     public ReferenceField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, ReferenceField.class + ": value is missing");
         return new ReferenceFieldImpl(value);
     }
 

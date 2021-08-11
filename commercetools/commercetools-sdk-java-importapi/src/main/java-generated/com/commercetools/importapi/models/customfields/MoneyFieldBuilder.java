@@ -21,7 +21,7 @@ public final class MoneyFieldBuilder implements Builder<MoneyField> {
     }
 
     public MoneyField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, MoneyField.class + ": value is missing");
         return new MoneyFieldImpl(value);
     }
 

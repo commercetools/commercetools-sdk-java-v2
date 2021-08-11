@@ -72,7 +72,7 @@ public final class StagedOrderAddParcelToDeliveryActionBuilder
     }
 
     public StagedOrderAddParcelToDeliveryAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, StagedOrderAddParcelToDeliveryAction.class + ": deliveryId is missing");
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
     }
 

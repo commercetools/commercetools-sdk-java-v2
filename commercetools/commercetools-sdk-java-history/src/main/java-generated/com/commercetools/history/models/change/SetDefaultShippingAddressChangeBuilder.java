@@ -45,9 +45,9 @@ public final class SetDefaultShippingAddressChangeBuilder implements Builder<Set
     }
 
     public SetDefaultShippingAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetDefaultShippingAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetDefaultShippingAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDefaultShippingAddressChange.class + ": previousValue is missing");
         return new SetDefaultShippingAddressChangeImpl(change, nextValue, previousValue);
     }
 

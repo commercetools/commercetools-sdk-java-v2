@@ -33,8 +33,8 @@ public final class TypeChangeInputHintActionBuilder implements Builder<TypeChang
     }
 
     public TypeChangeInputHintAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(inputHint);
+        Objects.requireNonNull(fieldName, TypeChangeInputHintAction.class + ": fieldName is missing");
+        Objects.requireNonNull(inputHint, TypeChangeInputHintAction.class + ": inputHint is missing");
         return new TypeChangeInputHintActionImpl(fieldName, inputHint);
     }
 

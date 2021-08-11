@@ -37,7 +37,7 @@ public final class ReferenceExistsErrorBuilder implements Builder<ReferenceExist
     }
 
     public ReferenceExistsError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ReferenceExistsError.class + ": message is missing");
         return new ReferenceExistsErrorImpl(message, referencedBy);
     }
 

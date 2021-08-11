@@ -33,8 +33,8 @@ public final class InventoryEntryDeletedMessagePayloadBuilder implements Builder
     }
 
     public InventoryEntryDeletedMessagePayload build() {
-        Objects.requireNonNull(sku);
-        Objects.requireNonNull(supplyChannel);
+        Objects.requireNonNull(sku, InventoryEntryDeletedMessagePayload.class + ": sku is missing");
+        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessagePayload.class + ": supplyChannel is missing");
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
     }
 

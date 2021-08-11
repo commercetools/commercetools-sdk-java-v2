@@ -56,9 +56,9 @@ public final class AddStateRolesChangeBuilder implements Builder<AddStateRolesCh
     }
 
     public AddStateRolesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddStateRolesChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddStateRolesChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddStateRolesChange.class + ": nextValue is missing");
         return new AddStateRolesChangeImpl(change, previousValue, nextValue);
     }
 

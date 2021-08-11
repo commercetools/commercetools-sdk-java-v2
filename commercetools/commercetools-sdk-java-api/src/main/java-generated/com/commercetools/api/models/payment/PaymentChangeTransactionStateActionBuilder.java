@@ -33,8 +33,8 @@ public final class PaymentChangeTransactionStateActionBuilder implements Builder
     }
 
     public PaymentChangeTransactionStateAction build() {
-        Objects.requireNonNull(transactionId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(transactionId, PaymentChangeTransactionStateAction.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentChangeTransactionStateAction.class + ": state is missing");
         return new PaymentChangeTransactionStateActionImpl(transactionId, state);
     }
 

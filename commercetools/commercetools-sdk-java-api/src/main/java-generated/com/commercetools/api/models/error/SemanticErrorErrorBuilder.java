@@ -21,7 +21,7 @@ public final class SemanticErrorErrorBuilder implements Builder<SemanticErrorErr
     }
 
     public SemanticErrorError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SemanticErrorError.class + ": message is missing");
         return new SemanticErrorErrorImpl(message);
     }
 

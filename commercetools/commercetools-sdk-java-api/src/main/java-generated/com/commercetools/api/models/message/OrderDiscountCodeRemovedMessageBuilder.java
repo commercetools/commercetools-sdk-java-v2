@@ -144,14 +144,14 @@ public final class OrderDiscountCodeRemovedMessageBuilder implements Builder<Ord
     }
 
     public OrderDiscountCodeRemovedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(discountCode);
+        Objects.requireNonNull(id, OrderDiscountCodeRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderDiscountCodeRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderDiscountCodeRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderDiscountCodeRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderDiscountCodeRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderDiscountCodeRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderDiscountCodeRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(discountCode, OrderDiscountCodeRemovedMessage.class + ": discountCode is missing");
         return new OrderDiscountCodeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode);
     }

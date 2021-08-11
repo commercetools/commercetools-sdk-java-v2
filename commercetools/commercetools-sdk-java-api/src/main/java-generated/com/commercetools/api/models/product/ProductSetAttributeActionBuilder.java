@@ -75,7 +75,7 @@ public final class ProductSetAttributeActionBuilder implements Builder<ProductSe
     }
 
     public ProductSetAttributeAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductSetAttributeAction.class + ": name is missing");
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
     }
 

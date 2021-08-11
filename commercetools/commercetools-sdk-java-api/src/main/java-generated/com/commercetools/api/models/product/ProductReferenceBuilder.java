@@ -36,7 +36,7 @@ public final class ProductReferenceBuilder implements Builder<ProductReference> 
     }
 
     public ProductReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ProductReference.class + ": id is missing");
         return new ProductReferenceImpl(id, obj);
     }
 

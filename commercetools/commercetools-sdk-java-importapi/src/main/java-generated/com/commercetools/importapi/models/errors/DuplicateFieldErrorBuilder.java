@@ -49,7 +49,7 @@ public final class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldE
     }
 
     public DuplicateFieldError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
         return new DuplicateFieldErrorImpl(message, field, duplicateValue);
     }
 

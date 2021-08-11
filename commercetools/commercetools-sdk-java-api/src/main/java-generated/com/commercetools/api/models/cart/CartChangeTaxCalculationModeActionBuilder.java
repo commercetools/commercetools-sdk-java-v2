@@ -22,7 +22,8 @@ public final class CartChangeTaxCalculationModeActionBuilder implements Builder<
     }
 
     public CartChangeTaxCalculationModeAction build() {
-        Objects.requireNonNull(taxCalculationMode);
+        Objects.requireNonNull(taxCalculationMode,
+            CartChangeTaxCalculationModeAction.class + ": taxCalculationMode is missing");
         return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
     }
 

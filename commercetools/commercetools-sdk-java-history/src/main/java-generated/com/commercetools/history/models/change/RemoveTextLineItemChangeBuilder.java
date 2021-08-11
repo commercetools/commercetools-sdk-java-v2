@@ -45,9 +45,9 @@ public final class RemoveTextLineItemChangeBuilder implements Builder<RemoveText
     }
 
     public RemoveTextLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveTextLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveTextLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveTextLineItemChange.class + ": nextValue is missing");
         return new RemoveTextLineItemChangeImpl(change, previousValue, nextValue);
     }
 

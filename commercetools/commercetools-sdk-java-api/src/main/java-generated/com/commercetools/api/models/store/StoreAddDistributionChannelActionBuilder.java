@@ -22,7 +22,8 @@ public final class StoreAddDistributionChannelActionBuilder implements Builder<S
     }
 
     public StoreAddDistributionChannelAction build() {
-        Objects.requireNonNull(distributionChannel);
+        Objects.requireNonNull(distributionChannel,
+            StoreAddDistributionChannelAction.class + ": distributionChannel is missing");
         return new StoreAddDistributionChannelActionImpl(distributionChannel);
     }
 

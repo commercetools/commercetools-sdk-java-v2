@@ -21,7 +21,7 @@ public final class TaxCategoryChangeNameActionBuilder implements Builder<TaxCate
     }
 
     public TaxCategoryChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, TaxCategoryChangeNameAction.class + ": name is missing");
         return new TaxCategoryChangeNameActionImpl(name);
     }
 

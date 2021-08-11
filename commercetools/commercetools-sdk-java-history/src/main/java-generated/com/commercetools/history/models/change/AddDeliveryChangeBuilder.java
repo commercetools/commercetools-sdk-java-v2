@@ -45,9 +45,9 @@ public final class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange
     }
 
     public AddDeliveryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, AddDeliveryChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddDeliveryChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddDeliveryChange.class + ": previousValue is missing");
         return new AddDeliveryChangeImpl(change, nextValue, previousValue);
     }
 

@@ -56,10 +56,13 @@ public final class AttributeDefinitionTypeConflictErrorBuilder
     }
 
     public AttributeDefinitionTypeConflictError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(conflictingProductTypeId);
-        Objects.requireNonNull(conflictingProductTypeName);
-        Objects.requireNonNull(conflictingAttributeName);
+        Objects.requireNonNull(message, AttributeDefinitionTypeConflictError.class + ": message is missing");
+        Objects.requireNonNull(conflictingProductTypeId,
+            AttributeDefinitionTypeConflictError.class + ": conflictingProductTypeId is missing");
+        Objects.requireNonNull(conflictingProductTypeName,
+            AttributeDefinitionTypeConflictError.class + ": conflictingProductTypeName is missing");
+        Objects.requireNonNull(conflictingAttributeName,
+            AttributeDefinitionTypeConflictError.class + ": conflictingAttributeName is missing");
         return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }

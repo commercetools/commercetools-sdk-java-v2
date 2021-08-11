@@ -32,8 +32,8 @@ public final class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange
     }
 
     public RemoveAssetChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveAssetChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveAssetChange.class + ": previousValue is missing");
         return new RemoveAssetChangeImpl(change, previousValue);
     }
 

@@ -21,7 +21,7 @@ public final class TimeFieldBuilder implements Builder<TimeField> {
     }
 
     public TimeField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, TimeField.class + ": value is missing");
         return new TimeFieldImpl(value);
     }
 

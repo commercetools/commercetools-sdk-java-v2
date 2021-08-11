@@ -167,15 +167,15 @@ public final class OrderStateTransitionMessageBuilder implements Builder<OrderSt
     }
 
     public OrderStateTransitionMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(id, OrderStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(state, OrderStateTransitionMessage.class + ": state is missing");
+        Objects.requireNonNull(force, OrderStateTransitionMessage.class + ": force is missing");
         return new OrderStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, oldState, force);
     }

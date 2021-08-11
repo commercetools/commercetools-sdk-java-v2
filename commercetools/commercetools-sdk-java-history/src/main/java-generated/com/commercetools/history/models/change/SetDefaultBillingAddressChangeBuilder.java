@@ -45,9 +45,9 @@ public final class SetDefaultBillingAddressChangeBuilder implements Builder<SetD
     }
 
     public SetDefaultBillingAddressChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetDefaultBillingAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetDefaultBillingAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDefaultBillingAddressChange.class + ": previousValue is missing");
         return new SetDefaultBillingAddressChangeImpl(change, nextValue, previousValue);
     }
 

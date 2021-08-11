@@ -32,8 +32,8 @@ public final class ParcelChangeValueBuilder implements Builder<ParcelChangeValue
     }
 
     public ParcelChangeValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(id, ParcelChangeValue.class + ": id is missing");
+        Objects.requireNonNull(createdAt, ParcelChangeValue.class + ": createdAt is missing");
         return new ParcelChangeValueImpl(id, createdAt);
     }
 

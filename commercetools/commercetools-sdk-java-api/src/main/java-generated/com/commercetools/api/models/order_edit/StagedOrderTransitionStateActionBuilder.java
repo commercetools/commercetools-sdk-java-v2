@@ -37,7 +37,7 @@ public final class StagedOrderTransitionStateActionBuilder implements Builder<St
     }
 
     public StagedOrderTransitionStateAction build() {
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(state, StagedOrderTransitionStateAction.class + ": state is missing");
         return new StagedOrderTransitionStateActionImpl(state, force);
     }
 

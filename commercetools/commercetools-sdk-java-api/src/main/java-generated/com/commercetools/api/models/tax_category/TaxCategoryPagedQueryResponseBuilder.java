@@ -76,10 +76,10 @@ public final class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCa
     }
 
     public TaxCategoryPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, TaxCategoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, TaxCategoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, TaxCategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, TaxCategoryPagedQueryResponse.class + ": results is missing");
         return new TaxCategoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

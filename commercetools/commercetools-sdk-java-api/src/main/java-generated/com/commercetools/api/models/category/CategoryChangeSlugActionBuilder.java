@@ -21,7 +21,7 @@ public final class CategoryChangeSlugActionBuilder implements Builder<CategoryCh
     }
 
     public CategoryChangeSlugAction build() {
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(slug, CategoryChangeSlugAction.class + ": slug is missing");
         return new CategoryChangeSlugActionImpl(slug);
     }
 

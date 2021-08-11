@@ -57,9 +57,9 @@ public final class RemoveChannelRolesChangeBuilder implements Builder<RemoveChan
     }
 
     public RemoveChannelRolesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveChannelRolesChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveChannelRolesChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveChannelRolesChange.class + ": nextValue is missing");
         return new RemoveChannelRolesChangeImpl(change, previousValue, nextValue);
     }
 

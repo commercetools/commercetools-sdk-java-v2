@@ -159,13 +159,13 @@ public final class OrderBillingAddressSetMessageBuilder implements Builder<Order
     }
 
     public OrderBillingAddressSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, OrderBillingAddressSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderBillingAddressSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderBillingAddressSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderBillingAddressSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderBillingAddressSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderBillingAddressSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderBillingAddressSetMessage.class + ": resourceVersion is missing");
         return new OrderBillingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
     }

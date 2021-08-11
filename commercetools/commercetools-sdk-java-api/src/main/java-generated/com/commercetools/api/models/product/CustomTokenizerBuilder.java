@@ -26,7 +26,7 @@ public final class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
     }
 
     public CustomTokenizer build() {
-        Objects.requireNonNull(inputs);
+        Objects.requireNonNull(inputs, CustomTokenizer.class + ": inputs is missing");
         return new CustomTokenizerImpl(inputs);
     }
 

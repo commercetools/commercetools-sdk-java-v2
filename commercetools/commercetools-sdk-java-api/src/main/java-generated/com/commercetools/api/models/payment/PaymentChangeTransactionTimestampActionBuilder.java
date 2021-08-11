@@ -33,8 +33,9 @@ public final class PaymentChangeTransactionTimestampActionBuilder
     }
 
     public PaymentChangeTransactionTimestampAction build() {
-        Objects.requireNonNull(transactionId);
-        Objects.requireNonNull(timestamp);
+        Objects.requireNonNull(transactionId,
+            PaymentChangeTransactionTimestampAction.class + ": transactionId is missing");
+        Objects.requireNonNull(timestamp, PaymentChangeTransactionTimestampAction.class + ": timestamp is missing");
         return new PaymentChangeTransactionTimestampActionImpl(transactionId, timestamp);
     }
 

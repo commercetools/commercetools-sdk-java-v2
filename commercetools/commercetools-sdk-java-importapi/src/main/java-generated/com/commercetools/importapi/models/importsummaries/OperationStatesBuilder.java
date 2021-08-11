@@ -65,11 +65,11 @@ public final class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     public OperationStates build() {
-        Objects.requireNonNull(ValidationFailed);
-        Objects.requireNonNull(Unresolved);
-        Objects.requireNonNull(WaitForMasterVariant);
-        Objects.requireNonNull(Imported);
-        Objects.requireNonNull(Rejected);
+        Objects.requireNonNull(ValidationFailed, OperationStates.class + ": ValidationFailed is missing");
+        Objects.requireNonNull(Unresolved, OperationStates.class + ": Unresolved is missing");
+        Objects.requireNonNull(WaitForMasterVariant, OperationStates.class + ": WaitForMasterVariant is missing");
+        Objects.requireNonNull(Imported, OperationStates.class + ": Imported is missing");
+        Objects.requireNonNull(Rejected, OperationStates.class + ": Rejected is missing");
         return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
     }
 

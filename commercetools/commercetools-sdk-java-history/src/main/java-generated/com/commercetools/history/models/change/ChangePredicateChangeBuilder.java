@@ -43,9 +43,9 @@ public final class ChangePredicateChangeBuilder implements Builder<ChangePredica
     }
 
     public ChangePredicateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangePredicateChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangePredicateChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangePredicateChange.class + ": nextValue is missing");
         return new ChangePredicateChangeImpl(change, previousValue, nextValue);
     }
 

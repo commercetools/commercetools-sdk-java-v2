@@ -43,9 +43,9 @@ public final class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfo
     }
 
     public UpdateSyncInfoChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(channelId);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, UpdateSyncInfoChange.class + ": change is missing");
+        Objects.requireNonNull(channelId, UpdateSyncInfoChange.class + ": channelId is missing");
+        Objects.requireNonNull(nextValue, UpdateSyncInfoChange.class + ": nextValue is missing");
         return new UpdateSyncInfoChangeImpl(change, channelId, nextValue);
     }
 

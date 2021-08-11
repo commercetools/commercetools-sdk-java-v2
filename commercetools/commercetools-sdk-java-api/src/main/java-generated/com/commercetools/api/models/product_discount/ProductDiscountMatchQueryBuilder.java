@@ -54,10 +54,10 @@ public final class ProductDiscountMatchQueryBuilder implements Builder<ProductDi
     }
 
     public ProductDiscountMatchQuery build() {
-        Objects.requireNonNull(productId);
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(staged);
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(productId, ProductDiscountMatchQuery.class + ": productId is missing");
+        Objects.requireNonNull(variantId, ProductDiscountMatchQuery.class + ": variantId is missing");
+        Objects.requireNonNull(staged, ProductDiscountMatchQuery.class + ": staged is missing");
+        Objects.requireNonNull(price, ProductDiscountMatchQuery.class + ": price is missing");
         return new ProductDiscountMatchQueryImpl(productId, variantId, staged, price);
     }
 

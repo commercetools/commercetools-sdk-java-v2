@@ -132,10 +132,10 @@ public final class CustomLineItemImportDraftBuilder implements Builder<CustomLin
     }
 
     public CustomLineItemImportDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(money);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(name, CustomLineItemImportDraft.class + ": name is missing");
+        Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");
+        Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");
+        Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");
         return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,
             shippingDetails);
     }

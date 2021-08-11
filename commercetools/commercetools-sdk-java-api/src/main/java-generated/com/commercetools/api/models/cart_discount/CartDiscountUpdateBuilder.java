@@ -39,8 +39,8 @@ public final class CartDiscountUpdateBuilder implements Builder<CartDiscountUpda
     }
 
     public CartDiscountUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, CartDiscountUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, CartDiscountUpdate.class + ": actions is missing");
         return new CartDiscountUpdateImpl(version, actions);
     }
 

@@ -159,15 +159,15 @@ public final class ProductVariantDeletedMessageBuilder implements Builder<Produc
     }
 
     public ProductVariantDeletedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(removedImageUrls);
+        Objects.requireNonNull(id, ProductVariantDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductVariantDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductVariantDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductVariantDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductVariantDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductVariantDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductVariantDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variant, ProductVariantDeletedMessage.class + ": variant is missing");
+        Objects.requireNonNull(removedImageUrls, ProductVariantDeletedMessage.class + ": removedImageUrls is missing");
         return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);
     }

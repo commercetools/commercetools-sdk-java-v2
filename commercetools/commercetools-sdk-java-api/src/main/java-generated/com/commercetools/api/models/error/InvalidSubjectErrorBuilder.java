@@ -21,7 +21,7 @@ public final class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectE
     }
 
     public InvalidSubjectError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidSubjectError.class + ": message is missing");
         return new InvalidSubjectErrorImpl(message);
     }
 

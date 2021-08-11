@@ -43,9 +43,9 @@ public final class SetStatusInterfaceTextChangeBuilder implements Builder<SetSta
     }
 
     public SetStatusInterfaceTextChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetStatusInterfaceTextChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetStatusInterfaceTextChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetStatusInterfaceTextChange.class + ": nextValue is missing");
         return new SetStatusInterfaceTextChangeImpl(change, previousValue, nextValue);
     }
 

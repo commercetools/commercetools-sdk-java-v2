@@ -21,7 +21,7 @@ public final class PendingOperationErrorBuilder implements Builder<PendingOperat
     }
 
     public PendingOperationError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, PendingOperationError.class + ": message is missing");
         return new PendingOperationErrorImpl(message);
     }
 

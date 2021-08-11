@@ -43,9 +43,9 @@ public final class SetRestockableInDaysChangeBuilder implements Builder<SetResto
     }
 
     public SetRestockableInDaysChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetRestockableInDaysChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetRestockableInDaysChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetRestockableInDaysChange.class + ": nextValue is missing");
         return new SetRestockableInDaysChangeImpl(change, previousValue, nextValue);
     }
 

@@ -27,7 +27,7 @@ public final class OrderEditPreviewFailureBuilder implements Builder<OrderEditPr
     }
 
     public OrderEditPreviewFailure build() {
-        Objects.requireNonNull(errors);
+        Objects.requireNonNull(errors, OrderEditPreviewFailure.class + ": errors is missing");
         return new OrderEditPreviewFailureImpl(errors);
     }
 

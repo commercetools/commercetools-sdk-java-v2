@@ -36,7 +36,7 @@ public final class CustomerCreatePasswordResetTokenBuilder implements Builder<Cu
     }
 
     public CustomerCreatePasswordResetToken build() {
-        Objects.requireNonNull(email);
+        Objects.requireNonNull(email, CustomerCreatePasswordResetToken.class + ": email is missing");
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
     }
 

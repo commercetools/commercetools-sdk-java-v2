@@ -32,8 +32,8 @@ public final class ShippingMethodChangeValueBuilder implements Builder<ShippingM
     }
 
     public ShippingMethodChangeValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, ShippingMethodChangeValue.class + ": id is missing");
+        Objects.requireNonNull(name, ShippingMethodChangeValue.class + ": name is missing");
         return new ShippingMethodChangeValueImpl(id, name);
     }
 

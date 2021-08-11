@@ -195,15 +195,15 @@ public final class ProjectBuilder implements Builder<Project> {
     }
 
     public Project build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(countries);
-        Objects.requireNonNull(currencies);
-        Objects.requireNonNull(languages);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(messages);
-        Objects.requireNonNull(carts);
+        Objects.requireNonNull(version, Project.class + ": version is missing");
+        Objects.requireNonNull(key, Project.class + ": key is missing");
+        Objects.requireNonNull(name, Project.class + ": name is missing");
+        Objects.requireNonNull(countries, Project.class + ": countries is missing");
+        Objects.requireNonNull(currencies, Project.class + ": currencies is missing");
+        Objects.requireNonNull(languages, Project.class + ": languages is missing");
+        Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");
+        Objects.requireNonNull(messages, Project.class + ": messages is missing");
+        Objects.requireNonNull(carts, Project.class + ": carts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
             shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
     }

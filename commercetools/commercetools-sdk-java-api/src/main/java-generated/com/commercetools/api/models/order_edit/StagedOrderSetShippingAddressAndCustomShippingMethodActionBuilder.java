@@ -77,9 +77,12 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBui
     }
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodAction build() {
-        Objects.requireNonNull(address);
-        Objects.requireNonNull(shippingMethodName);
-        Objects.requireNonNull(shippingRate);
+        Objects.requireNonNull(address,
+            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": address is missing");
+        Objects.requireNonNull(shippingMethodName,
+            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(shippingRate,
+            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingRate is missing");
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,
             shippingRate, taxCategory, externalTaxRate);
     }

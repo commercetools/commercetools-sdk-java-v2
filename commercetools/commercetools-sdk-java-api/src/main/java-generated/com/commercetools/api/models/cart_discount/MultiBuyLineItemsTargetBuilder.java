@@ -70,10 +70,10 @@ public final class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLin
     }
 
     public MultiBuyLineItemsTarget build() {
-        Objects.requireNonNull(predicate);
-        Objects.requireNonNull(triggerQuantity);
-        Objects.requireNonNull(discountedQuantity);
-        Objects.requireNonNull(selectionMode);
+        Objects.requireNonNull(predicate, MultiBuyLineItemsTarget.class + ": predicate is missing");
+        Objects.requireNonNull(triggerQuantity, MultiBuyLineItemsTarget.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity, MultiBuyLineItemsTarget.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(selectionMode, MultiBuyLineItemsTarget.class + ": selectionMode is missing");
         return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
             selectionMode);
     }

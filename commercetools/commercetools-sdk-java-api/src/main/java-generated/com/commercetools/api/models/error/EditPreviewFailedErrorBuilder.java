@@ -33,8 +33,8 @@ public final class EditPreviewFailedErrorBuilder implements Builder<EditPreviewF
     }
 
     public EditPreviewFailedError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(message, EditPreviewFailedError.class + ": message is missing");
+        Objects.requireNonNull(result, EditPreviewFailedError.class + ": result is missing");
         return new EditPreviewFailedErrorImpl(message, result);
     }
 

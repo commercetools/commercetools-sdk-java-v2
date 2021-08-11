@@ -75,10 +75,10 @@ public final class StatePagedQueryResponseBuilder implements Builder<StatePagedQ
     }
 
     public StatePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, StatePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, StatePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, StatePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, StatePagedQueryResponse.class + ": results is missing");
         return new StatePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

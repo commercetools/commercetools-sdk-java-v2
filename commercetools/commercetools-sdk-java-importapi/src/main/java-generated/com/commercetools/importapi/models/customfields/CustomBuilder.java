@@ -36,7 +36,7 @@ public final class CustomBuilder implements Builder<Custom> {
     }
 
     public Custom build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, Custom.class + ": type is missing");
         return new CustomImpl(type, fields);
     }
 

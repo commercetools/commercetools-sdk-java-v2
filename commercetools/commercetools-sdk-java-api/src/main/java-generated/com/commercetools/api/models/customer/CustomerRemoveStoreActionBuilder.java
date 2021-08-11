@@ -22,7 +22,7 @@ public final class CustomerRemoveStoreActionBuilder implements Builder<CustomerR
     }
 
     public CustomerRemoveStoreAction build() {
-        Objects.requireNonNull(store);
+        Objects.requireNonNull(store, CustomerRemoveStoreAction.class + ": store is missing");
         return new CustomerRemoveStoreActionImpl(store);
     }
 

@@ -28,7 +28,7 @@ public final class CustomerImportRequestBuilder implements Builder<CustomerImpor
     }
 
     public CustomerImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, CustomerImportRequest.class + ": resources is missing");
         return new CustomerImportRequestImpl(resources);
     }
 

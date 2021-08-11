@@ -67,11 +67,11 @@ public final class ChangeInputHintChangeBuilder implements Builder<ChangeInputHi
     }
 
     public ChangeInputHintChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeInputHintChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeInputHintChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, ChangeInputHintChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeInputHintChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeInputHintChange.class + ": previousValue is missing");
         return new ChangeInputHintChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 

@@ -41,7 +41,7 @@ public final class MessageSubscriptionBuilder implements Builder<MessageSubscrip
     }
 
     public MessageSubscription build() {
-        Objects.requireNonNull(resourceTypeId);
+        Objects.requireNonNull(resourceTypeId, MessageSubscription.class + ": resourceTypeId is missing");
         return new MessageSubscriptionImpl(resourceTypeId, types);
     }
 

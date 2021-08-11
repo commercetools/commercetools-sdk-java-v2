@@ -55,7 +55,8 @@ public final class ProjectCategoryRecommendationMetaBuilder implements Builder<P
     }
 
     public ProjectCategoryRecommendationMeta build() {
-        Objects.requireNonNull(generalCategoryNames);
+        Objects.requireNonNull(generalCategoryNames,
+            ProjectCategoryRecommendationMeta.class + ": generalCategoryNames is missing");
         return new ProjectCategoryRecommendationMetaImpl(productName, productImageUrl, generalCategoryNames);
     }
 

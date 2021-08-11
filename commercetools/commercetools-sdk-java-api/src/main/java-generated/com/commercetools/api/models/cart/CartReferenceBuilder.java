@@ -36,7 +36,7 @@ public final class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     public CartReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, CartReference.class + ": id is missing");
         return new CartReferenceImpl(id, obj);
     }
 

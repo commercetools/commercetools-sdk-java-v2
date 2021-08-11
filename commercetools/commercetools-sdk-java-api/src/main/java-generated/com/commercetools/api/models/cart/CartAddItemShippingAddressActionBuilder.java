@@ -22,7 +22,7 @@ public final class CartAddItemShippingAddressActionBuilder implements Builder<Ca
     }
 
     public CartAddItemShippingAddressAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, CartAddItemShippingAddressAction.class + ": address is missing");
         return new CartAddItemShippingAddressActionImpl(address);
     }
 

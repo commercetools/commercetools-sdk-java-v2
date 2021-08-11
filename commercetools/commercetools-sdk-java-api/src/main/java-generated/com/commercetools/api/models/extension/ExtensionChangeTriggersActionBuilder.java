@@ -28,7 +28,7 @@ public final class ExtensionChangeTriggersActionBuilder implements Builder<Exten
     }
 
     public ExtensionChangeTriggersAction build() {
-        Objects.requireNonNull(triggers);
+        Objects.requireNonNull(triggers, ExtensionChangeTriggersAction.class + ": triggers is missing");
         return new ExtensionChangeTriggersActionImpl(triggers);
     }
 

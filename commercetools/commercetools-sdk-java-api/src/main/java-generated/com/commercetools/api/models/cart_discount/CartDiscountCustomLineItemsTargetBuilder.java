@@ -21,7 +21,7 @@ public final class CartDiscountCustomLineItemsTargetBuilder implements Builder<C
     }
 
     public CartDiscountCustomLineItemsTarget build() {
-        Objects.requireNonNull(predicate);
+        Objects.requireNonNull(predicate, CartDiscountCustomLineItemsTarget.class + ": predicate is missing");
         return new CartDiscountCustomLineItemsTargetImpl(predicate);
     }
 

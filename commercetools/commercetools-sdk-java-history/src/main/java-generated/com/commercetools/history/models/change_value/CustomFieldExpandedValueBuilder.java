@@ -43,9 +43,9 @@ public final class CustomFieldExpandedValueBuilder implements Builder<CustomFiel
     }
 
     public CustomFieldExpandedValue build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(name, CustomFieldExpandedValue.class + ": name is missing");
+        Objects.requireNonNull(value, CustomFieldExpandedValue.class + ": value is missing");
+        Objects.requireNonNull(label, CustomFieldExpandedValue.class + ": label is missing");
         return new CustomFieldExpandedValueImpl(name, value, label);
     }
 

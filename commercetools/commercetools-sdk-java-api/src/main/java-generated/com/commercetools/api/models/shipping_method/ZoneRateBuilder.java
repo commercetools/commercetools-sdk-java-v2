@@ -39,8 +39,8 @@ public final class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     public ZoneRate build() {
-        Objects.requireNonNull(zone);
-        Objects.requireNonNull(shippingRates);
+        Objects.requireNonNull(zone, ZoneRate.class + ": zone is missing");
+        Objects.requireNonNull(shippingRates, ZoneRate.class + ": shippingRates is missing");
         return new ZoneRateImpl(zone, shippingRates);
     }
 

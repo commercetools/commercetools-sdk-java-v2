@@ -21,7 +21,7 @@ public final class CustomerAddAddressActionBuilder implements Builder<CustomerAd
     }
 
     public CustomerAddAddressAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, CustomerAddAddressAction.class + ": address is missing");
         return new CustomerAddAddressActionImpl(address);
     }
 

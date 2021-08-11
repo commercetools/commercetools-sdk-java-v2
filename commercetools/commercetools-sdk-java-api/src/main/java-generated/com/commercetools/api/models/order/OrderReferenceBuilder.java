@@ -36,7 +36,7 @@ public final class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     public OrderReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, OrderReference.class + ": id is missing");
         return new OrderReferenceImpl(id, obj);
     }
 

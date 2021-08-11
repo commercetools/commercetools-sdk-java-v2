@@ -100,14 +100,14 @@ public final class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     public ReturnItem build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(comment);
-        Objects.requireNonNull(shipmentState);
-        Objects.requireNonNull(paymentState);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(createdAt);
+        Objects.requireNonNull(id, ReturnItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, ReturnItem.class + ": quantity is missing");
+        Objects.requireNonNull(type, ReturnItem.class + ": type is missing");
+        Objects.requireNonNull(comment, ReturnItem.class + ": comment is missing");
+        Objects.requireNonNull(shipmentState, ReturnItem.class + ": shipmentState is missing");
+        Objects.requireNonNull(paymentState, ReturnItem.class + ": paymentState is missing");
+        Objects.requireNonNull(lastModifiedAt, ReturnItem.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(createdAt, ReturnItem.class + ": createdAt is missing");
         return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
     }
 

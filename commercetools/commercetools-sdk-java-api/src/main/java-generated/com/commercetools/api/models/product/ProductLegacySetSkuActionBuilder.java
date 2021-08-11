@@ -36,7 +36,7 @@ public final class ProductLegacySetSkuActionBuilder implements Builder<ProductLe
     }
 
     public ProductLegacySetSkuAction build() {
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(variantId, ProductLegacySetSkuAction.class + ": variantId is missing");
         return new ProductLegacySetSkuActionImpl(sku, variantId);
     }
 

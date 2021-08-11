@@ -40,8 +40,9 @@ public final class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     public StagedOrderImportCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(state, StagedOrderImportCustomLineItemStateAction.class + ": state is missing");
         return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, state);
     }
 

@@ -32,8 +32,8 @@ public final class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     public ProductLabel build() {
-        Objects.requireNonNull(slug);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(slug, ProductLabel.class + ": slug is missing");
+        Objects.requireNonNull(name, ProductLabel.class + ": name is missing");
         return new ProductLabelImpl(slug, name);
     }
 

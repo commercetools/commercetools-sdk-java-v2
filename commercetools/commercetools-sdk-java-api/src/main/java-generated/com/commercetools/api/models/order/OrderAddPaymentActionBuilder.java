@@ -22,7 +22,7 @@ public final class OrderAddPaymentActionBuilder implements Builder<OrderAddPayme
     }
 
     public OrderAddPaymentAction build() {
-        Objects.requireNonNull(payment);
+        Objects.requireNonNull(payment, OrderAddPaymentAction.class + ": payment is missing");
         return new OrderAddPaymentActionImpl(payment);
     }
 

@@ -61,8 +61,8 @@ public final class ProductSetProductPriceCustomFieldActionBuilder
     }
 
     public ProductSetProductPriceCustomFieldAction build() {
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(priceId, ProductSetProductPriceCustomFieldAction.class + ": priceId is missing");
+        Objects.requireNonNull(name, ProductSetProductPriceCustomFieldAction.class + ": name is missing");
         return new ProductSetProductPriceCustomFieldActionImpl(priceId, staged, name, value);
     }
 

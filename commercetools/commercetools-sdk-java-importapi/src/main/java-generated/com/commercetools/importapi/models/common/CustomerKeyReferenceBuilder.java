@@ -21,7 +21,7 @@ public final class CustomerKeyReferenceBuilder implements Builder<CustomerKeyRef
     }
 
     public CustomerKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, CustomerKeyReference.class + ": key is missing");
         return new CustomerKeyReferenceImpl(key);
     }
 

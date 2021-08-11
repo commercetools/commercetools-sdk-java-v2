@@ -26,7 +26,7 @@ public final class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> 
     }
 
     public DateTimeSetField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, DateTimeSetField.class + ": value is missing");
         return new DateTimeSetFieldImpl(value);
     }
 

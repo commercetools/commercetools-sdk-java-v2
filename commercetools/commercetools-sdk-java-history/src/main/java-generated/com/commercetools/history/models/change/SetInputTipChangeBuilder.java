@@ -55,10 +55,10 @@ public final class SetInputTipChangeBuilder implements Builder<SetInputTipChange
     }
 
     public SetInputTipChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetInputTipChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, SetInputTipChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetInputTipChange.class + ": previousValue is missing");
         return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);
     }
 

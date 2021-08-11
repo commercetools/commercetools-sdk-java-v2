@@ -44,9 +44,9 @@ public final class RemovePaymentChangeBuilder implements Builder<RemovePaymentCh
     }
 
     public RemovePaymentChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemovePaymentChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, RemovePaymentChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, RemovePaymentChange.class + ": previousValue is missing");
         return new RemovePaymentChangeImpl(change, nextValue, previousValue);
     }
 

@@ -32,8 +32,8 @@ public final class MissingImagesCountBuilder implements Builder<MissingImagesCou
     }
 
     public MissingImagesCount build() {
-        Objects.requireNonNull(missingImages);
-        Objects.requireNonNull(total);
+        Objects.requireNonNull(missingImages, MissingImagesCount.class + ": missingImages is missing");
+        Objects.requireNonNull(total, MissingImagesCount.class + ": total is missing");
         return new MissingImagesCountImpl(missingImages, total);
     }
 

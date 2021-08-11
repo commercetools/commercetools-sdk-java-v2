@@ -33,8 +33,8 @@ public final class RemoveAttributeDefinitionChangeBuilder implements Builder<Rem
     }
 
     public RemoveAttributeDefinitionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveAttributeDefinitionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveAttributeDefinitionChange.class + ": previousValue is missing");
         return new RemoveAttributeDefinitionChangeImpl(change, previousValue);
     }
 

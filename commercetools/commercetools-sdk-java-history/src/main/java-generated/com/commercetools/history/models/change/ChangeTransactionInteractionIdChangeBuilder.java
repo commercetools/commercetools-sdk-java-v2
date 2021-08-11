@@ -56,10 +56,11 @@ public final class ChangeTransactionInteractionIdChangeBuilder
     }
 
     public ChangeTransactionInteractionIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(transaction);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeTransactionInteractionIdChange.class + ": change is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionInteractionIdChange.class + ": transaction is missing");
+        Objects.requireNonNull(nextValue, ChangeTransactionInteractionIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            ChangeTransactionInteractionIdChange.class + ": previousValue is missing");
         return new ChangeTransactionInteractionIdChangeImpl(change, transaction, nextValue, previousValue);
     }
 

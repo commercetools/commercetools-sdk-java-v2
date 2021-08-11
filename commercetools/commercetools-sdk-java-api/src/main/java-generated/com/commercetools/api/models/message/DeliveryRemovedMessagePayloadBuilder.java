@@ -21,7 +21,7 @@ public final class DeliveryRemovedMessagePayloadBuilder implements Builder<Deliv
     }
 
     public DeliveryRemovedMessagePayload build() {
-        Objects.requireNonNull(delivery);
+        Objects.requireNonNull(delivery, DeliveryRemovedMessagePayload.class + ": delivery is missing");
         return new DeliveryRemovedMessagePayloadImpl(delivery);
     }
 

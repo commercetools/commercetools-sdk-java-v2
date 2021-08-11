@@ -76,10 +76,10 @@ public final class ApiClientPagedQueryResponseBuilder implements Builder<ApiClie
     }
 
     public ApiClientPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ApiClientPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ApiClientPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ApiClientPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ApiClientPagedQueryResponse.class + ": results is missing");
         return new ApiClientPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

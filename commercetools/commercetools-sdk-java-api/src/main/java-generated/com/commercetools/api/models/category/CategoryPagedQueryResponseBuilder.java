@@ -75,10 +75,10 @@ public final class CategoryPagedQueryResponseBuilder implements Builder<Category
     }
 
     public CategoryPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, CategoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CategoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CategoryPagedQueryResponse.class + ": results is missing");
         return new CategoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

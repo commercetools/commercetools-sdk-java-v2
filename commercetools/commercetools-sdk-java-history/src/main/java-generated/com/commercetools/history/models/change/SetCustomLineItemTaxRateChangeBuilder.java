@@ -80,12 +80,13 @@ public final class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetC
     }
 
     public SetCustomLineItemTaxRateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customLineItem);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(taxMode);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomLineItemTaxRateChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem, SetCustomLineItemTaxRateChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTaxRateChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(taxMode, SetCustomLineItemTaxRateChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTaxRateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTaxRateChange.class + ": previousValue is missing");
         return new SetCustomLineItemTaxRateChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
             previousValue);
     }

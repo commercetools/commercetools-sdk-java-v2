@@ -39,8 +39,8 @@ public final class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUp
     }
 
     public CustomerGroupUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, CustomerGroupUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, CustomerGroupUpdate.class + ": actions is missing");
         return new CustomerGroupUpdateImpl(version, actions);
     }
 

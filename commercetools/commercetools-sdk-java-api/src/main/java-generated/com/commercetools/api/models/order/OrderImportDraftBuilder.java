@@ -328,7 +328,7 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
     }
 
     public OrderImportDraft build() {
-        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(totalPrice, OrderImportDraft.class + ": totalPrice is missing");
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, itemShippingAddresses,

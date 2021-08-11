@@ -56,8 +56,10 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     public OrderCustomLineItemDiscountSetMessagePayload build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(discountedPricePerQuantity);
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": discountedPricePerQuantity is missing");
         return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,
             taxedPrice);
     }

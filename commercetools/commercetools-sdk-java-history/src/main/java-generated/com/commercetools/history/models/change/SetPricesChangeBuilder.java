@@ -77,11 +77,11 @@ public final class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     public SetPricesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetPricesChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetPricesChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetPricesChange.class + ": variant is missing");
+        Objects.requireNonNull(previousValue, SetPricesChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetPricesChange.class + ": nextValue is missing");
         return new SetPricesChangeImpl(change, catalogData, variant, previousValue, nextValue);
     }
 

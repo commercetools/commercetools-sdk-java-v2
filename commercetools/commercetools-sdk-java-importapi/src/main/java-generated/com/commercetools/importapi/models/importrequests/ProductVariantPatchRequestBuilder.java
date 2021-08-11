@@ -28,7 +28,7 @@ public final class ProductVariantPatchRequestBuilder implements Builder<ProductV
     }
 
     public ProductVariantPatchRequest build() {
-        Objects.requireNonNull(patches);
+        Objects.requireNonNull(patches, ProductVariantPatchRequest.class + ": patches is missing");
         return new ProductVariantPatchRequestImpl(patches);
     }
 

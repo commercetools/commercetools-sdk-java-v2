@@ -66,11 +66,11 @@ public final class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange
     }
 
     public ChangeLabelChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeLabelChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeLabelChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, ChangeLabelChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeLabelChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeLabelChange.class + ": previousValue is missing");
         return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 

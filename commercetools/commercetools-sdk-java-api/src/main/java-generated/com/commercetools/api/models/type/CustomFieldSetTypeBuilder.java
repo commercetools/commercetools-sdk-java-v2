@@ -21,7 +21,7 @@ public final class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetTy
     }
 
     public CustomFieldSetType build() {
-        Objects.requireNonNull(elementType);
+        Objects.requireNonNull(elementType, CustomFieldSetType.class + ": elementType is missing");
         return new CustomFieldSetTypeImpl(elementType);
     }
 

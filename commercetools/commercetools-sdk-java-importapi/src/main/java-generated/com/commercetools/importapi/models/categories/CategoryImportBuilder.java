@@ -173,9 +173,9 @@ public final class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     public CategoryImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(key, CategoryImport.class + ": key is missing");
+        Objects.requireNonNull(name, CategoryImport.class + ": name is missing");
+        Objects.requireNonNull(slug, CategoryImport.class + ": slug is missing");
         return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,
             metaDescription, metaKeywords, assets, custom);
     }

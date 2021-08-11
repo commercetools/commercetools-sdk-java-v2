@@ -27,7 +27,7 @@ public final class ChannelSetRolesActionBuilder implements Builder<ChannelSetRol
     }
 
     public ChannelSetRolesAction build() {
-        Objects.requireNonNull(roles);
+        Objects.requireNonNull(roles, ChannelSetRolesAction.class + ": roles is missing");
         return new ChannelSetRolesActionImpl(roles);
     }
 

@@ -37,7 +37,7 @@ public final class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasur
     }
 
     public ParcelMeasurementDraft build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, ParcelMeasurementDraft.class + ": parcelId is missing");
         return new ParcelMeasurementDraftImpl(parcelId, measurements);
     }
 

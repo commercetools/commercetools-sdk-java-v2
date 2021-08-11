@@ -67,7 +67,7 @@ public final class ProductChangeAssetOrderActionBuilder implements Builder<Produ
     }
 
     public ProductChangeAssetOrderAction build() {
-        Objects.requireNonNull(assetOrder);
+        Objects.requireNonNull(assetOrder, ProductChangeAssetOrderAction.class + ": assetOrder is missing");
         return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);
     }
 

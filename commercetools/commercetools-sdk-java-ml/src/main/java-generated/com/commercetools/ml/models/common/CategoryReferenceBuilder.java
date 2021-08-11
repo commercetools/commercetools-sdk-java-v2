@@ -21,7 +21,7 @@ public final class CategoryReferenceBuilder implements Builder<CategoryReference
     }
 
     public CategoryReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, CategoryReference.class + ": id is missing");
         return new CategoryReferenceImpl(id);
     }
 

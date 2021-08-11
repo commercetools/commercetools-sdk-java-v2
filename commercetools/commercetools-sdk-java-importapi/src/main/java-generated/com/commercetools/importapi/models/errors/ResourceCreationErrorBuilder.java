@@ -36,7 +36,7 @@ public final class ResourceCreationErrorBuilder implements Builder<ResourceCreat
     }
 
     public ResourceCreationError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ResourceCreationError.class + ": message is missing");
         return new ResourceCreationErrorImpl(message, resource);
     }
 

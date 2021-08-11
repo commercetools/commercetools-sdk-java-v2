@@ -126,15 +126,15 @@ public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
     }
 
     public MessageDelivery build() {
-        Objects.requireNonNull(projectKey);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(payloadNotIncluded);
+        Objects.requireNonNull(projectKey, MessageDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, MessageDelivery.class + ": resource is missing");
+        Objects.requireNonNull(id, MessageDelivery.class + ": id is missing");
+        Objects.requireNonNull(version, MessageDelivery.class + ": version is missing");
+        Objects.requireNonNull(createdAt, MessageDelivery.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, MessageDelivery.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, MessageDelivery.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resourceVersion, MessageDelivery.class + ": resourceVersion is missing");
+        Objects.requireNonNull(payloadNotIncluded, MessageDelivery.class + ": payloadNotIncluded is missing");
         return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
             lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }

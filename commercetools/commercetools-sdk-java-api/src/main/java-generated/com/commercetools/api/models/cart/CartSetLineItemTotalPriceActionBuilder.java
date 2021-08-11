@@ -37,7 +37,7 @@ public final class CartSetLineItemTotalPriceActionBuilder implements Builder<Car
     }
 
     public CartSetLineItemTotalPriceAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, CartSetLineItemTotalPriceAction.class + ": lineItemId is missing");
         return new CartSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 

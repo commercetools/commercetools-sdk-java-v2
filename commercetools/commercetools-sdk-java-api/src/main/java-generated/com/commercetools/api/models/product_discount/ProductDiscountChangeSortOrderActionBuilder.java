@@ -22,7 +22,7 @@ public final class ProductDiscountChangeSortOrderActionBuilder
     }
 
     public ProductDiscountChangeSortOrderAction build() {
-        Objects.requireNonNull(sortOrder);
+        Objects.requireNonNull(sortOrder, ProductDiscountChangeSortOrderAction.class + ": sortOrder is missing");
         return new ProductDiscountChangeSortOrderActionImpl(sortOrder);
     }
 

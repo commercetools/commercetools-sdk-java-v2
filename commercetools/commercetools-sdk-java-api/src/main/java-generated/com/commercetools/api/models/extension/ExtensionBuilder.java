@@ -137,12 +137,12 @@ public final class ExtensionBuilder implements Builder<Extension> {
     }
 
     public Extension build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(destination);
-        Objects.requireNonNull(triggers);
+        Objects.requireNonNull(id, Extension.class + ": id is missing");
+        Objects.requireNonNull(version, Extension.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Extension.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Extension.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(destination, Extension.class + ": destination is missing");
+        Objects.requireNonNull(triggers, Extension.class + ": triggers is missing");
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
             triggers, timeoutInMs);
     }

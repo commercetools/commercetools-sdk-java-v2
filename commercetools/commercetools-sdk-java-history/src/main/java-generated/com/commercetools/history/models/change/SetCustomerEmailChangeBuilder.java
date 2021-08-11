@@ -43,9 +43,9 @@ public final class SetCustomerEmailChangeBuilder implements Builder<SetCustomerE
     }
 
     public SetCustomerEmailChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCustomerEmailChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomerEmailChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomerEmailChange.class + ": nextValue is missing");
         return new SetCustomerEmailChangeImpl(change, previousValue, nextValue);
     }
 

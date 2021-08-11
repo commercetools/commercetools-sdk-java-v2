@@ -32,8 +32,8 @@ public final class MissingImagesProductLevelBuilder implements Builder<MissingIm
     }
 
     public MissingImagesProductLevel build() {
-        Objects.requireNonNull(missingImages);
-        Objects.requireNonNull(total);
+        Objects.requireNonNull(missingImages, MissingImagesProductLevel.class + ": missingImages is missing");
+        Objects.requireNonNull(total, MissingImagesProductLevel.class + ": total is missing");
         return new MissingImagesProductLevelImpl(missingImages, total);
     }
 

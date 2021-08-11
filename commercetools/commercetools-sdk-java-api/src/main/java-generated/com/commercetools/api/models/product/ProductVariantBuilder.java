@@ -193,7 +193,7 @@ public final class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     public ProductVariant build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ProductVariant.class + ": id is missing");
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
             isMatchingVariant, scopedPrice, scopedPriceDiscounted);
     }

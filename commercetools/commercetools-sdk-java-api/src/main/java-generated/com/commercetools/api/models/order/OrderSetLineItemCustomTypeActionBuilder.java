@@ -51,7 +51,7 @@ public final class OrderSetLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     public OrderSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, OrderSetLineItemCustomTypeAction.class + ": lineItemId is missing");
         return new OrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 

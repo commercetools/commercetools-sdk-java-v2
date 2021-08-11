@@ -27,7 +27,7 @@ public final class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     public PaymentInfo build() {
-        Objects.requireNonNull(payments);
+        Objects.requireNonNull(payments, PaymentInfo.class + ": payments is missing");
         return new PaymentInfoImpl(payments);
     }
 

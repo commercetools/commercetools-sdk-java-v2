@@ -45,9 +45,9 @@ public final class RemoveItemShippingAddressesChangeBuilder implements Builder<R
     }
 
     public RemoveItemShippingAddressesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveItemShippingAddressesChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, RemoveItemShippingAddressesChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, RemoveItemShippingAddressesChange.class + ": previousValue is missing");
         return new RemoveItemShippingAddressesChangeImpl(change, nextValue, previousValue);
     }
 

@@ -145,10 +145,10 @@ public final class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     public ShippingInfo build() {
-        Objects.requireNonNull(shippingMethodName);
-        Objects.requireNonNull(price);
-        Objects.requireNonNull(shippingRate);
-        Objects.requireNonNull(shippingMethodState);
+        Objects.requireNonNull(shippingMethodName, ShippingInfo.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(price, ShippingInfo.class + ": price is missing");
+        Objects.requireNonNull(shippingRate, ShippingInfo.class + ": shippingRate is missing");
+        Objects.requireNonNull(shippingMethodState, ShippingInfo.class + ": shippingMethodState is missing");
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
             shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }

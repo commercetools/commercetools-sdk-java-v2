@@ -43,9 +43,9 @@ public final class SetKeyChangeBuilder implements Builder<SetKeyChange> {
     }
 
     public SetKeyChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetKeyChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetKeyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetKeyChange.class + ": nextValue is missing");
         return new SetKeyChangeImpl(change, previousValue, nextValue);
     }
 

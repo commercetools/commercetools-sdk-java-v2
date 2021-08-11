@@ -237,9 +237,9 @@ public final class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     public ProductDraft build() {
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(productType, ProductDraft.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductDraft.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductDraft.class + ": slug is missing");
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
             publish);

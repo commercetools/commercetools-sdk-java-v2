@@ -79,8 +79,8 @@ public final class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     public ErrorResponse build() {
-        Objects.requireNonNull(statusCode);
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
+        Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
     }
 

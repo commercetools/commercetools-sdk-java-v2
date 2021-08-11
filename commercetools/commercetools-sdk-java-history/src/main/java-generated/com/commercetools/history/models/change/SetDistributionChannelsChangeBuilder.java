@@ -57,9 +57,9 @@ public final class SetDistributionChannelsChangeBuilder implements Builder<SetDi
     }
 
     public SetDistributionChannelsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetDistributionChannelsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetDistributionChannelsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDistributionChannelsChange.class + ": nextValue is missing");
         return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
     }
 

@@ -153,14 +153,14 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     public ImportOperation build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(importSinkKey);
-        Objects.requireNonNull(resourceKey);
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(expiresAt);
+        Objects.requireNonNull(version, ImportOperation.class + ": version is missing");
+        Objects.requireNonNull(importSinkKey, ImportOperation.class + ": importSinkKey is missing");
+        Objects.requireNonNull(resourceKey, ImportOperation.class + ": resourceKey is missing");
+        Objects.requireNonNull(id, ImportOperation.class + ": id is missing");
+        Objects.requireNonNull(state, ImportOperation.class + ": state is missing");
+        Objects.requireNonNull(createdAt, ImportOperation.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ImportOperation.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(expiresAt, ImportOperation.class + ": expiresAt is missing");
         return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
             unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }

@@ -57,10 +57,10 @@ public final class SetTextLineItemDescriptionChangeBuilder implements Builder<Se
     }
 
     public SetTextLineItemDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(textLineItem);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetTextLineItemDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(textLineItem, SetTextLineItemDescriptionChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(previousValue, SetTextLineItemDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetTextLineItemDescriptionChange.class + ": nextValue is missing");
         return new SetTextLineItemDescriptionChangeImpl(change, textLineItem, previousValue, nextValue);
     }
 

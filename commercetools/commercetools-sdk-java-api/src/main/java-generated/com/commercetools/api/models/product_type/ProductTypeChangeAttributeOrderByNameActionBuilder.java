@@ -28,7 +28,8 @@ public final class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     public ProductTypeChangeAttributeOrderByNameAction build() {
-        Objects.requireNonNull(attributeNames);
+        Objects.requireNonNull(attributeNames,
+            ProductTypeChangeAttributeOrderByNameAction.class + ": attributeNames is missing");
         return new ProductTypeChangeAttributeOrderByNameActionImpl(attributeNames);
     }
 

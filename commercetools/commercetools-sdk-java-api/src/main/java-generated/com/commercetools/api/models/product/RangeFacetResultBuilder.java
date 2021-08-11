@@ -27,7 +27,7 @@ public final class RangeFacetResultBuilder implements Builder<RangeFacetResult> 
     }
 
     public RangeFacetResult build() {
-        Objects.requireNonNull(ranges);
+        Objects.requireNonNull(ranges, RangeFacetResult.class + ": ranges is missing");
         return new RangeFacetResultImpl(ranges);
     }
 

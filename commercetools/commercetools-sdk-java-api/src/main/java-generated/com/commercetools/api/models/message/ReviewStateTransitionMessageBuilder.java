@@ -199,19 +199,21 @@ public final class ReviewStateTransitionMessageBuilder implements Builder<Review
     }
 
     public ReviewStateTransitionMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(oldState);
-        Objects.requireNonNull(newState);
-        Objects.requireNonNull(oldIncludedInStatistics);
-        Objects.requireNonNull(newIncludedInStatistics);
-        Objects.requireNonNull(target);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(id, ReviewStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReviewStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReviewStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReviewStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReviewStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReviewStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReviewStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(oldState, ReviewStateTransitionMessage.class + ": oldState is missing");
+        Objects.requireNonNull(newState, ReviewStateTransitionMessage.class + ": newState is missing");
+        Objects.requireNonNull(oldIncludedInStatistics,
+            ReviewStateTransitionMessage.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics,
+            ReviewStateTransitionMessage.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(target, ReviewStateTransitionMessage.class + ": target is missing");
+        Objects.requireNonNull(force, ReviewStateTransitionMessage.class + ": force is missing");
         return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,
             oldIncludedInStatistics, newIncludedInStatistics, target, force);

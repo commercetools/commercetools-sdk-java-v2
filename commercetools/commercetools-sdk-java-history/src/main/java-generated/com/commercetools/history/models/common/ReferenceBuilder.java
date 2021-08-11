@@ -32,8 +32,8 @@ public final class ReferenceBuilder implements Builder<Reference> {
     }
 
     public Reference build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(typeId);
+        Objects.requireNonNull(id, Reference.class + ": id is missing");
+        Objects.requireNonNull(typeId, Reference.class + ": typeId is missing");
         return new ReferenceImpl(id, typeId);
     }
 

@@ -23,7 +23,8 @@ public final class StoreRemoveDistributionChannelActionBuilder
     }
 
     public StoreRemoveDistributionChannelAction build() {
-        Objects.requireNonNull(distributionChannel);
+        Objects.requireNonNull(distributionChannel,
+            StoreRemoveDistributionChannelAction.class + ": distributionChannel is missing");
         return new StoreRemoveDistributionChannelActionImpl(distributionChannel);
     }
 

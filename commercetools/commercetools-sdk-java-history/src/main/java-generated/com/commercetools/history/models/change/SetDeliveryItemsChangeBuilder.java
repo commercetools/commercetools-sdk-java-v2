@@ -68,10 +68,10 @@ public final class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryI
     }
 
     public SetDeliveryItemsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetDeliveryItemsChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, SetDeliveryItemsChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(nextValue, SetDeliveryItemsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDeliveryItemsChange.class + ": previousValue is missing");
         return new SetDeliveryItemsChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 

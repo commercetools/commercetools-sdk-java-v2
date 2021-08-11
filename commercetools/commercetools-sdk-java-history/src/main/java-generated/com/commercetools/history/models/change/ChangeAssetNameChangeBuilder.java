@@ -57,10 +57,10 @@ public final class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNa
     }
 
     public ChangeAssetNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeAssetNameChange.class + ": change is missing");
+        Objects.requireNonNull(asset, ChangeAssetNameChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, ChangeAssetNameChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeAssetNameChange.class + ": previousValue is missing");
         return new ChangeAssetNameChangeImpl(change, asset, nextValue, previousValue);
     }
 

@@ -21,7 +21,7 @@ public final class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOA
     }
 
     public ExternalOAuthFailedError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ExternalOAuthFailedError.class + ": message is missing");
         return new ExternalOAuthFailedErrorImpl(message);
     }
 

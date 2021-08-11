@@ -69,10 +69,10 @@ public final class SetParcelItemsChangeBuilder implements Builder<SetParcelItems
     }
 
     public SetParcelItemsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(parcel);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetParcelItemsChange.class + ": change is missing");
+        Objects.requireNonNull(parcel, SetParcelItemsChange.class + ": parcel is missing");
+        Objects.requireNonNull(nextValue, SetParcelItemsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetParcelItemsChange.class + ": previousValue is missing");
         return new SetParcelItemsChangeImpl(change, parcel, nextValue, previousValue);
     }
 

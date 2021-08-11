@@ -32,8 +32,8 @@ public final class RequiredFieldErrorBuilder implements Builder<RequiredFieldErr
     }
 
     public RequiredFieldError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(field);
+        Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");
+        Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
         return new RequiredFieldErrorImpl(message, field);
     }
 

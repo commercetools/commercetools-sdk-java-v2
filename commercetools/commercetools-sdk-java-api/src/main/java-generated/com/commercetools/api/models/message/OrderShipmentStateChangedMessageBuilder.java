@@ -158,14 +158,15 @@ public final class OrderShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     public OrderShipmentStateChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(id, OrderShipmentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShipmentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShipmentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShipmentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShipmentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShipmentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderShipmentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessage.class + ": shipmentState is missing");
         return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
             oldShipmentState);

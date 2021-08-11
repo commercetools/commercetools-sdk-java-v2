@@ -153,15 +153,15 @@ public final class OrderLineItemAddedMessageBuilder implements Builder<OrderLine
     }
 
     public OrderLineItemAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(addedQuantity);
+        Objects.requireNonNull(id, OrderLineItemAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderLineItemAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderLineItemAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderLineItemAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderLineItemAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderLineItemAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderLineItemAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(lineItem, OrderLineItemAddedMessage.class + ": lineItem is missing");
+        Objects.requireNonNull(addedQuantity, OrderLineItemAddedMessage.class + ": addedQuantity is missing");
         return new OrderLineItemAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItem, addedQuantity);
     }

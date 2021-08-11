@@ -60,8 +60,8 @@ public final class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     public DeliveryDraft build() {
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(parcels);
+        Objects.requireNonNull(items, DeliveryDraft.class + ": items is missing");
+        Objects.requireNonNull(parcels, DeliveryDraft.class + ": parcels is missing");
         return new DeliveryDraftImpl(items, address, parcels);
     }
 

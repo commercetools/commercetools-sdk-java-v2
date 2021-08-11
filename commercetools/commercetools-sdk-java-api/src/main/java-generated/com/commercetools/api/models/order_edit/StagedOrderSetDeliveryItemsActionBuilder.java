@@ -39,8 +39,8 @@ public final class StagedOrderSetDeliveryItemsActionBuilder implements Builder<S
     }
 
     public StagedOrderSetDeliveryItemsAction build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryItemsAction.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, StagedOrderSetDeliveryItemsAction.class + ": items is missing");
         return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, items);
     }
 

@@ -60,8 +60,8 @@ public final class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     public VariantValues build() {
-        Objects.requireNonNull(prices);
-        Objects.requireNonNull(attributes);
+        Objects.requireNonNull(prices, VariantValues.class + ": prices is missing");
+        Objects.requireNonNull(attributes, VariantValues.class + ": attributes is missing");
         return new VariantValuesImpl(sku, prices, attributes);
     }
 

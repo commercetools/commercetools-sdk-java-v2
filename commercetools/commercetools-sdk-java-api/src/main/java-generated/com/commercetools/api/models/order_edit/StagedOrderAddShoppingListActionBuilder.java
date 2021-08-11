@@ -52,7 +52,7 @@ public final class StagedOrderAddShoppingListActionBuilder implements Builder<St
     }
 
     public StagedOrderAddShoppingListAction build() {
-        Objects.requireNonNull(shoppingList);
+        Objects.requireNonNull(shoppingList, StagedOrderAddShoppingListAction.class + ": shoppingList is missing");
         return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 

@@ -22,7 +22,7 @@ public final class CartDiscountChangeTargetActionBuilder implements Builder<Cart
     }
 
     public CartDiscountChangeTargetAction build() {
-        Objects.requireNonNull(target);
+        Objects.requireNonNull(target, CartDiscountChangeTargetAction.class + ": target is missing");
         return new CartDiscountChangeTargetActionImpl(target);
     }
 

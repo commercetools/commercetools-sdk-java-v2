@@ -40,8 +40,8 @@ public final class StagedOrderImportLineItemStateActionBuilder
     }
 
     public StagedOrderImportLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(lineItemId, StagedOrderImportLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(state, StagedOrderImportLineItemStateAction.class + ": state is missing");
         return new StagedOrderImportLineItemStateActionImpl(lineItemId, state);
     }
 

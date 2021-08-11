@@ -33,8 +33,8 @@ public final class AddInterfaceInteractionChangeBuilder implements Builder<AddIn
     }
 
     public AddInterfaceInteractionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddInterfaceInteractionChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddInterfaceInteractionChange.class + ": nextValue is missing");
         return new AddInterfaceInteractionChangeImpl(change, nextValue);
     }
 

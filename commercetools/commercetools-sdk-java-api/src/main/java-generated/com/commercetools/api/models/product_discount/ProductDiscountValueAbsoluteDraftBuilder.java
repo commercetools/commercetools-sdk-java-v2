@@ -27,7 +27,7 @@ public final class ProductDiscountValueAbsoluteDraftBuilder implements Builder<P
     }
 
     public ProductDiscountValueAbsoluteDraft build() {
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(money, ProductDiscountValueAbsoluteDraft.class + ": money is missing");
         return new ProductDiscountValueAbsoluteDraftImpl(money);
     }
 

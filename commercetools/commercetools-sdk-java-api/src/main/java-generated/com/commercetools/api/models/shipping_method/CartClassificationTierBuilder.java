@@ -47,8 +47,8 @@ public final class CartClassificationTierBuilder implements Builder<CartClassifi
     }
 
     public CartClassificationTier build() {
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(value, CartClassificationTier.class + ": value is missing");
+        Objects.requireNonNull(price, CartClassificationTier.class + ": price is missing");
         return new CartClassificationTierImpl(value, price, isMatching);
     }
 

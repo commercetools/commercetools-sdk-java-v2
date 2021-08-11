@@ -32,8 +32,8 @@ public final class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     public OrderEditApply build() {
-        Objects.requireNonNull(editVersion);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(editVersion, OrderEditApply.class + ": editVersion is missing");
+        Objects.requireNonNull(resourceVersion, OrderEditApply.class + ": resourceVersion is missing");
         return new OrderEditApplyImpl(editVersion, resourceVersion);
     }
 

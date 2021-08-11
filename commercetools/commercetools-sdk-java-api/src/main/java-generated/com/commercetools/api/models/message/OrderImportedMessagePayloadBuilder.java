@@ -21,7 +21,7 @@ public final class OrderImportedMessagePayloadBuilder implements Builder<OrderIm
     }
 
     public OrderImportedMessagePayload build() {
-        Objects.requireNonNull(order);
+        Objects.requireNonNull(order, OrderImportedMessagePayload.class + ": order is missing");
         return new OrderImportedMessagePayloadImpl(order);
     }
 

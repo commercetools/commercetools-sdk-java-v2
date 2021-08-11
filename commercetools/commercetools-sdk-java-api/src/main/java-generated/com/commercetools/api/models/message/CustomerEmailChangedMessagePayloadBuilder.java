@@ -21,7 +21,7 @@ public final class CustomerEmailChangedMessagePayloadBuilder implements Builder<
     }
 
     public CustomerEmailChangedMessagePayload build() {
-        Objects.requireNonNull(email);
+        Objects.requireNonNull(email, CustomerEmailChangedMessagePayload.class + ": email is missing");
         return new CustomerEmailChangedMessagePayloadImpl(email);
     }
 

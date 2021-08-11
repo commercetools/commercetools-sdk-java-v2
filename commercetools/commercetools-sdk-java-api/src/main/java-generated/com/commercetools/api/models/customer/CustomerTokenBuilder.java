@@ -80,11 +80,11 @@ public final class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     public CustomerToken build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(customerId);
-        Objects.requireNonNull(expiresAt);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(id, CustomerToken.class + ": id is missing");
+        Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
+        Objects.requireNonNull(customerId, CustomerToken.class + ": customerId is missing");
+        Objects.requireNonNull(expiresAt, CustomerToken.class + ": expiresAt is missing");
+        Objects.requireNonNull(value, CustomerToken.class + ": value is missing");
         return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
     }
 

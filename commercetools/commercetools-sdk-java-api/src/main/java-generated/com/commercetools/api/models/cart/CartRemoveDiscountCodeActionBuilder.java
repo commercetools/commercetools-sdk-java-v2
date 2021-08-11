@@ -22,7 +22,7 @@ public final class CartRemoveDiscountCodeActionBuilder implements Builder<CartRe
     }
 
     public CartRemoveDiscountCodeAction build() {
-        Objects.requireNonNull(discountCode);
+        Objects.requireNonNull(discountCode, CartRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new CartRemoveDiscountCodeActionImpl(discountCode);
     }
 

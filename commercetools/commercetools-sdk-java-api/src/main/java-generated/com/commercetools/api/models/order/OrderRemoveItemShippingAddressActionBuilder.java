@@ -22,7 +22,7 @@ public final class OrderRemoveItemShippingAddressActionBuilder
     }
 
     public OrderRemoveItemShippingAddressAction build() {
-        Objects.requireNonNull(addressKey);
+        Objects.requireNonNull(addressKey, OrderRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new OrderRemoveItemShippingAddressActionImpl(addressKey);
     }
 

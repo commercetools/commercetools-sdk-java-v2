@@ -39,8 +39,8 @@ public final class DuplicatePriceScopeErrorBuilder implements Builder<DuplicateP
     }
 
     public DuplicatePriceScopeError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(conflictingPrices);
+        Objects.requireNonNull(message, DuplicatePriceScopeError.class + ": message is missing");
+        Objects.requireNonNull(conflictingPrices, DuplicatePriceScopeError.class + ": conflictingPrices is missing");
         return new DuplicatePriceScopeErrorImpl(message, conflictingPrices);
     }
 

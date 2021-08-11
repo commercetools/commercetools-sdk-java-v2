@@ -22,7 +22,7 @@ public final class ProductDiscountChangeValueActionBuilder implements Builder<Pr
     }
 
     public ProductDiscountChangeValueAction build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, ProductDiscountChangeValueAction.class + ": value is missing");
         return new ProductDiscountChangeValueActionImpl(value);
     }
 

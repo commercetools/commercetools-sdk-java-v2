@@ -43,9 +43,9 @@ public final class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousId
     }
 
     public SetAnonymousIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetAnonymousIdChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetAnonymousIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetAnonymousIdChange.class + ": nextValue is missing");
         return new SetAnonymousIdChangeImpl(change, previousValue, nextValue);
     }
 

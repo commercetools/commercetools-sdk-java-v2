@@ -71,11 +71,11 @@ public final class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     public TermFacetResult build() {
-        Objects.requireNonNull(dataType);
-        Objects.requireNonNull(missing);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(other);
-        Objects.requireNonNull(terms);
+        Objects.requireNonNull(dataType, TermFacetResult.class + ": dataType is missing");
+        Objects.requireNonNull(missing, TermFacetResult.class + ": missing is missing");
+        Objects.requireNonNull(total, TermFacetResult.class + ": total is missing");
+        Objects.requireNonNull(other, TermFacetResult.class + ": other is missing");
+        Objects.requireNonNull(terms, TermFacetResult.class + ": terms is missing");
         return new TermFacetResultImpl(dataType, missing, total, other, terms);
     }
 

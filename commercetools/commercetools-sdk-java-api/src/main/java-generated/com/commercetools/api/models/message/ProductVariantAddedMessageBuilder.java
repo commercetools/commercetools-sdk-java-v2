@@ -154,15 +154,15 @@ public final class ProductVariantAddedMessageBuilder implements Builder<ProductV
     }
 
     public ProductVariantAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(id, ProductVariantAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductVariantAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductVariantAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductVariantAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductVariantAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductVariantAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductVariantAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variant, ProductVariantAddedMessage.class + ": variant is missing");
+        Objects.requireNonNull(staged, ProductVariantAddedMessage.class + ": staged is missing");
         return new ProductVariantAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, staged);
     }

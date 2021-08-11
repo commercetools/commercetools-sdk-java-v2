@@ -229,7 +229,7 @@ public final class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     public MyCartDraft build() {
-        Objects.requireNonNull(currency);
+        Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");
         return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
             billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
             itemShippingAddresses, store, discountCodes);

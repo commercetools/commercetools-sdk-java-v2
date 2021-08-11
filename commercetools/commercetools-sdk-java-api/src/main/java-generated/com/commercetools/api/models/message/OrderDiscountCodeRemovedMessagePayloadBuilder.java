@@ -23,7 +23,8 @@ public final class OrderDiscountCodeRemovedMessagePayloadBuilder
     }
 
     public OrderDiscountCodeRemovedMessagePayload build() {
-        Objects.requireNonNull(discountCode);
+        Objects.requireNonNull(discountCode,
+            OrderDiscountCodeRemovedMessagePayload.class + ": discountCode is missing");
         return new OrderDiscountCodeRemovedMessagePayloadImpl(discountCode);
     }
 

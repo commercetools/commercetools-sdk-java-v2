@@ -28,7 +28,7 @@ public final class ProductDraftImportRequestBuilder implements Builder<ProductDr
     }
 
     public ProductDraftImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, ProductDraftImportRequest.class + ": resources is missing");
         return new ProductDraftImportRequestImpl(resources);
     }
 

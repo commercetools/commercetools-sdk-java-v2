@@ -68,10 +68,10 @@ public final class RemoveFromCategoryChangeBuilder implements Builder<RemoveFrom
     }
 
     public RemoveFromCategoryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveFromCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(category, RemoveFromCategoryChange.class + ": category is missing");
+        Objects.requireNonNull(previousValue, RemoveFromCategoryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveFromCategoryChange.class + ": nextValue is missing");
         return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 

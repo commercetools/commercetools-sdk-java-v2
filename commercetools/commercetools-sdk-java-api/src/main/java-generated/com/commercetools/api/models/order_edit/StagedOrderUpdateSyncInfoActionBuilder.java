@@ -50,7 +50,7 @@ public final class StagedOrderUpdateSyncInfoActionBuilder implements Builder<Sta
     }
 
     public StagedOrderUpdateSyncInfoAction build() {
-        Objects.requireNonNull(channel);
+        Objects.requireNonNull(channel, StagedOrderUpdateSyncInfoAction.class + ": channel is missing");
         return new StagedOrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
     }
 

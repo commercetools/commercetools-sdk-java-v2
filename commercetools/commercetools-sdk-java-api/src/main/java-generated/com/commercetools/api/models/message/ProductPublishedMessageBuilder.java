@@ -170,16 +170,16 @@ public final class ProductPublishedMessageBuilder implements Builder<ProductPubl
     }
 
     public ProductPublishedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(removedImageUrls);
-        Objects.requireNonNull(productProjection);
-        Objects.requireNonNull(scope);
+        Objects.requireNonNull(id, ProductPublishedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPublishedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPublishedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductPublishedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductPublishedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPublishedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductPublishedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(removedImageUrls, ProductPublishedMessage.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(productProjection, ProductPublishedMessage.class + ": productProjection is missing");
+        Objects.requireNonNull(scope, ProductPublishedMessage.class + ": scope is missing");
         return new ProductPublishedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
             productProjection, scope);

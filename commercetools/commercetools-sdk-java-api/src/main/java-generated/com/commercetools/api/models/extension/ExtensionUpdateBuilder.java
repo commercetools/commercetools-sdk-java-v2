@@ -39,8 +39,8 @@ public final class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     public ExtensionUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ExtensionUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ExtensionUpdate.class + ": actions is missing");
         return new ExtensionUpdateImpl(version, actions);
     }
 

@@ -75,10 +75,10 @@ public final class ReviewPagedQueryResponseBuilder implements Builder<ReviewPage
     }
 
     public ReviewPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ReviewPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ReviewPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ReviewPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ReviewPagedQueryResponse.class + ": results is missing");
         return new ReviewPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

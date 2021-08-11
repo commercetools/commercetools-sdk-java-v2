@@ -56,7 +56,7 @@ public final class CategorySetAssetSourcesActionBuilder implements Builder<Categ
     }
 
     public CategorySetAssetSourcesAction build() {
-        Objects.requireNonNull(sources);
+        Objects.requireNonNull(sources, CategorySetAssetSourcesAction.class + ": sources is missing");
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
     }
 

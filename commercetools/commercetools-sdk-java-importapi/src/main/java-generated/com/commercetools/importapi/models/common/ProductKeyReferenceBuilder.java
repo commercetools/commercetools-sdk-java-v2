@@ -21,7 +21,7 @@ public final class ProductKeyReferenceBuilder implements Builder<ProductKeyRefer
     }
 
     public ProductKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ProductKeyReference.class + ": key is missing");
         return new ProductKeyReferenceImpl(key);
     }
 

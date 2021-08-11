@@ -27,7 +27,7 @@ public final class ReferenceSetFieldBuilder implements Builder<ReferenceSetField
     }
 
     public ReferenceSetField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, ReferenceSetField.class + ": value is missing");
         return new ReferenceSetFieldImpl(value);
     }
 

@@ -57,10 +57,10 @@ public final class SetAssetDescriptionChangeBuilder implements Builder<SetAssetD
     }
 
     public SetAssetDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetDescriptionChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetDescriptionChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetDescriptionChange.class + ": previousValue is missing");
         return new SetAssetDescriptionChangeImpl(change, asset, nextValue, previousValue);
     }
 

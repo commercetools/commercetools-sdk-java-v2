@@ -21,7 +21,7 @@ public final class StagedOrderRemoveDeliveryActionBuilder implements Builder<Sta
     }
 
     public StagedOrderRemoveDeliveryAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, StagedOrderRemoveDeliveryAction.class + ": deliveryId is missing");
         return new StagedOrderRemoveDeliveryActionImpl(deliveryId);
     }
 

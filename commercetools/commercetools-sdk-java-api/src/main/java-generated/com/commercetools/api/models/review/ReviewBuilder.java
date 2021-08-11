@@ -237,11 +237,11 @@ public final class ReviewBuilder implements Builder<Review> {
     }
 
     public Review build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(includedInStatistics);
+        Objects.requireNonNull(id, Review.class + ": id is missing");
+        Objects.requireNonNull(version, Review.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Review.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Review.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(includedInStatistics, Review.class + ": includedInStatistics is missing");
         return new ReviewImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, uniquenessValue,
             locale, authorName, title, text, target, includedInStatistics, rating, state, customer, custom);
     }

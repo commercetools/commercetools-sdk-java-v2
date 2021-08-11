@@ -41,7 +41,7 @@ public final class BooleanSetAttributeBuilder implements Builder<BooleanSetAttri
     }
 
     public BooleanSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, BooleanSetAttribute.class + ": value is missing");
         return new BooleanSetAttributeImpl(name, value);
     }
 

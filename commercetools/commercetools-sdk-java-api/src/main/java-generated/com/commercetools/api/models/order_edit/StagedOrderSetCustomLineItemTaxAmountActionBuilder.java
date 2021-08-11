@@ -38,7 +38,8 @@ public final class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     public StagedOrderSetCustomLineItemTaxAmountAction build() {
-        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
         return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
     }
 

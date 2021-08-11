@@ -34,8 +34,8 @@ public final class ShippingMethodAddShippingRateActionBuilder implements Builder
     }
 
     public ShippingMethodAddShippingRateAction build() {
-        Objects.requireNonNull(zone);
-        Objects.requireNonNull(shippingRate);
+        Objects.requireNonNull(zone, ShippingMethodAddShippingRateAction.class + ": zone is missing");
+        Objects.requireNonNull(shippingRate, ShippingMethodAddShippingRateAction.class + ": shippingRate is missing");
         return new ShippingMethodAddShippingRateActionImpl(zone, shippingRate);
     }
 

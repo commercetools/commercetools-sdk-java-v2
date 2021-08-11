@@ -21,7 +21,7 @@ public final class AzureServiceBusDestinationBuilder implements Builder<AzureSer
     }
 
     public AzureServiceBusDestination build() {
-        Objects.requireNonNull(connectionString);
+        Objects.requireNonNull(connectionString, AzureServiceBusDestination.class + ": connectionString is missing");
         return new AzureServiceBusDestinationImpl(connectionString);
     }
 

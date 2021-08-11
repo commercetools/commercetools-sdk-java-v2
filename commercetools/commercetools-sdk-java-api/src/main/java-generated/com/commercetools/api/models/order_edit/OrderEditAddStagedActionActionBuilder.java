@@ -22,7 +22,7 @@ public final class OrderEditAddStagedActionActionBuilder implements Builder<Orde
     }
 
     public OrderEditAddStagedActionAction build() {
-        Objects.requireNonNull(stagedAction);
+        Objects.requireNonNull(stagedAction, OrderEditAddStagedActionAction.class + ": stagedAction is missing");
         return new OrderEditAddStagedActionActionImpl(stagedAction);
     }
 

@@ -43,9 +43,9 @@ public final class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange
     }
 
     public ChangeEmailChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeEmailChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeEmailChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeEmailChange.class + ": nextValue is missing");
         return new ChangeEmailChangeImpl(change, previousValue, nextValue);
     }
 

@@ -22,7 +22,8 @@ public final class StagedOrderRemoveCustomLineItemActionBuilder
     }
 
     public StagedOrderRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderRemoveCustomLineItemAction.class + ": customLineItemId is missing");
         return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);
     }
 

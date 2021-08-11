@@ -38,7 +38,8 @@ public final class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     public StagedOrderSetLineItemDistributionChannelAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId,
+            StagedOrderSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 

@@ -53,9 +53,9 @@ public final class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     public OutOfStockError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(lineItems);
-        Objects.requireNonNull(skus);
+        Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");
+        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");
+        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");
         return new OutOfStockErrorImpl(message, lineItems, skus);
     }
 

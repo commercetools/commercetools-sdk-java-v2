@@ -76,12 +76,12 @@ public final class TransactionBuilder implements Builder<Transaction> {
     }
 
     public Transaction build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(timestamp);
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(amount);
-        Objects.requireNonNull(interactionId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(id, Transaction.class + ": id is missing");
+        Objects.requireNonNull(timestamp, Transaction.class + ": timestamp is missing");
+        Objects.requireNonNull(type, Transaction.class + ": type is missing");
+        Objects.requireNonNull(amount, Transaction.class + ": amount is missing");
+        Objects.requireNonNull(interactionId, Transaction.class + ": interactionId is missing");
+        Objects.requireNonNull(state, Transaction.class + ": state is missing");
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
     }
 

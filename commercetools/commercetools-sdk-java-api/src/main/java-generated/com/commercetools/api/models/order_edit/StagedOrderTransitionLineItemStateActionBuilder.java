@@ -73,10 +73,10 @@ public final class StagedOrderTransitionLineItemStateActionBuilder
     }
 
     public StagedOrderTransitionLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(lineItemId, StagedOrderTransitionLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, StagedOrderTransitionLineItemStateAction.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, StagedOrderTransitionLineItemStateAction.class + ": fromState is missing");
+        Objects.requireNonNull(toState, StagedOrderTransitionLineItemStateAction.class + ": toState is missing");
         return new StagedOrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

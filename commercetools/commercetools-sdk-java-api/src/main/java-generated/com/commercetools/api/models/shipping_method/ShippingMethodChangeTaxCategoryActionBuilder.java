@@ -23,7 +23,7 @@ public final class ShippingMethodChangeTaxCategoryActionBuilder
     }
 
     public ShippingMethodChangeTaxCategoryAction build() {
-        Objects.requireNonNull(taxCategory);
+        Objects.requireNonNull(taxCategory, ShippingMethodChangeTaxCategoryAction.class + ": taxCategory is missing");
         return new ShippingMethodChangeTaxCategoryActionImpl(taxCategory);
     }
 

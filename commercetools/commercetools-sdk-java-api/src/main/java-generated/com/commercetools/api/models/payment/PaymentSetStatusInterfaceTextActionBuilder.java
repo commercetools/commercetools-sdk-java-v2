@@ -21,7 +21,7 @@ public final class PaymentSetStatusInterfaceTextActionBuilder implements Builder
     }
 
     public PaymentSetStatusInterfaceTextAction build() {
-        Objects.requireNonNull(interfaceText);
+        Objects.requireNonNull(interfaceText, PaymentSetStatusInterfaceTextAction.class + ": interfaceText is missing");
         return new PaymentSetStatusInterfaceTextActionImpl(interfaceText);
     }
 

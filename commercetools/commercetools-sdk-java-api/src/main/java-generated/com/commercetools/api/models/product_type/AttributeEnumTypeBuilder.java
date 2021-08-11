@@ -28,7 +28,7 @@ public final class AttributeEnumTypeBuilder implements Builder<AttributeEnumType
     }
 
     public AttributeEnumType build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, AttributeEnumType.class + ": values is missing");
         return new AttributeEnumTypeImpl(values);
     }
 

@@ -33,8 +33,8 @@ public final class ShoppingListChangeLineItemQuantityActionBuilder
     }
 
     public ShoppingListChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(lineItemId, ShoppingListChangeLineItemQuantityAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, ShoppingListChangeLineItemQuantityAction.class + ": quantity is missing");
         return new ShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);
     }
 

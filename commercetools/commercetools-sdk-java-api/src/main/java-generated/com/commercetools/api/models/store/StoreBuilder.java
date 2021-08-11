@@ -176,12 +176,12 @@ public final class StoreBuilder implements Builder<Store> {
     }
 
     public Store build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(distributionChannels);
+        Objects.requireNonNull(id, Store.class + ": id is missing");
+        Objects.requireNonNull(version, Store.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Store.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Store.class + ": key is missing");
+        Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
             distributionChannels, supplyChannels, custom);
     }

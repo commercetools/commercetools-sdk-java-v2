@@ -33,8 +33,8 @@ public final class ClassificationShippingRateInputBuilder implements Builder<Cla
     }
 
     public ClassificationShippingRateInput build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, ClassificationShippingRateInput.class + ": key is missing");
+        Objects.requireNonNull(label, ClassificationShippingRateInput.class + ": label is missing");
         return new ClassificationShippingRateInputImpl(key, label);
     }
 

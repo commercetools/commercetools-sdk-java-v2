@@ -36,7 +36,7 @@ public final class MessageConfigurationBuilder implements Builder<MessageConfigu
     }
 
     public MessageConfiguration build() {
-        Objects.requireNonNull(enabled);
+        Objects.requireNonNull(enabled, MessageConfiguration.class + ": enabled is missing");
         return new MessageConfigurationImpl(enabled, deleteDaysAfterCreation);
     }
 

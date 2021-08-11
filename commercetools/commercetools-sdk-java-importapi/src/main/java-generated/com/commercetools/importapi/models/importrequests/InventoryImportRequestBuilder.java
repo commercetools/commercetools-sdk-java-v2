@@ -28,7 +28,7 @@ public final class InventoryImportRequestBuilder implements Builder<InventoryImp
     }
 
     public InventoryImportRequest build() {
-        Objects.requireNonNull(resources);
+        Objects.requireNonNull(resources, InventoryImportRequest.class + ": resources is missing");
         return new InventoryImportRequestImpl(resources);
     }
 

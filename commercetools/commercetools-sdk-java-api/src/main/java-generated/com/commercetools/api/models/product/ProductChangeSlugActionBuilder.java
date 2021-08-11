@@ -36,7 +36,7 @@ public final class ProductChangeSlugActionBuilder implements Builder<ProductChan
     }
 
     public ProductChangeSlugAction build() {
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(slug, ProductChangeSlugAction.class + ": slug is missing");
         return new ProductChangeSlugActionImpl(slug, staged);
     }
 

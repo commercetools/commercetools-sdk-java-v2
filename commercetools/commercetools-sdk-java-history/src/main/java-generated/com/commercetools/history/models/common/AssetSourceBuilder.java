@@ -54,10 +54,10 @@ public final class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     public AssetSource build() {
-        Objects.requireNonNull(uri);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(dimensions);
-        Objects.requireNonNull(contentType);
+        Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
+        Objects.requireNonNull(key, AssetSource.class + ": key is missing");
+        Objects.requireNonNull(dimensions, AssetSource.class + ": dimensions is missing");
+        Objects.requireNonNull(contentType, AssetSource.class + ": contentType is missing");
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 

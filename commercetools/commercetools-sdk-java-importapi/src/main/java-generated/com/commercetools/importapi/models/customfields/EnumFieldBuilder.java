@@ -21,7 +21,7 @@ public final class EnumFieldBuilder implements Builder<EnumField> {
     }
 
     public EnumField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, EnumField.class + ": value is missing");
         return new EnumFieldImpl(value);
     }
 

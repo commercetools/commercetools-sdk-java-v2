@@ -21,7 +21,7 @@ public final class ChannelChangeNameActionBuilder implements Builder<ChannelChan
     }
 
     public ChannelChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ChannelChangeNameAction.class + ": name is missing");
         return new ChannelChangeNameActionImpl(name);
     }
 

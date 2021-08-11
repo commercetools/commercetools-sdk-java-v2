@@ -21,7 +21,7 @@ public final class InternalConstraintViolatedErrorBuilder implements Builder<Int
     }
 
     public InternalConstraintViolatedError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InternalConstraintViolatedError.class + ": message is missing");
         return new InternalConstraintViolatedErrorImpl(message);
     }
 

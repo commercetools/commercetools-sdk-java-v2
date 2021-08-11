@@ -136,9 +136,9 @@ public final class ShippingInfoImportDraftBuilder implements Builder<ShippingInf
     }
 
     public ShippingInfoImportDraft build() {
-        Objects.requireNonNull(shippingMethodName);
-        Objects.requireNonNull(price);
-        Objects.requireNonNull(shippingRate);
+        Objects.requireNonNull(shippingMethodName, ShippingInfoImportDraft.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(price, ShippingInfoImportDraft.class + ": price is missing");
+        Objects.requireNonNull(shippingRate, ShippingInfoImportDraft.class + ": shippingRate is missing");
         return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxCategory,
             shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }

@@ -32,8 +32,8 @@ public final class GoogleCloudPubSubDestinationBuilder implements Builder<Google
     }
 
     public GoogleCloudPubSubDestination build() {
-        Objects.requireNonNull(projectId);
-        Objects.requireNonNull(topic);
+        Objects.requireNonNull(projectId, GoogleCloudPubSubDestination.class + ": projectId is missing");
+        Objects.requireNonNull(topic, GoogleCloudPubSubDestination.class + ": topic is missing");
         return new GoogleCloudPubSubDestinationImpl(projectId, topic);
     }
 

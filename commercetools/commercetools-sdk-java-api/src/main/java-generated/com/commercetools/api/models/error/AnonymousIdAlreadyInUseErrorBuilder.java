@@ -21,7 +21,7 @@ public final class AnonymousIdAlreadyInUseErrorBuilder implements Builder<Anonym
     }
 
     public AnonymousIdAlreadyInUseError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, AnonymousIdAlreadyInUseError.class + ": message is missing");
         return new AnonymousIdAlreadyInUseErrorImpl(message);
     }
 

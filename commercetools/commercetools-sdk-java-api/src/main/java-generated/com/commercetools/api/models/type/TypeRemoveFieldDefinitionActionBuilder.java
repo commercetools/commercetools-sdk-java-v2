@@ -21,7 +21,7 @@ public final class TypeRemoveFieldDefinitionActionBuilder implements Builder<Typ
     }
 
     public TypeRemoveFieldDefinitionAction build() {
-        Objects.requireNonNull(fieldName);
+        Objects.requireNonNull(fieldName, TypeRemoveFieldDefinitionAction.class + ": fieldName is missing");
         return new TypeRemoveFieldDefinitionActionImpl(fieldName);
     }
 

@@ -45,9 +45,9 @@ public final class AddItemShippingAddressesChangeBuilder implements Builder<AddI
     }
 
     public AddItemShippingAddressesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, AddItemShippingAddressesChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddItemShippingAddressesChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddItemShippingAddressesChange.class + ": previousValue is missing");
         return new AddItemShippingAddressesChangeImpl(change, nextValue, previousValue);
     }
 

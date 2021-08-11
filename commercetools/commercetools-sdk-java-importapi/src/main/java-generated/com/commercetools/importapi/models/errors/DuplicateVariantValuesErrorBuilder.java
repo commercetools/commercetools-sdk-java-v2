@@ -33,8 +33,8 @@ public final class DuplicateVariantValuesErrorBuilder implements Builder<Duplica
     }
 
     public DuplicateVariantValuesError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(variantValues);
+        Objects.requireNonNull(message, DuplicateVariantValuesError.class + ": message is missing");
+        Objects.requireNonNull(variantValues, DuplicateVariantValuesError.class + ": variantValues is missing");
         return new DuplicateVariantValuesErrorImpl(message, variantValues);
     }
 

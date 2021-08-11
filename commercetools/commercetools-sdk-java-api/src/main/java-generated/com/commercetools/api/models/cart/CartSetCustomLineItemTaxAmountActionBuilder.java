@@ -38,7 +38,8 @@ public final class CartSetCustomLineItemTaxAmountActionBuilder
     }
 
     public CartSetCustomLineItemTaxAmountAction build() {
-        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(customLineItemId,
+            CartSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
         return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
     }
 

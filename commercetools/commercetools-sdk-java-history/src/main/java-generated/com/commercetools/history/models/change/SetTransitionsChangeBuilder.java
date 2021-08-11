@@ -56,9 +56,9 @@ public final class SetTransitionsChangeBuilder implements Builder<SetTransitions
     }
 
     public SetTransitionsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetTransitionsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetTransitionsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetTransitionsChange.class + ": nextValue is missing");
         return new SetTransitionsChangeImpl(change, previousValue, nextValue);
     }
 

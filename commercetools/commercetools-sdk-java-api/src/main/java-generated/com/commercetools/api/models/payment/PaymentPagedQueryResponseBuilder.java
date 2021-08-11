@@ -75,10 +75,10 @@ public final class PaymentPagedQueryResponseBuilder implements Builder<PaymentPa
     }
 
     public PaymentPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, PaymentPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, PaymentPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, PaymentPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, PaymentPagedQueryResponse.class + ": results is missing");
         return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

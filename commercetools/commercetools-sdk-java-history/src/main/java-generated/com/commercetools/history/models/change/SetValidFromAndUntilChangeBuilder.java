@@ -45,9 +45,9 @@ public final class SetValidFromAndUntilChangeBuilder implements Builder<SetValid
     }
 
     public SetValidFromAndUntilChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetValidFromAndUntilChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetValidFromAndUntilChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetValidFromAndUntilChange.class + ": nextValue is missing");
         return new SetValidFromAndUntilChangeImpl(change, previousValue, nextValue);
     }
 

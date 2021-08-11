@@ -32,8 +32,8 @@ public final class MoneyBuilder implements Builder<Money> {
     }
 
     public Money build() {
-        Objects.requireNonNull(centAmount);
-        Objects.requireNonNull(currencyCode);
+        Objects.requireNonNull(centAmount, Money.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
         return new MoneyImpl(centAmount, currencyCode);
     }
 

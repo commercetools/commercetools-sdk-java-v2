@@ -22,7 +22,7 @@ public final class ChannelChangeDescriptionActionBuilder implements Builder<Chan
     }
 
     public ChannelChangeDescriptionAction build() {
-        Objects.requireNonNull(description);
+        Objects.requireNonNull(description, ChannelChangeDescriptionAction.class + ": description is missing");
         return new ChannelChangeDescriptionActionImpl(description);
     }
 

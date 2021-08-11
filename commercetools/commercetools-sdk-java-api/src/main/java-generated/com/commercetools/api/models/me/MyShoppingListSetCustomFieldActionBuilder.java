@@ -36,7 +36,7 @@ public final class MyShoppingListSetCustomFieldActionBuilder implements Builder<
     }
 
     public MyShoppingListSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyShoppingListSetCustomFieldAction.class + ": name is missing");
         return new MyShoppingListSetCustomFieldActionImpl(name, value);
     }
 

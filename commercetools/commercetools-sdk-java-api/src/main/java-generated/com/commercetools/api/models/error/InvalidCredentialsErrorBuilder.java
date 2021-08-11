@@ -21,7 +21,7 @@ public final class InvalidCredentialsErrorBuilder implements Builder<InvalidCred
     }
 
     public InvalidCredentialsError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidCredentialsError.class + ": message is missing");
         return new InvalidCredentialsErrorImpl(message);
     }
 

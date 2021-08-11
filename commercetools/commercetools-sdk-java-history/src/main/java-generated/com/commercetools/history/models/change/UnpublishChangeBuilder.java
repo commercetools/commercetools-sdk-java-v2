@@ -21,7 +21,7 @@ public final class UnpublishChangeBuilder implements Builder<UnpublishChange> {
     }
 
     public UnpublishChange build() {
-        Objects.requireNonNull(change);
+        Objects.requireNonNull(change, UnpublishChange.class + ": change is missing");
         return new UnpublishChangeImpl(change);
     }
 

@@ -47,8 +47,8 @@ public final class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     public SyncInfo build() {
-        Objects.requireNonNull(channel);
-        Objects.requireNonNull(syncedAt);
+        Objects.requireNonNull(channel, SyncInfo.class + ": channel is missing");
+        Objects.requireNonNull(syncedAt, SyncInfo.class + ": syncedAt is missing");
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }
 

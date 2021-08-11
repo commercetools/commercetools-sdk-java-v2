@@ -34,8 +34,10 @@ public final class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     public OrderReturnShipmentStateChangedMessagePayload build() {
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(returnShipmentState);
+        Objects.requireNonNull(returnItemId,
+            OrderReturnShipmentStateChangedMessagePayload.class + ": returnItemId is missing");
+        Objects.requireNonNull(returnShipmentState,
+            OrderReturnShipmentStateChangedMessagePayload.class + ": returnShipmentState is missing");
         return new OrderReturnShipmentStateChangedMessagePayloadImpl(returnItemId, returnShipmentState);
     }
 

@@ -60,10 +60,10 @@ public final class ImageSearchResponseBuilder implements Builder<ImageSearchResp
     }
 
     public ImageSearchResponse build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(count, ImageSearchResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ImageSearchResponse.class + ": offset is missing");
+        Objects.requireNonNull(total, ImageSearchResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImageSearchResponse.class + ": results is missing");
         return new ImageSearchResponseImpl(count, offset, total, results);
     }
 

@@ -54,10 +54,10 @@ public final class ParcelMeasurementsBuilder implements Builder<ParcelMeasuremen
     }
 
     public ParcelMeasurements build() {
-        Objects.requireNonNull(heightInMillimeter);
-        Objects.requireNonNull(lengthInMillimeter);
-        Objects.requireNonNull(widthInMillimeter);
-        Objects.requireNonNull(weightInGram);
+        Objects.requireNonNull(heightInMillimeter, ParcelMeasurements.class + ": heightInMillimeter is missing");
+        Objects.requireNonNull(lengthInMillimeter, ParcelMeasurements.class + ": lengthInMillimeter is missing");
+        Objects.requireNonNull(widthInMillimeter, ParcelMeasurements.class + ": widthInMillimeter is missing");
+        Objects.requireNonNull(weightInGram, ParcelMeasurements.class + ": weightInGram is missing");
         return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
     }
 

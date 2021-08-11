@@ -40,8 +40,9 @@ public final class OrderImportCustomLineItemStateActionBuilder
     }
 
     public OrderImportCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(customLineItemId,
+            OrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(state, OrderImportCustomLineItemStateAction.class + ": state is missing");
         return new OrderImportCustomLineItemStateActionImpl(customLineItemId, state);
     }
 

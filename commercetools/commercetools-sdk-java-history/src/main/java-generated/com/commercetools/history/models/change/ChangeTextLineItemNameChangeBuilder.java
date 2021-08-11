@@ -57,10 +57,10 @@ public final class ChangeTextLineItemNameChangeBuilder implements Builder<Change
     }
 
     public ChangeTextLineItemNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(textLineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeTextLineItemNameChange.class + ": change is missing");
+        Objects.requireNonNull(textLineItem, ChangeTextLineItemNameChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(nextValue, ChangeTextLineItemNameChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeTextLineItemNameChange.class + ": previousValue is missing");
         return new ChangeTextLineItemNameChangeImpl(change, textLineItem, nextValue, previousValue);
     }
 

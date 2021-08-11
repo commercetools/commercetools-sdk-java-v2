@@ -43,9 +43,9 @@ public final class ChangeDescriptionChangeBuilder implements Builder<ChangeDescr
     }
 
     public ChangeDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeDescriptionChange.class + ": nextValue is missing");
         return new ChangeDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

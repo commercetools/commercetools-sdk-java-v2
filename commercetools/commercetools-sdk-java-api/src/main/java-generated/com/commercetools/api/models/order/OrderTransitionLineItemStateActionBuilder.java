@@ -72,10 +72,10 @@ public final class OrderTransitionLineItemStateActionBuilder implements Builder<
     }
 
     public OrderTransitionLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(lineItemId, OrderTransitionLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, OrderTransitionLineItemStateAction.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, OrderTransitionLineItemStateAction.class + ": fromState is missing");
+        Objects.requireNonNull(toState, OrderTransitionLineItemStateAction.class + ": toState is missing");
         return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

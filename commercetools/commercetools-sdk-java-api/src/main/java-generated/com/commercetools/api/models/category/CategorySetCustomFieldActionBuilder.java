@@ -36,7 +36,7 @@ public final class CategorySetCustomFieldActionBuilder implements Builder<Catego
     }
 
     public CategorySetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CategorySetCustomFieldAction.class + ": name is missing");
         return new CategorySetCustomFieldActionImpl(name, value);
     }
 

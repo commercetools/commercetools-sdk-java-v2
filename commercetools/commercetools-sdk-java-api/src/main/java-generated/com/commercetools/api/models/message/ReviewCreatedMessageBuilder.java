@@ -142,14 +142,14 @@ public final class ReviewCreatedMessageBuilder implements Builder<ReviewCreatedM
     }
 
     public ReviewCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(review);
+        Objects.requireNonNull(id, ReviewCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReviewCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReviewCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReviewCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReviewCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReviewCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReviewCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(review, ReviewCreatedMessage.class + ": review is missing");
         return new ReviewCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, review);
     }

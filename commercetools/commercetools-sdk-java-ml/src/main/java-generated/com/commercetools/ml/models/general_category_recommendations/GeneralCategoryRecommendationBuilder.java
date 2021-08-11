@@ -32,8 +32,8 @@ public final class GeneralCategoryRecommendationBuilder implements Builder<Gener
     }
 
     public GeneralCategoryRecommendation build() {
-        Objects.requireNonNull(categoryName);
-        Objects.requireNonNull(confidence);
+        Objects.requireNonNull(categoryName, GeneralCategoryRecommendation.class + ": categoryName is missing");
+        Objects.requireNonNull(confidence, GeneralCategoryRecommendation.class + ": confidence is missing");
         return new GeneralCategoryRecommendationImpl(categoryName, confidence);
     }
 

@@ -74,10 +74,10 @@ public final class CartPagedQueryResponseBuilder implements Builder<CartPagedQue
     }
 
     public CartPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, CartPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CartPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CartPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CartPagedQueryResponse.class + ": results is missing");
         return new CartPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

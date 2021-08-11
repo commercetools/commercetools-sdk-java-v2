@@ -39,8 +39,8 @@ public final class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate
     }
 
     public TaxCategoryUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, TaxCategoryUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, TaxCategoryUpdate.class + ": actions is missing");
         return new TaxCategoryUpdateImpl(version, actions);
     }
 

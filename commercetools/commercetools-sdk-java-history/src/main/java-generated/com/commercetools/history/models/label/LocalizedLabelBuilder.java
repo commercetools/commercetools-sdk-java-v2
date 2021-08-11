@@ -21,7 +21,7 @@ public final class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     public LocalizedLabel build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizedLabel.class + ": value is missing");
         return new LocalizedLabelImpl(value);
     }
 

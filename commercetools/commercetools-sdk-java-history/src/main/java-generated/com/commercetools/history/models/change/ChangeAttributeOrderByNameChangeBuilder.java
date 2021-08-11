@@ -53,9 +53,9 @@ public final class ChangeAttributeOrderByNameChangeBuilder implements Builder<Ch
     }
 
     public ChangeAttributeOrderByNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeAttributeOrderByNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeAttributeOrderByNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeAttributeOrderByNameChange.class + ": nextValue is missing");
         return new ChangeAttributeOrderByNameChangeImpl(change, previousValue, nextValue);
     }
 

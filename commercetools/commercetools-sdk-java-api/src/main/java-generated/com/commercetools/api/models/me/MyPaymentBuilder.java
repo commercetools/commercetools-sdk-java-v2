@@ -113,11 +113,11 @@ public final class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     public MyPayment build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(amountPlanned);
-        Objects.requireNonNull(paymentMethodInfo);
-        Objects.requireNonNull(transactions);
+        Objects.requireNonNull(id, MyPayment.class + ": id is missing");
+        Objects.requireNonNull(version, MyPayment.class + ": version is missing");
+        Objects.requireNonNull(amountPlanned, MyPayment.class + ": amountPlanned is missing");
+        Objects.requireNonNull(paymentMethodInfo, MyPayment.class + ": paymentMethodInfo is missing");
+        Objects.requireNonNull(transactions, MyPayment.class + ": transactions is missing");
         return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions,
             custom);
     }

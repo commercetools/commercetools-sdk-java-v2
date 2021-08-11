@@ -43,9 +43,9 @@ public final class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceId
     }
 
     public SetInterfaceIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetInterfaceIdChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetInterfaceIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetInterfaceIdChange.class + ": nextValue is missing");
         return new SetInterfaceIdChangeImpl(change, previousValue, nextValue);
     }
 

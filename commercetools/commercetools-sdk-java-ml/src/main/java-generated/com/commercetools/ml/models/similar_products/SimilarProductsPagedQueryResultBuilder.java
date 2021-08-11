@@ -73,11 +73,11 @@ public final class SimilarProductsPagedQueryResultBuilder implements Builder<Sim
     }
 
     public SimilarProductsPagedQueryResult build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
-        Objects.requireNonNull(meta);
+        Objects.requireNonNull(count, SimilarProductsPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, SimilarProductsPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, SimilarProductsPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, SimilarProductsPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, SimilarProductsPagedQueryResult.class + ": meta is missing");
         return new SimilarProductsPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

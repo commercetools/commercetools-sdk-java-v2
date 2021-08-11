@@ -35,8 +35,9 @@ public final class ShippingMethodRemoveShippingRateActionBuilder
     }
 
     public ShippingMethodRemoveShippingRateAction build() {
-        Objects.requireNonNull(zone);
-        Objects.requireNonNull(shippingRate);
+        Objects.requireNonNull(zone, ShippingMethodRemoveShippingRateAction.class + ": zone is missing");
+        Objects.requireNonNull(shippingRate,
+            ShippingMethodRemoveShippingRateAction.class + ": shippingRate is missing");
         return new ShippingMethodRemoveShippingRateActionImpl(zone, shippingRate);
     }
 

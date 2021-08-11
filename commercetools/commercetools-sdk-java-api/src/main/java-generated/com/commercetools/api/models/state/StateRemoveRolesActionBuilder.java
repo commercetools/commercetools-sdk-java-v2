@@ -27,7 +27,7 @@ public final class StateRemoveRolesActionBuilder implements Builder<StateRemoveR
     }
 
     public StateRemoveRolesAction build() {
-        Objects.requireNonNull(roles);
+        Objects.requireNonNull(roles, StateRemoveRolesAction.class + ": roles is missing");
         return new StateRemoveRolesActionImpl(roles);
     }
 

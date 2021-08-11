@@ -33,8 +33,8 @@ public final class OrderStateTransitionMessagePayloadBuilder implements Builder<
     }
 
     public OrderStateTransitionMessagePayload build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(state, OrderStateTransitionMessagePayload.class + ": state is missing");
+        Objects.requireNonNull(force, OrderStateTransitionMessagePayload.class + ": force is missing");
         return new OrderStateTransitionMessagePayloadImpl(state, force);
     }
 

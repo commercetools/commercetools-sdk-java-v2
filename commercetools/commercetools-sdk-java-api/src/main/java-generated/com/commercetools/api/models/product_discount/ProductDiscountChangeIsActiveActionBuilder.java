@@ -21,7 +21,7 @@ public final class ProductDiscountChangeIsActiveActionBuilder implements Builder
     }
 
     public ProductDiscountChangeIsActiveAction build() {
-        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(isActive, ProductDiscountChangeIsActiveAction.class + ": isActive is missing");
         return new ProductDiscountChangeIsActiveActionImpl(isActive);
     }
 

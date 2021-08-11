@@ -39,8 +39,9 @@ public final class DiscountedLineItemPriceDraftBuilder implements Builder<Discou
     }
 
     public DiscountedLineItemPriceDraft build() {
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(includedDiscounts);
+        Objects.requireNonNull(value, DiscountedLineItemPriceDraft.class + ": value is missing");
+        Objects.requireNonNull(includedDiscounts,
+            DiscountedLineItemPriceDraft.class + ": includedDiscounts is missing");
         return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);
     }
 

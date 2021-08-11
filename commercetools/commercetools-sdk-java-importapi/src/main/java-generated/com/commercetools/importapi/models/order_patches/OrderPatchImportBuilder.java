@@ -32,8 +32,8 @@ public final class OrderPatchImportBuilder implements Builder<OrderPatchImport> 
     }
 
     public OrderPatchImport build() {
-        Objects.requireNonNull(orderNumber);
-        Objects.requireNonNull(fields);
+        Objects.requireNonNull(orderNumber, OrderPatchImport.class + ": orderNumber is missing");
+        Objects.requireNonNull(fields, OrderPatchImport.class + ": fields is missing");
         return new OrderPatchImportImpl(orderNumber, fields);
     }
 

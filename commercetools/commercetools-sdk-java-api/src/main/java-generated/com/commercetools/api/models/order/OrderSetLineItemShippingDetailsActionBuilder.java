@@ -38,7 +38,7 @@ public final class OrderSetLineItemShippingDetailsActionBuilder
     }
 
     public OrderSetLineItemShippingDetailsAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, OrderSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
         return new OrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 

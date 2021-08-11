@@ -142,14 +142,14 @@ public final class PaymentCreatedMessageBuilder implements Builder<PaymentCreate
     }
 
     public PaymentCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(payment);
+        Objects.requireNonNull(id, PaymentCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, PaymentCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, PaymentCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, PaymentCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(payment, PaymentCreatedMessage.class + ": payment is missing");
         return new PaymentCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, payment);
     }

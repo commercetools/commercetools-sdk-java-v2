@@ -36,7 +36,7 @@ public final class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     public StateReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, StateReference.class + ": id is missing");
         return new StateReferenceImpl(id, obj);
     }
 

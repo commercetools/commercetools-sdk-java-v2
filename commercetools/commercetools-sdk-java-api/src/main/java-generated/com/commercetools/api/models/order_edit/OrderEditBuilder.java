@@ -162,13 +162,13 @@ public final class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     public OrderEdit build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(stagedActions);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(id, OrderEdit.class + ": id is missing");
+        Objects.requireNonNull(version, OrderEdit.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderEdit.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderEdit.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(resource, OrderEdit.class + ": resource is missing");
+        Objects.requireNonNull(stagedActions, OrderEdit.class + ": stagedActions is missing");
+        Objects.requireNonNull(result, OrderEdit.class + ": result is missing");
         return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,
             stagedActions, custom, result, comment);
     }

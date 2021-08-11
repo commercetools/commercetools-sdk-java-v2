@@ -36,7 +36,7 @@ public final class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     public TypeReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, TypeReference.class + ": id is missing");
         return new TypeReferenceImpl(id, obj);
     }
 

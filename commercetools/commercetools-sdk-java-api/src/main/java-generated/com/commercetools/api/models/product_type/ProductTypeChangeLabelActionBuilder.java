@@ -32,8 +32,8 @@ public final class ProductTypeChangeLabelActionBuilder implements Builder<Produc
     }
 
     public ProductTypeChangeLabelAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(attributeName, ProductTypeChangeLabelAction.class + ": attributeName is missing");
+        Objects.requireNonNull(label, ProductTypeChangeLabelAction.class + ": label is missing");
         return new ProductTypeChangeLabelActionImpl(attributeName, label);
     }
 

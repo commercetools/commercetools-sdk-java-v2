@@ -41,7 +41,7 @@ public final class TextSetAttributeBuilder implements Builder<TextSetAttribute> 
     }
 
     public TextSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, TextSetAttribute.class + ": value is missing");
         return new TextSetAttributeImpl(name, value);
     }
 

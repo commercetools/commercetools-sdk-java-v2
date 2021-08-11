@@ -32,8 +32,8 @@ public final class AddTransactionChangeBuilder implements Builder<AddTransaction
     }
 
     public AddTransactionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddTransactionChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddTransactionChange.class + ": nextValue is missing");
         return new AddTransactionChangeImpl(change, nextValue);
     }
 

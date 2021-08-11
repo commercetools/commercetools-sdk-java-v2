@@ -105,8 +105,8 @@ public final class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     public StoreDraft build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
+        Objects.requireNonNull(name, StoreDraft.class + ": name is missing");
         return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, custom);
     }
 

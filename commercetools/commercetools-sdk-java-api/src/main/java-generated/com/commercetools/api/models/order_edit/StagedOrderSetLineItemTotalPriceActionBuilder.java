@@ -38,7 +38,7 @@ public final class StagedOrderSetLineItemTotalPriceActionBuilder
     }
 
     public StagedOrderSetLineItemTotalPriceAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTotalPriceAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 

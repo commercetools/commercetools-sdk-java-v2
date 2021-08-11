@@ -21,7 +21,7 @@ public final class PriceKeyReferenceBuilder implements Builder<PriceKeyReference
     }
 
     public PriceKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, PriceKeyReference.class + ": key is missing");
         return new PriceKeyReferenceImpl(key);
     }
 

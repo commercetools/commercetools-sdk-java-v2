@@ -21,7 +21,7 @@ public final class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder
     }
 
     public ShippingMethodDoesNotMatchCartError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ShippingMethodDoesNotMatchCartError.class + ": message is missing");
         return new ShippingMethodDoesNotMatchCartErrorImpl(message);
     }
 

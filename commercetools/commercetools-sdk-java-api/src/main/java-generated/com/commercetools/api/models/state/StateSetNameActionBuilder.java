@@ -21,7 +21,7 @@ public final class StateSetNameActionBuilder implements Builder<StateSetNameActi
     }
 
     public StateSetNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, StateSetNameAction.class + ": name is missing");
         return new StateSetNameActionImpl(name);
     }
 

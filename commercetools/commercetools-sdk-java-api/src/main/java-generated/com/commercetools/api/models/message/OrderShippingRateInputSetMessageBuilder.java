@@ -160,13 +160,14 @@ public final class OrderShippingRateInputSetMessageBuilder implements Builder<Or
     }
 
     public OrderShippingRateInputSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, OrderShippingRateInputSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShippingRateInputSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShippingRateInputSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShippingRateInputSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShippingRateInputSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShippingRateInputSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderShippingRateInputSetMessage.class + ": resourceVersion is missing");
         return new OrderShippingRateInputSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingRateInput,
             oldShippingRateInput);

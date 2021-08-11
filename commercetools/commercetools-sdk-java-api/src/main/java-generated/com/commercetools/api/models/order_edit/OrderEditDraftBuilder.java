@@ -95,7 +95,7 @@ public final class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     public OrderEditDraft build() {
-        Objects.requireNonNull(resource);
+        Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
 

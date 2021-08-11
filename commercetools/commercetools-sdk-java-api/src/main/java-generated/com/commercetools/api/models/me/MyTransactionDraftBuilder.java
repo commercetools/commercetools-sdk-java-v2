@@ -60,8 +60,8 @@ public final class MyTransactionDraftBuilder implements Builder<MyTransactionDra
     }
 
     public MyTransactionDraft build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(amount);
+        Objects.requireNonNull(type, MyTransactionDraft.class + ": type is missing");
+        Objects.requireNonNull(amount, MyTransactionDraft.class + ": amount is missing");
         return new MyTransactionDraftImpl(timestamp, type, amount, interactionId);
     }
 

@@ -36,7 +36,7 @@ public final class ResourceDeletionErrorBuilder implements Builder<ResourceDelet
     }
 
     public ResourceDeletionError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ResourceDeletionError.class + ": message is missing");
         return new ResourceDeletionErrorImpl(message, resource);
     }
 

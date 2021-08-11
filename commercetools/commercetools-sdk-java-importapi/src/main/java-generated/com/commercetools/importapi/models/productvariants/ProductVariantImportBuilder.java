@@ -132,9 +132,9 @@ public final class ProductVariantImportBuilder implements Builder<ProductVariant
     }
 
     public ProductVariantImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(isMasterVariant);
-        Objects.requireNonNull(product);
+        Objects.requireNonNull(key, ProductVariantImport.class + ": key is missing");
+        Objects.requireNonNull(isMasterVariant, ProductVariantImport.class + ": isMasterVariant is missing");
+        Objects.requireNonNull(product, ProductVariantImport.class + ": product is missing");
         return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
     }
 

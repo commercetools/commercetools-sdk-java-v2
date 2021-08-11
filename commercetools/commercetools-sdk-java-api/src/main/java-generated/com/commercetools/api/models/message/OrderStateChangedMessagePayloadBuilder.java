@@ -34,8 +34,8 @@ public final class OrderStateChangedMessagePayloadBuilder implements Builder<Ord
     }
 
     public OrderStateChangedMessagePayload build() {
-        Objects.requireNonNull(orderState);
-        Objects.requireNonNull(oldOrderState);
+        Objects.requireNonNull(orderState, OrderStateChangedMessagePayload.class + ": orderState is missing");
+        Objects.requireNonNull(oldOrderState, OrderStateChangedMessagePayload.class + ": oldOrderState is missing");
         return new OrderStateChangedMessagePayloadImpl(orderState, oldOrderState);
     }
 

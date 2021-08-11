@@ -21,7 +21,7 @@ public final class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAc
     }
 
     public TypeChangeKeyAction build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, TypeChangeKeyAction.class + ": key is missing");
         return new TypeChangeKeyActionImpl(key);
     }
 

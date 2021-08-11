@@ -54,8 +54,8 @@ public final class MissingAttributesMetaBuilder implements Builder<MissingAttrib
     }
 
     public MissingAttributesMeta build() {
-        Objects.requireNonNull(productLevel);
-        Objects.requireNonNull(variantLevel);
+        Objects.requireNonNull(productLevel, MissingAttributesMeta.class + ": productLevel is missing");
+        Objects.requireNonNull(variantLevel, MissingAttributesMeta.class + ": variantLevel is missing");
         return new MissingAttributesMetaImpl(productLevel, variantLevel, productTypeIds);
     }
 

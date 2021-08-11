@@ -39,8 +39,8 @@ public final class ShippingMethodUpdateBuilder implements Builder<ShippingMethod
     }
 
     public ShippingMethodUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ShippingMethodUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ShippingMethodUpdate.class + ": actions is missing");
         return new ShippingMethodUpdateImpl(version, actions);
     }
 

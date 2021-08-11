@@ -57,10 +57,10 @@ public final class SetTextLineItemCustomTypeChangeBuilder implements Builder<Set
     }
 
     public SetTextLineItemCustomTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(textLineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetTextLineItemCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(textLineItem, SetTextLineItemCustomTypeChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(nextValue, SetTextLineItemCustomTypeChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetTextLineItemCustomTypeChange.class + ": previousValue is missing");
         return new SetTextLineItemCustomTypeChangeImpl(change, textLineItem, nextValue, previousValue);
     }
 

@@ -37,7 +37,7 @@ public final class OrderSetShippingAddressCustomFieldActionBuilder
     }
 
     public OrderSetShippingAddressCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, OrderSetShippingAddressCustomFieldAction.class + ": name is missing");
         return new OrderSetShippingAddressCustomFieldActionImpl(name, value);
     }
 

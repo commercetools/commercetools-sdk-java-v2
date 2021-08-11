@@ -37,7 +37,7 @@ public final class ImportSinkDraftBuilder implements Builder<ImportSinkDraft> {
     }
 
     public ImportSinkDraft build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ImportSinkDraft.class + ": key is missing");
         return new ImportSinkDraftImpl(key, resourceType);
     }
 

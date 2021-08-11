@@ -38,8 +38,8 @@ public final class ItemShippingDetailsBuilder implements Builder<ItemShippingDet
     }
 
     public ItemShippingDetails build() {
-        Objects.requireNonNull(targets);
-        Objects.requireNonNull(valid);
+        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");
+        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");
         return new ItemShippingDetailsImpl(targets, valid);
     }
 

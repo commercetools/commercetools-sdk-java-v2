@@ -43,9 +43,9 @@ public final class SetCompanyNameChangeBuilder implements Builder<SetCompanyName
     }
 
     public SetCompanyNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCompanyNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCompanyNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCompanyNameChange.class + ": nextValue is missing");
         return new SetCompanyNameChangeImpl(change, previousValue, nextValue);
     }
 

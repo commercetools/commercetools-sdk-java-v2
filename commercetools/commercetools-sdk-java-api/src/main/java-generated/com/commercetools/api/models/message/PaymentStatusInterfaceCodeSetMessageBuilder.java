@@ -155,15 +155,19 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder
     }
 
     public PaymentStatusInterfaceCodeSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(paymentId);
-        Objects.requireNonNull(interfaceCode);
+        Objects.requireNonNull(id, PaymentStatusInterfaceCodeSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentStatusInterfaceCodeSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentStatusInterfaceCodeSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentStatusInterfaceCodeSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentStatusInterfaceCodeSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentStatusInterfaceCodeSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentStatusInterfaceCodeSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessage.class + ": paymentId is missing");
+        Objects.requireNonNull(interfaceCode,
+            PaymentStatusInterfaceCodeSetMessage.class + ": interfaceCode is missing");
         return new PaymentStatusInterfaceCodeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentId,
             interfaceCode);

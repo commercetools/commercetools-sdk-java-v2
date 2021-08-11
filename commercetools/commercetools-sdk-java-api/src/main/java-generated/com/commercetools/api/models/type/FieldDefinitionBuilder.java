@@ -70,10 +70,10 @@ public final class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     public FieldDefinition build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(label);
-        Objects.requireNonNull(required);
+        Objects.requireNonNull(type, FieldDefinition.class + ": type is missing");
+        Objects.requireNonNull(name, FieldDefinition.class + ": name is missing");
+        Objects.requireNonNull(label, FieldDefinition.class + ": label is missing");
+        Objects.requireNonNull(required, FieldDefinition.class + ": required is missing");
         return new FieldDefinitionImpl(type, name, label, required, inputHint);
     }
 

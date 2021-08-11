@@ -51,7 +51,7 @@ public final class CustomerSetAddressCustomTypeActionBuilder implements Builder<
     }
 
     public CustomerSetAddressCustomTypeAction build() {
-        Objects.requireNonNull(addressId);
+        Objects.requireNonNull(addressId, CustomerSetAddressCustomTypeAction.class + ": addressId is missing");
         return new CustomerSetAddressCustomTypeActionImpl(type, fields, addressId);
     }
 

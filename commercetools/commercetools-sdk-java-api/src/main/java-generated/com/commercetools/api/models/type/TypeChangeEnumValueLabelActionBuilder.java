@@ -33,8 +33,8 @@ public final class TypeChangeEnumValueLabelActionBuilder implements Builder<Type
     }
 
     public TypeChangeEnumValueLabelAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(fieldName, TypeChangeEnumValueLabelAction.class + ": fieldName is missing");
+        Objects.requireNonNull(value, TypeChangeEnumValueLabelAction.class + ": value is missing");
         return new TypeChangeEnumValueLabelActionImpl(fieldName, value);
     }
 

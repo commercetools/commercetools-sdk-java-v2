@@ -29,7 +29,8 @@ public final class ProductPriceDiscountsSetMessagePayloadBuilder
     }
 
     public ProductPriceDiscountsSetMessagePayload build() {
-        Objects.requireNonNull(updatedPrices);
+        Objects.requireNonNull(updatedPrices,
+            ProductPriceDiscountsSetMessagePayload.class + ": updatedPrices is missing");
         return new ProductPriceDiscountsSetMessagePayloadImpl(updatedPrices);
     }
 

@@ -170,14 +170,14 @@ public final class DeliveryAddressSetMessageBuilder implements Builder<DeliveryA
     }
 
     public DeliveryAddressSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(id, DeliveryAddressSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryAddressSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryAddressSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryAddressSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryAddressSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryAddressSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryAddressSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, DeliveryAddressSetMessage.class + ": deliveryId is missing");
         return new DeliveryAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address,
             oldAddress);

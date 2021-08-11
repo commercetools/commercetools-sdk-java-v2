@@ -27,7 +27,8 @@ public final class ShoppingListChangeLineItemsOrderActionBuilder
     }
 
     public ShoppingListChangeLineItemsOrderAction build() {
-        Objects.requireNonNull(lineItemOrder);
+        Objects.requireNonNull(lineItemOrder,
+            ShoppingListChangeLineItemsOrderAction.class + ": lineItemOrder is missing");
         return new ShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);
     }
 

@@ -34,8 +34,10 @@ public final class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     public ProductTypeChangeLocalizedEnumValueLabelAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(newValue);
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newValue,
+            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": newValue is missing");
         return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);
     }
 

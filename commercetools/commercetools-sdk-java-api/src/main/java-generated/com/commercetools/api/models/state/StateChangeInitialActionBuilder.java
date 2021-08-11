@@ -21,7 +21,7 @@ public final class StateChangeInitialActionBuilder implements Builder<StateChang
     }
 
     public StateChangeInitialAction build() {
-        Objects.requireNonNull(initial);
+        Objects.requireNonNull(initial, StateChangeInitialAction.class + ": initial is missing");
         return new StateChangeInitialActionImpl(initial);
     }
 

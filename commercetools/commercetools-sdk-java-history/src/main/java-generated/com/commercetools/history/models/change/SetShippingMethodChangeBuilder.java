@@ -45,9 +45,9 @@ public final class SetShippingMethodChangeBuilder implements Builder<SetShipping
     }
 
     public SetShippingMethodChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetShippingMethodChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetShippingMethodChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetShippingMethodChange.class + ": previousValue is missing");
         return new SetShippingMethodChangeImpl(change, nextValue, previousValue);
     }
 

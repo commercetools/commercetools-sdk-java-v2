@@ -130,7 +130,7 @@ public final class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     public MyLineItemDraft build() {
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(quantity, MyLineItemDraft.class + ": quantity is missing");
         return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel,
             custom, shippingDetails, sku);
     }

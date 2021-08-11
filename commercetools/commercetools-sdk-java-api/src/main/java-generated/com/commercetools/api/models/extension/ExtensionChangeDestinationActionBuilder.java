@@ -22,7 +22,7 @@ public final class ExtensionChangeDestinationActionBuilder implements Builder<Ex
     }
 
     public ExtensionChangeDestinationAction build() {
-        Objects.requireNonNull(destination);
+        Objects.requireNonNull(destination, ExtensionChangeDestinationAction.class + ": destination is missing");
         return new ExtensionChangeDestinationActionImpl(destination);
     }
 

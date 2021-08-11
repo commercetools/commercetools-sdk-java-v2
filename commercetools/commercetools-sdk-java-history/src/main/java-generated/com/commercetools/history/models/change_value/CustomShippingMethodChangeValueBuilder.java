@@ -21,7 +21,7 @@ public final class CustomShippingMethodChangeValueBuilder implements Builder<Cus
     }
 
     public CustomShippingMethodChangeValue build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CustomShippingMethodChangeValue.class + ": name is missing");
         return new CustomShippingMethodChangeValueImpl(name);
     }
 

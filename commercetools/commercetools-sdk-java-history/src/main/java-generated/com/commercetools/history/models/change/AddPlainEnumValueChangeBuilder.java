@@ -44,9 +44,9 @@ public final class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnu
     }
 
     public AddPlainEnumValueChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddPlainEnumValueChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, AddPlainEnumValueChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, AddPlainEnumValueChange.class + ": nextValue is missing");
         return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
     }
 

@@ -45,9 +45,9 @@ public final class ChangePaymentStateChangeBuilder implements Builder<ChangePaym
     }
 
     public ChangePaymentStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangePaymentStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangePaymentStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangePaymentStateChange.class + ": previousValue is missing");
         return new ChangePaymentStateChangeImpl(change, nextValue, previousValue);
     }
 

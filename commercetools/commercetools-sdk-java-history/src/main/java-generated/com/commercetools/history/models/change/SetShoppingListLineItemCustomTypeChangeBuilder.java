@@ -58,10 +58,11 @@ public final class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     public SetShoppingListLineItemCustomTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetShoppingListLineItemCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetShoppingListLineItemCustomTypeChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetShoppingListLineItemCustomTypeChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetShoppingListLineItemCustomTypeChange.class + ": previousValue is missing");
         return new SetShoppingListLineItemCustomTypeChangeImpl(change, lineItem, nextValue, previousValue);
     }
 

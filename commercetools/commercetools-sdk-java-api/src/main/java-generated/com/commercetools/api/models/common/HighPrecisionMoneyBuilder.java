@@ -54,10 +54,10 @@ public final class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMon
     }
 
     public HighPrecisionMoney build() {
-        Objects.requireNonNull(fractionDigits);
-        Objects.requireNonNull(centAmount);
-        Objects.requireNonNull(currencyCode);
-        Objects.requireNonNull(preciseAmount);
+        Objects.requireNonNull(fractionDigits, HighPrecisionMoney.class + ": fractionDigits is missing");
+        Objects.requireNonNull(centAmount, HighPrecisionMoney.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, HighPrecisionMoney.class + ": currencyCode is missing");
+        Objects.requireNonNull(preciseAmount, HighPrecisionMoney.class + ": preciseAmount is missing");
         return new HighPrecisionMoneyImpl(fractionDigits, centAmount, currencyCode, preciseAmount);
     }
 

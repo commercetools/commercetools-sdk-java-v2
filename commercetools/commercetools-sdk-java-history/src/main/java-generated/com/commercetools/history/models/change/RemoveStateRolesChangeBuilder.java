@@ -57,9 +57,9 @@ public final class RemoveStateRolesChangeBuilder implements Builder<RemoveStateR
     }
 
     public RemoveStateRolesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveStateRolesChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveStateRolesChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveStateRolesChange.class + ": nextValue is missing");
         return new RemoveStateRolesChangeImpl(change, previousValue, nextValue);
     }
 

@@ -37,7 +37,7 @@ public final class StagedOrderSetBillingAddressCustomFieldActionBuilder
     }
 
     public StagedOrderSetBillingAddressCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, StagedOrderSetBillingAddressCustomFieldAction.class + ": name is missing");
         return new StagedOrderSetBillingAddressCustomFieldActionImpl(name, value);
     }
 

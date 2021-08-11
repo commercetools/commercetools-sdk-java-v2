@@ -98,10 +98,10 @@ public final class CartAddCustomLineItemActionBuilder implements Builder<CartAdd
     }
 
     public CartAddCustomLineItemAction build() {
-        Objects.requireNonNull(money);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(money, CartAddCustomLineItemAction.class + ": money is missing");
+        Objects.requireNonNull(name, CartAddCustomLineItemAction.class + ": name is missing");
+        Objects.requireNonNull(quantity, CartAddCustomLineItemAction.class + ": quantity is missing");
+        Objects.requireNonNull(slug, CartAddCustomLineItemAction.class + ": slug is missing");
         return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate);
     }
 

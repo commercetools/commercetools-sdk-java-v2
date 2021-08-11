@@ -52,7 +52,8 @@ public final class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
     }
 
     public StagedOrderSetItemShippingAddressCustomTypeAction build() {
-        Objects.requireNonNull(addressKey);
+        Objects.requireNonNull(addressKey,
+            StagedOrderSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
         return new StagedOrderSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
 

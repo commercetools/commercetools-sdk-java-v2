@@ -40,8 +40,10 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(targetsDelta);
+        Objects.requireNonNull(lineItemId,
+            CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(targetsDelta,
+            CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
     }
 

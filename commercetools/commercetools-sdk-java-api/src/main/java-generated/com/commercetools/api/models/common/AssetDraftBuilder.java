@@ -97,8 +97,8 @@ public final class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     public AssetDraft build() {
-        Objects.requireNonNull(sources);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(sources, AssetDraft.class + ": sources is missing");
+        Objects.requireNonNull(name, AssetDraft.class + ": name is missing");
         return new AssetDraftImpl(sources, name, description, tags, custom, key);
     }
 

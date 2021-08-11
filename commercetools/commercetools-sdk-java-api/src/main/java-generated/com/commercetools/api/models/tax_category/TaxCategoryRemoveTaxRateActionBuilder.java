@@ -21,7 +21,7 @@ public final class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxC
     }
 
     public TaxCategoryRemoveTaxRateAction build() {
-        Objects.requireNonNull(taxRateId);
+        Objects.requireNonNull(taxRateId, TaxCategoryRemoveTaxRateAction.class + ": taxRateId is missing");
         return new TaxCategoryRemoveTaxRateActionImpl(taxRateId);
     }
 

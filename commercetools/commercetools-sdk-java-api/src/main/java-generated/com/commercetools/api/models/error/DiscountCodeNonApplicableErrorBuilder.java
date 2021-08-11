@@ -102,7 +102,7 @@ public final class DiscountCodeNonApplicableErrorBuilder implements Builder<Disc
     }
 
     public DiscountCodeNonApplicableError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
         return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom,
             validUntil, validityCheckTime);
     }

@@ -36,7 +36,7 @@ public final class InventoryEntrySetCustomFieldActionBuilder implements Builder<
     }
 
     public InventoryEntrySetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, InventoryEntrySetCustomFieldAction.class + ": name is missing");
         return new InventoryEntrySetCustomFieldActionImpl(name, value);
     }
 

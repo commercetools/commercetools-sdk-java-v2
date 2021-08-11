@@ -131,13 +131,13 @@ public final class CustomerEmailVerifiedMessageBuilder implements Builder<Custom
     }
 
     public CustomerEmailVerifiedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, CustomerEmailVerifiedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerEmailVerifiedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerEmailVerifiedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerEmailVerifiedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerEmailVerifiedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerEmailVerifiedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerEmailVerifiedMessage.class + ": resourceVersion is missing");
         return new CustomerEmailVerifiedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }

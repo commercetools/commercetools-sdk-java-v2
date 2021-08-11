@@ -21,7 +21,7 @@ public final class ScoreShippingRateInputBuilder implements Builder<ScoreShippin
     }
 
     public ScoreShippingRateInput build() {
-        Objects.requireNonNull(score);
+        Objects.requireNonNull(score, ScoreShippingRateInput.class + ": score is missing");
         return new ScoreShippingRateInputImpl(score);
     }
 

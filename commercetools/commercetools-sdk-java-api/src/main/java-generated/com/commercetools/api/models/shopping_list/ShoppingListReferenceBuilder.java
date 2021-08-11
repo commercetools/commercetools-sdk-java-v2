@@ -37,7 +37,7 @@ public final class ShoppingListReferenceBuilder implements Builder<ShoppingListR
     }
 
     public ShoppingListReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ShoppingListReference.class + ": id is missing");
         return new ShoppingListReferenceImpl(id, obj);
     }
 

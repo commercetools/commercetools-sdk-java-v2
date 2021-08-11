@@ -21,7 +21,7 @@ public final class EnumValuesMustMatchErrorBuilder implements Builder<EnumValues
     }
 
     public EnumValuesMustMatchError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, EnumValuesMustMatchError.class + ": message is missing");
         return new EnumValuesMustMatchErrorImpl(message);
     }
 

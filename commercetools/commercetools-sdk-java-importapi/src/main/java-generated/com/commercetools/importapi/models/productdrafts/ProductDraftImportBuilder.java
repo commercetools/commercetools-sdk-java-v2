@@ -222,10 +222,10 @@ public final class ProductDraftImportBuilder implements Builder<ProductDraftImpo
     }
 
     public ProductDraftImport build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(key, ProductDraftImport.class + ": key is missing");
+        Objects.requireNonNull(productType, ProductDraftImport.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductDraftImport.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductDraftImport.class + ": slug is missing");
         return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
             metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
     }

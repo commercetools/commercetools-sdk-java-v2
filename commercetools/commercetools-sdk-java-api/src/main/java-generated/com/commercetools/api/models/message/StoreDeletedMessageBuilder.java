@@ -131,13 +131,13 @@ public final class StoreDeletedMessageBuilder implements Builder<StoreDeletedMes
     }
 
     public StoreDeletedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
+        Objects.requireNonNull(id, StoreDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, StoreDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, StoreDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, StoreDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, StoreDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, StoreDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, StoreDeletedMessage.class + ": resourceVersion is missing");
         return new StoreDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }

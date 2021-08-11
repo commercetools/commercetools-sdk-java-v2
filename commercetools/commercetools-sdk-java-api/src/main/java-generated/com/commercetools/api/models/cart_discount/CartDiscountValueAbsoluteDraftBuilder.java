@@ -27,7 +27,7 @@ public final class CartDiscountValueAbsoluteDraftBuilder implements Builder<Cart
     }
 
     public CartDiscountValueAbsoluteDraft build() {
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(money, CartDiscountValueAbsoluteDraft.class + ": money is missing");
         return new CartDiscountValueAbsoluteDraftImpl(money);
     }
 

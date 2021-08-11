@@ -43,9 +43,9 @@ public final class SetOrderNumberChangeBuilder implements Builder<SetOrderNumber
     }
 
     public SetOrderNumberChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetOrderNumberChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetOrderNumberChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetOrderNumberChange.class + ": nextValue is missing");
         return new SetOrderNumberChangeImpl(change, previousValue, nextValue);
     }
 

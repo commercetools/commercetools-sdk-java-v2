@@ -33,8 +33,9 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     }
 
     public PaymentStatusInterfaceCodeSetMessagePayload build() {
-        Objects.requireNonNull(paymentId);
-        Objects.requireNonNull(interfaceCode);
+        Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessagePayload.class + ": paymentId is missing");
+        Objects.requireNonNull(interfaceCode,
+            PaymentStatusInterfaceCodeSetMessagePayload.class + ": interfaceCode is missing");
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
     }
 

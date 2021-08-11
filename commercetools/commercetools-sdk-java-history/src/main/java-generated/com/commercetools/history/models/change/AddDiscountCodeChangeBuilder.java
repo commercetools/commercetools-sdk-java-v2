@@ -33,8 +33,8 @@ public final class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCo
     }
 
     public AddDiscountCodeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddDiscountCodeChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddDiscountCodeChange.class + ": nextValue is missing");
         return new AddDiscountCodeChangeImpl(change, nextValue);
     }
 

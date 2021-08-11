@@ -43,9 +43,9 @@ public final class SetApplicationVersionChangeBuilder implements Builder<SetAppl
     }
 
     public SetApplicationVersionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetApplicationVersionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetApplicationVersionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetApplicationVersionChange.class + ": nextValue is missing");
         return new SetApplicationVersionChangeImpl(change, previousValue, nextValue);
     }
 

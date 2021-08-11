@@ -21,7 +21,7 @@ public final class CartSetCustomerEmailActionBuilder implements Builder<CartSetC
     }
 
     public CartSetCustomerEmailAction build() {
-        Objects.requireNonNull(email);
+        Objects.requireNonNull(email, CartSetCustomerEmailAction.class + ": email is missing");
         return new CartSetCustomerEmailActionImpl(email);
     }
 

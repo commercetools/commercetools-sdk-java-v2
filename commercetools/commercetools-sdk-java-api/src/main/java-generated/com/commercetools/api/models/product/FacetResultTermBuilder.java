@@ -47,8 +47,8 @@ public final class FacetResultTermBuilder implements Builder<FacetResultTerm> {
     }
 
     public FacetResultTerm build() {
-        Objects.requireNonNull(term);
-        Objects.requireNonNull(count);
+        Objects.requireNonNull(term, FacetResultTerm.class + ": term is missing");
+        Objects.requireNonNull(count, FacetResultTerm.class + ": count is missing");
         return new FacetResultTermImpl(term, count, productCount);
     }
 

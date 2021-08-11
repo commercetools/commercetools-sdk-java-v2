@@ -39,7 +39,8 @@ public final class OrderPaymentStateChangedMessagePayloadBuilder
     }
 
     public OrderPaymentStateChangedMessagePayload build() {
-        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(paymentState,
+            OrderPaymentStateChangedMessagePayload.class + ": paymentState is missing");
         return new OrderPaymentStateChangedMessagePayloadImpl(paymentState, oldPaymentState);
     }
 

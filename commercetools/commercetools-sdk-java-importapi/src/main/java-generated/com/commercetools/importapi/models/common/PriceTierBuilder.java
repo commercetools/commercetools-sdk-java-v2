@@ -32,8 +32,8 @@ public final class PriceTierBuilder implements Builder<PriceTier> {
     }
 
     public PriceTier build() {
-        Objects.requireNonNull(minimumQuantity);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(minimumQuantity, PriceTier.class + ": minimumQuantity is missing");
+        Objects.requireNonNull(value, PriceTier.class + ": value is missing");
         return new PriceTierImpl(minimumQuantity, value);
     }
 

@@ -33,8 +33,8 @@ public final class ProductTypeChangeInputHintActionBuilder implements Builder<Pr
     }
 
     public ProductTypeChangeInputHintAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(newValue);
+        Objects.requireNonNull(attributeName, ProductTypeChangeInputHintAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newValue, ProductTypeChangeInputHintAction.class + ": newValue is missing");
         return new ProductTypeChangeInputHintActionImpl(attributeName, newValue);
     }
 

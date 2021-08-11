@@ -22,7 +22,7 @@ public final class CustomerCreatedMessagePayloadBuilder implements Builder<Custo
     }
 
     public CustomerCreatedMessagePayload build() {
-        Objects.requireNonNull(customer);
+        Objects.requireNonNull(customer, CustomerCreatedMessagePayload.class + ": customer is missing");
         return new CustomerCreatedMessagePayloadImpl(customer);
     }
 

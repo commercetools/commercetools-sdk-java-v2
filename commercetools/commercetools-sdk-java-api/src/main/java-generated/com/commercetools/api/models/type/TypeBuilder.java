@@ -152,14 +152,14 @@ public final class TypeBuilder implements Builder<Type> {
     }
 
     public Type build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(resourceTypeIds);
-        Objects.requireNonNull(fieldDefinitions);
+        Objects.requireNonNull(id, Type.class + ": id is missing");
+        Objects.requireNonNull(version, Type.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Type.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Type.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Type.class + ": key is missing");
+        Objects.requireNonNull(name, Type.class + ": name is missing");
+        Objects.requireNonNull(resourceTypeIds, Type.class + ": resourceTypeIds is missing");
+        Objects.requireNonNull(fieldDefinitions, Type.class + ": fieldDefinitions is missing");
         return new TypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
             resourceTypeIds, fieldDefinitions);
     }

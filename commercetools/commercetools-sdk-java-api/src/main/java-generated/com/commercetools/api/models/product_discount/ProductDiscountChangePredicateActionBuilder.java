@@ -22,7 +22,7 @@ public final class ProductDiscountChangePredicateActionBuilder
     }
 
     public ProductDiscountChangePredicateAction build() {
-        Objects.requireNonNull(predicate);
+        Objects.requireNonNull(predicate, ProductDiscountChangePredicateAction.class + ": predicate is missing");
         return new ProductDiscountChangePredicateActionImpl(predicate);
     }
 

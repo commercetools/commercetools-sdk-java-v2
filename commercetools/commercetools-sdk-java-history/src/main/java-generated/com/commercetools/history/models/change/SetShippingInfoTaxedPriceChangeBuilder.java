@@ -45,9 +45,9 @@ public final class SetShippingInfoTaxedPriceChangeBuilder implements Builder<Set
     }
 
     public SetShippingInfoTaxedPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetShippingInfoTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetShippingInfoTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetShippingInfoTaxedPriceChange.class + ": previousValue is missing");
         return new SetShippingInfoTaxedPriceChangeImpl(change, nextValue, previousValue);
     }
 

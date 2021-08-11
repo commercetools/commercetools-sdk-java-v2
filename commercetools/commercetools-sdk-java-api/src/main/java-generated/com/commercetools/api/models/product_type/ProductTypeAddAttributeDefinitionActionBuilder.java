@@ -23,7 +23,7 @@ public final class ProductTypeAddAttributeDefinitionActionBuilder
     }
 
     public ProductTypeAddAttributeDefinitionAction build() {
-        Objects.requireNonNull(attribute);
+        Objects.requireNonNull(attribute, ProductTypeAddAttributeDefinitionAction.class + ": attribute is missing");
         return new ProductTypeAddAttributeDefinitionActionImpl(attribute);
     }
 

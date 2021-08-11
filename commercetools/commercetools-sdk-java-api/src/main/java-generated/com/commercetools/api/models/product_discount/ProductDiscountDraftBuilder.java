@@ -121,11 +121,11 @@ public final class ProductDiscountDraftBuilder implements Builder<ProductDiscoun
     }
 
     public ProductDiscountDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(predicate);
-        Objects.requireNonNull(sortOrder);
-        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(name, ProductDiscountDraft.class + ": name is missing");
+        Objects.requireNonNull(value, ProductDiscountDraft.class + ": value is missing");
+        Objects.requireNonNull(predicate, ProductDiscountDraft.class + ": predicate is missing");
+        Objects.requireNonNull(sortOrder, ProductDiscountDraft.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, ProductDiscountDraft.class + ": isActive is missing");
         return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,
             validUntil);
     }

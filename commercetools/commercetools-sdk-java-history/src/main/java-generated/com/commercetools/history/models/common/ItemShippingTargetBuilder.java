@@ -32,8 +32,8 @@ public final class ItemShippingTargetBuilder implements Builder<ItemShippingTarg
     }
 
     public ItemShippingTarget build() {
-        Objects.requireNonNull(addressKey);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
+        Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
         return new ItemShippingTargetImpl(addressKey, quantity);
     }
 

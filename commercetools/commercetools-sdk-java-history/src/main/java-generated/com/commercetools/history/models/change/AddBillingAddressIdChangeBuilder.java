@@ -64,10 +64,10 @@ public final class AddBillingAddressIdChangeBuilder implements Builder<AddBillin
     }
 
     public AddBillingAddressIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(change, AddBillingAddressIdChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddBillingAddressIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddBillingAddressIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(address, AddBillingAddressIdChange.class + ": address is missing");
         return new AddBillingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 

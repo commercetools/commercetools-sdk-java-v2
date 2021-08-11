@@ -67,10 +67,10 @@ public final class AddToCategoryChangeBuilder implements Builder<AddToCategoryCh
     }
 
     public AddToCategoryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddToCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(category, AddToCategoryChange.class + ": category is missing");
+        Objects.requireNonNull(previousValue, AddToCategoryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddToCategoryChange.class + ": nextValue is missing");
         return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 

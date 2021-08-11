@@ -154,15 +154,15 @@ public final class ProductAddedToCategoryMessageBuilder implements Builder<Produ
     }
 
     public ProductAddedToCategoryMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(id, ProductAddedToCategoryMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductAddedToCategoryMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductAddedToCategoryMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductAddedToCategoryMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductAddedToCategoryMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductAddedToCategoryMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductAddedToCategoryMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(category, ProductAddedToCategoryMessage.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductAddedToCategoryMessage.class + ": staged is missing");
         return new ProductAddedToCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
     }

@@ -21,7 +21,7 @@ public final class CartDiscountChangeNameActionBuilder implements Builder<CartDi
     }
 
     public CartDiscountChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CartDiscountChangeNameAction.class + ": name is missing");
         return new CartDiscountChangeNameActionImpl(name);
     }
 

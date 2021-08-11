@@ -36,7 +36,7 @@ public final class LocalizableEnumAttributeBuilder implements Builder<Localizabl
     }
 
     public LocalizableEnumAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizableEnumAttribute.class + ": value is missing");
         return new LocalizableEnumAttributeImpl(name, value);
     }
 

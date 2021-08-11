@@ -52,7 +52,7 @@ public final class StagedOrderSetLineItemCustomTypeActionBuilder
     }
 
     public StagedOrderSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemCustomTypeAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 

@@ -43,9 +43,9 @@ public final class ShoppingListLineItemValueBuilder implements Builder<ShoppingL
     }
 
     public ShoppingListLineItemValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(id, ShoppingListLineItemValue.class + ": id is missing");
+        Objects.requireNonNull(name, ShoppingListLineItemValue.class + ": name is missing");
+        Objects.requireNonNull(variantId, ShoppingListLineItemValue.class + ": variantId is missing");
         return new ShoppingListLineItemValueImpl(id, name, variantId);
     }
 

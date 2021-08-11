@@ -65,11 +65,11 @@ public final class ChangePlainEnumValueLabelChangeBuilder implements Builder<Cha
     }
 
     public ChangePlainEnumValueLabelChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(valueKey);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangePlainEnumValueLabelChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, ChangePlainEnumValueLabelChange.class + ": attributeName is missing");
+        Objects.requireNonNull(valueKey, ChangePlainEnumValueLabelChange.class + ": valueKey is missing");
+        Objects.requireNonNull(previousValue, ChangePlainEnumValueLabelChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangePlainEnumValueLabelChange.class + ": nextValue is missing");
         return new ChangePlainEnumValueLabelChangeImpl(change, attributeName, valueKey, previousValue, nextValue);
     }
 

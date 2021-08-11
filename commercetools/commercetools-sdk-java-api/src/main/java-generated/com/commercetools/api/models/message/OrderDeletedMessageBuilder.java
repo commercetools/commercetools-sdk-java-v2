@@ -142,14 +142,14 @@ public final class OrderDeletedMessageBuilder implements Builder<OrderDeletedMes
     }
 
     public OrderDeletedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(order);
+        Objects.requireNonNull(id, OrderDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(order, OrderDeletedMessage.class + ": order is missing");
         return new OrderDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
     }

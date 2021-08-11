@@ -67,10 +67,10 @@ public final class AddExternalImageChangeBuilder implements Builder<AddExternalI
     }
 
     public AddExternalImageChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddExternalImageChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, AddExternalImageChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddExternalImageChange.class + ": nextValue is missing");
         return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

@@ -21,7 +21,7 @@ public final class ResourceSizeLimitExceededErrorBuilder implements Builder<Reso
     }
 
     public ResourceSizeLimitExceededError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ResourceSizeLimitExceededError.class + ": message is missing");
         return new ResourceSizeLimitExceededErrorImpl(message);
     }
 

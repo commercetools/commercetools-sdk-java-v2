@@ -36,7 +36,7 @@ public final class ShoppingListRemoveLineItemActionBuilder implements Builder<Sh
     }
 
     public ShoppingListRemoveLineItemAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, ShoppingListRemoveLineItemAction.class + ": lineItemId is missing");
         return new ShoppingListRemoveLineItemActionImpl(lineItemId, quantity);
     }
 

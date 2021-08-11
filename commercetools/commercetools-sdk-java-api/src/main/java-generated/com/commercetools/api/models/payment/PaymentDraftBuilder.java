@@ -227,7 +227,7 @@ public final class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     public PaymentDraft build() {
-        Objects.requireNonNull(amountPlanned);
+        Objects.requireNonNull(amountPlanned, PaymentDraft.class + ": amountPlanned is missing");
         return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
             authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions,
             interfaceInteractions, custom, key);

@@ -22,7 +22,7 @@ public final class ChangeStatusUpdateActionBuilder implements Builder<ChangeStat
     }
 
     public ChangeStatusUpdateAction build() {
-        Objects.requireNonNull(status);
+        Objects.requireNonNull(status, ChangeStatusUpdateAction.class + ": status is missing");
         return new ChangeStatusUpdateActionImpl(status);
     }
 

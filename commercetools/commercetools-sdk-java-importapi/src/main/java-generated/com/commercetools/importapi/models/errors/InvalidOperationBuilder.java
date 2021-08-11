@@ -21,7 +21,7 @@ public final class InvalidOperationBuilder implements Builder<InvalidOperation> 
     }
 
     public InvalidOperation build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidOperation.class + ": message is missing");
         return new InvalidOperationImpl(message);
     }
 

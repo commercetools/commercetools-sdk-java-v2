@@ -21,7 +21,7 @@ public final class ProductVariantKeyReferenceBuilder implements Builder<ProductV
     }
 
     public ProductVariantKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ProductVariantKeyReference.class + ": key is missing");
         return new ProductVariantKeyReferenceImpl(key);
     }
 

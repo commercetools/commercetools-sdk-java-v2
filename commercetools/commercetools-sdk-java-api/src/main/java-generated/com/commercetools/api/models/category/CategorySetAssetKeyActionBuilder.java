@@ -36,7 +36,7 @@ public final class CategorySetAssetKeyActionBuilder implements Builder<CategoryS
     }
 
     public CategorySetAssetKeyAction build() {
-        Objects.requireNonNull(assetId);
+        Objects.requireNonNull(assetId, CategorySetAssetKeyAction.class + ": assetId is missing");
         return new CategorySetAssetKeyActionImpl(assetId, assetKey);
     }
 

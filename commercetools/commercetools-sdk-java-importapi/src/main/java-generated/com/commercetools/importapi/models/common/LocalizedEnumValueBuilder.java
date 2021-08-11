@@ -32,8 +32,8 @@ public final class LocalizedEnumValueBuilder implements Builder<LocalizedEnumVal
     }
 
     public LocalizedEnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, LocalizedEnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, LocalizedEnumValue.class + ": label is missing");
         return new LocalizedEnumValueImpl(key, label);
     }
 

@@ -57,10 +57,10 @@ public final class ChangeTransactionStateChangeBuilder implements Builder<Change
     }
 
     public ChangeTransactionStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(transaction);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeTransactionStateChange.class + ": change is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionStateChange.class + ": transaction is missing");
+        Objects.requireNonNull(nextValue, ChangeTransactionStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeTransactionStateChange.class + ": previousValue is missing");
         return new ChangeTransactionStateChangeImpl(change, transaction, nextValue, previousValue);
     }
 

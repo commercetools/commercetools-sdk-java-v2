@@ -120,11 +120,11 @@ public final class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     public CustomerGroup build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, CustomerGroup.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerGroup.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerGroup.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerGroup.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, CustomerGroup.class + ": name is missing");
         return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             custom);
     }

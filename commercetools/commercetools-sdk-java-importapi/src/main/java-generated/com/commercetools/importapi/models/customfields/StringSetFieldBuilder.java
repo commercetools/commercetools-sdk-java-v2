@@ -26,7 +26,7 @@ public final class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     public StringSetField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, StringSetField.class + ": value is missing");
         return new StringSetFieldImpl(value);
     }
 

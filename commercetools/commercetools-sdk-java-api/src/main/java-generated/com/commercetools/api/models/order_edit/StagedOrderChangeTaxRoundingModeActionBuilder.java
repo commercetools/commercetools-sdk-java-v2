@@ -23,7 +23,8 @@ public final class StagedOrderChangeTaxRoundingModeActionBuilder
     }
 
     public StagedOrderChangeTaxRoundingModeAction build() {
-        Objects.requireNonNull(taxRoundingMode);
+        Objects.requireNonNull(taxRoundingMode,
+            StagedOrderChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
         return new StagedOrderChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
 

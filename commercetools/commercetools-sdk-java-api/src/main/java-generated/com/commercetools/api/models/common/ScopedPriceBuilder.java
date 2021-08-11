@@ -138,9 +138,9 @@ public final class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     public ScopedPrice build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(currentValue);
+        Objects.requireNonNull(id, ScopedPrice.class + ": id is missing");
+        Objects.requireNonNull(value, ScopedPrice.class + ": value is missing");
+        Objects.requireNonNull(currentValue, ScopedPrice.class + ": currentValue is missing");
         return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,
             discounted, custom);
     }

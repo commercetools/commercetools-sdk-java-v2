@@ -95,9 +95,9 @@ public final class AssetBuilder implements Builder<Asset> {
     }
 
     public Asset build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(sources);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(key, Asset.class + ": key is missing");
+        Objects.requireNonNull(sources, Asset.class + ": sources is missing");
+        Objects.requireNonNull(name, Asset.class + ": name is missing");
         return new AssetImpl(key, sources, name, description, tags, custom);
     }
 

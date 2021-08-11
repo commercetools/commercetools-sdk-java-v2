@@ -76,12 +76,12 @@ public final class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     public TextLineItem build() {
-        Objects.requireNonNull(addedAt);
-        Objects.requireNonNull(custom);
-        Objects.requireNonNull(description);
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(addedAt, TextLineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(custom, TextLineItem.class + ": custom is missing");
+        Objects.requireNonNull(description, TextLineItem.class + ": description is missing");
+        Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, TextLineItem.class + ": name is missing");
+        Objects.requireNonNull(quantity, TextLineItem.class + ": quantity is missing");
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
     }
 

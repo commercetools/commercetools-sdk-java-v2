@@ -54,8 +54,8 @@ public final class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     public OrderEditUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, OrderEditUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, OrderEditUpdate.class + ": actions is missing");
         return new OrderEditUpdateImpl(version, actions, dryRun);
     }
 

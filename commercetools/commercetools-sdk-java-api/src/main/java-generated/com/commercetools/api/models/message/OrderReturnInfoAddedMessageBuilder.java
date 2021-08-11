@@ -143,14 +143,14 @@ public final class OrderReturnInfoAddedMessageBuilder implements Builder<OrderRe
     }
 
     public OrderReturnInfoAddedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(returnInfo);
+        Objects.requireNonNull(id, OrderReturnInfoAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderReturnInfoAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderReturnInfoAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderReturnInfoAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderReturnInfoAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderReturnInfoAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderReturnInfoAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(returnInfo, OrderReturnInfoAddedMessage.class + ": returnInfo is missing");
         return new OrderReturnInfoAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnInfo);
     }

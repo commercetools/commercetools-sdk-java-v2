@@ -21,7 +21,7 @@ public final class ProductDiscountValueRelativeBuilder implements Builder<Produc
     }
 
     public ProductDiscountValueRelative build() {
-        Objects.requireNonNull(permyriad);
+        Objects.requireNonNull(permyriad, ProductDiscountValueRelative.class + ": permyriad is missing");
         return new ProductDiscountValueRelativeImpl(permyriad);
     }
 

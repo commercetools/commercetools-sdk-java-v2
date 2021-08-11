@@ -23,7 +23,7 @@ public final class StagedOrderUpdateItemShippingAddressActionBuilder
     }
 
     public StagedOrderUpdateItemShippingAddressAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, StagedOrderUpdateItemShippingAddressAction.class + ": address is missing");
         return new StagedOrderUpdateItemShippingAddressActionImpl(address);
     }
 

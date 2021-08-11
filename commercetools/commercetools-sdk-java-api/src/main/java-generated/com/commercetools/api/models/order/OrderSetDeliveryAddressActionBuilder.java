@@ -37,7 +37,7 @@ public final class OrderSetDeliveryAddressActionBuilder implements Builder<Order
     }
 
     public OrderSetDeliveryAddressAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressAction.class + ": deliveryId is missing");
         return new OrderSetDeliveryAddressActionImpl(deliveryId, address);
     }
 

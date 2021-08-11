@@ -47,8 +47,8 @@ public final class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisi
     }
 
     public CentPrecisionMoneyDraft build() {
-        Objects.requireNonNull(centAmount);
-        Objects.requireNonNull(currencyCode);
+        Objects.requireNonNull(centAmount, CentPrecisionMoneyDraft.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, CentPrecisionMoneyDraft.class + ": currencyCode is missing");
         return new CentPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits);
     }
 

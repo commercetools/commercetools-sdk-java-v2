@@ -37,8 +37,8 @@ public final class UpdateBuilder implements Builder<Update> {
     }
 
     public Update build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, Update.class + ": version is missing");
+        Objects.requireNonNull(actions, Update.class + ": actions is missing");
         return new UpdateImpl(version, actions);
     }
 

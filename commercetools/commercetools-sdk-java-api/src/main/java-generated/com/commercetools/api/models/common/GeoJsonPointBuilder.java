@@ -26,7 +26,7 @@ public final class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
     }
 
     public GeoJsonPoint build() {
-        Objects.requireNonNull(coordinates);
+        Objects.requireNonNull(coordinates, GeoJsonPoint.class + ": coordinates is missing");
         return new GeoJsonPointImpl(coordinates);
     }
 

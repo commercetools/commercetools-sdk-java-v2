@@ -23,7 +23,8 @@ public final class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     public ProjectChangeMessagesConfigurationAction build() {
-        Objects.requireNonNull(messagesConfiguration);
+        Objects.requireNonNull(messagesConfiguration,
+            ProjectChangeMessagesConfigurationAction.class + ": messagesConfiguration is missing");
         return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);
     }
 

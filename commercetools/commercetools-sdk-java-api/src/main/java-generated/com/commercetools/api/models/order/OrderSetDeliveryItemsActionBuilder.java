@@ -38,8 +38,8 @@ public final class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSe
     }
 
     public OrderSetDeliveryItemsAction build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryItemsAction.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, OrderSetDeliveryItemsAction.class + ": items is missing");
         return new OrderSetDeliveryItemsActionImpl(deliveryId, items);
     }
 

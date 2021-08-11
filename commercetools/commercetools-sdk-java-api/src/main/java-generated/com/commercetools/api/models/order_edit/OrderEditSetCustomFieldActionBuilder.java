@@ -36,7 +36,7 @@ public final class OrderEditSetCustomFieldActionBuilder implements Builder<Order
     }
 
     public OrderEditSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, OrderEditSetCustomFieldAction.class + ": name is missing");
         return new OrderEditSetCustomFieldActionImpl(name, value);
     }
 

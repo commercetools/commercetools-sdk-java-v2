@@ -28,7 +28,7 @@ public final class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     public ImportResponse build() {
-        Objects.requireNonNull(operationStatus);
+        Objects.requireNonNull(operationStatus, ImportResponse.class + ": operationStatus is missing");
         return new ImportResponseImpl(operationStatus);
     }
 

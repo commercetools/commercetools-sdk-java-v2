@@ -37,7 +37,7 @@ public final class OrderTransitionStateActionBuilder implements Builder<OrderTra
     }
 
     public OrderTransitionStateAction build() {
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(state, OrderTransitionStateAction.class + ": state is missing");
         return new OrderTransitionStateActionImpl(state, force);
     }
 

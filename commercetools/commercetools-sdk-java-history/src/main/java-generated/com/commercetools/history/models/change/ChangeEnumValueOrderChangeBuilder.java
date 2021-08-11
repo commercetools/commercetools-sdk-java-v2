@@ -68,10 +68,10 @@ public final class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEn
     }
 
     public ChangeEnumValueOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeEnumValueOrderChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeEnumValueOrderChange.class + ": fieldName is missing");
+        Objects.requireNonNull(nextValue, ChangeEnumValueOrderChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeEnumValueOrderChange.class + ": previousValue is missing");
         return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
     }
 

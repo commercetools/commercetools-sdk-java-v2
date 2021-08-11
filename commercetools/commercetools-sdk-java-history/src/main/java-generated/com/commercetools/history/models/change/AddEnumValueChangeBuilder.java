@@ -44,9 +44,9 @@ public final class AddEnumValueChangeBuilder implements Builder<AddEnumValueChan
     }
 
     public AddEnumValueChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddEnumValueChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, AddEnumValueChange.class + ": fieldName is missing");
+        Objects.requireNonNull(nextValue, AddEnumValueChange.class + ": nextValue is missing");
         return new AddEnumValueChangeImpl(change, fieldName, nextValue);
     }
 

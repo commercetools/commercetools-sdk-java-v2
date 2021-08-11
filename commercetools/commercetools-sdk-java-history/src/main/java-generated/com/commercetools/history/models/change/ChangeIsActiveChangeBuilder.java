@@ -43,9 +43,9 @@ public final class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActive
     }
 
     public ChangeIsActiveChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeIsActiveChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeIsActiveChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeIsActiveChange.class + ": nextValue is missing");
         return new ChangeIsActiveChangeImpl(change, previousValue, nextValue);
     }
 

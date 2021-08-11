@@ -32,8 +32,8 @@ public final class ItemStateBuilder implements Builder<ItemState> {
     }
 
     public ItemState build() {
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(quantity, ItemState.class + ": quantity is missing");
+        Objects.requireNonNull(state, ItemState.class + ": state is missing");
         return new ItemStateImpl(quantity, state);
     }
 

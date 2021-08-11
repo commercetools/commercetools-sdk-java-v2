@@ -34,8 +34,8 @@ public final class ProductAddedToCategoryMessagePayloadBuilder
     }
 
     public ProductAddedToCategoryMessagePayload build() {
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(category, ProductAddedToCategoryMessagePayload.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductAddedToCategoryMessagePayload.class + ": staged is missing");
         return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
     }
 

@@ -39,8 +39,8 @@ public final class ShoppingListUpdateBuilder implements Builder<ShoppingListUpda
     }
 
     public ShoppingListUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ShoppingListUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ShoppingListUpdate.class + ": actions is missing");
         return new ShoppingListUpdateImpl(version, actions);
     }
 

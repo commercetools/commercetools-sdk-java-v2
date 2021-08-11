@@ -43,9 +43,9 @@ public final class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     public SetLocaleChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetLocaleChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetLocaleChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetLocaleChange.class + ": nextValue is missing");
         return new SetLocaleChangeImpl(change, previousValue, nextValue);
     }
 

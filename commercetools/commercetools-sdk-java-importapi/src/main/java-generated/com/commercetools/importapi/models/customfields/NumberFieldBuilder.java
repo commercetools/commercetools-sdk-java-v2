@@ -21,7 +21,7 @@ public final class NumberFieldBuilder implements Builder<NumberField> {
     }
 
     public NumberField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, NumberField.class + ": value is missing");
         return new NumberFieldImpl(value);
     }
 

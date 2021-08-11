@@ -22,7 +22,7 @@ public final class ShoppingListStoreSetMessagePayloadBuilder implements Builder<
     }
 
     public ShoppingListStoreSetMessagePayload build() {
-        Objects.requireNonNull(store);
+        Objects.requireNonNull(store, ShoppingListStoreSetMessagePayload.class + ": store is missing");
         return new ShoppingListStoreSetMessagePayloadImpl(store);
     }
 

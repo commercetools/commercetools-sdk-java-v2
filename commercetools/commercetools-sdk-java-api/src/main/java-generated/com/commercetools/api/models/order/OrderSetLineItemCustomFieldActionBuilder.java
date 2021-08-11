@@ -47,8 +47,8 @@ public final class OrderSetLineItemCustomFieldActionBuilder implements Builder<O
     }
 
     public OrderSetLineItemCustomFieldAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(lineItemId, OrderSetLineItemCustomFieldAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(name, OrderSetLineItemCustomFieldAction.class + ": name is missing");
         return new OrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);
     }
 

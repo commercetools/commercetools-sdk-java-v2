@@ -76,7 +76,7 @@ public final class TextLineItemDraftBuilder implements Builder<TextLineItemDraft
     }
 
     public TextLineItemDraft build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, TextLineItemDraft.class + ": name is missing");
         return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
     }
 

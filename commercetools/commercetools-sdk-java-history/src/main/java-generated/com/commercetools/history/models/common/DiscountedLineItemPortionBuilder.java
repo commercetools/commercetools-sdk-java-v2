@@ -33,8 +33,8 @@ public final class DiscountedLineItemPortionBuilder implements Builder<Discounte
     }
 
     public DiscountedLineItemPortion build() {
-        Objects.requireNonNull(discount);
-        Objects.requireNonNull(discountedAmount);
+        Objects.requireNonNull(discount, DiscountedLineItemPortion.class + ": discount is missing");
+        Objects.requireNonNull(discountedAmount, DiscountedLineItemPortion.class + ": discountedAmount is missing");
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);
     }
 

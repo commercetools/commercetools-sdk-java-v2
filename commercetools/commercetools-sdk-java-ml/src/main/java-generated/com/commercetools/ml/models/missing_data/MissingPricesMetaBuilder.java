@@ -34,8 +34,8 @@ public final class MissingPricesMetaBuilder implements Builder<MissingPricesMeta
     }
 
     public MissingPricesMeta build() {
-        Objects.requireNonNull(productLevel);
-        Objects.requireNonNull(variantLevel);
+        Objects.requireNonNull(productLevel, MissingPricesMeta.class + ": productLevel is missing");
+        Objects.requireNonNull(variantLevel, MissingPricesMeta.class + ": variantLevel is missing");
         return new MissingPricesMetaImpl(productLevel, variantLevel);
     }
 

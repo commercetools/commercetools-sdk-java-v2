@@ -22,7 +22,7 @@ public final class ShippingMethodAddZoneActionBuilder implements Builder<Shippin
     }
 
     public ShippingMethodAddZoneAction build() {
-        Objects.requireNonNull(zone);
+        Objects.requireNonNull(zone, ShippingMethodAddZoneAction.class + ": zone is missing");
         return new ShippingMethodAddZoneActionImpl(zone);
     }
 

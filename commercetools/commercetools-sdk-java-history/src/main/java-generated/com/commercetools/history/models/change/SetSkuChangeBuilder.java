@@ -54,10 +54,10 @@ public final class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     public SetSkuChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetSkuChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetSkuChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetSkuChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSkuChange.class + ": nextValue is missing");
         return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

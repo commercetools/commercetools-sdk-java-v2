@@ -21,7 +21,7 @@ public final class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryD
     }
 
     public RemoveDeliveryDraft build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, RemoveDeliveryDraft.class + ": id is missing");
         return new RemoveDeliveryDraftImpl(id);
     }
 

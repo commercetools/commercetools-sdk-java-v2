@@ -22,7 +22,8 @@ public final class StagedOrderRemoveItemShippingAddressActionBuilder
     }
 
     public StagedOrderRemoveItemShippingAddressAction build() {
-        Objects.requireNonNull(addressKey);
+        Objects.requireNonNull(addressKey,
+            StagedOrderRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new StagedOrderRemoveItemShippingAddressActionImpl(addressKey);
     }
 

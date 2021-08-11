@@ -43,9 +43,9 @@ public final class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     public MissingImages build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(imageCount);
+        Objects.requireNonNull(product, MissingImages.class + ": product is missing");
+        Objects.requireNonNull(variantId, MissingImages.class + ": variantId is missing");
+        Objects.requireNonNull(imageCount, MissingImages.class + ": imageCount is missing");
         return new MissingImagesImpl(product, variantId, imageCount);
     }
 

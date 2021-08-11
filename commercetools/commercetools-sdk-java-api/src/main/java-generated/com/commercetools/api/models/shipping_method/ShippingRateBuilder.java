@@ -67,8 +67,8 @@ public final class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     public ShippingRate build() {
-        Objects.requireNonNull(price);
-        Objects.requireNonNull(tiers);
+        Objects.requireNonNull(price, ShippingRate.class + ": price is missing");
+        Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }
 

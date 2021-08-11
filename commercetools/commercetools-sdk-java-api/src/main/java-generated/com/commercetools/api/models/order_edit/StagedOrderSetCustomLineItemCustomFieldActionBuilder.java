@@ -48,8 +48,9 @@ public final class StagedOrderSetCustomLineItemCustomFieldActionBuilder
     }
 
     public StagedOrderSetCustomLineItemCustomFieldAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderSetCustomLineItemCustomFieldAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(name, StagedOrderSetCustomLineItemCustomFieldAction.class + ": name is missing");
         return new StagedOrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
     }
 

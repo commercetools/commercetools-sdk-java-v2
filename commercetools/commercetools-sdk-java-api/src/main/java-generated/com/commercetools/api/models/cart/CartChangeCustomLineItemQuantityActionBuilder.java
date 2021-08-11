@@ -33,8 +33,9 @@ public final class CartChangeCustomLineItemQuantityActionBuilder
     }
 
     public CartChangeCustomLineItemQuantityAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(customLineItemId,
+            CartChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(quantity, CartChangeCustomLineItemQuantityAction.class + ": quantity is missing");
         return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
 

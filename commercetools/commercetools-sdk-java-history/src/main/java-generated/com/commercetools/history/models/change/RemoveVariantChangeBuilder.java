@@ -55,10 +55,10 @@ public final class RemoveVariantChangeBuilder implements Builder<RemoveVariantCh
     }
 
     public RemoveVariantChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveVariantChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, RemoveVariantChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, RemoveVariantChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveVariantChange.class + ": nextValue is missing");
         return new RemoveVariantChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

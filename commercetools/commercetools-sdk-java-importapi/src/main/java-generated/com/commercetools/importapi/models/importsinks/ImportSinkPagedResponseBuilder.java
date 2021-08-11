@@ -72,11 +72,11 @@ public final class ImportSinkPagedResponseBuilder implements Builder<ImportSinkP
     }
 
     public ImportSinkPagedResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ImportSinkPagedResponse.class + ": limit is missing");
+        Objects.requireNonNull(offset, ImportSinkPagedResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ImportSinkPagedResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ImportSinkPagedResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImportSinkPagedResponse.class + ": results is missing");
         return new ImportSinkPagedResponseImpl(limit, offset, count, total, results);
     }
 

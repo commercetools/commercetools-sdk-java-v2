@@ -154,15 +154,15 @@ public final class OrderStateChangedMessageBuilder implements Builder<OrderState
     }
 
     public OrderStateChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(orderState);
-        Objects.requireNonNull(oldOrderState);
+        Objects.requireNonNull(id, OrderStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(orderState, OrderStateChangedMessage.class + ": orderState is missing");
+        Objects.requireNonNull(oldOrderState, OrderStateChangedMessage.class + ": oldOrderState is missing");
         return new OrderStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, orderState, oldOrderState);
     }

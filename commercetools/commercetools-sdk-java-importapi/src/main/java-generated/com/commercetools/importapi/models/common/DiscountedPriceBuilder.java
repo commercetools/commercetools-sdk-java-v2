@@ -33,8 +33,8 @@ public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     public DiscountedPrice build() {
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(discount);
+        Objects.requireNonNull(value, DiscountedPrice.class + ": value is missing");
+        Objects.requireNonNull(discount, DiscountedPrice.class + ": discount is missing");
         return new DiscountedPriceImpl(value, discount);
     }
 

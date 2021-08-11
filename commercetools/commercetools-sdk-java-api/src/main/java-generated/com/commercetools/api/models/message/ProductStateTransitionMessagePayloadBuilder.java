@@ -34,8 +34,8 @@ public final class ProductStateTransitionMessagePayloadBuilder
     }
 
     public ProductStateTransitionMessagePayload build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(state, ProductStateTransitionMessagePayload.class + ": state is missing");
+        Objects.requireNonNull(force, ProductStateTransitionMessagePayload.class + ": force is missing");
         return new ProductStateTransitionMessagePayloadImpl(state, force);
     }
 

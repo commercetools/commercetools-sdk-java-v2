@@ -38,7 +38,7 @@ public final class ProductSlugChangedMessagePayloadBuilder implements Builder<Pr
     }
 
     public ProductSlugChangedMessagePayload build() {
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(slug, ProductSlugChangedMessagePayload.class + ": slug is missing");
         return new ProductSlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 

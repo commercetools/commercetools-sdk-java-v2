@@ -78,7 +78,7 @@ public final class StagedOrderRemoveLineItemActionBuilder implements Builder<Sta
     }
 
     public StagedOrderRemoveLineItemAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, StagedOrderRemoveLineItemAction.class + ": lineItemId is missing");
         return new StagedOrderRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }

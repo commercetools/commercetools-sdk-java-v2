@@ -21,7 +21,7 @@ public final class CategoryChangeNameActionBuilder implements Builder<CategoryCh
     }
 
     public CategoryChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, CategoryChangeNameAction.class + ": name is missing");
         return new CategoryChangeNameActionImpl(name);
     }
 

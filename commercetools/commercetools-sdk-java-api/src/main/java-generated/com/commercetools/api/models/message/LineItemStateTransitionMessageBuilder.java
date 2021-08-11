@@ -189,18 +189,18 @@ public final class LineItemStateTransitionMessageBuilder implements Builder<Line
     }
 
     public LineItemStateTransitionMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(transitionDate);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(fromState);
-        Objects.requireNonNull(toState);
+        Objects.requireNonNull(id, LineItemStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, LineItemStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, LineItemStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, LineItemStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, LineItemStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, LineItemStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, LineItemStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(lineItemId, LineItemStateTransitionMessage.class + ": lineItemId is missing");
+        Objects.requireNonNull(transitionDate, LineItemStateTransitionMessage.class + ": transitionDate is missing");
+        Objects.requireNonNull(quantity, LineItemStateTransitionMessage.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, LineItemStateTransitionMessage.class + ": fromState is missing");
+        Objects.requireNonNull(toState, LineItemStateTransitionMessage.class + ": toState is missing");
         return new LineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, transitionDate,
             quantity, fromState, toState);

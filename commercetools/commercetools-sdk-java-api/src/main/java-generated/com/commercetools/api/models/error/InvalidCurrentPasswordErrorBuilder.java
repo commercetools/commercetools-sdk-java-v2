@@ -21,7 +21,7 @@ public final class InvalidCurrentPasswordErrorBuilder implements Builder<Invalid
     }
 
     public InvalidCurrentPasswordError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InvalidCurrentPasswordError.class + ": message is missing");
         return new InvalidCurrentPasswordErrorImpl(message);
     }
 

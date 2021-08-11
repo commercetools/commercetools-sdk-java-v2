@@ -31,7 +31,7 @@ public final class SuggestionResultBuilder implements Builder<SuggestionResult> 
     }
 
     public SuggestionResult build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, SuggestionResult.class + ": values are missing");
         return new SuggestionResultImpl(values);
     }
 

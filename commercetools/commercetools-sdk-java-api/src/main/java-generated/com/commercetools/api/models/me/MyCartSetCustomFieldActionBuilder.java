@@ -36,7 +36,7 @@ public final class MyCartSetCustomFieldActionBuilder implements Builder<MyCartSe
     }
 
     public MyCartSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyCartSetCustomFieldAction.class + ": name is missing");
         return new MyCartSetCustomFieldActionImpl(name, value);
     }
 

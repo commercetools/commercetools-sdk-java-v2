@@ -57,7 +57,7 @@ public final class ImportOperationStatusBuilder implements Builder<ImportOperati
     }
 
     public ImportOperationStatus build() {
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(state, ImportOperationStatus.class + ": state is missing");
         return new ImportOperationStatusImpl(operationId, state, errors);
     }
 

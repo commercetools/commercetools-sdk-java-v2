@@ -108,7 +108,7 @@ public final class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     public ChannelDraft build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ChannelDraft.class + ": key is missing");
         return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
     }
 

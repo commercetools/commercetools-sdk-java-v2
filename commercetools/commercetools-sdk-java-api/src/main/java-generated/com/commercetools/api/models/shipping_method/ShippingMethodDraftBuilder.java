@@ -131,10 +131,10 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
     }
 
     public ShippingMethodDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(taxCategory);
-        Objects.requireNonNull(zoneRates);
-        Objects.requireNonNull(isDefault);
+        Objects.requireNonNull(name, ShippingMethodDraft.class + ": name is missing");
+        Objects.requireNonNull(taxCategory, ShippingMethodDraft.class + ": taxCategory is missing");
+        Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");
+        Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");
         return new ShippingMethodDraftImpl(key, name, description, localizedDescription, taxCategory, zoneRates,
             isDefault, predicate, custom);
     }

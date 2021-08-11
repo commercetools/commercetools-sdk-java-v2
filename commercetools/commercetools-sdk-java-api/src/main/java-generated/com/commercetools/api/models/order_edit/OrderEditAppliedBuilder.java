@@ -45,9 +45,9 @@ public final class OrderEditAppliedBuilder implements Builder<OrderEditApplied> 
     }
 
     public OrderEditApplied build() {
-        Objects.requireNonNull(appliedAt);
-        Objects.requireNonNull(excerptBeforeEdit);
-        Objects.requireNonNull(excerptAfterEdit);
+        Objects.requireNonNull(appliedAt, OrderEditApplied.class + ": appliedAt is missing");
+        Objects.requireNonNull(excerptBeforeEdit, OrderEditApplied.class + ": excerptBeforeEdit is missing");
+        Objects.requireNonNull(excerptAfterEdit, OrderEditApplied.class + ": excerptAfterEdit is missing");
         return new OrderEditAppliedImpl(appliedAt, excerptBeforeEdit, excerptAfterEdit);
     }
 

@@ -38,7 +38,8 @@ public final class MyCartSetLineItemDistributionChannelActionBuilder
     }
 
     public MyCartSetLineItemDistributionChannelAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId,
+            MyCartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
         return new MyCartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 

@@ -39,8 +39,8 @@ public final class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     public ResultItem build() {
-        Objects.requireNonNull(imageUrl);
-        Objects.requireNonNull(productVariants);
+        Objects.requireNonNull(imageUrl, ResultItem.class + ": imageUrl is missing");
+        Objects.requireNonNull(productVariants, ResultItem.class + ": productVariants is missing");
         return new ResultItemImpl(imageUrl, productVariants);
     }
 

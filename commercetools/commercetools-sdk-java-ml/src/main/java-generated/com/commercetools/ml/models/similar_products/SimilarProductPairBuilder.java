@@ -39,8 +39,8 @@ public final class SimilarProductPairBuilder implements Builder<SimilarProductPa
     }
 
     public SimilarProductPair build() {
-        Objects.requireNonNull(confidence);
-        Objects.requireNonNull(products);
+        Objects.requireNonNull(confidence, SimilarProductPair.class + ": confidence is missing");
+        Objects.requireNonNull(products, SimilarProductPair.class + ": products is missing");
         return new SimilarProductPairImpl(confidence, products);
     }
 

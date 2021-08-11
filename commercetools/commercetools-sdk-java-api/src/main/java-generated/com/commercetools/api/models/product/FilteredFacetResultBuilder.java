@@ -36,7 +36,7 @@ public final class FilteredFacetResultBuilder implements Builder<FilteredFacetRe
     }
 
     public FilteredFacetResult build() {
-        Objects.requireNonNull(count);
+        Objects.requireNonNull(count, FilteredFacetResult.class + ": count is missing");
         return new FilteredFacetResultImpl(count, productCount);
     }
 

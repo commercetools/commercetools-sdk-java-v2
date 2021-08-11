@@ -32,8 +32,8 @@ public final class SetCartScoreShippingRateInputValueBuilder implements Builder<
     }
 
     public SetCartScoreShippingRateInputValue build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(score);
+        Objects.requireNonNull(type, SetCartScoreShippingRateInputValue.class + ": type is missing");
+        Objects.requireNonNull(score, SetCartScoreShippingRateInputValue.class + ": score is missing");
         return new SetCartScoreShippingRateInputValueImpl(type, score);
     }
 

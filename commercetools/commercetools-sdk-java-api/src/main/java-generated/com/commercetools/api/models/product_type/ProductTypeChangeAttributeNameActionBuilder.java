@@ -33,8 +33,10 @@ public final class ProductTypeChangeAttributeNameActionBuilder
     }
 
     public ProductTypeChangeAttributeNameAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(newAttributeName);
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangeAttributeNameAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newAttributeName,
+            ProductTypeChangeAttributeNameAction.class + ": newAttributeName is missing");
         return new ProductTypeChangeAttributeNameActionImpl(attributeName, newAttributeName);
     }
 

@@ -23,7 +23,7 @@ public final class CartDiscountChangeStackingModeActionBuilder
     }
 
     public CartDiscountChangeStackingModeAction build() {
-        Objects.requireNonNull(stackingMode);
+        Objects.requireNonNull(stackingMode, CartDiscountChangeStackingModeAction.class + ": stackingMode is missing");
         return new CartDiscountChangeStackingModeActionImpl(stackingMode);
     }
 

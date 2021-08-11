@@ -44,9 +44,9 @@ public final class SetGeoLocationChangeBuilder implements Builder<SetGeoLocation
     }
 
     public SetGeoLocationChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetGeoLocationChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetGeoLocationChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetGeoLocationChange.class + ": previousValue is missing");
         return new SetGeoLocationChangeImpl(change, nextValue, previousValue);
     }
 

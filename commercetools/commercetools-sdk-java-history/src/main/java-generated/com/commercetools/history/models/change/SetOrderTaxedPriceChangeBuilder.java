@@ -56,10 +56,10 @@ public final class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTa
     }
 
     public SetOrderTaxedPriceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(taxMode);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetOrderTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(taxMode, SetOrderTaxedPriceChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetOrderTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderTaxedPriceChange.class + ": previousValue is missing");
         return new SetOrderTaxedPriceChangeImpl(change, taxMode, nextValue, previousValue);
     }
 

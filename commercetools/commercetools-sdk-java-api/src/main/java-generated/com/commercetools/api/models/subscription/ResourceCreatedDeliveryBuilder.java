@@ -70,10 +70,10 @@ public final class ResourceCreatedDeliveryBuilder implements Builder<ResourceCre
     }
 
     public ResourceCreatedDelivery build() {
-        Objects.requireNonNull(projectKey);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(modifiedAt);
+        Objects.requireNonNull(projectKey, ResourceCreatedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceCreatedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceCreatedDelivery.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceCreatedDelivery.class + ": modifiedAt is missing");
         return new ResourceCreatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             modifiedAt);
     }

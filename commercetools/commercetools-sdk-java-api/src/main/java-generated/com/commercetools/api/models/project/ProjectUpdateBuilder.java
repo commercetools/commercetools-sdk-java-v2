@@ -38,8 +38,8 @@ public final class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     public ProjectUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ProjectUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ProjectUpdate.class + ": actions is missing");
         return new ProjectUpdateImpl(version, actions);
     }
 

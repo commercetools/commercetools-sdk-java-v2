@@ -65,11 +65,11 @@ public final class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     public TrackingData build() {
-        Objects.requireNonNull(trackingId);
-        Objects.requireNonNull(carrier);
-        Objects.requireNonNull(provider);
-        Objects.requireNonNull(providerTransaction);
-        Objects.requireNonNull(isReturn);
+        Objects.requireNonNull(trackingId, TrackingData.class + ": trackingId is missing");
+        Objects.requireNonNull(carrier, TrackingData.class + ": carrier is missing");
+        Objects.requireNonNull(provider, TrackingData.class + ": provider is missing");
+        Objects.requireNonNull(providerTransaction, TrackingData.class + ": providerTransaction is missing");
+        Objects.requireNonNull(isReturn, TrackingData.class + ": isReturn is missing");
         return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);
     }
 

@@ -32,8 +32,8 @@ public final class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnu
     }
 
     public CustomFieldEnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, CustomFieldEnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, CustomFieldEnumValue.class + ": label is missing");
         return new CustomFieldEnumValueImpl(key, label);
     }
 

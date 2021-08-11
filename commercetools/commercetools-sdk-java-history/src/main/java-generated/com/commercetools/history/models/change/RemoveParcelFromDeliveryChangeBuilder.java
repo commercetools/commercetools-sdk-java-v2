@@ -44,9 +44,9 @@ public final class RemoveParcelFromDeliveryChangeBuilder implements Builder<Remo
     }
 
     public RemoveParcelFromDeliveryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveParcelFromDeliveryChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, RemoveParcelFromDeliveryChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(previousValue, RemoveParcelFromDeliveryChange.class + ": previousValue is missing");
         return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);
     }
 

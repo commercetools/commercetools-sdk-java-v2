@@ -36,7 +36,7 @@ public final class ShippingMethodSetCustomFieldActionBuilder implements Builder<
     }
 
     public ShippingMethodSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ShippingMethodSetCustomFieldAction.class + ": name is missing");
         return new ShippingMethodSetCustomFieldActionImpl(name, value);
     }
 

@@ -88,13 +88,13 @@ public final class SetOrderLineItemCustomFieldChangeBuilder implements Builder<S
     }
 
     public SetOrderLineItemCustomFieldChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customTypeId);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetOrderLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(customTypeId, SetOrderLineItemCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(name, SetOrderLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(variant, SetOrderLineItemCustomFieldChange.class + ": variant is missing");
+        Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetOrderLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderLineItemCustomFieldChange.class + ": previousValue is missing");
         return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,
             previousValue);
     }

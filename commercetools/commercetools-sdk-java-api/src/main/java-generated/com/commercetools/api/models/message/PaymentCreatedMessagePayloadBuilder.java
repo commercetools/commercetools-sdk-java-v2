@@ -21,7 +21,7 @@ public final class PaymentCreatedMessagePayloadBuilder implements Builder<Paymen
     }
 
     public PaymentCreatedMessagePayload build() {
-        Objects.requireNonNull(payment);
+        Objects.requireNonNull(payment, PaymentCreatedMessagePayload.class + ": payment is missing");
         return new PaymentCreatedMessagePayloadImpl(payment);
     }
 

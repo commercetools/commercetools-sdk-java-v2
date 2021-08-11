@@ -22,7 +22,7 @@ public final class CustomerAddressAddedMessagePayloadBuilder implements Builder<
     }
 
     public CustomerAddressAddedMessagePayload build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, CustomerAddressAddedMessagePayload.class + ": address is missing");
         return new CustomerAddressAddedMessagePayloadImpl(address);
     }
 

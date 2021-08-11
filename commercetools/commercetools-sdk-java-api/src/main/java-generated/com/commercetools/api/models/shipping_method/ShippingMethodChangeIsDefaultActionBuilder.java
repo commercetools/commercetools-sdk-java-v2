@@ -21,7 +21,7 @@ public final class ShippingMethodChangeIsDefaultActionBuilder implements Builder
     }
 
     public ShippingMethodChangeIsDefaultAction build() {
-        Objects.requireNonNull(isDefault);
+        Objects.requireNonNull(isDefault, ShippingMethodChangeIsDefaultAction.class + ": isDefault is missing");
         return new ShippingMethodChangeIsDefaultActionImpl(isDefault);
     }
 

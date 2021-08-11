@@ -26,7 +26,7 @@ public final class CategoryChangeAssetOrderActionBuilder implements Builder<Cate
     }
 
     public CategoryChangeAssetOrderAction build() {
-        Objects.requireNonNull(assetOrder);
+        Objects.requireNonNull(assetOrder, CategoryChangeAssetOrderAction.class + ": assetOrder is missing");
         return new CategoryChangeAssetOrderActionImpl(assetOrder);
     }
 

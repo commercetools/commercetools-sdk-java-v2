@@ -21,7 +21,7 @@ public final class StagedOrderChangeTaxModeActionBuilder implements Builder<Stag
     }
 
     public StagedOrderChangeTaxModeAction build() {
-        Objects.requireNonNull(taxMode);
+        Objects.requireNonNull(taxMode, StagedOrderChangeTaxModeAction.class + ": taxMode is missing");
         return new StagedOrderChangeTaxModeActionImpl(taxMode);
     }
 

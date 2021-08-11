@@ -21,7 +21,7 @@ public final class ChannelChangeKeyActionBuilder implements Builder<ChannelChang
     }
 
     public ChannelChangeKeyAction build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, ChannelChangeKeyAction.class + ": key is missing");
         return new ChannelChangeKeyActionImpl(key);
     }
 

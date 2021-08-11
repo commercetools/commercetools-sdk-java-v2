@@ -34,8 +34,9 @@ public final class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     public PaymentTransactionStateChangedMessagePayload build() {
-        Objects.requireNonNull(transactionId);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(transactionId,
+            PaymentTransactionStateChangedMessagePayload.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentTransactionStateChangedMessagePayload.class + ": state is missing");
         return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);
     }
 

@@ -155,15 +155,18 @@ public final class PaymentStatusStateTransitionMessageBuilder implements Builder
     }
 
     public PaymentStatusStateTransitionMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(force);
+        Objects.requireNonNull(id, PaymentStatusStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentStatusStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentStatusStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentStatusStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentStatusStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentStatusStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentStatusStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(state, PaymentStatusStateTransitionMessage.class + ": state is missing");
+        Objects.requireNonNull(force, PaymentStatusStateTransitionMessage.class + ": force is missing");
         return new PaymentStatusStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
     }

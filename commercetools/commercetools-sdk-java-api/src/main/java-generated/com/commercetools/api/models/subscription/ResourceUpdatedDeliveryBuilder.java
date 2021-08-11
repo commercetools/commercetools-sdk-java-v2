@@ -81,11 +81,11 @@ public final class ResourceUpdatedDeliveryBuilder implements Builder<ResourceUpd
     }
 
     public ResourceUpdatedDelivery build() {
-        Objects.requireNonNull(projectKey);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(oldVersion);
-        Objects.requireNonNull(modifiedAt);
+        Objects.requireNonNull(projectKey, ResourceUpdatedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceUpdatedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceUpdatedDelivery.class + ": version is missing");
+        Objects.requireNonNull(oldVersion, ResourceUpdatedDelivery.class + ": oldVersion is missing");
+        Objects.requireNonNull(modifiedAt, ResourceUpdatedDelivery.class + ": modifiedAt is missing");
         return new ResourceUpdatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             oldVersion, modifiedAt);
     }

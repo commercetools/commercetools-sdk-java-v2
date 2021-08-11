@@ -156,15 +156,20 @@ public final class OrderReturnShipmentStateChangedMessageBuilder
     }
 
     public OrderReturnShipmentStateChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(returnShipmentState);
+        Objects.requireNonNull(id, OrderReturnShipmentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderReturnShipmentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderReturnShipmentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            OrderReturnShipmentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            OrderReturnShipmentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderReturnShipmentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderReturnShipmentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(returnItemId,
+            OrderReturnShipmentStateChangedMessage.class + ": returnItemId is missing");
+        Objects.requireNonNull(returnShipmentState,
+            OrderReturnShipmentStateChangedMessage.class + ": returnShipmentState is missing");
         return new OrderReturnShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnItemId,
             returnShipmentState);

@@ -37,8 +37,8 @@ public final class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     public TypeUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, TypeUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, TypeUpdate.class + ": actions is missing");
         return new TypeUpdateImpl(version, actions);
     }
 

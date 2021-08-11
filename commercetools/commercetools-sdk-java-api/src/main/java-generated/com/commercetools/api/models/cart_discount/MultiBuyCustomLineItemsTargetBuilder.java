@@ -70,10 +70,11 @@ public final class MultiBuyCustomLineItemsTargetBuilder implements Builder<Multi
     }
 
     public MultiBuyCustomLineItemsTarget build() {
-        Objects.requireNonNull(predicate);
-        Objects.requireNonNull(triggerQuantity);
-        Objects.requireNonNull(discountedQuantity);
-        Objects.requireNonNull(selectionMode);
+        Objects.requireNonNull(predicate, MultiBuyCustomLineItemsTarget.class + ": predicate is missing");
+        Objects.requireNonNull(triggerQuantity, MultiBuyCustomLineItemsTarget.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity,
+            MultiBuyCustomLineItemsTarget.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(selectionMode, MultiBuyCustomLineItemsTarget.class + ": selectionMode is missing");
         return new MultiBuyCustomLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
             selectionMode);
     }

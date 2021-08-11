@@ -335,7 +335,7 @@ public final class AddressBuilder implements Builder<Address> {
     }
 
     public Address build() {
-        Objects.requireNonNull(country);
+        Objects.requireNonNull(country, Address.class + ": country is missing");
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);

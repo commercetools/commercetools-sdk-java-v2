@@ -21,7 +21,7 @@ public final class OrderKeyReferenceBuilder implements Builder<OrderKeyReference
     }
 
     public OrderKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, OrderKeyReference.class + ": key is missing");
         return new OrderKeyReferenceImpl(key);
     }
 

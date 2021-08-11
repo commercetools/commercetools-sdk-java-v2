@@ -44,9 +44,9 @@ public final class SetSlugChangeBuilder implements Builder<SetSlugChange> {
     }
 
     public SetSlugChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetSlugChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetSlugChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSlugChange.class + ": nextValue is missing");
         return new SetSlugChangeImpl(change, previousValue, nextValue);
     }
 

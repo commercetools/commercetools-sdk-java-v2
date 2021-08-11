@@ -43,9 +43,9 @@ public final class AttributeCountBuilder implements Builder<AttributeCount> {
     }
 
     public AttributeCount build() {
-        Objects.requireNonNull(productTypeAttributes);
-        Objects.requireNonNull(variantAttributes);
-        Objects.requireNonNull(missingAttributeValues);
+        Objects.requireNonNull(productTypeAttributes, AttributeCount.class + ": productTypeAttributes is missing");
+        Objects.requireNonNull(variantAttributes, AttributeCount.class + ": variantAttributes is missing");
+        Objects.requireNonNull(missingAttributeValues, AttributeCount.class + ": missingAttributeValues is missing");
         return new AttributeCountImpl(productTypeAttributes, variantAttributes, missingAttributeValues);
     }
 

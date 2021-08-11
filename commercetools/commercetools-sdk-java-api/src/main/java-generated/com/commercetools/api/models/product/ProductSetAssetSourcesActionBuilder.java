@@ -95,7 +95,7 @@ public final class ProductSetAssetSourcesActionBuilder implements Builder<Produc
     }
 
     public ProductSetAssetSourcesAction build() {
-        Objects.requireNonNull(sources);
+        Objects.requireNonNull(sources, ProductSetAssetSourcesAction.class + ": sources is missing");
         return new ProductSetAssetSourcesActionImpl(variantId, sku, staged, assetId, assetKey, sources);
     }
 

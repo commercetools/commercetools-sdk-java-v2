@@ -55,7 +55,7 @@ public final class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     public ReturnInfo build() {
-        Objects.requireNonNull(items);
+        Objects.requireNonNull(items, ReturnInfo.class + ": items is missing");
         return new ReturnInfoImpl(items, returnTrackingId, returnDate);
     }
 

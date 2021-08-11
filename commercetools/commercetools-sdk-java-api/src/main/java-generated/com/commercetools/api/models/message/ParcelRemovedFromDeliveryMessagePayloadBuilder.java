@@ -34,8 +34,8 @@ public final class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     public ParcelRemovedFromDeliveryMessagePayload build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(parcel);
+        Objects.requireNonNull(deliveryId, ParcelRemovedFromDeliveryMessagePayload.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcel, ParcelRemovedFromDeliveryMessagePayload.class + ": parcel is missing");
         return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel);
     }
 

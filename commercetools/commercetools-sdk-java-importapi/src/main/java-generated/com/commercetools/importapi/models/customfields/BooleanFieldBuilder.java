@@ -21,7 +21,7 @@ public final class BooleanFieldBuilder implements Builder<BooleanField> {
     }
 
     public BooleanField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, BooleanField.class + ": value is missing");
         return new BooleanFieldImpl(value);
     }
 

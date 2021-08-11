@@ -64,10 +64,10 @@ public final class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChan
     }
 
     public SetAssetTagsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetTagsChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetTagsChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetTagsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetTagsChange.class + ": previousValue is missing");
         return new SetAssetTagsChangeImpl(change, asset, nextValue, previousValue);
     }
 

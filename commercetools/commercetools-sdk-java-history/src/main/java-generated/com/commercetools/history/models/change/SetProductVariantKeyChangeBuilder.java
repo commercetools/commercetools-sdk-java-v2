@@ -54,10 +54,10 @@ public final class SetProductVariantKeyChangeBuilder implements Builder<SetProdu
     }
 
     public SetProductVariantKeyChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetProductVariantKeyChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetProductVariantKeyChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetProductVariantKeyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetProductVariantKeyChange.class + ": nextValue is missing");
         return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

@@ -21,7 +21,7 @@ public final class OrderStoreSetMessagePayloadBuilder implements Builder<OrderSt
     }
 
     public OrderStoreSetMessagePayload build() {
-        Objects.requireNonNull(store);
+        Objects.requireNonNull(store, OrderStoreSetMessagePayload.class + ": store is missing");
         return new OrderStoreSetMessagePayloadImpl(store);
     }
 

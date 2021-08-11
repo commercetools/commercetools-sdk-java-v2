@@ -111,10 +111,10 @@ public final class AttributeDefinitionBuilder implements Builder<AttributeDefini
     }
 
     public AttributeDefinition build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(label);
-        Objects.requireNonNull(isRequired);
+        Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");
+        Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
+        Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
+        Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
             isSearchable);
     }

@@ -122,7 +122,7 @@ public final class OrderFromCartDraftBuilder implements Builder<OrderFromCartDra
     }
 
     public OrderFromCartDraft build() {
-        Objects.requireNonNull(version);
+        Objects.requireNonNull(version, OrderFromCartDraft.class + ": version is missing");
         return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
             state);
     }

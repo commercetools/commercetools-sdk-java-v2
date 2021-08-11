@@ -154,15 +154,15 @@ public final class OrderEditAppliedMessageBuilder implements Builder<OrderEditAp
     }
 
     public OrderEditAppliedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(edit);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(id, OrderEditAppliedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderEditAppliedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderEditAppliedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderEditAppliedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderEditAppliedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderEditAppliedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderEditAppliedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(edit, OrderEditAppliedMessage.class + ": edit is missing");
+        Objects.requireNonNull(result, OrderEditAppliedMessage.class + ": result is missing");
         return new OrderEditAppliedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, edit, result);
     }

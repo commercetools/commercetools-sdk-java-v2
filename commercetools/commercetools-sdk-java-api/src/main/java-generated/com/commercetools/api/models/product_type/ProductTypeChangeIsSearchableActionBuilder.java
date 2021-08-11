@@ -32,8 +32,8 @@ public final class ProductTypeChangeIsSearchableActionBuilder implements Builder
     }
 
     public ProductTypeChangeIsSearchableAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(isSearchable);
+        Objects.requireNonNull(attributeName, ProductTypeChangeIsSearchableAction.class + ": attributeName is missing");
+        Objects.requireNonNull(isSearchable, ProductTypeChangeIsSearchableAction.class + ": isSearchable is missing");
         return new ProductTypeChangeIsSearchableActionImpl(attributeName, isSearchable);
     }
 

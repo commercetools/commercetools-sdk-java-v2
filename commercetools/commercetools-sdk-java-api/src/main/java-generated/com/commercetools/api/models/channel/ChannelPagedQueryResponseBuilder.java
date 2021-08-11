@@ -75,10 +75,10 @@ public final class ChannelPagedQueryResponseBuilder implements Builder<ChannelPa
     }
 
     public ChannelPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ChannelPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ChannelPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ChannelPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ChannelPagedQueryResponse.class + ": results is missing");
         return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

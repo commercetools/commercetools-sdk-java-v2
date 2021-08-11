@@ -38,8 +38,8 @@ public final class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     public TypeChangeLocalizedEnumValueOrderAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(keys);
+        Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueOrderAction.class + ": fieldName is missing");
+        Objects.requireNonNull(keys, TypeChangeLocalizedEnumValueOrderAction.class + ": keys is missing");
         return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);
     }
 

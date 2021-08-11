@@ -36,7 +36,7 @@ public final class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     public ReviewReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ReviewReference.class + ": id is missing");
         return new ReviewReferenceImpl(id, obj);
     }
 

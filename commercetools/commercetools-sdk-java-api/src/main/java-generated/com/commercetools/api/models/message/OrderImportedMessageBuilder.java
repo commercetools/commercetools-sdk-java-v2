@@ -142,14 +142,14 @@ public final class OrderImportedMessageBuilder implements Builder<OrderImportedM
     }
 
     public OrderImportedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(order);
+        Objects.requireNonNull(id, OrderImportedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderImportedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderImportedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderImportedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderImportedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderImportedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderImportedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(order, OrderImportedMessage.class + ": order is missing");
         return new OrderImportedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
     }

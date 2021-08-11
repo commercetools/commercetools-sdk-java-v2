@@ -38,8 +38,8 @@ public final class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     public StateUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, StateUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, StateUpdate.class + ": actions is missing");
         return new StateUpdateImpl(version, actions);
     }
 

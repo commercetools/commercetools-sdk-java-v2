@@ -28,7 +28,8 @@ public final class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     public ProductRevertedStagedChangesMessagePayload build() {
-        Objects.requireNonNull(removedImageUrls);
+        Objects.requireNonNull(removedImageUrls,
+            ProductRevertedStagedChangesMessagePayload.class + ": removedImageUrls is missing");
         return new ProductRevertedStagedChangesMessagePayloadImpl(removedImageUrls);
     }
 

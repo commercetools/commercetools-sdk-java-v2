@@ -39,7 +39,7 @@ public final class PaymentAddInterfaceInteractionActionBuilder
     }
 
     public PaymentAddInterfaceInteractionAction build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, PaymentAddInterfaceInteractionAction.class + ": type is missing");
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);
     }
 

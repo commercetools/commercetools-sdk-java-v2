@@ -27,7 +27,7 @@ public final class ChannelRemoveRolesActionBuilder implements Builder<ChannelRem
     }
 
     public ChannelRemoveRolesAction build() {
-        Objects.requireNonNull(roles);
+        Objects.requireNonNull(roles, ChannelRemoveRolesAction.class + ": roles is missing");
         return new ChannelRemoveRolesActionImpl(roles);
     }
 

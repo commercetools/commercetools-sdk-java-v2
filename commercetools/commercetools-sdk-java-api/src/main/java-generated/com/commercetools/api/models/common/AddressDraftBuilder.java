@@ -348,7 +348,7 @@ public final class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     public AddressDraft build() {
-        Objects.requireNonNull(country);
+        Objects.requireNonNull(country, AddressDraft.class + ": country is missing");
         return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);

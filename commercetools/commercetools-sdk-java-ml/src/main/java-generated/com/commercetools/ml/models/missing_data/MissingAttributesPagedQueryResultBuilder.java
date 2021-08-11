@@ -73,11 +73,11 @@ public final class MissingAttributesPagedQueryResultBuilder implements Builder<M
     }
 
     public MissingAttributesPagedQueryResult build() {
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
-        Objects.requireNonNull(meta);
+        Objects.requireNonNull(count, MissingAttributesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingAttributesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingAttributesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingAttributesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingAttributesPagedQueryResult.class + ": meta is missing");
         return new MissingAttributesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

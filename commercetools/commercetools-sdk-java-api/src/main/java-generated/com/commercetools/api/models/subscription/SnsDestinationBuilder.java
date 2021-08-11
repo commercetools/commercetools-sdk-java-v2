@@ -43,9 +43,9 @@ public final class SnsDestinationBuilder implements Builder<SnsDestination> {
     }
 
     public SnsDestination build() {
-        Objects.requireNonNull(accessKey);
-        Objects.requireNonNull(accessSecret);
-        Objects.requireNonNull(topicArn);
+        Objects.requireNonNull(accessKey, SnsDestination.class + ": accessKey is missing");
+        Objects.requireNonNull(accessSecret, SnsDestination.class + ": accessSecret is missing");
+        Objects.requireNonNull(topicArn, SnsDestination.class + ": topicArn is missing");
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn);
     }
 

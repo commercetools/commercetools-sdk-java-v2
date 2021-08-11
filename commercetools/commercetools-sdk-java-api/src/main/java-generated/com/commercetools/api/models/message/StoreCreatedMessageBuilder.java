@@ -209,16 +209,16 @@ public final class StoreCreatedMessageBuilder implements Builder<StoreCreatedMes
     }
 
     public StoreCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(languages);
-        Objects.requireNonNull(distributionChannels);
-        Objects.requireNonNull(supplyChannels);
+        Objects.requireNonNull(id, StoreCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, StoreCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, StoreCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, StoreCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, StoreCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, StoreCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, StoreCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(languages, StoreCreatedMessage.class + ": languages is missing");
+        Objects.requireNonNull(distributionChannels, StoreCreatedMessage.class + ": distributionChannels is missing");
+        Objects.requireNonNull(supplyChannels, StoreCreatedMessage.class + ": supplyChannels is missing");
         return new StoreCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, languages,
             distributionChannels, supplyChannels, custom);

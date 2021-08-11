@@ -56,10 +56,12 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     public DuplicateFieldWithConflictingResourceError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(field);
-        Objects.requireNonNull(duplicateValue);
-        Objects.requireNonNull(conflictingResource);
+        Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");
+        Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");
+        Objects.requireNonNull(duplicateValue,
+            DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");
+        Objects.requireNonNull(conflictingResource,
+            DuplicateFieldWithConflictingResourceError.class + ": conflictingResource is missing");
         return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
     }
 

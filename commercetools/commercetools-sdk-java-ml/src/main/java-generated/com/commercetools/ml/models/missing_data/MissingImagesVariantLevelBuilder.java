@@ -32,8 +32,8 @@ public final class MissingImagesVariantLevelBuilder implements Builder<MissingIm
     }
 
     public MissingImagesVariantLevel build() {
-        Objects.requireNonNull(missingImages);
-        Objects.requireNonNull(total);
+        Objects.requireNonNull(missingImages, MissingImagesVariantLevel.class + ": missingImages is missing");
+        Objects.requireNonNull(total, MissingImagesVariantLevel.class + ": total is missing");
         return new MissingImagesVariantLevelImpl(missingImages, total);
     }
 

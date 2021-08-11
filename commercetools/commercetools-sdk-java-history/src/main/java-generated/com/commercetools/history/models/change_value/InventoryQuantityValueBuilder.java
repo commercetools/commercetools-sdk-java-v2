@@ -32,8 +32,8 @@ public final class InventoryQuantityValueBuilder implements Builder<InventoryQua
     }
 
     public InventoryQuantityValue build() {
-        Objects.requireNonNull(quantityOnStock);
-        Objects.requireNonNull(availableQuantity);
+        Objects.requireNonNull(quantityOnStock, InventoryQuantityValue.class + ": quantityOnStock is missing");
+        Objects.requireNonNull(availableQuantity, InventoryQuantityValue.class + ": availableQuantity is missing");
         return new InventoryQuantityValueImpl(quantityOnStock, availableQuantity);
     }
 

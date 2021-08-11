@@ -57,9 +57,9 @@ public final class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCar
     }
 
     public ChangeCartDiscountsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeCartDiscountsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeCartDiscountsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeCartDiscountsChange.class + ": nextValue is missing");
         return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);
     }
 

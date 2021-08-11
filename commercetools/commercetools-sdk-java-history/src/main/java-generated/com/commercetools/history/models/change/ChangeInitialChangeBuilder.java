@@ -43,9 +43,9 @@ public final class ChangeInitialChangeBuilder implements Builder<ChangeInitialCh
     }
 
     public ChangeInitialChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeInitialChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeInitialChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeInitialChange.class + ": nextValue is missing");
         return new ChangeInitialChangeImpl(change, previousValue, nextValue);
     }
 

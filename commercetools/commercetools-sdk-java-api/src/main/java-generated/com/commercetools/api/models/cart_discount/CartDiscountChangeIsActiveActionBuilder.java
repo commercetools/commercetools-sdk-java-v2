@@ -21,7 +21,7 @@ public final class CartDiscountChangeIsActiveActionBuilder implements Builder<Ca
     }
 
     public CartDiscountChangeIsActiveAction build() {
-        Objects.requireNonNull(isActive);
+        Objects.requireNonNull(isActive, CartDiscountChangeIsActiveAction.class + ": isActive is missing");
         return new CartDiscountChangeIsActiveActionImpl(isActive);
     }
 

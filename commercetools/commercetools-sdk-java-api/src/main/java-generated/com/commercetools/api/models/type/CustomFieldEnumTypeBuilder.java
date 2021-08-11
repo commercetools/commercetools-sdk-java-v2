@@ -27,7 +27,7 @@ public final class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnum
     }
 
     public CustomFieldEnumType build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, CustomFieldEnumType.class + ": values is missing");
         return new CustomFieldEnumTypeImpl(values);
     }
 

@@ -22,7 +22,7 @@ public final class CustomerDateOfBirthSetMessagePayloadBuilder
     }
 
     public CustomerDateOfBirthSetMessagePayload build() {
-        Objects.requireNonNull(dateOfBirth);
+        Objects.requireNonNull(dateOfBirth, CustomerDateOfBirthSetMessagePayload.class + ": dateOfBirth is missing");
         return new CustomerDateOfBirthSetMessagePayloadImpl(dateOfBirth);
     }
 

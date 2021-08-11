@@ -21,7 +21,7 @@ public final class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> 
     }
 
     public TypeKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, TypeKeyReference.class + ": key is missing");
         return new TypeKeyReferenceImpl(key);
     }
 

@@ -43,9 +43,9 @@ public final class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirth
     }
 
     public SetDateOfBirthChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetDateOfBirthChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetDateOfBirthChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDateOfBirthChange.class + ": nextValue is missing");
         return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);
     }
 

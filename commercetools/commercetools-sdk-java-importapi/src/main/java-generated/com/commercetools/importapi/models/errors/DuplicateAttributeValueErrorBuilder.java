@@ -33,8 +33,8 @@ public final class DuplicateAttributeValueErrorBuilder implements Builder<Duplic
     }
 
     public DuplicateAttributeValueError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(attribute);
+        Objects.requireNonNull(message, DuplicateAttributeValueError.class + ": message is missing");
+        Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
         return new DuplicateAttributeValueErrorImpl(message, attribute);
     }
 

@@ -70,10 +70,10 @@ public final class ImportSinkBuilder implements Builder<ImportSink> {
     }
 
     public ImportSink build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
+        Objects.requireNonNull(key, ImportSink.class + ": key is missing");
+        Objects.requireNonNull(version, ImportSink.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ImportSink.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ImportSink.class + ": lastModifiedAt is missing");
         return new ImportSinkImpl(key, resourceType, version, createdAt, lastModifiedAt);
     }
 

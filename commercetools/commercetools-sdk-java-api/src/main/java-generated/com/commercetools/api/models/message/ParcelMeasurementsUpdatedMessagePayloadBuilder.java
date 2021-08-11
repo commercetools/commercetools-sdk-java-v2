@@ -49,8 +49,8 @@ public final class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     public ParcelMeasurementsUpdatedMessagePayload build() {
-        Objects.requireNonNull(deliveryId);
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(deliveryId, ParcelMeasurementsUpdatedMessagePayload.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessagePayload.class + ": parcelId is missing");
         return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements);
     }
 

@@ -150,7 +150,7 @@ public final class PriceDraftImportBuilder implements Builder<PriceDraftImport> 
     }
 
     public PriceDraftImport build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, PriceDraftImport.class + ": value is missing");
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
             discounted, tiers, key);
     }

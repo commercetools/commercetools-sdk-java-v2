@@ -22,7 +22,7 @@ public final class OrderAddItemShippingAddressActionBuilder implements Builder<O
     }
 
     public OrderAddItemShippingAddressAction build() {
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(address, OrderAddItemShippingAddressAction.class + ": address is missing");
         return new OrderAddItemShippingAddressActionImpl(address);
     }
 

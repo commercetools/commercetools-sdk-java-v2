@@ -27,7 +27,7 @@ public final class TypeChangeFieldDefinitionOrderActionBuilder
     }
 
     public TypeChangeFieldDefinitionOrderAction build() {
-        Objects.requireNonNull(fieldNames);
+        Objects.requireNonNull(fieldNames, TypeChangeFieldDefinitionOrderAction.class + ": fieldNames is missing");
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
     }
 

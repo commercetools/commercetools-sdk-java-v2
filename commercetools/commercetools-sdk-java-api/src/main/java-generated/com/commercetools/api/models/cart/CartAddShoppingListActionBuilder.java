@@ -52,7 +52,7 @@ public final class CartAddShoppingListActionBuilder implements Builder<CartAddSh
     }
 
     public CartAddShoppingListAction build() {
-        Objects.requireNonNull(shoppingList);
+        Objects.requireNonNull(shoppingList, CartAddShoppingListAction.class + ": shoppingList is missing");
         return new CartAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 

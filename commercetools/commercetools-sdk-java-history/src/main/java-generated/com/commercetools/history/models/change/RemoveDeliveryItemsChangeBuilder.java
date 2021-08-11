@@ -33,8 +33,8 @@ public final class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDel
     }
 
     public RemoveDeliveryItemsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveDeliveryItemsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveDeliveryItemsChange.class + ": previousValue is missing");
         return new RemoveDeliveryItemsChangeImpl(change, previousValue);
     }
 

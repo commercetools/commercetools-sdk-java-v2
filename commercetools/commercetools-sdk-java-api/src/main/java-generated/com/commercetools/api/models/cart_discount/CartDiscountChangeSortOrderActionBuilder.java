@@ -21,7 +21,7 @@ public final class CartDiscountChangeSortOrderActionBuilder implements Builder<C
     }
 
     public CartDiscountChangeSortOrderAction build() {
-        Objects.requireNonNull(sortOrder);
+        Objects.requireNonNull(sortOrder, CartDiscountChangeSortOrderAction.class + ": sortOrder is missing");
         return new CartDiscountChangeSortOrderActionImpl(sortOrder);
     }
 

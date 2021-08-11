@@ -69,11 +69,12 @@ public final class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     public SetLineItemDiscountedPricePerQuantityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItem);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemDiscountedPricePerQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemDiscountedPricePerQuantityChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemDiscountedPricePerQuantityChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemDiscountedPricePerQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetLineItemDiscountedPricePerQuantityChange.class + ": previousValue is missing");
         return new SetLineItemDiscountedPricePerQuantityChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

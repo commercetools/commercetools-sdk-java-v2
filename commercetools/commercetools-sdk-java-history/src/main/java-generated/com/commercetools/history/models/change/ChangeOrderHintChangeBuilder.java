@@ -43,9 +43,9 @@ public final class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHi
     }
 
     public ChangeOrderHintChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeOrderHintChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeOrderHintChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeOrderHintChange.class + ": nextValue is missing");
         return new ChangeOrderHintChangeImpl(change, previousValue, nextValue);
     }
 

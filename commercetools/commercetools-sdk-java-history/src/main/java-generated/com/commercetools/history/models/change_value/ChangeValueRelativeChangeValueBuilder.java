@@ -21,7 +21,7 @@ public final class ChangeValueRelativeChangeValueBuilder implements Builder<Chan
     }
 
     public ChangeValueRelativeChangeValue build() {
-        Objects.requireNonNull(permyriad);
+        Objects.requireNonNull(permyriad, ChangeValueRelativeChangeValue.class + ": permyriad is missing");
         return new ChangeValueRelativeChangeValueImpl(permyriad);
     }
 

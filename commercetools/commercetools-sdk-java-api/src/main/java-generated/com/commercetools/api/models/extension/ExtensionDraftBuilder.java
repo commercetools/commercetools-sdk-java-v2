@@ -67,8 +67,8 @@ public final class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     public ExtensionDraft build() {
-        Objects.requireNonNull(destination);
-        Objects.requireNonNull(triggers);
+        Objects.requireNonNull(destination, ExtensionDraft.class + ": destination is missing");
+        Objects.requireNonNull(triggers, ExtensionDraft.class + ": triggers is missing");
         return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs);
     }
 

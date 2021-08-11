@@ -37,7 +37,7 @@ public final class CartSetLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     public CartSetLineItemTaxAmountAction build() {
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(lineItemId, CartSetLineItemTaxAmountAction.class + ": lineItemId is missing");
         return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount);
     }
 

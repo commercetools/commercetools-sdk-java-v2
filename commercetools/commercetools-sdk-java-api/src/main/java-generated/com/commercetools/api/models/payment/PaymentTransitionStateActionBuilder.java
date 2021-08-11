@@ -37,7 +37,7 @@ public final class PaymentTransitionStateActionBuilder implements Builder<Paymen
     }
 
     public PaymentTransitionStateAction build() {
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(state, PaymentTransitionStateAction.class + ": state is missing");
         return new PaymentTransitionStateActionImpl(state, force);
     }
 

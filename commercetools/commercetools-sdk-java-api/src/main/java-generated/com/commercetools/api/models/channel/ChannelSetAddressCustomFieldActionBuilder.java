@@ -36,7 +36,7 @@ public final class ChannelSetAddressCustomFieldActionBuilder implements Builder<
     }
 
     public ChannelSetAddressCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ChannelSetAddressCustomFieldAction.class + ": name is missing");
         return new ChannelSetAddressCustomFieldActionImpl(name, value);
     }
 

@@ -136,12 +136,12 @@ public final class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     public TaxCategory build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(rates);
+        Objects.requireNonNull(id, TaxCategory.class + ": id is missing");
+        Objects.requireNonNull(version, TaxCategory.class + ": version is missing");
+        Objects.requireNonNull(createdAt, TaxCategory.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, TaxCategory.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, TaxCategory.class + ": name is missing");
+        Objects.requireNonNull(rates, TaxCategory.class + ": rates is missing");
         return new TaxCategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, description,
             rates, key);
     }

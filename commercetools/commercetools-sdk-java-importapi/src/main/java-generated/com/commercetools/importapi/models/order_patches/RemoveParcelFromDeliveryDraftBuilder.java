@@ -21,7 +21,7 @@ public final class RemoveParcelFromDeliveryDraftBuilder implements Builder<Remov
     }
 
     public RemoveParcelFromDeliveryDraft build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, RemoveParcelFromDeliveryDraft.class + ": parcelId is missing");
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);
     }
 

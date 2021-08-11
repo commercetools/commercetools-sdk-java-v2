@@ -21,7 +21,7 @@ public final class CustomerAddStoreActionBuilder implements Builder<CustomerAddS
     }
 
     public CustomerAddStoreAction build() {
-        Objects.requireNonNull(store);
+        Objects.requireNonNull(store, CustomerAddStoreAction.class + ": store is missing");
         return new CustomerAddStoreActionImpl(store);
     }
 

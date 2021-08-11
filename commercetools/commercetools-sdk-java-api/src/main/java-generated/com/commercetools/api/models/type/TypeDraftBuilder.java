@@ -85,9 +85,9 @@ public final class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     public TypeDraft build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(resourceTypeIds);
+        Objects.requireNonNull(key, TypeDraft.class + ": key is missing");
+        Objects.requireNonNull(name, TypeDraft.class + ": name is missing");
+        Objects.requireNonNull(resourceTypeIds, TypeDraft.class + ": resourceTypeIds is missing");
         return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
     }
 

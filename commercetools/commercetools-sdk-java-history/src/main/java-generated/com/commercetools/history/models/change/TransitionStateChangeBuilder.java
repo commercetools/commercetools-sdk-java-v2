@@ -44,9 +44,9 @@ public final class TransitionStateChangeBuilder implements Builder<TransitionSta
     }
 
     public TransitionStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, TransitionStateChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, TransitionStateChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, TransitionStateChange.class + ": nextValue is missing");
         return new TransitionStateChangeImpl(change, previousValue, nextValue);
     }
 

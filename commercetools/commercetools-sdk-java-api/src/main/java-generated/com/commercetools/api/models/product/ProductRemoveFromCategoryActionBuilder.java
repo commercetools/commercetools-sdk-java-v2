@@ -37,7 +37,7 @@ public final class ProductRemoveFromCategoryActionBuilder implements Builder<Pro
     }
 
     public ProductRemoveFromCategoryAction build() {
-        Objects.requireNonNull(category);
+        Objects.requireNonNull(category, ProductRemoveFromCategoryAction.class + ": category is missing");
         return new ProductRemoveFromCategoryActionImpl(category, staged);
     }
 

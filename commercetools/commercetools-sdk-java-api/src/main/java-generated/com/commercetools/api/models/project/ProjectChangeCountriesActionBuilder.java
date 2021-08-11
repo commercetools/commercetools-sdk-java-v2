@@ -26,7 +26,7 @@ public final class ProjectChangeCountriesActionBuilder implements Builder<Projec
     }
 
     public ProjectChangeCountriesAction build() {
-        Objects.requireNonNull(countries);
+        Objects.requireNonNull(countries, ProjectChangeCountriesAction.class + ": countries is missing");
         return new ProjectChangeCountriesActionImpl(countries);
     }
 

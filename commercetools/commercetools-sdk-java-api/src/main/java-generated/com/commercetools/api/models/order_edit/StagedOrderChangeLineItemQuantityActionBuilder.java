@@ -63,8 +63,8 @@ public final class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     public StagedOrderChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(lineItemId, StagedOrderChangeLineItemQuantityAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
         return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
 

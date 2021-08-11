@@ -38,7 +38,7 @@ public final class StagedOrderSetParcelTrackingDataActionBuilder
     }
 
     public StagedOrderSetParcelTrackingDataAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelTrackingDataAction.class + ": parcelId is missing");
         return new StagedOrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 

@@ -22,7 +22,7 @@ public final class CustomerGroupSetMessagePayloadBuilder implements Builder<Cust
     }
 
     public CustomerGroupSetMessagePayload build() {
-        Objects.requireNonNull(customerGroup);
+        Objects.requireNonNull(customerGroup, CustomerGroupSetMessagePayload.class + ": customerGroup is missing");
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);
     }
 

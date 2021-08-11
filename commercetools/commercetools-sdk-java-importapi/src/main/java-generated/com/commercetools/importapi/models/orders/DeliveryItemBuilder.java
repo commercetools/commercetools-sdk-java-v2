@@ -32,8 +32,8 @@ public final class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     public DeliveryItem build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(id, DeliveryItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, DeliveryItem.class + ": quantity is missing");
         return new DeliveryItemImpl(id, quantity);
     }
 

@@ -23,7 +23,8 @@ public final class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
     }
 
     public ProjectChangeCountryTaxRateFallbackEnabledAction build() {
-        Objects.requireNonNull(countryTaxRateFallbackEnabled);
+        Objects.requireNonNull(countryTaxRateFallbackEnabled,
+            ProjectChangeCountryTaxRateFallbackEnabledAction.class + ": countryTaxRateFallbackEnabled is missing");
         return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl(countryTaxRateFallbackEnabled);
     }
 

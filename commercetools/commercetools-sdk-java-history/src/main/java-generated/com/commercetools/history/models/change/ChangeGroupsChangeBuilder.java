@@ -53,9 +53,9 @@ public final class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChan
     }
 
     public ChangeGroupsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeGroupsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeGroupsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeGroupsChange.class + ": nextValue is missing");
         return new ChangeGroupsChangeImpl(change, previousValue, nextValue);
     }
 

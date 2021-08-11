@@ -28,7 +28,7 @@ public final class CustomFieldLocalizedEnumTypeBuilder implements Builder<Custom
     }
 
     public CustomFieldLocalizedEnumType build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, CustomFieldLocalizedEnumType.class + ": values is missing");
         return new CustomFieldLocalizedEnumTypeImpl(values);
     }
 

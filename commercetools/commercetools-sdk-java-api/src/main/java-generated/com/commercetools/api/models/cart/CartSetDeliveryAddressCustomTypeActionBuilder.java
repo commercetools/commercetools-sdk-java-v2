@@ -52,7 +52,7 @@ public final class CartSetDeliveryAddressCustomTypeActionBuilder
     }
 
     public CartSetDeliveryAddressCustomTypeAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, CartSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
         return new CartSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
     }
 

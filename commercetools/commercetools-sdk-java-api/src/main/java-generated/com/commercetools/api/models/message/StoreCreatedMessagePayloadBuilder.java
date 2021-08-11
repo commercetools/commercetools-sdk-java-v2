@@ -92,9 +92,10 @@ public final class StoreCreatedMessagePayloadBuilder implements Builder<StoreCre
     }
 
     public StoreCreatedMessagePayload build() {
-        Objects.requireNonNull(languages);
-        Objects.requireNonNull(distributionChannels);
-        Objects.requireNonNull(supplyChannels);
+        Objects.requireNonNull(languages, StoreCreatedMessagePayload.class + ": languages is missing");
+        Objects.requireNonNull(distributionChannels,
+            StoreCreatedMessagePayload.class + ": distributionChannels is missing");
+        Objects.requireNonNull(supplyChannels, StoreCreatedMessagePayload.class + ": supplyChannels is missing");
         return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels, custom);
     }
 

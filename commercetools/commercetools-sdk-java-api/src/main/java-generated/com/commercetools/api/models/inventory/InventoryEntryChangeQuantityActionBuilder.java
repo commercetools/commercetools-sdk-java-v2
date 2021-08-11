@@ -21,7 +21,7 @@ public final class InventoryEntryChangeQuantityActionBuilder implements Builder<
     }
 
     public InventoryEntryChangeQuantityAction build() {
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(quantity, InventoryEntryChangeQuantityAction.class + ": quantity is missing");
         return new InventoryEntryChangeQuantityActionImpl(quantity);
     }
 

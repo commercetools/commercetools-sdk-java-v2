@@ -36,7 +36,7 @@ public final class TaxCategoryReferenceBuilder implements Builder<TaxCategoryRef
     }
 
     public TaxCategoryReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, TaxCategoryReference.class + ": id is missing");
         return new TaxCategoryReferenceImpl(id, obj);
     }
 

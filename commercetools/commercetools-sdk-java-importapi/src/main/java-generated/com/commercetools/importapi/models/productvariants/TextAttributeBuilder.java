@@ -36,7 +36,7 @@ public final class TextAttributeBuilder implements Builder<TextAttribute> {
     }
 
     public TextAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, TextAttribute.class + ": value is missing");
         return new TextAttributeImpl(name, value);
     }
 

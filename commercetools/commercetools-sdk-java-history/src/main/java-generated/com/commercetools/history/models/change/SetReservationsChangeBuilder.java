@@ -57,9 +57,9 @@ public final class SetReservationsChangeBuilder implements Builder<SetReservatio
     }
 
     public SetReservationsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetReservationsChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetReservationsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetReservationsChange.class + ": previousValue is missing");
         return new SetReservationsChangeImpl(change, nextValue, previousValue);
     }
 

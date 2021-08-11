@@ -21,7 +21,7 @@ public final class DateFieldBuilder implements Builder<DateField> {
     }
 
     public DateField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, DateField.class + ": value is missing");
         return new DateFieldImpl(value);
     }
 

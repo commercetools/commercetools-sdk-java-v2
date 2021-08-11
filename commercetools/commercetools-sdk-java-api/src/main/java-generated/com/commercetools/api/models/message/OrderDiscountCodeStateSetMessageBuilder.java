@@ -170,15 +170,16 @@ public final class OrderDiscountCodeStateSetMessageBuilder implements Builder<Or
     }
 
     public OrderDiscountCodeStateSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(discountCode);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(id, OrderDiscountCodeStateSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderDiscountCodeStateSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderDiscountCodeStateSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderDiscountCodeStateSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderDiscountCodeStateSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderDiscountCodeStateSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderDiscountCodeStateSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(discountCode, OrderDiscountCodeStateSetMessage.class + ": discountCode is missing");
+        Objects.requireNonNull(state, OrderDiscountCodeStateSetMessage.class + ": state is missing");
         return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
             oldState);

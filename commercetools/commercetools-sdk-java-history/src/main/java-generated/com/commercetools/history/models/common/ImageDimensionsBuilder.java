@@ -32,8 +32,8 @@ public final class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     }
 
     public ImageDimensions build() {
-        Objects.requireNonNull(w);
-        Objects.requireNonNull(h);
+        Objects.requireNonNull(w, ImageDimensions.class + ": w is missing");
+        Objects.requireNonNull(h, ImageDimensions.class + ": h is missing");
         return new ImageDimensionsImpl(w, h);
     }
 

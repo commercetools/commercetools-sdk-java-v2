@@ -43,9 +43,9 @@ public final class TransactionChangeValueBuilder implements Builder<TransactionC
     }
 
     public TransactionChangeValue build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(interactionId);
-        Objects.requireNonNull(timestamp);
+        Objects.requireNonNull(id, TransactionChangeValue.class + ": id is missing");
+        Objects.requireNonNull(interactionId, TransactionChangeValue.class + ": interactionId is missing");
+        Objects.requireNonNull(timestamp, TransactionChangeValue.class + ": timestamp is missing");
         return new TransactionChangeValueImpl(id, interactionId, timestamp);
     }
 

@@ -50,7 +50,7 @@ public final class ProductSetAttributeInAllVariantsActionBuilder
     }
 
     public ProductSetAttributeInAllVariantsAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductSetAttributeInAllVariantsAction.class + ": name is missing");
         return new ProductSetAttributeInAllVariantsActionImpl(name, value, staged);
     }
 

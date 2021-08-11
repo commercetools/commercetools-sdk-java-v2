@@ -22,7 +22,7 @@ public final class CustomFieldReferenceTypeBuilder implements Builder<CustomFiel
     }
 
     public CustomFieldReferenceType build() {
-        Objects.requireNonNull(referenceTypeId);
+        Objects.requireNonNull(referenceTypeId, CustomFieldReferenceType.class + ": referenceTypeId is missing");
         return new CustomFieldReferenceTypeImpl(referenceTypeId);
     }
 

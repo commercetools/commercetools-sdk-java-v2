@@ -72,9 +72,9 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<Pa
     }
 
     public ParcelItemsUpdatedMessagePayload build() {
-        Objects.requireNonNull(parcelId);
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(oldItems);
+        Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessagePayload.class + ": parcelId is missing");
+        Objects.requireNonNull(items, ParcelItemsUpdatedMessagePayload.class + ": items is missing");
+        Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessagePayload.class + ": oldItems is missing");
         return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems);
     }
 

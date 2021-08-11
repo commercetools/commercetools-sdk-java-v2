@@ -45,9 +45,9 @@ public final class ChangeShipmentStateChangeBuilder implements Builder<ChangeShi
     }
 
     public ChangeShipmentStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeShipmentStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeShipmentStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeShipmentStateChange.class + ": previousValue is missing");
         return new ChangeShipmentStateChangeImpl(change, nextValue, previousValue);
     }
 

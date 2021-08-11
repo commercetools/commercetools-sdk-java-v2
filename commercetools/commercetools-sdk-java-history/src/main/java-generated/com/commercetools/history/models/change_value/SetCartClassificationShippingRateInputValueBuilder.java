@@ -45,9 +45,9 @@ public final class SetCartClassificationShippingRateInputValueBuilder
     }
 
     public SetCartClassificationShippingRateInputValue build() {
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(type, SetCartClassificationShippingRateInputValue.class + ": type is missing");
+        Objects.requireNonNull(key, SetCartClassificationShippingRateInputValue.class + ": key is missing");
+        Objects.requireNonNull(label, SetCartClassificationShippingRateInputValue.class + ": label is missing");
         return new SetCartClassificationShippingRateInputValueImpl(type, key, label);
     }
 

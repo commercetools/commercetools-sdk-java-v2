@@ -98,7 +98,7 @@ public final class ProductSetSelectorBuilder implements Builder<ProductSetSelect
     }
 
     public ProductSetSelector build() {
-        Objects.requireNonNull(projectKey);
+        Objects.requireNonNull(projectKey, ProductSetSelector.class + ": projectKey is missing");
         return new ProductSetSelectorImpl(projectKey, productIds, productTypeIds, staged, includeVariants,
             productSetLimit);
     }

@@ -57,10 +57,10 @@ public final class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCu
     }
 
     public SetAssetCustomTypeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetCustomTypeChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetCustomTypeChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetCustomTypeChange.class + ": previousValue is missing");
         return new SetAssetCustomTypeChangeImpl(change, asset, nextValue, previousValue);
     }
 

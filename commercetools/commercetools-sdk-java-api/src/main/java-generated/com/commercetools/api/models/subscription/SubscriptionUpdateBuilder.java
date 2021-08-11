@@ -39,8 +39,8 @@ public final class SubscriptionUpdateBuilder implements Builder<SubscriptionUpda
     }
 
     public SubscriptionUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, SubscriptionUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, SubscriptionUpdate.class + ": actions is missing");
         return new SubscriptionUpdateImpl(version, actions);
     }
 

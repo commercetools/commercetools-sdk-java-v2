@@ -43,9 +43,9 @@ public final class SetTextChangeBuilder implements Builder<SetTextChange> {
     }
 
     public SetTextChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetTextChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetTextChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetTextChange.class + ": nextValue is missing");
         return new SetTextChangeImpl(change, previousValue, nextValue);
     }
 

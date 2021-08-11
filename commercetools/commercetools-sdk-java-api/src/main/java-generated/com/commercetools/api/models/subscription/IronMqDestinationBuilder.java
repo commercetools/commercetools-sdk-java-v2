@@ -21,7 +21,7 @@ public final class IronMqDestinationBuilder implements Builder<IronMqDestination
     }
 
     public IronMqDestination build() {
-        Objects.requireNonNull(uri);
+        Objects.requireNonNull(uri, IronMqDestination.class + ": uri is missing");
         return new IronMqDestinationImpl(uri);
     }
 

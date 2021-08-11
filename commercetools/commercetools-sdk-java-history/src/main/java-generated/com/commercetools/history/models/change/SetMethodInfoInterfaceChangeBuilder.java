@@ -43,9 +43,9 @@ public final class SetMethodInfoInterfaceChangeBuilder implements Builder<SetMet
     }
 
     public SetMethodInfoInterfaceChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMethodInfoInterfaceChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMethodInfoInterfaceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMethodInfoInterfaceChange.class + ": nextValue is missing");
         return new SetMethodInfoInterfaceChangeImpl(change, previousValue, nextValue);
     }
 

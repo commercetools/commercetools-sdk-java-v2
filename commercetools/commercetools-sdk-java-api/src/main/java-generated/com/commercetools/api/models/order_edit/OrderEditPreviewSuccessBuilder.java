@@ -39,8 +39,8 @@ public final class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPr
     }
 
     public OrderEditPreviewSuccess build() {
-        Objects.requireNonNull(preview);
-        Objects.requireNonNull(messagePayloads);
+        Objects.requireNonNull(preview, OrderEditPreviewSuccess.class + ": preview is missing");
+        Objects.requireNonNull(messagePayloads, OrderEditPreviewSuccess.class + ": messagePayloads is missing");
         return new OrderEditPreviewSuccessImpl(preview, messagePayloads);
     }
 

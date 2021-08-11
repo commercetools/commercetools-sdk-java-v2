@@ -86,9 +86,10 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     public ProductPriceExternalDiscountSetMessagePayload build() {
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(variantId,
+            ProductPriceExternalDiscountSetMessagePayload.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceExternalDiscountSetMessagePayload.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceExternalDiscountSetMessagePayload.class + ": staged is missing");
         return new ProductPriceExternalDiscountSetMessagePayloadImpl(variantId, variantKey, sku, priceId, discounted,
             staged);
     }

@@ -68,11 +68,13 @@ public final class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<
     }
 
     public SetCustomLineItemTaxCategoryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(customLineItem);
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetCustomLineItemTaxCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem,
+            SetCustomLineItemTaxCategoryChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTaxCategoryChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTaxCategoryChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTaxCategoryChange.class + ": previousValue is missing");
         return new SetCustomLineItemTaxCategoryChangeImpl(change, customLineItem, customLineItemId, nextValue,
             previousValue);
     }

@@ -43,9 +43,9 @@ public final class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     public CustomerLabel build() {
-        Objects.requireNonNull(firstName);
-        Objects.requireNonNull(lastName);
-        Objects.requireNonNull(customerNumber);
+        Objects.requireNonNull(firstName, CustomerLabel.class + ": firstName is missing");
+        Objects.requireNonNull(lastName, CustomerLabel.class + ": lastName is missing");
+        Objects.requireNonNull(customerNumber, CustomerLabel.class + ": customerNumber is missing");
         return new CustomerLabelImpl(firstName, lastName, customerNumber);
     }
 

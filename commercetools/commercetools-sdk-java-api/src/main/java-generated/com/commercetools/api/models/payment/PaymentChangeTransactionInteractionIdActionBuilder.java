@@ -33,8 +33,10 @@ public final class PaymentChangeTransactionInteractionIdActionBuilder
     }
 
     public PaymentChangeTransactionInteractionIdAction build() {
-        Objects.requireNonNull(transactionId);
-        Objects.requireNonNull(interactionId);
+        Objects.requireNonNull(transactionId,
+            PaymentChangeTransactionInteractionIdAction.class + ": transactionId is missing");
+        Objects.requireNonNull(interactionId,
+            PaymentChangeTransactionInteractionIdAction.class + ": interactionId is missing");
         return new PaymentChangeTransactionInteractionIdActionImpl(transactionId, interactionId);
     }
 

@@ -57,9 +57,9 @@ public final class AddChannelRolesChangeBuilder implements Builder<AddChannelRol
     }
 
     public AddChannelRolesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddChannelRolesChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddChannelRolesChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddChannelRolesChange.class + ": nextValue is missing");
         return new AddChannelRolesChangeImpl(change, previousValue, nextValue);
     }
 

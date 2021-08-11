@@ -34,8 +34,10 @@ public final class StagedOrderSetReturnPaymentStateActionBuilder
     }
 
     public StagedOrderSetReturnPaymentStateAction build() {
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(paymentState);
+        Objects.requireNonNull(returnItemId,
+            StagedOrderSetReturnPaymentStateAction.class + ": returnItemId is missing");
+        Objects.requireNonNull(paymentState,
+            StagedOrderSetReturnPaymentStateAction.class + ": paymentState is missing");
         return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
     }
 

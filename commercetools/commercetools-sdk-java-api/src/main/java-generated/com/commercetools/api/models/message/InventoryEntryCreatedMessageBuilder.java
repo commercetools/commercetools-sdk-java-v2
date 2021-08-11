@@ -143,14 +143,14 @@ public final class InventoryEntryCreatedMessageBuilder implements Builder<Invent
     }
 
     public InventoryEntryCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(inventoryEntry);
+        Objects.requireNonNull(id, InventoryEntryCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntryCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntryCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntryCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, InventoryEntryCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, InventoryEntryCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, InventoryEntryCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(inventoryEntry, InventoryEntryCreatedMessage.class + ": inventoryEntry is missing");
         return new InventoryEntryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, inventoryEntry);
     }

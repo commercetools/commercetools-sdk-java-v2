@@ -32,8 +32,8 @@ public final class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     }
 
     public ExternalOAuth build() {
-        Objects.requireNonNull(url);
-        Objects.requireNonNull(authorizationHeader);
+        Objects.requireNonNull(url, ExternalOAuth.class + ": url is missing");
+        Objects.requireNonNull(authorizationHeader, ExternalOAuth.class + ": authorizationHeader is missing");
         return new ExternalOAuthImpl(url, authorizationHeader);
     }
 

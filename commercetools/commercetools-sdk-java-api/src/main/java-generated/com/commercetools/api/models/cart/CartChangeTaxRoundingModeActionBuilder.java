@@ -22,7 +22,7 @@ public final class CartChangeTaxRoundingModeActionBuilder implements Builder<Car
     }
 
     public CartChangeTaxRoundingModeAction build() {
-        Objects.requireNonNull(taxRoundingMode);
+        Objects.requireNonNull(taxRoundingMode, CartChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
         return new CartChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
 

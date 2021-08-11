@@ -396,14 +396,14 @@ public final class CustomerBuilder implements Builder<Customer> {
     }
 
     public Customer build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(email);
-        Objects.requireNonNull(password);
-        Objects.requireNonNull(addresses);
-        Objects.requireNonNull(isEmailVerified);
+        Objects.requireNonNull(id, Customer.class + ": id is missing");
+        Objects.requireNonNull(version, Customer.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Customer.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(email, Customer.class + ": email is missing");
+        Objects.requireNonNull(password, Customer.class + ": password is missing");
+        Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
+        Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,

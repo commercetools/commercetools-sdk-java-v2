@@ -56,10 +56,10 @@ public final class SetLineItemShippingDetailsChangeBuilder implements Builder<Se
     }
 
     public SetLineItemShippingDetailsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetLineItemShippingDetailsChange.class + ": change is missing");
+        Objects.requireNonNull(lineItemId, SetLineItemShippingDetailsChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(nextValue, SetLineItemShippingDetailsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemShippingDetailsChange.class + ": previousValue is missing");
         return new SetLineItemShippingDetailsChangeImpl(change, lineItemId, nextValue, previousValue);
     }
 

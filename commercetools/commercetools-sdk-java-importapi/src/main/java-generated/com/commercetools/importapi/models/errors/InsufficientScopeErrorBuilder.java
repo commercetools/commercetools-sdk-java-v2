@@ -21,7 +21,7 @@ public final class InsufficientScopeErrorBuilder implements Builder<Insufficient
     }
 
     public InsufficientScopeError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, InsufficientScopeError.class + ": message is missing");
         return new InsufficientScopeErrorImpl(message);
     }
 

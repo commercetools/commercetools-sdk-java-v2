@@ -21,7 +21,7 @@ public final class PaymentKeyReferenceBuilder implements Builder<PaymentKeyRefer
     }
 
     public PaymentKeyReference build() {
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(key, PaymentKeyReference.class + ": key is missing");
         return new PaymentKeyReferenceImpl(key);
     }
 

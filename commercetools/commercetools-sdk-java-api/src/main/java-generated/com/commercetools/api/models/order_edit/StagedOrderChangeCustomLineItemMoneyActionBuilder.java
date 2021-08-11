@@ -34,8 +34,9 @@ public final class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     public StagedOrderChangeCustomLineItemMoneyAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(money, StagedOrderChangeCustomLineItemMoneyAction.class + ": money is missing");
         return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
     }
 

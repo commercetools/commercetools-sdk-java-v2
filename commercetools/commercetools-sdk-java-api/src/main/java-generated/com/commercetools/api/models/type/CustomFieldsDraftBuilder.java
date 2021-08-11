@@ -36,7 +36,7 @@ public final class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft
     }
 
     public CustomFieldsDraft build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, CustomFieldsDraft.class + ": type is missing");
         return new CustomFieldsDraftImpl(type, fields);
     }
 

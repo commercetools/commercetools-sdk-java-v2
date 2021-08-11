@@ -21,7 +21,7 @@ public final class StringFieldBuilder implements Builder<StringField> {
     }
 
     public StringField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, StringField.class + ": value is missing");
         return new StringFieldImpl(value);
     }
 

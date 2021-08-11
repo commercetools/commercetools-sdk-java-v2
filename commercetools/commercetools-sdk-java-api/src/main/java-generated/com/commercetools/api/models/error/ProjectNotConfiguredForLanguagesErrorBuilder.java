@@ -42,7 +42,7 @@ public final class ProjectNotConfiguredForLanguagesErrorBuilder
     }
 
     public ProjectNotConfiguredForLanguagesError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ProjectNotConfiguredForLanguagesError.class + ": message is missing");
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, languages);
     }
 

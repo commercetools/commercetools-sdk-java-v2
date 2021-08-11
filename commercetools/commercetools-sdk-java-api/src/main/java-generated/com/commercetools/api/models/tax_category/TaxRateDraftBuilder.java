@@ -90,9 +90,9 @@ public final class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     public TaxRateDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(includedInPrice);
-        Objects.requireNonNull(country);
+        Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
+        Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
+        Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
         return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
     }
 

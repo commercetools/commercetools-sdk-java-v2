@@ -45,9 +45,9 @@ public final class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDes
     }
 
     public SetMetaDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMetaDescriptionChange.class + ": nextValue is missing");
         return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

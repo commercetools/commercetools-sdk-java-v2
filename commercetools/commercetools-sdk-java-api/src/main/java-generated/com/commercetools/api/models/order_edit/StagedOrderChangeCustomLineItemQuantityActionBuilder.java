@@ -33,8 +33,9 @@ public final class StagedOrderChangeCustomLineItemQuantityActionBuilder
     }
 
     public StagedOrderChangeCustomLineItemQuantityAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(quantity, StagedOrderChangeCustomLineItemQuantityAction.class + ": quantity is missing");
         return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
 

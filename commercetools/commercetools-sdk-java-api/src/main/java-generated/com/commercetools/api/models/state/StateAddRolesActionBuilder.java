@@ -27,7 +27,7 @@ public final class StateAddRolesActionBuilder implements Builder<StateAddRolesAc
     }
 
     public StateAddRolesAction build() {
-        Objects.requireNonNull(roles);
+        Objects.requireNonNull(roles, StateAddRolesAction.class + ": roles is missing");
         return new StateAddRolesActionImpl(roles);
     }
 

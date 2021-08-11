@@ -37,7 +37,7 @@ public final class DiscountCodeReferenceBuilder implements Builder<DiscountCodeR
     }
 
     public DiscountCodeReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, DiscountCodeReference.class + ": id is missing");
         return new DiscountCodeReferenceImpl(id, obj);
     }
 

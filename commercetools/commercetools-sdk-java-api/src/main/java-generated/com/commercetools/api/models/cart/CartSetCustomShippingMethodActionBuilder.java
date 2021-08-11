@@ -63,8 +63,9 @@ public final class CartSetCustomShippingMethodActionBuilder implements Builder<C
     }
 
     public CartSetCustomShippingMethodAction build() {
-        Objects.requireNonNull(shippingMethodName);
-        Objects.requireNonNull(shippingRate);
+        Objects.requireNonNull(shippingMethodName,
+            CartSetCustomShippingMethodAction.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(shippingRate, CartSetCustomShippingMethodAction.class + ": shippingRate is missing");
         return new CartSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
             externalTaxRate);
     }

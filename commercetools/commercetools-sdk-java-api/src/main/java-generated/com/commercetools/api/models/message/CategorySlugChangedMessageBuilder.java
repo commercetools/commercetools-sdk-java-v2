@@ -156,14 +156,14 @@ public final class CategorySlugChangedMessageBuilder implements Builder<Category
     }
 
     public CategorySlugChangedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(id, CategorySlugChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CategorySlugChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CategorySlugChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CategorySlugChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CategorySlugChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CategorySlugChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CategorySlugChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(slug, CategorySlugChangedMessage.class + ": slug is missing");
         return new CategorySlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
     }

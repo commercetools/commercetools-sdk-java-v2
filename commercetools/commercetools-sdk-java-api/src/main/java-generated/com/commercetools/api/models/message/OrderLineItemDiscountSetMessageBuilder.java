@@ -187,16 +187,17 @@ public final class OrderLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     public OrderLineItemDiscountSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(discountedPricePerQuantity);
-        Objects.requireNonNull(totalPrice);
+        Objects.requireNonNull(id, OrderLineItemDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderLineItemDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderLineItemDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderLineItemDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderLineItemDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderLineItemDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderLineItemDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(lineItemId, OrderLineItemDiscountSetMessage.class + ": lineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
+        Objects.requireNonNull(totalPrice, OrderLineItemDiscountSetMessage.class + ": totalPrice is missing");
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
             discountedPricePerQuantity, totalPrice, taxedPrice);

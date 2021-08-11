@@ -43,9 +43,9 @@ public final class SetLastNameChangeBuilder implements Builder<SetLastNameChange
     }
 
     public SetLastNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetLastNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetLastNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetLastNameChange.class + ": nextValue is missing");
         return new SetLastNameChangeImpl(change, previousValue, nextValue);
     }
 

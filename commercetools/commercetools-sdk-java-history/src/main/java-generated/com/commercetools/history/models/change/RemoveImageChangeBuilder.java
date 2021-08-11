@@ -67,10 +67,10 @@ public final class RemoveImageChangeBuilder implements Builder<RemoveImageChange
     }
 
     public RemoveImageChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, RemoveImageChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, RemoveImageChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, RemoveImageChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveImageChange.class + ": nextValue is missing");
         return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

@@ -43,9 +43,9 @@ public final class ProductTypeChangeEnumKeyActionBuilder implements Builder<Prod
     }
 
     public ProductTypeChangeEnumKeyAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(newKey);
+        Objects.requireNonNull(attributeName, ProductTypeChangeEnumKeyAction.class + ": attributeName is missing");
+        Objects.requireNonNull(key, ProductTypeChangeEnumKeyAction.class + ": key is missing");
+        Objects.requireNonNull(newKey, ProductTypeChangeEnumKeyAction.class + ": newKey is missing");
         return new ProductTypeChangeEnumKeyActionImpl(attributeName, key, newKey);
     }
 

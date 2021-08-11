@@ -146,12 +146,12 @@ public final class ShoppingListLineItemBuilder implements Builder<ShoppingListLi
     }
 
     public ShoppingListLineItem build() {
-        Objects.requireNonNull(addedAt);
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(productId);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(addedAt, ShoppingListLineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(id, ShoppingListLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, ShoppingListLineItem.class + ": name is missing");
+        Objects.requireNonNull(productId, ShoppingListLineItem.class + ": productId is missing");
+        Objects.requireNonNull(productType, ShoppingListLineItem.class + ": productType is missing");
+        Objects.requireNonNull(quantity, ShoppingListLineItem.class + ": quantity is missing");
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productSlug,
             productType, quantity, variant, variantId);
     }

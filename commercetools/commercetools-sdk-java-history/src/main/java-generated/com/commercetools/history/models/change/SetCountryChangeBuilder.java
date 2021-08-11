@@ -43,9 +43,9 @@ public final class SetCountryChangeBuilder implements Builder<SetCountryChange> 
     }
 
     public SetCountryChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCountryChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCountryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCountryChange.class + ": nextValue is missing");
         return new SetCountryChangeImpl(change, previousValue, nextValue);
     }
 

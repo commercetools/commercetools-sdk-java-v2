@@ -45,9 +45,9 @@ public final class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLoc
     }
 
     public ChangeLocalizedNameChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeLocalizedNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeLocalizedNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeLocalizedNameChange.class + ": nextValue is missing");
         return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);
     }
 

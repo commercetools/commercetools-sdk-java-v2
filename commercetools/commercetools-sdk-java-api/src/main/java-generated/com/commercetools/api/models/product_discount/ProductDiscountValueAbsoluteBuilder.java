@@ -27,7 +27,7 @@ public final class ProductDiscountValueAbsoluteBuilder implements Builder<Produc
     }
 
     public ProductDiscountValueAbsolute build() {
-        Objects.requireNonNull(money);
+        Objects.requireNonNull(money, ProductDiscountValueAbsolute.class + ": money is missing");
         return new ProductDiscountValueAbsoluteImpl(money);
     }
 

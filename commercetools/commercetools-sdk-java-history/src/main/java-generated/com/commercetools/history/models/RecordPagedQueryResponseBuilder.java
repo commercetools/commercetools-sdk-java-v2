@@ -71,11 +71,11 @@ public final class RecordPagedQueryResponseBuilder implements Builder<RecordPage
     }
 
     public RecordPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, RecordPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, RecordPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, RecordPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, RecordPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, RecordPagedQueryResponse.class + ": results is missing");
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

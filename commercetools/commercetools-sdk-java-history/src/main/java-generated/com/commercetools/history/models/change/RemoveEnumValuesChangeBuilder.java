@@ -44,9 +44,9 @@ public final class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumVa
     }
 
     public RemoveEnumValuesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveEnumValuesChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, RemoveEnumValuesChange.class + ": attributeName is missing");
+        Objects.requireNonNull(previousValue, RemoveEnumValuesChange.class + ": previousValue is missing");
         return new RemoveEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 

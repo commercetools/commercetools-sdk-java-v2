@@ -36,7 +36,7 @@ public final class PaymentReferenceBuilder implements Builder<PaymentReference> 
     }
 
     public PaymentReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, PaymentReference.class + ": id is missing");
         return new PaymentReferenceImpl(id, obj);
     }
 

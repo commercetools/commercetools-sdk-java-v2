@@ -21,7 +21,7 @@ public final class NoMatchingProductDiscountFoundErrorBuilder implements Builder
     }
 
     public NoMatchingProductDiscountFoundError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, NoMatchingProductDiscountFoundError.class + ": message is missing");
         return new NoMatchingProductDiscountFoundErrorImpl(message);
     }
 

@@ -37,8 +37,8 @@ public final class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     public ZoneUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ZoneUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ZoneUpdate.class + ": actions is missing");
         return new ZoneUpdateImpl(version, actions);
     }
 

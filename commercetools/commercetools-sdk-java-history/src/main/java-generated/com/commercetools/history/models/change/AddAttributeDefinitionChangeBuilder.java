@@ -33,8 +33,8 @@ public final class AddAttributeDefinitionChangeBuilder implements Builder<AddAtt
     }
 
     public AddAttributeDefinitionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddAttributeDefinitionChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddAttributeDefinitionChange.class + ": nextValue is missing");
         return new AddAttributeDefinitionChangeImpl(change, nextValue);
     }
 

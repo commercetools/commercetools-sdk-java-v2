@@ -43,9 +43,9 @@ public final class SetDescriptionChangeBuilder implements Builder<SetDescription
     }
 
     public SetDescriptionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDescriptionChange.class + ": nextValue is missing");
         return new SetDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

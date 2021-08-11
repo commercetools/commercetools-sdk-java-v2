@@ -92,13 +92,13 @@ public final class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     public TaxRate build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(amount);
-        Objects.requireNonNull(includedInPrice);
-        Objects.requireNonNull(country);
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(subRates);
+        Objects.requireNonNull(id, TaxRate.class + ": id is missing");
+        Objects.requireNonNull(name, TaxRate.class + ": name is missing");
+        Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
+        Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");
+        Objects.requireNonNull(country, TaxRate.class + ": country is missing");
+        Objects.requireNonNull(state, TaxRate.class + ": state is missing");
+        Objects.requireNonNull(subRates, TaxRate.class + ": subRates is missing");
         return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
     }
 

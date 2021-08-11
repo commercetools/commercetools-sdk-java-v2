@@ -88,7 +88,7 @@ public final class ProductChangeAssetNameActionBuilder implements Builder<Produc
     }
 
     public ProductChangeAssetNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductChangeAssetNameAction.class + ": name is missing");
         return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);
     }
 

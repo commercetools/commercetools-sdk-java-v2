@@ -142,14 +142,14 @@ public final class CustomerAddressRemovedMessageBuilder implements Builder<Custo
     }
 
     public CustomerAddressRemovedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(address);
+        Objects.requireNonNull(id, CustomerAddressRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerAddressRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerAddressRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerAddressRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerAddressRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerAddressRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerAddressRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(address, CustomerAddressRemovedMessage.class + ": address is missing");
         return new CustomerAddressRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
     }

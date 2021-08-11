@@ -76,10 +76,10 @@ public final class CustomerGroupPagedQueryResponseBuilder implements Builder<Cus
     }
 
     public CustomerGroupPagedQueryResponse build() {
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(offset, CustomerGroupPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(limit, CustomerGroupPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomerGroupPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(results, CustomerGroupPagedQueryResponse.class + ": results is missing");
         return new CustomerGroupPagedQueryResponseImpl(offset, limit, count, total, results);
     }
 

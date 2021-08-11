@@ -37,8 +37,8 @@ public final class ProductTypeRemoveEnumValuesActionBuilder implements Builder<P
     }
 
     public ProductTypeRemoveEnumValuesAction build() {
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(keys);
+        Objects.requireNonNull(attributeName, ProductTypeRemoveEnumValuesAction.class + ": attributeName is missing");
+        Objects.requireNonNull(keys, ProductTypeRemoveEnumValuesAction.class + ": keys is missing");
         return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);
     }
 

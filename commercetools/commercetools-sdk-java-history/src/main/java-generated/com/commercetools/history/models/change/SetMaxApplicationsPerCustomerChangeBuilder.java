@@ -43,9 +43,9 @@ public final class SetMaxApplicationsPerCustomerChangeBuilder implements Builder
     }
 
     public SetMaxApplicationsPerCustomerChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMaxApplicationsPerCustomerChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMaxApplicationsPerCustomerChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMaxApplicationsPerCustomerChange.class + ": nextValue is missing");
         return new SetMaxApplicationsPerCustomerChangeImpl(change, previousValue, nextValue);
     }
 

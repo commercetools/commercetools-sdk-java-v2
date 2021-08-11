@@ -36,7 +36,7 @@ public final class ChannelReferenceBuilder implements Builder<ChannelReference> 
     }
 
     public ChannelReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, ChannelReference.class + ": id is missing");
         return new ChannelReferenceImpl(id, obj);
     }
 

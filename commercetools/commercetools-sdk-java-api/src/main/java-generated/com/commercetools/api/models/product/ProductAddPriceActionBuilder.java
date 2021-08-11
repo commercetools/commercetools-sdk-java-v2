@@ -62,7 +62,7 @@ public final class ProductAddPriceActionBuilder implements Builder<ProductAddPri
     }
 
     public ProductAddPriceAction build() {
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(price, ProductAddPriceAction.class + ": price is missing");
         return new ProductAddPriceActionImpl(variantId, sku, price, staged);
     }
 

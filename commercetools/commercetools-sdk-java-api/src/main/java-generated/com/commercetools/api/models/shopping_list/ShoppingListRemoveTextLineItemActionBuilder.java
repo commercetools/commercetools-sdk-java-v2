@@ -37,7 +37,8 @@ public final class ShoppingListRemoveTextLineItemActionBuilder
     }
 
     public ShoppingListRemoveTextLineItemAction build() {
-        Objects.requireNonNull(textLineItemId);
+        Objects.requireNonNull(textLineItemId,
+            ShoppingListRemoveTextLineItemAction.class + ": textLineItemId is missing");
         return new ShoppingListRemoveTextLineItemActionImpl(textLineItemId, quantity);
     }
 

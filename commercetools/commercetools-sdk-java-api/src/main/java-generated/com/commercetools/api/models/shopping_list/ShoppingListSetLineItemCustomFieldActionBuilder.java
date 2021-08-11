@@ -48,8 +48,8 @@ public final class ShoppingListSetLineItemCustomFieldActionBuilder
     }
 
     public ShoppingListSetLineItemCustomFieldAction build() {
-        Objects.requireNonNull(lineItemId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(lineItemId, ShoppingListSetLineItemCustomFieldAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(name, ShoppingListSetLineItemCustomFieldAction.class + ": name is missing");
         return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, name, value);
     }
 

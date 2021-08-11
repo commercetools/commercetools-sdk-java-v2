@@ -33,8 +33,8 @@ public final class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     public SearchKeyword build() {
-        Objects.requireNonNull(text);
-        Objects.requireNonNull(suggestTokenizer);
+        Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
+        Objects.requireNonNull(suggestTokenizer, SearchKeyword.class + ": suggestTokenizer is missing");
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 

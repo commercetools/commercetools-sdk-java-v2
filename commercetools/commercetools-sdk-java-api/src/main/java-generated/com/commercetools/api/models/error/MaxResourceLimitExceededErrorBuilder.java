@@ -33,8 +33,8 @@ public final class MaxResourceLimitExceededErrorBuilder implements Builder<MaxRe
     }
 
     public MaxResourceLimitExceededError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(exceededResource);
+        Objects.requireNonNull(message, MaxResourceLimitExceededError.class + ": message is missing");
+        Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");
         return new MaxResourceLimitExceededErrorImpl(message, exceededResource);
     }
 

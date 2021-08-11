@@ -36,7 +36,7 @@ public final class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVe
     }
 
     public CustomerEmailVerify build() {
-        Objects.requireNonNull(tokenValue);
+        Objects.requireNonNull(tokenValue, CustomerEmailVerify.class + ": tokenValue is missing");
         return new CustomerEmailVerifyImpl(version, tokenValue);
     }
 

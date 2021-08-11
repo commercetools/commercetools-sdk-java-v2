@@ -72,11 +72,11 @@ public final class ImportOperationPagedResponseBuilder implements Builder<Import
     }
 
     public ImportOperationPagedResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, ImportOperationPagedResponse.class + ": limit is missing");
+        Objects.requireNonNull(offset, ImportOperationPagedResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ImportOperationPagedResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ImportOperationPagedResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImportOperationPagedResponse.class + ": results is missing");
         return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
     }
 

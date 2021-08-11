@@ -43,7 +43,7 @@ public final class LocalizableTextSetAttributeBuilder implements Builder<Localiz
     }
 
     public LocalizableTextSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizableTextSetAttribute.class + ": value is missing");
         return new LocalizableTextSetAttributeImpl(name, value);
     }
 

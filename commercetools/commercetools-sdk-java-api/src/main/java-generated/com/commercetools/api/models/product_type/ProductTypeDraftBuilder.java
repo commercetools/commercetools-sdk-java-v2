@@ -67,8 +67,8 @@ public final class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> 
     }
 
     public ProductTypeDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(description);
+        Objects.requireNonNull(name, ProductTypeDraft.class + ": name is missing");
+        Objects.requireNonNull(description, ProductTypeDraft.class + ": description is missing");
         return new ProductTypeDraftImpl(key, name, description, attributes);
     }
 

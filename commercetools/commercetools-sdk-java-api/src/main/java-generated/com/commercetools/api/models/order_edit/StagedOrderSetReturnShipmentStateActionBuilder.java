@@ -34,8 +34,10 @@ public final class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     public StagedOrderSetReturnShipmentStateAction build() {
-        Objects.requireNonNull(returnItemId);
-        Objects.requireNonNull(shipmentState);
+        Objects.requireNonNull(returnItemId,
+            StagedOrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
+        Objects.requireNonNull(shipmentState,
+            StagedOrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
         return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
 

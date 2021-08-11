@@ -55,10 +55,10 @@ public final class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTota
     }
 
     public SetOrderTotalTaxChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(taxMode);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetOrderTotalTaxChange.class + ": change is missing");
+        Objects.requireNonNull(taxMode, SetOrderTotalTaxChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetOrderTotalTaxChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderTotalTaxChange.class + ": previousValue is missing");
         return new SetOrderTotalTaxChangeImpl(change, taxMode, nextValue, previousValue);
     }
 

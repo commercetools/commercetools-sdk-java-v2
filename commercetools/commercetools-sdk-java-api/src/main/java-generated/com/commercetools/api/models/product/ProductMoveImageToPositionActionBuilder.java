@@ -73,8 +73,8 @@ public final class ProductMoveImageToPositionActionBuilder implements Builder<Pr
     }
 
     public ProductMoveImageToPositionAction build() {
-        Objects.requireNonNull(imageUrl);
-        Objects.requireNonNull(position);
+        Objects.requireNonNull(imageUrl, ProductMoveImageToPositionAction.class + ": imageUrl is missing");
+        Objects.requireNonNull(position, ProductMoveImageToPositionAction.class + ": position is missing");
         return new ProductMoveImageToPositionActionImpl(variantId, sku, imageUrl, position, staged);
     }
 

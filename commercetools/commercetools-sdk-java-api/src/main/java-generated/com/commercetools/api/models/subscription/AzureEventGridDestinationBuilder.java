@@ -32,8 +32,8 @@ public final class AzureEventGridDestinationBuilder implements Builder<AzureEven
     }
 
     public AzureEventGridDestination build() {
-        Objects.requireNonNull(uri);
-        Objects.requireNonNull(accessKey);
+        Objects.requireNonNull(uri, AzureEventGridDestination.class + ": uri is missing");
+        Objects.requireNonNull(accessKey, AzureEventGridDestination.class + ": accessKey is missing");
         return new AzureEventGridDestinationImpl(uri, accessKey);
     }
 

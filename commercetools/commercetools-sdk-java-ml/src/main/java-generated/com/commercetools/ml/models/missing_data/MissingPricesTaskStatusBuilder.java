@@ -44,9 +44,9 @@ public final class MissingPricesTaskStatusBuilder implements Builder<MissingPric
     }
 
     public MissingPricesTaskStatus build() {
-        Objects.requireNonNull(state);
-        Objects.requireNonNull(expires);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(state, MissingPricesTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(expires, MissingPricesTaskStatus.class + ": expires is missing");
+        Objects.requireNonNull(result, MissingPricesTaskStatus.class + ": result is missing");
         return new MissingPricesTaskStatusImpl(state, expires, result);
     }
 

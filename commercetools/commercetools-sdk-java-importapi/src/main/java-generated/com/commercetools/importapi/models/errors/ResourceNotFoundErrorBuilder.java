@@ -36,7 +36,7 @@ public final class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFo
     }
 
     public ResourceNotFoundError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, ResourceNotFoundError.class + ": message is missing");
         return new ResourceNotFoundErrorImpl(message, resource);
     }
 

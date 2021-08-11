@@ -104,13 +104,13 @@ public final class LineItemReturnItemBuilder implements Builder<LineItemReturnIt
     }
 
     public LineItemReturnItem build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(quantity);
-        Objects.requireNonNull(shipmentState);
-        Objects.requireNonNull(paymentState);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lineItemId);
+        Objects.requireNonNull(id, LineItemReturnItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, LineItemReturnItem.class + ": quantity is missing");
+        Objects.requireNonNull(shipmentState, LineItemReturnItem.class + ": shipmentState is missing");
+        Objects.requireNonNull(paymentState, LineItemReturnItem.class + ": paymentState is missing");
+        Objects.requireNonNull(lastModifiedAt, LineItemReturnItem.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(createdAt, LineItemReturnItem.class + ": createdAt is missing");
+        Objects.requireNonNull(lineItemId, LineItemReturnItem.class + ": lineItemId is missing");
         return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
             lineItemId);
     }

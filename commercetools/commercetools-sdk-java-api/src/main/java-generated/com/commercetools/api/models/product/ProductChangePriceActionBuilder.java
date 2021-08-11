@@ -47,8 +47,8 @@ public final class ProductChangePriceActionBuilder implements Builder<ProductCha
     }
 
     public ProductChangePriceAction build() {
-        Objects.requireNonNull(priceId);
-        Objects.requireNonNull(price);
+        Objects.requireNonNull(priceId, ProductChangePriceAction.class + ": priceId is missing");
+        Objects.requireNonNull(price, ProductChangePriceAction.class + ": price is missing");
         return new ProductChangePriceActionImpl(priceId, price, staged);
     }
 

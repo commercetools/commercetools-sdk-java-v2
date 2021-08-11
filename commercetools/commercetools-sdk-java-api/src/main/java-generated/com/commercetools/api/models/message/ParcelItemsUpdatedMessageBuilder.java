@@ -190,16 +190,16 @@ public final class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelIte
     }
 
     public ParcelItemsUpdatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(parcelId);
-        Objects.requireNonNull(items);
-        Objects.requireNonNull(oldItems);
+        Objects.requireNonNull(id, ParcelItemsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelItemsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelItemsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelItemsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelItemsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelItemsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ParcelItemsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessage.class + ": parcelId is missing");
+        Objects.requireNonNull(items, ParcelItemsUpdatedMessage.class + ": items is missing");
+        Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessage.class + ": oldItems is missing");
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
             oldItems);

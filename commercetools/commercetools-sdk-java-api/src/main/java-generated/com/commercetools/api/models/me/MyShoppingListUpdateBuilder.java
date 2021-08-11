@@ -39,8 +39,8 @@ public final class MyShoppingListUpdateBuilder implements Builder<MyShoppingList
     }
 
     public MyShoppingListUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, MyShoppingListUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, MyShoppingListUpdate.class + ": actions is missing");
         return new MyShoppingListUpdateImpl(version, actions);
     }
 

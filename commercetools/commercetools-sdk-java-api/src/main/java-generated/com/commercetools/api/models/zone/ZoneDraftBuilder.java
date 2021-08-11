@@ -65,8 +65,8 @@ public final class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     public ZoneDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(locations);
+        Objects.requireNonNull(name, ZoneDraft.class + ": name is missing");
+        Objects.requireNonNull(locations, ZoneDraft.class + ": locations is missing");
         return new ZoneDraftImpl(key, name, description, locations);
     }
 

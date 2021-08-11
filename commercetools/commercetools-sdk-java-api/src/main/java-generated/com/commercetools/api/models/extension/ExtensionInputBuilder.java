@@ -32,8 +32,8 @@ public final class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     public ExtensionInput build() {
-        Objects.requireNonNull(action);
-        Objects.requireNonNull(resource);
+        Objects.requireNonNull(action, ExtensionInput.class + ": action is missing");
+        Objects.requireNonNull(resource, ExtensionInput.class + ": resource is missing");
         return new ExtensionInputImpl(action, resource);
     }
 

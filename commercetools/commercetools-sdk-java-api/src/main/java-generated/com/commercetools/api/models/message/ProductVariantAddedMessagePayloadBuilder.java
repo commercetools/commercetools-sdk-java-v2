@@ -33,8 +33,8 @@ public final class ProductVariantAddedMessagePayloadBuilder implements Builder<P
     }
 
     public ProductVariantAddedMessagePayload build() {
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(variant, ProductVariantAddedMessagePayload.class + ": variant is missing");
+        Objects.requireNonNull(staged, ProductVariantAddedMessagePayload.class + ": staged is missing");
         return new ProductVariantAddedMessagePayloadImpl(variant, staged);
     }
 

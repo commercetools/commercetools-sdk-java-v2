@@ -301,16 +301,16 @@ public final class ProductProjectionBuilder implements Builder<ProductProjection
     }
 
     public ProductProjection build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(productType);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
-        Objects.requireNonNull(categories);
-        Objects.requireNonNull(masterVariant);
-        Objects.requireNonNull(variants);
+        Objects.requireNonNull(id, ProductProjection.class + ": id is missing");
+        Objects.requireNonNull(version, ProductProjection.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductProjection.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductProjection.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(productType, ProductProjection.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductProjection.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductProjection.class + ": slug is missing");
+        Objects.requireNonNull(categories, ProductProjection.class + ": categories is missing");
+        Objects.requireNonNull(masterVariant, ProductProjection.class + ": masterVariant is missing");
+        Objects.requireNonNull(variants, ProductProjection.class + ": variants is missing");
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
             slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
             hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);

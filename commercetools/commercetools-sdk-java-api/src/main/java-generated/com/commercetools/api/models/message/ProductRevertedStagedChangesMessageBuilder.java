@@ -148,14 +148,18 @@ public final class ProductRevertedStagedChangesMessageBuilder implements Builder
     }
 
     public ProductRevertedStagedChangesMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(removedImageUrls);
+        Objects.requireNonNull(id, ProductRevertedStagedChangesMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductRevertedStagedChangesMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductRevertedStagedChangesMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            ProductRevertedStagedChangesMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            ProductRevertedStagedChangesMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductRevertedStagedChangesMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductRevertedStagedChangesMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(removedImageUrls,
+            ProductRevertedStagedChangesMessage.class + ": removedImageUrls is missing");
         return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);
     }

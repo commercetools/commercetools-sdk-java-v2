@@ -55,10 +55,10 @@ public final class ChangeTransactionTimestampChangeBuilder implements Builder<Ch
     }
 
     public ChangeTransactionTimestampChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(transaction);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeTransactionTimestampChange.class + ": change is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionTimestampChange.class + ": transaction is missing");
+        Objects.requireNonNull(nextValue, ChangeTransactionTimestampChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeTransactionTimestampChange.class + ": previousValue is missing");
         return new ChangeTransactionTimestampChangeImpl(change, transaction, nextValue, previousValue);
     }
 

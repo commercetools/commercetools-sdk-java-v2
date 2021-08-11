@@ -45,9 +45,9 @@ public final class AddCustomLineItemChangeBuilder implements Builder<AddCustomLi
     }
 
     public AddCustomLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, AddCustomLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddCustomLineItemChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddCustomLineItemChange.class + ": previousValue is missing");
         return new AddCustomLineItemChangeImpl(change, nextValue, previousValue);
     }
 

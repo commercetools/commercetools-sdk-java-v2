@@ -37,7 +37,7 @@ public final class CustomerGroupReferenceBuilder implements Builder<CustomerGrou
     }
 
     public CustomerGroupReference build() {
-        Objects.requireNonNull(id);
+        Objects.requireNonNull(id, CustomerGroupReference.class + ": id is missing");
         return new CustomerGroupReferenceImpl(id, obj);
     }
 

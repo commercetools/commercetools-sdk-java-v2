@@ -21,7 +21,7 @@ public final class SuggestionBuilder implements Builder<Suggestion> {
     }
 
     public Suggestion build() {
-        Objects.requireNonNull(text);
+        Objects.requireNonNull(text, Suggestion.class + ": text is missing");
         return new SuggestionImpl(text);
     }
 

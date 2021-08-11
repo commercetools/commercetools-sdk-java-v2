@@ -57,10 +57,10 @@ public final class SetParcelTrackingDataChangeBuilder implements Builder<SetParc
     }
 
     public SetParcelTrackingDataChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(parcel);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetParcelTrackingDataChange.class + ": change is missing");
+        Objects.requireNonNull(parcel, SetParcelTrackingDataChange.class + ": parcel is missing");
+        Objects.requireNonNull(nextValue, SetParcelTrackingDataChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetParcelTrackingDataChange.class + ": previousValue is missing");
         return new SetParcelTrackingDataChangeImpl(change, parcel, nextValue, previousValue);
     }
 

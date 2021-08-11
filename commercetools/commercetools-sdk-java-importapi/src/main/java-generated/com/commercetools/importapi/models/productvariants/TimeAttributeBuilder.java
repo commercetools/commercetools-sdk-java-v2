@@ -36,7 +36,7 @@ public final class TimeAttributeBuilder implements Builder<TimeAttribute> {
     }
 
     public TimeAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, TimeAttribute.class + ": value is missing");
         return new TimeAttributeImpl(name, value);
     }
 

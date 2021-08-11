@@ -47,8 +47,8 @@ public final class CustomerCreateEmailTokenBuilder implements Builder<CustomerCr
     }
 
     public CustomerCreateEmailToken build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(ttlMinutes);
+        Objects.requireNonNull(id, CustomerCreateEmailToken.class + ": id is missing");
+        Objects.requireNonNull(ttlMinutes, CustomerCreateEmailToken.class + ": ttlMinutes is missing");
         return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
     }
 

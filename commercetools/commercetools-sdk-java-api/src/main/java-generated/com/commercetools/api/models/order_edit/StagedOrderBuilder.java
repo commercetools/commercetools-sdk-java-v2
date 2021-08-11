@@ -576,18 +576,18 @@ public final class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     public StagedOrder build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(lineItems);
-        Objects.requireNonNull(customLineItems);
-        Objects.requireNonNull(totalPrice);
-        Objects.requireNonNull(orderState);
-        Objects.requireNonNull(syncInfo);
-        Objects.requireNonNull(lastMessageSequenceNumber);
-        Objects.requireNonNull(origin);
-        Objects.requireNonNull(refusedGifts);
+        Objects.requireNonNull(id, StagedOrder.class + ": id is missing");
+        Objects.requireNonNull(version, StagedOrder.class + ": version is missing");
+        Objects.requireNonNull(createdAt, StagedOrder.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, StagedOrder.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, StagedOrder.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, StagedOrder.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, StagedOrder.class + ": totalPrice is missing");
+        Objects.requireNonNull(orderState, StagedOrder.class + ": orderState is missing");
+        Objects.requireNonNull(syncInfo, StagedOrder.class + ": syncInfo is missing");
+        Objects.requireNonNull(lastMessageSequenceNumber, StagedOrder.class + ": lastMessageSequenceNumber is missing");
+        Objects.requireNonNull(origin, StagedOrder.class + ": origin is missing");
+        Objects.requireNonNull(refusedGifts, StagedOrder.class + ": refusedGifts is missing");
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

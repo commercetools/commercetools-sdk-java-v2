@@ -164,15 +164,15 @@ public final class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     public Subscription build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(changes);
-        Objects.requireNonNull(destination);
-        Objects.requireNonNull(messages);
-        Objects.requireNonNull(format);
-        Objects.requireNonNull(status);
+        Objects.requireNonNull(id, Subscription.class + ": id is missing");
+        Objects.requireNonNull(version, Subscription.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Subscription.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Subscription.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(changes, Subscription.class + ": changes is missing");
+        Objects.requireNonNull(destination, Subscription.class + ": destination is missing");
+        Objects.requireNonNull(messages, Subscription.class + ": messages is missing");
+        Objects.requireNonNull(format, Subscription.class + ": format is missing");
+        Objects.requireNonNull(status, Subscription.class + ": status is missing");
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
             destination, key, messages, format, status);
     }

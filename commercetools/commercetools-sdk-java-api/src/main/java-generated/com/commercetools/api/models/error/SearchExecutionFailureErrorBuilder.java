@@ -21,7 +21,7 @@ public final class SearchExecutionFailureErrorBuilder implements Builder<SearchE
     }
 
     public SearchExecutionFailureError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, SearchExecutionFailureError.class + ": message is missing");
         return new SearchExecutionFailureErrorImpl(message);
     }
 

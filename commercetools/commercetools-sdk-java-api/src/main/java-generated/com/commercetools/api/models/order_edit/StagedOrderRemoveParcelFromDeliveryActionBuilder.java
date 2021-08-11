@@ -22,7 +22,7 @@ public final class StagedOrderRemoveParcelFromDeliveryActionBuilder
     }
 
     public StagedOrderRemoveParcelFromDeliveryAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, StagedOrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 

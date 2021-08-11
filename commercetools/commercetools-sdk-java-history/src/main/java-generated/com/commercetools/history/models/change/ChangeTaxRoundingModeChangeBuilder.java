@@ -45,9 +45,9 @@ public final class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeT
     }
 
     public ChangeTaxRoundingModeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeTaxRoundingModeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeTaxRoundingModeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTaxRoundingModeChange.class + ": nextValue is missing");
         return new ChangeTaxRoundingModeChangeImpl(change, previousValue, nextValue);
     }
 

@@ -43,9 +43,9 @@ public final class SetMaxApplicationsChangeBuilder implements Builder<SetMaxAppl
     }
 
     public SetMaxApplicationsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetMaxApplicationsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMaxApplicationsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMaxApplicationsChange.class + ": nextValue is missing");
         return new SetMaxApplicationsChangeImpl(change, previousValue, nextValue);
     }
 

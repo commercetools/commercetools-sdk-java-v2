@@ -28,7 +28,7 @@ public final class OrderPatchImportRequestBuilder implements Builder<OrderPatchI
     }
 
     public OrderPatchImportRequest build() {
-        Objects.requireNonNull(patches);
+        Objects.requireNonNull(patches, OrderPatchImportRequest.class + ": patches is missing");
         return new OrderPatchImportRequestImpl(patches);
     }
 

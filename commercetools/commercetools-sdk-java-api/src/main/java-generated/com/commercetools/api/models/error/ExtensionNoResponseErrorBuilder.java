@@ -47,8 +47,8 @@ public final class ExtensionNoResponseErrorBuilder implements Builder<ExtensionN
     }
 
     public ExtensionNoResponseError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(extensionId);
+        Objects.requireNonNull(message, ExtensionNoResponseError.class + ": message is missing");
+        Objects.requireNonNull(extensionId, ExtensionNoResponseError.class + ": extensionId is missing");
         return new ExtensionNoResponseErrorImpl(message, extensionId, extensionKey);
     }
 

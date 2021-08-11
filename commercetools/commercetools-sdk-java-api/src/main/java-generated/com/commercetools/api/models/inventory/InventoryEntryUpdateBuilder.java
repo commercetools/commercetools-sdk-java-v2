@@ -39,8 +39,8 @@ public final class InventoryEntryUpdateBuilder implements Builder<InventoryEntry
     }
 
     public InventoryEntryUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, InventoryEntryUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, InventoryEntryUpdate.class + ": actions is missing");
         return new InventoryEntryUpdateImpl(version, actions);
     }
 

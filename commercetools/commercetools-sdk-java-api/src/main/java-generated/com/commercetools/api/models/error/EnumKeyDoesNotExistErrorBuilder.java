@@ -43,9 +43,10 @@ public final class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoe
     }
 
     public EnumKeyDoesNotExistError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(conflictingEnumKey);
-        Objects.requireNonNull(conflictingAttributeName);
+        Objects.requireNonNull(message, EnumKeyDoesNotExistError.class + ": message is missing");
+        Objects.requireNonNull(conflictingEnumKey, EnumKeyDoesNotExistError.class + ": conflictingEnumKey is missing");
+        Objects.requireNonNull(conflictingAttributeName,
+            EnumKeyDoesNotExistError.class + ": conflictingAttributeName is missing");
         return new EnumKeyDoesNotExistErrorImpl(message, conflictingEnumKey, conflictingAttributeName);
     }
 

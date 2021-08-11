@@ -22,7 +22,7 @@ public final class ChangeTargetCustomLineItemsChangeValueBuilder
     }
 
     public ChangeTargetCustomLineItemsChangeValue build() {
-        Objects.requireNonNull(predicate);
+        Objects.requireNonNull(predicate, ChangeTargetCustomLineItemsChangeValue.class + ": predicate is missing");
         return new ChangeTargetCustomLineItemsChangeValueImpl(predicate);
     }
 

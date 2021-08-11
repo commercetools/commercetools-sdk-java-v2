@@ -45,9 +45,9 @@ public final class ChangeQuantityChangeBuilder implements Builder<ChangeQuantity
     }
 
     public ChangeQuantityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeQuantityChange.class + ": previousValue is missing");
         return new ChangeQuantityChangeImpl(change, nextValue, previousValue);
     }
 

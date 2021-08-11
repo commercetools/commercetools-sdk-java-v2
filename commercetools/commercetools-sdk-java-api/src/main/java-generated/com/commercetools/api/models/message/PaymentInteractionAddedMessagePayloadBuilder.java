@@ -23,7 +23,7 @@ public final class PaymentInteractionAddedMessagePayloadBuilder
     }
 
     public PaymentInteractionAddedMessagePayload build() {
-        Objects.requireNonNull(interaction);
+        Objects.requireNonNull(interaction, PaymentInteractionAddedMessagePayload.class + ": interaction is missing");
         return new PaymentInteractionAddedMessagePayloadImpl(interaction);
     }
 

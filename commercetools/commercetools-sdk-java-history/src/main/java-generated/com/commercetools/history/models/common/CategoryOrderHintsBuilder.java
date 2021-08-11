@@ -29,7 +29,7 @@ public final class CategoryOrderHintsBuilder implements Builder<CategoryOrderHin
     }
 
     public CategoryOrderHints build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, CategoryOrderHints.class + ": values are missing");
         return new CategoryOrderHintsImpl(values);
     }
 

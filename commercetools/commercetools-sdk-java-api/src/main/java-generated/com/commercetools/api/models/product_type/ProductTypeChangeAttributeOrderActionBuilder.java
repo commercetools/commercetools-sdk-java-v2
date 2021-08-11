@@ -29,7 +29,7 @@ public final class ProductTypeChangeAttributeOrderActionBuilder
     }
 
     public ProductTypeChangeAttributeOrderAction build() {
-        Objects.requireNonNull(attributes);
+        Objects.requireNonNull(attributes, ProductTypeChangeAttributeOrderAction.class + ": attributes is missing");
         return new ProductTypeChangeAttributeOrderActionImpl(attributes);
     }
 

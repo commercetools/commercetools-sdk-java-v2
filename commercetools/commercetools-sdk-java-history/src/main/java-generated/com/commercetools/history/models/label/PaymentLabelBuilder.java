@@ -32,8 +32,8 @@ public final class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     public PaymentLabel build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(amountPlanned);
+        Objects.requireNonNull(key, PaymentLabel.class + ": key is missing");
+        Objects.requireNonNull(amountPlanned, PaymentLabel.class + ": amountPlanned is missing");
         return new PaymentLabelImpl(key, amountPlanned);
     }
 

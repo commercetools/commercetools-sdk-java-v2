@@ -143,14 +143,14 @@ public final class ProductCreatedMessageBuilder implements Builder<ProductCreate
     }
 
     public ProductCreatedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(productProjection);
+        Objects.requireNonNull(id, ProductCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(productProjection, ProductCreatedMessage.class + ": productProjection is missing");
         return new ProductCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, productProjection);
     }

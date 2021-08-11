@@ -32,8 +32,8 @@ public final class LocationBuilder implements Builder<Location> {
     }
 
     public Location build() {
-        Objects.requireNonNull(country);
-        Objects.requireNonNull(state);
+        Objects.requireNonNull(country, Location.class + ": country is missing");
+        Objects.requireNonNull(state, Location.class + ": state is missing");
         return new LocationImpl(country, state);
     }
 

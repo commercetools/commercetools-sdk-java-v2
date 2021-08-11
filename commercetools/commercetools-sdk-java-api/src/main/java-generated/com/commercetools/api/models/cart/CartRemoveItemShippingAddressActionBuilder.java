@@ -21,7 +21,7 @@ public final class CartRemoveItemShippingAddressActionBuilder implements Builder
     }
 
     public CartRemoveItemShippingAddressAction build() {
-        Objects.requireNonNull(addressKey);
+        Objects.requireNonNull(addressKey, CartRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new CartRemoveItemShippingAddressActionImpl(addressKey);
     }
 

@@ -22,7 +22,7 @@ public final class ShippingMethodRemoveZoneActionBuilder implements Builder<Ship
     }
 
     public ShippingMethodRemoveZoneAction build() {
-        Objects.requireNonNull(zone);
+        Objects.requireNonNull(zone, ShippingMethodRemoveZoneAction.class + ": zone is missing");
         return new ShippingMethodRemoveZoneActionImpl(zone);
     }
 

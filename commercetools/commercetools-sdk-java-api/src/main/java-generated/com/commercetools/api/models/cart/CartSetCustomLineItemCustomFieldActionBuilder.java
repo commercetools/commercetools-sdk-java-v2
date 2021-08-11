@@ -48,8 +48,9 @@ public final class CartSetCustomLineItemCustomFieldActionBuilder
     }
 
     public CartSetCustomLineItemCustomFieldAction build() {
-        Objects.requireNonNull(customLineItemId);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(customLineItemId,
+            CartSetCustomLineItemCustomFieldAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(name, CartSetCustomLineItemCustomFieldAction.class + ": name is missing");
         return new CartSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
     }
 

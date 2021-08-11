@@ -22,7 +22,7 @@ public final class StagedOrderRemoveDiscountCodeActionBuilder implements Builder
     }
 
     public StagedOrderRemoveDiscountCodeAction build() {
-        Objects.requireNonNull(discountCode);
+        Objects.requireNonNull(discountCode, StagedOrderRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
     }
 

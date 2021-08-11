@@ -69,10 +69,10 @@ public final class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourc
     }
 
     public SetAssetSourcesChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetSourcesChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetSourcesChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetSourcesChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetSourcesChange.class + ": previousValue is missing");
         return new SetAssetSourcesChangeImpl(change, asset, nextValue, previousValue);
     }
 

@@ -63,8 +63,9 @@ public final class ExtensionUpdateActionsFailedErrorBuilder implements Builder<E
     }
 
     public ExtensionUpdateActionsFailedError build() {
-        Objects.requireNonNull(message);
-        Objects.requireNonNull(errorByExtension);
+        Objects.requireNonNull(message, ExtensionUpdateActionsFailedError.class + ": message is missing");
+        Objects.requireNonNull(errorByExtension,
+            ExtensionUpdateActionsFailedError.class + ": errorByExtension is missing");
         return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
             errorByExtension);
     }

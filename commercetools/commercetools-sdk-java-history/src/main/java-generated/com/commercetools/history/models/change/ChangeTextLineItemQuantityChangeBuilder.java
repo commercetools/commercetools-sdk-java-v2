@@ -55,10 +55,10 @@ public final class ChangeTextLineItemQuantityChangeBuilder implements Builder<Ch
     }
 
     public ChangeTextLineItemQuantityChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(textLineItem);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeTextLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(textLineItem, ChangeTextLineItemQuantityChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(previousValue, ChangeTextLineItemQuantityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTextLineItemQuantityChange.class + ": nextValue is missing");
         return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);
     }
 

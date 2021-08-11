@@ -142,14 +142,14 @@ public final class CustomerDateOfBirthSetMessageBuilder implements Builder<Custo
     }
 
     public CustomerDateOfBirthSetMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(dateOfBirth);
+        Objects.requireNonNull(id, CustomerDateOfBirthSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerDateOfBirthSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerDateOfBirthSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerDateOfBirthSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerDateOfBirthSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerDateOfBirthSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerDateOfBirthSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(dateOfBirth, CustomerDateOfBirthSetMessage.class + ": dateOfBirth is missing");
         return new CustomerDateOfBirthSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, dateOfBirth);
     }

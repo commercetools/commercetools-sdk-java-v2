@@ -21,7 +21,7 @@ public final class ProductDiscountChangeNameActionBuilder implements Builder<Pro
     }
 
     public ProductDiscountChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductDiscountChangeNameAction.class + ": name is missing");
         return new ProductDiscountChangeNameActionImpl(name);
     }
 

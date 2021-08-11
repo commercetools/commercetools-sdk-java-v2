@@ -29,7 +29,8 @@ public final class DiscountCodeChangeCartDiscountsActionBuilder
     }
 
     public DiscountCodeChangeCartDiscountsAction build() {
-        Objects.requireNonNull(cartDiscounts);
+        Objects.requireNonNull(cartDiscounts,
+            DiscountCodeChangeCartDiscountsAction.class + ": cartDiscounts is missing");
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
     }
 

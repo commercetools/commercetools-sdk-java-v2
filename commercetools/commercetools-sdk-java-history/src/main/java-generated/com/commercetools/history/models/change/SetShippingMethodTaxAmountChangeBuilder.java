@@ -55,10 +55,10 @@ public final class SetShippingMethodTaxAmountChangeBuilder implements Builder<Se
     }
 
     public SetShippingMethodTaxAmountChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(taxMode);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetShippingMethodTaxAmountChange.class + ": change is missing");
+        Objects.requireNonNull(taxMode, SetShippingMethodTaxAmountChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetShippingMethodTaxAmountChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetShippingMethodTaxAmountChange.class + ": previousValue is missing");
         return new SetShippingMethodTaxAmountChangeImpl(change, taxMode, nextValue, previousValue);
     }
 

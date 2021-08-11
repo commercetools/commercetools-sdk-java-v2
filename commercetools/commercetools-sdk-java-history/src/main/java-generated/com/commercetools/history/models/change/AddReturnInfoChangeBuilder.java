@@ -32,8 +32,8 @@ public final class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoCh
     }
 
     public AddReturnInfoChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddReturnInfoChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddReturnInfoChange.class + ": nextValue is missing");
         return new AddReturnInfoChangeImpl(change, nextValue);
     }
 

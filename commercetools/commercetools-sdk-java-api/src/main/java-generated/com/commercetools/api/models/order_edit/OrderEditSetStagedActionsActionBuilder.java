@@ -28,7 +28,7 @@ public final class OrderEditSetStagedActionsActionBuilder implements Builder<Ord
     }
 
     public OrderEditSetStagedActionsAction build() {
-        Objects.requireNonNull(stagedActions);
+        Objects.requireNonNull(stagedActions, OrderEditSetStagedActionsAction.class + ": stagedActions is missing");
         return new OrderEditSetStagedActionsActionImpl(stagedActions);
     }
 

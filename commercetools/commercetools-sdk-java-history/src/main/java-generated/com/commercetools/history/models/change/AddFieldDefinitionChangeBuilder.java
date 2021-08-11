@@ -33,8 +33,8 @@ public final class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDe
     }
 
     public AddFieldDefinitionChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddFieldDefinitionChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddFieldDefinitionChange.class + ": nextValue is missing");
         return new AddFieldDefinitionChangeImpl(change, nextValue);
     }
 

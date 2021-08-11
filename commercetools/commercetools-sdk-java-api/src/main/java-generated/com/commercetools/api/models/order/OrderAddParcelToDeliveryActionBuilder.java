@@ -71,7 +71,7 @@ public final class OrderAddParcelToDeliveryActionBuilder implements Builder<Orde
     }
 
     public OrderAddParcelToDeliveryAction build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, OrderAddParcelToDeliveryAction.class + ": deliveryId is missing");
         return new OrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
     }
 

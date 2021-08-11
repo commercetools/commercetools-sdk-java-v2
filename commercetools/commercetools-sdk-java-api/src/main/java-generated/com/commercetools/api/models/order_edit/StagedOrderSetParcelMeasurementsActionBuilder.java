@@ -38,7 +38,7 @@ public final class StagedOrderSetParcelMeasurementsActionBuilder
     }
 
     public StagedOrderSetParcelMeasurementsAction build() {
-        Objects.requireNonNull(parcelId);
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelMeasurementsAction.class + ": parcelId is missing");
         return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 

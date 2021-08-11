@@ -43,9 +43,9 @@ public final class SetStatusInterfaceCodeChangeBuilder implements Builder<SetSta
     }
 
     public SetStatusInterfaceCodeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetStatusInterfaceCodeChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetStatusInterfaceCodeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetStatusInterfaceCodeChange.class + ": nextValue is missing");
         return new SetStatusInterfaceCodeChangeImpl(change, previousValue, nextValue);
     }
 

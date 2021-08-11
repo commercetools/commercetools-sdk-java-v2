@@ -43,9 +43,11 @@ public final class MissingAttributesDetailsBuilder implements Builder<MissingAtt
     }
 
     public MissingAttributesDetails build() {
-        Objects.requireNonNull(total);
-        Objects.requireNonNull(missingAttributeNames);
-        Objects.requireNonNull(missingAttributeValues);
+        Objects.requireNonNull(total, MissingAttributesDetails.class + ": total is missing");
+        Objects.requireNonNull(missingAttributeNames,
+            MissingAttributesDetails.class + ": missingAttributeNames is missing");
+        Objects.requireNonNull(missingAttributeValues,
+            MissingAttributesDetails.class + ": missingAttributeValues is missing");
         return new MissingAttributesDetailsImpl(total, missingAttributeNames, missingAttributeValues);
     }
 

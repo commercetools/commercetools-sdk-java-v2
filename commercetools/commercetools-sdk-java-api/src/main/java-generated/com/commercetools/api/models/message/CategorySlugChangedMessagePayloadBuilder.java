@@ -38,7 +38,7 @@ public final class CategorySlugChangedMessagePayloadBuilder implements Builder<C
     }
 
     public CategorySlugChangedMessagePayload build() {
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(slug, CategorySlugChangedMessagePayload.class + ": slug is missing");
         return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 

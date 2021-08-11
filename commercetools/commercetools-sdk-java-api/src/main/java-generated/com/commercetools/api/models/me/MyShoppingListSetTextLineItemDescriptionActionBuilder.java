@@ -38,7 +38,8 @@ public final class MyShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     public MyShoppingListSetTextLineItemDescriptionAction build() {
-        Objects.requireNonNull(textLineItemId);
+        Objects.requireNonNull(textLineItemId,
+            MyShoppingListSetTextLineItemDescriptionAction.class + ": textLineItemId is missing");
         return new MyShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
     }
 

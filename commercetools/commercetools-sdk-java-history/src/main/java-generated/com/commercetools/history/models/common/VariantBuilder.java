@@ -43,9 +43,9 @@ public final class VariantBuilder implements Builder<Variant> {
     }
 
     public Variant build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(sku);
-        Objects.requireNonNull(key);
+        Objects.requireNonNull(id, Variant.class + ": id is missing");
+        Objects.requireNonNull(sku, Variant.class + ": sku is missing");
+        Objects.requireNonNull(key, Variant.class + ": key is missing");
         return new VariantImpl(id, sku, key);
     }
 

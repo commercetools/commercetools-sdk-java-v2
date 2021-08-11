@@ -43,9 +43,9 @@ public final class SetCustomerIdChangeBuilder implements Builder<SetCustomerIdCh
     }
 
     public SetCustomerIdChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCustomerIdChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomerIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomerIdChange.class + ": nextValue is missing");
         return new SetCustomerIdChangeImpl(change, previousValue, nextValue);
     }
 

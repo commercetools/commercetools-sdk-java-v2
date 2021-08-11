@@ -159,10 +159,10 @@ public final class LineItemImportDraftBuilder implements Builder<LineItemImportD
     }
 
     public LineItemImportDraft build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(variant);
-        Objects.requireNonNull(price);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(name, LineItemImportDraft.class + ": name is missing");
+        Objects.requireNonNull(variant, LineItemImportDraft.class + ": variant is missing");
+        Objects.requireNonNull(price, LineItemImportDraft.class + ": price is missing");
+        Objects.requireNonNull(quantity, LineItemImportDraft.class + ": quantity is missing");
         return new LineItemImportDraftImpl(productId, name, variant, price, quantity, state, supplyChannel,
             distributionChannel, taxRate, custom, shippingDetails);
     }

@@ -75,10 +75,10 @@ public final class MessagePagedQueryResponseBuilder implements Builder<MessagePa
     }
 
     public MessagePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, MessagePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, MessagePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, MessagePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, MessagePagedQueryResponse.class + ": results is missing");
         return new MessagePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

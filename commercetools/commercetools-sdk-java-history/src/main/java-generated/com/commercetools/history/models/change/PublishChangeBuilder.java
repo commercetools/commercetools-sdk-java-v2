@@ -21,7 +21,7 @@ public final class PublishChangeBuilder implements Builder<PublishChange> {
     }
 
     public PublishChange build() {
-        Objects.requireNonNull(change);
+        Objects.requireNonNull(change, PublishChange.class + ": change is missing");
         return new PublishChangeImpl(change);
     }
 

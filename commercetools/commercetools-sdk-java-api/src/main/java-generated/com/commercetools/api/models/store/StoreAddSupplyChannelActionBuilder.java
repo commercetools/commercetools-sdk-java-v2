@@ -22,7 +22,7 @@ public final class StoreAddSupplyChannelActionBuilder implements Builder<StoreAd
     }
 
     public StoreAddSupplyChannelAction build() {
-        Objects.requireNonNull(supplyChannel);
+        Objects.requireNonNull(supplyChannel, StoreAddSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreAddSupplyChannelActionImpl(supplyChannel);
     }
 

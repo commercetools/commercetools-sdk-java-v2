@@ -55,10 +55,10 @@ public final class AddLocalizedEnumValueChangeBuilder implements Builder<AddLoca
     }
 
     public AddLocalizedEnumValueChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddLocalizedEnumValueChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, AddLocalizedEnumValueChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, AddLocalizedEnumValueChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, AddLocalizedEnumValueChange.class + ": nextValue is missing");
         return new AddLocalizedEnumValueChangeImpl(change, fieldName, attributeName, nextValue);
     }
 

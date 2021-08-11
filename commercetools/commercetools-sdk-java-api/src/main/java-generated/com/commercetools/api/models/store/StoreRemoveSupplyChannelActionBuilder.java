@@ -22,7 +22,7 @@ public final class StoreRemoveSupplyChannelActionBuilder implements Builder<Stor
     }
 
     public StoreRemoveSupplyChannelAction build() {
-        Objects.requireNonNull(supplyChannel);
+        Objects.requireNonNull(supplyChannel, StoreRemoveSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreRemoveSupplyChannelActionImpl(supplyChannel);
     }
 

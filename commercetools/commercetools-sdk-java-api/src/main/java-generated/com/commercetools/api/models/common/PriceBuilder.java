@@ -144,8 +144,8 @@ public final class PriceBuilder implements Builder<Price> {
     }
 
     public Price build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(id, Price.class + ": id is missing");
+        Objects.requireNonNull(value, Price.class + ": value is missing");
         return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
             tiers);
     }

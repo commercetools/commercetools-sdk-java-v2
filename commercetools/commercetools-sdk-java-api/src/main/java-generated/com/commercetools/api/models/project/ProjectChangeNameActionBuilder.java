@@ -21,7 +21,7 @@ public final class ProjectChangeNameActionBuilder implements Builder<ProjectChan
     }
 
     public ProjectChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProjectChangeNameAction.class + ": name is missing");
         return new ProjectChangeNameActionImpl(name);
     }
 

@@ -21,7 +21,7 @@ public final class ReviewSetTargetActionBuilder implements Builder<ReviewSetTarg
     }
 
     public ReviewSetTargetAction build() {
-        Objects.requireNonNull(target);
+        Objects.requireNonNull(target, ReviewSetTargetAction.class + ": target is missing");
         return new ReviewSetTargetActionImpl(target);
     }
 

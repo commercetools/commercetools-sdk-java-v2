@@ -119,7 +119,7 @@ public final class MyShoppingListDraftBuilder implements Builder<MyShoppingListD
     }
 
     public MyShoppingListDraft build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyShoppingListDraft.class + ": name is missing");
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
             deleteDaysAfterLastModification, store);
     }

@@ -21,7 +21,7 @@ public final class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> 
     }
 
     public SuggestTokenizer build() {
-        Objects.requireNonNull(type);
+        Objects.requireNonNull(type, SuggestTokenizer.class + ": type is missing");
         return new SuggestTokenizerImpl(type);
     }
 

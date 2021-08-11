@@ -71,7 +71,7 @@ public final class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     public DeliveryParcel build() {
-        Objects.requireNonNull(deliveryId);
+        Objects.requireNonNull(deliveryId, DeliveryParcel.class + ": deliveryId is missing");
         return new DeliveryParcelImpl(deliveryId, measurements, trackingData, items);
     }
 

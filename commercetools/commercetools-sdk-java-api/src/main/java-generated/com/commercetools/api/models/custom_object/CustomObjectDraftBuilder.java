@@ -58,9 +58,9 @@ public final class CustomObjectDraftBuilder implements Builder<CustomObjectDraft
     }
 
     public CustomObjectDraft build() {
-        Objects.requireNonNull(container);
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(container, CustomObjectDraft.class + ": container is missing");
+        Objects.requireNonNull(key, CustomObjectDraft.class + ": key is missing");
+        Objects.requireNonNull(value, CustomObjectDraft.class + ": value is missing");
         return new CustomObjectDraftImpl(container, key, value, version);
     }
 

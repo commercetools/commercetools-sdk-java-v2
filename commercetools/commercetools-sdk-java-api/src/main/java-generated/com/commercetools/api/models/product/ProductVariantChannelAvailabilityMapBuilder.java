@@ -32,7 +32,7 @@ public final class ProductVariantChannelAvailabilityMapBuilder
     }
 
     public ProductVariantChannelAvailabilityMap build() {
-        Objects.requireNonNull(values);
+        Objects.requireNonNull(values, ProductVariantChannelAvailabilityMap.class + ": values are missing");
         return new ProductVariantChannelAvailabilityMapImpl(values);
     }
 

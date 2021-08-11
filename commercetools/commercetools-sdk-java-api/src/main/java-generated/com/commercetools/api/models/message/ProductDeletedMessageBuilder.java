@@ -159,15 +159,15 @@ public final class ProductDeletedMessageBuilder implements Builder<ProductDelete
     }
 
     public ProductDeletedMessage build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(sequenceNumber);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(resourceVersion);
-        Objects.requireNonNull(removedImageUrls);
-        Objects.requireNonNull(currentProjection);
+        Objects.requireNonNull(id, ProductDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(removedImageUrls, ProductDeletedMessage.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(currentProjection, ProductDeletedMessage.class + ": currentProjection is missing");
         return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
             currentProjection);

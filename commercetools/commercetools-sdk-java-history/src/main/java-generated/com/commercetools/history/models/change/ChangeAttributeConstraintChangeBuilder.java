@@ -56,10 +56,10 @@ public final class ChangeAttributeConstraintChangeBuilder implements Builder<Cha
     }
 
     public ChangeAttributeConstraintChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeAttributeConstraintChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, ChangeAttributeConstraintChange.class + ": attributeName is missing");
+        Objects.requireNonNull(previousValue, ChangeAttributeConstraintChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeAttributeConstraintChange.class + ": nextValue is missing");
         return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);
     }
 

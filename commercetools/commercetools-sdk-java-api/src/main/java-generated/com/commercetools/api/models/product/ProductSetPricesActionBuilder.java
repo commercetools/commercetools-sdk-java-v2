@@ -68,7 +68,7 @@ public final class ProductSetPricesActionBuilder implements Builder<ProductSetPr
     }
 
     public ProductSetPricesAction build() {
-        Objects.requireNonNull(prices);
+        Objects.requireNonNull(prices, ProductSetPricesAction.class + ": prices is missing");
         return new ProductSetPricesActionImpl(variantId, sku, prices, staged);
     }
 

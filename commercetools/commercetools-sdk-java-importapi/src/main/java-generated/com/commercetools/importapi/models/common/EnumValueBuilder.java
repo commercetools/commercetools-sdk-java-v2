@@ -32,8 +32,8 @@ public final class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     public EnumValue build() {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(key, EnumValue.class + ": key is missing");
+        Objects.requireNonNull(label, EnumValue.class + ": label is missing");
         return new EnumValueImpl(key, label);
     }
 

@@ -21,7 +21,8 @@ public final class CartRemoveCustomLineItemActionBuilder implements Builder<Cart
     }
 
     public CartRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId);
+        Objects.requireNonNull(customLineItemId,
+            CartRemoveCustomLineItemAction.class + ": customLineItemId is missing");
         return new CartRemoveCustomLineItemActionImpl(customLineItemId);
     }
 

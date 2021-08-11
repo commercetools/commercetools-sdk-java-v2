@@ -57,9 +57,9 @@ public final class ChangeFieldDefinitionOrderChangeBuilder implements Builder<Ch
     }
 
     public ChangeFieldDefinitionOrderChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeFieldDefinitionOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeFieldDefinitionOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeFieldDefinitionOrderChange.class + ": nextValue is missing");
         return new ChangeFieldDefinitionOrderChangeImpl(change, previousValue, nextValue);
     }
 

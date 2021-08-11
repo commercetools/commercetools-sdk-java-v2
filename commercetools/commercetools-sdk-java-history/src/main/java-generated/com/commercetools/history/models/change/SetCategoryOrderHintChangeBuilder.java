@@ -67,11 +67,11 @@ public final class SetCategoryOrderHintChangeBuilder implements Builder<SetCateg
     }
 
     public SetCategoryOrderHintChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(categoryId);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetCategoryOrderHintChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetCategoryOrderHintChange.class + ": catalogData is missing");
+        Objects.requireNonNull(categoryId, SetCategoryOrderHintChange.class + ": categoryId is missing");
+        Objects.requireNonNull(previousValue, SetCategoryOrderHintChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCategoryOrderHintChange.class + ": nextValue is missing");
         return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
     }
 

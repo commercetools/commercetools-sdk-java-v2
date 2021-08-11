@@ -54,10 +54,10 @@ public final class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange
     }
 
     public SetAssetKeyChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(asset);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, SetAssetKeyChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetKeyChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetKeyChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetKeyChange.class + ": previousValue is missing");
         return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);
     }
 

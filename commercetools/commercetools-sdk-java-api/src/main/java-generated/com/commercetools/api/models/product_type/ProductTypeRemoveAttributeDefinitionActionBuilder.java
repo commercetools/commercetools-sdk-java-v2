@@ -22,7 +22,7 @@ public final class ProductTypeRemoveAttributeDefinitionActionBuilder
     }
 
     public ProductTypeRemoveAttributeDefinitionAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, ProductTypeRemoveAttributeDefinitionAction.class + ": name is missing");
         return new ProductTypeRemoveAttributeDefinitionActionImpl(name);
     }
 

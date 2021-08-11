@@ -39,8 +39,8 @@ public final class ProductDiscountUpdateBuilder implements Builder<ProductDiscou
     }
 
     public ProductDiscountUpdate build() {
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(actions);
+        Objects.requireNonNull(version, ProductDiscountUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ProductDiscountUpdate.class + ": actions is missing");
         return new ProductDiscountUpdateImpl(version, actions);
     }
 

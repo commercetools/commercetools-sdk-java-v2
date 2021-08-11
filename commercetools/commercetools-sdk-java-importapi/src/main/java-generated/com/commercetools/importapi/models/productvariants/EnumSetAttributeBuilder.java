@@ -41,7 +41,7 @@ public final class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> 
     }
 
     public EnumSetAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, EnumSetAttribute.class + ": value is missing");
         return new EnumSetAttributeImpl(name, value);
     }
 

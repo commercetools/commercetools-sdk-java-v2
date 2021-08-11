@@ -21,7 +21,7 @@ public final class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewC
     }
 
     public ReviewCreatedMessagePayload build() {
-        Objects.requireNonNull(review);
+        Objects.requireNonNull(review, ReviewCreatedMessagePayload.class + ": review is missing");
         return new ReviewCreatedMessagePayloadImpl(review);
     }
 

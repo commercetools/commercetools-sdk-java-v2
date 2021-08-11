@@ -83,10 +83,10 @@ public final class ResourceDeletedDeliveryBuilder implements Builder<ResourceDel
     }
 
     public ResourceDeletedDelivery build() {
-        Objects.requireNonNull(projectKey);
-        Objects.requireNonNull(resource);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(modifiedAt);
+        Objects.requireNonNull(projectKey, ResourceDeletedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceDeletedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceDeletedDelivery.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceDeletedDelivery.class + ": modifiedAt is missing");
         return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             modifiedAt, dataErasure);
     }

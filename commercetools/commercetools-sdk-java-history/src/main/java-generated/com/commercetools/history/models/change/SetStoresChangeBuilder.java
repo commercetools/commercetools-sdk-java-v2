@@ -56,9 +56,9 @@ public final class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     public SetStoresChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetStoresChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetStoresChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetStoresChange.class + ": nextValue is missing");
         return new SetStoresChangeImpl(change, previousValue, nextValue);
     }
 

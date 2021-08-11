@@ -45,9 +45,9 @@ public final class AddShoppingListLineItemChangeBuilder implements Builder<AddSh
     }
 
     public AddShoppingListLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, AddShoppingListLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddShoppingListLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddShoppingListLineItemChange.class + ": nextValue is missing");
         return new AddShoppingListLineItemChangeImpl(change, previousValue, nextValue);
     }
 

@@ -47,8 +47,8 @@ public final class CustomerResetPasswordBuilder implements Builder<CustomerReset
     }
 
     public CustomerResetPassword build() {
-        Objects.requireNonNull(tokenValue);
-        Objects.requireNonNull(newPassword);
+        Objects.requireNonNull(tokenValue, CustomerResetPassword.class + ": tokenValue is missing");
+        Objects.requireNonNull(newPassword, CustomerResetPassword.class + ": newPassword is missing");
         return new CustomerResetPasswordImpl(tokenValue, newPassword, version);
     }
 

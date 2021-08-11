@@ -33,8 +33,8 @@ public final class TypeAddLocalizedEnumValueActionBuilder implements Builder<Typ
     }
 
     public TypeAddLocalizedEnumValueAction build() {
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(fieldName, TypeAddLocalizedEnumValueAction.class + ": fieldName is missing");
+        Objects.requireNonNull(value, TypeAddLocalizedEnumValueAction.class + ": value is missing");
         return new TypeAddLocalizedEnumValueActionImpl(fieldName, value);
     }
 

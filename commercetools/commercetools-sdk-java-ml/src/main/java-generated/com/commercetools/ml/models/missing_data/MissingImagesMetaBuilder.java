@@ -45,9 +45,9 @@ public final class MissingImagesMetaBuilder implements Builder<MissingImagesMeta
     }
 
     public MissingImagesMeta build() {
-        Objects.requireNonNull(productLevel);
-        Objects.requireNonNull(variantLevel);
-        Objects.requireNonNull(threshold);
+        Objects.requireNonNull(productLevel, MissingImagesMeta.class + ": productLevel is missing");
+        Objects.requireNonNull(variantLevel, MissingImagesMeta.class + ": variantLevel is missing");
+        Objects.requireNonNull(threshold, MissingImagesMeta.class + ": threshold is missing");
         return new MissingImagesMetaImpl(productLevel, variantLevel, threshold);
     }
 

@@ -52,7 +52,8 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     }
 
     public MyShoppingListSetTextLineItemCustomTypeAction build() {
-        Objects.requireNonNull(textLineItemId);
+        Objects.requireNonNull(textLineItemId,
+            MyShoppingListSetTextLineItemCustomTypeAction.class + ": textLineItemId is missing");
         return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);
     }
 

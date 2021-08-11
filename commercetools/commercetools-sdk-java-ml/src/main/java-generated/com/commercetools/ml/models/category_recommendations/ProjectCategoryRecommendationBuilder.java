@@ -44,9 +44,9 @@ public final class ProjectCategoryRecommendationBuilder implements Builder<Proje
     }
 
     public ProjectCategoryRecommendation build() {
-        Objects.requireNonNull(category);
-        Objects.requireNonNull(confidence);
-        Objects.requireNonNull(path);
+        Objects.requireNonNull(category, ProjectCategoryRecommendation.class + ": category is missing");
+        Objects.requireNonNull(confidence, ProjectCategoryRecommendation.class + ": confidence is missing");
+        Objects.requireNonNull(path, ProjectCategoryRecommendation.class + ": path is missing");
         return new ProjectCategoryRecommendationImpl(category, confidence, path);
     }
 

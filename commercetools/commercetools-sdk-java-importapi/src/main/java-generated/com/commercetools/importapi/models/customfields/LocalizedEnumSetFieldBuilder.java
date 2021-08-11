@@ -26,7 +26,7 @@ public final class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnum
     }
 
     public LocalizedEnumSetField build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, LocalizedEnumSetField.class + ": value is missing");
         return new LocalizedEnumSetFieldImpl(value);
     }
 

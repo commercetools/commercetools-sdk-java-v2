@@ -44,9 +44,9 @@ public final class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderS
     }
 
     public ChangeOrderStateChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeOrderStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeOrderStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeOrderStateChange.class + ": previousValue is missing");
         return new ChangeOrderStateChangeImpl(change, nextValue, previousValue);
     }
 

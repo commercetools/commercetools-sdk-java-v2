@@ -22,7 +22,7 @@ public final class AttributeSetTypeBuilder implements Builder<AttributeSetType> 
     }
 
     public AttributeSetType build() {
-        Objects.requireNonNull(elementType);
+        Objects.requireNonNull(elementType, AttributeSetType.class + ": elementType is missing");
         return new AttributeSetTypeImpl(elementType);
     }
 

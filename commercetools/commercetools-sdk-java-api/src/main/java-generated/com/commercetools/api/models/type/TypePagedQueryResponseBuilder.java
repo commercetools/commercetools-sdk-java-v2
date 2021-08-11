@@ -74,10 +74,10 @@ public final class TypePagedQueryResponseBuilder implements Builder<TypePagedQue
     }
 
     public TypePagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, TypePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, TypePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, TypePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, TypePagedQueryResponse.class + ": results is missing");
         return new TypePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

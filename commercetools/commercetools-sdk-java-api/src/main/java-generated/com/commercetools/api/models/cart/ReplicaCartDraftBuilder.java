@@ -36,7 +36,7 @@ public final class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> 
     }
 
     public ReplicaCartDraft build() {
-        Objects.requireNonNull(reference);
+        Objects.requireNonNull(reference, ReplicaCartDraft.class + ": reference is missing");
         return new ReplicaCartDraftImpl(reference, key);
     }
 

@@ -43,9 +43,9 @@ public final class ProductImageAddedMessagePayloadBuilder implements Builder<Pro
     }
 
     public ProductImageAddedMessagePayload build() {
-        Objects.requireNonNull(variantId);
-        Objects.requireNonNull(image);
-        Objects.requireNonNull(staged);
+        Objects.requireNonNull(variantId, ProductImageAddedMessagePayload.class + ": variantId is missing");
+        Objects.requireNonNull(image, ProductImageAddedMessagePayload.class + ": image is missing");
+        Objects.requireNonNull(staged, ProductImageAddedMessagePayload.class + ": staged is missing");
         return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);
     }
 

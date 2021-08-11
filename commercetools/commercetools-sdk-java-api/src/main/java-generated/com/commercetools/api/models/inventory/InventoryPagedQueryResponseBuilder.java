@@ -76,10 +76,10 @@ public final class InventoryPagedQueryResponseBuilder implements Builder<Invento
     }
 
     public InventoryPagedQueryResponse build() {
-        Objects.requireNonNull(limit);
-        Objects.requireNonNull(count);
-        Objects.requireNonNull(offset);
-        Objects.requireNonNull(results);
+        Objects.requireNonNull(limit, InventoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, InventoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, InventoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, InventoryPagedQueryResponse.class + ": results is missing");
         return new InventoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

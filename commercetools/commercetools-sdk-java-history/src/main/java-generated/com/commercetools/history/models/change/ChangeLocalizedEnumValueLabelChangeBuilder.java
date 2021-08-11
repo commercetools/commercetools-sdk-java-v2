@@ -78,12 +78,12 @@ public final class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder
     }
 
     public ChangeLocalizedEnumValueLabelChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(fieldName);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(valueKey);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, ChangeLocalizedEnumValueLabelChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueLabelChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, ChangeLocalizedEnumValueLabelChange.class + ": attributeName is missing");
+        Objects.requireNonNull(valueKey, ChangeLocalizedEnumValueLabelChange.class + ": valueKey is missing");
+        Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");
         return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,
             nextValue);
     }

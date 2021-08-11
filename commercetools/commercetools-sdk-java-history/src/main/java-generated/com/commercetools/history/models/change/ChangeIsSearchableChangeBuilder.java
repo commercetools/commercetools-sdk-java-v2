@@ -54,10 +54,10 @@ public final class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSe
     }
 
     public ChangeIsSearchableChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(attributeName);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeIsSearchableChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, ChangeIsSearchableChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeIsSearchableChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeIsSearchableChange.class + ": previousValue is missing");
         return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
     }
 

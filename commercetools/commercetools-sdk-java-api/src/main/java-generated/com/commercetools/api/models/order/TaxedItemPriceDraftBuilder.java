@@ -32,8 +32,8 @@ public final class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceD
     }
 
     public TaxedItemPriceDraft build() {
-        Objects.requireNonNull(totalNet);
-        Objects.requireNonNull(totalGross);
+        Objects.requireNonNull(totalNet, TaxedItemPriceDraft.class + ": totalNet is missing");
+        Objects.requireNonNull(totalGross, TaxedItemPriceDraft.class + ": totalGross is missing");
         return new TaxedItemPriceDraftImpl(totalNet, totalGross);
     }
 

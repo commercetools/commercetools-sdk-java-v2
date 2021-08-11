@@ -21,7 +21,7 @@ public final class MyCartChangeTaxModeActionBuilder implements Builder<MyCartCha
     }
 
     public MyCartChangeTaxModeAction build() {
-        Objects.requireNonNull(taxMode);
+        Objects.requireNonNull(taxMode, MyCartChangeTaxModeAction.class + ": taxMode is missing");
         return new MyCartChangeTaxModeActionImpl(taxMode);
     }
 

@@ -84,9 +84,9 @@ public final class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     public ModifiedBy build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(type);
-        Objects.requireNonNull(isPlatformClient);
+        Objects.requireNonNull(id, ModifiedBy.class + ": id is missing");
+        Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
+        Objects.requireNonNull(isPlatformClient, ModifiedBy.class + ": isPlatformClient is missing");
         return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
     }
 

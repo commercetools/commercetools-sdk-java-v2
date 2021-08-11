@@ -87,13 +87,13 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     public CustomLineItem build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(money);
-        Objects.requireNonNull(taxedPrice);
-        Objects.requireNonNull(totalPrice);
-        Objects.requireNonNull(slug);
-        Objects.requireNonNull(quantity);
+        Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
+        Objects.requireNonNull(money, CustomLineItem.class + ": money is missing");
+        Objects.requireNonNull(taxedPrice, CustomLineItem.class + ": taxedPrice is missing");
+        Objects.requireNonNull(totalPrice, CustomLineItem.class + ": totalPrice is missing");
+        Objects.requireNonNull(slug, CustomLineItem.class + ": slug is missing");
+        Objects.requireNonNull(quantity, CustomLineItem.class + ": quantity is missing");
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
     }
 

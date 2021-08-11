@@ -43,9 +43,9 @@ public final class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     public ProductVariant build() {
-        Objects.requireNonNull(product);
-        Objects.requireNonNull(staged);
-        Objects.requireNonNull(variantId);
+        Objects.requireNonNull(product, ProductVariant.class + ": product is missing");
+        Objects.requireNonNull(staged, ProductVariant.class + ": staged is missing");
+        Objects.requireNonNull(variantId, ProductVariant.class + ": variantId is missing");
         return new ProductVariantImpl(product, staged, variantId);
     }
 

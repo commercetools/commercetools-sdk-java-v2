@@ -21,7 +21,7 @@ public final class ProductTypeChangeDescriptionActionBuilder implements Builder<
     }
 
     public ProductTypeChangeDescriptionAction build() {
-        Objects.requireNonNull(description);
+        Objects.requireNonNull(description, ProductTypeChangeDescriptionAction.class + ": description is missing");
         return new ProductTypeChangeDescriptionActionImpl(description);
     }
 

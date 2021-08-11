@@ -36,7 +36,7 @@ public final class DiscountCodeSetCustomFieldActionBuilder implements Builder<Di
     }
 
     public DiscountCodeSetCustomFieldAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, DiscountCodeSetCustomFieldAction.class + ": name is missing");
         return new DiscountCodeSetCustomFieldActionImpl(name, value);
     }
 

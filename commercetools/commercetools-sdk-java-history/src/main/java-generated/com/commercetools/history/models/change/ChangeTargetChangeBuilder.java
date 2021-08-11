@@ -45,9 +45,9 @@ public final class ChangeTargetChangeBuilder implements Builder<ChangeTargetChan
     }
 
     public ChangeTargetChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, ChangeTargetChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeTargetChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeTargetChange.class + ": previousValue is missing");
         return new ChangeTargetChangeImpl(change, nextValue, previousValue);
     }
 

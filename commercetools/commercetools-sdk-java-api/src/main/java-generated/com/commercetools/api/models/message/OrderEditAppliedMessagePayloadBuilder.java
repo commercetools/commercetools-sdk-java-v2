@@ -34,8 +34,8 @@ public final class OrderEditAppliedMessagePayloadBuilder implements Builder<Orde
     }
 
     public OrderEditAppliedMessagePayload build() {
-        Objects.requireNonNull(edit);
-        Objects.requireNonNull(result);
+        Objects.requireNonNull(edit, OrderEditAppliedMessagePayload.class + ": edit is missing");
+        Objects.requireNonNull(result, OrderEditAppliedMessagePayload.class + ": result is missing");
         return new OrderEditAppliedMessagePayloadImpl(edit, result);
     }
 

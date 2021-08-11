@@ -43,9 +43,9 @@ public final class ImageBuilder implements Builder<Image> {
     }
 
     public Image build() {
-        Objects.requireNonNull(url);
-        Objects.requireNonNull(dimensions);
-        Objects.requireNonNull(label);
+        Objects.requireNonNull(url, Image.class + ": url is missing");
+        Objects.requireNonNull(dimensions, Image.class + ": dimensions is missing");
+        Objects.requireNonNull(label, Image.class + ": label is missing");
         return new ImageImpl(url, dimensions, label);
     }
 

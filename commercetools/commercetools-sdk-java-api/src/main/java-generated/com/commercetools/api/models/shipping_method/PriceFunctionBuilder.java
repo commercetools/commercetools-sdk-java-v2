@@ -32,8 +32,8 @@ public final class PriceFunctionBuilder implements Builder<PriceFunction> {
     }
 
     public PriceFunction build() {
-        Objects.requireNonNull(currencyCode);
-        Objects.requireNonNull(function);
+        Objects.requireNonNull(currencyCode, PriceFunction.class + ": currencyCode is missing");
+        Objects.requireNonNull(function, PriceFunction.class + ": function is missing");
         return new PriceFunctionImpl(currencyCode, function);
     }
 

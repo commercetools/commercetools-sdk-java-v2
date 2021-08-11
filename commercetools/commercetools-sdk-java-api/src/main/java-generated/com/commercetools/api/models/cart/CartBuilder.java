@@ -464,19 +464,19 @@ public final class CartBuilder implements Builder<Cart> {
     }
 
     public Cart build() {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(version);
-        Objects.requireNonNull(createdAt);
-        Objects.requireNonNull(lastModifiedAt);
-        Objects.requireNonNull(lineItems);
-        Objects.requireNonNull(customLineItems);
-        Objects.requireNonNull(totalPrice);
-        Objects.requireNonNull(cartState);
-        Objects.requireNonNull(taxMode);
-        Objects.requireNonNull(taxRoundingMode);
-        Objects.requireNonNull(taxCalculationMode);
-        Objects.requireNonNull(refusedGifts);
-        Objects.requireNonNull(origin);
+        Objects.requireNonNull(id, Cart.class + ": id is missing");
+        Objects.requireNonNull(version, Cart.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Cart.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Cart.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, Cart.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, Cart.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, Cart.class + ": totalPrice is missing");
+        Objects.requireNonNull(cartState, Cart.class + ": cartState is missing");
+        Objects.requireNonNull(taxMode, Cart.class + ": taxMode is missing");
+        Objects.requireNonNull(taxRoundingMode, Cart.class + ": taxRoundingMode is missing");
+        Objects.requireNonNull(taxCalculationMode, Cart.class + ": taxCalculationMode is missing");
+        Objects.requireNonNull(refusedGifts, Cart.class + ": refusedGifts is missing");
+        Objects.requireNonNull(origin, Cart.class + ": origin is missing");
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,

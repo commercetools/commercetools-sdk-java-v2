@@ -33,8 +33,8 @@ public final class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     public ImportSummary build() {
-        Objects.requireNonNull(states);
-        Objects.requireNonNull(total);
+        Objects.requireNonNull(states, ImportSummary.class + ": states is missing");
+        Objects.requireNonNull(total, ImportSummary.class + ": total is missing");
         return new ImportSummaryImpl(states, total);
     }
 

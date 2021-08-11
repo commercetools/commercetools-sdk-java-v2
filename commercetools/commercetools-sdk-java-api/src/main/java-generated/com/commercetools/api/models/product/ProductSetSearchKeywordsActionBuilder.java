@@ -37,7 +37,7 @@ public final class ProductSetSearchKeywordsActionBuilder implements Builder<Prod
     }
 
     public ProductSetSearchKeywordsAction build() {
-        Objects.requireNonNull(searchKeywords);
+        Objects.requireNonNull(searchKeywords, ProductSetSearchKeywordsAction.class + ": searchKeywords is missing");
         return new ProductSetSearchKeywordsActionImpl(searchKeywords, staged);
     }
 

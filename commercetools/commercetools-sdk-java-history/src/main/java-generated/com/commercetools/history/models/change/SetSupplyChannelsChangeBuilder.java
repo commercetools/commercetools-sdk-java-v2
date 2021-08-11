@@ -57,9 +57,9 @@ public final class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyCh
     }
 
     public SetSupplyChannelsChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetSupplyChannelsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetSupplyChannelsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSupplyChannelsChange.class + ": nextValue is missing");
         return new SetSupplyChannelsChangeImpl(change, previousValue, nextValue);
     }
 

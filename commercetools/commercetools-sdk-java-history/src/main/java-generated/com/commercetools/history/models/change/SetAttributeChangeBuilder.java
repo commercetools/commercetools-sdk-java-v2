@@ -54,10 +54,10 @@ public final class SetAttributeChangeBuilder implements Builder<SetAttributeChan
     }
 
     public SetAttributeChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(catalogData);
-        Objects.requireNonNull(previousValue);
-        Objects.requireNonNull(nextValue);
+        Objects.requireNonNull(change, SetAttributeChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetAttributeChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetAttributeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetAttributeChange.class + ": nextValue is missing");
         return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

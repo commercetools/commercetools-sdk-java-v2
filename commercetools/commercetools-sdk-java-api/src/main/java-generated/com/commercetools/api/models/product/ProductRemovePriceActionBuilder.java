@@ -36,7 +36,7 @@ public final class ProductRemovePriceActionBuilder implements Builder<ProductRem
     }
 
     public ProductRemovePriceAction build() {
-        Objects.requireNonNull(priceId);
+        Objects.requireNonNull(priceId, ProductRemovePriceAction.class + ": priceId is missing");
         return new ProductRemovePriceActionImpl(priceId, staged);
     }
 

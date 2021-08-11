@@ -21,7 +21,7 @@ public final class MyShoppingListChangeNameActionBuilder implements Builder<MySh
     }
 
     public MyShoppingListChangeNameAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyShoppingListChangeNameAction.class + ": name is missing");
         return new MyShoppingListChangeNameActionImpl(name);
     }
 

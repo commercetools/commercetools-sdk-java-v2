@@ -36,7 +36,7 @@ public final class DateAttributeBuilder implements Builder<DateAttribute> {
     }
 
     public DateAttribute build() {
-        Objects.requireNonNull(value);
+        Objects.requireNonNull(value, DateAttribute.class + ": value is missing");
         return new DateAttributeImpl(name, value);
     }
 

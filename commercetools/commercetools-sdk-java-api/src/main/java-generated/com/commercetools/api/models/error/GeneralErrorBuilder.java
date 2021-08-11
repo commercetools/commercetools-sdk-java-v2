@@ -21,7 +21,7 @@ public final class GeneralErrorBuilder implements Builder<GeneralError> {
     }
 
     public GeneralError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, GeneralError.class + ": message is missing");
         return new GeneralErrorImpl(message);
     }
 

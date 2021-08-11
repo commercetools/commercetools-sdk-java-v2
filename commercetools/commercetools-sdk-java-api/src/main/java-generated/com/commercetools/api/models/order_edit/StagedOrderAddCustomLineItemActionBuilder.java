@@ -101,9 +101,9 @@ public final class StagedOrderAddCustomLineItemActionBuilder implements Builder<
     }
 
     public StagedOrderAddCustomLineItemAction build() {
-        Objects.requireNonNull(money);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(slug);
+        Objects.requireNonNull(money, StagedOrderAddCustomLineItemAction.class + ": money is missing");
+        Objects.requireNonNull(name, StagedOrderAddCustomLineItemAction.class + ": name is missing");
+        Objects.requireNonNull(slug, StagedOrderAddCustomLineItemAction.class + ": slug is missing");
         return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom,
             externalTaxRate);
     }

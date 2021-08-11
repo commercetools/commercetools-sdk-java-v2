@@ -32,8 +32,8 @@ public final class SubRateBuilder implements Builder<SubRate> {
     }
 
     public SubRate build() {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(amount);
+        Objects.requireNonNull(name, SubRate.class + ": name is missing");
+        Objects.requireNonNull(amount, SubRate.class + ": amount is missing");
         return new SubRateImpl(name, amount);
     }
 

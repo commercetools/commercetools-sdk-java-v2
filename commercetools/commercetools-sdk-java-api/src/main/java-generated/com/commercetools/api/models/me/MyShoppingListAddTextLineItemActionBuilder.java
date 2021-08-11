@@ -78,7 +78,7 @@ public final class MyShoppingListAddTextLineItemActionBuilder implements Builder
     }
 
     public MyShoppingListAddTextLineItemAction build() {
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(name, MyShoppingListAddTextLineItemAction.class + ": name is missing");
         return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
     }
 

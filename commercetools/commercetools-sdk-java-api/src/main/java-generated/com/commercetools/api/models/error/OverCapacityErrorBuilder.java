@@ -21,7 +21,7 @@ public final class OverCapacityErrorBuilder implements Builder<OverCapacityError
     }
 
     public OverCapacityError build() {
-        Objects.requireNonNull(message);
+        Objects.requireNonNull(message, OverCapacityError.class + ": message is missing");
         return new OverCapacityErrorImpl(message);
     }
 

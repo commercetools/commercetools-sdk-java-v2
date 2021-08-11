@@ -45,9 +45,9 @@ public final class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCu
     }
 
     public RemoveCustomLineItemChange build() {
-        Objects.requireNonNull(change);
-        Objects.requireNonNull(nextValue);
-        Objects.requireNonNull(previousValue);
+        Objects.requireNonNull(change, RemoveCustomLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, RemoveCustomLineItemChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, RemoveCustomLineItemChange.class + ": previousValue is missing");
         return new RemoveCustomLineItemChangeImpl(change, nextValue, previousValue);
     }
 

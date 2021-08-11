@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShoppingListStoreSetMessagePayloadBuilder implements Builder<ShoppingListStoreSetMessagePayload> {
 
     private com.commercetools.api.models.store.StoreKeyReference store;
+
+    public ShoppingListStoreSetMessagePayloadBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ShoppingListStoreSetMessagePayloadBuilder store(
             final com.commercetools.api.models.store.StoreKeyReference store) {

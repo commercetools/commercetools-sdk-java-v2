@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,6 +34,12 @@ public final class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    public StoreDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public StoreDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -54,6 +61,24 @@ public final class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    public StoreDraftBuilder withDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannels = new ArrayList<>();
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public StoreDraftBuilder plusDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        if (this.distributionChannels == null) {
+            this.distributionChannels = new ArrayList<>();
+        }
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
     public StoreDraftBuilder distributionChannels(
             @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
         this.distributionChannels = distributionChannels;
@@ -66,9 +91,33 @@ public final class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    public StoreDraftBuilder withSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannels = new ArrayList<>();
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public StoreDraftBuilder plusSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        if (this.supplyChannels == null) {
+            this.supplyChannels = new ArrayList<>();
+        }
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
     public StoreDraftBuilder supplyChannels(
             @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
         this.supplyChannels = supplyChannels;
+        return this;
+    }
+
+    public StoreDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

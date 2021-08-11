@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,13 @@ public final class RemoveLocalizedEnumValuesChangeBuilder implements Builder<Rem
 
     public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public RemoveLocalizedEnumValuesChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of())
+                .build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class AddCustomLineItemChangeBuilder implements Builder<AddCustomLi
     }
 
     public AddCustomLineItemChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
+        return this;
+    }
+
+    public AddCustomLineItemChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomLineItem nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public AddCustomLineItemChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
         return this;
     }
 

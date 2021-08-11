@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,6 +22,12 @@ public final class ChangeLineItemQuantityChangeBuilder implements Builder<Change
 
     public ChangeLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeLineItemQuantityChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

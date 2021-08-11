@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -35,6 +36,12 @@ public final class AttributeDefinitionBuilder implements Builder<AttributeDefini
         return this;
     }
 
+    public AttributeDefinitionBuilder label(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AttributeDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {
         this.label = label;
         return this;
@@ -48,6 +55,12 @@ public final class AttributeDefinitionBuilder implements Builder<AttributeDefini
     public AttributeDefinitionBuilder attributeConstraint(
             final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
+        return this;
+    }
+
+    public AttributeDefinitionBuilder inputTip(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.inputTip = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,12 @@ public final class OrderTransitionStateActionBuilder implements Builder<OrderTra
 
     @Nullable
     private Boolean force;
+
+    public OrderTransitionStateActionBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
 
     public OrderTransitionStateActionBuilder state(
             final com.commercetools.api.models.state.StateResourceIdentifier state) {

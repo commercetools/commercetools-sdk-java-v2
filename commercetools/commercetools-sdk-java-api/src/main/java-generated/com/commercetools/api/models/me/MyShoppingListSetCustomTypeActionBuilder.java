@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,8 +19,20 @@ public final class MyShoppingListSetCustomTypeActionBuilder implements Builder<M
     private com.commercetools.api.models.type.FieldContainer fields;
 
     public MyShoppingListSetCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public MyShoppingListSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public MyShoppingListSetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 

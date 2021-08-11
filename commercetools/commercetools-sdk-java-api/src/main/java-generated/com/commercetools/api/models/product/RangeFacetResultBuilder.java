@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,22 @@ public final class RangeFacetResultBuilder implements Builder<RangeFacetResult> 
 
     public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetResultRange... ranges) {
         this.ranges = new ArrayList<>(Arrays.asList(ranges));
+        return this;
+    }
+
+    public RangeFacetResultBuilder withRanges(
+            Function<com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder> builder) {
+        this.ranges = new ArrayList<>();
+        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());
+        return this;
+    }
+
+    public RangeFacetResultBuilder plusRanges(
+            Function<com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder> builder) {
+        if (this.ranges == null) {
+            this.ranges = new ArrayList<>();
+        }
+        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());
         return this;
     }
 

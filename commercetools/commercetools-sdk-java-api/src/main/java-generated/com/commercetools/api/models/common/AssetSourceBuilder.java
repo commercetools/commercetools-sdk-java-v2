@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,12 @@ public final class AssetSourceBuilder implements Builder<AssetSource> {
 
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public AssetSourceBuilder dimensions(
+            Function<com.commercetools.api.models.common.AssetDimensionsBuilder, com.commercetools.api.models.common.AssetDimensionsBuilder> builder) {
+        this.dimensions = builder.apply(com.commercetools.api.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
 

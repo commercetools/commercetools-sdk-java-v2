@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,22 @@ public final class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSe
 
     public OrderSetDeliveryItemsActionBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public OrderSetDeliveryItemsActionBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public OrderSetDeliveryItemsActionBuilder plusItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -16,6 +17,12 @@ public final class ProductSetMetaTitleActionBuilder implements Builder<ProductSe
 
     @Nullable
     private Boolean staged;
+
+    public ProductSetMetaTitleActionBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ProductSetMetaTitleActionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {

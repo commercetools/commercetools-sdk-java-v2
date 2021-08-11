@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,24 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
         this.values = new ArrayList<>(Arrays.asList(values));
+        return this;
+    }
+
+    public ProductTypeChangeLocalizedEnumValueOrderActionBuilder withValues(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -42,6 +43,22 @@ public final class ProductVariantImportDraftBuilder implements Builder<ProductVa
         return this;
     }
 
+    public ProductVariantImportDraftBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        return this;
+    }
+
     public ProductVariantImportDraftBuilder prices(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
@@ -54,6 +71,22 @@ public final class ProductVariantImportDraftBuilder implements Builder<ProductVa
         return this;
     }
 
+    public ProductVariantImportDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
     public ProductVariantImportDraftBuilder attributes(
             @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
@@ -63,6 +96,22 @@ public final class ProductVariantImportDraftBuilder implements Builder<ProductVa
     public ProductVariantImportDraftBuilder images(
             @Nullable final com.commercetools.api.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder withImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
         return this;
     }
 

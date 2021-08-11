@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -30,6 +31,12 @@ public final class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
+        return this;
+    }
+
+    public LastModifiedByBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 

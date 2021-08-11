@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -65,8 +66,20 @@ public final class LineItemStateTransitionMessageBuilder implements Builder<Line
     }
 
     public LineItemStateTransitionMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemStateTransitionMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public LineItemStateTransitionMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -93,6 +106,14 @@ public final class LineItemStateTransitionMessageBuilder implements Builder<Line
     }
 
     public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -114,8 +135,20 @@ public final class LineItemStateTransitionMessageBuilder implements Builder<Line
     }
 
     public LineItemStateTransitionMessageBuilder fromState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemStateTransitionMessageBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
+        return this;
+    }
+
+    public LineItemStateTransitionMessageBuilder toState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

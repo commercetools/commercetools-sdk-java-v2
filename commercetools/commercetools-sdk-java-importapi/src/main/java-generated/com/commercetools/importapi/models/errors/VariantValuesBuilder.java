@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.errors;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -25,6 +26,22 @@ public final class VariantValuesBuilder implements Builder<VariantValues> {
 
     public VariantValuesBuilder prices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+
+    public VariantValuesBuilder withPrices(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
+        return this;
+    }
+
+    public VariantValuesBuilder plusPrices(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
 

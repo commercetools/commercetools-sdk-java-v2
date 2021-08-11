@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class ItemStateBuilder implements Builder<ItemState> {
 
     public ItemStateBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public ItemStateBuilder state(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,8 +28,20 @@ public final class SetImageLabelChangeBuilder implements Builder<SetImageLabelCh
         return this;
     }
 
+    public SetImageLabelChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build();
+        return this;
+    }
+
     public SetImageLabelChangeBuilder previousValue(final com.commercetools.history.models.common.Image previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetImageLabelChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build();
         return this;
     }
 

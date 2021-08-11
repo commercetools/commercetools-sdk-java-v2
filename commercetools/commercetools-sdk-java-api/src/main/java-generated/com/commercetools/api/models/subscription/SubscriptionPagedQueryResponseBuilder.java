@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class SubscriptionPagedQueryResponseBuilder implements Builder<Subs
     public SubscriptionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.subscription.Subscription... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public SubscriptionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.SubscriptionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.SubscriptionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()).build());
         return this;
     }
 

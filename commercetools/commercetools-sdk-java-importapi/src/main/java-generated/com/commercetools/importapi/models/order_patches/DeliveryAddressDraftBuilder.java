@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class DeliveryAddressDraftBuilder implements Builder<DeliveryAddres
 
     public DeliveryAddressDraftBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    public DeliveryAddressDraftBuilder address(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
         return this;
     }
 

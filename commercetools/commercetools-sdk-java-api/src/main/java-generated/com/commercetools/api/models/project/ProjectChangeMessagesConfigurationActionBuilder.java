@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -11,6 +12,14 @@ public final class ProjectChangeMessagesConfigurationActionBuilder
         implements Builder<ProjectChangeMessagesConfigurationAction> {
 
     private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
+
+    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
+            Function<com.commercetools.api.models.message.MessageConfigurationDraftBuilder, com.commercetools.api.models.message.MessageConfigurationDraftBuilder> builder) {
+        this.messagesConfiguration = builder
+                .apply(com.commercetools.api.models.message.MessageConfigurationDraftBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
             final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {

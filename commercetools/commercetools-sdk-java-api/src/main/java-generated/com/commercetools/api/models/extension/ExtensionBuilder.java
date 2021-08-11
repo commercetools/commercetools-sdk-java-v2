@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -56,8 +57,20 @@ public final class ExtensionBuilder implements Builder<Extension> {
     }
 
     public ExtensionBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ExtensionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ExtensionBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -78,6 +91,22 @@ public final class ExtensionBuilder implements Builder<Extension> {
 
     public ExtensionBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
+        return this;
+    }
+
+    public ExtensionBuilder withTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        this.triggers = new ArrayList<>();
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionBuilder plusTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        if (this.triggers == null) {
+            this.triggers = new ArrayList<>();
+        }
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
 

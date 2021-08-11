@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -11,6 +12,12 @@ public final class PaymentTransactionAddedMessagePayloadBuilder
         implements Builder<PaymentTransactionAddedMessagePayload> {
 
     private com.commercetools.api.models.payment.Transaction transaction;
+
+    public PaymentTransactionAddedMessagePayloadBuilder transaction(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build();
+        return this;
+    }
 
     public PaymentTransactionAddedMessagePayloadBuilder transaction(
             final com.commercetools.api.models.payment.Transaction transaction) {

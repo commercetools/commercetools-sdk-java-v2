@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,13 @@ public final class ProductTypeAddPlainEnumValueActionBuilder implements Builder<
 
     public ProductTypeAddPlainEnumValueActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public ProductTypeAddPlainEnumValueActionBuilder value(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of())
+                .build();
         return this;
     }
 

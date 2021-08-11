@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +17,24 @@ public final class MissingImagesMetaBuilder implements Builder<MissingImagesMeta
     private Long threshold;
 
     public MissingImagesMetaBuilder productLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingImagesProductLevelBuilder, com.commercetools.ml.models.missing_data.MissingImagesProductLevelBuilder> builder) {
+        this.productLevel = builder
+                .apply(com.commercetools.ml.models.missing_data.MissingImagesProductLevelBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MissingImagesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel) {
         this.productLevel = productLevel;
+        return this;
+    }
+
+    public MissingImagesMetaBuilder variantLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingImagesVariantLevelBuilder, com.commercetools.ml.models.missing_data.MissingImagesVariantLevelBuilder> builder) {
+        this.variantLevel = builder
+                .apply(com.commercetools.ml.models.missing_data.MissingImagesVariantLevelBuilder.of())
+                .build();
         return this;
     }
 

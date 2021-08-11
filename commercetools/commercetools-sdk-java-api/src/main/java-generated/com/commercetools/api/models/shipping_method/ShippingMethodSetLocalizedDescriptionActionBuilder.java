@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -14,6 +15,13 @@ public final class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
+
+    public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {

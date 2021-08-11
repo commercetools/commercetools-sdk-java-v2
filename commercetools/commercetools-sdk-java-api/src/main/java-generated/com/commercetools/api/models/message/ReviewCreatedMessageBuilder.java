@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -57,8 +58,20 @@ public final class ReviewCreatedMessageBuilder implements Builder<ReviewCreatedM
     }
 
     public ReviewCreatedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -84,8 +97,22 @@ public final class ReviewCreatedMessageBuilder implements Builder<ReviewCreatedM
     }
 
     public ReviewCreatedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder review(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.review = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
         return this;
     }
 

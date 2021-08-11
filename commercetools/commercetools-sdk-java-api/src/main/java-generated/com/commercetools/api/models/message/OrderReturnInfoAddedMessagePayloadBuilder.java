@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderReturnInfoAddedMessagePayload> {
 
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
+
+    public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build();
+        return this;
+    }
 
     public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
             final com.commercetools.api.models.order.ReturnInfo returnInfo) {

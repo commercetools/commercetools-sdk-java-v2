@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +17,22 @@ public final class ItemShippingDetailsBuilder implements Builder<ItemShippingDet
     public ItemShippingDetailsBuilder targets(
             final com.commercetools.history.models.common.ItemShippingTarget... targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
+        return this;
+    }
+
+    public ItemShippingDetailsBuilder withTargets(
+            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
+        this.targets = new ArrayList<>();
+        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());
+        return this;
+    }
+
+    public ItemShippingDetailsBuilder plusTargets(
+            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
+        if (this.targets == null) {
+            this.targets = new ArrayList<>();
+        }
+        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 

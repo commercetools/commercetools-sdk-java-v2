@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -14,6 +15,13 @@ public final class InventoryEntrySetSupplyChannelActionBuilder
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+
+    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

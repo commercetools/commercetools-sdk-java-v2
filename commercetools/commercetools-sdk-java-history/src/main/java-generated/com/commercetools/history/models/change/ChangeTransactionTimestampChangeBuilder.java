@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,6 +20,14 @@ public final class ChangeTransactionTimestampChangeBuilder implements Builder<Ch
 
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeTransactionTimestampChangeBuilder transaction(
+            Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
+        this.transaction = builder
+                .apply(com.commercetools.history.models.change_value.TransactionChangeValueBuilder.of())
+                .build();
         return this;
     }
 

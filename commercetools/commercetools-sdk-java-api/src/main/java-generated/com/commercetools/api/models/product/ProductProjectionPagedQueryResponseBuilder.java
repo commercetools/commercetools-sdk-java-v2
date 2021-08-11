@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class ProductProjectionPagedQueryResponseBuilder implements Builder
     public ProductProjectionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product.ProductProjection... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ProductProjectionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductProjectionPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
         return this;
     }
 

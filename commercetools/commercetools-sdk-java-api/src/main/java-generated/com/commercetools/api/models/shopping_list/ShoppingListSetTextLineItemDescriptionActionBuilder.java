@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,12 @@ public final class ShoppingListSetTextLineItemDescriptionActionBuilder
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    public ShoppingListSetTextLineItemDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

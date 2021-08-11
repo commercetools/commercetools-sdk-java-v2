@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     public ZoneReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ZoneReferenceBuilder obj(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build();
         return this;
     }
 

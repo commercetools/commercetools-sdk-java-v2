@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,24 @@ public final class ItemShippingDetailsDraftBuilder implements Builder<ItemShippi
     public ItemShippingDetailsDraftBuilder targets(
             final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
+        return this;
+    }
+
+    public ItemShippingDetailsDraftBuilder withTargets(
+            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
+        this.targets = new ArrayList<>();
+        this.targets
+                .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
+        return this;
+    }
+
+    public ItemShippingDetailsDraftBuilder plusTargets(
+            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
+        if (this.targets == null) {
+            this.targets = new ArrayList<>();
+        }
+        this.targets
+                .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 

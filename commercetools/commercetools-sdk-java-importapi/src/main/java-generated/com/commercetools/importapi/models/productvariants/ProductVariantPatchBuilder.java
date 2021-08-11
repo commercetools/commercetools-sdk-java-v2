@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,8 +21,23 @@ public final class ProductVariantPatchBuilder implements Builder<ProductVariantP
     private Boolean staged;
 
     public ProductVariantPatchBuilder productVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductVariantPatchBuilder productVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
+        return this;
+    }
+
+    public ProductVariantPatchBuilder attributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.AttributesBuilder> builder) {
+        this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of())
+                .build();
         return this;
     }
 

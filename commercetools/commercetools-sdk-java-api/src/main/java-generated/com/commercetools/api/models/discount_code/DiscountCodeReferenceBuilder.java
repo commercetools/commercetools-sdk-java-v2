@@ -2,6 +2,7 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class DiscountCodeReferenceBuilder implements Builder<DiscountCodeR
 
     public DiscountCodeReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public DiscountCodeReferenceBuilder obj(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build();
         return this;
     }
 

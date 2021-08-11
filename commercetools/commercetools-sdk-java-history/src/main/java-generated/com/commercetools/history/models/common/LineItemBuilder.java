@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -34,6 +35,12 @@ public final class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    public LineItemBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public LineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
@@ -41,6 +48,12 @@ public final class LineItemBuilder implements Builder<LineItem> {
 
     public LineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public LineItemBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -54,8 +67,20 @@ public final class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    public LineItemBuilder productSlug(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.productSlug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public LineItemBuilder productSlug(final com.commercetools.history.models.common.LocalizedString productSlug) {
         this.productSlug = productSlug;
+        return this;
+    }
+
+    public LineItemBuilder productType(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -66,6 +91,12 @@ public final class LineItemBuilder implements Builder<LineItem> {
 
     public LineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public LineItemBuilder variant(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
         return this;
     }
 

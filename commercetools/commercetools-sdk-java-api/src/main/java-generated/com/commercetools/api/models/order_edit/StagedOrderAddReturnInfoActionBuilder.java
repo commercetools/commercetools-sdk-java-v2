@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,6 +28,22 @@ public final class StagedOrderAddReturnInfoActionBuilder implements Builder<Stag
     public StagedOrderAddReturnInfoActionBuilder items(
             final com.commercetools.api.models.order.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public StagedOrderAddReturnInfoActionBuilder withItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderAddReturnInfoActionBuilder plusItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
         return this;
     }
 

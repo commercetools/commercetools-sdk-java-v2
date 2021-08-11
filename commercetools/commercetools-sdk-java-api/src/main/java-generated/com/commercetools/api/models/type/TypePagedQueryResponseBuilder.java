@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class TypePagedQueryResponseBuilder implements Builder<TypePagedQue
 
     public TypePagedQueryResponseBuilder results(final com.commercetools.api.models.type.Type... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
         return this;
     }
 

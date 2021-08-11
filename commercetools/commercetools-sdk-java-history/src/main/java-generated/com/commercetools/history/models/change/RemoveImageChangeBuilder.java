@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -33,6 +34,22 @@ public final class RemoveImageChangeBuilder implements Builder<RemoveImageChange
         return this;
     }
 
+    public RemoveImageChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public RemoveImageChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
     public RemoveImageChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
         this.previousValue = previousValue;
@@ -41,6 +58,22 @@ public final class RemoveImageChangeBuilder implements Builder<RemoveImageChange
 
     public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public RemoveImageChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public RemoveImageChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
 

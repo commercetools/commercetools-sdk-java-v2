@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,14 @@ public final class StagedOrderSetLineItemTotalPriceActionBuilder
 
     public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
+                .build();
         return this;
     }
 

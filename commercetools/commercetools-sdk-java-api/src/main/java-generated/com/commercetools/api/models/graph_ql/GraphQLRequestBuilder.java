@@ -2,6 +2,7 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +27,12 @@ public final class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
         this.operationName = operationName;
+        return this;
+    }
+
+    public GraphQLRequestBuilder variables(
+            Function<com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder, com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder> builder) {
+        this.variables = builder.apply(com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder.of()).build();
         return this;
     }
 

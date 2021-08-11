@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -11,6 +12,12 @@ public final class CustomerAddressChangedMessagePayloadBuilder
         implements Builder<CustomerAddressChangedMessagePayload> {
 
     private com.commercetools.api.models.common.Address address;
+
+    public CustomerAddressChangedMessagePayloadBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
 
     public CustomerAddressChangedMessagePayloadBuilder address(
             final com.commercetools.api.models.common.Address address) {

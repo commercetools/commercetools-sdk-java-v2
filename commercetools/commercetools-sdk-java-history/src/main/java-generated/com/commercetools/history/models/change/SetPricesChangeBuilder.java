@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -39,6 +40,22 @@ public final class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    public SetPricesChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    public SetPricesChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
     public SetPricesChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Price> previousValue) {
         this.previousValue = previousValue;
@@ -47,6 +64,22 @@ public final class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     public SetPricesChangeBuilder nextValue(final com.commercetools.history.models.common.Price... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public SetPricesChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    public SetPricesChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
         return this;
     }
 

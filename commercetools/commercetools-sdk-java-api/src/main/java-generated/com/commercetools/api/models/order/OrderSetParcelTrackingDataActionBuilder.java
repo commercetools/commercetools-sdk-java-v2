@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class OrderSetParcelTrackingDataActionBuilder implements Builder<Or
 
     public OrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public OrderSetParcelTrackingDataActionBuilder trackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
 

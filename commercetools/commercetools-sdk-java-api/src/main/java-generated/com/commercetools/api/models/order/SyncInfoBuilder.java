@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,12 @@ public final class SyncInfoBuilder implements Builder<SyncInfo> {
     private String externalId;
 
     private java.time.ZonedDateTime syncedAt;
+
+    public SyncInfoBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
 
     public SyncInfoBuilder channel(final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;

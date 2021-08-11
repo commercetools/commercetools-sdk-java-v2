@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ShoppingListReferenceBuilder implements Builder<ShoppingListR
 
     public ShoppingListReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ShoppingListReferenceBuilder obj(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build();
         return this;
     }
 

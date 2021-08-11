@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.producttypes;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -38,6 +39,24 @@ public final class ProductTypeImportBuilder implements Builder<ProductTypeImport
     public ProductTypeImportBuilder attributes(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductTypeImportBuilder withAttributes(
+            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeImportBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

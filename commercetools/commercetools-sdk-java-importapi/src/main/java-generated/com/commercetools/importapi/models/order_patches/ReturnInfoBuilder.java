@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -21,6 +22,24 @@ public final class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     public ReturnInfoBuilder items(final com.commercetools.importapi.models.order_patches.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public ReturnInfoBuilder withItems(
+            Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(
+            builder.apply(com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ReturnInfoBuilder plusItems(
+            Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(
+            builder.apply(com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder.of()).build());
         return this;
     }
 

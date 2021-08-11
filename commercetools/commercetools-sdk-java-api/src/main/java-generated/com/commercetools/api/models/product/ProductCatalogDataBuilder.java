@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,8 +23,20 @@ public final class ProductCatalogDataBuilder implements Builder<ProductCatalogDa
         return this;
     }
 
+    public ProductCatalogDataBuilder current(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+        this.current = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
+        return this;
+    }
+
     public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
         this.current = current;
+        return this;
+    }
+
+    public ProductCatalogDataBuilder staged(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class ChannelPagedQueryResponseBuilder implements Builder<ChannelPa
 
     public ChannelPagedQueryResponseBuilder results(final com.commercetools.api.models.channel.Channel... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ChannelPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
+        return this;
+    }
+
+    public ChannelPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,22 @@ public final class SetReservationsChangeBuilder implements Builder<SetReservatio
         return this;
     }
 
+    public SetReservationsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    public SetReservationsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
     public SetReservationsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
         this.nextValue = nextValue;
@@ -35,6 +52,22 @@ public final class SetReservationsChangeBuilder implements Builder<SetReservatio
     public SetReservationsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reservation... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public SetReservationsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    public SetReservationsChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,13 @@ public final class DiscountedLineItemPriceForQuantityBuilder implements Builder<
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Double quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 

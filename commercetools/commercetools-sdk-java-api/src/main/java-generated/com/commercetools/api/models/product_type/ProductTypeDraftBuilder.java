@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +40,24 @@ public final class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> 
     public ProductTypeDraftBuilder attributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductTypeDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeDraftBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
         return this;
     }
 

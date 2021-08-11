@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,6 +26,12 @@ public final class SetLineItemDiscountedPriceChangeBuilder implements Builder<Se
     }
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -36,8 +43,22 @@ public final class SetLineItemDiscountedPriceChangeBuilder implements Builder<Se
     }
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 

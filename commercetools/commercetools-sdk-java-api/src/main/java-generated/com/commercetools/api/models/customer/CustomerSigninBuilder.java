@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,13 @@ public final class CustomerSigninBuilder implements Builder<CustomerSignin> {
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
+        return this;
+    }
+
+    public CustomerSigninBuilder anonymousCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,14 @@ public final class StagedOrderSetCustomerGroupActionBuilder implements Builder<S
 
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
+
+    public StagedOrderSetCustomerGroupActionBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public StagedOrderSetCustomerGroupActionBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {

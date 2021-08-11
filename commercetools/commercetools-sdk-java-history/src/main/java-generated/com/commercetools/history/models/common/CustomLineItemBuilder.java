@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,8 +29,20 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public CustomLineItemBuilder money(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.money = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -38,8 +51,20 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder taxedPrice(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder taxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    public CustomLineItemBuilder totalPrice(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,13 @@ public final class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpda
 
     @Nullable
     private java.time.ZonedDateTime syncedAt;
+
+    public OrderUpdateSyncInfoActionBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public OrderUpdateSyncInfoActionBuilder channel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {

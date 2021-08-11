@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class CartClassificationTierBuilder implements Builder<CartClassifi
 
     public CartClassificationTierBuilder value(final String value) {
         this.value = value;
+        return this;
+    }
+
+    public CartClassificationTierBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

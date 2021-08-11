@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -22,6 +23,12 @@ public final class StoreCreatedMessagePayloadBuilder implements Builder<StoreCre
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    public StoreCreatedMessagePayloadBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public StoreCreatedMessagePayloadBuilder name(
             @Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -45,6 +52,24 @@ public final class StoreCreatedMessagePayloadBuilder implements Builder<StoreCre
         return this;
     }
 
+    public StoreCreatedMessagePayloadBuilder withDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.distributionChannels = new ArrayList<>();
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        if (this.distributionChannels == null) {
+            this.distributionChannels = new ArrayList<>();
+        }
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
     public StoreCreatedMessagePayloadBuilder distributionChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
@@ -57,9 +82,33 @@ public final class StoreCreatedMessagePayloadBuilder implements Builder<StoreCre
         return this;
     }
 
+    public StoreCreatedMessagePayloadBuilder withSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannels = new ArrayList<>();
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        if (this.supplyChannels == null) {
+            this.supplyChannels = new ArrayList<>();
+        }
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
     public StoreCreatedMessagePayloadBuilder supplyChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

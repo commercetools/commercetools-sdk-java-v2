@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class ProductChangePriceActionBuilder implements Builder<ProductCha
 
     public ProductChangePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public ProductChangePriceActionBuilder price(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 

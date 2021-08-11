@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class CartValueTierBuilder implements Builder<CartValueTier> {
 
     public CartValueTierBuilder minimumCentAmount(final Long minimumCentAmount) {
         this.minimumCentAmount = minimumCentAmount;
+        return this;
+    }
+
+    public CartValueTierBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

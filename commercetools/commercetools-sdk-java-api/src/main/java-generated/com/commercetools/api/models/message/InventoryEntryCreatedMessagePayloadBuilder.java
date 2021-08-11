@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class InventoryEntryCreatedMessagePayloadBuilder implements Builder<InventoryEntryCreatedMessagePayload> {
 
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
+
+    public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
+        return this;
+    }
 
     public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
             final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {

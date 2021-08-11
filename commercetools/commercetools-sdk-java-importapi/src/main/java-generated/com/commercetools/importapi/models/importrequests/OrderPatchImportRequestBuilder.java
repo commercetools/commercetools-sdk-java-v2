@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,24 @@ public final class OrderPatchImportRequestBuilder implements Builder<OrderPatchI
     public OrderPatchImportRequestBuilder patches(
             final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
+        return this;
+    }
+
+    public OrderPatchImportRequestBuilder withPatches(
+            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
+        this.patches = new ArrayList<>();
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
+        return this;
+    }
+
+    public OrderPatchImportRequestBuilder plusPatches(
+            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
+        if (this.patches == null) {
+            this.patches = new ArrayList<>();
+        }
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
         return this;
     }
 

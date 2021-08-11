@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -16,8 +17,20 @@ public final class CustomerSignInResultBuilder implements Builder<CustomerSignIn
     @Nullable
     private com.commercetools.api.models.cart.Cart cart;
 
+    public CustomerSignInResultBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build();
+        return this;
+    }
+
     public CustomerSignInResultBuilder customer(final com.commercetools.api.models.customer.Customer customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public CustomerSignInResultBuilder cart(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,12 @@ public final class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -37,8 +44,24 @@ public final class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
             final com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemDiscountedPricePerQuantityChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder.of())
+                .build();
         return this;
     }
 

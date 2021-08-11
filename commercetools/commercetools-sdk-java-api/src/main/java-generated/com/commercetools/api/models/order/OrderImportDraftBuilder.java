@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -97,6 +98,22 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
         return this;
     }
 
+    public OrderImportDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusLineItems(
+            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraftBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()).build());
+        return this;
+    }
+
     public OrderImportDraftBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems) {
         this.lineItems = lineItems;
@@ -109,14 +126,44 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
         return this;
     }
 
+    public OrderImportDraftBuilder withCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder> builder) {
+        this.customLineItems = new ArrayList<>();
+        this.customLineItems
+                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder> builder) {
+        if (this.customLineItems == null) {
+            this.customLineItems = new ArrayList<>();
+        }
+        this.customLineItems
+                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()).build());
+        return this;
+    }
+
     public OrderImportDraftBuilder customLineItems(
             @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems) {
         this.customLineItems = customLineItems;
         return this;
     }
 
+    public OrderImportDraftBuilder totalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public OrderImportDraftBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;
+        return this;
+    }
+
+    public OrderImportDraftBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraftBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of()).build();
         return this;
     }
 
@@ -127,14 +174,34 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
     }
 
     public OrderImportDraftBuilder shippingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    public OrderImportDraftBuilder shippingAddress(
             @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
 
     public OrderImportDraftBuilder billingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    public OrderImportDraftBuilder billingAddress(
             @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
+        return this;
+    }
+
+    public OrderImportDraftBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -168,6 +235,13 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
     }
 
     public OrderImportDraftBuilder shippingInfo(
+            Function<com.commercetools.api.models.order.ShippingInfoImportDraftBuilder, com.commercetools.api.models.order.ShippingInfoImportDraftBuilder> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.order.ShippingInfoImportDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderImportDraftBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.order.ShippingInfoImportDraft shippingInfo) {
         this.shippingInfo = shippingInfo;
         return this;
@@ -175,6 +249,12 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
 
     public OrderImportDraftBuilder completedAt(@Nullable final java.time.ZonedDateTime completedAt) {
         this.completedAt = completedAt;
+        return this;
+    }
+
+    public OrderImportDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -198,6 +278,24 @@ public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> 
     public OrderImportDraftBuilder itemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
         this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+        return this;
+    }
+
+    public OrderImportDraftBuilder withItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 

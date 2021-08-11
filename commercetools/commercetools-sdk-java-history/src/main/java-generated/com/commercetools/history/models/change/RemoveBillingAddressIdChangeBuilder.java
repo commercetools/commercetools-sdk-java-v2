@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -39,6 +40,12 @@ public final class RemoveBillingAddressIdChangeBuilder implements Builder<Remove
 
     public RemoveBillingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveBillingAddressIdChangeBuilder address(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 

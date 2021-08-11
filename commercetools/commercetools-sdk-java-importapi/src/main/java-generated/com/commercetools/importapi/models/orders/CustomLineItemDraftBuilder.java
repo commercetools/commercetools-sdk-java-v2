@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -42,6 +43,12 @@ public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemD
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    public CustomLineItemDraftBuilder name(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -49,6 +56,13 @@ public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemD
 
     public CustomLineItemDraftBuilder money(final com.commercetools.importapi.models.common.TypedMoney money) {
         this.money = money;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder taxedPrice(
+            Function<com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder, com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder.of())
+                .build();
         return this;
     }
 
@@ -80,9 +94,32 @@ public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemD
         return this;
     }
 
+    public CustomLineItemDraftBuilder withState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder plusState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()).build());
+        return this;
+    }
+
     public CustomLineItemDraftBuilder state(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
         this.state = state;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder taxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -93,8 +130,21 @@ public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemD
     }
 
     public CustomLineItemDraftBuilder taxRate(
+            Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder taxRate(
             @Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
         this.taxRate = taxRate;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder externalTaxRate(
+            Function<com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder, com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -110,9 +160,35 @@ public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemD
         return this;
     }
 
+    public CustomLineItemDraftBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of()).build());
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder> builder) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of()).build());
+        return this;
+    }
+
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder shippingDetails(
+            Function<com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder, com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder
+                .apply(com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 

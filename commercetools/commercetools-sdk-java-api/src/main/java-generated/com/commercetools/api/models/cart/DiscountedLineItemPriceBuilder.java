@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,6 +22,24 @@ public final class DiscountedLineItemPriceBuilder implements Builder<DiscountedL
     public DiscountedLineItemPriceBuilder includedDiscounts(
             final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts
+                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts
+                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

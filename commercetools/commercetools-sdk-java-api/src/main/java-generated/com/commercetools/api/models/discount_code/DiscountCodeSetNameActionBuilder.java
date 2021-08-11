@@ -2,6 +2,7 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class DiscountCodeSetNameActionBuilder implements Builder<DiscountC
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
+
+    public DiscountCodeSetNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public DiscountCodeSetNameActionBuilder name(
             @Nullable final com.commercetools.api.models.common.LocalizedString name) {

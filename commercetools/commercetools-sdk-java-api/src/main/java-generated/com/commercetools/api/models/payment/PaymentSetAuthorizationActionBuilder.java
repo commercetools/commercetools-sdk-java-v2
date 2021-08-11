@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -16,6 +17,12 @@ public final class PaymentSetAuthorizationActionBuilder implements Builder<Payme
 
     @Nullable
     private java.time.ZonedDateTime until;
+
+    public PaymentSetAuthorizationActionBuilder amount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
 
     public PaymentSetAuthorizationActionBuilder amount(
             @Nullable final com.commercetools.api.models.common.Money amount) {

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,24 @@ public final class ProductDiscountPagedQueryResponseBuilder implements Builder<P
     public ProductDiscountPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_discount.ProductDiscount... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ProductDiscountPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscountBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results
+                .add(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDiscountPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscountBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results
+                .add(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()).build());
         return this;
     }
 

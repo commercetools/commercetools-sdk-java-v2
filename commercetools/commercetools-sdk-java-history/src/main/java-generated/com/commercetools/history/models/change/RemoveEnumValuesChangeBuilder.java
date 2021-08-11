@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,12 @@ public final class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumVa
 
     public RemoveEnumValuesChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public RemoveEnumValuesChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.inventories;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -55,8 +56,21 @@ public final class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     public InventoryImportBuilder supplyChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public InventoryImportBuilder supplyChannel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    public InventoryImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 

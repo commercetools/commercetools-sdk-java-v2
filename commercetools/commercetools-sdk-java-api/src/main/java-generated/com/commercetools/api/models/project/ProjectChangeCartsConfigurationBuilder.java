@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,13 @@ public final class ProjectChangeCartsConfigurationBuilder implements Builder<Pro
 
     @Nullable
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
+
+    public ProjectChangeCartsConfigurationBuilder cartsConfiguration(
+            Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
+        this.cartsConfiguration = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProjectChangeCartsConfigurationBuilder cartsConfiguration(
             @Nullable final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {

@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.general_category_recommendations;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -36,6 +37,28 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
             final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
+                        .of())
+                .build());
+        return this;
+    }
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
+                        .of())
+                .build());
         return this;
     }
 

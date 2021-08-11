@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -51,6 +52,12 @@ public final class MyShoppingListAddLineItemActionBuilder implements Builder<MyS
 
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
+        return this;
+    }
+
+    public MyShoppingListAddLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

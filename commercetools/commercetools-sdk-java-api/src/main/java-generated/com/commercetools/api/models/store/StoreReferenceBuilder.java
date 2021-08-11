@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class StoreReferenceBuilder implements Builder<StoreReference> {
 
     public StoreReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public StoreReferenceBuilder obj(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build();
         return this;
     }
 

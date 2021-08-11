@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +17,13 @@ public final class ShippingMethodAddShippingRateActionBuilder implements Builder
     public ShippingMethodAddShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
+        return this;
+    }
+
+    public ShippingMethodAddShippingRateActionBuilder shippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
+                .build();
         return this;
     }
 

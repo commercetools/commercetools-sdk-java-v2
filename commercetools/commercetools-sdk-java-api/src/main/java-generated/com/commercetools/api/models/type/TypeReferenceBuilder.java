@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class TypeReferenceBuilder implements Builder<TypeReference> {
 
     public TypeReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public TypeReferenceBuilder obj(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build();
         return this;
     }
 

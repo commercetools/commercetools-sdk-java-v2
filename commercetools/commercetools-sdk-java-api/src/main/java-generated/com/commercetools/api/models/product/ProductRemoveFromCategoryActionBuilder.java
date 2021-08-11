@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,13 @@ public final class ProductRemoveFromCategoryActionBuilder implements Builder<Pro
 
     @Nullable
     private Boolean staged;
+
+    public ProductRemoveFromCategoryActionBuilder category(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProductRemoveFromCategoryActionBuilder category(
             final com.commercetools.api.models.category.CategoryResourceIdentifier category) {

@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -40,9 +41,31 @@ public final class MissingPricesPagedQueryResultBuilder implements Builder<Missi
         return this;
     }
 
+    public MissingPricesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
+        return this;
+    }
+
+    public MissingPricesPagedQueryResultBuilder plusResults(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
+        return this;
+    }
+
     public MissingPricesPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results) {
         this.results = results;
+        return this;
+    }
+
+    public MissingPricesPagedQueryResultBuilder meta(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder, com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder.of()).build();
         return this;
     }
 

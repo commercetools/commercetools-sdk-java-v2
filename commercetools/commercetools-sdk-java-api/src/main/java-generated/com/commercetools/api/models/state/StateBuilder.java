@@ -2,6 +2,7 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -66,8 +67,20 @@ public final class StateBuilder implements Builder<State> {
     }
 
     public StateBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public StateBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public StateBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -86,8 +99,20 @@ public final class StateBuilder implements Builder<State> {
         return this;
     }
 
+    public StateBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public StateBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public StateBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -118,6 +143,22 @@ public final class StateBuilder implements Builder<State> {
 
     public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
+        return this;
+    }
+
+    public StateBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StateBuilder plusTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
     }
 

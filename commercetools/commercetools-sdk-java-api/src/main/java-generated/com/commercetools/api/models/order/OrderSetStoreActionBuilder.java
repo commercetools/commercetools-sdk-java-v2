@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAc
 
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
+
+    public OrderSetStoreActionBuilder store(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
+        return this;
+    }
 
     public OrderSetStoreActionBuilder store(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {

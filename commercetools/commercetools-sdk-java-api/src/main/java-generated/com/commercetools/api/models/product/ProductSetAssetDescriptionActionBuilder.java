@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -51,6 +52,12 @@ public final class ProductSetAssetDescriptionActionBuilder implements Builder<Pr
 
     public ProductSetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+
+    public ProductSetAssetDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

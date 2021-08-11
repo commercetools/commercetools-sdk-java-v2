@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,8 +21,20 @@ public final class AddPaymentChangeBuilder implements Builder<AddPaymentChange> 
         return this;
     }
 
+    public AddPaymentChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
     public AddPaymentChangeBuilder nextValue(final com.commercetools.history.models.common.PaymentInfo nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public AddPaymentChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
         return this;
     }
 

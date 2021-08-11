@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class ShoppingListSetSlugActionBuilder implements Builder<ShoppingL
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
+
+    public ShoppingListSetSlugActionBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ShoppingListSetSlugActionBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {

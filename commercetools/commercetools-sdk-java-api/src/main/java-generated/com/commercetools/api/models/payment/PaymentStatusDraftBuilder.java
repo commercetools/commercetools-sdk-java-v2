@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,6 +28,12 @@ public final class PaymentStatusDraftBuilder implements Builder<PaymentStatusDra
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
+        return this;
+    }
+
+    public PaymentStatusDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 

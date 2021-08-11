@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class OrderPatchImportBuilder implements Builder<OrderPatchImport> 
 
     public OrderPatchImportBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
+        return this;
+    }
+
+    public OrderPatchImportBuilder fields(
+            Function<com.commercetools.importapi.models.order_patches.OrderFieldBuilder, com.commercetools.importapi.models.order_patches.OrderFieldBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.importapi.models.order_patches.OrderFieldBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class CategorySetDescriptionActionBuilder implements Builder<Catego
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
+
+    public CategorySetDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public CategorySetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

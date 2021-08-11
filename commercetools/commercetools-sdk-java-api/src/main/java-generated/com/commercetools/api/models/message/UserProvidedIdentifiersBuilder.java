@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -51,6 +52,12 @@ public final class UserProvidedIdentifiersBuilder implements Builder<UserProvide
 
     public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public UserProvidedIdentifiersBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

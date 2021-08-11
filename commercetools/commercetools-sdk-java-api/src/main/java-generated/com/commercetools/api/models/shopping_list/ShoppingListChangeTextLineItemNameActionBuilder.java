@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +17,12 @@ public final class ShoppingListChangeTextLineItemNameActionBuilder
 
     public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    public ShoppingListChangeTextLineItemNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

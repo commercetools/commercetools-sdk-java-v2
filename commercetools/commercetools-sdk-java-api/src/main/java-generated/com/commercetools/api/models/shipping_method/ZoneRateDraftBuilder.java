@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,6 +22,24 @@ public final class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     public ZoneRateDraftBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
+        return this;
+    }
+
+    public ZoneRateDraftBuilder withShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRates = new ArrayList<>();
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneRateDraftBuilder plusShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        if (this.shippingRates == null) {
+            this.shippingRates = new ArrayList<>();
+        }
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of()).build());
         return this;
     }
 

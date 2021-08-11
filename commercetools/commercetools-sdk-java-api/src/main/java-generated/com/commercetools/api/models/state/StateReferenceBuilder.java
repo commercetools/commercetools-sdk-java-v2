@@ -2,6 +2,7 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class StateReferenceBuilder implements Builder<StateReference> {
 
     public StateReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public StateReferenceBuilder obj(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build();
         return this;
     }
 

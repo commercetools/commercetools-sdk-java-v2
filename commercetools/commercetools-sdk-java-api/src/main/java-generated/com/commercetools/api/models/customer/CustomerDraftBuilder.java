@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -130,6 +131,13 @@ public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     public CustomerDraftBuilder anonymousCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerDraftBuilder anonymousCart(
             @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
         this.anonymousCart = anonymousCart;
         return this;
@@ -158,6 +166,22 @@ public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
     public CustomerDraftBuilder addresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+
+    public CustomerDraftBuilder withAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerDraftBuilder plusAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 
@@ -208,8 +232,22 @@ public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     public CustomerDraftBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public CustomerDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -236,6 +274,22 @@ public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
     public CustomerDraftBuilder stores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public CustomerDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
 

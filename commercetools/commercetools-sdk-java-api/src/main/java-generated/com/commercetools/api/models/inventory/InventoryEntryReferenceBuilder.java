@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class InventoryEntryReferenceBuilder implements Builder<InventoryEn
 
     public InventoryEntryReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public InventoryEntryReferenceBuilder obj(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
         return this;
     }
 

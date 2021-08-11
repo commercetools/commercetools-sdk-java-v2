@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMessagePayload> {
 
     private com.commercetools.api.models.order.Order order;
+
+    public OrderCreatedMessagePayloadBuilder order(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
+        return this;
+    }
 
     public OrderCreatedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {
         this.order = order;

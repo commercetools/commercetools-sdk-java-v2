@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,22 @@ public final class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     public PaymentInfoBuilder payments(final com.commercetools.history.models.common.Reference... payments) {
         this.payments = new ArrayList<>(Arrays.asList(payments));
+        return this;
+    }
+
+    public PaymentInfoBuilder withPayments(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.payments = new ArrayList<>();
+        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentInfoBuilder plusPayments(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.payments == null) {
+            this.payments = new ArrayList<>();
+        }
+        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 

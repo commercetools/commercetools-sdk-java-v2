@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -55,6 +56,22 @@ public final class TaxRateBuilder implements Builder<TaxRate> {
 
     public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
+        return this;
+    }
+
+    public TaxRateBuilder withSubRates(
+            Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()).build());
+        return this;
+    }
+
+    public TaxRateBuilder plusSubRates(
+            Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRateBuilder> builder) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.add(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()).build());
         return this;
     }
 

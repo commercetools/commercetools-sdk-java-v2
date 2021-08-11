@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -51,8 +52,21 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
+    public ProductImportBuilder name(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public ProductImportBuilder productType(
+            Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -62,8 +76,20 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
+    public ProductImportBuilder slug(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+
+    public ProductImportBuilder description(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -79,9 +105,33 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
+    public ProductImportBuilder withCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductImportBuilder plusCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
     public ProductImportBuilder categories(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
         this.categories = categories;
+        return this;
+    }
+
+    public ProductImportBuilder metaTitle(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -92,8 +142,22 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     public ProductImportBuilder metaDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
+        return this;
+    }
+
+    public ProductImportBuilder metaKeywords(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
         return this;
     }
 
@@ -104,14 +168,34 @@ public final class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     public ProductImportBuilder taxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductImportBuilder taxCategory(
             @Nullable final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
 
     public ProductImportBuilder searchKeywords(
+            Function<com.commercetools.importapi.models.products.SearchKeywordsBuilder, com.commercetools.importapi.models.products.SearchKeywordsBuilder> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.importapi.models.products.SearchKeywordsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductImportBuilder searchKeywords(
             @Nullable final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
+        return this;
+    }
+
+    public ProductImportBuilder state(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
         return this;
     }
 

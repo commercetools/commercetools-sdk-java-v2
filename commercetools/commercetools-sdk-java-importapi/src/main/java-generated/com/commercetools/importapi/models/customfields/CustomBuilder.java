@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class CustomBuilder implements Builder<Custom> {
 
     public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
         this.type = type;
+        return this;
+    }
+
+    public CustomBuilder fields(
+            Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of()).build();
         return this;
     }
 

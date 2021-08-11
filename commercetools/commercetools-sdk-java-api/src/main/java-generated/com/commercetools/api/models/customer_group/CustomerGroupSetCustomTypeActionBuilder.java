@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class CustomerGroupSetCustomTypeActionBuilder implements Builder<Cu
     public CustomerGroupSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public CustomerGroupSetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 

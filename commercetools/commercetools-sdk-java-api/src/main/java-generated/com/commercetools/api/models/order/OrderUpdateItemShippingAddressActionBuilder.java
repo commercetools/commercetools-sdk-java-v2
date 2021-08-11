@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -11,6 +12,12 @@ public final class OrderUpdateItemShippingAddressActionBuilder
         implements Builder<OrderUpdateItemShippingAddressAction> {
 
     private com.commercetools.api.models.common.BaseAddress address;
+
+    public OrderUpdateItemShippingAddressActionBuilder address(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
 
     public OrderUpdateItemShippingAddressActionBuilder address(
             final com.commercetools.api.models.common.BaseAddress address) {

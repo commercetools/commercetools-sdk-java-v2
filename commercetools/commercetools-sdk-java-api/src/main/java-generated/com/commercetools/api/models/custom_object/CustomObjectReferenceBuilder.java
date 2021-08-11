@@ -2,6 +2,7 @@
 package com.commercetools.api.models.custom_object;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class CustomObjectReferenceBuilder implements Builder<CustomObjectR
 
     public CustomObjectReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CustomObjectReferenceBuilder obj(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build();
         return this;
     }
 

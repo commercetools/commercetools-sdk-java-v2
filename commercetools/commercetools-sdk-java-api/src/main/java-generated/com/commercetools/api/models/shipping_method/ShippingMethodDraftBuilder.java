@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -50,6 +51,13 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
     }
 
     public ShippingMethodDraftBuilder localizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
@@ -67,6 +75,24 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
         return this;
     }
 
+    public ShippingMethodDraftBuilder withZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
+        this.zoneRates = new ArrayList<>();
+        this.zoneRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder plusZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
+        if (this.zoneRates == null) {
+            this.zoneRates = new ArrayList<>();
+        }
+        this.zoneRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());
+        return this;
+    }
+
     public ShippingMethodDraftBuilder zoneRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates) {
         this.zoneRates = zoneRates;
@@ -80,6 +106,12 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -90,8 +91,21 @@ public final class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     public ReviewDraftBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ReviewDraftBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public ReviewDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

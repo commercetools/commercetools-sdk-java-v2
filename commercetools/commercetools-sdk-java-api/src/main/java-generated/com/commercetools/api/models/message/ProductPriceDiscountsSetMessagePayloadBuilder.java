@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,26 @@ public final class ProductPriceDiscountsSetMessagePayloadBuilder
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
             final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
         this.updatedPrices = new ArrayList<>(Arrays.asList(updatedPrices));
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        this.updatedPrices = new ArrayList<>();
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        if (this.updatedPrices == null) {
+            this.updatedPrices = new ArrayList<>();
+        }
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
         return this;
     }
 

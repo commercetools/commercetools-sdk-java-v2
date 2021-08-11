@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class CustomerGroupReferenceBuilder implements Builder<CustomerGrou
 
     public CustomerGroupReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CustomerGroupReferenceBuilder obj(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()).build();
         return this;
     }
 

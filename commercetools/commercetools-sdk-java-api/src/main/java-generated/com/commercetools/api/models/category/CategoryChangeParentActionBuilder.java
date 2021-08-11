@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CategoryChangeParentActionBuilder implements Builder<CategoryChangeParentAction> {
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
+
+    public CategoryChangeParentActionBuilder parent(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public CategoryChangeParentActionBuilder parent(
             final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,24 @@ public final class SetCustomShippingMethodChangeBuilder implements Builder<SetCu
     }
 
     public SetCustomShippingMethodChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetCustomShippingMethodChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.CustomShippingMethodChangeValue nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetCustomShippingMethodChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder.of())
+                .build();
         return this;
     }
 

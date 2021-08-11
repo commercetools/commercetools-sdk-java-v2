@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class StorePagedQueryResponseBuilder implements Builder<StorePagedQ
 
     public StorePagedQueryResponseBuilder results(final com.commercetools.api.models.store.Store... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public StorePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
+        return this;
+    }
+
+    public StorePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
         return this;
     }
 

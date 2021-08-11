@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class OrderEditPagedQueryResponseBuilder implements Builder<OrderEd
     public OrderEditPagedQueryResponseBuilder results(
             final com.commercetools.api.models.order_edit.OrderEdit... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public OrderEditPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build());
         return this;
     }
 

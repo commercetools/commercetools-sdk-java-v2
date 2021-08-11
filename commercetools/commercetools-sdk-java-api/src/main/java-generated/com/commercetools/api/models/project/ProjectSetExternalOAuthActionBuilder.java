@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class ProjectSetExternalOAuthActionBuilder implements Builder<Proje
 
     @Nullable
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
+
+    public ProjectSetExternalOAuthActionBuilder externalOAuth(
+            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
+        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();
+        return this;
+    }
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(
             @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {

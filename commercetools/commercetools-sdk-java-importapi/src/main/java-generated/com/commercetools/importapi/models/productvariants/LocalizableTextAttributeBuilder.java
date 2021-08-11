@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class LocalizableTextAttributeBuilder implements Builder<Localizabl
 
     public LocalizableTextAttributeBuilder name(@Nullable final String name) {
         this.name = name;
+        return this;
+    }
+
+    public LocalizableTextAttributeBuilder value(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

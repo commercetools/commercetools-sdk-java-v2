@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public final class ProductVariantBuilder implements Builder<ProductVariant> {
     private Boolean staged;
 
     private Integer variantId;
+
+    public ProductVariantBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class ReviewPagedQueryResponseBuilder implements Builder<ReviewPage
 
     public ReviewPagedQueryResponseBuilder results(final com.commercetools.api.models.review.Review... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ReviewPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build());
+        return this;
+    }
+
+    public ReviewPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build());
         return this;
     }
 

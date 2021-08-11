@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importsummaries;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,13 @@ public final class ImportSummaryBuilder implements Builder<ImportSummary> {
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
 
     private Long total;
+
+    public ImportSummaryBuilder states(
+            Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder> builder) {
+        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of())
+                .build();
+        return this;
+    }
 
     public ImportSummaryBuilder states(
             final com.commercetools.importapi.models.importsummaries.OperationStates states) {

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,12 @@ public final class ProductSetSearchKeywordsActionBuilder implements Builder<Prod
 
     @Nullable
     private Boolean staged;
+
+    public ProductSetSearchKeywordsActionBuilder searchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
             final com.commercetools.api.models.product.SearchKeywords searchKeywords) {

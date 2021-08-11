@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,8 +29,21 @@ public final class SetLineItemShippingDetailsChangeBuilder implements Builder<Se
     }
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemShippingDetailsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemShippingDetailsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of())
+                .build();
         return this;
     }
 

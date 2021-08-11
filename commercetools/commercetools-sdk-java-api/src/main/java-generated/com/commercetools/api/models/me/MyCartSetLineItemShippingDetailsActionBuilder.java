@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,13 @@ public final class MyCartSetLineItemShippingDetailsActionBuilder
 
     public MyCartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 

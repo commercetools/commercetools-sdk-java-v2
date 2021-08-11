@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAddTaxRateAction> {
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
+
+    public TaxCategoryAddTaxRateActionBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build();
+        return this;
+    }
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(
             final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {

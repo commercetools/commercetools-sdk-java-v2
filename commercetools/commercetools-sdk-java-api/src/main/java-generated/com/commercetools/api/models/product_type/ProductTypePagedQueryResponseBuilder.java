@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class ProductTypePagedQueryResponseBuilder implements Builder<Produ
     public ProductTypePagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_type.ProductType... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ProductTypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build());
         return this;
     }
 

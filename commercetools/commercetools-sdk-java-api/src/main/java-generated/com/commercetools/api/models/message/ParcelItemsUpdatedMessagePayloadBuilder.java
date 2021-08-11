@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -36,6 +37,22 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<Pa
         return this;
     }
 
+    public ParcelItemsUpdatedMessagePayloadBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
     public ParcelItemsUpdatedMessagePayloadBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
@@ -45,6 +62,22 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<Pa
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
         this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
+        return this;
+    }
+
+    public ParcelItemsUpdatedMessagePayloadBuilder withOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.oldItems = new ArrayList<>();
+        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        if (this.oldItems == null) {
+            this.oldItems = new ArrayList<>();
+        }
+        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

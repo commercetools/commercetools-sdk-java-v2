@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,14 +24,34 @@ public final class SetParcelMeasurementsChangeBuilder implements Builder<SetParc
     }
 
     public SetParcelMeasurementsChangeBuilder parcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetParcelMeasurementsChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
     }
 
     public SetParcelMeasurementsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of()).build();
+        return this;
+    }
+
+    public SetParcelMeasurementsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ParcelMeasurements nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetParcelMeasurementsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of())
+                .build();
         return this;
     }
 

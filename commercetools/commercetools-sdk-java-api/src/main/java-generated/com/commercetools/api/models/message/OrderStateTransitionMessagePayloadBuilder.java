@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,12 @@ public final class OrderStateTransitionMessagePayloadBuilder implements Builder<
     private com.commercetools.api.models.state.StateReference state;
 
     private Boolean force;
+
+    public OrderStateTransitionMessagePayloadBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
 
     public OrderStateTransitionMessagePayloadBuilder state(
             final com.commercetools.api.models.state.StateReference state) {

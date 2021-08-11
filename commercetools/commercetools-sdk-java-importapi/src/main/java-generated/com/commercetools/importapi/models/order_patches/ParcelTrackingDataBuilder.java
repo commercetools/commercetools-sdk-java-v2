@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ParcelTrackingDataBuilder implements Builder<ParcelTrackingDa
 
     public ParcelTrackingDataBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public ParcelTrackingDataBuilder trackingData(
+            Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
+        this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of()).build();
         return this;
     }
 

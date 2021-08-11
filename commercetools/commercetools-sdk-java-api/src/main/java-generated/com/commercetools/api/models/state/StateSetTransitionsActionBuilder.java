@@ -2,6 +2,7 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,24 @@ public final class StateSetTransitionsActionBuilder implements Builder<StateSetT
     public StateSetTransitionsActionBuilder transitions(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
+        return this;
+    }
+
+    public StateSetTransitionsActionBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions
+                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public StateSetTransitionsActionBuilder plusTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions
+                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
 

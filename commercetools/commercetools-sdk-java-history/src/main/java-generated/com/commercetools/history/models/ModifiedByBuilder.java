@@ -2,6 +2,7 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,6 +34,12 @@ public final class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     public ModifiedByBuilder type(final String type) {
         this.type = type;
+        return this;
+    }
+
+    public ModifiedByBuilder customer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

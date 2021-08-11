@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,8 +18,20 @@ public final class ProductSlugChangedMessagePayloadBuilder implements Builder<Pr
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     public ProductSlugChangedMessagePayloadBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSlugChangedMessagePayloadBuilder slug(
             final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+
+    public ProductSlugChangedMessagePayloadBuilder oldSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.oldSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

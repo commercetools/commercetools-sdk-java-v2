@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -43,6 +44,12 @@ public final class ShoppingListLineItemBuilder implements Builder<ShoppingListLi
         return this;
     }
 
+    public ShoppingListLineItemBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
@@ -58,6 +65,12 @@ public final class ShoppingListLineItemBuilder implements Builder<ShoppingListLi
         return this;
     }
 
+    public ShoppingListLineItemBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -69,8 +82,21 @@ public final class ShoppingListLineItemBuilder implements Builder<ShoppingListLi
     }
 
     public ShoppingListLineItemBuilder productSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ShoppingListLineItemBuilder productSlug(
             @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.productSlug = productSlug;
+        return this;
+    }
+
+    public ShoppingListLineItemBuilder productType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -82,6 +108,12 @@ public final class ShoppingListLineItemBuilder implements Builder<ShoppingListLi
 
     public ShoppingListLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public ShoppingListLineItemBuilder variant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
         return this;
     }
 

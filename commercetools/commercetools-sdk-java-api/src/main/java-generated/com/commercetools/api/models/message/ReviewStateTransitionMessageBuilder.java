@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -67,8 +68,20 @@ public final class ReviewStateTransitionMessageBuilder implements Builder<Review
     }
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -94,14 +107,34 @@ public final class ReviewStateTransitionMessageBuilder implements Builder<Review
     }
 
     public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     public ReviewStateTransitionMessageBuilder oldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder oldState(
             final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder newState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

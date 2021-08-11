@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -58,14 +59,34 @@ public final class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     public LineItemPriceBuilder customerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public LineItemPriceBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
     public LineItemPriceBuilder channel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemPriceBuilder channel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
         this.channel = channel;
+        return this;
+    }
+
+    public LineItemPriceBuilder discounted(
+            Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -80,9 +101,31 @@ public final class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    public LineItemPriceBuilder withTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public LineItemPriceBuilder plusTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
     public LineItemPriceBuilder tiers(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
         this.tiers = tiers;
+        return this;
+    }
+
+    public LineItemPriceBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 

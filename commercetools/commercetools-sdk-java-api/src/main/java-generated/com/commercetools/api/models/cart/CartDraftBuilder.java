@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -154,6 +155,22 @@ public final class CartDraftBuilder implements Builder<CartDraft> {
         return this;
     }
 
+    public CartDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public CartDraftBuilder plusLineItems(
+            Function<com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());
+        return this;
+    }
+
     public CartDraftBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems) {
         this.lineItems = lineItems;
@@ -166,6 +183,24 @@ public final class CartDraftBuilder implements Builder<CartDraft> {
         return this;
     }
 
+    public CartDraftBuilder withCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder> builder) {
+        this.customLineItems = new ArrayList<>();
+        this.customLineItems
+                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public CartDraftBuilder plusCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder> builder) {
+        if (this.customLineItems == null) {
+            this.customLineItems = new ArrayList<>();
+        }
+        this.customLineItems
+                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
     public CartDraftBuilder customLineItems(
             @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems) {
         this.customLineItems = customLineItems;
@@ -173,8 +208,20 @@ public final class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     public CartDraftBuilder shippingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    public CartDraftBuilder shippingAddress(
             @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
+        return this;
+    }
+
+    public CartDraftBuilder billingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
 
@@ -191,8 +238,22 @@ public final class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     public CartDraftBuilder externalTaxRateForShippingMethod(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRateForShippingMethod = builder
+                .apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CartDraftBuilder externalTaxRateForShippingMethod(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
+        return this;
+    }
+
+    public CartDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -225,6 +286,24 @@ public final class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraftBuilder itemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
         this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+        return this;
+    }
+
+    public CartDraftBuilder withItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
+    public CartDraftBuilder plusItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 

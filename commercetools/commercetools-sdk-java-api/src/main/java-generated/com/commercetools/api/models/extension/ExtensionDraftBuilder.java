@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -34,6 +35,22 @@ public final class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     public ExtensionDraftBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
+        return this;
+    }
+
+    public ExtensionDraftBuilder withTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        this.triggers = new ArrayList<>();
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionDraftBuilder plusTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        if (this.triggers == null) {
+            this.triggers = new ArrayList<>();
+        }
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
 

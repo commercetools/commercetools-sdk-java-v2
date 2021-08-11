@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.categories;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -49,8 +50,20 @@ public final class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    public CategoryImportBuilder name(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CategoryImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public CategoryImportBuilder slug(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -60,8 +73,20 @@ public final class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     public CategoryImportBuilder description(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public CategoryImportBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public CategoryImportBuilder parent(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        this.parent = builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -82,14 +107,34 @@ public final class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     public CategoryImportBuilder metaTitle(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public CategoryImportBuilder metaTitle(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
 
     public CategoryImportBuilder metaDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CategoryImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
+        return this;
+    }
+
+    public CategoryImportBuilder metaKeywords(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
         return this;
     }
 
@@ -104,9 +149,31 @@ public final class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    public CategoryImportBuilder withAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+        return this;
+    }
+
+    public CategoryImportBuilder plusAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+        return this;
+    }
+
     public CategoryImportBuilder assets(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
         this.assets = assets;
+        return this;
+    }
+
+    public CategoryImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 

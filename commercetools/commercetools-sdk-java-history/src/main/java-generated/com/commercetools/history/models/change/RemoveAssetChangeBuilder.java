@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange
 
     public RemoveAssetChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public RemoveAssetChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
 

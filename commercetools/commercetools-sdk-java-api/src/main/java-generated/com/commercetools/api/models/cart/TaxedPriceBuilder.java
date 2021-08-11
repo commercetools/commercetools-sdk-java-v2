@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,22 @@ public final class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
         this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+        return this;
+    }
+
+    public TaxedPriceBuilder withTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
+        return this;
+    }
+
+    public TaxedPriceBuilder plusTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
         return this;
     }
 

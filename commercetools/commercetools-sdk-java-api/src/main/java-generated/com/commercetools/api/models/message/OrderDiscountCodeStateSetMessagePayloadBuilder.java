@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,13 @@ public final class OrderDiscountCodeStateSetMessagePayloadBuilder
 
     @Nullable
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
+
+    public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
+                .build();
+        return this;
+    }
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

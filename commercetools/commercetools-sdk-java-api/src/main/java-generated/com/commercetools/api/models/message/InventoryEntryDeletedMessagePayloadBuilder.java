@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class InventoryEntryDeletedMessagePayloadBuilder implements Builder
 
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 

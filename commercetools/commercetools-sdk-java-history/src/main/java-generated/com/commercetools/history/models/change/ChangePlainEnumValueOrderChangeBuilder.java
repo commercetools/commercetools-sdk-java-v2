@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -33,6 +34,22 @@ public final class ChangePlainEnumValueOrderChangeBuilder implements Builder<Cha
         return this;
     }
 
+    public ChangePlainEnumValueOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangePlainEnumValueOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
     public ChangePlainEnumValueOrderChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
         this.nextValue = nextValue;
@@ -42,6 +59,24 @@ public final class ChangePlainEnumValueOrderChangeBuilder implements Builder<Cha
     public ChangePlainEnumValueOrderChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.EnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public ChangePlainEnumValueOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangePlainEnumValueOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
         return this;
     }
 

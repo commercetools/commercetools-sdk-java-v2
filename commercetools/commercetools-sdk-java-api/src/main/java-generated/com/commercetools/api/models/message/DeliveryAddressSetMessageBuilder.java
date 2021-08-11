@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -63,8 +64,20 @@ public final class DeliveryAddressSetMessageBuilder implements Builder<DeliveryA
     }
 
     public DeliveryAddressSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public DeliveryAddressSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public DeliveryAddressSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -90,6 +103,14 @@ public final class DeliveryAddressSetMessageBuilder implements Builder<DeliveryA
     }
 
     public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -101,8 +122,20 @@ public final class DeliveryAddressSetMessageBuilder implements Builder<DeliveryA
     }
 
     public DeliveryAddressSetMessageBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public DeliveryAddressSetMessageBuilder address(
             @Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
+        return this;
+    }
+
+    public DeliveryAddressSetMessageBuilder oldAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 

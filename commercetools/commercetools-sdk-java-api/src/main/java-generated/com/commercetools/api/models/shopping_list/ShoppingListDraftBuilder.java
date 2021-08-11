@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -43,8 +44,21 @@ public final class ShoppingListDraftBuilder implements Builder<ShoppingListDraft
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    public ShoppingListDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public ShoppingListDraftBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -57,6 +71,12 @@ public final class ShoppingListDraftBuilder implements Builder<ShoppingListDraft
     public ShoppingListDraftBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    public ShoppingListDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -77,14 +97,44 @@ public final class ShoppingListDraftBuilder implements Builder<ShoppingListDraft
         return this;
     }
 
+    public ShoppingListDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListDraftBuilder plusLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
     public ShoppingListDraftBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
 
+    public ShoppingListDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public ShoppingListDraftBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -96,6 +146,24 @@ public final class ShoppingListDraftBuilder implements Builder<ShoppingListDraft
     public ShoppingListDraftBuilder textLineItems(
             @Nullable final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {
         this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
+        return this;
+    }
+
+    public ShoppingListDraftBuilder withTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
+        this.textLineItems = new ArrayList<>();
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListDraftBuilder plusTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
         return this;
     }
 

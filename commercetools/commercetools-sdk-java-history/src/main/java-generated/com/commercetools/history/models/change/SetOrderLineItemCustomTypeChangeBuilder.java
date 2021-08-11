@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,6 +26,12 @@ public final class SetOrderLineItemCustomTypeChangeBuilder implements Builder<Se
     }
 
     public SetOrderLineItemCustomTypeChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetOrderLineItemCustomTypeChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -36,8 +43,20 @@ public final class SetOrderLineItemCustomTypeChangeBuilder implements Builder<Se
     }
 
     public SetOrderLineItemCustomTypeChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public SetOrderLineItemCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetOrderLineItemCustomTypeChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
 

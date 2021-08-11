@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumV
 
     public TypeAddEnumValueActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
+        return this;
+    }
+
+    public TypeAddEnumValueActionBuilder value(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()).build();
         return this;
     }
 

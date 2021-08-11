@@ -2,6 +2,7 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -44,6 +45,12 @@ public final class RecordBuilder implements Builder<Record> {
         return this;
     }
 
+    public RecordBuilder modifiedBy(
+            Function<com.commercetools.history.models.ModifiedByBuilder, com.commercetools.history.models.ModifiedByBuilder> builder) {
+        this.modifiedBy = builder.apply(com.commercetools.history.models.ModifiedByBuilder.of()).build();
+        return this;
+    }
+
     public RecordBuilder modifiedBy(final com.commercetools.history.models.ModifiedBy modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -71,6 +78,12 @@ public final class RecordBuilder implements Builder<Record> {
 
     public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
+        return this;
+    }
+
+    public RecordBuilder resource(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

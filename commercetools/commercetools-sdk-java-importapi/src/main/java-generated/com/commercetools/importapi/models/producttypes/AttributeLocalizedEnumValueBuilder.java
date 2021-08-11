@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.producttypes;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class AttributeLocalizedEnumValueBuilder implements Builder<Attribu
 
     public AttributeLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
+        return this;
+    }
+
+    public AttributeLocalizedEnumValueBuilder label(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

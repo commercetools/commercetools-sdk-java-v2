@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class SetCustomerGroupChangeBuilder implements Builder<SetCustomerG
     }
 
     public SetCustomerGroupChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public SetCustomerGroupChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetCustomerGroupChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

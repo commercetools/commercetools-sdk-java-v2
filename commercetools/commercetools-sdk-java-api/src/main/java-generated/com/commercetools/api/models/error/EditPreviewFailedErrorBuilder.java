@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,13 @@ public final class EditPreviewFailedErrorBuilder implements Builder<EditPreviewF
 
     public EditPreviewFailedErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public EditPreviewFailedErrorBuilder result(
+            Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of())
+                .build();
         return this;
     }
 

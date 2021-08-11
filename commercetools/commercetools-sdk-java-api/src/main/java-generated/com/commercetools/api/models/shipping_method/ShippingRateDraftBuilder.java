@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,8 +20,20 @@ public final class ShippingRateDraftBuilder implements Builder<ShippingRateDraft
     @Nullable
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
 
+    public ShippingRateDraftBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingRateDraftBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+
+    public ShippingRateDraftBuilder freeAbove(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.freeAbove = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

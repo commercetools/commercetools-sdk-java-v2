@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -56,8 +57,20 @@ public final class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     public ProductTypeBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductTypeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductTypeBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -84,6 +97,24 @@ public final class ProductTypeBuilder implements Builder<ProductType> {
     public ProductTypeBuilder attributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductTypeBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

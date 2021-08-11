@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,13 @@ public final class CartSetCustomLineItemShippingDetailsActionBuilder
 
     public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    public CartSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 

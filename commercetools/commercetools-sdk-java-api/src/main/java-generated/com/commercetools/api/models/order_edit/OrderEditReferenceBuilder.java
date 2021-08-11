@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class OrderEditReferenceBuilder implements Builder<OrderEditReferen
 
     public OrderEditReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public OrderEditReferenceBuilder obj(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build();
         return this;
     }
 

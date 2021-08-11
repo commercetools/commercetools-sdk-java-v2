@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -40,14 +41,33 @@ public final class ShippingInfoImportDraftBuilder implements Builder<ShippingInf
         return this;
     }
 
+    public ShippingInfoImportDraftBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingInfoImportDraftBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
 
     public ShippingInfoImportDraftBuilder shippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingInfoImportDraftBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.shippingRate = shippingRate;
+        return this;
+    }
+
+    public ShippingInfoImportDraftBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -75,9 +95,33 @@ public final class ShippingInfoImportDraftBuilder implements Builder<ShippingInf
         return this;
     }
 
+    public ShippingInfoImportDraftBuilder withDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        this.deliveries = new ArrayList<>();
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingInfoImportDraftBuilder plusDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        if (this.deliveries == null) {
+            this.deliveries = new ArrayList<>();
+        }
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        return this;
+    }
+
     public ShippingInfoImportDraftBuilder deliveries(
             @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
         this.deliveries = deliveries;
+        return this;
+    }
+
+    public ShippingInfoImportDraftBuilder discountedPrice(
+            Function<com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder, com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder.of())
+                .build();
         return this;
     }
 

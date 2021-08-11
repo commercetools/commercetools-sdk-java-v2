@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +15,21 @@ public final class DiscountedLineItemPortionBuilder implements Builder<Discounte
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
     public DiscountedLineItemPortionBuilder discount(
+            Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public DiscountedLineItemPortionBuilder discount(
             final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
         this.discount = discount;
+        return this;
+    }
+
+    public DiscountedLineItemPortionBuilder discountedAmount(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+        this.discountedAmount = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

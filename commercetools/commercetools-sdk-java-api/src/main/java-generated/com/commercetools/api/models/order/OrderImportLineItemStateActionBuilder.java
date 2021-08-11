@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,22 @@ public final class OrderImportLineItemStateActionBuilder implements Builder<Orde
 
     public OrderImportLineItemStateActionBuilder state(final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
+        return this;
+    }
+
+    public OrderImportLineItemStateActionBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportLineItemStateActionBuilder plusState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 

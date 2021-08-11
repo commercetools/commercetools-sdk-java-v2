@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,8 +25,22 @@ public final class OrderCustomerSetMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     public OrderCustomerSetMessagePayloadBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public OrderCustomerSetMessagePayloadBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public OrderCustomerSetMessagePayloadBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,8 +51,22 @@ public final class OrderCustomerSetMessagePayloadBuilder implements Builder<Orde
     }
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.oldCustomer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public OrderCustomerSetMessagePayloadBuilder oldCustomer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference oldCustomer) {
         this.oldCustomer = oldCustomer;
+        return this;
+    }
+
+    public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.oldCustomerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
         return this;
     }
 

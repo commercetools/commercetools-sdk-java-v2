@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,23 @@ public final class ChangeQuantityChangeBuilder implements Builder<ChangeQuantity
     }
 
     public ChangeQuantityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChangeQuantityChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeQuantityChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
+                .build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,6 +24,13 @@ public final class SetParcelItemsChangeBuilder implements Builder<SetParcelItems
     }
 
     public SetParcelItemsChangeBuilder parcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
@@ -31,6 +39,22 @@ public final class SetParcelItemsChangeBuilder implements Builder<SetParcelItems
     public SetParcelItemsChangeBuilder nextValue(
             final com.commercetools.history.models.common.DeliveryItem... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -43,6 +67,22 @@ public final class SetParcelItemsChangeBuilder implements Builder<SetParcelItems
     public SetParcelItemsChangeBuilder previousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 

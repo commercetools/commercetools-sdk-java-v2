@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarProductSearchRequestMeta> {
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
+
+    public SimilarProductSearchRequestMetaBuilder similarityMeasures(
+            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
+        this.similarityMeasures = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of())
+                .build();
+        return this;
+    }
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
             final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {

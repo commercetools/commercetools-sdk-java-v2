@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -21,8 +22,20 @@ public final class ParcelDraftBuilder implements Builder<ParcelDraft> {
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     public ParcelDraftBuilder measurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
+        return this;
+    }
+
+    public ParcelDraftBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
+        return this;
+    }
+
+    public ParcelDraftBuilder trackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
 
@@ -34,6 +47,22 @@ public final class ParcelDraftBuilder implements Builder<ParcelDraft> {
 
     public ParcelDraftBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public ParcelDraftBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public ParcelDraftBuilder plusItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

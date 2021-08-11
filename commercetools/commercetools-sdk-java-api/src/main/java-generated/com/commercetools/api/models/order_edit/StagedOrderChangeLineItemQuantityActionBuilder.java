@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,8 +34,22 @@ public final class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
             @Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
+        return this;
+    }
+
+    public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
+                .build();
         return this;
     }
 

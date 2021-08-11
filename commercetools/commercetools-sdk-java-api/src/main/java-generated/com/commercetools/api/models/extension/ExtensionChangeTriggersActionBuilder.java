@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,22 @@ public final class ExtensionChangeTriggersActionBuilder implements Builder<Exten
     public ExtensionChangeTriggersActionBuilder triggers(
             final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
+        return this;
+    }
+
+    public ExtensionChangeTriggersActionBuilder withTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        this.triggers = new ArrayList<>();
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionChangeTriggersActionBuilder plusTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        if (this.triggers == null) {
+            this.triggers = new ArrayList<>();
+        }
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
 

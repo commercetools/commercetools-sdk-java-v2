@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class CategorySetMetaTitleActionBuilder implements Builder<Category
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
+
+    public CategorySetMetaTitleActionBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public CategorySetMetaTitleActionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {

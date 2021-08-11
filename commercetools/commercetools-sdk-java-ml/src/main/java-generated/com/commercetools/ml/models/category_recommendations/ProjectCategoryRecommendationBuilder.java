@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.category_recommendations;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public final class ProjectCategoryRecommendationBuilder implements Builder<Proje
     private Double confidence;
 
     private String path;
+
+    public ProjectCategoryRecommendationBuilder category(
+            Function<com.commercetools.ml.models.common.CategoryReferenceBuilder, com.commercetools.ml.models.common.CategoryReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.ml.models.common.CategoryReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ProjectCategoryRecommendationBuilder category(
             final com.commercetools.ml.models.common.CategoryReference category) {

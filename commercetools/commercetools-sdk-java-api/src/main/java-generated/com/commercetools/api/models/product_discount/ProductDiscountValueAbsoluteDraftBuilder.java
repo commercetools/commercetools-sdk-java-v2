@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,22 @@ public final class ProductDiscountValueAbsoluteDraftBuilder implements Builder<P
 
     public ProductDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteDraftBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.money = new ArrayList<>();
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
 

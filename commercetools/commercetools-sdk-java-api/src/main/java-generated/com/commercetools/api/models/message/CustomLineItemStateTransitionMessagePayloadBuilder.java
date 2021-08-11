@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -37,8 +38,20 @@ public final class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
+        return this;
+    }
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder toState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

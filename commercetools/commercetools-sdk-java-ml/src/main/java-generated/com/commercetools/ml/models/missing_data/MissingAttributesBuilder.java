@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -28,8 +29,20 @@ public final class MissingAttributesBuilder implements Builder<MissingAttributes
     @Nullable
     private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;
 
+    public MissingAttributesBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
     public MissingAttributesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
+        return this;
+    }
+
+    public MissingAttributesBuilder productType(
+            Function<com.commercetools.ml.models.common.ProductTypeReferenceBuilder, com.commercetools.ml.models.common.ProductTypeReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of()).build();
         return this;
     }
 
@@ -66,8 +79,22 @@ public final class MissingAttributesBuilder implements Builder<MissingAttributes
     }
 
     public MissingAttributesBuilder attributeCount(
+            Function<com.commercetools.ml.models.missing_data.AttributeCountBuilder, com.commercetools.ml.models.missing_data.AttributeCountBuilder> builder) {
+        this.attributeCount = builder.apply(com.commercetools.ml.models.missing_data.AttributeCountBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MissingAttributesBuilder attributeCount(
             @Nullable final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {
         this.attributeCount = attributeCount;
+        return this;
+    }
+
+    public MissingAttributesBuilder attributeCoverage(
+            Function<com.commercetools.ml.models.missing_data.AttributeCoverageBuilder, com.commercetools.ml.models.missing_data.AttributeCoverageBuilder> builder) {
+        this.attributeCoverage = builder.apply(com.commercetools.ml.models.missing_data.AttributeCoverageBuilder.of())
+                .build();
         return this;
     }
 

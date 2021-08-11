@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,24 @@ public final class SubscriptionSetChangesActionBuilder implements Builder<Subscr
     public SubscriptionSetChangesActionBuilder changes(
             @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+
+    public SubscriptionSetChangesActionBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionSetChangesActionBuilder plusChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
 

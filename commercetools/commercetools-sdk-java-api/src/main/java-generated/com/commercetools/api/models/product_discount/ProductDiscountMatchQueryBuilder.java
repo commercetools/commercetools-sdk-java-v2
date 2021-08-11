@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -29,6 +30,12 @@ public final class ProductDiscountMatchQueryBuilder implements Builder<ProductDi
 
     public ProductDiscountMatchQueryBuilder staged(final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+
+    public ProductDiscountMatchQueryBuilder price(
+            Function<com.commercetools.api.models.common.QueryPriceBuilder, com.commercetools.api.models.common.QueryPriceBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.QueryPriceBuilder.of()).build();
         return this;
     }
 

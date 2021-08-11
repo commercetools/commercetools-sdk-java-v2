@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,6 +34,13 @@ public final class InventoryEntryDraftBuilder implements Builder<InventoryEntryD
     }
 
     public InventoryEntryDraftBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public InventoryEntryDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
@@ -50,6 +58,12 @@ public final class InventoryEntryDraftBuilder implements Builder<InventoryEntryD
 
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
+        return this;
+    }
+
+    public InventoryEntryDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

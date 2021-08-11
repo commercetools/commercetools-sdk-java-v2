@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,13 @@ public final class MissingImagesTaskStatusBuilder implements Builder<MissingImag
 
     public MissingImagesTaskStatusBuilder expires(final java.time.ZonedDateTime expires) {
         this.expires = expires;
+        return this;
+    }
+
+    public MissingImagesTaskStatusBuilder result(
+            Function<com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder, com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder> builder) {
+        this.result = builder.apply(com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder.of())
+                .build();
         return this;
     }
 

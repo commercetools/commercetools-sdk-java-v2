@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class ExtensionPagedQueryResponseBuilder implements Builder<Extensi
     public ExtensionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.extension.Extension... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ExtensionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
         return this;
     }
 

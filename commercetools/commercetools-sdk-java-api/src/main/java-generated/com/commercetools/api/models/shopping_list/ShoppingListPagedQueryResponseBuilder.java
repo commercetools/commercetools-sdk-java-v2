@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class ShoppingListPagedQueryResponseBuilder implements Builder<Shop
     public ShoppingListPagedQueryResponseBuilder results(
             final com.commercetools.api.models.shopping_list.ShoppingList... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ShoppingListPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
         return this;
     }
 

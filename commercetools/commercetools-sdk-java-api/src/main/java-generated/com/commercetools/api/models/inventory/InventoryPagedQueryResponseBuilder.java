@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class InventoryPagedQueryResponseBuilder implements Builder<Invento
     public InventoryPagedQueryResponseBuilder results(
             final com.commercetools.api.models.inventory.InventoryEntry... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public InventoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
+        return this;
+    }
+
+    public InventoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
         return this;
     }
 

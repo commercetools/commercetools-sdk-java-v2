@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,8 +23,20 @@ public final class ReviewStateTransitionMessagePayloadBuilder implements Builder
     private Boolean force;
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewStateTransitionMessagePayloadBuilder oldState(
             final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
+        return this;
+    }
+
+    public ReviewStateTransitionMessagePayloadBuilder newState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

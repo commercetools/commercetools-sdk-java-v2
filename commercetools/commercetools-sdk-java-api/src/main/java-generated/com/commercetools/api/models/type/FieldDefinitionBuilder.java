@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,12 @@ public final class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     public FieldDefinitionBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    public FieldDefinitionBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

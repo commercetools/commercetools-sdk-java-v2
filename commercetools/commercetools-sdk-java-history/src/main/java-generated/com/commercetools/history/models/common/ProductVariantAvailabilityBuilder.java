@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -29,6 +30,14 @@ public final class ProductVariantAvailabilityBuilder implements Builder<ProductV
 
     public ProductVariantAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    public ProductVariantAvailabilityBuilder channels(
+            Function<com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder> builder) {
+        this.channels = builder
+                .apply(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder.of())
+                .build();
         return this;
     }
 

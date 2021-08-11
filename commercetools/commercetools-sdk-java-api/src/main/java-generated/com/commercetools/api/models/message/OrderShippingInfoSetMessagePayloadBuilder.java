@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,8 +19,20 @@ public final class OrderShippingInfoSetMessagePayloadBuilder implements Builder<
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
+        return this;
+    }
+
+    public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.oldShippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
 

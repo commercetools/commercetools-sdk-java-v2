@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -47,6 +48,12 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -54,6 +61,12 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     public CustomLineItemBuilder money(final com.commercetools.api.models.common.TypedMoney money) {
         this.money = money;
+        return this;
+    }
+
+    public CustomLineItemBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +96,22 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public CustomLineItemBuilder plusState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
     public CustomLineItemBuilder state(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
@@ -91,6 +120,12 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
     public CustomLineItemBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
+        return this;
+    }
+
+    public CustomLineItemBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -105,14 +140,44 @@ public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
+    public CustomLineItemBuilder plusDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
     public CustomLineItemBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
 
+    public CustomLineItemBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public CustomLineItemBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetailsBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of()).build();
         return this;
     }
 

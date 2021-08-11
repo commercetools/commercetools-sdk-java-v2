@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -59,8 +60,22 @@ public final class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     public ScopedPriceBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ScopedPriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public ScopedPriceBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -80,8 +95,20 @@ public final class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     public ScopedPriceBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    public ScopedPriceBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
+        return this;
+    }
+
+    public ScopedPriceBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

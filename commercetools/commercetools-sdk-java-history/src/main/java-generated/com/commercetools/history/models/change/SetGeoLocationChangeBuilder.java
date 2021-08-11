@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,8 +21,20 @@ public final class SetGeoLocationChangeBuilder implements Builder<SetGeoLocation
         return this;
     }
 
+    public SetGeoLocationChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
+        return this;
+    }
+
     public SetGeoLocationChangeBuilder nextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetGeoLocationChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
         return this;
     }
 

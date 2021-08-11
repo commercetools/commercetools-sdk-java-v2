@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -37,6 +38,22 @@ public final class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    public DeliveryBuilder withItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public DeliveryBuilder plusItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
     public DeliveryBuilder items(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
         this.items = items;
         return this;
@@ -47,8 +64,30 @@ public final class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    public DeliveryBuilder withParcels(
+            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
+        this.parcels = new ArrayList<>();
+        this.parcels.add(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()).build());
+        return this;
+    }
+
+    public DeliveryBuilder plusParcels(
+            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
+        if (this.parcels == null) {
+            this.parcels = new ArrayList<>();
+        }
+        this.parcels.add(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()).build());
+        return this;
+    }
+
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels) {
         this.parcels = parcels;
+        return this;
+    }
+
+    public DeliveryBuilder address(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
         return this;
     }
 

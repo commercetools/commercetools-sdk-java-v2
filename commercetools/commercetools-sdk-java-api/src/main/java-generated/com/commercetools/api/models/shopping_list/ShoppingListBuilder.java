@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -78,8 +79,20 @@ public final class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     public ShoppingListBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ShoppingListBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ShoppingListBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -88,8 +101,20 @@ public final class ShoppingListBuilder implements Builder<ShoppingList> {
         return this;
     }
 
+    public ShoppingListBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public ShoppingListBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
@@ -101,6 +126,12 @@ public final class ShoppingListBuilder implements Builder<ShoppingList> {
 
     public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    public ShoppingListBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -121,14 +152,44 @@ public final class ShoppingListBuilder implements Builder<ShoppingList> {
         return this;
     }
 
+    public ShoppingListBuilder withLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListBuilder plusLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
+        return this;
+    }
+
     public ShoppingListBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
 
+    public ShoppingListBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public ShoppingListBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -140,6 +201,24 @@ public final class ShoppingListBuilder implements Builder<ShoppingList> {
     public ShoppingListBuilder textLineItems(
             @Nullable final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
         this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
+        return this;
+    }
+
+    public ShoppingListBuilder withTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
+        this.textLineItems = new ArrayList<>();
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListBuilder plusTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
         return this;
     }
 

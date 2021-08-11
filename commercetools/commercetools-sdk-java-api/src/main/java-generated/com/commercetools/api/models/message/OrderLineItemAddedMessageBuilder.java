@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -59,8 +60,20 @@ public final class OrderLineItemAddedMessageBuilder implements Builder<OrderLine
     }
 
     public OrderLineItemAddedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderLineItemAddedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderLineItemAddedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -86,8 +99,22 @@ public final class OrderLineItemAddedMessageBuilder implements Builder<OrderLine
     }
 
     public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public OrderLineItemAddedMessageBuilder lineItem(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()).build();
         return this;
     }
 

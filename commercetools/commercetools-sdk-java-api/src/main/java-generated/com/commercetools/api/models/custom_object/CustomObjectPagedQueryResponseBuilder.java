@@ -2,6 +2,7 @@
 package com.commercetools.api.models.custom_object;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class CustomObjectPagedQueryResponseBuilder implements Builder<Cust
     public CustomObjectPagedQueryResponseBuilder results(
             final com.commercetools.api.models.custom_object.CustomObject... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public CustomObjectPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
+        return this;
+    }
+
+    public CustomObjectPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
         return this;
     }
 

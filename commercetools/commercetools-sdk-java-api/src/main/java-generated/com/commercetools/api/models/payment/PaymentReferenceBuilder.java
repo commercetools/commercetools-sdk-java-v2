@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class PaymentReferenceBuilder implements Builder<PaymentReference> 
 
     public PaymentReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public PaymentReferenceBuilder obj(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,12 @@ public final class DiscountedLineItemPriceBuilder implements Builder<DiscountedL
 
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
+    public DiscountedLineItemPriceBuilder value(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.Money value) {
         this.value = value;
         return this;
@@ -21,6 +28,24 @@ public final class DiscountedLineItemPriceBuilder implements Builder<DiscountedL
     public DiscountedLineItemPriceBuilder includedDiscounts(
             final com.commercetools.history.models.common.DiscountedLineItemPortion... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.history.models.common.DiscountedLineItemPortionBuilder.of()).build());
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.history.models.common.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

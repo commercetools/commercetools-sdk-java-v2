@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,13 @@ public final class CartSetCustomLineItemTaxAmountActionBuilder
 
     public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
+            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of())
+                .build();
         return this;
     }
 

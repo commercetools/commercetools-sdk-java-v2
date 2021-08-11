@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class PriceBuilder implements Builder<Price> {
 
     public PriceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public PriceBuilder value(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

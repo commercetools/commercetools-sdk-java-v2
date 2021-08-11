@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class SimilarProductBuilder implements Builder<SimilarProduct> {
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
+    public SimilarProductBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
@@ -27,6 +34,12 @@ public final class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
+        return this;
+    }
+
+    public SimilarProductBuilder meta(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder.of()).build();
         return this;
     }
 

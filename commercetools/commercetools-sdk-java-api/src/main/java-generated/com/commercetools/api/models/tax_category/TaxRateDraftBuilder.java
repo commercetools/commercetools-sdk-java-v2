@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -53,6 +54,22 @@ public final class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     public TaxRateDraftBuilder subRates(@Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
+        return this;
+    }
+
+    public TaxRateDraftBuilder withSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+        return this;
+    }
+
+    public TaxRateDraftBuilder plusSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
         return this;
     }
 

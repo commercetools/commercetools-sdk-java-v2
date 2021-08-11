@@ -2,6 +2,7 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,6 +24,24 @@ public final class GraphQLErrorBuilder implements Builder<GraphQLError> {
     public GraphQLErrorBuilder locations(
             final com.commercetools.api.models.graph_ql.GraphQLErrorLocation... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+
+    public GraphQLErrorBuilder withLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations
+                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
+        return this;
+    }
+
+    public GraphQLErrorBuilder plusLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations
+                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,14 @@ public final class ChangeShoppingListLineItemQuantityChangeBuilder
 
     public ChangeShoppingListLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
+        this.lineItem = builder
+                .apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of())
+                .build();
         return this;
     }
 

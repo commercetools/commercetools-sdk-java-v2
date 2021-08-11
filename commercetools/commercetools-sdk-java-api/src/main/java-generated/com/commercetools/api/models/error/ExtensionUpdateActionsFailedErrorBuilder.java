@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,6 +28,12 @@ public final class ExtensionUpdateActionsFailedErrorBuilder implements Builder<E
     }
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedMessage = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
@@ -35,6 +42,12 @@ public final class ExtensionUpdateActionsFailedErrorBuilder implements Builder<E
     public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(
             @Nullable final java.lang.Object extensionExtraInfo) {
         this.extensionExtraInfo = extensionExtraInfo;
+        return this;
+    }
+
+    public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(
+            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
+        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.producttypes;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> {
 
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
+
+    public AttributeNestedTypeBuilder typeReference(
+            Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
+        this.typeReference = builder
+                .apply(com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
 
     public AttributeNestedTypeBuilder typeReference(
             final com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference) {

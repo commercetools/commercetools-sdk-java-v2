@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,12 @@ public final class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineI
     }
 
     public SetLineItemTaxAmountChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -43,8 +50,20 @@ public final class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineI
     }
 
     public SetLineItemTaxAmountChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 

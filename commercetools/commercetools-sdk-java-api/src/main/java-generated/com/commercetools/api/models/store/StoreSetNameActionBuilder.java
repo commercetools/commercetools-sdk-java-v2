@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class StoreSetNameActionBuilder implements Builder<StoreSetNameActi
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
+
+    public StoreSetNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public StoreSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

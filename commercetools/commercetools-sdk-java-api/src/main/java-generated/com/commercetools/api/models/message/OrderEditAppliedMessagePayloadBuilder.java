@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +15,20 @@ public final class OrderEditAppliedMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     public OrderEditAppliedMessagePayloadBuilder edit(
+            Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
+        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public OrderEditAppliedMessagePayloadBuilder edit(
             final com.commercetools.api.models.order_edit.OrderEditReference edit) {
         this.edit = edit;
+        return this;
+    }
+
+    public OrderEditAppliedMessagePayloadBuilder result(
+            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
         return this;
     }
 

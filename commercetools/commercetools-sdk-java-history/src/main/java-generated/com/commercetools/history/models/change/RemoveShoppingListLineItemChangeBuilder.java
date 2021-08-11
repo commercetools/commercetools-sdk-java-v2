@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class RemoveShoppingListLineItemChangeBuilder implements Builder<Re
     }
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+        return this;
+    }
+
+    public RemoveShoppingListLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.LineItem previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveShoppingListLineItemChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
         return this;
     }
 

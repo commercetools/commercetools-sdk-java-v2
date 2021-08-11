@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,13 @@ public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     public DiscountedPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
+        return this;
+    }
+
+    public DiscountedPriceBuilder discount(
+            Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 

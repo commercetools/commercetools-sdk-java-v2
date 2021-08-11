@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class SetDefaultBillingAddressChangeBuilder implements Builder<SetD
     }
 
     public SetDefaultBillingAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public SetDefaultBillingAddressChangeBuilder nextValue(
             final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetDefaultBillingAddressChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 

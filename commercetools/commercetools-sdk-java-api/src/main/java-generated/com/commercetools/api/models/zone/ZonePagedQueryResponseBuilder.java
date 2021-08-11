@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQue
 
     public ZonePagedQueryResponseBuilder results(final com.commercetools.api.models.zone.Zone... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ZonePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
+        return this;
+    }
+
+    public ZonePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
         return this;
     }
 

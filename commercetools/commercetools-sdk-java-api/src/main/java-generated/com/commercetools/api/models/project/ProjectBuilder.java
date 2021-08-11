@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -99,6 +100,12 @@ public final class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
+    public ProjectBuilder messages(
+            Function<com.commercetools.api.models.message.MessageConfigurationBuilder, com.commercetools.api.models.message.MessageConfigurationBuilder> builder) {
+        this.messages = builder.apply(com.commercetools.api.models.message.MessageConfigurationBuilder.of()).build();
+        return this;
+    }
+
     public ProjectBuilder messages(final com.commercetools.api.models.message.MessageConfiguration messages) {
         this.messages = messages;
         return this;
@@ -111,8 +118,20 @@ public final class ProjectBuilder implements Builder<Project> {
     }
 
     public ProjectBuilder externalOAuth(
+            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
+        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();
+        return this;
+    }
+
+    public ProjectBuilder externalOAuth(
             @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
         this.externalOAuth = externalOAuth;
+        return this;
+    }
+
+    public ProjectBuilder carts(
+            Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
+        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();
         return this;
     }
 
@@ -122,8 +141,23 @@ public final class ProjectBuilder implements Builder<Project> {
     }
 
     public ProjectBuilder searchIndexing(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationBuilder> builder) {
+        this.searchIndexing = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProjectBuilder searchIndexing(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
         this.searchIndexing = searchIndexing;
+        return this;
+    }
+
+    public ProjectBuilder shoppingLists(
+            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
+        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
+                .build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,24 @@ public final class ProductVariantPatchRequestBuilder implements Builder<ProductV
     public ProductVariantPatchRequestBuilder patches(
             final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
+        return this;
+    }
+
+    public ProductVariantPatchRequestBuilder withPatches(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
+        this.patches = new ArrayList<>();
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantPatchRequestBuilder plusPatches(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
+        if (this.patches == null) {
+            this.patches = new ArrayList<>();
+        }
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
 

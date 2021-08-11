@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmo
     }
 
     public ChangeAmountPlannedChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeAmountPlannedChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeAmountPlannedChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

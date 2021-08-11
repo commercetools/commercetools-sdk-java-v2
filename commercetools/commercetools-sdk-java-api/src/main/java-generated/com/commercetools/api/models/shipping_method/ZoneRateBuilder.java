@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,6 +22,24 @@ public final class ZoneRateBuilder implements Builder<ZoneRate> {
     public ZoneRateBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
+        return this;
+    }
+
+    public ZoneRateBuilder withShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        this.shippingRates = new ArrayList<>();
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneRateBuilder plusShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        if (this.shippingRates == null) {
+            this.shippingRates = new ArrayList<>();
+        }
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
     }
 

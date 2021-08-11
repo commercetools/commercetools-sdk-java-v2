@@ -2,6 +2,7 @@
 package com.commercetools.api.models.api_client;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class ApiClientPagedQueryResponseBuilder implements Builder<ApiClie
     public ApiClientPagedQueryResponseBuilder results(
             final com.commercetools.api.models.api_client.ApiClient... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ApiClientPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
+        return this;
+    }
+
+    public ApiClientPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
         return this;
     }
 

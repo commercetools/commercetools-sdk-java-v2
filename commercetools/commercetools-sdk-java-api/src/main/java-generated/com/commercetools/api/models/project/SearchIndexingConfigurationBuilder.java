@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,14 @@ public final class SearchIndexingConfigurationBuilder implements Builder<SearchI
 
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
+
+    public SearchIndexingConfigurationBuilder products(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
+        this.products = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
+                .build();
+        return this;
+    }
 
     public SearchIndexingConfigurationBuilder products(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ChannelReferenceBuilder implements Builder<ChannelReference> 
 
     public ChannelReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ChannelReferenceBuilder obj(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build();
         return this;
     }
 

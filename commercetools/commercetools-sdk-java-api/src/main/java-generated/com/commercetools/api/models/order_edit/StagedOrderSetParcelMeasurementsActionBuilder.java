@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,12 @@ public final class StagedOrderSetParcelMeasurementsActionBuilder
 
     public StagedOrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public StagedOrderSetParcelMeasurementsActionBuilder measurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
 

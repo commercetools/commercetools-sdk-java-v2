@@ -2,6 +2,7 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -46,6 +47,22 @@ public final class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     public ErrorResponseBuilder errors(@Nullable final com.commercetools.history.models.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
+        return this;
+    }
+
+    public ErrorResponseBuilder withErrors(
+            Function<com.commercetools.history.models.ErrorObjectBuilder, com.commercetools.history.models.ErrorObjectBuilder> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.history.models.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public ErrorResponseBuilder plusErrors(
+            Function<com.commercetools.history.models.ErrorObjectBuilder, com.commercetools.history.models.ErrorObjectBuilder> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.history.models.ErrorObjectBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -41,6 +42,22 @@ public final class RecordPagedQueryResponseBuilder implements Builder<RecordPage
 
     public RecordPagedQueryResponseBuilder results(final com.commercetools.history.models.Record... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public RecordPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
+        return this;
+    }
+
+    public RecordPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
         return this;
     }
 

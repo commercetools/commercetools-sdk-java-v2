@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,12 @@ public final class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnu
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public AddPlainEnumValueChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -41,6 +42,22 @@ public final class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     public TermFacetResultBuilder terms(final com.commercetools.api.models.product.FacetResultTerm... terms) {
         this.terms = new ArrayList<>(Arrays.asList(terms));
+        return this;
+    }
+
+    public TermFacetResultBuilder withTerms(
+            Function<com.commercetools.api.models.product.FacetResultTermBuilder, com.commercetools.api.models.product.FacetResultTermBuilder> builder) {
+        this.terms = new ArrayList<>();
+        this.terms.add(builder.apply(com.commercetools.api.models.product.FacetResultTermBuilder.of()).build());
+        return this;
+    }
+
+    public TermFacetResultBuilder plusTerms(
+            Function<com.commercetools.api.models.product.FacetResultTermBuilder, com.commercetools.api.models.product.FacetResultTermBuilder> builder) {
+        if (this.terms == null) {
+            this.terms = new ArrayList<>();
+        }
+        this.terms.add(builder.apply(com.commercetools.api.models.product.FacetResultTermBuilder.of()).build());
         return this;
     }
 

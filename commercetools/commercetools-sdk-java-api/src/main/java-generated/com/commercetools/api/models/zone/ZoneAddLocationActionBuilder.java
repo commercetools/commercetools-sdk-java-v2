@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationAction> {
 
     private com.commercetools.api.models.zone.Location location;
+
+    public ZoneAddLocationActionBuilder location(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        this.location = builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build();
+        return this;
+    }
 
     public ZoneAddLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {
         this.location = location;

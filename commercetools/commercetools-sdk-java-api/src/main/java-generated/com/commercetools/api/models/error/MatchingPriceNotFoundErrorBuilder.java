@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -55,8 +56,22 @@ public final class MatchingPriceNotFoundErrorBuilder implements Builder<Matching
     }
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 

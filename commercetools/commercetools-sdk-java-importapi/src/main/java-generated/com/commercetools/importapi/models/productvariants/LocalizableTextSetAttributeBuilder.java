@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,6 +25,22 @@ public final class LocalizableTextSetAttributeBuilder implements Builder<Localiz
     public LocalizableTextSetAttributeBuilder value(
             final com.commercetools.importapi.models.common.LocalizedString... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+
+    public LocalizableTextSetAttributeBuilder withValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
+        return this;
+    }
+
+    public LocalizableTextSetAttributeBuilder plusValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 

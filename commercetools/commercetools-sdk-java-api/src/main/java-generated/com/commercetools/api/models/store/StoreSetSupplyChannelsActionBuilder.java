@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,24 @@ public final class StoreSetSupplyChannelsActionBuilder implements Builder<StoreS
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... supplyChannels) {
         this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+        return this;
+    }
+
+    public StoreSetSupplyChannelsActionBuilder withSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannels = new ArrayList<>();
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        if (this.supplyChannels == null) {
+            this.supplyChannels = new ArrayList<>();
+        }
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -29,6 +30,12 @@ public final class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     public AddPriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public AddPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
 

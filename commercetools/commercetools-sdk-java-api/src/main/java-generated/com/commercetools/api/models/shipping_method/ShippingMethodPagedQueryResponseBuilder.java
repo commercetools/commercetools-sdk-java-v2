@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -47,6 +48,24 @@ public final class ShippingMethodPagedQueryResponseBuilder implements Builder<Sh
     public ShippingMethodPagedQueryResponseBuilder results(
             final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ShippingMethodPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
         return this;
     }
 

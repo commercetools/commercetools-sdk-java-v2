@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -29,8 +30,21 @@ public final class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    public ParcelBuilder measurements(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
+        this.measurements = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of())
+                .build();
+        return this;
+    }
+
     public ParcelBuilder measurements(final com.commercetools.history.models.common.ParcelMeasurements measurements) {
         this.measurements = measurements;
+        return this;
+    }
+
+    public ParcelBuilder trackingData(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
+        this.trackingData = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
         return this;
     }
 
@@ -41,6 +55,22 @@ public final class ParcelBuilder implements Builder<Parcel> {
 
     public ParcelBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public ParcelBuilder withItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public ParcelBuilder plusItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 

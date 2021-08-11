@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,12 @@ public final class OrderLineItemAddedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.cart.LineItem lineItem;
 
     private Long addedQuantity;
+
+    public OrderLineItemAddedMessagePayloadBuilder lineItem(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()).build();
+        return this;
+    }
 
     public OrderLineItemAddedMessagePayloadBuilder lineItem(final com.commercetools.api.models.cart.LineItem lineItem) {
         this.lineItem = lineItem;

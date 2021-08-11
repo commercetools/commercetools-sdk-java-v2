@@ -2,6 +2,7 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,6 +25,22 @@ public final class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     public GraphQLResponseBuilder errors(@Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
+        return this;
+    }
+
+    public GraphQLResponseBuilder withErrors(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
+        return this;
+    }
+
+    public GraphQLResponseBuilder plusErrors(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
         return this;
     }
 

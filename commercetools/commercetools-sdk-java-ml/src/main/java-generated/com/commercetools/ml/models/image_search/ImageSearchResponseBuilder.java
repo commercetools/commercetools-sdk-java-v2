@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.image_search;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -34,6 +35,22 @@ public final class ImageSearchResponseBuilder implements Builder<ImageSearchResp
 
     public ImageSearchResponseBuilder results(final com.commercetools.ml.models.image_search.ResultItem... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ImageSearchResponseBuilder withResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
+        return this;
+    }
+
+    public ImageSearchResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
         return this;
     }
 

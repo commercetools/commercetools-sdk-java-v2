@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,8 +20,20 @@ public final class OrderBillingAddressSetMessagePayloadBuilder
     private com.commercetools.api.models.common.Address oldAddress;
 
     public OrderBillingAddressSetMessagePayloadBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public OrderBillingAddressSetMessagePayloadBuilder address(
             @Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
+        return this;
+    }
+
+    public OrderBillingAddressSetMessagePayloadBuilder oldAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 

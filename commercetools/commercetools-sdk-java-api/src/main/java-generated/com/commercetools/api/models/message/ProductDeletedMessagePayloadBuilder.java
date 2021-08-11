@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,13 @@ public final class ProductDeletedMessagePayloadBuilder implements Builder<Produc
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
+        return this;
+    }
+
+    public ProductDeletedMessagePayloadBuilder currentProjection(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
+                .build();
         return this;
     }
 

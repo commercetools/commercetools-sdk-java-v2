@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,6 +34,22 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
 
     public TaxCategoryDraftBuilder rates(final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
         this.rates = new ArrayList<>(Arrays.asList(rates));
+        return this;
+    }
+
+    public TaxCategoryDraftBuilder withRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        this.rates = new ArrayList<>();
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryDraftBuilder plusRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        if (this.rates == null) {
+            this.rates = new ArrayList<>();
+        }
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build());
         return this;
     }
 

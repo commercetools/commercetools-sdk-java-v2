@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,12 @@ public final class ProductVariantDeletedMessagePayloadBuilder implements Builder
     private com.commercetools.api.models.product.ProductVariant variant;
 
     private java.util.List<String> removedImageUrls;
+
+    public ProductVariantDeletedMessagePayloadBuilder variant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
+        return this;
+    }
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
             final com.commercetools.api.models.product.ProductVariant variant) {

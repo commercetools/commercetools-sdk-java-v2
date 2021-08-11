@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,22 @@ public final class OrderImportRequestBuilder implements Builder<OrderImportReque
     public OrderImportRequestBuilder resources(
             final com.commercetools.importapi.models.orders.OrderImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
+        return this;
+    }
+
+    public OrderImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportRequestBuilder plusResources(
+            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
         return this;
     }
 

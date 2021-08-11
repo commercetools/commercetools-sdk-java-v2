@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importsinks;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -42,6 +43,22 @@ public final class ImportSinkPagedResponseBuilder implements Builder<ImportSinkP
     public ImportSinkPagedResponseBuilder results(
             final com.commercetools.importapi.models.importsinks.ImportSink... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ImportSinkPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.importapi.models.importsinks.ImportSinkBuilder.of()).build());
+        return this;
+    }
+
+    public ImportSinkPagedResponseBuilder plusResults(
+            Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.importapi.models.importsinks.ImportSinkBuilder.of()).build());
         return this;
     }
 

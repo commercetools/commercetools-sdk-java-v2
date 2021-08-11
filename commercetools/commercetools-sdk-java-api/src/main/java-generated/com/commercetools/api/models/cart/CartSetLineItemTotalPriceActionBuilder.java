@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,14 @@ public final class CartSetLineItemTotalPriceActionBuilder implements Builder<Car
 
     public CartSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
+                .build();
         return this;
     }
 

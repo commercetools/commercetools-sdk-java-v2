@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,23 @@ public final class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange
     }
 
     public AddDeliveryChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public AddDeliveryChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public AddDeliveryChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
+                .build();
         return this;
     }
 

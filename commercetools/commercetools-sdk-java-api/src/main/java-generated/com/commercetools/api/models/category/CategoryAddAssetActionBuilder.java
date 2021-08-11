@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,12 @@ public final class CategoryAddAssetActionBuilder implements Builder<CategoryAddA
 
     @Nullable
     private Integer position;
+
+    public CategoryAddAssetActionBuilder asset(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build();
+        return this;
+    }
 
     public CategoryAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
         this.asset = asset;

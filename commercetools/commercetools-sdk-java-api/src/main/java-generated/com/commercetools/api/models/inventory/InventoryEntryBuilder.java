@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -64,8 +65,20 @@ public final class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     public InventoryEntryBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public InventoryEntryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public InventoryEntryBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -76,6 +89,12 @@ public final class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     public InventoryEntryBuilder sku(final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public InventoryEntryBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -102,6 +121,12 @@ public final class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
+        return this;
+    }
+
+    public InventoryEntryBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

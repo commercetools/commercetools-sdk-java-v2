@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,6 +18,12 @@ public final class ProductImageAddedMessagePayloadBuilder implements Builder<Pro
 
     public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
         this.variantId = variantId;
+        return this;
+    }
+
+    public ProductImageAddedMessagePayloadBuilder image(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build();
         return this;
     }
 

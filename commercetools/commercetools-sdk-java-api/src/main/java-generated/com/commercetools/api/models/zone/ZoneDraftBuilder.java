@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +40,22 @@ public final class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+
+    public ZoneDraftBuilder withLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneDraftBuilder plusLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
 

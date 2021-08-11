@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -11,6 +12,13 @@ public final class OrderDiscountCodeAddedMessagePayloadBuilder
         implements Builder<OrderDiscountCodeAddedMessagePayload> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+
+    public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
+                .build();
+        return this;
+    }
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,8 +21,20 @@ public final class SetStoreChangeBuilder implements Builder<SetStoreChange> {
         return this;
     }
 
+    public SetStoreChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public SetStoreChangeBuilder previousValue(final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetStoreChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

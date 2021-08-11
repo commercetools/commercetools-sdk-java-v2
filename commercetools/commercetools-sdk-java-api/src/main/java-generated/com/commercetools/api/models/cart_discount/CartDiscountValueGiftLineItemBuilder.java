@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class CartDiscountValueGiftLineItemBuilder implements Builder<CartD
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
+
+    public CartDiscountValueGiftLineItemBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
 
     public CartDiscountValueGiftLineItemBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {

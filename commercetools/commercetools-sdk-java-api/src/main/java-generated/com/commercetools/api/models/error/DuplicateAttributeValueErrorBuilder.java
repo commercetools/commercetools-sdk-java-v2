@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class DuplicateAttributeValueErrorBuilder implements Builder<Duplic
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DuplicateAttributeValueErrorBuilder attribute(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build();
         return this;
     }
 

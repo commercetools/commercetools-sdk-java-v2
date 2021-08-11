@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,24 @@ public final class ProductImportRequestBuilder implements Builder<ProductImportR
     public ProductImportRequestBuilder resources(
             final com.commercetools.importapi.models.products.ProductImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
+        return this;
+    }
+
+    public ProductImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources
+                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
+        return this;
+    }
+
+    public ProductImportRequestBuilder plusResources(
+            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources
+                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
         return this;
     }
 

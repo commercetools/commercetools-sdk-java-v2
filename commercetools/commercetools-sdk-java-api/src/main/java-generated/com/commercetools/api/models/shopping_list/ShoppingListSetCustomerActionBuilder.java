@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,13 @@ public final class ShoppingListSetCustomerActionBuilder implements Builder<Shopp
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+
+    public ShoppingListSetCustomerActionBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ShoppingListSetCustomerActionBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

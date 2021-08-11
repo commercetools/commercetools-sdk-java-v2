@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,6 +24,12 @@ public final class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourc
     }
 
     public SetAssetSourcesChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
+        return this;
+    }
+
+    public SetAssetSourcesChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
@@ -31,6 +38,22 @@ public final class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourc
     public SetAssetSourcesChangeBuilder nextValue(
             final com.commercetools.history.models.common.AssetSource... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public SetAssetSourcesChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public SetAssetSourcesChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
 
@@ -43,6 +66,22 @@ public final class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourc
     public SetAssetSourcesChangeBuilder previousValue(
             final com.commercetools.history.models.common.AssetSource... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public SetAssetSourcesChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public SetAssetSourcesChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
 

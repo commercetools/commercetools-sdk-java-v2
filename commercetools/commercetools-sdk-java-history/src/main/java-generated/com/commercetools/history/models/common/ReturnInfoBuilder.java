@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,6 +18,22 @@ public final class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     public ReturnInfoBuilder items(final com.commercetools.history.models.common.ReturnItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public ReturnInfoBuilder withItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()).build());
+        return this;
+    }
+
+    public ReturnInfoBuilder plusItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()).build());
         return this;
     }
 

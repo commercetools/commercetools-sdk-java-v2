@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change_value;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class AssetChangeValueBuilder implements Builder<AssetChangeValue> 
 
     public AssetChangeValueBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public AssetChangeValueBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

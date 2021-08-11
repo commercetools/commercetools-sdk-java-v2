@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public final class SyncInfoBuilder implements Builder<SyncInfo> {
     private String externalId;
 
     private String syncedAt;
+
+    public SyncInfoBuilder channel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
 
     public SyncInfoBuilder channel(final com.commercetools.history.models.common.Reference channel) {
         this.channel = channel;

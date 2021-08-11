@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -41,6 +42,12 @@ public final class AttributeDefinitionDraftBuilder implements Builder<AttributeD
         return this;
     }
 
+    public AttributeDefinitionDraftBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AttributeDefinitionDraftBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
@@ -54,6 +61,12 @@ public final class AttributeDefinitionDraftBuilder implements Builder<AttributeD
     public AttributeDefinitionDraftBuilder attributeConstraint(
             @Nullable final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
+        return this;
+    }
+
+    public AttributeDefinitionDraftBuilder inputTip(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

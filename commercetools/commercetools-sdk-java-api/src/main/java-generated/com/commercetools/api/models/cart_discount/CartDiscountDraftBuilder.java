@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -46,6 +47,12 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    public CartDiscountDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CartDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -53,6 +60,12 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
 
     public CartDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public CartDiscountDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -107,6 +120,12 @@ public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft
     public CartDiscountDraftBuilder stackingMode(
             @Nullable final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
         this.stackingMode = stackingMode;
+        return this;
+    }
+
+    public CartDiscountDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

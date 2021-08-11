@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,12 @@ public final class SearchIndexingConfigurationValuesBuilder implements Builder<S
     public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
             @Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
 

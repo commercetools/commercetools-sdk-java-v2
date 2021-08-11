@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.category_recommendations;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -41,9 +42,38 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
+                .build());
+        return this;
+    }
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
+                .build());
+        return this;
+    }
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results) {
         this.results = results;
+        return this;
+    }
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder> builder) {
+        this.meta = builder
+                .apply(
+                    com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder.of())
+                .build();
         return this;
     }
 

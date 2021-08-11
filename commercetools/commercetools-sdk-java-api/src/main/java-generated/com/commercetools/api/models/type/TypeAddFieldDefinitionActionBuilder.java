@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddFieldDefinitionAction> {
 
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
+
+    public TypeAddFieldDefinitionActionBuilder fieldDefinition(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
+        this.fieldDefinition = builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build();
+        return this;
+    }
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
             final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {

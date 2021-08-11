@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
+
+    public TypeChangeNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public TypeChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

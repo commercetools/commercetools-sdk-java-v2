@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,23 @@ public final class SetValidFromAndUntilChangeBuilder implements Builder<SetValid
     }
 
     public SetValidFromAndUntilChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetValidFromAndUntilChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ValidFromAndUntilValue previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetValidFromAndUntilChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of())
+                .build();
         return this;
     }
 

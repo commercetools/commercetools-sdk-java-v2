@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -29,8 +30,20 @@ public final class SetShippingMethodTaxRateChangeBuilder implements Builder<SetS
     }
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    public SetShippingMethodTaxRateChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetShippingMethodTaxRateChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 

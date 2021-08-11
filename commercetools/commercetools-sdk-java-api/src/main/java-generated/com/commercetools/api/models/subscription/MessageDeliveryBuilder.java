@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -43,6 +44,14 @@ public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
     }
 
     public MessageDeliveryBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MessageDeliveryBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -75,6 +84,14 @@ public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
 
     public MessageDeliveryBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public MessageDeliveryBuilder payloadNotIncluded(
+            Function<com.commercetools.api.models.subscription.PayloadNotIncludedBuilder, com.commercetools.api.models.subscription.PayloadNotIncludedBuilder> builder) {
+        this.payloadNotIncluded = builder
+                .apply(com.commercetools.api.models.subscription.PayloadNotIncludedBuilder.of())
+                .build();
         return this;
     }
 

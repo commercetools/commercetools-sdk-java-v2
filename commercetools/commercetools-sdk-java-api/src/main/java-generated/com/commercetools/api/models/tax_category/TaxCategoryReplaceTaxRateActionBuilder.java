@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class TaxCategoryReplaceTaxRateActionBuilder implements Builder<Tax
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
+        return this;
+    }
+
+    public TaxCategoryReplaceTaxRateActionBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build();
         return this;
     }
 

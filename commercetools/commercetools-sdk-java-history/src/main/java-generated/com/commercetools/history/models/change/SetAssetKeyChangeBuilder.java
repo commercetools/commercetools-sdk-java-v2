@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,6 +20,12 @@ public final class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange
 
     public SetAssetKeyChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public SetAssetKeyChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
 

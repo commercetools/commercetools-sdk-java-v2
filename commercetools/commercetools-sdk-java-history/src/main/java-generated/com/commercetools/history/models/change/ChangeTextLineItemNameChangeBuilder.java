@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,14 +24,33 @@ public final class ChangeTextLineItemNameChangeBuilder implements Builder<Change
     }
 
     public ChangeTextLineItemNameChangeBuilder textLineItem(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.textLineItem = builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChangeTextLineItemNameChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
         return this;
     }
 
     public ChangeTextLineItemNameChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeTextLineItemNameChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeTextLineItemNameChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

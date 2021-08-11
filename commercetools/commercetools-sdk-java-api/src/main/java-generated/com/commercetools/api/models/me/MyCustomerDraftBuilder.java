@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -105,6 +106,22 @@ public final class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    public MyCustomerDraftBuilder withAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
+    public MyCustomerDraftBuilder plusAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
     public MyCustomerDraftBuilder addresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
         this.addresses = addresses;
@@ -121,6 +138,12 @@ public final class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    public MyCustomerDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
@@ -134,6 +157,22 @@ public final class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     public MyCustomerDraftBuilder stores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public MyCustomerDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public MyCustomerDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
 

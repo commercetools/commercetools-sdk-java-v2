@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class CartPagedQueryResponseBuilder implements Builder<CartPagedQue
 
     public CartPagedQueryResponseBuilder results(final com.commercetools.api.models.cart.Cart... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public CartPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build());
+        return this;
+    }
+
+    public CartPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build());
         return this;
     }
 

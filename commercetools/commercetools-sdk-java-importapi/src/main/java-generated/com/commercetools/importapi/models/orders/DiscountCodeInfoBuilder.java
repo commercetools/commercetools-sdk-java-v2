@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,14 @@ public final class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> 
 
     @Nullable
     private com.commercetools.importapi.models.orders.DiscountCodeState state;
+
+    public DiscountCodeInfoBuilder discountCode(
+            Function<com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder, com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder> builder) {
+        this.discountCode = builder
+                .apply(com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
 
     public DiscountCodeInfoBuilder discountCode(
             final com.commercetools.importapi.models.common.DiscountCodeKeyReference discountCode) {

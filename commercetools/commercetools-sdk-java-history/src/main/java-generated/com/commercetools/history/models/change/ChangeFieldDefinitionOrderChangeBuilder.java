@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,24 @@ public final class ChangeFieldDefinitionOrderChangeBuilder implements Builder<Ch
         return this;
     }
 
+    public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue) {
         this.previousValue = previousValue;
@@ -35,6 +54,24 @@ public final class ChangeFieldDefinitionOrderChangeBuilder implements Builder<Ch
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
     }
 

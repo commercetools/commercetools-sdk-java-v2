@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -57,8 +58,20 @@ public final class ProductPriceDiscountsSetMessageBuilder implements Builder<Pro
     }
 
     public ProductPriceDiscountsSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -85,6 +98,14 @@ public final class ProductPriceDiscountsSetMessageBuilder implements Builder<Pro
     }
 
     public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -93,6 +114,26 @@ public final class ProductPriceDiscountsSetMessageBuilder implements Builder<Pro
     public ProductPriceDiscountsSetMessageBuilder updatedPrices(
             final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
         this.updatedPrices = new ArrayList<>(Arrays.asList(updatedPrices));
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder withUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        this.updatedPrices = new ArrayList<>();
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        if (this.updatedPrices == null) {
+            this.updatedPrices = new ArrayList<>();
+        }
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,13 @@ public final class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCu
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+
+    public ReviewSetCustomerActionBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ReviewSetCustomerActionBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

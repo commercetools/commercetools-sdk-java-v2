@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAddedMessagePayload> {
 
     private com.commercetools.api.models.order.Delivery delivery;
+
+    public DeliveryAddedMessagePayloadBuilder delivery(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
+        return this;
+    }
 
     public DeliveryAddedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;

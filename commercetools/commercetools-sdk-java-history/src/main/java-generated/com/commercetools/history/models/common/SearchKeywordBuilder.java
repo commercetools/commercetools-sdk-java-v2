@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,13 @@ public final class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     public SearchKeywordBuilder text(final String text) {
         this.text = text;
+        return this;
+    }
+
+    public SearchKeywordBuilder suggestTokenizer(
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizerBuilder> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of())
+                .build();
         return this;
     }
 

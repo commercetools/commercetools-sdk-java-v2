@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -35,8 +36,23 @@ public final class SetVariantAvailabilityChangeBuilder implements Builder<SetVar
     }
 
     public SetVariantAvailabilityChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetVariantAvailabilityChangeBuilder previousValue(
             final com.commercetools.history.models.common.ProductVariantAvailability previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetVariantAvailabilityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
+                .build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class CategoryReferenceBuilder implements Builder<CategoryReference
 
     public CategoryReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CategoryReferenceBuilder obj(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,8 +29,20 @@ public final class RemoveVariantChangeBuilder implements Builder<RemoveVariantCh
     }
 
     public RemoveVariantChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
+        return this;
+    }
+
+    public RemoveVariantChangeBuilder previousValue(
             final com.commercetools.history.models.common.Variant previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveVariantChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQ
 
     public OrderPagedQueryResponseBuilder results(final com.commercetools.api.models.order.Order... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public OrderPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
+        return this;
+    }
+
+    public OrderPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
         return this;
     }
 

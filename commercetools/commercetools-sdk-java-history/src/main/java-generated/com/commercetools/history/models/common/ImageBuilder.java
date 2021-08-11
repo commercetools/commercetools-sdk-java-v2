@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,6 +18,12 @@ public final class ImageBuilder implements Builder<Image> {
 
     public ImageBuilder url(final String url) {
         this.url = url;
+        return this;
+    }
+
+    public ImageBuilder dimensions(
+            Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensionsBuilder> builder) {
+        this.dimensions = builder.apply(com.commercetools.history.models.common.ImageDimensionsBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -37,6 +38,12 @@ public final class ProductAddAssetActionBuilder implements Builder<ProductAddAss
 
     public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+
+    public ProductAddAssetActionBuilder asset(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build();
         return this;
     }
 

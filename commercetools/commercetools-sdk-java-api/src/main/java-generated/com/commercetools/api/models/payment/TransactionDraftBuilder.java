@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -31,6 +32,12 @@ public final class TransactionDraftBuilder implements Builder<TransactionDraft> 
 
     public TransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
+        return this;
+    }
+
+    public TransactionDraftBuilder amount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

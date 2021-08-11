@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,14 @@ public final class DiscountedLineItemPriceForQuantityBuilder implements Builder<
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 

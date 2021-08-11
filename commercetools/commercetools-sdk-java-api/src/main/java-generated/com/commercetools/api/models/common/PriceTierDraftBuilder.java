@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
 
     public PriceTierDraftBuilder minimumQuantity(final Long minimumQuantity) {
         this.minimumQuantity = minimumQuantity;
+        return this;
+    }
+
+    public PriceTierDraftBuilder value(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

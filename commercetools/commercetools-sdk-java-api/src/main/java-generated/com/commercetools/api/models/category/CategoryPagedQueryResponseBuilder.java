@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class CategoryPagedQueryResponseBuilder implements Builder<Category
 
     public CategoryPagedQueryResponseBuilder results(final com.commercetools.api.models.category.Category... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public CategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
+        return this;
+    }
+
+    public CategoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
         return this;
     }
 

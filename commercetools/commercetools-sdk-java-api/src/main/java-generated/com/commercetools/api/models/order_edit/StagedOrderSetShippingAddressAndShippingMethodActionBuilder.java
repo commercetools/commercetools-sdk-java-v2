@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -21,14 +22,35 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
             final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
+        return this;
+    }
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
         return this;
     }
 

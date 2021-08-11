@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,8 +20,22 @@ public final class MissingAttributesMetaBuilder implements Builder<MissingAttrib
     private java.util.List<String> productTypeIds;
 
     public MissingAttributesMetaBuilder productLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
+        this.productLevel = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MissingAttributesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
         this.productLevel = productLevel;
+        return this;
+    }
+
+    public MissingAttributesMetaBuilder variantLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
+        this.variantLevel = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder.of())
+                .build();
         return this;
     }
 

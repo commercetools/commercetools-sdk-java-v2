@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ShippingMethodReferenceBuilder implements Builder<ShippingMet
 
     public ShippingMethodReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ShippingMethodReferenceBuilder obj(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build();
         return this;
     }
 

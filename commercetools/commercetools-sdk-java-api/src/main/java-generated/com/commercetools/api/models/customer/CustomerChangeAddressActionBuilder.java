@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +27,12 @@ public final class CustomerChangeAddressActionBuilder implements Builder<Custome
 
     public CustomerChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
+        return this;
+    }
+
+    public CustomerChangeAddressActionBuilder address(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
 

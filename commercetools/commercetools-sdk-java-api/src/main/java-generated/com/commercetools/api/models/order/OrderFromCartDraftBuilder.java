@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -38,6 +39,12 @@ public final class OrderFromCartDraftBuilder implements Builder<OrderFromCartDra
     @Deprecated
     public OrderFromCartDraftBuilder id(@Nullable final String id) {
         this.id = id;
+        return this;
+    }
+
+    public OrderFromCartDraftBuilder cart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();
         return this;
     }
 

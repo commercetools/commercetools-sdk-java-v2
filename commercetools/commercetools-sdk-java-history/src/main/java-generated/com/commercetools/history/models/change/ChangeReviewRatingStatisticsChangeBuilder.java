@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,22 @@ public final class ChangeReviewRatingStatisticsChangeBuilder implements Builder<
     }
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeReviewRatingStatisticsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
+                .build();
         return this;
     }
 

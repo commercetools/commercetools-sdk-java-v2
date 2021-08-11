@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,12 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 

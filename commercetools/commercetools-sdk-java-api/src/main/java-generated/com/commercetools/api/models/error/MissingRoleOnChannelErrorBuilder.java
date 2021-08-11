@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,13 @@ public final class MissingRoleOnChannelErrorBuilder implements Builder<MissingRo
 
     public MissingRoleOnChannelErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public MissingRoleOnChannelErrorBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 

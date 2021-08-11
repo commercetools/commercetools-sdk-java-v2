@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,14 +24,33 @@ public final class SetParcelTrackingDataChangeBuilder implements Builder<SetParc
     }
 
     public SetParcelTrackingDataChangeBuilder parcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetParcelTrackingDataChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
     }
 
     public SetParcelTrackingDataChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    public SetParcelTrackingDataChangeBuilder nextValue(
             final com.commercetools.history.models.common.TrackingData nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetParcelTrackingDataChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,6 +34,12 @@ public final class ProductDiscountDraftBuilder implements Builder<ProductDiscoun
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    public ProductDiscountDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -40,6 +47,12 @@ public final class ProductDiscountDraftBuilder implements Builder<ProductDiscoun
 
     public ProductDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public ProductDiscountDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

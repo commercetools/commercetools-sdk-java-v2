@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,8 +28,21 @@ public final class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
+    public CartScoreTierBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+
+    public CartScoreTierBuilder priceFunction(
+            Function<com.commercetools.api.models.shipping_method.PriceFunctionBuilder, com.commercetools.api.models.shipping_method.PriceFunctionBuilder> builder) {
+        this.priceFunction = builder.apply(com.commercetools.api.models.shipping_method.PriceFunctionBuilder.of())
+                .build();
         return this;
     }
 

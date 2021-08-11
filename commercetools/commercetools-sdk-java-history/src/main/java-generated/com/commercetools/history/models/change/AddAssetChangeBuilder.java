@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,8 +21,20 @@ public final class AddAssetChangeBuilder implements Builder<AddAssetChange> {
         return this;
     }
 
+    public AddAssetChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
+        return this;
+    }
+
     public AddAssetChangeBuilder nextValue(final com.commercetools.history.models.common.Asset nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public AddAssetChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,12 @@ public final class ProductAddExternalImageActionBuilder implements Builder<Produ
 
     public ProductAddExternalImageActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public ProductAddExternalImageActionBuilder image(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build();
         return this;
     }
 

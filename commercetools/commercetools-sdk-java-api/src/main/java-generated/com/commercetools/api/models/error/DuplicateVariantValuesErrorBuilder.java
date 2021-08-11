@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class DuplicateVariantValuesErrorBuilder implements Builder<Duplica
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DuplicateVariantValuesErrorBuilder variantValues(
+            Function<com.commercetools.api.models.error.VariantValuesBuilder, com.commercetools.api.models.error.VariantValuesBuilder> builder) {
+        this.variantValues = builder.apply(com.commercetools.api.models.error.VariantValuesBuilder.of()).build();
         return this;
     }
 

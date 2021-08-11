@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class TaxCategoryReferenceBuilder implements Builder<TaxCategoryRef
 
     public TaxCategoryReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public TaxCategoryReferenceBuilder obj(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build();
         return this;
     }
 

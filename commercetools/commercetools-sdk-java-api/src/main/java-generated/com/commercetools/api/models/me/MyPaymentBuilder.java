@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -40,6 +41,12 @@ public final class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    public MyPaymentBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
     public MyPaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
@@ -56,6 +63,13 @@ public final class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     public MyPaymentBuilder paymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MyPaymentBuilder paymentMethodInfo(
             final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
@@ -66,9 +80,31 @@ public final class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    public MyPaymentBuilder withTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        this.transactions = new ArrayList<>();
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
+        return this;
+    }
+
+    public MyPaymentBuilder plusTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        if (this.transactions == null) {
+            this.transactions = new ArrayList<>();
+        }
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
+        return this;
+    }
+
     public MyPaymentBuilder transactions(
             final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
         this.transactions = transactions;
+        return this;
+    }
+
+    public MyPaymentBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

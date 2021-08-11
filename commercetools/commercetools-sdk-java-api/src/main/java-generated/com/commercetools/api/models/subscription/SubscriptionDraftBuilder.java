@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -31,6 +32,24 @@ public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft
         return this;
     }
 
+    public SubscriptionDraftBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
     public SubscriptionDraftBuilder changes(
             @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
@@ -51,6 +70,24 @@ public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft
     public SubscriptionDraftBuilder messages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
+        return this;
+    }
+
+    public SubscriptionDraftBuilder withMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        this.messages = new ArrayList<>();
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        if (this.messages == null) {
+            this.messages = new ArrayList<>();
+        }
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
 

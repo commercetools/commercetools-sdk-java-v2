@@ -2,6 +2,7 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,8 +46,20 @@ public final class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    public DiscountCodeDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public DiscountCodeDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -64,6 +77,26 @@ public final class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft
     public DiscountCodeDraftBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder plusCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
         return this;
     }
 
@@ -90,6 +123,12 @@ public final class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft
 
     public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,12 @@ public final class AddParcelToDeliveryChangeBuilder implements Builder<AddParcel
 
     public AddParcelToDeliveryChangeBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    public AddParcelToDeliveryChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build();
         return this;
     }
 

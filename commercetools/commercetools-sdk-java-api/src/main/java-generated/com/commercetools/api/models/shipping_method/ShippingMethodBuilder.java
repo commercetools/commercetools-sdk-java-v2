@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -69,8 +70,20 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     public ShippingMethodBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ShippingMethodBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ShippingMethodBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -95,6 +108,13 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     public ShippingMethodBuilder localizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingMethodBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
@@ -111,6 +131,22 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    public ShippingMethodBuilder withZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
+        this.zoneRates = new ArrayList<>();
+        this.zoneRates.add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodBuilder plusZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
+        if (this.zoneRates == null) {
+            this.zoneRates = new ArrayList<>();
+        }
+        this.zoneRates.add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()).build());
+        return this;
+    }
+
     public ShippingMethodBuilder zoneRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
         this.zoneRates = zoneRates;
@@ -124,6 +160,12 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;
+        return this;
+    }
+
+    public ShippingMethodBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

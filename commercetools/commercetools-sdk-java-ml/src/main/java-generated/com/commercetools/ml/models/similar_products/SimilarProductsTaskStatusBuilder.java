@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -25,6 +26,14 @@ public final class SimilarProductsTaskStatusBuilder implements Builder<SimilarPr
 
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
         this.expires = expires;
+        return this;
+    }
+
+    public SimilarProductsTaskStatusBuilder result(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
+        this.result = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of())
+                .build();
         return this;
     }
 

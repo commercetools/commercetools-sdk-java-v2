@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,14 @@ public final class AddInterfaceInteractionChangeBuilder implements Builder<AddIn
 
     public AddInterfaceInteractionChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public AddInterfaceInteractionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of())
+                .build();
         return this;
     }
 

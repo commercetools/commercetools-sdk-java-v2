@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -40,6 +41,12 @@ public final class SetOrderLineItemCustomFieldChangeBuilder implements Builder<S
 
     public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
         this.variant = variant;
+        return this;
+    }
+
+    public SetOrderLineItemCustomFieldChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

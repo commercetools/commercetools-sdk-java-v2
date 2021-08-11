@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,12 @@ public final class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> 
     private com.commercetools.history.models.common.Reference discountCode;
 
     private com.commercetools.history.models.common.DiscountCodeState state;
+
+    public DiscountCodeInfoBuilder discountCode(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
 
     public DiscountCodeInfoBuilder discountCode(final com.commercetools.history.models.common.Reference discountCode) {
         this.discountCode = discountCode;

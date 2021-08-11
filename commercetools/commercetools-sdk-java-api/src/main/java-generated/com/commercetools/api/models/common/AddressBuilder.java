@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -210,6 +211,12 @@ public final class AddressBuilder implements Builder<Address> {
 
     public AddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
+        return this;
+    }
+
+    public AddressBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 

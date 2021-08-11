@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,14 @@ public final class ResourceCreatedDeliveryBuilder implements Builder<ResourceCre
 
     public ResourceCreatedDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+        return this;
+    }
+
+    public ResourceCreatedDeliveryBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 

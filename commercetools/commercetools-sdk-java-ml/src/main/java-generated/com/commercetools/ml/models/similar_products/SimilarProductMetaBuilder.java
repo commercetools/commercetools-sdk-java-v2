@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -23,14 +24,32 @@ public final class SimilarProductMetaBuilder implements Builder<SimilarProductMe
     @Nullable
     private Long variantCount;
 
+    public SimilarProductMetaBuilder name(
+            Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public SimilarProductMetaBuilder name(@Nullable final com.commercetools.ml.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
     public SimilarProductMetaBuilder description(
+            Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SimilarProductMetaBuilder description(
             @Nullable final com.commercetools.ml.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public SimilarProductMetaBuilder price(
+            Function<com.commercetools.ml.models.common.MoneyBuilder, com.commercetools.ml.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.ml.models.common.MoneyBuilder.of()).build();
         return this;
     }
 

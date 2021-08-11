@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,8 +22,20 @@ public final class AddLocationChangeBuilder implements Builder<AddLocationChange
     }
 
     public AddLocationChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
+        return this;
+    }
+
+    public AddLocationChangeBuilder previousValue(
             final com.commercetools.history.models.common.Location previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public AddLocationChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
         return this;
     }
 

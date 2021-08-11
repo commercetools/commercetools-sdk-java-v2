@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -48,13 +49,32 @@ public final class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     public ShippingInfoBuilder shippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingInfoBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRate shippingRate) {
         this.shippingRate = shippingRate;
         return this;
     }
 
+    public ShippingInfoBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
     public ShippingInfoBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    public ShippingInfoBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -80,9 +100,32 @@ public final class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
+    public ShippingInfoBuilder withDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        this.deliveries = new ArrayList<>();
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingInfoBuilder plusDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        if (this.deliveries == null) {
+            this.deliveries = new ArrayList<>();
+        }
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        return this;
+    }
+
     public ShippingInfoBuilder deliveries(
             @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
         this.deliveries = deliveries;
+        return this;
+    }
+
+    public ShippingInfoBuilder discountedPrice(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 

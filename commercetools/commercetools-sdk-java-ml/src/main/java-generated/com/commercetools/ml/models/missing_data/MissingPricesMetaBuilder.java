@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +15,24 @@ public final class MissingPricesMetaBuilder implements Builder<MissingPricesMeta
     private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
 
     public MissingPricesMetaBuilder productLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder> builder) {
+        this.productLevel = builder
+                .apply(com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MissingPricesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel) {
         this.productLevel = productLevel;
+        return this;
+    }
+
+    public MissingPricesMetaBuilder variantLevel(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder> builder) {
+        this.variantLevel = builder
+                .apply(com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder.of())
+                .build();
         return this;
     }
 

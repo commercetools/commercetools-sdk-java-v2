@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,6 +28,12 @@ public final class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo
 
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
         this.method = method;
+        return this;
+    }
+
+    public PaymentMethodInfoBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

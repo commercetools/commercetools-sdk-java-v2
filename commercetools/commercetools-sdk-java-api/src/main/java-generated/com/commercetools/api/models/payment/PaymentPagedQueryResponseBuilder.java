@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class PaymentPagedQueryResponseBuilder implements Builder<PaymentPa
 
     public PaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.payment.Payment... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public PaymentPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
         return this;
     }
 

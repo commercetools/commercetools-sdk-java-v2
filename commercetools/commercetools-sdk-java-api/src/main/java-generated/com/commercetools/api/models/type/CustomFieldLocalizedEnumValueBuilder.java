@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,12 @@ public final class CustomFieldLocalizedEnumValueBuilder implements Builder<Custo
 
     public CustomFieldLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
+        return this;
+    }
+
+    public CustomFieldLocalizedEnumValueBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

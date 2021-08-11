@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -22,8 +23,21 @@ public final class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     @Nullable
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
+    public MyPaymentDraftBuilder amountPlanned(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
+        return this;
+    }
+
+    public MyPaymentDraftBuilder paymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
+                .build();
         return this;
     }
 
@@ -33,8 +47,20 @@ public final class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         return this;
     }
 
+    public MyPaymentDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
     public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public MyPaymentDraftBuilder transaction(
+            Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraftBuilder> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.me.MyTransactionDraftBuilder.of()).build();
         return this;
     }
 

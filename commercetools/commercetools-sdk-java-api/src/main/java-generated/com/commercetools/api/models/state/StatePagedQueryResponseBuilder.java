@@ -2,6 +2,7 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,22 @@ public final class StatePagedQueryResponseBuilder implements Builder<StatePagedQ
 
     public StatePagedQueryResponseBuilder results(final com.commercetools.api.models.state.State... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public StatePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
+        return this;
+    }
+
+    public StatePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
         return this;
     }
 

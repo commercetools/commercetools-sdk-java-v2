@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class CustomerGroupPagedQueryResponseBuilder implements Builder<Cus
     public CustomerGroupPagedQueryResponseBuilder results(
             final com.commercetools.api.models.customer_group.CustomerGroup... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public CustomerGroupPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerGroupPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()).build());
         return this;
     }
 

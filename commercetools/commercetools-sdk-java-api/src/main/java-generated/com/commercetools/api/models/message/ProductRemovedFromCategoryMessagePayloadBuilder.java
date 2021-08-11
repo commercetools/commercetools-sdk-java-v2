@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,12 @@ public final class ProductRemovedFromCategoryMessagePayloadBuilder
     private com.commercetools.api.models.category.CategoryReference category;
 
     private Boolean staged;
+
+    public ProductRemovedFromCategoryMessagePayloadBuilder category(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
             final com.commercetools.api.models.category.CategoryReference category) {

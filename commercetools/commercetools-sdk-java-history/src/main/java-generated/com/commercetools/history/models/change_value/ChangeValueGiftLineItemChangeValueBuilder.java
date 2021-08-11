@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change_value;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -18,6 +19,12 @@ public final class ChangeValueGiftLineItemChangeValueBuilder implements Builder<
     private com.commercetools.history.models.common.Reference distributionChannel;
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeValueGiftLineItemChangeValueBuilder product(
             final com.commercetools.history.models.common.Reference product) {
         this.product = product;
         return this;
@@ -29,8 +36,20 @@ public final class ChangeValueGiftLineItemChangeValueBuilder implements Builder<
     }
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
             final com.commercetools.history.models.common.Reference supplyChannel) {
         this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class CartDiscountReferenceBuilder implements Builder<CartDiscountR
 
     public CartDiscountReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CartDiscountReferenceBuilder obj(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build();
         return this;
     }
 

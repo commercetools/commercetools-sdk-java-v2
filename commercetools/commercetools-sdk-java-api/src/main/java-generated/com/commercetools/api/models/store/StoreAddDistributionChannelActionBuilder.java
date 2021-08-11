@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class StoreAddDistributionChannelActionBuilder implements Builder<StoreAddDistributionChannelAction> {
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    public StoreAddDistributionChannelActionBuilder distributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,12 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
         return this;
     }
 
+    public QueryPriceBuilder value(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public QueryPriceBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
@@ -55,8 +62,22 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     public QueryPriceBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public QueryPriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public QueryPriceBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -76,8 +97,20 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     public QueryPriceBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    public QueryPriceBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
+        return this;
+    }
+
+    public QueryPriceBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -88,6 +121,22 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
 
     public QueryPriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
+        return this;
+    }
+
+    public QueryPriceBuilder withTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
+        return this;
+    }
+
+    public QueryPriceBuilder plusTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
         return this;
     }
 

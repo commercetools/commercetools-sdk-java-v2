@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,6 +22,24 @@ public final class SimilarProductPairBuilder implements Builder<SimilarProductPa
     public SimilarProductPairBuilder products(
             final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
         this.products = new ArrayList<>(Arrays.asList(products));
+        return this;
+    }
+
+    public SimilarProductPairBuilder withProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
+        this.products = new ArrayList<>();
+        this.products
+                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
+        return this;
+    }
+
+    public SimilarProductPairBuilder plusProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
+        if (this.products == null) {
+            this.products = new ArrayList<>();
+        }
+        this.products
+                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
         return this;
     }
 

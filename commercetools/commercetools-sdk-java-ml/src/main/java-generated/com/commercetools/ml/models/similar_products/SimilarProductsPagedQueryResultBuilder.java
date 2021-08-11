@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -40,9 +41,35 @@ public final class SimilarProductsPagedQueryResultBuilder implements Builder<Sim
         return this;
     }
 
+    public SimilarProductsPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPairBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.ml.models.similar_products.SimilarProductPairBuilder.of()).build());
+        return this;
+    }
+
+    public SimilarProductsPagedQueryResultBuilder plusResults(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPairBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(
+            builder.apply(com.commercetools.ml.models.similar_products.SimilarProductPairBuilder.of()).build());
+        return this;
+    }
+
     public SimilarProductsPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> results) {
         this.results = results;
+        return this;
+    }
+
+    public SimilarProductsPagedQueryResultBuilder meta(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder> builder) {
+        this.meta = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder.of())
+                .build();
         return this;
     }
 

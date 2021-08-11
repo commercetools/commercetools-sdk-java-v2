@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +21,12 @@ public final class ImageBuilder implements Builder<Image> {
 
     public ImageBuilder url(final String url) {
         this.url = url;
+        return this;
+    }
+
+    public ImageBuilder dimensions(
+            Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
+        this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
 

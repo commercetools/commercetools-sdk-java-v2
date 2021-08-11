@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,12 @@ public final class ProductChangeSlugActionBuilder implements Builder<ProductChan
 
     @Nullable
     private Boolean staged;
+
+    public ProductChangeSlugActionBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ProductChangeSlugActionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;

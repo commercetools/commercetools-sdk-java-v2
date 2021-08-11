@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreatedMessagePayload> {
 
     private com.commercetools.api.models.review.Review review;
+
+    public ReviewCreatedMessagePayloadBuilder review(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.review = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
+        return this;
+    }
 
     public ReviewCreatedMessagePayloadBuilder review(final com.commercetools.api.models.review.Review review) {
         this.review = review;

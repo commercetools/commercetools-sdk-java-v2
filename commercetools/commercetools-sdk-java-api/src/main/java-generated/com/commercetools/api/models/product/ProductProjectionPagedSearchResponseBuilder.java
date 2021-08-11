@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -51,9 +52,31 @@ public final class ProductProjectionPagedSearchResponseBuilder
         return this;
     }
 
+    public ProductProjectionPagedSearchResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductProjectionPagedSearchResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
     public ProductProjectionPagedSearchResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
         this.results = results;
+        return this;
+    }
+
+    public ProductProjectionPagedSearchResponseBuilder facets(
+            Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
+        this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,6 +26,13 @@ public final class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<
     }
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
@@ -36,8 +44,20 @@ public final class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<
     }
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

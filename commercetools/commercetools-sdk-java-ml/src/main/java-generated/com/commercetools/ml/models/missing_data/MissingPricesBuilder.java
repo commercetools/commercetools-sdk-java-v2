@@ -2,6 +2,7 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -12,6 +13,12 @@ public final class MissingPricesBuilder implements Builder<MissingPrices> {
     private com.commercetools.ml.models.common.ProductReference product;
 
     private Long variantId;
+
+    public MissingPricesBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
 
     public MissingPricesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;

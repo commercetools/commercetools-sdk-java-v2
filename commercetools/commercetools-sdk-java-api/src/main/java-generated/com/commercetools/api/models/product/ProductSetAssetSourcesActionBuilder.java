@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -56,6 +57,22 @@ public final class ProductSetAssetSourcesActionBuilder implements Builder<Produc
     public ProductSetAssetSourcesActionBuilder sources(
             final com.commercetools.api.models.common.AssetSource... sources) {
         this.sources = new ArrayList<>(Arrays.asList(sources));
+        return this;
+    }
+
+    public ProductSetAssetSourcesActionBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductSetAssetSourcesActionBuilder plusSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
 

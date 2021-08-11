@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,22 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
             final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
         this.targetsDelta = new ArrayList<>(Arrays.asList(targetsDelta));
+        return this;
+    }
+
+    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
+        this.targetsDelta = new ArrayList<>();
+        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
+        return this;
+    }
+
+    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
+        if (this.targetsDelta == null) {
+            this.targetsDelta = new ArrayList<>();
+        }
+        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 

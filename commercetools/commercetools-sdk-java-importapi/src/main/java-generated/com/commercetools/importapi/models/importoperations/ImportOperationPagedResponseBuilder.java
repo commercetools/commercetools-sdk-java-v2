@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importoperations;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -42,6 +43,24 @@ public final class ImportOperationPagedResponseBuilder implements Builder<Import
     public ImportOperationPagedResponseBuilder results(
             final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public ImportOperationPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
+        return this;
+    }
+
+    public ImportOperationPagedResponseBuilder plusResults(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
         return this;
     }
 

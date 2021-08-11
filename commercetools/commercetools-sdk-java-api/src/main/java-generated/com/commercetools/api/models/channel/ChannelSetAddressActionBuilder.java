@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,12 @@ public final class ChannelSetAddressActionBuilder implements Builder<ChannelSetA
 
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
+
+    public ChannelSetAddressActionBuilder address(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
 
     public ChannelSetAddressActionBuilder address(
             @Nullable final com.commercetools.api.models.common.BaseAddress address) {

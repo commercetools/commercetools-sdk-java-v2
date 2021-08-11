@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +27,12 @@ public final class CustomerGroupDraftBuilder implements Builder<CustomerGroupDra
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {
         this.groupName = groupName;
+        return this;
+    }
+
+    public CustomerGroupDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 

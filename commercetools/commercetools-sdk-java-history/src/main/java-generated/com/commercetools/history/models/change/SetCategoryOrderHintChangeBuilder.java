@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -35,8 +36,21 @@ public final class SetCategoryOrderHintChangeBuilder implements Builder<SetCateg
     }
 
     public SetCategoryOrderHintChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHintsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetCategoryOrderHintChangeBuilder previousValue(
             final com.commercetools.history.models.common.CategoryOrderHints previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetCategoryOrderHintChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHintsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of()).build();
         return this;
     }
 

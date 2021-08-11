@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -56,8 +57,20 @@ public final class ZoneBuilder implements Builder<Zone> {
     }
 
     public ZoneBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ZoneBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ZoneBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +96,22 @@ public final class ZoneBuilder implements Builder<Zone> {
 
     public ZoneBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+
+    public ZoneBuilder withLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneBuilder plusLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
 

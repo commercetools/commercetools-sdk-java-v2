@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -37,6 +38,12 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
     @Nullable
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    public PriceDraftBuilder value(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public PriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
@@ -48,8 +55,23 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     public PriceDraftBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PriceDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public PriceDraftBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -69,6 +91,12 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
+    public PriceDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
     public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
@@ -79,9 +107,31 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
+    public PriceDraftBuilder withTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
+        return this;
+    }
+
+    public PriceDraftBuilder plusTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
+        return this;
+    }
+
     public PriceDraftBuilder tiers(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
         this.tiers = tiers;
+        return this;
+    }
+
+    public PriceDraftBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 

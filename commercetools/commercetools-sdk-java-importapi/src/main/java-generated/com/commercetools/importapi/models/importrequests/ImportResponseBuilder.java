@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,26 @@ public final class ImportResponseBuilder implements Builder<ImportResponse> {
     public ImportResponseBuilder operationStatus(
             final com.commercetools.importapi.models.importoperations.ImportOperationStatus... operationStatus) {
         this.operationStatus = new ArrayList<>(Arrays.asList(operationStatus));
+        return this;
+    }
+
+    public ImportResponseBuilder withOperationStatus(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {
+        this.operationStatus = new ArrayList<>();
+        this.operationStatus.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public ImportResponseBuilder plusOperationStatus(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {
+        if (this.operationStatus == null) {
+            this.operationStatus = new ArrayList<>();
+        }
+        this.operationStatus.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of())
+                    .build());
         return this;
     }
 

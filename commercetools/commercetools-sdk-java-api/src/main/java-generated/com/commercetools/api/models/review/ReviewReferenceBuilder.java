@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     public ReviewReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ReviewReferenceBuilder obj(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
         return this;
     }
 

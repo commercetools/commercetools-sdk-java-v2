@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,22 @@ public final class CustomerSetStoresActionBuilder implements Builder<CustomerSet
     public CustomerSetStoresActionBuilder stores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public CustomerSetStoresActionBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerSetStoresActionBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +16,24 @@ public final class ProductTypeChangeAttributeOrderActionBuilder
     public ProductTypeChangeAttributeOrderActionBuilder attributes(
             final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductTypeChangeAttributeOrderActionBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeChangeAttributeOrderActionBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

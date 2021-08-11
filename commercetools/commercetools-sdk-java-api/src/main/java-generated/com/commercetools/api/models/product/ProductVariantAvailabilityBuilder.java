@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -35,6 +36,14 @@ public final class ProductVariantAvailabilityBuilder implements Builder<ProductV
 
     public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    public ProductVariantAvailabilityBuilder channels(
+            Function<com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder> builder) {
+        this.channels = builder
+                .apply(com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder.of())
+                .build();
         return this;
     }
 

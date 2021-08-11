@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -18,6 +19,12 @@ public final class ProductReferenceBuilder implements Builder<ProductReference> 
 
     public ProductReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ProductReferenceBuilder obj(
+            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.ProductBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.product.ProductBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,8 +29,20 @@ public final class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKe
     }
 
     public SetSearchKeywordsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
+
+    public SetSearchKeywordsChangeBuilder previousValue(
             final com.commercetools.history.models.common.SearchKeywords previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetSearchKeywordsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
         return this;
     }
 

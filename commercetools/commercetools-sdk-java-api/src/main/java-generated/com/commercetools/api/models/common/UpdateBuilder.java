@@ -2,6 +2,7 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,22 @@ public final class UpdateBuilder implements Builder<Update> {
 
     public UpdateBuilder actions(final com.commercetools.api.models.common.UpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
+        return this;
+    }
+
+    public UpdateBuilder withActions(
+            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public UpdateBuilder plusActions(
+            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());
         return this;
     }
 

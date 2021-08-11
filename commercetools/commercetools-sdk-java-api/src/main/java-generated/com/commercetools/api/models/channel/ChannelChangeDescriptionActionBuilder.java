@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ChannelChangeDescriptionActionBuilder implements Builder<ChannelChangeDescriptionAction> {
 
     private com.commercetools.api.models.common.LocalizedString description;
+
+    public ChannelChangeDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ChannelChangeDescriptionActionBuilder description(
             final com.commercetools.api.models.common.LocalizedString description) {

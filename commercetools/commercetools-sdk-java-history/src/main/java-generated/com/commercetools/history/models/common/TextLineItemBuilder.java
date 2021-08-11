@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,8 +27,20 @@ public final class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    public TextLineItemBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public TextLineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public TextLineItemBuilder description(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -38,6 +51,12 @@ public final class TextLineItemBuilder implements Builder<TextLineItem> {
 
     public TextLineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public TextLineItemBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 

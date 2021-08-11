@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,6 +23,12 @@ public final class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfo
 
     public UpdateSyncInfoChangeBuilder channelId(final String channelId) {
         this.channelId = channelId;
+        return this;
+    }
+
+    public UpdateSyncInfoChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.SyncInfoBuilder, com.commercetools.history.models.common.SyncInfoBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.SyncInfoBuilder.of()).build();
         return this;
     }
 

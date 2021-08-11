@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,22 @@ public final class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCa
     public TaxCategoryPagedQueryResponseBuilder results(
             final com.commercetools.api.models.tax_category.TaxCategory... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
+        return this;
+    }
+
+    public TaxCategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
         return this;
     }
 

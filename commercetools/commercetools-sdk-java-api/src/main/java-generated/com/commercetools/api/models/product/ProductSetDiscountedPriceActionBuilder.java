@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +27,12 @@ public final class ProductSetDiscountedPriceActionBuilder implements Builder<Pro
 
     public ProductSetDiscountedPriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+
+    public ProductSetDiscountedPriceActionBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountValueFixedBuilder {
+public final class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueFixed> {
 
     private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
@@ -26,6 +27,14 @@ public final class CartDiscountValueFixedBuilder {
     }
 
     public CartDiscountValueFixed build() {
+        Objects.requireNonNull(money, CartDiscountValueFixed.class + ": money is missing");
+        return new CartDiscountValueFixedImpl(money);
+    }
+
+    /**
+     * builds CartDiscountValueFixed without checking for non null required values
+     */
+    public CartDiscountValueFixed buildUnchecked() {
         return new CartDiscountValueFixedImpl(money);
     }
 

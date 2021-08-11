@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeLineItemQuantityChangeBuilder {
+public final class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineItemQuantityChange> {
 
     private String change;
 
@@ -65,6 +66,18 @@ public final class ChangeLineItemQuantityChangeBuilder {
     }
 
     public ChangeLineItemQuantityChange build() {
+        Objects.requireNonNull(change, ChangeLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, ChangeLineItemQuantityChange.class + ": lineItem is missing");
+        Objects.requireNonNull(lineItemId, ChangeLineItemQuantityChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(nextValue, ChangeLineItemQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeLineItemQuantityChange.class + ": previousValue is missing");
+        return new ChangeLineItemQuantityChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeLineItemQuantityChange without checking for non null required values
+     */
+    public ChangeLineItemQuantityChange buildUnchecked() {
         return new ChangeLineItemQuantityChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);
     }
 

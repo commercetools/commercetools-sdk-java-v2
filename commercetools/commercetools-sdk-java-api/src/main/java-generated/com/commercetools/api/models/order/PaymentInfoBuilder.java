@@ -3,10 +3,11 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentInfoBuilder {
+public final class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
 
@@ -26,6 +27,14 @@ public final class PaymentInfoBuilder {
     }
 
     public PaymentInfo build() {
+        Objects.requireNonNull(payments, PaymentInfo.class + ": payments is missing");
+        return new PaymentInfoImpl(payments);
+    }
+
+    /**
+     * builds PaymentInfo without checking for non null required values
+     */
+    public PaymentInfo buildUnchecked() {
         return new PaymentInfoImpl(payments);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPaymentStateChangedMessageBuilder {
+public final class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaymentStateChangedMessage> {
 
     private String id;
 
@@ -157,6 +158,23 @@ public final class OrderPaymentStateChangedMessageBuilder {
     }
 
     public OrderPaymentStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderPaymentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderPaymentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderPaymentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderPaymentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderPaymentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderPaymentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderPaymentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentState, OrderPaymentStateChangedMessage.class + ": paymentState is missing");
+        return new OrderPaymentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentState,
+            oldPaymentState);
+    }
+
+    /**
+     * builds OrderPaymentStateChangedMessage without checking for non null required values
+     */
+    public OrderPaymentStateChangedMessage buildUnchecked() {
         return new OrderPaymentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentState,
             oldPaymentState);

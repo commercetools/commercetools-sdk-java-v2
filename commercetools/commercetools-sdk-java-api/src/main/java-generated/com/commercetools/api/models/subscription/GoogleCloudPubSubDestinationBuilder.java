@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GoogleCloudPubSubDestinationBuilder {
+public final class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudPubSubDestination> {
 
     private String projectId;
 
@@ -31,6 +32,15 @@ public final class GoogleCloudPubSubDestinationBuilder {
     }
 
     public GoogleCloudPubSubDestination build() {
+        Objects.requireNonNull(projectId, GoogleCloudPubSubDestination.class + ": projectId is missing");
+        Objects.requireNonNull(topic, GoogleCloudPubSubDestination.class + ": topic is missing");
+        return new GoogleCloudPubSubDestinationImpl(projectId, topic);
+    }
+
+    /**
+     * builds GoogleCloudPubSubDestination without checking for non null required values
+     */
+    public GoogleCloudPubSubDestination buildUnchecked() {
         return new GoogleCloudPubSubDestinationImpl(projectId, topic);
     }
 

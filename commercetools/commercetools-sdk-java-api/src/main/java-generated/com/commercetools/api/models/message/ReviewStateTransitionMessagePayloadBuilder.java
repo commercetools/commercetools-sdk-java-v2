@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewStateTransitionMessagePayloadBuilder {
+public final class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference oldState;
 
@@ -78,6 +79,22 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
     }
 
     public ReviewStateTransitionMessagePayload build() {
+        Objects.requireNonNull(oldState, ReviewStateTransitionMessagePayload.class + ": oldState is missing");
+        Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
+        Objects.requireNonNull(oldIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(target, ReviewStateTransitionMessagePayload.class + ": target is missing");
+        Objects.requireNonNull(force, ReviewStateTransitionMessagePayload.class + ": force is missing");
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
+            newIncludedInStatistics, target, force);
+    }
+
+    /**
+     * builds ReviewStateTransitionMessagePayload without checking for non null required values
+     */
+    public ReviewStateTransitionMessagePayload buildUnchecked() {
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
             newIncludedInStatistics, target, force);
     }

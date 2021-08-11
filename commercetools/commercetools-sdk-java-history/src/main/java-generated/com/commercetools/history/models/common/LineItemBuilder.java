@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemBuilder {
+public final class LineItemBuilder implements Builder<LineItem> {
 
     private String addedAt;
 
@@ -119,6 +120,24 @@ public final class LineItemBuilder {
     }
 
     public LineItem build() {
+        Objects.requireNonNull(addedAt, LineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(custom, LineItem.class + ": custom is missing");
+        Objects.requireNonNull(id, LineItem.class + ": id is missing");
+        Objects.requireNonNull(name, LineItem.class + ": name is missing");
+        Objects.requireNonNull(productId, LineItem.class + ": productId is missing");
+        Objects.requireNonNull(productSlug, LineItem.class + ": productSlug is missing");
+        Objects.requireNonNull(productType, LineItem.class + ": productType is missing");
+        Objects.requireNonNull(quantity, LineItem.class + ": quantity is missing");
+        Objects.requireNonNull(variant, LineItem.class + ": variant is missing");
+        Objects.requireNonNull(variantId, LineItem.class + ": variantId is missing");
+        return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,
+            variantId);
+    }
+
+    /**
+     * builds LineItem without checking for non null required values
+     */
+    public LineItem buildUnchecked() {
         return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,
             variantId);
     }

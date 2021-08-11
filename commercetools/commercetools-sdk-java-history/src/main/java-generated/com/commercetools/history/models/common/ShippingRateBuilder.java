@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingRateBuilder {
+public final class ShippingRateBuilder implements Builder<ShippingRate> {
 
     private com.commercetools.history.models.common.Money price;
 
@@ -59,6 +60,17 @@ public final class ShippingRateBuilder {
     }
 
     public ShippingRate build() {
+        Objects.requireNonNull(price, ShippingRate.class + ": price is missing");
+        Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");
+        Objects.requireNonNull(isMatching, ShippingRate.class + ": isMatching is missing");
+        Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");
+        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
+    }
+
+    /**
+     * builds ShippingRate without checking for non null required values
+     */
+    public ShippingRate buildUnchecked() {
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }
 

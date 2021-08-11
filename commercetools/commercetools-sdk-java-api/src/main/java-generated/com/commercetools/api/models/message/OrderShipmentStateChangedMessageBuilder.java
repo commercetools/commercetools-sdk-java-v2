@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShipmentStateChangedMessageBuilder {
+public final class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShipmentStateChangedMessage> {
 
     private String id;
 
@@ -157,6 +158,24 @@ public final class OrderShipmentStateChangedMessageBuilder {
     }
 
     public OrderShipmentStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderShipmentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShipmentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShipmentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShipmentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShipmentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShipmentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderShipmentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessage.class + ": shipmentState is missing");
+        return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
+            oldShipmentState);
+    }
+
+    /**
+     * builds OrderShipmentStateChangedMessage without checking for non null required values
+     */
+    public OrderShipmentStateChangedMessage buildUnchecked() {
         return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
             oldShipmentState);

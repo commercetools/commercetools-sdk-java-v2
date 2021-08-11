@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidCredentialsErrorBuilder {
+public final class InvalidCredentialsErrorBuilder implements Builder<InvalidCredentialsError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class InvalidCredentialsErrorBuilder {
     }
 
     public InvalidCredentialsError build() {
+        Objects.requireNonNull(message, InvalidCredentialsError.class + ": message is missing");
+        return new InvalidCredentialsErrorImpl(message);
+    }
+
+    /**
+     * builds InvalidCredentialsError without checking for non null required values
+     */
+    public InvalidCredentialsError buildUnchecked() {
         return new InvalidCredentialsErrorImpl(message);
     }
 

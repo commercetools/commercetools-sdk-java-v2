@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewStateTransitionMessageBuilder {
+public final class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateTransitionMessage> {
 
     private String id;
 
@@ -198,6 +199,30 @@ public final class ReviewStateTransitionMessageBuilder {
     }
 
     public ReviewStateTransitionMessage build() {
+        Objects.requireNonNull(id, ReviewStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReviewStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReviewStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReviewStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReviewStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReviewStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReviewStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(oldState, ReviewStateTransitionMessage.class + ": oldState is missing");
+        Objects.requireNonNull(newState, ReviewStateTransitionMessage.class + ": newState is missing");
+        Objects.requireNonNull(oldIncludedInStatistics,
+            ReviewStateTransitionMessage.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics,
+            ReviewStateTransitionMessage.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(target, ReviewStateTransitionMessage.class + ": target is missing");
+        Objects.requireNonNull(force, ReviewStateTransitionMessage.class + ": force is missing");
+        return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,
+            oldIncludedInStatistics, newIncludedInStatistics, target, force);
+    }
+
+    /**
+     * builds ReviewStateTransitionMessage without checking for non null required values
+     */
+    public ReviewStateTransitionMessage buildUnchecked() {
         return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,
             oldIncludedInStatistics, newIncludedInStatistics, target, force);

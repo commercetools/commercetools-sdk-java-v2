@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductLegacySetSkuActionBuilder {
+public final class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySetSkuAction> {
 
     @Nullable
     private String sku;
@@ -35,6 +36,14 @@ public final class ProductLegacySetSkuActionBuilder {
     }
 
     public ProductLegacySetSkuAction build() {
+        Objects.requireNonNull(variantId, ProductLegacySetSkuAction.class + ": variantId is missing");
+        return new ProductLegacySetSkuActionImpl(sku, variantId);
+    }
+
+    /**
+     * builds ProductLegacySetSkuAction without checking for non null required values
+     */
+    public ProductLegacySetSkuAction buildUnchecked() {
         return new ProductLegacySetSkuActionImpl(sku, variantId);
     }
 

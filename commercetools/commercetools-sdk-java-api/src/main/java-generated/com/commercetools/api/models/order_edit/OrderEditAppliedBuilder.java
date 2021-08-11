@@ -3,10 +3,11 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditAppliedBuilder {
+public final class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     private java.time.ZonedDateTime appliedAt;
 
@@ -44,6 +45,16 @@ public final class OrderEditAppliedBuilder {
     }
 
     public OrderEditApplied build() {
+        Objects.requireNonNull(appliedAt, OrderEditApplied.class + ": appliedAt is missing");
+        Objects.requireNonNull(excerptBeforeEdit, OrderEditApplied.class + ": excerptBeforeEdit is missing");
+        Objects.requireNonNull(excerptAfterEdit, OrderEditApplied.class + ": excerptAfterEdit is missing");
+        return new OrderEditAppliedImpl(appliedAt, excerptBeforeEdit, excerptAfterEdit);
+    }
+
+    /**
+     * builds OrderEditApplied without checking for non null required values
+     */
+    public OrderEditApplied buildUnchecked() {
         return new OrderEditAppliedImpl(appliedAt, excerptBeforeEdit, excerptAfterEdit);
     }
 

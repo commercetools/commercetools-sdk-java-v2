@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectBuilder {
+public final class ProjectBuilder implements Builder<Project> {
 
     private Long version;
 
@@ -194,6 +195,23 @@ public final class ProjectBuilder {
     }
 
     public Project build() {
+        Objects.requireNonNull(version, Project.class + ": version is missing");
+        Objects.requireNonNull(key, Project.class + ": key is missing");
+        Objects.requireNonNull(name, Project.class + ": name is missing");
+        Objects.requireNonNull(countries, Project.class + ": countries is missing");
+        Objects.requireNonNull(currencies, Project.class + ": currencies is missing");
+        Objects.requireNonNull(languages, Project.class + ": languages is missing");
+        Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");
+        Objects.requireNonNull(messages, Project.class + ": messages is missing");
+        Objects.requireNonNull(carts, Project.class + ": carts is missing");
+        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
+            shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
+    }
+
+    /**
+     * builds Project without checking for non null required values
+     */
+    public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
             shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
     }

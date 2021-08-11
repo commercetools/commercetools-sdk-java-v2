@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelItemsBuilder {
+public final class ParcelItemsBuilder implements Builder<ParcelItems> {
 
     private String parcelId;
 
@@ -41,6 +42,14 @@ public final class ParcelItemsBuilder {
     }
 
     public ParcelItems build() {
+        Objects.requireNonNull(parcelId, ParcelItems.class + ": parcelId is missing");
+        return new ParcelItemsImpl(parcelId, items);
+    }
+
+    /**
+     * builds ParcelItems without checking for non null required values
+     */
+    public ParcelItems buildUnchecked() {
         return new ParcelItemsImpl(parcelId, items);
     }
 

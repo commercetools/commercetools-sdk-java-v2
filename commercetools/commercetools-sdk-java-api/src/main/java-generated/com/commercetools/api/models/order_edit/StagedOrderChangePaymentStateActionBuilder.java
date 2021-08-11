@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderChangePaymentStateActionBuilder {
+public final class StagedOrderChangePaymentStateActionBuilder implements Builder<StagedOrderChangePaymentStateAction> {
 
     @Nullable
     private com.commercetools.api.models.order.PaymentState paymentState;
@@ -25,6 +26,13 @@ public final class StagedOrderChangePaymentStateActionBuilder {
     }
 
     public StagedOrderChangePaymentStateAction build() {
+        return new StagedOrderChangePaymentStateActionImpl(paymentState);
+    }
+
+    /**
+     * builds StagedOrderChangePaymentStateAction without checking for non null required values
+     */
+    public StagedOrderChangePaymentStateAction buildUnchecked() {
         return new StagedOrderChangePaymentStateActionImpl(paymentState);
     }
 

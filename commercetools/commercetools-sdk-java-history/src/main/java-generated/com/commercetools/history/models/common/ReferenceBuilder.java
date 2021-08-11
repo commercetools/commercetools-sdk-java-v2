@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceBuilder {
+public final class ReferenceBuilder implements Builder<Reference> {
 
     private String id;
 
@@ -31,6 +32,15 @@ public final class ReferenceBuilder {
     }
 
     public Reference build() {
+        Objects.requireNonNull(id, Reference.class + ": id is missing");
+        Objects.requireNonNull(typeId, Reference.class + ": typeId is missing");
+        return new ReferenceImpl(id, typeId);
+    }
+
+    /**
+     * builds Reference without checking for non null required values
+     */
+    public Reference buildUnchecked() {
         return new ReferenceImpl(id, typeId);
     }
 

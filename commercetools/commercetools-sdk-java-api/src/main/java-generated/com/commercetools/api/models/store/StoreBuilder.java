@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreBuilder {
+public final class StoreBuilder implements Builder<Store> {
 
     private String id;
 
@@ -175,6 +176,20 @@ public final class StoreBuilder {
     }
 
     public Store build() {
+        Objects.requireNonNull(id, Store.class + ": id is missing");
+        Objects.requireNonNull(version, Store.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Store.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Store.class + ": key is missing");
+        Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");
+        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
+            distributionChannels, supplyChannels, custom);
+    }
+
+    /**
+     * builds Store without checking for non null required values
+     */
+    public Store buildUnchecked() {
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
             distributionChannels, supplyChannels, custom);
     }

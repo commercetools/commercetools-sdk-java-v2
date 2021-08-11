@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class NumberAttributeBuilder {
+public final class NumberAttributeBuilder implements Builder<NumberAttribute> {
 
     @Nullable
     private String name;
@@ -35,6 +36,14 @@ public final class NumberAttributeBuilder {
     }
 
     public NumberAttribute build() {
+        Objects.requireNonNull(value, NumberAttribute.class + ": value is missing");
+        return new NumberAttributeImpl(name, value);
+    }
+
+    /**
+     * builds NumberAttribute without checking for non null required values
+     */
+    public NumberAttribute buildUnchecked() {
         return new NumberAttributeImpl(name, value);
     }
 

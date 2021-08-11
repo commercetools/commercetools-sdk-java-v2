@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountValueRelativeDraftBuilder {
+public final class ProductDiscountValueRelativeDraftBuilder implements Builder<ProductDiscountValueRelativeDraft> {
 
     private Long permyriad;
 
@@ -20,6 +21,14 @@ public final class ProductDiscountValueRelativeDraftBuilder {
     }
 
     public ProductDiscountValueRelativeDraft build() {
+        Objects.requireNonNull(permyriad, ProductDiscountValueRelativeDraft.class + ": permyriad is missing");
+        return new ProductDiscountValueRelativeDraftImpl(permyriad);
+    }
+
+    /**
+     * builds ProductDiscountValueRelativeDraft without checking for non null required values
+     */
+    public ProductDiscountValueRelativeDraft buildUnchecked() {
         return new ProductDiscountValueRelativeDraftImpl(permyriad);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeAddEnumValueActionBuilder {
+public final class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAction> {
 
     private String fieldName;
 
@@ -31,6 +32,15 @@ public final class TypeAddEnumValueActionBuilder {
     }
 
     public TypeAddEnumValueAction build() {
+        Objects.requireNonNull(fieldName, TypeAddEnumValueAction.class + ": fieldName is missing");
+        Objects.requireNonNull(value, TypeAddEnumValueAction.class + ": value is missing");
+        return new TypeAddEnumValueActionImpl(fieldName, value);
+    }
+
+    /**
+     * builds TypeAddEnumValueAction without checking for non null required values
+     */
+    public TypeAddEnumValueAction buildUnchecked() {
         return new TypeAddEnumValueActionImpl(fieldName, value);
     }
 

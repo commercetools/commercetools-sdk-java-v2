@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelMeasurementsUpdatedMessageBuilder {
+public final class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMeasurementsUpdatedMessage> {
 
     private String id;
 
@@ -167,6 +168,25 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
     }
 
     public ParcelMeasurementsUpdatedMessage build() {
+        Objects.requireNonNull(id, ParcelMeasurementsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelMeasurementsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelMeasurementsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelMeasurementsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelMeasurementsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelMeasurementsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ParcelMeasurementsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, ParcelMeasurementsUpdatedMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessage.class + ": parcelId is missing");
+        return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
+            measurements);
+    }
+
+    /**
+     * builds ParcelMeasurementsUpdatedMessage without checking for non null required values
+     */
+    public ParcelMeasurementsUpdatedMessage buildUnchecked() {
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
             measurements);

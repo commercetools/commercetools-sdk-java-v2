@@ -3,10 +3,11 @@ package com.commercetools.history.models;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordPagedQueryResponseBuilder {
+public final class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQueryResponse> {
 
     private Integer limit;
 
@@ -70,6 +71,18 @@ public final class RecordPagedQueryResponseBuilder {
     }
 
     public RecordPagedQueryResponse build() {
+        Objects.requireNonNull(limit, RecordPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, RecordPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, RecordPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, RecordPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, RecordPagedQueryResponse.class + ": results is missing");
+        return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds RecordPagedQueryResponse without checking for non null required values
+     */
+    public RecordPagedQueryResponse buildUnchecked() {
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

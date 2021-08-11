@@ -3,10 +3,11 @@ package com.commercetools.api.models.zone;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneRemoveLocationActionBuilder {
+public final class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocationAction> {
 
     private com.commercetools.api.models.zone.Location location;
 
@@ -20,6 +21,14 @@ public final class ZoneRemoveLocationActionBuilder {
     }
 
     public ZoneRemoveLocationAction build() {
+        Objects.requireNonNull(location, ZoneRemoveLocationAction.class + ": location is missing");
+        return new ZoneRemoveLocationActionImpl(location);
+    }
+
+    /**
+     * builds ZoneRemoveLocationAction without checking for non null required values
+     */
+    public ZoneRemoveLocationAction buildUnchecked() {
         return new ZoneRemoveLocationActionImpl(location);
     }
 

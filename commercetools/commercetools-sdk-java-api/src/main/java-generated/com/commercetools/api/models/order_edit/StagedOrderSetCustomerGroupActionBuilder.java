@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetCustomerGroupActionBuilder {
+public final class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedOrderSetCustomerGroupAction> {
 
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
@@ -25,6 +26,13 @@ public final class StagedOrderSetCustomerGroupActionBuilder {
     }
 
     public StagedOrderSetCustomerGroupAction build() {
+        return new StagedOrderSetCustomerGroupActionImpl(customerGroup);
+    }
+
+    /**
+     * builds StagedOrderSetCustomerGroupAction without checking for non null required values
+     */
+    public StagedOrderSetCustomerGroupAction buildUnchecked() {
         return new StagedOrderSetCustomerGroupActionImpl(customerGroup);
     }
 

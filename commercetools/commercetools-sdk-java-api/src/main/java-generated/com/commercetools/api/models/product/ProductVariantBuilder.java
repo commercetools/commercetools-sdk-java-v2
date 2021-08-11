@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantBuilder {
+public final class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private Long id;
 
@@ -192,6 +193,15 @@ public final class ProductVariantBuilder {
     }
 
     public ProductVariant build() {
+        Objects.requireNonNull(id, ProductVariant.class + ": id is missing");
+        return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
+            isMatchingVariant, scopedPrice, scopedPriceDiscounted);
+    }
+
+    /**
+     * builds ProductVariant without checking for non null required values
+     */
+    public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
             isMatchingVariant, scopedPrice, scopedPriceDiscounted);
     }

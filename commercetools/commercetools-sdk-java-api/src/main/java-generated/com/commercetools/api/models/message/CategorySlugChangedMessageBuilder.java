@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySlugChangedMessageBuilder {
+public final class CategorySlugChangedMessageBuilder implements Builder<CategorySlugChangedMessage> {
 
     private String id;
 
@@ -155,6 +156,22 @@ public final class CategorySlugChangedMessageBuilder {
     }
 
     public CategorySlugChangedMessage build() {
+        Objects.requireNonNull(id, CategorySlugChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CategorySlugChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CategorySlugChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CategorySlugChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CategorySlugChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CategorySlugChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CategorySlugChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(slug, CategorySlugChangedMessage.class + ": slug is missing");
+        return new CategorySlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
+    }
+
+    /**
+     * builds CategorySlugChangedMessage without checking for non null required values
+     */
+    public CategorySlugChangedMessage buildUnchecked() {
         return new CategorySlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
     }

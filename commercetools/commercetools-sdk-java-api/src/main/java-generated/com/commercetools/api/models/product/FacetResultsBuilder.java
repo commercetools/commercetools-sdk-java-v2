@@ -3,12 +3,13 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FacetResultsBuilder {
+public final class FacetResultsBuilder implements Builder<FacetResults> {
 
-    private Map<String, com.commercetools.api.models.product.FacetResult> values;
+    private Map<String, com.commercetools.api.models.product.FacetResult> values = new HashMap<>();
 
     public FacetResultsBuilder values(final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
@@ -29,6 +30,14 @@ public final class FacetResultsBuilder {
     }
 
     public FacetResults build() {
+        Objects.requireNonNull(values, FacetResults.class + ": values are missing");
+        return new FacetResultsImpl(values);
+    }
+
+    /**
+     * builds FacetResults without checking for non null required values
+     */
+    public FacetResults buildUnchecked() {
         return new FacetResultsImpl(values);
     }
 

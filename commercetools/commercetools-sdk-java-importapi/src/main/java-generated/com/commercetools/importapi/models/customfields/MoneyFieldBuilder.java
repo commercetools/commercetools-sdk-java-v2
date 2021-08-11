@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneyFieldBuilder {
+public final class MoneyFieldBuilder implements Builder<MoneyField> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -20,6 +21,14 @@ public final class MoneyFieldBuilder {
     }
 
     public MoneyField build() {
+        Objects.requireNonNull(value, MoneyField.class + ": value is missing");
+        return new MoneyFieldImpl(value);
+    }
+
+    /**
+     * builds MoneyField without checking for non null required values
+     */
+    public MoneyField buildUnchecked() {
         return new MoneyFieldImpl(value);
     }
 

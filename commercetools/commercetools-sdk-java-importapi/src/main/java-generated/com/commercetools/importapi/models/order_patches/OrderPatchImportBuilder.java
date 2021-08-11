@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPatchImportBuilder {
+public final class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     private String orderNumber;
 
@@ -31,6 +32,15 @@ public final class OrderPatchImportBuilder {
     }
 
     public OrderPatchImport build() {
+        Objects.requireNonNull(orderNumber, OrderPatchImport.class + ": orderNumber is missing");
+        Objects.requireNonNull(fields, OrderPatchImport.class + ": fields is missing");
+        return new OrderPatchImportImpl(orderNumber, fields);
+    }
+
+    /**
+     * builds OrderPatchImport without checking for non null required values
+     */
+    public OrderPatchImport buildUnchecked() {
         return new OrderPatchImportImpl(orderNumber, fields);
     }
 

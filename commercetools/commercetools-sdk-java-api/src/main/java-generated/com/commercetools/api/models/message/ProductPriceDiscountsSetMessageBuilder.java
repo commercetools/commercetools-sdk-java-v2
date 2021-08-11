@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceDiscountsSetMessageBuilder {
+public final class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPriceDiscountsSetMessage> {
 
     private String id;
 
@@ -149,6 +150,22 @@ public final class ProductPriceDiscountsSetMessageBuilder {
     }
 
     public ProductPriceDiscountsSetMessage build() {
+        Objects.requireNonNull(id, ProductPriceDiscountsSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPriceDiscountsSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPriceDiscountsSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductPriceDiscountsSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductPriceDiscountsSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPriceDiscountsSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductPriceDiscountsSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(updatedPrices, ProductPriceDiscountsSetMessage.class + ": updatedPrices is missing");
+        return new ProductPriceDiscountsSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, updatedPrices);
+    }
+
+    /**
+     * builds ProductPriceDiscountsSetMessage without checking for non null required values
+     */
+    public ProductPriceDiscountsSetMessage buildUnchecked() {
         return new ProductPriceDiscountsSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, updatedPrices);
     }

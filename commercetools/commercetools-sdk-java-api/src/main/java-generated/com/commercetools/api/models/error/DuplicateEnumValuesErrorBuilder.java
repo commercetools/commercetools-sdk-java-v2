@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateEnumValuesErrorBuilder {
+public final class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumValuesError> {
 
     private String message;
 
@@ -36,6 +37,15 @@ public final class DuplicateEnumValuesErrorBuilder {
     }
 
     public DuplicateEnumValuesError build() {
+        Objects.requireNonNull(message, DuplicateEnumValuesError.class + ": message is missing");
+        Objects.requireNonNull(duplicates, DuplicateEnumValuesError.class + ": duplicates is missing");
+        return new DuplicateEnumValuesErrorImpl(message, duplicates);
+    }
+
+    /**
+     * builds DuplicateEnumValuesError without checking for non null required values
+     */
+    public DuplicateEnumValuesError buildUnchecked() {
         return new DuplicateEnumValuesErrorImpl(message, duplicates);
     }
 

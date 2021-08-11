@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderImportedMessageBuilder {
+public final class OrderImportedMessageBuilder implements Builder<OrderImportedMessage> {
 
     private String id;
 
@@ -141,6 +142,22 @@ public final class OrderImportedMessageBuilder {
     }
 
     public OrderImportedMessage build() {
+        Objects.requireNonNull(id, OrderImportedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderImportedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderImportedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderImportedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderImportedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderImportedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderImportedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(order, OrderImportedMessage.class + ": order is missing");
+        return new OrderImportedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
+    }
+
+    /**
+     * builds OrderImportedMessage without checking for non null required values
+     */
+    public OrderImportedMessage buildUnchecked() {
         return new OrderImportedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, order);
     }

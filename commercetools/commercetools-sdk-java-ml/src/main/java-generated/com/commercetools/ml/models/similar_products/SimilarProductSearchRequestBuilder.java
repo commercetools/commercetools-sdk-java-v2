@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductSearchRequestBuilder {
+public final class SimilarProductSearchRequestBuilder implements Builder<SimilarProductSearchRequest> {
 
     @Nullable
     private Long limit;
@@ -123,6 +124,14 @@ public final class SimilarProductSearchRequestBuilder {
     }
 
     public SimilarProductSearchRequest build() {
+        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
+            productSetSelectors, confidenceMin, confidenceMax);
+    }
+
+    /**
+     * builds SimilarProductSearchRequest without checking for non null required values
+     */
+    public SimilarProductSearchRequest buildUnchecked() {
         return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
             productSetSelectors, confidenceMin, confidenceMax);
     }

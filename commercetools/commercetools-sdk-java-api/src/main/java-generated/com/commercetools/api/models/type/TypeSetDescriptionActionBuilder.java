@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeSetDescriptionActionBuilder {
+public final class TypeSetDescriptionActionBuilder implements Builder<TypeSetDescriptionAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
@@ -25,6 +26,13 @@ public final class TypeSetDescriptionActionBuilder {
     }
 
     public TypeSetDescriptionAction build() {
+        return new TypeSetDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds TypeSetDescriptionAction without checking for non null required values
+     */
+    public TypeSetDescriptionAction buildUnchecked() {
         return new TypeSetDescriptionActionImpl(description);
     }
 

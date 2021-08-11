@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerAddressChangedMessageBuilder {
+public final class CustomerAddressChangedMessageBuilder implements Builder<CustomerAddressChangedMessage> {
 
     private String id;
 
@@ -141,6 +142,22 @@ public final class CustomerAddressChangedMessageBuilder {
     }
 
     public CustomerAddressChangedMessage build() {
+        Objects.requireNonNull(id, CustomerAddressChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerAddressChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerAddressChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerAddressChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerAddressChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerAddressChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerAddressChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(address, CustomerAddressChangedMessage.class + ": address is missing");
+        return new CustomerAddressChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+    }
+
+    /**
+     * builds CustomerAddressChangedMessage without checking for non null required values
+     */
+    public CustomerAddressChangedMessage buildUnchecked() {
         return new CustomerAddressChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
     }

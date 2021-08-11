@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryReferenceBuilder {
+public final class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class TaxCategoryReferenceBuilder {
     }
 
     public TaxCategoryReference build() {
+        Objects.requireNonNull(id, TaxCategoryReference.class + ": id is missing");
+        return new TaxCategoryReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds TaxCategoryReference without checking for non null required values
+     */
+    public TaxCategoryReference buildUnchecked() {
         return new TaxCategoryReferenceImpl(id, obj);
     }
 

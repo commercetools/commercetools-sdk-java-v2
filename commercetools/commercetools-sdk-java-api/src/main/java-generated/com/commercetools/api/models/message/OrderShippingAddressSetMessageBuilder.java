@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShippingAddressSetMessageBuilder {
+public final class OrderShippingAddressSetMessageBuilder implements Builder<OrderShippingAddressSetMessage> {
 
     private String id;
 
@@ -159,6 +160,21 @@ public final class OrderShippingAddressSetMessageBuilder {
     }
 
     public OrderShippingAddressSetMessage build() {
+        Objects.requireNonNull(id, OrderShippingAddressSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShippingAddressSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShippingAddressSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShippingAddressSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShippingAddressSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShippingAddressSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderShippingAddressSetMessage.class + ": resourceVersion is missing");
+        return new OrderShippingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
+    }
+
+    /**
+     * builds OrderShippingAddressSetMessage without checking for non null required values
+     */
+    public OrderShippingAddressSetMessage buildUnchecked() {
         return new OrderShippingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
     }

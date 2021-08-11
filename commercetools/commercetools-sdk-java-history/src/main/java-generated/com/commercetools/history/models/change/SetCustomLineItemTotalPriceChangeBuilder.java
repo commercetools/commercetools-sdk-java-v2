@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemTotalPriceChangeBuilder {
+public final class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCustomLineItemTotalPriceChange> {
 
     private String change;
 
@@ -67,6 +68,20 @@ public final class SetCustomLineItemTotalPriceChangeBuilder {
     }
 
     public SetCustomLineItemTotalPriceChange build() {
+        Objects.requireNonNull(change, SetCustomLineItemTotalPriceChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem, SetCustomLineItemTotalPriceChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTotalPriceChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTotalPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTotalPriceChange.class + ": previousValue is missing");
+        return new SetCustomLineItemTotalPriceChangeImpl(change, customLineItem, customLineItemId, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemTotalPriceChange without checking for non null required values
+     */
+    public SetCustomLineItemTotalPriceChange buildUnchecked() {
         return new SetCustomLineItemTotalPriceChangeImpl(change, customLineItem, customLineItemId, nextValue,
             previousValue);
     }

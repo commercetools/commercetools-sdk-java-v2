@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartRemoveDiscountCodeActionBuilder {
+public final class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemoveDiscountCodeAction> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
@@ -21,6 +22,14 @@ public final class MyCartRemoveDiscountCodeActionBuilder {
     }
 
     public MyCartRemoveDiscountCodeAction build() {
+        Objects.requireNonNull(discountCode, MyCartRemoveDiscountCodeAction.class + ": discountCode is missing");
+        return new MyCartRemoveDiscountCodeActionImpl(discountCode);
+    }
+
+    /**
+     * builds MyCartRemoveDiscountCodeAction without checking for non null required values
+     */
+    public MyCartRemoveDiscountCodeAction buildUnchecked() {
         return new MyCartRemoveDiscountCodeActionImpl(discountCode);
     }
 

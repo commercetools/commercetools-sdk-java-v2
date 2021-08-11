@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditAppliedMessagePayloadBuilder {
+public final class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditAppliedMessagePayload> {
 
     private com.commercetools.api.models.order_edit.OrderEditReference edit;
 
@@ -33,6 +34,15 @@ public final class OrderEditAppliedMessagePayloadBuilder {
     }
 
     public OrderEditAppliedMessagePayload build() {
+        Objects.requireNonNull(edit, OrderEditAppliedMessagePayload.class + ": edit is missing");
+        Objects.requireNonNull(result, OrderEditAppliedMessagePayload.class + ": result is missing");
+        return new OrderEditAppliedMessagePayloadImpl(edit, result);
+    }
+
+    /**
+     * builds OrderEditAppliedMessagePayload without checking for non null required values
+     */
+    public OrderEditAppliedMessagePayload buildUnchecked() {
         return new OrderEditAppliedMessagePayloadImpl(edit, result);
     }
 

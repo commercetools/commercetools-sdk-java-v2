@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReplicaCartDraftBuilder {
+public final class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
     private java.lang.Object reference;
 
@@ -35,6 +36,14 @@ public final class ReplicaCartDraftBuilder {
     }
 
     public ReplicaCartDraft build() {
+        Objects.requireNonNull(reference, ReplicaCartDraft.class + ": reference is missing");
+        return new ReplicaCartDraftImpl(reference, key);
+    }
+
+    /**
+     * builds ReplicaCartDraft without checking for non null required values
+     */
+    public ReplicaCartDraft buildUnchecked() {
         return new ReplicaCartDraftImpl(reference, key);
     }
 

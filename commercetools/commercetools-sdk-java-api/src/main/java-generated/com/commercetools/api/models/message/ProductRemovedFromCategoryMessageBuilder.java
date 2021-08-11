@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRemovedFromCategoryMessageBuilder {
+public final class ProductRemovedFromCategoryMessageBuilder implements Builder<ProductRemovedFromCategoryMessage> {
 
     private String id;
 
@@ -154,6 +155,24 @@ public final class ProductRemovedFromCategoryMessageBuilder {
     }
 
     public ProductRemovedFromCategoryMessage build() {
+        Objects.requireNonNull(id, ProductRemovedFromCategoryMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductRemovedFromCategoryMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductRemovedFromCategoryMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductRemovedFromCategoryMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductRemovedFromCategoryMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductRemovedFromCategoryMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductRemovedFromCategoryMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(category, ProductRemovedFromCategoryMessage.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductRemovedFromCategoryMessage.class + ": staged is missing");
+        return new ProductRemovedFromCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
+    }
+
+    /**
+     * builds ProductRemovedFromCategoryMessage without checking for non null required values
+     */
+    public ProductRemovedFromCategoryMessage buildUnchecked() {
         return new ProductRemovedFromCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
     }

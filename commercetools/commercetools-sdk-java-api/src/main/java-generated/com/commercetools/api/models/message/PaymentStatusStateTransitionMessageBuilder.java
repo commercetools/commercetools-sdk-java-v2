@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentStatusStateTransitionMessageBuilder {
+public final class PaymentStatusStateTransitionMessageBuilder implements Builder<PaymentStatusStateTransitionMessage> {
 
     private String id;
 
@@ -154,6 +155,26 @@ public final class PaymentStatusStateTransitionMessageBuilder {
     }
 
     public PaymentStatusStateTransitionMessage build() {
+        Objects.requireNonNull(id, PaymentStatusStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentStatusStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentStatusStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentStatusStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentStatusStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentStatusStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentStatusStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(state, PaymentStatusStateTransitionMessage.class + ": state is missing");
+        Objects.requireNonNull(force, PaymentStatusStateTransitionMessage.class + ": force is missing");
+        return new PaymentStatusStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
+    }
+
+    /**
+     * builds PaymentStatusStateTransitionMessage without checking for non null required values
+     */
+    public PaymentStatusStateTransitionMessage buildUnchecked() {
         return new PaymentStatusStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
     }

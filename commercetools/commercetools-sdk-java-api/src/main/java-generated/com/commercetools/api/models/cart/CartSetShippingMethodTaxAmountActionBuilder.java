@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetShippingMethodTaxAmountActionBuilder {
+public final class CartSetShippingMethodTaxAmountActionBuilder
+        implements Builder<CartSetShippingMethodTaxAmountAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
@@ -25,6 +27,13 @@ public final class CartSetShippingMethodTaxAmountActionBuilder {
     }
 
     public CartSetShippingMethodTaxAmountAction build() {
+        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+    }
+
+    /**
+     * builds CartSetShippingMethodTaxAmountAction without checking for non null required values
+     */
+    public CartSetShippingMethodTaxAmountAction buildUnchecked() {
         return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetSourceBuilder {
+public final class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
 
@@ -53,6 +54,17 @@ public final class AssetSourceBuilder {
     }
 
     public AssetSource build() {
+        Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
+        Objects.requireNonNull(key, AssetSource.class + ": key is missing");
+        Objects.requireNonNull(dimensions, AssetSource.class + ": dimensions is missing");
+        Objects.requireNonNull(contentType, AssetSource.class + ": contentType is missing");
+        return new AssetSourceImpl(uri, key, dimensions, contentType);
+    }
+
+    /**
+     * builds AssetSource without checking for non null required values
+     */
+    public AssetSource buildUnchecked() {
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 

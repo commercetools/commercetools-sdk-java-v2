@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelBuilder {
+public final class ChannelBuilder implements Builder<Channel> {
 
     private String id;
 
@@ -188,6 +189,20 @@ public final class ChannelBuilder {
     }
 
     public Channel build() {
+        Objects.requireNonNull(id, Channel.class + ": id is missing");
+        Objects.requireNonNull(version, Channel.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Channel.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Channel.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Channel.class + ": key is missing");
+        Objects.requireNonNull(roles, Channel.class + ": roles is missing");
+        return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,
+            description, address, reviewRatingStatistics, custom, geoLocation);
+    }
+
+    /**
+     * builds Channel without checking for non null required values
+     */
+    public Channel buildUnchecked() {
         return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,
             description, address, reviewRatingStatistics, custom, geoLocation);
     }

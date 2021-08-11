@@ -3,10 +3,12 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountChangeCartPredicateActionBuilder {
+public final class CartDiscountChangeCartPredicateActionBuilder
+        implements Builder<CartDiscountChangeCartPredicateAction> {
 
     private String cartPredicate;
 
@@ -20,6 +22,15 @@ public final class CartDiscountChangeCartPredicateActionBuilder {
     }
 
     public CartDiscountChangeCartPredicateAction build() {
+        Objects.requireNonNull(cartPredicate,
+            CartDiscountChangeCartPredicateAction.class + ": cartPredicate is missing");
+        return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);
+    }
+
+    /**
+     * builds CartDiscountChangeCartPredicateAction without checking for non null required values
+     */
+    public CartDiscountChangeCartPredicateAction buildUnchecked() {
         return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);
     }
 

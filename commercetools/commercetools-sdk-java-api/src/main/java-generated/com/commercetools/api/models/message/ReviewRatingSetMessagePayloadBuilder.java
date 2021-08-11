@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewRatingSetMessagePayloadBuilder {
+public final class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatingSetMessagePayload> {
 
     @Nullable
     private Double oldRating;
@@ -62,6 +63,15 @@ public final class ReviewRatingSetMessagePayloadBuilder {
     }
 
     public ReviewRatingSetMessagePayload build() {
+        Objects.requireNonNull(includedInStatistics,
+            ReviewRatingSetMessagePayload.class + ": includedInStatistics is missing");
+        return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
+    }
+
+    /**
+     * builds ReviewRatingSetMessagePayload without checking for non null required values
+     */
+    public ReviewRatingSetMessagePayload buildUnchecked() {
         return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
     }
 

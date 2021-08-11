@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartBuilder {
+public final class CartBuilder implements Builder<Cart> {
 
     private String id;
 
@@ -463,6 +464,30 @@ public final class CartBuilder {
     }
 
     public Cart build() {
+        Objects.requireNonNull(id, Cart.class + ": id is missing");
+        Objects.requireNonNull(version, Cart.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Cart.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Cart.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, Cart.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, Cart.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, Cart.class + ": totalPrice is missing");
+        Objects.requireNonNull(cartState, Cart.class + ": cartState is missing");
+        Objects.requireNonNull(taxMode, Cart.class + ": taxMode is missing");
+        Objects.requireNonNull(taxRoundingMode, Cart.class + ": taxRoundingMode is missing");
+        Objects.requireNonNull(taxCalculationMode, Cart.class + ": taxCalculationMode is missing");
+        Objects.requireNonNull(refusedGifts, Cart.class + ": refusedGifts is missing");
+        Objects.requireNonNull(origin, Cart.class + ": origin is missing");
+        return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
+            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
+            shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
+            country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
+            refusedGifts, origin, shippingRateInput, itemShippingAddresses);
+    }
+
+    /**
+     * builds Cart without checking for non null required values
+     */
+    public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,

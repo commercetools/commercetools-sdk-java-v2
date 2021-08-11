@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddReturnInfoActionBuilder {
+public final class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrderAddReturnInfoAction> {
 
     @Nullable
     private String returnTrackingId;
@@ -55,6 +56,14 @@ public final class StagedOrderAddReturnInfoActionBuilder {
     }
 
     public StagedOrderAddReturnInfoAction build() {
+        Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");
+        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
+    }
+
+    /**
+     * builds StagedOrderAddReturnInfoAction without checking for non null required values
+     */
+    public StagedOrderAddReturnInfoAction buildUnchecked() {
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 

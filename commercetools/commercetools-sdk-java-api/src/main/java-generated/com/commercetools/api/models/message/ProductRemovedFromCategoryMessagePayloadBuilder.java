@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRemovedFromCategoryMessagePayloadBuilder {
+public final class ProductRemovedFromCategoryMessagePayloadBuilder
+        implements Builder<ProductRemovedFromCategoryMessagePayload> {
 
     private com.commercetools.api.models.category.CategoryReference category;
 
@@ -32,6 +34,15 @@ public final class ProductRemovedFromCategoryMessagePayloadBuilder {
     }
 
     public ProductRemovedFromCategoryMessagePayload build() {
+        Objects.requireNonNull(category, ProductRemovedFromCategoryMessagePayload.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductRemovedFromCategoryMessagePayload.class + ": staged is missing");
+        return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);
+    }
+
+    /**
+     * builds ProductRemovedFromCategoryMessagePayload without checking for non null required values
+     */
+    public ProductRemovedFromCategoryMessagePayload buildUnchecked() {
         return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);
     }
 

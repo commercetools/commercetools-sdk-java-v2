@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountValueGiftLineItemBuilder {
+public final class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscountValueGiftLineItem> {
 
     private com.commercetools.api.models.product.ProductReference product;
 
@@ -62,6 +63,15 @@ public final class CartDiscountValueGiftLineItemBuilder {
     }
 
     public CartDiscountValueGiftLineItem build() {
+        Objects.requireNonNull(product, CartDiscountValueGiftLineItem.class + ": product is missing");
+        Objects.requireNonNull(variantId, CartDiscountValueGiftLineItem.class + ": variantId is missing");
+        return new CartDiscountValueGiftLineItemImpl(product, variantId, supplyChannel, distributionChannel);
+    }
+
+    /**
+     * builds CartDiscountValueGiftLineItem without checking for non null required values
+     */
+    public CartDiscountValueGiftLineItem buildUnchecked() {
         return new CartDiscountValueGiftLineItemImpl(product, variantId, supplyChannel, distributionChannel);
     }
 

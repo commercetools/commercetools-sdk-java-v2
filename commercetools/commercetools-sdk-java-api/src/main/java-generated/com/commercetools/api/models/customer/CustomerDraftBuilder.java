@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerDraftBuilder {
+public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     @Nullable
     private String customerNumber;
@@ -374,6 +375,18 @@ public final class CustomerDraftBuilder {
     }
 
     public CustomerDraft build() {
+        Objects.requireNonNull(email, CustomerDraft.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerDraft.class + ": password is missing");
+        return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
+            anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
+            defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
+            externalId, customerGroup, custom, locale, salutation, key, stores);
+    }
+
+    /**
+     * builds CustomerDraft without checking for non null required values
+     */
+    public CustomerDraft buildUnchecked() {
         return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
             anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,

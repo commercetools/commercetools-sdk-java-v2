@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingImagesPagedQueryResultBuilder {
+public final class MissingImagesPagedQueryResultBuilder implements Builder<MissingImagesPagedQueryResult> {
 
     private Long count;
 
@@ -72,6 +73,18 @@ public final class MissingImagesPagedQueryResultBuilder {
     }
 
     public MissingImagesPagedQueryResult build() {
+        Objects.requireNonNull(count, MissingImagesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingImagesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingImagesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingImagesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingImagesPagedQueryResult.class + ": meta is missing");
+        return new MissingImagesPagedQueryResultImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds MissingImagesPagedQueryResult without checking for non null required values
+     */
+    public MissingImagesPagedQueryResult buildUnchecked() {
         return new MissingImagesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

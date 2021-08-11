@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderImportDraftBuilder {
+public final class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     @Nullable
     private String orderNumber;
@@ -327,6 +328,17 @@ public final class OrderImportDraftBuilder {
     }
 
     public OrderImportDraft build() {
+        Objects.requireNonNull(totalPrice, OrderImportDraft.class + ": totalPrice is missing");
+        return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
+            taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
+            paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, itemShippingAddresses,
+            store, origin);
+    }
+
+    /**
+     * builds OrderImportDraft without checking for non null required values
+     */
+    public OrderImportDraft buildUnchecked() {
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, itemShippingAddresses,

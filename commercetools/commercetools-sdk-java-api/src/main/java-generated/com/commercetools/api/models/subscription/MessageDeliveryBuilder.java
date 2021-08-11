@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MessageDeliveryBuilder {
+public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
 
     private String projectKey;
 
@@ -125,6 +126,23 @@ public final class MessageDeliveryBuilder {
     }
 
     public MessageDelivery build() {
+        Objects.requireNonNull(projectKey, MessageDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, MessageDelivery.class + ": resource is missing");
+        Objects.requireNonNull(id, MessageDelivery.class + ": id is missing");
+        Objects.requireNonNull(version, MessageDelivery.class + ": version is missing");
+        Objects.requireNonNull(createdAt, MessageDelivery.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, MessageDelivery.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, MessageDelivery.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resourceVersion, MessageDelivery.class + ": resourceVersion is missing");
+        Objects.requireNonNull(payloadNotIncluded, MessageDelivery.class + ": payloadNotIncluded is missing");
+        return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
+            lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
+    }
+
+    /**
+     * builds MessageDelivery without checking for non null required values
+     */
+    public MessageDelivery buildUnchecked() {
         return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
             lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }

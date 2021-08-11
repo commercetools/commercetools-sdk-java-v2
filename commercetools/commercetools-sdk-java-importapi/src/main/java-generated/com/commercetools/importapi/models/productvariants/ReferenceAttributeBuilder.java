@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceAttributeBuilder {
+public final class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     @Nullable
     private String name;
@@ -35,6 +36,14 @@ public final class ReferenceAttributeBuilder {
     }
 
     public ReferenceAttribute build() {
+        Objects.requireNonNull(value, ReferenceAttribute.class + ": value is missing");
+        return new ReferenceAttributeImpl(name, value);
+    }
+
+    /**
+     * builds ReferenceAttribute without checking for non null required values
+     */
+    public ReferenceAttribute buildUnchecked() {
         return new ReferenceAttributeImpl(name, value);
     }
 

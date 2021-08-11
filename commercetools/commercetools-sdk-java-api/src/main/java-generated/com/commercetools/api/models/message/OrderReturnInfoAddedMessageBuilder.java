@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderReturnInfoAddedMessageBuilder {
+public final class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnInfoAddedMessage> {
 
     private String id;
 
@@ -142,6 +143,22 @@ public final class OrderReturnInfoAddedMessageBuilder {
     }
 
     public OrderReturnInfoAddedMessage build() {
+        Objects.requireNonNull(id, OrderReturnInfoAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderReturnInfoAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderReturnInfoAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderReturnInfoAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderReturnInfoAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderReturnInfoAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderReturnInfoAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(returnInfo, OrderReturnInfoAddedMessage.class + ": returnInfo is missing");
+        return new OrderReturnInfoAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnInfo);
+    }
+
+    /**
+     * builds OrderReturnInfoAddedMessage without checking for non null required values
+     */
+    public OrderReturnInfoAddedMessage buildUnchecked() {
         return new OrderReturnInfoAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnInfo);
     }

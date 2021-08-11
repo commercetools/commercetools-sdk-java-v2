@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DateTimeSetFieldBuilder {
+public final class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
 
     private java.util.List<java.time.ZonedDateTime> value;
 
@@ -25,6 +26,14 @@ public final class DateTimeSetFieldBuilder {
     }
 
     public DateTimeSetField build() {
+        Objects.requireNonNull(value, DateTimeSetField.class + ": value is missing");
+        return new DateTimeSetFieldImpl(value);
+    }
+
+    /**
+     * builds DateTimeSetField without checking for non null required values
+     */
+    public DateTimeSetField buildUnchecked() {
         return new DateTimeSetFieldImpl(value);
     }
 

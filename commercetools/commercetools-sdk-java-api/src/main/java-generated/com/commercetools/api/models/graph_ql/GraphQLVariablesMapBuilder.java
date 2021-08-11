@@ -3,12 +3,13 @@ package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLVariablesMapBuilder {
+public final class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> {
 
-    private Map<String, java.lang.Object> values;
+    private Map<String, java.lang.Object> values = new HashMap<>();
 
     public GraphQLVariablesMapBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
@@ -28,6 +29,14 @@ public final class GraphQLVariablesMapBuilder {
     }
 
     public GraphQLVariablesMap build() {
+        Objects.requireNonNull(values, GraphQLVariablesMap.class + ": values are missing");
+        return new GraphQLVariablesMapImpl(values);
+    }
+
+    /**
+     * builds GraphQLVariablesMap without checking for non null required values
+     */
+    public GraphQLVariablesMap buildUnchecked() {
         return new GraphQLVariablesMapImpl(values);
     }
 

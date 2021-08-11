@@ -3,10 +3,12 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeAddAttributeDefinitionActionBuilder {
+public final class ProductTypeAddAttributeDefinitionActionBuilder
+        implements Builder<ProductTypeAddAttributeDefinitionAction> {
 
     private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
@@ -21,6 +23,14 @@ public final class ProductTypeAddAttributeDefinitionActionBuilder {
     }
 
     public ProductTypeAddAttributeDefinitionAction build() {
+        Objects.requireNonNull(attribute, ProductTypeAddAttributeDefinitionAction.class + ": attribute is missing");
+        return new ProductTypeAddAttributeDefinitionActionImpl(attribute);
+    }
+
+    /**
+     * builds ProductTypeAddAttributeDefinitionAction without checking for non null required values
+     */
+    public ProductTypeAddAttributeDefinitionAction buildUnchecked() {
         return new ProductTypeAddAttributeDefinitionActionImpl(attribute);
     }
 

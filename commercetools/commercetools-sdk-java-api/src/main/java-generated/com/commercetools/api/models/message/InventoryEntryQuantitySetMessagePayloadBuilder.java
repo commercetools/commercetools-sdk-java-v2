@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryQuantitySetMessagePayloadBuilder {
+public final class InventoryEntryQuantitySetMessagePayloadBuilder
+        implements Builder<InventoryEntryQuantitySetMessagePayload> {
 
     private Long oldQuantityOnStock;
 
@@ -53,6 +55,22 @@ public final class InventoryEntryQuantitySetMessagePayloadBuilder {
     }
 
     public InventoryEntryQuantitySetMessagePayload build() {
+        Objects.requireNonNull(oldQuantityOnStock,
+            InventoryEntryQuantitySetMessagePayload.class + ": oldQuantityOnStock is missing");
+        Objects.requireNonNull(newQuantityOnStock,
+            InventoryEntryQuantitySetMessagePayload.class + ": newQuantityOnStock is missing");
+        Objects.requireNonNull(oldAvailableQuantity,
+            InventoryEntryQuantitySetMessagePayload.class + ": oldAvailableQuantity is missing");
+        Objects.requireNonNull(newAvailableQuantity,
+            InventoryEntryQuantitySetMessagePayload.class + ": newAvailableQuantity is missing");
+        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
+            oldAvailableQuantity, newAvailableQuantity);
+    }
+
+    /**
+     * builds InventoryEntryQuantitySetMessagePayload without checking for non null required values
+     */
+    public InventoryEntryQuantitySetMessagePayload buildUnchecked() {
         return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
             oldAvailableQuantity, newAvailableQuantity);
     }

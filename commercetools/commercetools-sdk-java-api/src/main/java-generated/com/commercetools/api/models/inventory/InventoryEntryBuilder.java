@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryBuilder {
+public final class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     private String id;
 
@@ -168,6 +169,21 @@ public final class InventoryEntryBuilder {
     }
 
     public InventoryEntry build() {
+        Objects.requireNonNull(id, InventoryEntry.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntry.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntry.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntry.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sku, InventoryEntry.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
+        Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
+        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sku,
+            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+    }
+
+    /**
+     * builds InventoryEntry without checking for non null required values
+     */
+    public InventoryEntry buildUnchecked() {
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sku,
             supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }

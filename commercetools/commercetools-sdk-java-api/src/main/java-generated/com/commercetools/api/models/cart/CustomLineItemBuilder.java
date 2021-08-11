@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemBuilder {
+public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
 
@@ -179,6 +180,23 @@ public final class CustomLineItemBuilder {
     }
 
     public CustomLineItem build() {
+        Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
+        Objects.requireNonNull(money, CustomLineItem.class + ": money is missing");
+        Objects.requireNonNull(totalPrice, CustomLineItem.class + ": totalPrice is missing");
+        Objects.requireNonNull(slug, CustomLineItem.class + ": slug is missing");
+        Objects.requireNonNull(quantity, CustomLineItem.class + ": quantity is missing");
+        Objects.requireNonNull(state, CustomLineItem.class + ": state is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            CustomLineItem.class + ": discountedPricePerQuantity is missing");
+        return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
+            taxRate, discountedPricePerQuantity, custom, shippingDetails);
+    }
+
+    /**
+     * builds CustomLineItem without checking for non null required values
+     */
+    public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
             taxRate, discountedPricePerQuantity, custom, shippingDetails);
     }

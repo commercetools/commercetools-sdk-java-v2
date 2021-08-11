@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductImageAddedMessageBuilder {
+public final class ProductImageAddedMessageBuilder implements Builder<ProductImageAddedMessage> {
 
     private String id;
 
@@ -163,6 +164,24 @@ public final class ProductImageAddedMessageBuilder {
     }
 
     public ProductImageAddedMessage build() {
+        Objects.requireNonNull(id, ProductImageAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductImageAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductImageAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductImageAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductImageAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductImageAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductImageAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variantId, ProductImageAddedMessage.class + ": variantId is missing");
+        Objects.requireNonNull(image, ProductImageAddedMessage.class + ": image is missing");
+        Objects.requireNonNull(staged, ProductImageAddedMessage.class + ": staged is missing");
+        return new ProductImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, image, staged);
+    }
+
+    /**
+     * builds ProductImageAddedMessage without checking for non null required values
+     */
+    public ProductImageAddedMessage buildUnchecked() {
         return new ProductImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, image, staged);
     }

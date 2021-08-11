@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderTransitionLineItemStateActionBuilder {
+public final class StagedOrderTransitionLineItemStateActionBuilder
+        implements Builder<StagedOrderTransitionLineItemStateAction> {
 
     private String lineItemId;
 
@@ -71,6 +73,18 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
     }
 
     public StagedOrderTransitionLineItemStateAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderTransitionLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, StagedOrderTransitionLineItemStateAction.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, StagedOrderTransitionLineItemStateAction.class + ": fromState is missing");
+        Objects.requireNonNull(toState, StagedOrderTransitionLineItemStateAction.class + ": toState is missing");
+        return new StagedOrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
+            actualTransitionDate);
+    }
+
+    /**
+     * builds StagedOrderTransitionLineItemStateAction without checking for non null required values
+     */
+    public StagedOrderTransitionLineItemStateAction buildUnchecked() {
         return new StagedOrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

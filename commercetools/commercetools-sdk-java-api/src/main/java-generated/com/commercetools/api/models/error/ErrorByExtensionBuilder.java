@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ErrorByExtensionBuilder {
+public final class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class ErrorByExtensionBuilder {
     }
 
     public ErrorByExtension build() {
+        Objects.requireNonNull(id, ErrorByExtension.class + ": id is missing");
+        return new ErrorByExtensionImpl(id, key);
+    }
+
+    /**
+     * builds ErrorByExtension without checking for non null required values
+     */
+    public ErrorByExtension buildUnchecked() {
         return new ErrorByExtensionImpl(id, key);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class UserProvidedIdentifiersBuilder {
+public final class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdentifiers> {
 
     @Nullable
     private String key;
@@ -90,6 +91,13 @@ public final class UserProvidedIdentifiersBuilder {
     }
 
     public UserProvidedIdentifiers build() {
+        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
+    }
+
+    /**
+     * builds UserProvidedIdentifiers without checking for non null required values
+     */
+    public UserProvidedIdentifiers buildUnchecked() {
         return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
     }
 

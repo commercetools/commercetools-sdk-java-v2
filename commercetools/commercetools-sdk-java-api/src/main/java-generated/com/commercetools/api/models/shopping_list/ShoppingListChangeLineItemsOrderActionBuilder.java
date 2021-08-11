@@ -3,10 +3,12 @@ package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListChangeLineItemsOrderActionBuilder {
+public final class ShoppingListChangeLineItemsOrderActionBuilder
+        implements Builder<ShoppingListChangeLineItemsOrderAction> {
 
     private java.util.List<String> lineItemOrder;
 
@@ -25,6 +27,15 @@ public final class ShoppingListChangeLineItemsOrderActionBuilder {
     }
 
     public ShoppingListChangeLineItemsOrderAction build() {
+        Objects.requireNonNull(lineItemOrder,
+            ShoppingListChangeLineItemsOrderAction.class + ": lineItemOrder is missing");
+        return new ShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);
+    }
+
+    /**
+     * builds ShoppingListChangeLineItemsOrderAction without checking for non null required values
+     */
+    public ShoppingListChangeLineItemsOrderAction buildUnchecked() {
         return new ShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);
     }
 

@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
+public final class ProductPriceExternalDiscountSetMessagePayloadBuilder
+        implements Builder<ProductPriceExternalDiscountSetMessagePayload> {
 
     private Integer variantId;
 
@@ -84,6 +86,18 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
     }
 
     public ProductPriceExternalDiscountSetMessagePayload build() {
+        Objects.requireNonNull(variantId,
+            ProductPriceExternalDiscountSetMessagePayload.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceExternalDiscountSetMessagePayload.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceExternalDiscountSetMessagePayload.class + ": staged is missing");
+        return new ProductPriceExternalDiscountSetMessagePayloadImpl(variantId, variantKey, sku, priceId, discounted,
+            staged);
+    }
+
+    /**
+     * builds ProductPriceExternalDiscountSetMessagePayload without checking for non null required values
+     */
+    public ProductPriceExternalDiscountSetMessagePayload buildUnchecked() {
         return new ProductPriceExternalDiscountSetMessagePayloadImpl(variantId, variantKey, sku, priceId, discounted,
             staged);
     }

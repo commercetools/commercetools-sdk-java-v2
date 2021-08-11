@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeRemoveEnumValuesActionBuilder {
+public final class ProductTypeRemoveEnumValuesActionBuilder implements Builder<ProductTypeRemoveEnumValuesAction> {
 
     private String attributeName;
 
@@ -36,6 +37,15 @@ public final class ProductTypeRemoveEnumValuesActionBuilder {
     }
 
     public ProductTypeRemoveEnumValuesAction build() {
+        Objects.requireNonNull(attributeName, ProductTypeRemoveEnumValuesAction.class + ": attributeName is missing");
+        Objects.requireNonNull(keys, ProductTypeRemoveEnumValuesAction.class + ": keys is missing");
+        return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);
+    }
+
+    /**
+     * builds ProductTypeRemoveEnumValuesAction without checking for non null required values
+     */
+    public ProductTypeRemoveEnumValuesAction buildUnchecked() {
         return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);
     }
 

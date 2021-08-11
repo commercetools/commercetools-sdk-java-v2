@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderReturnShipmentStateChangedMessageBuilder {
+public final class OrderReturnShipmentStateChangedMessageBuilder
+        implements Builder<OrderReturnShipmentStateChangedMessage> {
 
     private String id;
 
@@ -154,6 +156,29 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
     }
 
     public OrderReturnShipmentStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderReturnShipmentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderReturnShipmentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderReturnShipmentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            OrderReturnShipmentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            OrderReturnShipmentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderReturnShipmentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderReturnShipmentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(returnItemId,
+            OrderReturnShipmentStateChangedMessage.class + ": returnItemId is missing");
+        Objects.requireNonNull(returnShipmentState,
+            OrderReturnShipmentStateChangedMessage.class + ": returnShipmentState is missing");
+        return new OrderReturnShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnItemId,
+            returnShipmentState);
+    }
+
+    /**
+     * builds OrderReturnShipmentStateChangedMessage without checking for non null required values
+     */
+    public OrderReturnShipmentStateChangedMessage buildUnchecked() {
         return new OrderReturnShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnItemId,
             returnShipmentState);

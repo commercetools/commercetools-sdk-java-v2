@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupPagedQueryResponseBuilder {
+public final class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerGroupPagedQueryResponse> {
 
     private Long offset;
 
@@ -75,6 +76,17 @@ public final class CustomerGroupPagedQueryResponseBuilder {
     }
 
     public CustomerGroupPagedQueryResponse build() {
+        Objects.requireNonNull(offset, CustomerGroupPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(limit, CustomerGroupPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomerGroupPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(results, CustomerGroupPagedQueryResponse.class + ": results is missing");
+        return new CustomerGroupPagedQueryResponseImpl(offset, limit, count, total, results);
+    }
+
+    /**
+     * builds CustomerGroupPagedQueryResponse without checking for non null required values
+     */
+    public CustomerGroupPagedQueryResponse buildUnchecked() {
         return new CustomerGroupPagedQueryResponseImpl(offset, limit, count, total, results);
     }
 

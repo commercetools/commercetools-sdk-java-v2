@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantDeletedMessageBuilder {
+public final class ProductVariantDeletedMessageBuilder implements Builder<ProductVariantDeletedMessage> {
 
     private String id;
 
@@ -158,6 +159,23 @@ public final class ProductVariantDeletedMessageBuilder {
     }
 
     public ProductVariantDeletedMessage build() {
+        Objects.requireNonNull(id, ProductVariantDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductVariantDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductVariantDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductVariantDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductVariantDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductVariantDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductVariantDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variant, ProductVariantDeletedMessage.class + ": variant is missing");
+        Objects.requireNonNull(removedImageUrls, ProductVariantDeletedMessage.class + ": removedImageUrls is missing");
+        return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);
+    }
+
+    /**
+     * builds ProductVariantDeletedMessage without checking for non null required values
+     */
+    public ProductVariantDeletedMessage buildUnchecked() {
         return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);
     }

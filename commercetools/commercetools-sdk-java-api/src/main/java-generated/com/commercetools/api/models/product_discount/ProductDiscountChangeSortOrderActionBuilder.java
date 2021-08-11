@@ -3,10 +3,12 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountChangeSortOrderActionBuilder {
+public final class ProductDiscountChangeSortOrderActionBuilder
+        implements Builder<ProductDiscountChangeSortOrderAction> {
 
     private String sortOrder;
 
@@ -20,6 +22,14 @@ public final class ProductDiscountChangeSortOrderActionBuilder {
     }
 
     public ProductDiscountChangeSortOrderAction build() {
+        Objects.requireNonNull(sortOrder, ProductDiscountChangeSortOrderAction.class + ": sortOrder is missing");
+        return new ProductDiscountChangeSortOrderActionImpl(sortOrder);
+    }
+
+    /**
+     * builds ProductDiscountChangeSortOrderAction without checking for non null required values
+     */
+    public ProductDiscountChangeSortOrderAction buildUnchecked() {
         return new ProductDiscountChangeSortOrderActionImpl(sortOrder);
     }
 

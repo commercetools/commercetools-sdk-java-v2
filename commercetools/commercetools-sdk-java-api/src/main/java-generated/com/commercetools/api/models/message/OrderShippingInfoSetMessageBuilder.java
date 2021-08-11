@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShippingInfoSetMessageBuilder {
+public final class OrderShippingInfoSetMessageBuilder implements Builder<OrderShippingInfoSetMessage> {
 
     private String id;
 
@@ -158,6 +159,21 @@ public final class OrderShippingInfoSetMessageBuilder {
     }
 
     public OrderShippingInfoSetMessage build() {
+        Objects.requireNonNull(id, OrderShippingInfoSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShippingInfoSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShippingInfoSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShippingInfoSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShippingInfoSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShippingInfoSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderShippingInfoSetMessage.class + ": resourceVersion is missing");
+        return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
+    }
+
+    /**
+     * builds OrderShippingInfoSetMessage without checking for non null required values
+     */
+    public OrderShippingInfoSetMessage buildUnchecked() {
         return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
     }

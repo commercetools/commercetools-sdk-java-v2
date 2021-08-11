@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCustomerAddAddressActionBuilder {
+public final class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddAddressAction> {
 
     private com.commercetools.api.models.common.BaseAddress address;
 
@@ -20,6 +21,14 @@ public final class MyCustomerAddAddressActionBuilder {
     }
 
     public MyCustomerAddAddressAction build() {
+        Objects.requireNonNull(address, MyCustomerAddAddressAction.class + ": address is missing");
+        return new MyCustomerAddAddressActionImpl(address);
+    }
+
+    /**
+     * builds MyCustomerAddAddressAction without checking for non null required values
+     */
+    public MyCustomerAddAddressAction buildUnchecked() {
         return new MyCustomerAddAddressActionImpl(address);
     }
 

@@ -3,10 +3,12 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemShippingDetailsChangeBuilder {
+public final class SetCustomLineItemShippingDetailsChangeBuilder
+        implements Builder<SetCustomLineItemShippingDetailsChange> {
 
     private String change;
 
@@ -55,6 +57,19 @@ public final class SetCustomLineItemShippingDetailsChangeBuilder {
     }
 
     public SetCustomLineItemShippingDetailsChange build() {
+        Objects.requireNonNull(change, SetCustomLineItemShippingDetailsChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemShippingDetailsChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemShippingDetailsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetCustomLineItemShippingDetailsChange.class + ": previousValue is missing");
+        return new SetCustomLineItemShippingDetailsChangeImpl(change, customLineItemId, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemShippingDetailsChange without checking for non null required values
+     */
+    public SetCustomLineItemShippingDetailsChange buildUnchecked() {
         return new SetCustomLineItemShippingDetailsChangeImpl(change, customLineItemId, nextValue, previousValue);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ConcurrentModificationErrorBuilder {
+public final class ConcurrentModificationErrorBuilder implements Builder<ConcurrentModificationError> {
 
     private String message;
 
@@ -59,6 +60,15 @@ public final class ConcurrentModificationErrorBuilder {
     }
 
     public ConcurrentModificationError build() {
+        Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");
+        Objects.requireNonNull(currentVersion, ConcurrentModificationError.class + ": currentVersion is missing");
+        return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);
+    }
+
+    /**
+     * builds ConcurrentModificationError without checking for non null required values
+     */
+    public ConcurrentModificationError buildUnchecked() {
         return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);
     }
 

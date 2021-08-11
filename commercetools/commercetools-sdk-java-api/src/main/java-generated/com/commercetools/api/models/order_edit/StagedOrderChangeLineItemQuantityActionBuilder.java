@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderChangeLineItemQuantityActionBuilder {
+public final class StagedOrderChangeLineItemQuantityActionBuilder
+        implements Builder<StagedOrderChangeLineItemQuantityAction> {
 
     private String lineItemId;
 
@@ -61,6 +63,15 @@ public final class StagedOrderChangeLineItemQuantityActionBuilder {
     }
 
     public StagedOrderChangeLineItemQuantityAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderChangeLineItemQuantityAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
+        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+    }
+
+    /**
+     * builds StagedOrderChangeLineItemQuantityAction without checking for non null required values
+     */
+    public StagedOrderChangeLineItemQuantityAction buildUnchecked() {
         return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
 

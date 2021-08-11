@@ -5,13 +5,15 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreDraftBuilder {
+public final class StoreDraftBuilder implements Builder<StoreDraft> {
 
     private String key;
 
+    @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
@@ -31,7 +33,7 @@ public final class StoreDraftBuilder {
         return this;
     }
 
-    public StoreDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    public StoreDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
@@ -79,6 +81,7 @@ public final class StoreDraftBuilder {
         return this.key;
     }
 
+    @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -104,6 +107,14 @@ public final class StoreDraftBuilder {
     }
 
     public StoreDraft build() {
+        Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
+        return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, custom);
+    }
+
+    /**
+     * builds StoreDraft without checking for non null required values
+     */
+    public StoreDraft buildUnchecked() {
         return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, custom);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySlugChangedMessagePayloadBuilder {
+public final class CategorySlugChangedMessagePayloadBuilder implements Builder<CategorySlugChangedMessagePayload> {
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
@@ -37,6 +38,14 @@ public final class CategorySlugChangedMessagePayloadBuilder {
     }
 
     public CategorySlugChangedMessagePayload build() {
+        Objects.requireNonNull(slug, CategorySlugChangedMessagePayload.class + ": slug is missing");
+        return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
+    }
+
+    /**
+     * builds CategorySlugChangedMessagePayload without checking for non null required values
+     */
+    public CategorySlugChangedMessagePayload buildUnchecked() {
         return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 

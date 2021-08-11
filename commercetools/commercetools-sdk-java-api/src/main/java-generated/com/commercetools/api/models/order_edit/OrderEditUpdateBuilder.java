@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditUpdateBuilder {
+public final class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
 
     private Long version;
 
@@ -53,6 +54,15 @@ public final class OrderEditUpdateBuilder {
     }
 
     public OrderEditUpdate build() {
+        Objects.requireNonNull(version, OrderEditUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, OrderEditUpdate.class + ": actions is missing");
+        return new OrderEditUpdateImpl(version, actions, dryRun);
+    }
+
+    /**
+     * builds OrderEditUpdate without checking for non null required values
+     */
+    public OrderEditUpdate buildUnchecked() {
         return new OrderEditUpdateImpl(version, actions, dryRun);
     }
 

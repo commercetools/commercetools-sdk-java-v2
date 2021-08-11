@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetBuilder {
+public final class AssetBuilder implements Builder<Asset> {
 
     private String key;
 
@@ -94,6 +95,16 @@ public final class AssetBuilder {
     }
 
     public Asset build() {
+        Objects.requireNonNull(key, Asset.class + ": key is missing");
+        Objects.requireNonNull(sources, Asset.class + ": sources is missing");
+        Objects.requireNonNull(name, Asset.class + ": name is missing");
+        return new AssetImpl(key, sources, name, description, tags, custom);
+    }
+
+    /**
+     * builds Asset without checking for non null required values
+     */
+    public Asset buildUnchecked() {
         return new AssetImpl(key, sources, name, description, tags, custom);
     }
 

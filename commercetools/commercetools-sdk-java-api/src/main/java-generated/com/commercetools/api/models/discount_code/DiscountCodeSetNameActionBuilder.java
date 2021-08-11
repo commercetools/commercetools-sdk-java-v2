@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeSetNameActionBuilder {
+public final class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSetNameAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
@@ -25,6 +26,13 @@ public final class DiscountCodeSetNameActionBuilder {
     }
 
     public DiscountCodeSetNameAction build() {
+        return new DiscountCodeSetNameActionImpl(name);
+    }
+
+    /**
+     * builds DiscountCodeSetNameAction without checking for non null required values
+     */
+    public DiscountCodeSetNameAction buildUnchecked() {
         return new DiscountCodeSetNameActionImpl(name);
     }
 

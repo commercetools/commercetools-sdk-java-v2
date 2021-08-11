@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelItemsUpdatedMessageBuilder {
+public final class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpdatedMessage> {
 
     private String id;
 
@@ -189,6 +190,25 @@ public final class ParcelItemsUpdatedMessageBuilder {
     }
 
     public ParcelItemsUpdatedMessage build() {
+        Objects.requireNonNull(id, ParcelItemsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelItemsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelItemsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelItemsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelItemsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelItemsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ParcelItemsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessage.class + ": parcelId is missing");
+        Objects.requireNonNull(items, ParcelItemsUpdatedMessage.class + ": items is missing");
+        Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessage.class + ": oldItems is missing");
+        return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
+            oldItems);
+    }
+
+    /**
+     * builds ParcelItemsUpdatedMessage without checking for non null required values
+     */
+    public ParcelItemsUpdatedMessage buildUnchecked() {
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
             oldItems);

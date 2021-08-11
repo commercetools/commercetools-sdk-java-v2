@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DateSetAttributeBuilder {
+public final class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     @Nullable
     private String name;
@@ -40,6 +41,14 @@ public final class DateSetAttributeBuilder {
     }
 
     public DateSetAttribute build() {
+        Objects.requireNonNull(value, DateSetAttribute.class + ": value is missing");
+        return new DateSetAttributeImpl(name, value);
+    }
+
+    /**
+     * builds DateSetAttribute without checking for non null required values
+     */
+    public DateSetAttribute buildUnchecked() {
         return new DateSetAttributeImpl(name, value);
     }
 

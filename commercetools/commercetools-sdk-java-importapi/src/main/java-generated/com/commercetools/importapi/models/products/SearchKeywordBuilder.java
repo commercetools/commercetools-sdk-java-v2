@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchKeywordBuilder {
+public final class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     private String text;
 
@@ -36,6 +37,14 @@ public final class SearchKeywordBuilder {
     }
 
     public SearchKeyword build() {
+        Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
+        return new SearchKeywordImpl(text, suggestTokenizer);
+    }
+
+    /**
+     * builds SearchKeyword without checking for non null required values
+     */
+    public SearchKeyword buildUnchecked() {
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 

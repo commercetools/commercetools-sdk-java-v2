@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportOperationStatusBuilder {
+public final class ImportOperationStatusBuilder implements Builder<ImportOperationStatus> {
 
     @Nullable
     private String operationId;
@@ -56,6 +57,14 @@ public final class ImportOperationStatusBuilder {
     }
 
     public ImportOperationStatus build() {
+        Objects.requireNonNull(state, ImportOperationStatus.class + ": state is missing");
+        return new ImportOperationStatusImpl(operationId, state, errors);
+    }
+
+    /**
+     * builds ImportOperationStatus without checking for non null required values
+     */
+    public ImportOperationStatus buildUnchecked() {
         return new ImportOperationStatusImpl(operationId, state, errors);
     }
 

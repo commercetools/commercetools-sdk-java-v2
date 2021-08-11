@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SyncInfoBuilder {
+public final class SyncInfoBuilder implements Builder<SyncInfo> {
 
     private com.commercetools.importapi.models.common.ChannelKeyReference channel;
 
@@ -46,6 +47,15 @@ public final class SyncInfoBuilder {
     }
 
     public SyncInfo build() {
+        Objects.requireNonNull(channel, SyncInfo.class + ": channel is missing");
+        Objects.requireNonNull(syncedAt, SyncInfo.class + ": syncedAt is missing");
+        return new SyncInfoImpl(channel, externalId, syncedAt);
+    }
+
+    /**
+     * builds SyncInfo without checking for non null required values
+     */
+    public SyncInfo buildUnchecked() {
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ItemShippingDetailsBuilder {
+public final class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> {
 
     private java.util.List<com.commercetools.history.models.common.ItemShippingTarget> targets;
 
@@ -38,6 +39,15 @@ public final class ItemShippingDetailsBuilder {
     }
 
     public ItemShippingDetails build() {
+        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");
+        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");
+        return new ItemShippingDetailsImpl(targets, valid);
+    }
+
+    /**
+     * builds ItemShippingDetails without checking for non null required values
+     */
+    public ItemShippingDetails buildUnchecked() {
         return new ItemShippingDetailsImpl(targets, valid);
     }
 

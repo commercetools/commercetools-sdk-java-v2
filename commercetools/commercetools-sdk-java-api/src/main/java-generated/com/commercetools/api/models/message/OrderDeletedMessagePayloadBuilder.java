@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDeletedMessagePayloadBuilder {
+public final class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMessagePayload> {
 
     private com.commercetools.api.models.order.Order order;
 
@@ -20,6 +21,14 @@ public final class OrderDeletedMessagePayloadBuilder {
     }
 
     public OrderDeletedMessagePayload build() {
+        Objects.requireNonNull(order, OrderDeletedMessagePayload.class + ": order is missing");
+        return new OrderDeletedMessagePayloadImpl(order);
+    }
+
+    /**
+     * builds OrderDeletedMessagePayload without checking for non null required values
+     */
+    public OrderDeletedMessagePayload buildUnchecked() {
         return new OrderDeletedMessagePayloadImpl(order);
     }
 

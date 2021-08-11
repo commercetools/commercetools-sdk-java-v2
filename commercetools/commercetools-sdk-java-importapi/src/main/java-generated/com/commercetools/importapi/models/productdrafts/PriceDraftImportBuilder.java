@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceDraftImportBuilder {
+public final class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -149,6 +150,15 @@ public final class PriceDraftImportBuilder {
     }
 
     public PriceDraftImport build() {
+        Objects.requireNonNull(value, PriceDraftImport.class + ": value is missing");
+        return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
+            discounted, tiers, key);
+    }
+
+    /**
+     * builds PriceDraftImport without checking for non null required values
+     */
+    public PriceDraftImport buildUnchecked() {
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
             discounted, tiers, key);
     }

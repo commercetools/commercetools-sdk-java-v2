@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderLineItemAddedMessageBuilder {
+public final class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAddedMessage> {
 
     private String id;
 
@@ -152,6 +153,23 @@ public final class OrderLineItemAddedMessageBuilder {
     }
 
     public OrderLineItemAddedMessage build() {
+        Objects.requireNonNull(id, OrderLineItemAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderLineItemAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderLineItemAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderLineItemAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderLineItemAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderLineItemAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderLineItemAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(lineItem, OrderLineItemAddedMessage.class + ": lineItem is missing");
+        Objects.requireNonNull(addedQuantity, OrderLineItemAddedMessage.class + ": addedQuantity is missing");
+        return new OrderLineItemAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItem, addedQuantity);
+    }
+
+    /**
+     * builds OrderLineItemAddedMessage without checking for non null required values
+     */
+    public OrderLineItemAddedMessage buildUnchecked() {
         return new OrderLineItemAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItem, addedQuantity);
     }

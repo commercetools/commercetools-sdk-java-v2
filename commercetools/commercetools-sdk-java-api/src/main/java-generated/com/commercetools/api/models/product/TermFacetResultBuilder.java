@@ -3,10 +3,11 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TermFacetResultBuilder {
+public final class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     private com.commercetools.api.models.product.TermFacetResultType dataType;
 
@@ -70,6 +71,18 @@ public final class TermFacetResultBuilder {
     }
 
     public TermFacetResult build() {
+        Objects.requireNonNull(dataType, TermFacetResult.class + ": dataType is missing");
+        Objects.requireNonNull(missing, TermFacetResult.class + ": missing is missing");
+        Objects.requireNonNull(total, TermFacetResult.class + ": total is missing");
+        Objects.requireNonNull(other, TermFacetResult.class + ": other is missing");
+        Objects.requireNonNull(terms, TermFacetResult.class + ": terms is missing");
+        return new TermFacetResultImpl(dataType, missing, total, other, terms);
+    }
+
+    /**
+     * builds TermFacetResult without checking for non null required values
+     */
+    public TermFacetResult buildUnchecked() {
         return new TermFacetResultImpl(dataType, missing, total, other, terms);
     }
 

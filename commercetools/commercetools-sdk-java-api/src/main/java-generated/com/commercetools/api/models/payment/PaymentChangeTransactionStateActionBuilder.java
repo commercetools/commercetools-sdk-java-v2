@@ -3,10 +3,11 @@ package com.commercetools.api.models.payment;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentChangeTransactionStateActionBuilder {
+public final class PaymentChangeTransactionStateActionBuilder implements Builder<PaymentChangeTransactionStateAction> {
 
     private String transactionId;
 
@@ -32,6 +33,15 @@ public final class PaymentChangeTransactionStateActionBuilder {
     }
 
     public PaymentChangeTransactionStateAction build() {
+        Objects.requireNonNull(transactionId, PaymentChangeTransactionStateAction.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentChangeTransactionStateAction.class + ": state is missing");
+        return new PaymentChangeTransactionStateActionImpl(transactionId, state);
+    }
+
+    /**
+     * builds PaymentChangeTransactionStateAction without checking for non null required values
+     */
+    public PaymentChangeTransactionStateAction buildUnchecked() {
         return new PaymentChangeTransactionStateActionImpl(transactionId, state);
     }
 

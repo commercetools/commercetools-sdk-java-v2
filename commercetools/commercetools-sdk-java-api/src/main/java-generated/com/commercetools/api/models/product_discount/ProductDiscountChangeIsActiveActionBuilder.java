@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountChangeIsActiveActionBuilder {
+public final class ProductDiscountChangeIsActiveActionBuilder implements Builder<ProductDiscountChangeIsActiveAction> {
 
     private Boolean isActive;
 
@@ -20,6 +21,14 @@ public final class ProductDiscountChangeIsActiveActionBuilder {
     }
 
     public ProductDiscountChangeIsActiveAction build() {
+        Objects.requireNonNull(isActive, ProductDiscountChangeIsActiveAction.class + ": isActive is missing");
+        return new ProductDiscountChangeIsActiveActionImpl(isActive);
+    }
+
+    /**
+     * builds ProductDiscountChangeIsActiveAction without checking for non null required values
+     */
+    public ProductDiscountChangeIsActiveAction buildUnchecked() {
         return new ProductDiscountChangeIsActiveActionImpl(isActive);
     }
 

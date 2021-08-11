@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceExternalDiscountSetMessageBuilder {
+public final class ProductPriceExternalDiscountSetMessageBuilder
+        implements Builder<ProductPriceExternalDiscountSetMessage> {
 
     private String id;
 
@@ -204,6 +206,28 @@ public final class ProductPriceExternalDiscountSetMessageBuilder {
     }
 
     public ProductPriceExternalDiscountSetMessage build() {
+        Objects.requireNonNull(id, ProductPriceExternalDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPriceExternalDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPriceExternalDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            ProductPriceExternalDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            ProductPriceExternalDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPriceExternalDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductPriceExternalDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variantId, ProductPriceExternalDiscountSetMessage.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceExternalDiscountSetMessage.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceExternalDiscountSetMessage.class + ": staged is missing");
+        return new ProductPriceExternalDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId,
+            variantKey, sku, priceId, discounted, staged);
+    }
+
+    /**
+     * builds ProductPriceExternalDiscountSetMessage without checking for non null required values
+     */
+    public ProductPriceExternalDiscountSetMessage buildUnchecked() {
         return new ProductPriceExternalDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId,
             variantKey, sku, priceId, discounted, staged);

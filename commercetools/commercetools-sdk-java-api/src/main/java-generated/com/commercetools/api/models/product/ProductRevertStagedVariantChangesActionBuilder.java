@@ -3,10 +3,12 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRevertStagedVariantChangesActionBuilder {
+public final class ProductRevertStagedVariantChangesActionBuilder
+        implements Builder<ProductRevertStagedVariantChangesAction> {
 
     private Long variantId;
 
@@ -20,6 +22,14 @@ public final class ProductRevertStagedVariantChangesActionBuilder {
     }
 
     public ProductRevertStagedVariantChangesAction build() {
+        Objects.requireNonNull(variantId, ProductRevertStagedVariantChangesAction.class + ": variantId is missing");
+        return new ProductRevertStagedVariantChangesActionImpl(variantId);
+    }
+
+    /**
+     * builds ProductRevertStagedVariantChangesAction without checking for non null required values
+     */
+    public ProductRevertStagedVariantChangesAction buildUnchecked() {
         return new ProductRevertStagedVariantChangesActionImpl(variantId);
     }
 

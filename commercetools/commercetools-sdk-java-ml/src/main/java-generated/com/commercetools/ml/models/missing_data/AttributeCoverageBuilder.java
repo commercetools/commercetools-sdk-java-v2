@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeCoverageBuilder {
+public final class AttributeCoverageBuilder implements Builder<AttributeCoverage> {
 
     private Double names;
 
@@ -31,6 +32,15 @@ public final class AttributeCoverageBuilder {
     }
 
     public AttributeCoverage build() {
+        Objects.requireNonNull(names, AttributeCoverage.class + ": names is missing");
+        Objects.requireNonNull(values, AttributeCoverage.class + ": values is missing");
+        return new AttributeCoverageImpl(names, values);
+    }
+
+    /**
+     * builds AttributeCoverage without checking for non null required values
+     */
+    public AttributeCoverage buildUnchecked() {
         return new AttributeCoverageImpl(names, values);
     }
 

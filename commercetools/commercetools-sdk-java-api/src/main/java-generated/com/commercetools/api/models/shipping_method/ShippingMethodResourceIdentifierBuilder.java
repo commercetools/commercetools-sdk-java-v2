@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodResourceIdentifierBuilder {
+public final class ShippingMethodResourceIdentifierBuilder implements Builder<ShippingMethodResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class ShippingMethodResourceIdentifierBuilder {
     }
 
     public ShippingMethodResourceIdentifier build() {
+        return new ShippingMethodResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds ShippingMethodResourceIdentifier without checking for non null required values
+     */
+    public ShippingMethodResourceIdentifier buildUnchecked() {
         return new ShippingMethodResourceIdentifierImpl(id, key);
     }
 

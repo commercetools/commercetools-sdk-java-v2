@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemBuilder {
+public final class LineItemBuilder implements Builder<LineItem> {
 
     private String id;
 
@@ -277,6 +278,27 @@ public final class LineItemBuilder {
     }
 
     public LineItem build() {
+        Objects.requireNonNull(id, LineItem.class + ": id is missing");
+        Objects.requireNonNull(productId, LineItem.class + ": productId is missing");
+        Objects.requireNonNull(name, LineItem.class + ": name is missing");
+        Objects.requireNonNull(productType, LineItem.class + ": productType is missing");
+        Objects.requireNonNull(variant, LineItem.class + ": variant is missing");
+        Objects.requireNonNull(price, LineItem.class + ": price is missing");
+        Objects.requireNonNull(totalPrice, LineItem.class + ": totalPrice is missing");
+        Objects.requireNonNull(quantity, LineItem.class + ": quantity is missing");
+        Objects.requireNonNull(state, LineItem.class + ": state is missing");
+        Objects.requireNonNull(discountedPricePerQuantity, LineItem.class + ": discountedPricePerQuantity is missing");
+        Objects.requireNonNull(priceMode, LineItem.class + ": priceMode is missing");
+        Objects.requireNonNull(lineItemMode, LineItem.class + ": lineItemMode is missing");
+        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
+            quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
+            priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+    }
+
+    /**
+     * builds LineItem without checking for non null required values
+     */
+    public LineItem buildUnchecked() {
         return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
             quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
             priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);

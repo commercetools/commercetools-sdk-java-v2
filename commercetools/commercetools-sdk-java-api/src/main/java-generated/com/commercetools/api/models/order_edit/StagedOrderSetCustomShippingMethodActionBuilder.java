@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetCustomShippingMethodActionBuilder {
+public final class StagedOrderSetCustomShippingMethodActionBuilder
+        implements Builder<StagedOrderSetCustomShippingMethodAction> {
 
     private String shippingMethodName;
 
@@ -62,6 +64,18 @@ public final class StagedOrderSetCustomShippingMethodActionBuilder {
     }
 
     public StagedOrderSetCustomShippingMethodAction build() {
+        Objects.requireNonNull(shippingMethodName,
+            StagedOrderSetCustomShippingMethodAction.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(shippingRate,
+            StagedOrderSetCustomShippingMethodAction.class + ": shippingRate is missing");
+        return new StagedOrderSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
+            externalTaxRate);
+    }
+
+    /**
+     * builds StagedOrderSetCustomShippingMethodAction without checking for non null required values
+     */
+    public StagedOrderSetCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
             externalTaxRate);
     }

@@ -3,10 +3,11 @@ package com.commercetools.api.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceTierDraftBuilder {
+public final class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
 
     private Long minimumQuantity;
 
@@ -31,6 +32,15 @@ public final class PriceTierDraftBuilder {
     }
 
     public PriceTierDraft build() {
+        Objects.requireNonNull(minimumQuantity, PriceTierDraft.class + ": minimumQuantity is missing");
+        Objects.requireNonNull(value, PriceTierDraft.class + ": value is missing");
+        return new PriceTierDraftImpl(minimumQuantity, value);
+    }
+
+    /**
+     * builds PriceTierDraft without checking for non null required values
+     */
+    public PriceTierDraft buildUnchecked() {
         return new PriceTierDraftImpl(minimumQuantity, value);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerTokenBuilder {
+public final class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     private String id;
 
@@ -79,6 +80,18 @@ public final class CustomerTokenBuilder {
     }
 
     public CustomerToken build() {
+        Objects.requireNonNull(id, CustomerToken.class + ": id is missing");
+        Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
+        Objects.requireNonNull(customerId, CustomerToken.class + ": customerId is missing");
+        Objects.requireNonNull(expiresAt, CustomerToken.class + ": expiresAt is missing");
+        Objects.requireNonNull(value, CustomerToken.class + ": value is missing");
+        return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
+    }
+
+    /**
+     * builds CustomerToken without checking for non null required values
+     */
+    public CustomerToken buildUnchecked() {
         return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
     }
 

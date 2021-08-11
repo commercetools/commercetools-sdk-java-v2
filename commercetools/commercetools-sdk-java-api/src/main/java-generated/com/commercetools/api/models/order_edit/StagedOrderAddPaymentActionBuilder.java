@@ -3,10 +3,11 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddPaymentActionBuilder {
+public final class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAddPaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
@@ -21,6 +22,14 @@ public final class StagedOrderAddPaymentActionBuilder {
     }
 
     public StagedOrderAddPaymentAction build() {
+        Objects.requireNonNull(payment, StagedOrderAddPaymentAction.class + ": payment is missing");
+        return new StagedOrderAddPaymentActionImpl(payment);
+    }
+
+    /**
+     * builds StagedOrderAddPaymentAction without checking for non null required values
+     */
+    public StagedOrderAddPaymentAction buildUnchecked() {
         return new StagedOrderAddPaymentActionImpl(payment);
     }
 

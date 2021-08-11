@@ -3,10 +3,11 @@ package com.commercetools.history.models.label;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductLabelBuilder {
+public final class ProductLabelBuilder implements Builder<ProductLabel> {
 
     private com.commercetools.history.models.common.LocalizedString slug;
 
@@ -31,6 +32,15 @@ public final class ProductLabelBuilder {
     }
 
     public ProductLabel build() {
+        Objects.requireNonNull(slug, ProductLabel.class + ": slug is missing");
+        Objects.requireNonNull(name, ProductLabel.class + ": name is missing");
+        return new ProductLabelImpl(slug, name);
+    }
+
+    /**
+     * builds ProductLabel without checking for non null required values
+     */
+    public ProductLabel buildUnchecked() {
         return new ProductLabelImpl(slug, name);
     }
 

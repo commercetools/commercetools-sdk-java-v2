@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TextLineItemBuilder {
+public final class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private java.time.ZonedDateTime addedAt;
 
@@ -82,6 +83,17 @@ public final class TextLineItemBuilder {
     }
 
     public TextLineItem build() {
+        Objects.requireNonNull(addedAt, TextLineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, TextLineItem.class + ": name is missing");
+        Objects.requireNonNull(quantity, TextLineItem.class + ": quantity is missing");
+        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+    }
+
+    /**
+     * builds TextLineItem without checking for non null required values
+     */
+    public TextLineItem buildUnchecked() {
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
     }
 

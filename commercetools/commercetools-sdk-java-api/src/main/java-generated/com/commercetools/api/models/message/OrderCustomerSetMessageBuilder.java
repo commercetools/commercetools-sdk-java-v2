@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomerSetMessageBuilder {
+public final class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetMessage> {
 
     private String id;
 
@@ -186,6 +187,22 @@ public final class OrderCustomerSetMessageBuilder {
     }
 
     public OrderCustomerSetMessage build() {
+        Objects.requireNonNull(id, OrderCustomerSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomerSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomerSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderCustomerSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderCustomerSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomerSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderCustomerSetMessage.class + ": resourceVersion is missing");
+        return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,
+            oldCustomer, oldCustomerGroup);
+    }
+
+    /**
+     * builds OrderCustomerSetMessage without checking for non null required values
+     */
+    public OrderCustomerSetMessage buildUnchecked() {
         return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,
             oldCustomer, oldCustomerGroup);

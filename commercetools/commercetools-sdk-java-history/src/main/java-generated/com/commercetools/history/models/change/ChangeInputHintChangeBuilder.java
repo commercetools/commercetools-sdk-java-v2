@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeInputHintChangeBuilder {
+public final class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChange> {
 
     private String change;
 
@@ -66,6 +67,18 @@ public final class ChangeInputHintChangeBuilder {
     }
 
     public ChangeInputHintChange build() {
+        Objects.requireNonNull(change, ChangeInputHintChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeInputHintChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, ChangeInputHintChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeInputHintChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeInputHintChange.class + ": previousValue is missing");
+        return new ChangeInputHintChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeInputHintChange without checking for non null required values
+     */
+    public ChangeInputHintChange buildUnchecked() {
         return new ChangeInputHintChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 

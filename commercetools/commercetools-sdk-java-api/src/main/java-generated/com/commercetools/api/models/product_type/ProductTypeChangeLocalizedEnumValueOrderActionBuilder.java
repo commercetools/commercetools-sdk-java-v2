@@ -3,10 +3,12 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
+public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
+        implements Builder<ProductTypeChangeLocalizedEnumValueOrderAction> {
 
     private String attributeName;
 
@@ -38,6 +40,16 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
     }
 
     public ProductTypeChangeLocalizedEnumValueOrderAction build() {
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangeLocalizedEnumValueOrderAction.class + ": attributeName is missing");
+        Objects.requireNonNull(values, ProductTypeChangeLocalizedEnumValueOrderAction.class + ": values is missing");
+        return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(attributeName, values);
+    }
+
+    /**
+     * builds ProductTypeChangeLocalizedEnumValueOrderAction without checking for non null required values
+     */
+    public ProductTypeChangeLocalizedEnumValueOrderAction buildUnchecked() {
         return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(attributeName, values);
     }
 

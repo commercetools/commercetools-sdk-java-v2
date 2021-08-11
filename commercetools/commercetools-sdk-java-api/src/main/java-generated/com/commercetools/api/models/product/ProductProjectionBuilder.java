@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductProjectionBuilder {
+public final class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     private String id;
 
@@ -300,6 +301,25 @@ public final class ProductProjectionBuilder {
     }
 
     public ProductProjection build() {
+        Objects.requireNonNull(id, ProductProjection.class + ": id is missing");
+        Objects.requireNonNull(version, ProductProjection.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductProjection.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductProjection.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(productType, ProductProjection.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductProjection.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductProjection.class + ": slug is missing");
+        Objects.requireNonNull(categories, ProductProjection.class + ": categories is missing");
+        Objects.requireNonNull(masterVariant, ProductProjection.class + ": masterVariant is missing");
+        Objects.requireNonNull(variants, ProductProjection.class + ": variants is missing");
+        return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
+            slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
+            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);
+    }
+
+    /**
+     * builds ProductProjection without checking for non null required values
+     */
+    public ProductProjection buildUnchecked() {
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
             slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
             hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics);

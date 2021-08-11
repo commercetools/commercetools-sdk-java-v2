@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingAttributesPagedQueryResultBuilder {
+public final class MissingAttributesPagedQueryResultBuilder implements Builder<MissingAttributesPagedQueryResult> {
 
     private Long count;
 
@@ -72,6 +73,18 @@ public final class MissingAttributesPagedQueryResultBuilder {
     }
 
     public MissingAttributesPagedQueryResult build() {
+        Objects.requireNonNull(count, MissingAttributesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingAttributesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingAttributesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingAttributesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingAttributesPagedQueryResult.class + ": meta is missing");
+        return new MissingAttributesPagedQueryResultImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds MissingAttributesPagedQueryResult without checking for non null required values
+     */
+    public MissingAttributesPagedQueryResult buildUnchecked() {
         return new MissingAttributesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

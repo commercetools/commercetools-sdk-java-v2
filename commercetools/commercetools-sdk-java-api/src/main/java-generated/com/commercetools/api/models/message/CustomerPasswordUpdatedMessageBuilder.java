@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerPasswordUpdatedMessageBuilder {
+public final class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPasswordUpdatedMessage> {
 
     private String id;
 
@@ -142,6 +143,22 @@ public final class CustomerPasswordUpdatedMessageBuilder {
     }
 
     public CustomerPasswordUpdatedMessage build() {
+        Objects.requireNonNull(id, CustomerPasswordUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerPasswordUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerPasswordUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerPasswordUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerPasswordUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerPasswordUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerPasswordUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(reset, CustomerPasswordUpdatedMessage.class + ": reset is missing");
+        return new CustomerPasswordUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, reset);
+    }
+
+    /**
+     * builds CustomerPasswordUpdatedMessage without checking for non null required values
+     */
+    public CustomerPasswordUpdatedMessage buildUnchecked() {
         return new CustomerPasswordUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, reset);
     }

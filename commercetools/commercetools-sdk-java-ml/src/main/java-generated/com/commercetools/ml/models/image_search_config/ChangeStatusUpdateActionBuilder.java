@@ -3,10 +3,11 @@ package com.commercetools.ml.models.image_search_config;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeStatusUpdateActionBuilder {
+public final class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpdateAction> {
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
@@ -21,6 +22,14 @@ public final class ChangeStatusUpdateActionBuilder {
     }
 
     public ChangeStatusUpdateAction build() {
+        Objects.requireNonNull(status, ChangeStatusUpdateAction.class + ": status is missing");
+        return new ChangeStatusUpdateActionImpl(status);
+    }
+
+    /**
+     * builds ChangeStatusUpdateAction without checking for non null required values
+     */
+    public ChangeStatusUpdateAction buildUnchecked() {
         return new ChangeStatusUpdateActionImpl(status);
     }
 

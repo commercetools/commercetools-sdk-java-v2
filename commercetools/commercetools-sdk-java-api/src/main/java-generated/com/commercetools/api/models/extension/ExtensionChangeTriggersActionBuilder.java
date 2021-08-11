@@ -3,10 +3,11 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionChangeTriggersActionBuilder {
+public final class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionChangeTriggersAction> {
 
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
@@ -27,6 +28,14 @@ public final class ExtensionChangeTriggersActionBuilder {
     }
 
     public ExtensionChangeTriggersAction build() {
+        Objects.requireNonNull(triggers, ExtensionChangeTriggersAction.class + ": triggers is missing");
+        return new ExtensionChangeTriggersActionImpl(triggers);
+    }
+
+    /**
+     * builds ExtensionChangeTriggersAction without checking for non null required values
+     */
+    public ExtensionChangeTriggersAction buildUnchecked() {
         return new ExtensionChangeTriggersActionImpl(triggers);
     }
 

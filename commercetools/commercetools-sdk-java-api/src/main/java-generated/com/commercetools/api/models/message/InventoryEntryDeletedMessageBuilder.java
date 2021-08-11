@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryDeletedMessageBuilder {
+public final class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEntryDeletedMessage> {
 
     private String id;
 
@@ -153,6 +154,23 @@ public final class InventoryEntryDeletedMessageBuilder {
     }
 
     public InventoryEntryDeletedMessage build() {
+        Objects.requireNonNull(id, InventoryEntryDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntryDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntryDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntryDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, InventoryEntryDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, InventoryEntryDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, InventoryEntryDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(sku, InventoryEntryDeletedMessage.class + ": sku is missing");
+        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessage.class + ": supplyChannel is missing");
+        return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
+    }
+
+    /**
+     * builds InventoryEntryDeletedMessage without checking for non null required values
+     */
+    public InventoryEntryDeletedMessage buildUnchecked() {
         return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
     }

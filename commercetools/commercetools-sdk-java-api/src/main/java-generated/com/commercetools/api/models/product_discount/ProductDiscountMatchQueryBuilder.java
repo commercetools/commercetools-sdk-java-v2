@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountMatchQueryBuilder {
+public final class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscountMatchQuery> {
 
     private String productId;
 
@@ -53,6 +54,17 @@ public final class ProductDiscountMatchQueryBuilder {
     }
 
     public ProductDiscountMatchQuery build() {
+        Objects.requireNonNull(productId, ProductDiscountMatchQuery.class + ": productId is missing");
+        Objects.requireNonNull(variantId, ProductDiscountMatchQuery.class + ": variantId is missing");
+        Objects.requireNonNull(staged, ProductDiscountMatchQuery.class + ": staged is missing");
+        Objects.requireNonNull(price, ProductDiscountMatchQuery.class + ": price is missing");
+        return new ProductDiscountMatchQueryImpl(productId, variantId, staged, price);
+    }
+
+    /**
+     * builds ProductDiscountMatchQuery without checking for non null required values
+     */
+    public ProductDiscountMatchQuery buildUnchecked() {
         return new ProductDiscountMatchQueryImpl(productId, variantId, staged, price);
     }
 

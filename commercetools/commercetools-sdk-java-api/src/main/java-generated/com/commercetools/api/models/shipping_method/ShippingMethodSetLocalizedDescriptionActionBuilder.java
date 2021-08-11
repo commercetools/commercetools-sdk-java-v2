@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodSetLocalizedDescriptionActionBuilder {
+public final class ShippingMethodSetLocalizedDescriptionActionBuilder
+        implements Builder<ShippingMethodSetLocalizedDescriptionAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
@@ -25,6 +27,13 @@ public final class ShippingMethodSetLocalizedDescriptionActionBuilder {
     }
 
     public ShippingMethodSetLocalizedDescriptionAction build() {
+        return new ShippingMethodSetLocalizedDescriptionActionImpl(localizedDescription);
+    }
+
+    /**
+     * builds ShippingMethodSetLocalizedDescriptionAction without checking for non null required values
+     */
+    public ShippingMethodSetLocalizedDescriptionAction buildUnchecked() {
         return new ShippingMethodSetLocalizedDescriptionActionImpl(localizedDescription);
     }
 

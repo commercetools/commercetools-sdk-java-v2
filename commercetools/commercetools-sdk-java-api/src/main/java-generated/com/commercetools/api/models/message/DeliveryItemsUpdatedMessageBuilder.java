@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryItemsUpdatedMessageBuilder {
+public final class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItemsUpdatedMessage> {
 
     private String id;
 
@@ -176,6 +177,24 @@ public final class DeliveryItemsUpdatedMessageBuilder {
     }
 
     public DeliveryItemsUpdatedMessage build() {
+        Objects.requireNonNull(id, DeliveryItemsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryItemsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryItemsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryItemsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryItemsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryItemsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryItemsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, DeliveryItemsUpdatedMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, DeliveryItemsUpdatedMessage.class + ": items is missing");
+        Objects.requireNonNull(oldItems, DeliveryItemsUpdatedMessage.class + ": oldItems is missing");
+        return new DeliveryItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems);
+    }
+
+    /**
+     * builds DeliveryItemsUpdatedMessage without checking for non null required values
+     */
+    public DeliveryItemsUpdatedMessage buildUnchecked() {
         return new DeliveryItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems);
     }

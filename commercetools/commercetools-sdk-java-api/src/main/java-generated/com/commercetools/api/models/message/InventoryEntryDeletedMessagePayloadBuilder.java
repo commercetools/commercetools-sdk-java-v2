@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryDeletedMessagePayloadBuilder {
+public final class InventoryEntryDeletedMessagePayloadBuilder implements Builder<InventoryEntryDeletedMessagePayload> {
 
     private String sku;
 
@@ -32,6 +33,15 @@ public final class InventoryEntryDeletedMessagePayloadBuilder {
     }
 
     public InventoryEntryDeletedMessagePayload build() {
+        Objects.requireNonNull(sku, InventoryEntryDeletedMessagePayload.class + ": sku is missing");
+        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessagePayload.class + ": supplyChannel is missing");
+        return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
+    }
+
+    /**
+     * builds InventoryEntryDeletedMessagePayload without checking for non null required values
+     */
+    public InventoryEntryDeletedMessagePayload buildUnchecked() {
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
     }
 

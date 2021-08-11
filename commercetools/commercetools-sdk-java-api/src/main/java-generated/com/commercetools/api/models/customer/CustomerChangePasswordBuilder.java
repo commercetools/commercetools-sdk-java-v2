@@ -3,10 +3,11 @@ package com.commercetools.api.models.customer;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerChangePasswordBuilder {
+public final class CustomerChangePasswordBuilder implements Builder<CustomerChangePassword> {
 
     private String id;
 
@@ -53,6 +54,17 @@ public final class CustomerChangePasswordBuilder {
     }
 
     public CustomerChangePassword build() {
+        Objects.requireNonNull(id, CustomerChangePassword.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerChangePassword.class + ": version is missing");
+        Objects.requireNonNull(currentPassword, CustomerChangePassword.class + ": currentPassword is missing");
+        Objects.requireNonNull(newPassword, CustomerChangePassword.class + ": newPassword is missing");
+        return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);
+    }
+
+    /**
+     * builds CustomerChangePassword without checking for non null required values
+     */
+    public CustomerChangePassword buildUnchecked() {
         return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);
     }
 

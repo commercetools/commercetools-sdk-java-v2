@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeSetInputTipActionBuilder {
+public final class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeSetInputTipAction> {
 
     private String attributeName;
 
@@ -36,6 +37,14 @@ public final class ProductTypeSetInputTipActionBuilder {
     }
 
     public ProductTypeSetInputTipAction build() {
+        Objects.requireNonNull(attributeName, ProductTypeSetInputTipAction.class + ": attributeName is missing");
+        return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
+    }
+
+    /**
+     * builds ProductTypeSetInputTipAction without checking for non null required values
+     */
+    public ProductTypeSetInputTipAction buildUnchecked() {
         return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
     }
 

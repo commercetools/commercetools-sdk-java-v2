@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSetAddressCustomTypeActionBuilder {
+public final class CustomerSetAddressCustomTypeActionBuilder implements Builder<CustomerSetAddressCustomTypeAction> {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -50,6 +51,14 @@ public final class CustomerSetAddressCustomTypeActionBuilder {
     }
 
     public CustomerSetAddressCustomTypeAction build() {
+        Objects.requireNonNull(addressId, CustomerSetAddressCustomTypeAction.class + ": addressId is missing");
+        return new CustomerSetAddressCustomTypeActionImpl(type, fields, addressId);
+    }
+
+    /**
+     * builds CustomerSetAddressCustomTypeAction without checking for non null required values
+     */
+    public CustomerSetAddressCustomTypeAction buildUnchecked() {
         return new CustomerSetAddressCustomTypeActionImpl(type, fields, addressId);
     }
 

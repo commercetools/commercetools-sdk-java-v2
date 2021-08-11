@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidItemShippingDetailsErrorBuilder {
+public final class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidItemShippingDetailsError> {
 
     private String message;
 
@@ -42,6 +43,16 @@ public final class InvalidItemShippingDetailsErrorBuilder {
     }
 
     public InvalidItemShippingDetailsError build() {
+        Objects.requireNonNull(message, InvalidItemShippingDetailsError.class + ": message is missing");
+        Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");
+        Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");
+        return new InvalidItemShippingDetailsErrorImpl(message, subject, itemId);
+    }
+
+    /**
+     * builds InvalidItemShippingDetailsError without checking for non null required values
+     */
+    public InvalidItemShippingDetailsError buildUnchecked() {
         return new InvalidItemShippingDetailsErrorImpl(message, subject, itemId);
     }
 

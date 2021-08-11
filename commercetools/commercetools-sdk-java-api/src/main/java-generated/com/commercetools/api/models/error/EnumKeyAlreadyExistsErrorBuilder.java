@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class EnumKeyAlreadyExistsErrorBuilder {
+public final class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyExistsError> {
 
     private String message;
 
@@ -42,6 +43,17 @@ public final class EnumKeyAlreadyExistsErrorBuilder {
     }
 
     public EnumKeyAlreadyExistsError build() {
+        Objects.requireNonNull(message, EnumKeyAlreadyExistsError.class + ": message is missing");
+        Objects.requireNonNull(conflictingEnumKey, EnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
+        Objects.requireNonNull(conflictingAttributeName,
+            EnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");
+        return new EnumKeyAlreadyExistsErrorImpl(message, conflictingEnumKey, conflictingAttributeName);
+    }
+
+    /**
+     * builds EnumKeyAlreadyExistsError without checking for non null required values
+     */
+    public EnumKeyAlreadyExistsError buildUnchecked() {
         return new EnumKeyAlreadyExistsErrorImpl(message, conflictingEnumKey, conflictingAttributeName);
     }
 

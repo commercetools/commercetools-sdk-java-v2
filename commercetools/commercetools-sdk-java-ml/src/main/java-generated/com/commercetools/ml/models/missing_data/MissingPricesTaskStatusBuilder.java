@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesTaskStatusBuilder {
+public final class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
@@ -43,6 +44,16 @@ public final class MissingPricesTaskStatusBuilder {
     }
 
     public MissingPricesTaskStatus build() {
+        Objects.requireNonNull(state, MissingPricesTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(expires, MissingPricesTaskStatus.class + ": expires is missing");
+        Objects.requireNonNull(result, MissingPricesTaskStatus.class + ": result is missing");
+        return new MissingPricesTaskStatusImpl(state, expires, result);
+    }
+
+    /**
+     * builds MissingPricesTaskStatus without checking for non null required values
+     */
+    public MissingPricesTaskStatus buildUnchecked() {
         return new MissingPricesTaskStatusImpl(state, expires, result);
     }
 

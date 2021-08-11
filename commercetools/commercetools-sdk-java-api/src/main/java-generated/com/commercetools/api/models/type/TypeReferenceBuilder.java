@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeReferenceBuilder {
+public final class TypeReferenceBuilder implements Builder<TypeReference> {
 
     private String id;
 
@@ -35,6 +36,14 @@ public final class TypeReferenceBuilder {
     }
 
     public TypeReference build() {
+        Objects.requireNonNull(id, TypeReference.class + ": id is missing");
+        return new TypeReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds TypeReference without checking for non null required values
+     */
+    public TypeReference buildUnchecked() {
         return new TypeReferenceImpl(id, obj);
     }
 

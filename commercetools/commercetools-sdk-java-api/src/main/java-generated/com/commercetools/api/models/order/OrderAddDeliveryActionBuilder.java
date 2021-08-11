@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderAddDeliveryActionBuilder {
+public final class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
@@ -65,6 +66,13 @@ public final class OrderAddDeliveryActionBuilder {
     }
 
     public OrderAddDeliveryAction build() {
+        return new OrderAddDeliveryActionImpl(items, address, parcels);
+    }
+
+    /**
+     * builds OrderAddDeliveryAction without checking for non null required values
+     */
+    public OrderAddDeliveryAction buildUnchecked() {
         return new OrderAddDeliveryActionImpl(items, address, parcels);
     }
 

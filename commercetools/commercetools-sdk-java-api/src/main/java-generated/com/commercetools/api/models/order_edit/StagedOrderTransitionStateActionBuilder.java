@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderTransitionStateActionBuilder {
+public final class StagedOrderTransitionStateActionBuilder implements Builder<StagedOrderTransitionStateAction> {
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
@@ -36,6 +37,14 @@ public final class StagedOrderTransitionStateActionBuilder {
     }
 
     public StagedOrderTransitionStateAction build() {
+        Objects.requireNonNull(state, StagedOrderTransitionStateAction.class + ": state is missing");
+        return new StagedOrderTransitionStateActionImpl(state, force);
+    }
+
+    /**
+     * builds StagedOrderTransitionStateAction without checking for non null required values
+     */
+    public StagedOrderTransitionStateAction buildUnchecked() {
         return new StagedOrderTransitionStateActionImpl(state, force);
     }
 

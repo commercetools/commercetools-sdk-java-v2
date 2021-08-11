@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPagedQueryResponseBuilder {
+public final class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryResponse> {
 
     private Long limit;
 
@@ -74,6 +75,17 @@ public final class OrderPagedQueryResponseBuilder {
     }
 
     public OrderPagedQueryResponse build() {
+        Objects.requireNonNull(limit, OrderPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, OrderPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, OrderPagedQueryResponse.class + ": results is missing");
+        return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds OrderPagedQueryResponse without checking for non null required values
+     */
+    public OrderPagedQueryResponse buildUnchecked() {
         return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

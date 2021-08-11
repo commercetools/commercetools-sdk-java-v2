@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRevertedStagedChangesMessageBuilder {
+public final class ProductRevertedStagedChangesMessageBuilder implements Builder<ProductRevertedStagedChangesMessage> {
 
     private String id;
 
@@ -147,6 +148,26 @@ public final class ProductRevertedStagedChangesMessageBuilder {
     }
 
     public ProductRevertedStagedChangesMessage build() {
+        Objects.requireNonNull(id, ProductRevertedStagedChangesMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductRevertedStagedChangesMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductRevertedStagedChangesMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            ProductRevertedStagedChangesMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            ProductRevertedStagedChangesMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductRevertedStagedChangesMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductRevertedStagedChangesMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(removedImageUrls,
+            ProductRevertedStagedChangesMessage.class + ": removedImageUrls is missing");
+        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);
+    }
+
+    /**
+     * builds ProductRevertedStagedChangesMessage without checking for non null required values
+     */
+    public ProductRevertedStagedChangesMessage buildUnchecked() {
         return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);
     }

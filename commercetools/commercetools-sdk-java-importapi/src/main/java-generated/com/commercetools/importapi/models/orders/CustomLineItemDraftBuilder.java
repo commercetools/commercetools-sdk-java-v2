@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemDraftBuilder {
+public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> {
 
     private com.commercetools.importapi.models.common.LocalizedString name;
 
@@ -177,6 +178,19 @@ public final class CustomLineItemDraftBuilder {
     }
 
     public CustomLineItemDraft build() {
+        Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
+        Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
+        Objects.requireNonNull(totalPrice, CustomLineItemDraft.class + ": totalPrice is missing");
+        Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
+        Objects.requireNonNull(quantity, CustomLineItemDraft.class + ": quantity is missing");
+        return new CustomLineItemDraftImpl(name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
+            taxRate, externalTaxRate, discountedPricePerQuantity, shippingDetails);
+    }
+
+    /**
+     * builds CustomLineItemDraft without checking for non null required values
+     */
+    public CustomLineItemDraft buildUnchecked() {
         return new CustomLineItemDraftImpl(name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
             taxRate, externalTaxRate, discountedPricePerQuantity, shippingDetails);
     }

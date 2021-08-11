@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceSetFieldBuilder {
+public final class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
@@ -26,6 +27,14 @@ public final class ReferenceSetFieldBuilder {
     }
 
     public ReferenceSetField build() {
+        Objects.requireNonNull(value, ReferenceSetField.class + ": value is missing");
+        return new ReferenceSetFieldImpl(value);
+    }
+
+    /**
+     * builds ReferenceSetField without checking for non null required values
+     */
+    public ReferenceSetField buildUnchecked() {
         return new ReferenceSetFieldImpl(value);
     }
 

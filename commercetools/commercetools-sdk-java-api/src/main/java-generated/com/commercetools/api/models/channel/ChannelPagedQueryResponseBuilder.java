@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelPagedQueryResponseBuilder {
+public final class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQueryResponse> {
 
     private Long limit;
 
@@ -74,6 +75,17 @@ public final class ChannelPagedQueryResponseBuilder {
     }
 
     public ChannelPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ChannelPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ChannelPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ChannelPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ChannelPagedQueryResponse.class + ": results is missing");
+        return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ChannelPagedQueryResponse without checking for non null required values
+     */
+    public ChannelPagedQueryResponse buildUnchecked() {
         return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

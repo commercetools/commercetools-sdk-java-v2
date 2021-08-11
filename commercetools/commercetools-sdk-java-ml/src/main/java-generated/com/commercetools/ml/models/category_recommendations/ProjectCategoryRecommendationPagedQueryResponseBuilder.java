@@ -3,10 +3,12 @@ package com.commercetools.ml.models.category_recommendations;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
+public final class ProjectCategoryRecommendationPagedQueryResponseBuilder
+        implements Builder<ProjectCategoryRecommendationPagedQueryResponse> {
 
     private Long count;
 
@@ -72,6 +74,18 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
     }
 
     public ProjectCategoryRecommendationPagedQueryResponse build() {
+        Objects.requireNonNull(count, ProjectCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ProjectCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, ProjectCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProjectCategoryRecommendationPagedQueryResponse.class + ": results is missing");
+        Objects.requireNonNull(meta, ProjectCategoryRecommendationPagedQueryResponse.class + ": meta is missing");
+        return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds ProjectCategoryRecommendationPagedQueryResponse without checking for non null required values
+     */
+    public ProjectCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
     }
 

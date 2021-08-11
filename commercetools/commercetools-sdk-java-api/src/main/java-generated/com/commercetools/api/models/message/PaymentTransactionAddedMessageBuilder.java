@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentTransactionAddedMessageBuilder {
+public final class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTransactionAddedMessage> {
 
     private String id;
 
@@ -143,6 +144,22 @@ public final class PaymentTransactionAddedMessageBuilder {
     }
 
     public PaymentTransactionAddedMessage build() {
+        Objects.requireNonNull(id, PaymentTransactionAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentTransactionAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentTransactionAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, PaymentTransactionAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, PaymentTransactionAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentTransactionAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, PaymentTransactionAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(transaction, PaymentTransactionAddedMessage.class + ": transaction is missing");
+        return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transaction);
+    }
+
+    /**
+     * builds PaymentTransactionAddedMessage without checking for non null required values
+     */
+    public PaymentTransactionAddedMessage buildUnchecked() {
         return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transaction);
     }

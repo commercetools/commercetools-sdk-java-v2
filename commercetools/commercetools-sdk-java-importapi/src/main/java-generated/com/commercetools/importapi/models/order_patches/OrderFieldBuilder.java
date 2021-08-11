@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderFieldBuilder {
+public final class OrderFieldBuilder implements Builder<OrderField> {
 
     @Nullable
     private com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo;
@@ -149,6 +150,14 @@ public final class OrderFieldBuilder {
     }
 
     public OrderField build() {
+        return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,
+            removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);
+    }
+
+    /**
+     * builds OrderField without checking for non null required values
+     */
+    public OrderField buildUnchecked() {
         return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,
             removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);
     }

@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportResponseBuilder {
+public final class ImportResponseBuilder implements Builder<ImportResponse> {
 
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
@@ -27,6 +28,14 @@ public final class ImportResponseBuilder {
     }
 
     public ImportResponse build() {
+        Objects.requireNonNull(operationStatus, ImportResponse.class + ": operationStatus is missing");
+        return new ImportResponseImpl(operationStatus);
+    }
+
+    /**
+     * builds ImportResponse without checking for non null required values
+     */
+    public ImportResponse buildUnchecked() {
         return new ImportResponseImpl(operationStatus);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemTaxRateChangeBuilder {
+public final class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomLineItemTaxRateChange> {
 
     private String change;
 
@@ -79,6 +80,21 @@ public final class SetCustomLineItemTaxRateChangeBuilder {
     }
 
     public SetCustomLineItemTaxRateChange build() {
+        Objects.requireNonNull(change, SetCustomLineItemTaxRateChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem, SetCustomLineItemTaxRateChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTaxRateChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(taxMode, SetCustomLineItemTaxRateChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTaxRateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTaxRateChange.class + ": previousValue is missing");
+        return new SetCustomLineItemTaxRateChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemTaxRateChange without checking for non null required values
+     */
+    public SetCustomLineItemTaxRateChange buildUnchecked() {
         return new SetCustomLineItemTaxRateChangeImpl(change, customLineItem, customLineItemId, taxMode, nextValue,
             previousValue);
     }

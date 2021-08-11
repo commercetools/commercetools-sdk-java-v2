@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerCreatedMessageBuilder {
+public final class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMessage> {
 
     private String id;
 
@@ -141,6 +142,22 @@ public final class CustomerCreatedMessageBuilder {
     }
 
     public CustomerCreatedMessage build() {
+        Objects.requireNonNull(id, CustomerCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customer, CustomerCreatedMessage.class + ": customer is missing");
+        return new CustomerCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer);
+    }
+
+    /**
+     * builds CustomerCreatedMessage without checking for non null required values
+     */
+    public CustomerCreatedMessage buildUnchecked() {
         return new CustomerCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer);
     }

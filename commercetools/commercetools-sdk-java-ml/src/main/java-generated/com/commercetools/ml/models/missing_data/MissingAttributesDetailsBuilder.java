@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingAttributesDetailsBuilder {
+public final class MissingAttributesDetailsBuilder implements Builder<MissingAttributesDetails> {
 
     private Integer total;
 
@@ -42,6 +43,18 @@ public final class MissingAttributesDetailsBuilder {
     }
 
     public MissingAttributesDetails build() {
+        Objects.requireNonNull(total, MissingAttributesDetails.class + ": total is missing");
+        Objects.requireNonNull(missingAttributeNames,
+            MissingAttributesDetails.class + ": missingAttributeNames is missing");
+        Objects.requireNonNull(missingAttributeValues,
+            MissingAttributesDetails.class + ": missingAttributeValues is missing");
+        return new MissingAttributesDetailsImpl(total, missingAttributeNames, missingAttributeValues);
+    }
+
+    /**
+     * builds MissingAttributesDetails without checking for non null required values
+     */
+    public MissingAttributesDetails buildUnchecked() {
         return new MissingAttributesDetailsImpl(total, missingAttributeNames, missingAttributeValues);
     }
 

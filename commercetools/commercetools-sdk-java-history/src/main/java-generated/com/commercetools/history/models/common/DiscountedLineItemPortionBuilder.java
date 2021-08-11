@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedLineItemPortionBuilder {
+public final class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineItemPortion> {
 
     private com.commercetools.history.models.common.Reference discount;
 
@@ -32,6 +33,15 @@ public final class DiscountedLineItemPortionBuilder {
     }
 
     public DiscountedLineItemPortion build() {
+        Objects.requireNonNull(discount, DiscountedLineItemPortion.class + ": discount is missing");
+        Objects.requireNonNull(discountedAmount, DiscountedLineItemPortion.class + ": discountedAmount is missing");
+        return new DiscountedLineItemPortionImpl(discount, discountedAmount);
+    }
+
+    /**
+     * builds DiscountedLineItemPortion without checking for non null required values
+     */
+    public DiscountedLineItemPortion buildUnchecked() {
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);
     }
 

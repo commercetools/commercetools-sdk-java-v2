@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneBuilder {
+public final class ZoneBuilder implements Builder<Zone> {
 
     private String id;
 
@@ -135,6 +136,20 @@ public final class ZoneBuilder {
     }
 
     public Zone build() {
+        Objects.requireNonNull(id, Zone.class + ": id is missing");
+        Objects.requireNonNull(version, Zone.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Zone.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Zone.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, Zone.class + ": name is missing");
+        Objects.requireNonNull(locations, Zone.class + ": locations is missing");
+        return new ZoneImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
+            locations);
+    }
+
+    /**
+     * builds Zone without checking for non null required values
+     */
+    public Zone buildUnchecked() {
         return new ZoneImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
             locations);
     }

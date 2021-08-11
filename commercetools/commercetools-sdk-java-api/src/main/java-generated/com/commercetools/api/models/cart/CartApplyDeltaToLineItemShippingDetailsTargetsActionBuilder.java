@@ -3,10 +3,12 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder {
+public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
+        implements Builder<CartApplyDeltaToLineItemShippingDetailsTargetsAction> {
 
     private String lineItemId;
 
@@ -38,6 +40,17 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder {
     }
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsAction build() {
+        Objects.requireNonNull(lineItemId,
+            CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(targetsDelta,
+            CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");
+        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
+    }
+
+    /**
+     * builds CartApplyDeltaToLineItemShippingDetailsTargetsAction without checking for non null required values
+     */
+    public CartApplyDeltaToLineItemShippingDetailsTargetsAction buildUnchecked() {
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
     }
 

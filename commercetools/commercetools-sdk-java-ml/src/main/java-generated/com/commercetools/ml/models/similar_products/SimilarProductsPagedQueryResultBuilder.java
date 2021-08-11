@@ -3,10 +3,11 @@ package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductsPagedQueryResultBuilder {
+public final class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarProductsPagedQueryResult> {
 
     private Long count;
 
@@ -72,6 +73,18 @@ public final class SimilarProductsPagedQueryResultBuilder {
     }
 
     public SimilarProductsPagedQueryResult build() {
+        Objects.requireNonNull(count, SimilarProductsPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, SimilarProductsPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, SimilarProductsPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, SimilarProductsPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, SimilarProductsPagedQueryResult.class + ": meta is missing");
+        return new SimilarProductsPagedQueryResultImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds SimilarProductsPagedQueryResult without checking for non null required values
+     */
+    public SimilarProductsPagedQueryResult buildUnchecked() {
         return new SimilarProductsPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

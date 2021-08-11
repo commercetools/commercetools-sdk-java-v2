@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldsDraftBuilder {
+public final class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
@@ -35,6 +36,14 @@ public final class CustomFieldsDraftBuilder {
     }
 
     public CustomFieldsDraft build() {
+        Objects.requireNonNull(type, CustomFieldsDraft.class + ": type is missing");
+        return new CustomFieldsDraftImpl(type, fields);
+    }
+
+    /**
+     * builds CustomFieldsDraft without checking for non null required values
+     */
+    public CustomFieldsDraft buildUnchecked() {
         return new CustomFieldsDraftImpl(type, fields);
     }
 

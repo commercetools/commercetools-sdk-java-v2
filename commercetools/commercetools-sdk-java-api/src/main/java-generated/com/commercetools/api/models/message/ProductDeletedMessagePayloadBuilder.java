@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDeletedMessagePayloadBuilder {
+public final class ProductDeletedMessagePayloadBuilder implements Builder<ProductDeletedMessagePayload> {
 
     private java.util.List<String> removedImageUrls;
 
@@ -37,6 +38,16 @@ public final class ProductDeletedMessagePayloadBuilder {
     }
 
     public ProductDeletedMessagePayload build() {
+        Objects.requireNonNull(removedImageUrls, ProductDeletedMessagePayload.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(currentProjection,
+            ProductDeletedMessagePayload.class + ": currentProjection is missing");
+        return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
+    }
+
+    /**
+     * builds ProductDeletedMessagePayload without checking for non null required values
+     */
+    public ProductDeletedMessagePayload buildUnchecked() {
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
     }
 

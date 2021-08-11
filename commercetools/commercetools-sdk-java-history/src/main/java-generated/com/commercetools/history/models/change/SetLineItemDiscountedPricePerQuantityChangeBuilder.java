@@ -3,10 +3,12 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemDiscountedPricePerQuantityChangeBuilder {
+public final class SetLineItemDiscountedPricePerQuantityChangeBuilder
+        implements Builder<SetLineItemDiscountedPricePerQuantityChange> {
 
     private String change;
 
@@ -67,6 +69,19 @@ public final class SetLineItemDiscountedPricePerQuantityChangeBuilder {
     }
 
     public SetLineItemDiscountedPricePerQuantityChange build() {
+        Objects.requireNonNull(change, SetLineItemDiscountedPricePerQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemDiscountedPricePerQuantityChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemDiscountedPricePerQuantityChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemDiscountedPricePerQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetLineItemDiscountedPricePerQuantityChange.class + ": previousValue is missing");
+        return new SetLineItemDiscountedPricePerQuantityChangeImpl(change, lineItem, variant, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemDiscountedPricePerQuantityChange without checking for non null required values
+     */
+    public SetLineItemDiscountedPricePerQuantityChange buildUnchecked() {
         return new SetLineItemDiscountedPricePerQuantityChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

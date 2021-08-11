@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceDeletedDeliveryBuilder {
+public final class ResourceDeletedDeliveryBuilder implements Builder<ResourceDeletedDelivery> {
 
     private String projectKey;
 
@@ -82,6 +83,18 @@ public final class ResourceDeletedDeliveryBuilder {
     }
 
     public ResourceDeletedDelivery build() {
+        Objects.requireNonNull(projectKey, ResourceDeletedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceDeletedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceDeletedDelivery.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceDeletedDelivery.class + ": modifiedAt is missing");
+        return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt, dataErasure);
+    }
+
+    /**
+     * builds ResourceDeletedDelivery without checking for non null required values
+     */
+    public ResourceDeletedDelivery buildUnchecked() {
         return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             modifiedAt, dataErasure);
     }

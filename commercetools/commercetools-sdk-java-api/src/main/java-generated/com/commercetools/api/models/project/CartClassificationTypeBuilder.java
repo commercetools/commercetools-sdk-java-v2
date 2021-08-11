@@ -3,10 +3,11 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartClassificationTypeBuilder {
+public final class CartClassificationTypeBuilder implements Builder<CartClassificationType> {
 
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
@@ -27,6 +28,14 @@ public final class CartClassificationTypeBuilder {
     }
 
     public CartClassificationType build() {
+        Objects.requireNonNull(values, CartClassificationType.class + ": values is missing");
+        return new CartClassificationTypeImpl(values);
+    }
+
+    /**
+     * builds CartClassificationType without checking for non null required values
+     */
+    public CartClassificationType buildUnchecked() {
         return new CartClassificationTypeImpl(values);
     }
 

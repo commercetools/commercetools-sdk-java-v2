@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartRecalculateActionBuilder {
+public final class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculateAction> {
 
     @Nullable
     private Boolean updateProductData;
@@ -24,6 +25,13 @@ public final class MyCartRecalculateActionBuilder {
     }
 
     public MyCartRecalculateAction build() {
+        return new MyCartRecalculateActionImpl(updateProductData);
+    }
+
+    /**
+     * builds MyCartRecalculateAction without checking for non null required values
+     */
+    public MyCartRecalculateAction buildUnchecked() {
         return new MyCartRecalculateActionImpl(updateProductData);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderStateChangedMessageBuilder {
+public final class OrderStateChangedMessageBuilder implements Builder<OrderStateChangedMessage> {
 
     private String id;
 
@@ -153,6 +154,23 @@ public final class OrderStateChangedMessageBuilder {
     }
 
     public OrderStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(orderState, OrderStateChangedMessage.class + ": orderState is missing");
+        Objects.requireNonNull(oldOrderState, OrderStateChangedMessage.class + ": oldOrderState is missing");
+        return new OrderStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, orderState, oldOrderState);
+    }
+
+    /**
+     * builds OrderStateChangedMessage without checking for non null required values
+     */
+    public OrderStateChangedMessage buildUnchecked() {
         return new OrderStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, orderState, oldOrderState);
     }

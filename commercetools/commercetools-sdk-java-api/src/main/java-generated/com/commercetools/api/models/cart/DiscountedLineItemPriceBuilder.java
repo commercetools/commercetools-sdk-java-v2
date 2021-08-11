@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedLineItemPriceBuilder {
+public final class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineItemPrice> {
 
     private com.commercetools.api.models.common.TypedMoney value;
 
@@ -38,6 +39,15 @@ public final class DiscountedLineItemPriceBuilder {
     }
 
     public DiscountedLineItemPrice build() {
+        Objects.requireNonNull(value, DiscountedLineItemPrice.class + ": value is missing");
+        Objects.requireNonNull(includedDiscounts, DiscountedLineItemPrice.class + ": includedDiscounts is missing");
+        return new DiscountedLineItemPriceImpl(value, includedDiscounts);
+    }
+
+    /**
+     * builds DiscountedLineItemPrice without checking for non null required values
+     */
+    public DiscountedLineItemPrice buildUnchecked() {
         return new DiscountedLineItemPriceImpl(value, includedDiscounts);
     }
 

@@ -32,7 +32,6 @@ public interface StoreDraft {
     /**
     *  <p>The name of the store</p>
     */
-    @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();

@@ -3,10 +3,12 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderImportLineItemStateActionBuilder {
+public final class StagedOrderImportLineItemStateActionBuilder
+        implements Builder<StagedOrderImportLineItemStateAction> {
 
     private String lineItemId;
 
@@ -38,6 +40,15 @@ public final class StagedOrderImportLineItemStateActionBuilder {
     }
 
     public StagedOrderImportLineItemStateAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderImportLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(state, StagedOrderImportLineItemStateAction.class + ": state is missing");
+        return new StagedOrderImportLineItemStateActionImpl(lineItemId, state);
+    }
+
+    /**
+     * builds StagedOrderImportLineItemStateAction without checking for non null required values
+     */
+    public StagedOrderImportLineItemStateAction buildUnchecked() {
         return new StagedOrderImportLineItemStateActionImpl(lineItemId, state);
     }
 

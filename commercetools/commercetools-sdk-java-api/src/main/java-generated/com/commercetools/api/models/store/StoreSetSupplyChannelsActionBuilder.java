@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreSetSupplyChannelsActionBuilder {
+public final class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupplyChannelsAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
@@ -31,6 +32,13 @@ public final class StoreSetSupplyChannelsActionBuilder {
     }
 
     public StoreSetSupplyChannelsAction build() {
+        return new StoreSetSupplyChannelsActionImpl(supplyChannels);
+    }
+
+    /**
+     * builds StoreSetSupplyChannelsAction without checking for non null required values
+     */
+    public StoreSetSupplyChannelsAction buildUnchecked() {
         return new StoreSetSupplyChannelsActionImpl(supplyChannels);
     }
 

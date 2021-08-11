@@ -3,10 +3,11 @@ package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceFunctionBuilder {
+public final class PriceFunctionBuilder implements Builder<PriceFunction> {
 
     private String currencyCode;
 
@@ -31,6 +32,15 @@ public final class PriceFunctionBuilder {
     }
 
     public PriceFunction build() {
+        Objects.requireNonNull(currencyCode, PriceFunction.class + ": currencyCode is missing");
+        Objects.requireNonNull(function, PriceFunction.class + ": function is missing");
+        return new PriceFunctionImpl(currencyCode, function);
+    }
+
+    /**
+     * builds PriceFunction without checking for non null required values
+     */
+    public PriceFunction buildUnchecked() {
         return new PriceFunctionImpl(currencyCode, function);
     }
 

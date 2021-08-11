@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentInteractionAddedMessagePayloadBuilder {
+public final class PaymentInteractionAddedMessagePayloadBuilder
+        implements Builder<PaymentInteractionAddedMessagePayload> {
 
     private com.commercetools.api.models.type.CustomFields interaction;
 
@@ -21,6 +23,14 @@ public final class PaymentInteractionAddedMessagePayloadBuilder {
     }
 
     public PaymentInteractionAddedMessagePayload build() {
+        Objects.requireNonNull(interaction, PaymentInteractionAddedMessagePayload.class + ": interaction is missing");
+        return new PaymentInteractionAddedMessagePayloadImpl(interaction);
+    }
+
+    /**
+     * builds PaymentInteractionAddedMessagePayload without checking for non null required values
+     */
+    public PaymentInteractionAddedMessagePayload buildUnchecked() {
         return new PaymentInteractionAddedMessagePayloadImpl(interaction);
     }
 

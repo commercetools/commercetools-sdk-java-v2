@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodSetDescriptionActionBuilder {
+public final class ShippingMethodSetDescriptionActionBuilder implements Builder<ShippingMethodSetDescriptionAction> {
 
     @Nullable
     private String description;
@@ -24,6 +25,13 @@ public final class ShippingMethodSetDescriptionActionBuilder {
     }
 
     public ShippingMethodSetDescriptionAction build() {
+        return new ShippingMethodSetDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds ShippingMethodSetDescriptionAction without checking for non null required values
+     */
+    public ShippingMethodSetDescriptionAction buildUnchecked() {
         return new ShippingMethodSetDescriptionActionImpl(description);
     }
 

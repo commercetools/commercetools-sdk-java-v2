@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateDraftBuilder {
+public final class StateDraftBuilder implements Builder<StateDraft> {
 
     private String key;
 
@@ -112,6 +113,15 @@ public final class StateDraftBuilder {
     }
 
     public StateDraft build() {
+        Objects.requireNonNull(key, StateDraft.class + ": key is missing");
+        Objects.requireNonNull(type, StateDraft.class + ": type is missing");
+        return new StateDraftImpl(key, type, name, description, initial, roles, transitions);
+    }
+
+    /**
+     * builds StateDraft without checking for non null required values
+     */
+    public StateDraft buildUnchecked() {
         return new StateDraftImpl(key, type, name, description, initial, roles, transitions);
     }
 

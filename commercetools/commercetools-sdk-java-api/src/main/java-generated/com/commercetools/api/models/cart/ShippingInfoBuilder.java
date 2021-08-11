@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingInfoBuilder {
+public final class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     private String shippingMethodName;
 
@@ -144,6 +145,18 @@ public final class ShippingInfoBuilder {
     }
 
     public ShippingInfo build() {
+        Objects.requireNonNull(shippingMethodName, ShippingInfo.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(price, ShippingInfo.class + ": price is missing");
+        Objects.requireNonNull(shippingRate, ShippingInfo.class + ": shippingRate is missing");
+        Objects.requireNonNull(shippingMethodState, ShippingInfo.class + ": shippingMethodState is missing");
+        return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
+            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+    }
+
+    /**
+     * builds ShippingInfo without checking for non null required values
+     */
+    public ShippingInfo buildUnchecked() {
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
             shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }

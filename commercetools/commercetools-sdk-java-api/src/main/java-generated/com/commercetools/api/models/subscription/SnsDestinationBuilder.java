@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SnsDestinationBuilder {
+public final class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     private String accessKey;
 
@@ -42,6 +43,16 @@ public final class SnsDestinationBuilder {
     }
 
     public SnsDestination build() {
+        Objects.requireNonNull(accessKey, SnsDestination.class + ": accessKey is missing");
+        Objects.requireNonNull(accessSecret, SnsDestination.class + ": accessSecret is missing");
+        Objects.requireNonNull(topicArn, SnsDestination.class + ": topicArn is missing");
+        return new SnsDestinationImpl(accessKey, accessSecret, topicArn);
+    }
+
+    /**
+     * builds SnsDestination without checking for non null required values
+     */
+    public SnsDestination buildUnchecked() {
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn);
     }
 

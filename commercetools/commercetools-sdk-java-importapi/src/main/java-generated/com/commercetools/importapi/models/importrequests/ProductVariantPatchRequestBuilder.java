@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantPatchRequestBuilder {
+public final class ProductVariantPatchRequestBuilder implements Builder<ProductVariantPatchRequest> {
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
@@ -27,6 +28,14 @@ public final class ProductVariantPatchRequestBuilder {
     }
 
     public ProductVariantPatchRequest build() {
+        Objects.requireNonNull(patches, ProductVariantPatchRequest.class + ": patches is missing");
+        return new ProductVariantPatchRequestImpl(patches);
+    }
+
+    /**
+     * builds ProductVariantPatchRequest without checking for non null required values
+     */
+    public ProductVariantPatchRequest buildUnchecked() {
         return new ProductVariantPatchRequestImpl(patches);
     }
 

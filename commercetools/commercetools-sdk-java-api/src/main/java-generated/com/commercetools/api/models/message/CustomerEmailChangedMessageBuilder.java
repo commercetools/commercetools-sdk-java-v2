@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerEmailChangedMessageBuilder {
+public final class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmailChangedMessage> {
 
     private String id;
 
@@ -141,6 +142,22 @@ public final class CustomerEmailChangedMessageBuilder {
     }
 
     public CustomerEmailChangedMessage build() {
+        Objects.requireNonNull(id, CustomerEmailChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerEmailChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerEmailChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerEmailChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerEmailChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerEmailChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerEmailChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(email, CustomerEmailChangedMessage.class + ": email is missing");
+        return new CustomerEmailChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
+    }
+
+    /**
+     * builds CustomerEmailChangedMessage without checking for non null required values
+     */
+    public CustomerEmailChangedMessage buildUnchecked() {
         return new CustomerEmailChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
     }

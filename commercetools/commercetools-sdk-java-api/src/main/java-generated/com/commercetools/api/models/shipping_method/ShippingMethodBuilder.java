@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodBuilder {
+public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     private String id;
 
@@ -199,6 +200,22 @@ public final class ShippingMethodBuilder {
     }
 
     public ShippingMethod build() {
+        Objects.requireNonNull(id, ShippingMethod.class + ": id is missing");
+        Objects.requireNonNull(version, ShippingMethod.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ShippingMethod.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ShippingMethod.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, ShippingMethod.class + ": name is missing");
+        Objects.requireNonNull(taxCategory, ShippingMethod.class + ": taxCategory is missing");
+        Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
+        Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
+        return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+    }
+
+    /**
+     * builds ShippingMethod without checking for non null required values
+     */
+    public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }

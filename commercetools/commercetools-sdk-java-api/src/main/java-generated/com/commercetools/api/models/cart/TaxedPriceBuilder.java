@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxedPriceBuilder {
+public final class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     private com.commercetools.api.models.common.TypedMoney totalNet;
 
@@ -48,6 +49,16 @@ public final class TaxedPriceBuilder {
     }
 
     public TaxedPrice build() {
+        Objects.requireNonNull(totalNet, TaxedPrice.class + ": totalNet is missing");
+        Objects.requireNonNull(totalGross, TaxedPrice.class + ": totalGross is missing");
+        Objects.requireNonNull(taxPortions, TaxedPrice.class + ": taxPortions is missing");
+        return new TaxedPriceImpl(totalNet, totalGross, taxPortions);
+    }
+
+    /**
+     * builds TaxedPrice without checking for non null required values
+     */
+    public TaxedPrice buildUnchecked() {
         return new TaxedPriceImpl(totalNet, totalGross, taxPortions);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDiscountCodeRemovedMessageBuilder {
+public final class OrderDiscountCodeRemovedMessageBuilder implements Builder<OrderDiscountCodeRemovedMessage> {
 
     private String id;
 
@@ -143,6 +144,22 @@ public final class OrderDiscountCodeRemovedMessageBuilder {
     }
 
     public OrderDiscountCodeRemovedMessage build() {
+        Objects.requireNonNull(id, OrderDiscountCodeRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderDiscountCodeRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderDiscountCodeRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderDiscountCodeRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderDiscountCodeRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderDiscountCodeRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderDiscountCodeRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(discountCode, OrderDiscountCodeRemovedMessage.class + ": discountCode is missing");
+        return new OrderDiscountCodeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode);
+    }
+
+    /**
+     * builds OrderDiscountCodeRemovedMessage without checking for non null required values
+     */
+    public OrderDiscountCodeRemovedMessage buildUnchecked() {
         return new OrderDiscountCodeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode);
     }

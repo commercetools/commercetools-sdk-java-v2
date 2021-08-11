@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerImportBuilder {
+public final class CustomerImportBuilder implements Builder<CustomerImport> {
 
     private String key;
 
@@ -327,6 +328,19 @@ public final class CustomerImportBuilder {
     }
 
     public CustomerImport build() {
+        Objects.requireNonNull(key, CustomerImport.class + ": key is missing");
+        Objects.requireNonNull(email, CustomerImport.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerImport.class + ": password is missing");
+        Objects.requireNonNull(addresses, CustomerImport.class + ": addresses is missing");
+        return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
+            title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
+            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);
+    }
+
+    /**
+     * builds CustomerImport without checking for non null required values
+     */
+    public CustomerImport buildUnchecked() {
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
             defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);

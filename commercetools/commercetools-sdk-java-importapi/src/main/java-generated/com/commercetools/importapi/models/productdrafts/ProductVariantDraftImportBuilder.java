@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantDraftImportBuilder {
+public final class ProductVariantDraftImportBuilder implements Builder<ProductVariantDraftImport> {
 
     @Nullable
     private String sku;
@@ -117,6 +118,13 @@ public final class ProductVariantDraftImportBuilder {
     }
 
     public ProductVariantDraftImport build() {
+        return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);
+    }
+
+    /**
+     * builds ProductVariantDraftImport without checking for non null required values
+     */
+    public ProductVariantDraftImport buildUnchecked() {
         return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);
     }
 

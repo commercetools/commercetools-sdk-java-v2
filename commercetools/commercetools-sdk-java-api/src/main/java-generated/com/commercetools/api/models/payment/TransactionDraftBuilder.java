@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TransactionDraftBuilder {
+public final class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     @Nullable
     private java.time.ZonedDateTime timestamp;
@@ -72,6 +73,15 @@ public final class TransactionDraftBuilder {
     }
 
     public TransactionDraft build() {
+        Objects.requireNonNull(type, TransactionDraft.class + ": type is missing");
+        Objects.requireNonNull(amount, TransactionDraft.class + ": amount is missing");
+        return new TransactionDraftImpl(timestamp, type, amount, interactionId, state);
+    }
+
+    /**
+     * builds TransactionDraft without checking for non null required values
+     */
+    public TransactionDraft buildUnchecked() {
         return new TransactionDraftImpl(timestamp, type, amount, interactionId, state);
     }
 

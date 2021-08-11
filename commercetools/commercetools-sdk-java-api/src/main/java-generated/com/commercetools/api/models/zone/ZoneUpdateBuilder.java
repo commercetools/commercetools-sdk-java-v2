@@ -3,10 +3,11 @@ package com.commercetools.api.models.zone;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneUpdateBuilder {
+public final class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     private Long version;
 
@@ -36,6 +37,15 @@ public final class ZoneUpdateBuilder {
     }
 
     public ZoneUpdate build() {
+        Objects.requireNonNull(version, ZoneUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ZoneUpdate.class + ": actions is missing");
+        return new ZoneUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds ZoneUpdate without checking for non null required values
+     */
+    public ZoneUpdate buildUnchecked() {
         return new ZoneUpdateImpl(version, actions);
     }
 

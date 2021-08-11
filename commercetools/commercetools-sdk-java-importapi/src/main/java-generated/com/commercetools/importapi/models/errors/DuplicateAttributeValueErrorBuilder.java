@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.errors;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateAttributeValueErrorBuilder {
+public final class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAttributeValueError> {
 
     private String message;
 
@@ -32,6 +33,15 @@ public final class DuplicateAttributeValueErrorBuilder {
     }
 
     public DuplicateAttributeValueError build() {
+        Objects.requireNonNull(message, DuplicateAttributeValueError.class + ": message is missing");
+        Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
+        return new DuplicateAttributeValueErrorImpl(message, attribute);
+    }
+
+    /**
+     * builds DuplicateAttributeValueError without checking for non null required values
+     */
+    public DuplicateAttributeValueError buildUnchecked() {
         return new DuplicateAttributeValueErrorImpl(message, attribute);
     }
 

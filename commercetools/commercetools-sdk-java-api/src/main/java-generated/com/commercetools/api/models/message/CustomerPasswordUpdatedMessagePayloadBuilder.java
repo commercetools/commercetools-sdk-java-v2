@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerPasswordUpdatedMessagePayloadBuilder {
+public final class CustomerPasswordUpdatedMessagePayloadBuilder
+        implements Builder<CustomerPasswordUpdatedMessagePayload> {
 
     private Boolean reset;
 
@@ -20,6 +22,14 @@ public final class CustomerPasswordUpdatedMessagePayloadBuilder {
     }
 
     public CustomerPasswordUpdatedMessagePayload build() {
+        Objects.requireNonNull(reset, CustomerPasswordUpdatedMessagePayload.class + ": reset is missing");
+        return new CustomerPasswordUpdatedMessagePayloadImpl(reset);
+    }
+
+    /**
+     * builds CustomerPasswordUpdatedMessagePayload without checking for non null required values
+     */
+    public CustomerPasswordUpdatedMessagePayload buildUnchecked() {
         return new CustomerPasswordUpdatedMessagePayloadImpl(reset);
     }
 

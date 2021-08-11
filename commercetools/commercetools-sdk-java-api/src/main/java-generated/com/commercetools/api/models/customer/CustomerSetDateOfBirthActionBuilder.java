@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSetDateOfBirthActionBuilder {
+public final class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetDateOfBirthAction> {
 
     @Nullable
     private java.time.LocalDate dateOfBirth;
@@ -24,6 +25,13 @@ public final class CustomerSetDateOfBirthActionBuilder {
     }
 
     public CustomerSetDateOfBirthAction build() {
+        return new CustomerSetDateOfBirthActionImpl(dateOfBirth);
+    }
+
+    /**
+     * builds CustomerSetDateOfBirthAction without checking for non null required values
+     */
+    public CustomerSetDateOfBirthAction buildUnchecked() {
         return new CustomerSetDateOfBirthActionImpl(dateOfBirth);
     }
 

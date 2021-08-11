@@ -3,10 +3,11 @@ package com.commercetools.history.models;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordBuilder {
+public final class RecordBuilder implements Builder<Record> {
 
     private Integer version;
 
@@ -124,6 +125,24 @@ public final class RecordBuilder {
     }
 
     public Record build() {
+        Objects.requireNonNull(version, Record.class + ": version is missing");
+        Objects.requireNonNull(previousVersion, Record.class + ": previousVersion is missing");
+        Objects.requireNonNull(type, Record.class + ": type is missing");
+        Objects.requireNonNull(modifiedBy, Record.class + ": modifiedBy is missing");
+        Objects.requireNonNull(modifiedAt, Record.class + ": modifiedAt is missing");
+        Objects.requireNonNull(label, Record.class + ": label is missing");
+        Objects.requireNonNull(previousLabel, Record.class + ": previousLabel is missing");
+        Objects.requireNonNull(changes, Record.class + ": changes is missing");
+        Objects.requireNonNull(resource, Record.class + ": resource is missing");
+        Objects.requireNonNull(withoutChanges, Record.class + ": withoutChanges is missing");
+        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
+            resource, withoutChanges);
+    }
+
+    /**
+     * builds Record without checking for non null required values
+     */
+    public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
             resource, withoutChanges);
     }

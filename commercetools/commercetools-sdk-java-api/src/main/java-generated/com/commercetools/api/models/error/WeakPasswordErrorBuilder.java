@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class WeakPasswordErrorBuilder {
+public final class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class WeakPasswordErrorBuilder {
     }
 
     public WeakPasswordError build() {
+        Objects.requireNonNull(message, WeakPasswordError.class + ": message is missing");
+        return new WeakPasswordErrorImpl(message);
+    }
+
+    /**
+     * builds WeakPasswordError without checking for non null required values
+     */
+    public WeakPasswordError buildUnchecked() {
         return new WeakPasswordErrorImpl(message);
     }
 

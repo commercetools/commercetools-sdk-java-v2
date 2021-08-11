@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountBuilder {
+public final class CartDiscountBuilder implements Builder<CartDiscount> {
 
     private String id;
 
@@ -257,6 +258,27 @@ public final class CartDiscountBuilder {
     }
 
     public CartDiscount build() {
+        Objects.requireNonNull(id, CartDiscount.class + ": id is missing");
+        Objects.requireNonNull(version, CartDiscount.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CartDiscount.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CartDiscount.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, CartDiscount.class + ": name is missing");
+        Objects.requireNonNull(value, CartDiscount.class + ": value is missing");
+        Objects.requireNonNull(cartPredicate, CartDiscount.class + ": cartPredicate is missing");
+        Objects.requireNonNull(sortOrder, CartDiscount.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, CartDiscount.class + ": isActive is missing");
+        Objects.requireNonNull(requiresDiscountCode, CartDiscount.class + ": requiresDiscountCode is missing");
+        Objects.requireNonNull(references, CartDiscount.class + ": references is missing");
+        Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
+        return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
+            description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
+            references, stackingMode, custom);
+    }
+
+    /**
+     * builds CartDiscount without checking for non null required values
+     */
+    public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
             references, stackingMode, custom);

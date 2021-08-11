@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryBuilder {
+public final class CategoryBuilder implements Builder<Category> {
 
     private String id;
 
@@ -257,6 +258,23 @@ public final class CategoryBuilder {
     }
 
     public Category build() {
+        Objects.requireNonNull(id, Category.class + ": id is missing");
+        Objects.requireNonNull(version, Category.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Category.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Category.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, Category.class + ": name is missing");
+        Objects.requireNonNull(slug, Category.class + ": slug is missing");
+        Objects.requireNonNull(ancestors, Category.class + ": ancestors is missing");
+        Objects.requireNonNull(orderHint, Category.class + ": orderHint is missing");
+        return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
+            description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
+            assets, key);
+    }
+
+    /**
+     * builds Category without checking for non null required values
+     */
+    public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
             assets, key);

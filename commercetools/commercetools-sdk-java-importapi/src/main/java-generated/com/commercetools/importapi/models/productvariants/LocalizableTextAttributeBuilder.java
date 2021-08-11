@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizableTextAttributeBuilder {
+public final class LocalizableTextAttributeBuilder implements Builder<LocalizableTextAttribute> {
 
     @Nullable
     private String name;
@@ -36,6 +37,14 @@ public final class LocalizableTextAttributeBuilder {
     }
 
     public LocalizableTextAttribute build() {
+        Objects.requireNonNull(value, LocalizableTextAttribute.class + ": value is missing");
+        return new LocalizableTextAttributeImpl(name, value);
+    }
+
+    /**
+     * builds LocalizableTextAttribute without checking for non null required values
+     */
+    public LocalizableTextAttribute buildUnchecked() {
         return new LocalizableTextAttributeImpl(name, value);
     }
 

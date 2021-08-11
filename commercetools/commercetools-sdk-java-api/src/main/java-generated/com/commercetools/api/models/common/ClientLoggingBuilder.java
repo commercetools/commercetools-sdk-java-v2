@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ClientLoggingBuilder {
+public final class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     @Nullable
     private String clientId;
@@ -64,6 +65,13 @@ public final class ClientLoggingBuilder {
     }
 
     public ClientLogging build() {
+        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
+    }
+
+    /**
+     * builds ClientLogging without checking for non null required values
+     */
+    public ClientLogging buildUnchecked() {
         return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
     }
 

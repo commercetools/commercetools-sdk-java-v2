@@ -3,10 +3,11 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeCurrenciesActionBuilder {
+public final class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChangeCurrenciesAction> {
 
     private java.util.List<String> currencies;
 
@@ -25,6 +26,14 @@ public final class ProjectChangeCurrenciesActionBuilder {
     }
 
     public ProjectChangeCurrenciesAction build() {
+        Objects.requireNonNull(currencies, ProjectChangeCurrenciesAction.class + ": currencies is missing");
+        return new ProjectChangeCurrenciesActionImpl(currencies);
+    }
+
+    /**
+     * builds ProjectChangeCurrenciesAction without checking for non null required values
+     */
+    public ProjectChangeCurrenciesAction buildUnchecked() {
         return new ProjectChangeCurrenciesActionImpl(currencies);
     }
 

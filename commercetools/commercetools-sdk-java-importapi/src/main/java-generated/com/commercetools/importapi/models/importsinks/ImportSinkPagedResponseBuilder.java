@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.importsinks;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkPagedResponseBuilder {
+public final class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedResponse> {
 
     private Integer limit;
 
@@ -71,6 +72,18 @@ public final class ImportSinkPagedResponseBuilder {
     }
 
     public ImportSinkPagedResponse build() {
+        Objects.requireNonNull(limit, ImportSinkPagedResponse.class + ": limit is missing");
+        Objects.requireNonNull(offset, ImportSinkPagedResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ImportSinkPagedResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ImportSinkPagedResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImportSinkPagedResponse.class + ": results is missing");
+        return new ImportSinkPagedResponseImpl(limit, offset, count, total, results);
+    }
+
+    /**
+     * builds ImportSinkPagedResponse without checking for non null required values
+     */
+    public ImportSinkPagedResponse buildUnchecked() {
         return new ImportSinkPagedResponseImpl(limit, offset, count, total, results);
     }
 

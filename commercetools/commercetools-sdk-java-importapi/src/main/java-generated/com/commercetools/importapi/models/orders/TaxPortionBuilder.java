@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxPortionBuilder {
+public final class TaxPortionBuilder implements Builder<TaxPortion> {
 
     @Nullable
     private String name;
@@ -46,6 +47,15 @@ public final class TaxPortionBuilder {
     }
 
     public TaxPortion build() {
+        Objects.requireNonNull(rate, TaxPortion.class + ": rate is missing");
+        Objects.requireNonNull(amount, TaxPortion.class + ": amount is missing");
+        return new TaxPortionImpl(name, rate, amount);
+    }
+
+    /**
+     * builds TaxPortion without checking for non null required values
+     */
+    public TaxPortion buildUnchecked() {
         return new TaxPortionImpl(name, rate, amount);
     }
 

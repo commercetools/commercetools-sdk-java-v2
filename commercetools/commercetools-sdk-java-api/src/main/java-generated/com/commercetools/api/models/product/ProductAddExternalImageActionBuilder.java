@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddExternalImageActionBuilder {
+public final class ProductAddExternalImageActionBuilder implements Builder<ProductAddExternalImageAction> {
 
     @Nullable
     private Long variantId;
@@ -61,6 +62,14 @@ public final class ProductAddExternalImageActionBuilder {
     }
 
     public ProductAddExternalImageAction build() {
+        Objects.requireNonNull(image, ProductAddExternalImageAction.class + ": image is missing");
+        return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);
+    }
+
+    /**
+     * builds ProductAddExternalImageAction without checking for non null required values
+     */
+    public ProductAddExternalImageAction buildUnchecked() {
         return new ProductAddExternalImageActionImpl(variantId, sku, image, staged);
     }
 

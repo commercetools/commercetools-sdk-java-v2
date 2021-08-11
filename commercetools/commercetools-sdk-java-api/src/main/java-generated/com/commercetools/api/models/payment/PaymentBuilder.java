@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentBuilder {
+public final class PaymentBuilder implements Builder<Payment> {
 
     private String id;
 
@@ -216,6 +217,24 @@ public final class PaymentBuilder {
     }
 
     public Payment build() {
+        Objects.requireNonNull(id, Payment.class + ": id is missing");
+        Objects.requireNonNull(version, Payment.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Payment.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Payment.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(amountPlanned, Payment.class + ": amountPlanned is missing");
+        Objects.requireNonNull(paymentMethodInfo, Payment.class + ": paymentMethodInfo is missing");
+        Objects.requireNonNull(paymentStatus, Payment.class + ": paymentStatus is missing");
+        Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");
+        Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");
+        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
+            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
+            key);
+    }
+
+    /**
+     * builds Payment without checking for non null required values
+     */
+    public Payment buildUnchecked() {
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
             interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
             key);

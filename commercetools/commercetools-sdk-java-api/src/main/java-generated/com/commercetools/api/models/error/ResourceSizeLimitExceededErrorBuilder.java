@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceSizeLimitExceededErrorBuilder {
+public final class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSizeLimitExceededError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class ResourceSizeLimitExceededErrorBuilder {
     }
 
     public ResourceSizeLimitExceededError build() {
+        Objects.requireNonNull(message, ResourceSizeLimitExceededError.class + ": message is missing");
+        return new ResourceSizeLimitExceededErrorImpl(message);
+    }
+
+    /**
+     * builds ResourceSizeLimitExceededError without checking for non null required values
+     */
+    public ResourceSizeLimitExceededError buildUnchecked() {
         return new ResourceSizeLimitExceededErrorImpl(message);
     }
 

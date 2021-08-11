@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeResourceIdentifierBuilder {
+public final class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class TypeResourceIdentifierBuilder {
     }
 
     public TypeResourceIdentifier build() {
+        return new TypeResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds TypeResourceIdentifier without checking for non null required values
+     */
+    public TypeResourceIdentifier buildUnchecked() {
         return new TypeResourceIdentifierImpl(id, key);
     }
 

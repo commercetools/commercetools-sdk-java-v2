@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentTransactionStateChangedMessagePayloadBuilder {
+public final class PaymentTransactionStateChangedMessagePayloadBuilder
+        implements Builder<PaymentTransactionStateChangedMessagePayload> {
 
     private String transactionId;
 
@@ -32,6 +34,16 @@ public final class PaymentTransactionStateChangedMessagePayloadBuilder {
     }
 
     public PaymentTransactionStateChangedMessagePayload build() {
+        Objects.requireNonNull(transactionId,
+            PaymentTransactionStateChangedMessagePayload.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentTransactionStateChangedMessagePayload.class + ": state is missing");
+        return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);
+    }
+
+    /**
+     * builds PaymentTransactionStateChangedMessagePayload without checking for non null required values
+     */
+    public PaymentTransactionStateChangedMessagePayload buildUnchecked() {
         return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);
     }
 

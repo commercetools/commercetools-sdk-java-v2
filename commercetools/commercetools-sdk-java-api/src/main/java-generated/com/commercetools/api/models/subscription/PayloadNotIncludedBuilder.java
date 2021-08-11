@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PayloadNotIncludedBuilder {
+public final class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     private String reason;
 
@@ -31,6 +32,15 @@ public final class PayloadNotIncludedBuilder {
     }
 
     public PayloadNotIncluded build() {
+        Objects.requireNonNull(reason, PayloadNotIncluded.class + ": reason is missing");
+        Objects.requireNonNull(payloadType, PayloadNotIncluded.class + ": payloadType is missing");
+        return new PayloadNotIncludedImpl(reason, payloadType);
+    }
+
+    /**
+     * builds PayloadNotIncluded without checking for non null required values
+     */
+    public PayloadNotIncluded buildUnchecked() {
         return new PayloadNotIncludedImpl(reason, payloadType);
     }
 

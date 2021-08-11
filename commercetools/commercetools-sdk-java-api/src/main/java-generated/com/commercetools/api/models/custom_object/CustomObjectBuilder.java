@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomObjectBuilder {
+public final class CustomObjectBuilder implements Builder<CustomObject> {
 
     private String id;
 
@@ -115,6 +116,21 @@ public final class CustomObjectBuilder {
     }
 
     public CustomObject build() {
+        Objects.requireNonNull(id, CustomObject.class + ": id is missing");
+        Objects.requireNonNull(version, CustomObject.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomObject.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomObject.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(container, CustomObject.class + ": container is missing");
+        Objects.requireNonNull(key, CustomObject.class + ": key is missing");
+        Objects.requireNonNull(value, CustomObject.class + ": value is missing");
+        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
+            value);
+    }
+
+    /**
+     * builds CustomObject without checking for non null required values
+     */
+    public CustomObject buildUnchecked() {
         return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
             value);
     }

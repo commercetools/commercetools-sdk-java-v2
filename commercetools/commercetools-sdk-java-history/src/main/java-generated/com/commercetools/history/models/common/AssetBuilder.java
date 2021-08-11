@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetBuilder {
+public final class AssetBuilder implements Builder<Asset> {
 
     private String id;
 
@@ -64,6 +65,18 @@ public final class AssetBuilder {
     }
 
     public Asset build() {
+        Objects.requireNonNull(id, Asset.class + ": id is missing");
+        Objects.requireNonNull(name, Asset.class + ": name is missing");
+        Objects.requireNonNull(description, Asset.class + ": description is missing");
+        Objects.requireNonNull(custom, Asset.class + ": custom is missing");
+        Objects.requireNonNull(key, Asset.class + ": key is missing");
+        return new AssetImpl(id, name, description, custom, key);
+    }
+
+    /**
+     * builds Asset without checking for non null required values
+     */
+    public Asset buildUnchecked() {
         return new AssetImpl(id, name, description, custom, key);
     }
 

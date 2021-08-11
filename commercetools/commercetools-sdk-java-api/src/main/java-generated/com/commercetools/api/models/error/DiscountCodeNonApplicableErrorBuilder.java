@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeNonApplicableErrorBuilder {
+public final class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCodeNonApplicableError> {
 
     private String message;
 
@@ -101,6 +102,15 @@ public final class DiscountCodeNonApplicableErrorBuilder {
     }
 
     public DiscountCodeNonApplicableError build() {
+        Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
+        return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom,
+            validUntil, validityCheckTime);
+    }
+
+    /**
+     * builds DiscountCodeNonApplicableError without checking for non null required values
+     */
+    public DiscountCodeNonApplicableError buildUnchecked() {
         return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom,
             validUntil, validityCheckTime);
     }

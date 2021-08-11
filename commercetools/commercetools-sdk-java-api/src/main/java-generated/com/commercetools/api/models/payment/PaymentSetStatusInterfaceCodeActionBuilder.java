@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetStatusInterfaceCodeActionBuilder {
+public final class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<PaymentSetStatusInterfaceCodeAction> {
 
     @Nullable
     private String interfaceCode;
@@ -24,6 +25,13 @@ public final class PaymentSetStatusInterfaceCodeActionBuilder {
     }
 
     public PaymentSetStatusInterfaceCodeAction build() {
+        return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);
+    }
+
+    /**
+     * builds PaymentSetStatusInterfaceCodeAction without checking for non null required values
+     */
+    public PaymentSetStatusInterfaceCodeAction buildUnchecked() {
         return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartClassificationTierBuilder {
+public final class CartClassificationTierBuilder implements Builder<CartClassificationTier> {
 
     private String value;
 
@@ -64,6 +65,16 @@ public final class CartClassificationTierBuilder {
     }
 
     public CartClassificationTier build() {
+        Objects.requireNonNull(value, CartClassificationTier.class + ": value is missing");
+        Objects.requireNonNull(price, CartClassificationTier.class + ": price is missing");
+        Objects.requireNonNull(tiers, CartClassificationTier.class + ": tiers is missing");
+        return new CartClassificationTierImpl(value, price, tiers, isMatching);
+    }
+
+    /**
+     * builds CartClassificationTier without checking for non null required values
+     */
+    public CartClassificationTier buildUnchecked() {
         return new CartClassificationTierImpl(value, price, tiers, isMatching);
     }
 

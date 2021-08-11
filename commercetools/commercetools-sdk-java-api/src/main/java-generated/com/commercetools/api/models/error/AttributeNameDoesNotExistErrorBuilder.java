@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeNameDoesNotExistErrorBuilder {
+public final class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeNameDoesNotExistError> {
 
     private String message;
 
@@ -31,6 +32,16 @@ public final class AttributeNameDoesNotExistErrorBuilder {
     }
 
     public AttributeNameDoesNotExistError build() {
+        Objects.requireNonNull(message, AttributeNameDoesNotExistError.class + ": message is missing");
+        Objects.requireNonNull(invalidAttributeName,
+            AttributeNameDoesNotExistError.class + ": invalidAttributeName is missing");
+        return new AttributeNameDoesNotExistErrorImpl(message, invalidAttributeName);
+    }
+
+    /**
+     * builds AttributeNameDoesNotExistError without checking for non null required values
+     */
+    public AttributeNameDoesNotExistError buildUnchecked() {
         return new AttributeNameDoesNotExistErrorImpl(message, invalidAttributeName);
     }
 

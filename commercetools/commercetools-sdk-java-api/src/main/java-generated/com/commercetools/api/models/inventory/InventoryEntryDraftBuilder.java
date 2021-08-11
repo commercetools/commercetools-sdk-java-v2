@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryDraftBuilder {
+public final class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> {
 
     private String sku;
 
@@ -87,6 +88,16 @@ public final class InventoryEntryDraftBuilder {
     }
 
     public InventoryEntryDraft build() {
+        Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
+        return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
+            custom);
+    }
+
+    /**
+     * builds InventoryEntryDraft without checking for non null required values
+     */
+    public InventoryEntryDraft buildUnchecked() {
         return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
             custom);
     }

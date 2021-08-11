@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeDefinitionDraftBuilder {
+public final class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinitionDraft> {
 
     private com.commercetools.api.models.product_type.AttributeType type;
 
@@ -110,6 +111,18 @@ public final class AttributeDefinitionDraftBuilder {
     }
 
     public AttributeDefinitionDraft build() {
+        Objects.requireNonNull(type, AttributeDefinitionDraft.class + ": type is missing");
+        Objects.requireNonNull(name, AttributeDefinitionDraft.class + ": name is missing");
+        Objects.requireNonNull(label, AttributeDefinitionDraft.class + ": label is missing");
+        Objects.requireNonNull(isRequired, AttributeDefinitionDraft.class + ": isRequired is missing");
+        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
+            isSearchable);
+    }
+
+    /**
+     * builds AttributeDefinitionDraft without checking for non null required values
+     */
+    public AttributeDefinitionDraft buildUnchecked() {
         return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
             isSearchable);
     }

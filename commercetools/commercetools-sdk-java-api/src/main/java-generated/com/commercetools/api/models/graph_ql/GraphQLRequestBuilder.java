@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLRequestBuilder {
+public final class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     private String query;
 
@@ -49,6 +50,14 @@ public final class GraphQLRequestBuilder {
     }
 
     public GraphQLRequest build() {
+        Objects.requireNonNull(query, GraphQLRequest.class + ": query is missing");
+        return new GraphQLRequestImpl(query, operationName, variables);
+    }
+
+    /**
+     * builds GraphQLRequest without checking for non null required values
+     */
+    public GraphQLRequest buildUnchecked() {
         return new GraphQLRequestImpl(query, operationName, variables);
     }
 

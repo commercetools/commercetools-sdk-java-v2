@@ -3,10 +3,12 @@ package com.commercetools.ml.models.general_category_recommendations;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
+public final class GeneralCategoryRecommendationPagedQueryResponseBuilder
+        implements Builder<GeneralCategoryRecommendationPagedQueryResponse> {
 
     private Long count;
 
@@ -60,6 +62,17 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
     }
 
     public GeneralCategoryRecommendationPagedQueryResponse build() {
+        Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, GeneralCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");
+        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
+    }
+
+    /**
+     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non null required values
+     */
+    public GeneralCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
     }
 

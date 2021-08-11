@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditBuilder {
+public final class OrderEditBuilder implements Builder<OrderEdit> {
 
     private String id;
 
@@ -161,6 +162,21 @@ public final class OrderEditBuilder {
     }
 
     public OrderEdit build() {
+        Objects.requireNonNull(id, OrderEdit.class + ": id is missing");
+        Objects.requireNonNull(version, OrderEdit.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderEdit.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderEdit.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(resource, OrderEdit.class + ": resource is missing");
+        Objects.requireNonNull(stagedActions, OrderEdit.class + ": stagedActions is missing");
+        Objects.requireNonNull(result, OrderEdit.class + ": result is missing");
+        return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,
+            stagedActions, custom, result, comment);
+    }
+
+    /**
+     * builds OrderEdit without checking for non null required values
+     */
+    public OrderEdit buildUnchecked() {
         return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,
             stagedActions, custom, result, comment);
     }

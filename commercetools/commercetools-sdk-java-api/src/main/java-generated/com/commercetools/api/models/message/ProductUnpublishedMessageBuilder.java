@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductUnpublishedMessageBuilder {
+public final class ProductUnpublishedMessageBuilder implements Builder<ProductUnpublishedMessage> {
 
     private String id;
 
@@ -130,6 +131,21 @@ public final class ProductUnpublishedMessageBuilder {
     }
 
     public ProductUnpublishedMessage build() {
+        Objects.requireNonNull(id, ProductUnpublishedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductUnpublishedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductUnpublishedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductUnpublishedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductUnpublishedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductUnpublishedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductUnpublishedMessage.class + ": resourceVersion is missing");
+        return new ProductUnpublishedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+    }
+
+    /**
+     * builds ProductUnpublishedMessage without checking for non null required values
+     */
+    public ProductUnpublishedMessage buildUnchecked() {
         return new ProductUnpublishedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }

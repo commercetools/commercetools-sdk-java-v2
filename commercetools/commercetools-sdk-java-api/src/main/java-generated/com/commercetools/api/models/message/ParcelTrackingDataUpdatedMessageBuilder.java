@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelTrackingDataUpdatedMessageBuilder {
+public final class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTrackingDataUpdatedMessage> {
 
     private String id;
 
@@ -167,6 +168,25 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
     }
 
     public ParcelTrackingDataUpdatedMessage build() {
+        Objects.requireNonNull(id, ParcelTrackingDataUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelTrackingDataUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelTrackingDataUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelTrackingDataUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelTrackingDataUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelTrackingDataUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ParcelTrackingDataUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, ParcelTrackingDataUpdatedMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcelId, ParcelTrackingDataUpdatedMessage.class + ": parcelId is missing");
+        return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
+            trackingData);
+    }
+
+    /**
+     * builds ParcelTrackingDataUpdatedMessage without checking for non null required values
+     */
+    public ParcelTrackingDataUpdatedMessage buildUnchecked() {
         return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
             trackingData);

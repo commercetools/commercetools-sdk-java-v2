@@ -3,10 +3,11 @@ package com.commercetools.api.models.channel;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelSetRolesActionBuilder {
+public final class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesAction> {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
@@ -26,6 +27,14 @@ public final class ChannelSetRolesActionBuilder {
     }
 
     public ChannelSetRolesAction build() {
+        Objects.requireNonNull(roles, ChannelSetRolesAction.class + ": roles is missing");
+        return new ChannelSetRolesActionImpl(roles);
+    }
+
+    /**
+     * builds ChannelSetRolesAction without checking for non null required values
+     */
+    public ChannelSetRolesAction buildUnchecked() {
         return new ChannelSetRolesActionImpl(roles);
     }
 

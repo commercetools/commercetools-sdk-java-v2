@@ -3,10 +3,11 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryChangeValueBuilder {
+public final class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> {
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
@@ -54,6 +55,16 @@ public final class DeliveryChangeValueBuilder {
     }
 
     public DeliveryChangeValue build() {
+        Objects.requireNonNull(items, DeliveryChangeValue.class + ": items is missing");
+        Objects.requireNonNull(address, DeliveryChangeValue.class + ": address is missing");
+        Objects.requireNonNull(parcels, DeliveryChangeValue.class + ": parcels is missing");
+        return new DeliveryChangeValueImpl(items, address, parcels);
+    }
+
+    /**
+     * builds DeliveryChangeValue without checking for non null required values
+     */
+    public DeliveryChangeValue buildUnchecked() {
         return new DeliveryChangeValueImpl(items, address, parcels);
     }
 

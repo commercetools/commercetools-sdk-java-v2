@@ -3,12 +3,20 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeLocalizableTextTypeBuilder {
+public final class AttributeLocalizableTextTypeBuilder implements Builder<AttributeLocalizableTextType> {
 
     public AttributeLocalizableTextType build() {
+        return new AttributeLocalizableTextTypeImpl();
+    }
+
+    /**
+     * builds AttributeLocalizableTextType without checking for non null required values
+     */
+    public AttributeLocalizableTextType buildUnchecked() {
         return new AttributeLocalizableTextTypeImpl();
     }
 

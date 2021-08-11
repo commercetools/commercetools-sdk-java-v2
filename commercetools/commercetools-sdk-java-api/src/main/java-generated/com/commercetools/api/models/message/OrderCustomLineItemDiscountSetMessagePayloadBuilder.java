@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
+public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder
+        implements Builder<OrderCustomLineItemDiscountSetMessagePayload> {
 
     private String customLineItemId;
 
@@ -54,6 +56,18 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessagePayload build() {
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": discountedPricePerQuantity is missing");
+        return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,
+            taxedPrice);
+    }
+
+    /**
+     * builds OrderCustomLineItemDiscountSetMessagePayload without checking for non null required values
+     */
+    public OrderCustomLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,
             taxedPrice);
     }

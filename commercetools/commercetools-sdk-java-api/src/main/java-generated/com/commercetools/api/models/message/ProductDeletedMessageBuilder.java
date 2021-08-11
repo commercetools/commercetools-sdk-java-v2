@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDeletedMessageBuilder {
+public final class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessage> {
 
     private String id;
 
@@ -158,6 +159,24 @@ public final class ProductDeletedMessageBuilder {
     }
 
     public ProductDeletedMessage build() {
+        Objects.requireNonNull(id, ProductDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(removedImageUrls, ProductDeletedMessage.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(currentProjection, ProductDeletedMessage.class + ": currentProjection is missing");
+        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
+            currentProjection);
+    }
+
+    /**
+     * builds ProductDeletedMessage without checking for non null required values
+     */
+    public ProductDeletedMessage buildUnchecked() {
         return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
             currentProjection);

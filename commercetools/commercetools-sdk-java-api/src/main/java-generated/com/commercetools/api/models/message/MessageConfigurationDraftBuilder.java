@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MessageConfigurationDraftBuilder {
+public final class MessageConfigurationDraftBuilder implements Builder<MessageConfigurationDraft> {
 
     private Boolean enabled;
 
@@ -31,6 +32,16 @@ public final class MessageConfigurationDraftBuilder {
     }
 
     public MessageConfigurationDraft build() {
+        Objects.requireNonNull(enabled, MessageConfigurationDraft.class + ": enabled is missing");
+        Objects.requireNonNull(deleteDaysAfterCreation,
+            MessageConfigurationDraft.class + ": deleteDaysAfterCreation is missing");
+        return new MessageConfigurationDraftImpl(enabled, deleteDaysAfterCreation);
+    }
+
+    /**
+     * builds MessageConfigurationDraft without checking for non null required values
+     */
+    public MessageConfigurationDraft buildUnchecked() {
         return new MessageConfigurationDraftImpl(enabled, deleteDaysAfterCreation);
     }
 

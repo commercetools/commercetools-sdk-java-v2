@@ -3,12 +3,13 @@ package com.commercetools.api.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedStringBuilder {
+public final class LocalizedStringBuilder implements Builder<LocalizedString> {
 
-    private Map<String, String> values;
+    private Map<String, String> values = new HashMap<>();
 
     public LocalizedStringBuilder values(final Map<String, String> values) {
         this.values = values;
@@ -28,6 +29,14 @@ public final class LocalizedStringBuilder {
     }
 
     public LocalizedString build() {
+        Objects.requireNonNull(values, LocalizedString.class + ": values are missing");
+        return new LocalizedStringImpl(values);
+    }
+
+    /**
+     * builds LocalizedString without checking for non null required values
+     */
+    public LocalizedString buildUnchecked() {
         return new LocalizedStringImpl(values);
     }
 

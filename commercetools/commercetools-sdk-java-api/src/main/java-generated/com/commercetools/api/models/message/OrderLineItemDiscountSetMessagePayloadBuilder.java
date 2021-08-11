@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderLineItemDiscountSetMessagePayloadBuilder {
+public final class OrderLineItemDiscountSetMessagePayloadBuilder
+        implements Builder<OrderLineItemDiscountSetMessagePayload> {
 
     private String lineItemId;
 
@@ -66,6 +68,18 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
     }
 
     public OrderLineItemDiscountSetMessagePayload build() {
+        Objects.requireNonNull(lineItemId, OrderLineItemDiscountSetMessagePayload.class + ": lineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderLineItemDiscountSetMessagePayload.class + ": discountedPricePerQuantity is missing");
+        Objects.requireNonNull(totalPrice, OrderLineItemDiscountSetMessagePayload.class + ": totalPrice is missing");
+        return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,
+            taxedPrice);
+    }
+
+    /**
+     * builds OrderLineItemDiscountSetMessagePayload without checking for non null required values
+     */
+    public OrderLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,
             taxedPrice);
     }

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemImportDraftBuilder {
+public final class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemImportDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -131,6 +132,18 @@ public final class CustomLineItemImportDraftBuilder {
     }
 
     public CustomLineItemImportDraft build() {
+        Objects.requireNonNull(name, CustomLineItemImportDraft.class + ": name is missing");
+        Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");
+        Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");
+        Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");
+        return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,
+            shippingDetails);
+    }
+
+    /**
+     * builds CustomLineItemImportDraft without checking for non null required values
+     */
+    public CustomLineItemImportDraft buildUnchecked() {
         return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,
             shippingDetails);
     }

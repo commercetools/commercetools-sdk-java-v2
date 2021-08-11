@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchIndexingConfigurationValuesBuilder {
+public final class SearchIndexingConfigurationValuesBuilder implements Builder<SearchIndexingConfigurationValues> {
 
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
@@ -53,6 +54,13 @@ public final class SearchIndexingConfigurationValuesBuilder {
     }
 
     public SearchIndexingConfigurationValues build() {
+        return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
+    }
+
+    /**
+     * builds SearchIndexingConfigurationValues without checking for non null required values
+     */
+    public SearchIndexingConfigurationValues buildUnchecked() {
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 

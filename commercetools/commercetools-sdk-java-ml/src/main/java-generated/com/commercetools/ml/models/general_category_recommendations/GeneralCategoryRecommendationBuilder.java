@@ -3,10 +3,11 @@ package com.commercetools.ml.models.general_category_recommendations;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GeneralCategoryRecommendationBuilder {
+public final class GeneralCategoryRecommendationBuilder implements Builder<GeneralCategoryRecommendation> {
 
     private String categoryName;
 
@@ -31,6 +32,15 @@ public final class GeneralCategoryRecommendationBuilder {
     }
 
     public GeneralCategoryRecommendation build() {
+        Objects.requireNonNull(categoryName, GeneralCategoryRecommendation.class + ": categoryName is missing");
+        Objects.requireNonNull(confidence, GeneralCategoryRecommendation.class + ": confidence is missing");
+        return new GeneralCategoryRecommendationImpl(categoryName, confidence);
+    }
+
+    /**
+     * builds GeneralCategoryRecommendation without checking for non null required values
+     */
+    public GeneralCategoryRecommendation buildUnchecked() {
         return new GeneralCategoryRecommendationImpl(categoryName, confidence);
     }
 

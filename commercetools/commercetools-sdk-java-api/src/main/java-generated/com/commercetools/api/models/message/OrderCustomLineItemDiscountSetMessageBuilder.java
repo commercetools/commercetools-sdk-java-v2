@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomLineItemDiscountSetMessageBuilder {
+public final class OrderCustomLineItemDiscountSetMessageBuilder
+        implements Builder<OrderCustomLineItemDiscountSetMessage> {
 
     private String id;
 
@@ -174,6 +176,29 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessage build() {
+        Objects.requireNonNull(id, OrderCustomLineItemDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomLineItemDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomLineItemDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            OrderCustomLineItemDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            OrderCustomLineItemDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomLineItemDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderCustomLineItemDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessage.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
+        return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
+            discountedPricePerQuantity, taxedPrice);
+    }
+
+    /**
+     * builds OrderCustomLineItemDiscountSetMessage without checking for non null required values
+     */
+    public OrderCustomLineItemDiscountSetMessage buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
             discountedPricePerQuantity, taxedPrice);

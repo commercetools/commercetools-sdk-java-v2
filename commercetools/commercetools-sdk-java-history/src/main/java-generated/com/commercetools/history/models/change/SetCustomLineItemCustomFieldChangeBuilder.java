@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemCustomFieldChangeBuilder {
+public final class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCustomLineItemCustomFieldChange> {
 
     private String change;
 
@@ -65,6 +66,19 @@ public final class SetCustomLineItemCustomFieldChangeBuilder {
     }
 
     public SetCustomLineItemCustomFieldChange build() {
+        Objects.requireNonNull(change, SetCustomLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetCustomLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customLineItem,
+            SetCustomLineItemCustomFieldChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemCustomFieldChange.class + ": previousValue is missing");
+        return new SetCustomLineItemCustomFieldChangeImpl(change, name, customLineItem, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemCustomFieldChange without checking for non null required values
+     */
+    public SetCustomLineItemCustomFieldChange buildUnchecked() {
         return new SetCustomLineItemCustomFieldChangeImpl(change, name, customLineItem, nextValue, previousValue);
     }
 

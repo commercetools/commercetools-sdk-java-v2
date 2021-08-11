@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderBuilder {
+public final class OrderBuilder implements Builder<Order> {
 
     private String id;
 
@@ -568,6 +569,30 @@ public final class OrderBuilder {
     }
 
     public Order build() {
+        Objects.requireNonNull(id, Order.class + ": id is missing");
+        Objects.requireNonNull(version, Order.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Order.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Order.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, Order.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, Order.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, Order.class + ": totalPrice is missing");
+        Objects.requireNonNull(orderState, Order.class + ": orderState is missing");
+        Objects.requireNonNull(syncInfo, Order.class + ": syncInfo is missing");
+        Objects.requireNonNull(lastMessageSequenceNumber, Order.class + ": lastMessageSequenceNumber is missing");
+        Objects.requireNonNull(origin, Order.class + ": origin is missing");
+        Objects.requireNonNull(refusedGifts, Order.class + ": refusedGifts is missing");
+        return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
+            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
+            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
+            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
+            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
+            shippingRateInput, itemShippingAddresses, refusedGifts);
+    }
+
+    /**
+     * builds Order without checking for non null required values
+     */
+    public Order buildUnchecked() {
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

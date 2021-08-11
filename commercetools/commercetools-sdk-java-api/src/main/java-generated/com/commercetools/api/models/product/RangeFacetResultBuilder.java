@@ -3,10 +3,11 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RangeFacetResultBuilder {
+public final class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
 
@@ -26,6 +27,14 @@ public final class RangeFacetResultBuilder {
     }
 
     public RangeFacetResult build() {
+        Objects.requireNonNull(ranges, RangeFacetResult.class + ": ranges is missing");
+        return new RangeFacetResultImpl(ranges);
+    }
+
+    /**
+     * builds RangeFacetResult without checking for non null required values
+     */
+    public RangeFacetResult buildUnchecked() {
         return new RangeFacetResultImpl(ranges);
     }
 

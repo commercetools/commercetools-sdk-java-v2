@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderBillingAddressSetMessageBuilder {
+public final class OrderBillingAddressSetMessageBuilder implements Builder<OrderBillingAddressSetMessage> {
 
     private String id;
 
@@ -158,6 +159,21 @@ public final class OrderBillingAddressSetMessageBuilder {
     }
 
     public OrderBillingAddressSetMessage build() {
+        Objects.requireNonNull(id, OrderBillingAddressSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderBillingAddressSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderBillingAddressSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderBillingAddressSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderBillingAddressSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderBillingAddressSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderBillingAddressSetMessage.class + ": resourceVersion is missing");
+        return new OrderBillingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
+    }
+
+    /**
+     * builds OrderBillingAddressSetMessage without checking for non null required values
+     */
+    public OrderBillingAddressSetMessage buildUnchecked() {
         return new OrderBillingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
     }

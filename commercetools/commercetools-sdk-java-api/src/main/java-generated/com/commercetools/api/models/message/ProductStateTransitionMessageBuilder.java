@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductStateTransitionMessageBuilder {
+public final class ProductStateTransitionMessageBuilder implements Builder<ProductStateTransitionMessage> {
 
     private String id;
 
@@ -152,6 +153,23 @@ public final class ProductStateTransitionMessageBuilder {
     }
 
     public ProductStateTransitionMessage build() {
+        Objects.requireNonNull(id, ProductStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(state, ProductStateTransitionMessage.class + ": state is missing");
+        Objects.requireNonNull(force, ProductStateTransitionMessage.class + ": force is missing");
+        return new ProductStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
+    }
+
+    /**
+     * builds ProductStateTransitionMessage without checking for non null required values
+     */
+    public ProductStateTransitionMessage buildUnchecked() {
         return new ProductStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, force);
     }

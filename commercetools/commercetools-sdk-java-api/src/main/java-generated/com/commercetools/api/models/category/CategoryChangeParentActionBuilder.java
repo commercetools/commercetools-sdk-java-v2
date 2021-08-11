@@ -3,10 +3,11 @@ package com.commercetools.api.models.category;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryChangeParentActionBuilder {
+public final class CategoryChangeParentActionBuilder implements Builder<CategoryChangeParentAction> {
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
 
@@ -21,6 +22,14 @@ public final class CategoryChangeParentActionBuilder {
     }
 
     public CategoryChangeParentAction build() {
+        Objects.requireNonNull(parent, CategoryChangeParentAction.class + ": parent is missing");
+        return new CategoryChangeParentActionImpl(parent);
+    }
+
+    /**
+     * builds CategoryChangeParentAction without checking for non null required values
+     */
+    public CategoryChangeParentAction buildUnchecked() {
         return new CategoryChangeParentActionImpl(parent);
     }
 

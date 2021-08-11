@@ -16,7 +16,7 @@ import org.apache.commons.lang3.SystemUtils;
 
 public class ClientBuilder {
     public static final String COMMERCETOOLS = "commercetools";
-    public static final String userAgent = "commercetools-sdk-java-v2/";
+    static final String userAgent = "commercetools-sdk-java-v2/";
 
     private URI apiBaseUrl;
     private Supplier<ErrorMiddleware> errorMiddleware;

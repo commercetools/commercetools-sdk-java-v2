@@ -38,6 +38,12 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
             }
         }).thenApply(apiHttpResponse -> {
             if (apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
+                if (apiHttpResponse.getStatusCode() == 405) {
+                    throw new CompletionException(
+                            new AuthException(apiHttpResponse.getStatusCode(), new String(apiHttpResponse.getBody()),
+                                    apiHttpRequest.getHeaders(), apiHttpResponse.getMessage() + " : auth token URI may be incorrect", apiHttpResponse)
+                    );
+                }
                 throw new CompletionException(
                     new AuthException(apiHttpResponse.getStatusCode(), new String(apiHttpResponse.getBody()),
                         apiHttpRequest.getHeaders(), apiHttpResponse.getMessage(), apiHttpResponse));

@@ -44,6 +44,11 @@ public class ApiHttpException extends BaseException {
     }
 
     public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
+            final ApiHttpResponse<byte[]> response, Throwable cause) {
+        this(statusCode, body, headers, message, response, null, ResponseSerializer.of(), cause);
+    }
+
+    public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
             final ApiHttpResponse<byte[]> response, final ResponseSerializer serializer) {
         this(statusCode, body, headers, message, response, null, serializer);
     }
@@ -52,6 +57,18 @@ public class ApiHttpException extends BaseException {
             @Nullable final String message, @Nullable final ApiHttpResponse<byte[]> response,
             @Nullable final ApiHttpRequest request) {
         this(statusCode, body, headers, message, response, request, ResponseSerializer.of());
+    }
+
+    public ApiHttpException(final int statusCode, @Nullable final String body, @Nullable final ApiHttpHeaders headers,
+            @Nullable final String message, @Nullable final ApiHttpResponse<byte[]> response,
+            @Nullable final ApiHttpRequest request, final ResponseSerializer serializer, Throwable cause) {
+        super(message, cause);
+        this.statusCode = statusCode;
+        this.body = body;
+        this.headers = headers;
+        this.response = response;
+        this.request = request;
+        this.serializer = serializer;
     }
 
     public ApiHttpException(final int statusCode, @Nullable final String body, @Nullable final ApiHttpHeaders headers,

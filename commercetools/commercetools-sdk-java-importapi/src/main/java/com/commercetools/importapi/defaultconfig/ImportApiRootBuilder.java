@@ -49,15 +49,13 @@ public class ImportApiRootBuilder {
         return this;
     }
 
-    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials)
-    {
+    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials) {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion)
-    {
-        return defaultClient(URI.create(serviceRegion.getApiUrl()))
-                .withClientCredentialsFlow(credentials, serviceRegion.getOAuthTokenUrl());
+    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
+            serviceRegion.getOAuthTokenUrl());
     }
 
     public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

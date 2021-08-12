@@ -49,15 +49,13 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
-    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials)
-    {
+    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials) {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion)
-    {
-        return defaultClient(URI.create(serviceRegion.getApiUrl()))
-                .withClientCredentialsFlow(credentials, serviceRegion.getOAuthTokenUrl());
+    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
+            serviceRegion.getOAuthTokenUrl());
     }
 
     public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

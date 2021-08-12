@@ -127,8 +127,10 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
             final okhttp3.RequestBody body = apiHttpRequest.getBody() == null ? null
                     : okhttp3.RequestBody.create(apiHttpRequest.getBody(), mediaType);
             httpRequestBuilder.method(apiHttpRequest.getMethod().name(), body);
-        } catch (NoSuchMethodError error) {
-            throw new IllegalStateException("Request class is not compatible with this HTTP client implementation. Probably a wrong http client package is used. Please try \"commercetools-okhttp-client3\" instead");
+        }
+        catch (NoSuchMethodError error) {
+            throw new IllegalStateException(
+                "Request class is not compatible with this HTTP client implementation. Probably a wrong http client package is used. Please try \"commercetools-okhttp-client3\" instead");
         }
         return httpRequestBuilder.build();
     }

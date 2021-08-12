@@ -51,15 +51,13 @@ public class ApiRootBuilder {
         return this;
     }
 
-    public ApiRootBuilder defaultClient(final ClientCredentials credentials)
-    {
+    public ApiRootBuilder defaultClient(final ClientCredentials credentials) {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public ApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion)
-    {
-        return defaultClient(URI.create(serviceRegion.getApiUrl()))
-                .withClientCredentialsFlow(credentials, serviceRegion.getOAuthTokenUrl());
+    public ApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
+            serviceRegion.getOAuthTokenUrl());
     }
 
     public ApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

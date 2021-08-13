@@ -23,14 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup> {
 
     /**
-    *  <p>The unique ID of the customer group.</p>
+    *  <p>Unique ID of the customer group.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the customer group.</p>
+    *  <p>Current version of the customer group.</p>
     */
     @NotNull
     @JsonProperty("version")

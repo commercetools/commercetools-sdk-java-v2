@@ -52,6 +52,8 @@ public interface ResourceTypeId {
 
     ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
 
+    ResourceTypeId STORE = ResourceTypeIdEnum.STORE;
+
     enum ResourceTypeIdEnum implements ResourceTypeId {
         ADDRESS("address"),
 
@@ -91,7 +93,9 @@ public interface ResourceTypeId {
 
         CART_DISCOUNT("cart-discount"),
 
-        CUSTOMER_GROUP("customer-group");
+        CUSTOMER_GROUP("customer-group"),
+
+        STORE("store");
         private final String jsonName;
 
         private ResourceTypeIdEnum(final String jsonName) {

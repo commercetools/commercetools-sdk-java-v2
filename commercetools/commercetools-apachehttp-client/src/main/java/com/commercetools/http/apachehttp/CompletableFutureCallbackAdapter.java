@@ -1,8 +1,9 @@
+
 package com.commercetools.http.apachehttp;
 
-import org.apache.hc.core5.concurrent.FutureCallback;
-
 import java.util.concurrent.CompletableFuture;
+
+import org.apache.hc.core5.concurrent.FutureCallback;
 
 final class CompletableFutureCallbackAdapter<T> implements FutureCallback<T> {
     private final CompletableFuture<T> future;

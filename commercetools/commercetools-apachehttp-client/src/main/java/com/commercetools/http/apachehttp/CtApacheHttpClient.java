@@ -1,20 +1,5 @@
-package com.commercetools.http.apachehttp;
 
-import io.vrap.rmf.base.client.*;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.AutoCloseInputStream;
-import org.apache.hc.client5.http.async.methods.SimpleBody;
-import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
-import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
-import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
-import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
-import org.apache.hc.client5.http.impl.async.HttpAsyncClients;
-import org.apache.hc.core5.http.ContentType;
-import org.apache.hc.core5.http.Header;
-import org.apache.hc.core5.http.HttpHeaders;
-import org.apache.hc.core5.http.nio.AsyncRequestProducer;
-import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
-import org.apache.hc.core5.reactor.IOReactorStatus;
+package com.commercetools.http.apachehttp;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -22,10 +7,25 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
+
+import io.vrap.rmf.base.client.*;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.AutoCloseInputStream;
+import org.apache.hc.client5.http.async.methods.SimpleBody;
+import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
+import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
+import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
+import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
+import org.apache.hc.core5.http.ContentType;
+import org.apache.hc.core5.http.Header;
+import org.apache.hc.core5.http.HttpHeaders;
+import org.apache.hc.core5.http.nio.AsyncRequestProducer;
+import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
+import org.apache.hc.core5.reactor.IOReactorStatus;
 
 public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     private final CloseableHttpAsyncClient apacheHttpClient;
@@ -44,8 +44,7 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     public CtApacheHttpClient(final BuilderOptions options) {
-        apacheHttpClient = options.plus(clientBuilder.get())
-                .build();
+        apacheHttpClient = options.plus(clientBuilder.get()).build();
         init();
     }
 
@@ -79,7 +78,8 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
         final CompletableFuture<SimpleHttpResponse> apacheResponseFuture = new CompletableFuture<>();
-        apacheHttpClient.execute(toApacheRequest(request), SimpleResponseConsumer.create(), new CompletableFutureCallbackAdapter<>(apacheResponseFuture));
+        apacheHttpClient.execute(toApacheRequest(request), SimpleResponseConsumer.create(),
+            new CompletableFutureCallbackAdapter<>(apacheResponseFuture));
         return apacheResponseFuture.thenApply(CtApacheHttpClient::toResponse);
     }
 
@@ -87,28 +87,27 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
         final Map<String, List<Header>> apacheHeaders = Arrays.stream(response.getHeaders())
                 .collect(Collectors.groupingBy(Header::getName));
 
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(apacheHeaders
-                .entrySet()
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(apacheHeaders.entrySet()
                 .stream()
-                .flatMap(e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value.getValue())))
+                .flatMap(
+                    e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value.getValue())))
                 .collect(Collectors.toList()));
 
-        final byte[] bodyNullable = Optional.ofNullable(response.getBody())
-                .map((SimpleBody entity) -> {
-                    try {
-                        final boolean gzipEncoded =
-                                Optional.ofNullable(response.getFirstHeader(HttpHeaders.CONTENT_ENCODING))
-                                        .map(Header::getValue)
-                                        .map(v -> v.equalsIgnoreCase("gzip"))
-                                        .orElse(false);
-                        final InputStream body = new ByteArrayInputStream(entity.getBodyBytes());
-                        final InputStream content = gzipEncoded ? new GZIPInputStream(body): body;
-                        final AutoCloseInputStream autoCloseInputStream = new AutoCloseInputStream(content);
-                        return IOUtils.toByteArray(autoCloseInputStream);
-                    } catch (final IOException e) {
-                        throw new HttpException(e);
-                    }
-                }).orElse(null);
+        final byte[] bodyNullable = Optional.ofNullable(response.getBody()).map((SimpleBody entity) -> {
+            try {
+                final boolean gzipEncoded = Optional.ofNullable(response.getFirstHeader(HttpHeaders.CONTENT_ENCODING))
+                        .map(Header::getValue)
+                        .map(v -> v.equalsIgnoreCase("gzip"))
+                        .orElse(false);
+                final InputStream body = new ByteArrayInputStream(entity.getBodyBytes());
+                final InputStream content = gzipEncoded ? new GZIPInputStream(body) : body;
+                final AutoCloseInputStream autoCloseInputStream = new AutoCloseInputStream(content);
+                return IOUtils.toByteArray(autoCloseInputStream);
+            }
+            catch (final IOException e) {
+                throw new HttpException(e);
+            }
+        }).orElse(null);
 
         return new ApiHttpResponse<>(response.getCode(), apiHttpHeaders, bodyNullable, response.getReasonPhrase());
     }

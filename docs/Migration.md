@@ -18,13 +18,12 @@ So:   <strong>projectKey + endpoint + http method(get or post) + execution. </st
 * [Update Command](#update-command)
 * [Query - GetById](#query-getbyid)
 * [Query](#query)
-* [Checkout: the whole behaviour for 2.x](#checkout)
 
 <a id="client-configuration-and-creation"></a>
 ### Client Configuration and Creation
-From the 1.x we substitute the <strong>SphereClientFactory</strong> class with the <strong>ApiFactory</strong> class in the 2.x and <strong>BlockingSphereClient</strong> class in 1.x with the <strong>ApiRoot</strong> class.
+From the 1.x we substitute the <strong>SphereClientFactory</strong> class with the <strong>ApiRootBuilder</strong> class in the 2.x.
 
-The benefit is that after the <strong>ApiRoot</strong> has been defined, it's easy to create the requests directly from it. There are example below that can clarify the behaviour.
+The benefit is that after the <strong>ApiRootBuilder</strong> has been defined, it's easy to create the requests directly from it. There are example below that can clarify the behaviour.
 
 1.x
 ```java
@@ -33,10 +32,10 @@ The benefit is that after the <strong>ApiRoot</strong> has been defined, it's ea
 ```
 2.x
 ```java
-        final ApiHttpClient apiHttpClient = ApiFactory.defaultClient(
-            ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-        final ByProjectKeyRequestBuilder projectKey = ApiFactory.createForProject("projectKey", () -> apiHttpClient);
+        final ByProjectKeyRequestBuilder projectRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .buildForProject("projectKey");
 ```
 
 <a id="timout-setting"></a>
@@ -45,14 +44,15 @@ In both versions is the <strong>executeBlocking()</strong> method that sets the 
 
 1.x
 ```java
-        PagedQueryResult<Category> response = blockingClient().executeBlocking(CategoryQuery.of(), 45, TimeUnit.SECONDS);
+        PagedQueryResult<Category> response = blockingClient().executeBlocking(CategoryQuery.of(), 45,
+                                                 TimeUnit.SECONDS);
 ```
 2.x
 ```java
         CategoryPagedQueryResponse response = projectClient().categories()
-                .get()
-                .executeBlocking(Duration.ofSeconds(45))
-                .getBody();
+                                                .get()
+                                                .executeBlocking(Duration.ofSeconds(45))
+                                                .getBody();
 ```
 
 <a id="headers"></a>
@@ -62,8 +62,7 @@ To set headers, in the 1.x there is the <strong>HttpRequest</strong> class and i
 The main difference, as you can see the example below, is that the <strong>ApiHttpRequest</strong> can be directly instantiated and it can be directly set the type of method (GET or POST), the URI, the headers and the body.
 
 1.x
-```java
-```
+        There is no way to set the header directly in the request
 2.x
 ```java
         final CartPagedQueryResponse carts = projectClient().carts()
@@ -78,7 +77,9 @@ In the examples below there is a huge difference about the *Retry* for the versi
 
 * As can be seen, in the version 1.x, it has to be define piece by piece: the retry rules, then the <strong>SphereClient</strong> and then the request in this case <strong>PagedQueryResult</strong>.
 
-* On the contrary in the version 2.x, the setup of the request can be built directly during the client creation, so we are going to have the <strong>ByProjectKeyRequestBuilder</strong> built including the setting of the Retry through the <strong>RetryMiddleware</strong> and as a plus, like in this case, it is possible to set up other parameters to our request like the logger <strong>InternalLoggerFactory</strong>.
+* On the contrary in the version 2.x, the setup of the request can be built directly during the client creation,
+so we are going to have the <strong>ByProjectKeyRequestBuilder</strong> built including the setting of the Retry through the <strong>RetryMiddleware</strong> and as a plus, like in this case,
+it is possible to set up other parameters to our request like the logger <strong>InternalLoggerFactory</strong>.
 After that, we will have our request <strong>CategoryPagedQueryResponse</strong>.
 
 
@@ -86,8 +87,8 @@ After that, we will have our request <strong>CategoryPagedQueryResponse</strong>
 ```java
         final int maxAttempts = 5;
         final List<RetryRule> retryRules = singletonList(RetryRule.of(
-            RetryPredicate.ofMatchingStatusCodes(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504),
-            RetryAction.ofExponentialBackoff(maxAttempts, 100, 2000)));
+                    RetryPredicate.ofMatchingStatusCodes(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504),
+                    RetryAction.ofExponentialBackoff(maxAttempts, 100, 2000)));
         final SphereClient client = RetrySphereClientDecorator.of(sphereClient(), retryRules);
 
         final PagedQueryResult<Category> categoryPagedQueryResult = client.execute(CategoryQuery.of())
@@ -96,14 +97,12 @@ After that, we will have our request <strong>CategoryPagedQueryResponse</strong>
 ```
 2.x
 ```java
-        final ByProjectKeyRequestBuilder projectClient = ApiFactory.createForProject("projectKey",
-            () -> ClientBuilder.of()
-                    .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-                        ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                    .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
-                    .withRetryMiddleware(new RetryMiddleware(5, 100, 2000, Arrays.asList(502, 503, 504)))
-                    .build());
+        final ByProjectKeyRequestBuilder projectClient = ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+                                ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .buildForProject("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();
 ```
@@ -244,10 +243,5 @@ And the structure as the example before is to use <strong>get</strong> before ot
                 .withPredicateVar("id", "id123")
                 .executeBlocking()
                 .getBody();
-```
-<a id="checkout"></a>
-### Checkout: the whole behaviour for 2.x
-2.x
-```java
 ```
 

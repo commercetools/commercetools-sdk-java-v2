@@ -10,7 +10,7 @@ public class CompatClientFactory {
     public static ApiHttpClient of(SphereClientConfig clientConfig) {
         return ClientBuilder.of()
                 .defaultClient(clientConfig.getApiUrl())
-                .withClientCredentials(ClientCredentials.of()
+                .withClientCredentialsFlow(ClientCredentials.of()
                         .withClientId(clientConfig.getClientId())
                         .withClientSecret(clientConfig.getClientSecret())
                         .build(),
@@ -21,7 +21,7 @@ public class CompatClientFactory {
     public static CompatClient ofCompat(SphereClientConfig clientConfig) {
         return CompatClient.of(ClientBuilder.of()
                 .defaultClient(clientConfig.getApiUrl())
-                .withClientCredentials(ClientCredentials.of()
+                .withClientCredentialsFlow(ClientCredentials.of()
                         .withClientId(clientConfig.getClientId())
                         .withClientSecret(clientConfig.getClientSecret())
                         .build(),

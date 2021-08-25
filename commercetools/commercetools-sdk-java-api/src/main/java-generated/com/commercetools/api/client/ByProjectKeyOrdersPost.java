@@ -19,7 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyOrdersPost extends ApiMethod<ByProjectKeyOrdersPost, com.commercetools.api.models.order.Order>
-        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersPost>,
+        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersPost>,
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyOrdersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersPost> {
 

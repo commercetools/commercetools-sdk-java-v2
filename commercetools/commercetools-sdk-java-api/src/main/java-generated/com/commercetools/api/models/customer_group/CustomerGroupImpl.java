@@ -57,14 +57,14 @@ public final class CustomerGroupImpl implements CustomerGroup {
     }
 
     /**
-    *  <p>The unique ID of the customer group.</p>
+    *  <p>Unique ID of the customer group.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the customer group.</p>
+    *  <p>Current version of the customer group.</p>
     */
     public Long getVersion() {
         return this.version;

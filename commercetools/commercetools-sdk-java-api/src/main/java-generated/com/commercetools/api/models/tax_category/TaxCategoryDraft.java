@@ -24,7 +24,6 @@ public interface TaxCategoryDraft {
     @JsonProperty("description")
     public String getDescription();
 
-    @NotNull
     @Valid
     @JsonProperty("rates")
     public List<TaxRateDraft> getRates();

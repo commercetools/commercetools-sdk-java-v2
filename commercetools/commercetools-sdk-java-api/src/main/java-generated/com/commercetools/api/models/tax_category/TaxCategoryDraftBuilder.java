@@ -17,6 +17,7 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
     @Nullable
     private String description;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates;
 
     @Nullable
@@ -32,7 +33,8 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
         return this;
     }
 
-    public TaxCategoryDraftBuilder rates(final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
+    public TaxCategoryDraftBuilder rates(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
         this.rates = new ArrayList<>(Arrays.asList(rates));
         return this;
     }
@@ -54,7 +56,7 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
     }
 
     public TaxCategoryDraftBuilder rates(
-            final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
+            @Nullable final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
         this.rates = rates;
         return this;
     }
@@ -73,6 +75,7 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
         return this.description;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates() {
         return this.rates;
     }
@@ -84,7 +87,6 @@ public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> 
 
     public TaxCategoryDraft build() {
         Objects.requireNonNull(name, TaxCategoryDraft.class + ": name is missing");
-        Objects.requireNonNull(rates, TaxCategoryDraft.class + ": rates is missing");
         return new TaxCategoryDraftImpl(name, description, rates, key);
     }
 

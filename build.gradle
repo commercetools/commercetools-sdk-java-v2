@@ -291,6 +291,7 @@ def exportedProjects= [
         ":commercetools:commercetools-sdk-compat-v1",
         ":commercetools:commercetools-sdk-java-history",
         ":rmf:rmf-java-base",
+        ":commercetools:commercetools-apachehttp-client",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":rmf:okhttp-client",

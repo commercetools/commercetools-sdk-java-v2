@@ -4,6 +4,7 @@ package com.commercetools;
 import java.io.IOException;
 import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -12,6 +13,7 @@ import okhttp3.*;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.message.MessagePagedQueryResponse;
+import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -35,8 +37,9 @@ public class LongRunningTimeoutTest {
         final TokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(getClientId(), getClientSecret(), null,
             ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), new CtOkHttp4Client());
         final AuthenticationToken token = tokenSupplier.getToken().get();
-        final ApiRoot client = ApiRoot.fromClient(ClientBuilder
-                .of(new CtOkHttp4Client(builder -> builder.protocols(Collections.singletonList(Protocol.HTTP_1_1))))
+        final ApiRoot client = ApiRoot.fromClient(ClientBuilder.of(new CtApacheHttpClient())
+                //                .of(new CtOkHttp4Client(builder -> builder.protocols(Arrays.asList(Protocol.HTTP_2, Protocol.HTTP_1_1)).connectTimeout(300, TimeUnit.MILLISECONDS).readTimeout(1000, TimeUnit.MILLISECONDS).retryOnConnectionFailure(true).connectionPool(new ConnectionPool(0, 1, TimeUnit.NANOSECONDS))))
+
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withClientCredentialsFlow(
                     ClientCredentials.of().withClientSecret(getClientSecret()).withClientId(getClientId()).build(),
@@ -90,28 +93,28 @@ public class LongRunningTimeoutTest {
                         if (p == null) {
                             break;
                         }
-                        final Request request = new Request.Builder()
-                                .addHeader("Authorization", "Bearer " + token.getAccessToken())
-                                .addHeader("Content-Type", "application/json")
-                                .url(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl() + "/" + getProjectKey() + "/messages/"
-                                        + p.getLeft())
-                                .build();
-                        try (Response response = client2.newCall(request).execute()) {
-                            String b = response.body().string();
-                            response.close();
-                            System.out.println(b);
-                            System.out.println(p.getRight());
-                            System.out.println(client2.dispatcher().runningCallsCount());
-                        }
+                        //                        final Request request = new Request.Builder()
+                        //                                .addHeader("Authorization", "Bearer " + token.getAccessToken())
+                        //                                .addHeader("Content-Type", "application/json")
+                        //                                .url(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl() + "/" + getProjectKey() + "/messages/"
+                        //                                        + p.getLeft())
+                        //                                .build();
+                        //                        try (Response response = client2.newCall(request).execute()) {
+                        //                            String b = response.body().string();
+                        //                            response.close();
+                        //                            System.out.println(b);
+                        //                            System.out.println(p.getRight());
+                        //                            System.out.println(client2.dispatcher().runningCallsCount());
+                        //                        }
 
-                        //                        final ApiHttpResponse<byte[]> messageApiHttpResponse = client.withProjectKey(getProjectKey())
-                        //                                .messages()
-                        //                                .withId(blockingQueue.take())
-                        //                                .get()
-                        //                                .sendBlocking(Duration.ofMillis(10000));
+                        final ApiHttpResponse<byte[]> messageApiHttpResponse = client.withProjectKey(getProjectKey())
+                                .messages()
+                                .withId(p.getLeft())
+                                .get()
+                                .sendBlocking(Duration.ofMillis(10000));
                     }
                 }
-                catch (InterruptedException | IOException e) {
+                catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             });

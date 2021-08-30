@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Creates a request for creating new Products or updating existing ones.</p>
+*  <p>Creates import request for creating new products or updating existing ones.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost extends

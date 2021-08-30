@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Retrieves all Category ImportOperations of a given ImportSink key.</p>
+*  <p>Retrieves all category import operations of an import sink key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet extends

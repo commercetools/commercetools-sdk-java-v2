@@ -15,12 +15,22 @@ public class ByProjectKeyRequestBuilder {
         this.projectKey = projectKey;
     }
 
+    @Deprecated
     public ByProjectKeyImportSinksRequestBuilder importSinks() {
         return new ByProjectKeyImportSinksRequestBuilder(apiHttpClient, projectKey);
     }
 
+    @Deprecated
     public ByProjectKeyImportSummariesRequestBuilder importSummaries() {
         return new ByProjectKeyImportSummariesRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyImportContainersRequestBuilder importContainers() {
+        return new ByProjectKeyImportContainersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyImportOperationsRequestBuilder importOperations() {
+        return new ByProjectKeyImportOperationsRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyCategoriesRequestBuilder categories() {

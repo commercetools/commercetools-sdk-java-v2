@@ -13,7 +13,7 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
 
     private Long version;
 
-    private String importSinkKey;
+    private String importContainerKey;
 
     private String resourceKey;
 
@@ -41,8 +41,8 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
         return this;
     }
 
-    public ImportOperationBuilder importSinkKey(final String importSinkKey) {
-        this.importSinkKey = importSinkKey;
+    public ImportOperationBuilder importContainerKey(final String importContainerKey) {
+        this.importContainerKey = importContainerKey;
         return this;
     }
 
@@ -109,8 +109,8 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
         return this.version;
     }
 
-    public String getImportSinkKey() {
-        return this.importSinkKey;
+    public String getImportContainerKey() {
+        return this.importContainerKey;
     }
 
     public String getResourceKey() {
@@ -154,14 +154,14 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
 
     public ImportOperation build() {
         Objects.requireNonNull(version, ImportOperation.class + ": version is missing");
-        Objects.requireNonNull(importSinkKey, ImportOperation.class + ": importSinkKey is missing");
+        Objects.requireNonNull(importContainerKey, ImportOperation.class + ": importContainerKey is missing");
         Objects.requireNonNull(resourceKey, ImportOperation.class + ": resourceKey is missing");
         Objects.requireNonNull(id, ImportOperation.class + ": id is missing");
         Objects.requireNonNull(state, ImportOperation.class + ": state is missing");
         Objects.requireNonNull(createdAt, ImportOperation.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, ImportOperation.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(expiresAt, ImportOperation.class + ": expiresAt is missing");
-        return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
+        return new ImportOperationImpl(version, importContainerKey, resourceKey, id, state, resourceVersion, errors,
             unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }
 
@@ -169,7 +169,7 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
      * builds ImportOperation without checking for non null required values
      */
     public ImportOperation buildUnchecked() {
-        return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
+        return new ImportOperationImpl(version, importContainerKey, resourceKey, id, state, resourceVersion, errors,
             unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }
 
@@ -180,7 +180,7 @@ public final class ImportOperationBuilder implements Builder<ImportOperation> {
     public static ImportOperationBuilder of(final ImportOperation template) {
         ImportOperationBuilder builder = new ImportOperationBuilder();
         builder.version = template.getVersion();
-        builder.importSinkKey = template.getImportSinkKey();
+        builder.importContainerKey = template.getImportContainerKey();
         builder.resourceKey = template.getResourceKey();
         builder.id = template.getId();
         builder.state = template.getState();

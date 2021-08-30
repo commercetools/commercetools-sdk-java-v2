@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ProductCatalogDataBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,42 +154,56 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ProductCatalogData without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#current-java.util.function.Function-">current</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#current-com.commercetools.api.models.product.ProductData-">current</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;current)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#getCurrent--">getCurrent</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#getHasStagedChanges--">getHasStagedChanges</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#getPublished--">getPublished</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#getStaged--">getStaged</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#hasStagedChanges-java.lang.Boolean-">hasStagedChanges</a></span>(java.lang.Boolean&nbsp;hasStagedChanges)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#of-com.commercetools.api.models.product.ProductCatalogData-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#published-java.lang.Boolean-">published</a></span>(java.lang.Boolean&nbsp;published)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#staged-java.util.function.Function-">staged</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#staged-com.commercetools.api.models.product.ProductData-">staged</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;staged)</code>&nbsp;</td>
 </tr>
@@ -236,6 +255,15 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a>&nbsp;published(java.lang.Boolean&nbsp;published)</pre>
 </li>
 </ul>
+<a name="current-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>current</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a>&nbsp;current(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="current-com.commercetools.api.models.product.ProductData-">
 <!--   -->
 </a>
@@ -243,6 +271,15 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>current</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a>&nbsp;current(<a href="../../../../../com/commercetools/api/models/product/ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;current)</pre>
+</li>
+</ul>
+<a name="staged-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>staged</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a>&nbsp;staged(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/product/ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="staged-com.commercetools.api.models.product.ProductData-">
@@ -306,6 +343,20 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ProductCatalogData without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

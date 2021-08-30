@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":9,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":9,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">OrderSetParcelTrackingDataActionBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,26 +154,36 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds OrderSetParcelTrackingDataAction without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#getParcelId--">getParcelId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#getTrackingData--">getTrackingData</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#of-com.commercetools.api.models.order.OrderSetParcelTrackingDataAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#parcelId-java.lang.String-">parcelId</a></span>(java.lang.String&nbsp;parcelId)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#trackingData-java.util.function.Function-">trackingData</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order/TrackingDataBuilder.html" title="class in com.commercetools.api.models.order">TrackingDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/order/TrackingDataBuilder.html" title="class in com.commercetools.api.models.order">TrackingDataBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html#trackingData-com.commercetools.api.models.order.TrackingData-">trackingData</a></span>(<a href="../../../../../com/commercetools/api/models/order/TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a>&nbsp;trackingData)</code>&nbsp;</td>
 </tr>
@@ -220,6 +235,15 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a>&nbsp;parcelId(java.lang.String&nbsp;parcelId)</pre>
 </li>
 </ul>
+<a name="trackingData-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trackingData</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelTrackingDataActionBuilder</a>&nbsp;trackingData(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order/TrackingDataBuilder.html" title="class in com.commercetools.api.models.order">TrackingDataBuilder</a>,<a href="../../../../../com/commercetools/api/models/order/TrackingDataBuilder.html" title="class in com.commercetools.api.models.order">TrackingDataBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="trackingData-com.commercetools.api.models.order.TrackingData-">
 <!--   -->
 </a>
@@ -256,6 +280,20 @@ public&nbsp;<a href="../../../../../com/commercetools/api/models/order/TrackingD
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderSetParcelTrackingDataAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelTrackingDataAction</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds OrderSetParcelTrackingDataAction without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

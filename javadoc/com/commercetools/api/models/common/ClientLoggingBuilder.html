@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ClientLoggingBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -153,38 +158,48 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#clientId-java.lang.String-">clientId</a></span>(java.lang.String&nbsp;clientId)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ClientLogging without checking for non null required values</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#customer-com.commercetools.api.models.customer.CustomerReference-">customer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#clientId-java.lang.String-">clientId</a></span>(java.lang.String&nbsp;clientId)</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#externalUserId-java.lang.String-">externalUserId</a></span>(java.lang.String&nbsp;externalUserId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#customer-com.commercetools.api.models.customer.CustomerReference-">customer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#customer-java.util.function.Function-">customer</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#externalUserId-java.lang.String-">externalUserId</a></span>(java.lang.String&nbsp;externalUserId)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#getAnonymousId--">getAnonymousId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#getClientId--">getClientId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#getCustomer--">getCustomer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#getExternalUserId--">getExternalUserId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html#of-com.commercetools.api.models.common.ClientLogging-">of</a></span>(<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
@@ -245,6 +260,15 @@ extends java.lang.Object</pre>
 <h4>externalUserId</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a>&nbsp;externalUserId(@Nullable
                                            java.lang.String&nbsp;externalUserId)</pre>
+</li>
+</ul>
+<a name="customer-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>customer</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/ClientLoggingBuilder.html" title="class in com.commercetools.api.models.common">ClientLoggingBuilder</a>&nbsp;customer(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="customer-com.commercetools.api.models.customer.CustomerReference-">
@@ -314,6 +338,20 @@ public&nbsp;java.lang.String&nbsp;getAnonymousId()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ClientLogging without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

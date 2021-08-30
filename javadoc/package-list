@@ -43,6 +43,7 @@ com.commercetools.history.models.change
 com.commercetools.history.models.change_value
 com.commercetools.history.models.common
 com.commercetools.history.models.label
+com.commercetools.http.apachehttp
 com.commercetools.http.okhttp3
 com.commercetools.http.okhttp4
 com.commercetools.importapi.client

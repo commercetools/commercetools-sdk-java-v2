@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":18,"i2":18,"i3":6,"i4":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">com.commercetools.api.client</div>
-<h2 title="Interface DataerasureTrait" class="title">Interface DataerasureTrait&lt;T&gt;</h2>
+<h2 title="Interface DataerasureTrait" class="title">Interface DataerasureTrait&lt;T extends DataerasureTrait&lt;T&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
@@ -103,7 +103,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">DataerasureTrait&lt;T&gt;</span></pre>
+<pre>public interface <span class="typeNameLabel">DataerasureTrait&lt;T extends DataerasureTrait&lt;T&gt;&gt;</span></pre>
 </li>
 </ul>
 </div>
@@ -117,18 +117,34 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#addDataErasure-boolean-">addDataErasure</a></span>(boolean&nbsp;dataErasure)</code>
+<div class="block">add additional dataErasure query parameter</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#asDataerasureTrait--">asDataerasureTrait</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#asDataerasureTraitToBaseType--">asDataerasureTraitToBaseType</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#getDataErasure--">getDataErasure</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#withDataErasure-boolean-">withDataErasure</a></span>(boolean&nbsp;dataErasure)</code>&nbsp;</td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/DataerasureTrait.html#withDataErasure-boolean-">withDataErasure</a></span>(boolean&nbsp;dataErasure)</code>
+<div class="block">set dataErasure with the specificied value</div>
+</td>
 </tr>
 </table>
 </li>
@@ -157,10 +173,39 @@ var activeTableTab = "activeTableTab";
 <a name="withDataErasure-boolean-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>withDataErasure</h4>
-<pre><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&nbsp;withDataErasure(boolean&nbsp;dataErasure)</pre>
+<pre><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;&nbsp;withDataErasure(boolean&nbsp;dataErasure)</pre>
+<div class="block">set dataErasure with the specificied value</div>
+</li>
+</ul>
+<a name="addDataErasure-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addDataErasure</h4>
+<pre><a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;&nbsp;addDataErasure(boolean&nbsp;dataErasure)</pre>
+<div class="block">add additional dataErasure query parameter</div>
+</li>
+</ul>
+<a name="asDataerasureTrait--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>asDataerasureTrait</h4>
+<pre>default&nbsp;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;&nbsp;asDataerasureTrait()</pre>
+</li>
+</ul>
+<a name="asDataerasureTraitToBaseType--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>asDataerasureTraitToBaseType</h4>
+<pre>default&nbsp;<a href="../../../../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&nbsp;asDataerasureTraitToBaseType()</pre>
 </li>
 </ul>
 </li>

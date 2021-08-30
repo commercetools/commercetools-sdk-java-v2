@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ReturnInfoBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,40 +154,54 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ReturnInfo without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#getItems--">getItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#getReturnDate--">getReturnDate</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#getReturnTrackingId--">getReturnTrackingId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#items-java.util.List-">items</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&gt;&nbsp;items)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#items-com.commercetools.importapi.models.order_patches.ReturnItemDraft...-">items</a></span>(<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>...&nbsp;items)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#of-com.commercetools.importapi.models.order_patches.ReturnInfo-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#plusItems-java.util.function.Function-">plusItems</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>,<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#returnDate-java.time.ZonedDateTime-">returnDate</a></span>(java.time.ZonedDateTime&nbsp;returnDate)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#returnTrackingId-java.lang.String-">returnTrackingId</a></span>(java.lang.String&nbsp;returnTrackingId)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html#withItems-java.util.function.Function-">withItems</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>,<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -230,6 +249,24 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>items</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>&nbsp;items(<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>...&nbsp;items)</pre>
+</li>
+</ul>
+<a name="withItems-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withItems</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>&nbsp;withItems(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>,<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
+<a name="plusItems-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>plusItems</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>&nbsp;plusItems(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>,<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="items-java.util.List-">
@@ -297,6 +334,20 @@ public&nbsp;java.time.ZonedDateTime&nbsp;getReturnDate()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/order_patches/ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ReturnInfo without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

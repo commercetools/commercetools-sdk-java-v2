@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":10,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">MyPaymentDraftBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -146,45 +151,67 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#amountPlanned-com.commercetools.api.models.common.Money-">amountPlanned</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#amountPlanned-java.util.function.Function-">amountPlanned</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#amountPlanned-com.commercetools.api.models.common.Money-">amountPlanned</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds MyPaymentDraft without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#custom-com.commercetools.api.models.type.CustomFieldsDraft-">custom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#custom-java.util.function.Function-">custom</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#getAmountPlanned--">getAmountPlanned</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#getPaymentMethodInfo--">getPaymentMethodInfo</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyTransactionDraft.html" title="interface in com.commercetools.api.models.me">MyTransactionDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#getTransaction--">getTransaction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#of-com.commercetools.api.models.me.MyPaymentDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#paymentMethodInfo-java.util.function.Function-">paymentMethodInfo</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a>,<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#paymentMethodInfo-com.commercetools.api.models.payment.PaymentMethodInfo-">paymentMethodInfo</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#transaction-java.util.function.Function-">transaction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/me/MyTransactionDraftBuilder.html" title="class in com.commercetools.api.models.me">MyTransactionDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/me/MyTransactionDraftBuilder.html" title="class in com.commercetools.api.models.me">MyTransactionDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html#transaction-com.commercetools.api.models.me.MyTransactionDraft-">transaction</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyTransactionDraft.html" title="interface in com.commercetools.api.models.me">MyTransactionDraft</a>&nbsp;transaction)</code>&nbsp;</td>
 </tr>
@@ -227,6 +254,15 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="amountPlanned-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>amountPlanned</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;amountPlanned(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="amountPlanned-com.commercetools.api.models.common.Money-">
 <!--   -->
 </a>
@@ -234,6 +270,15 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>amountPlanned</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;amountPlanned(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</pre>
+</li>
+</ul>
+<a name="paymentMethodInfo-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>paymentMethodInfo</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;paymentMethodInfo(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a>,<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="paymentMethodInfo-com.commercetools.api.models.payment.PaymentMethodInfo-">
@@ -246,6 +291,15 @@ extends java.lang.Object</pre>
                                                <a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</pre>
 </li>
 </ul>
+<a name="custom-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>custom</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;custom(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="custom-com.commercetools.api.models.type.CustomFieldsDraft-">
 <!--   -->
 </a>
@@ -254,6 +308,15 @@ extends java.lang.Object</pre>
 <h4>custom</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;custom(@Nullable
                                     <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</pre>
+</li>
+</ul>
+<a name="transaction-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>transaction</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraftBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentDraftBuilder</a>&nbsp;transaction(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/me/MyTransactionDraftBuilder.html" title="class in com.commercetools.api.models.me">MyTransactionDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/me/MyTransactionDraftBuilder.html" title="class in com.commercetools.api.models.me">MyTransactionDraftBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="transaction-com.commercetools.api.models.me.MyTransactionDraft-">
@@ -312,6 +375,20 @@ public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyTransactio
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds MyPaymentDraft without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":9,"i13":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ExtensionBadResponseErrorBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,42 +154,56 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#errorByExtension-com.commercetools.api.models.error.ErrorByExtension-">errorByExtension</a></span>(<a href="../../../../../com/commercetools/api/models/error/ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a>&nbsp;errorByExtension)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ExtensionBadResponseError without checking for non null required values</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#extensionExtraInfo-java.lang.Object-">extensionExtraInfo</a></span>(java.lang.Object&nbsp;extensionExtraInfo)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#errorByExtension-com.commercetools.api.models.error.ErrorByExtension-">errorByExtension</a></span>(<a href="../../../../../com/commercetools/api/models/error/ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a>&nbsp;errorByExtension)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#errorByExtension-java.util.function.Function-">errorByExtension</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/error/ErrorByExtensionBuilder.html" title="class in com.commercetools.api.models.error">ErrorByExtensionBuilder</a>,<a href="../../../../../com/commercetools/api/models/error/ErrorByExtensionBuilder.html" title="class in com.commercetools.api.models.error">ErrorByExtensionBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#extensionExtraInfo-java.lang.Object-">extensionExtraInfo</a></span>(java.lang.Object&nbsp;extensionExtraInfo)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#getErrorByExtension--">getErrorByExtension</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Object</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#getExtensionExtraInfo--">getExtensionExtraInfo</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#getLocalizedMessage--">getLocalizedMessage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#localizedMessage-java.util.function.Function-">localizedMessage</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#localizedMessage-com.commercetools.api.models.common.LocalizedString-">localizedMessage</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedMessage)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#message-java.lang.String-">message</a></span>(java.lang.String&nbsp;message)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html#of-com.commercetools.api.models.error.ExtensionBadResponseError-">of</a></span>(<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
@@ -236,6 +255,15 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a>&nbsp;message(java.lang.String&nbsp;message)</pre>
 </li>
 </ul>
+<a name="localizedMessage-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>localizedMessage</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a>&nbsp;localizedMessage(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="localizedMessage-com.commercetools.api.models.common.LocalizedString-">
 <!--   -->
 </a>
@@ -254,6 +282,15 @@ extends java.lang.Object</pre>
 <h4>extensionExtraInfo</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a>&nbsp;extensionExtraInfo(@Nullable
                                                            java.lang.Object&nbsp;extensionExtraInfo)</pre>
+</li>
+</ul>
+<a name="errorByExtension-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>errorByExtension</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionBadResponseErrorBuilder</a>&nbsp;errorByExtension(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/error/ErrorByExtensionBuilder.html" title="class in com.commercetools.api.models.error">ErrorByExtensionBuilder</a>,<a href="../../../../../com/commercetools/api/models/error/ErrorByExtensionBuilder.html" title="class in com.commercetools.api.models.error">ErrorByExtensionBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="errorByExtension-com.commercetools.api.models.error.ErrorByExtension-">
@@ -310,6 +347,20 @@ public&nbsp;java.lang.Object&nbsp;getExtensionExtraInfo()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/error/ExtensionBadResponseError.html" title="interface in com.commercetools.api.models.error">ExtensionBadResponseError</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ExtensionBadResponseError without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

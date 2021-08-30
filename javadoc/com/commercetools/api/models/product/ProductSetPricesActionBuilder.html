@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ProductSetPricesActionBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,48 +154,62 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ProductSetPricesAction without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#getPrices--">getPrices</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#getSku--">getSku</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#getStaged--">getStaged</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#getVariantId--">getVariantId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#of-com.commercetools.api.models.product.ProductSetPricesAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#prices-java.util.List-">prices</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</code>&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#prices-com.commercetools.api.models.common.PriceDraft...-">prices</a></span>(<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#plusPrices-java.util.function.Function-">plusPrices</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#sku-java.lang.String-">sku</a></span>(java.lang.String&nbsp;sku)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#prices-java.util.List-">prices</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#staged-java.lang.Boolean-">staged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#prices-com.commercetools.api.models.common.PriceDraft...-">prices</a></span>(<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#sku-java.lang.String-">sku</a></span>(java.lang.String&nbsp;sku)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#staged-java.lang.Boolean-">staged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#variantId-java.lang.Long-">variantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html#withPrices-java.util.function.Function-">withPrices</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -260,6 +279,24 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a>&nbsp;prices(<a href="../../../../../com/commercetools/api/models/common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</pre>
 </li>
 </ul>
+<a name="withPrices-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withPrices</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a>&nbsp;withPrices(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
+<a name="plusPrices-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>plusPrices</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a>&nbsp;plusPrices(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="prices-java.util.List-">
 <!--   -->
 </a>
@@ -325,6 +362,20 @@ public&nbsp;java.lang.Boolean&nbsp;getStaged()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ProductSetPricesAction without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

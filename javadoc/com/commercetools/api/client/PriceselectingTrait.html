@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":18,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">com.commercetools.api.client</div>
-<h2 title="Interface PriceselectingTrait" class="title">Interface PriceselectingTrait&lt;T&gt;</h2>
+<h2 title="Interface PriceselectingTrait" class="title">Interface PriceselectingTrait&lt;T extends PriceselectingTrait&lt;T&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
@@ -103,7 +103,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">PriceselectingTrait&lt;T&gt;</span></pre>
+<pre>public interface <span class="typeNameLabel">PriceselectingTrait&lt;T extends PriceselectingTrait&lt;T&gt;&gt;</span></pre>
 </li>
 </ul>
 </div>
@@ -117,58 +117,114 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addLocaleProjection-java.lang.String-">addLocaleProjection</a></span>(java.lang.String&nbsp;localeProjection)</code>
+<div class="block">add additional localeProjection query parameter</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addPriceChannel-java.lang.String-">addPriceChannel</a></span>(java.lang.String&nbsp;priceChannel)</code>
+<div class="block">add additional priceChannel query parameter</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addPriceCountry-java.lang.String-">addPriceCountry</a></span>(java.lang.String&nbsp;priceCountry)</code>
+<div class="block">add additional priceCountry query parameter</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addPriceCurrency-java.lang.String-">addPriceCurrency</a></span>(java.lang.String&nbsp;priceCurrency)</code>
+<div class="block">add additional priceCurrency query parameter</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addPriceCustomerGroup-java.lang.String-">addPriceCustomerGroup</a></span>(java.lang.String&nbsp;priceCustomerGroup)</code>
+<div class="block">add additional priceCustomerGroup query parameter</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#addStoreProjection-java.lang.String-">addStoreProjection</a></span>(java.lang.String&nbsp;storeProjection)</code>
+<div class="block">add additional storeProjection query parameter</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#asPriceselectingTrait--">asPriceselectingTrait</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#asPriceselectingTraitToBaseType--">asPriceselectingTraitToBaseType</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getLocaleProjection--">getLocaleProjection</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceChannel--">getPriceChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCountry--">getPriceCountry</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCurrency--">getPriceCurrency</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCustomerGroup--">getPriceCustomerGroup</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getStoreProjection--">getStoreProjection</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withLocaleProjection-java.lang.String-">withLocaleProjection</a></span>(java.lang.String&nbsp;localeProjection)</code>&nbsp;</td>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withLocaleProjection-java.lang.String-">withLocaleProjection</a></span>(java.lang.String&nbsp;localeProjection)</code>
+<div class="block">set localeProjection with the specificied value</div>
+</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceChannel-java.lang.String-">withPriceChannel</a></span>(java.lang.String&nbsp;priceChannel)</code>&nbsp;</td>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceChannel-java.lang.String-">withPriceChannel</a></span>(java.lang.String&nbsp;priceChannel)</code>
+<div class="block">set priceChannel with the specificied value</div>
+</td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCountry-java.lang.String-">withPriceCountry</a></span>(java.lang.String&nbsp;priceCountry)</code>&nbsp;</td>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCountry-java.lang.String-">withPriceCountry</a></span>(java.lang.String&nbsp;priceCountry)</code>
+<div class="block">set priceCountry with the specificied value</div>
+</td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCurrency-java.lang.String-">withPriceCurrency</a></span>(java.lang.String&nbsp;priceCurrency)</code>&nbsp;</td>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCurrency-java.lang.String-">withPriceCurrency</a></span>(java.lang.String&nbsp;priceCurrency)</code>
+<div class="block">set priceCurrency with the specificied value</div>
+</td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCustomerGroup-java.lang.String-">withPriceCustomerGroup</a></span>(java.lang.String&nbsp;priceCustomerGroup)</code>&nbsp;</td>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCustomerGroup-java.lang.String-">withPriceCustomerGroup</a></span>(java.lang.String&nbsp;priceCustomerGroup)</code>
+<div class="block">set priceCustomerGroup with the specificied value</div>
+</td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withStoreProjection-java.lang.String-">withStoreProjection</a></span>(java.lang.String&nbsp;storeProjection)</code>&nbsp;</td>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withStoreProjection-java.lang.String-">withStoreProjection</a></span>(java.lang.String&nbsp;storeProjection)</code>
+<div class="block">set storeProjection with the specificied value</div>
+</td>
 </tr>
 </table>
 </li>
@@ -245,7 +301,18 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>withPriceCurrency</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withPriceCurrency(java.lang.String&nbsp;priceCurrency)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withPriceCurrency(java.lang.String&nbsp;priceCurrency)</pre>
+<div class="block">set priceCurrency with the specificied value</div>
+</li>
+</ul>
+<a name="addPriceCurrency-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCurrency</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addPriceCurrency(java.lang.String&nbsp;priceCurrency)</pre>
+<div class="block">add additional priceCurrency query parameter</div>
 </li>
 </ul>
 <a name="withPriceCountry-java.lang.String-">
@@ -254,7 +321,18 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>withPriceCountry</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withPriceCountry(java.lang.String&nbsp;priceCountry)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withPriceCountry(java.lang.String&nbsp;priceCountry)</pre>
+<div class="block">set priceCountry with the specificied value</div>
+</li>
+</ul>
+<a name="addPriceCountry-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCountry</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addPriceCountry(java.lang.String&nbsp;priceCountry)</pre>
+<div class="block">add additional priceCountry query parameter</div>
 </li>
 </ul>
 <a name="withPriceCustomerGroup-java.lang.String-">
@@ -263,7 +341,18 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>withPriceCustomerGroup</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withPriceCustomerGroup(java.lang.String&nbsp;priceCustomerGroup)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withPriceCustomerGroup(java.lang.String&nbsp;priceCustomerGroup)</pre>
+<div class="block">set priceCustomerGroup with the specificied value</div>
+</li>
+</ul>
+<a name="addPriceCustomerGroup-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCustomerGroup</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addPriceCustomerGroup(java.lang.String&nbsp;priceCustomerGroup)</pre>
+<div class="block">add additional priceCustomerGroup query parameter</div>
 </li>
 </ul>
 <a name="withPriceChannel-java.lang.String-">
@@ -272,7 +361,18 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>withPriceChannel</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withPriceChannel(java.lang.String&nbsp;priceChannel)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withPriceChannel(java.lang.String&nbsp;priceChannel)</pre>
+<div class="block">set priceChannel with the specificied value</div>
+</li>
+</ul>
+<a name="addPriceChannel-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceChannel</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addPriceChannel(java.lang.String&nbsp;priceChannel)</pre>
+<div class="block">add additional priceChannel query parameter</div>
 </li>
 </ul>
 <a name="withLocaleProjection-java.lang.String-">
@@ -281,16 +381,56 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>withLocaleProjection</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withLocaleProjection(java.lang.String&nbsp;localeProjection)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withLocaleProjection(java.lang.String&nbsp;localeProjection)</pre>
+<div class="block">set localeProjection with the specificied value</div>
+</li>
+</ul>
+<a name="addLocaleProjection-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLocaleProjection</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addLocaleProjection(java.lang.String&nbsp;localeProjection)</pre>
+<div class="block">add additional localeProjection query parameter</div>
 </li>
 </ul>
 <a name="withStoreProjection-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>withStoreProjection</h4>
-<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;withStoreProjection(java.lang.String&nbsp;storeProjection)</pre>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;withStoreProjection(java.lang.String&nbsp;storeProjection)</pre>
+<div class="block">set storeProjection with the specificied value</div>
+</li>
+</ul>
+<a name="addStoreProjection-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addStoreProjection</h4>
+<pre><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;addStoreProjection(java.lang.String&nbsp;storeProjection)</pre>
+<div class="block">add additional storeProjection query parameter</div>
+</li>
+</ul>
+<a name="asPriceselectingTrait--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>asPriceselectingTrait</h4>
+<pre>default&nbsp;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&gt;&nbsp;asPriceselectingTrait()</pre>
+</li>
+</ul>
+<a name="asPriceselectingTraitToBaseType--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>asPriceselectingTraitToBaseType</h4>
+<pre>default&nbsp;<a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="type parameter in PriceselectingTrait">T</a>&nbsp;asPriceselectingTraitToBaseType()</pre>
 </li>
 </ul>
 </li>

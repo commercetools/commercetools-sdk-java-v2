@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":9,"i18":9,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":9,"i23":9,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">PriceBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,96 +154,126 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#channel-com.commercetools.api.models.channel.ChannelReference-">channel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;channel)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds Price without checking for non null required values</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#country-java.lang.String-">country</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#channel-com.commercetools.api.models.channel.ChannelReference-">channel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;channel)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#custom-com.commercetools.api.models.type.CustomFields-">custom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#channel-java.util.function.Function-">channel</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#customerGroup-com.commercetools.api.models.customer_group.CustomerGroupReference-">customerGroup</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#country-java.lang.String-">country</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#discounted-com.commercetools.api.models.common.DiscountedPrice-">discounted</a></span>(<a href="../../../../../com/commercetools/api/models/common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#custom-com.commercetools.api.models.type.CustomFields-">custom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#custom-java.util.function.Function-">custom</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<a href="../../../../../com/commercetools/api/models/type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#customerGroup-com.commercetools.api.models.customer_group.CustomerGroupReference-">customerGroup</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#customerGroup-java.util.function.Function-">customerGroup</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#discounted-com.commercetools.api.models.common.DiscountedPrice-">discounted</a></span>(<a href="../../../../../com/commercetools/api/models/common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#discounted-java.util.function.Function-">discounted</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getChannel--">getChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getCountry--">getCountry</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getDiscounted--">getDiscounted</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getTiers--">getTiers</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getValidFrom--">getValidFrom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getValidUntil--">getValidUntil</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#id-java.lang.String-">id</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#of-com.commercetools.api.models.common.Price-">of</a></span>(<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i24" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#plusTiers-java.util.function.Function-">plusTiers</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#tiers-java.util.List-">tiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#tiers-com.commercetools.api.models.common.PriceTier...-">tiers</a></span>(<a href="../../../../../com/commercetools/api/models/common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#validFrom-java.time.ZonedDateTime-">validFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#validUntil-java.time.ZonedDateTime-">validUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#value-com.commercetools.api.models.common.TypedMoney-">value</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr id="i30" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html#withTiers-java.util.function.Function-">withTiers</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -307,6 +342,15 @@ extends java.lang.Object</pre>
                             java.lang.String&nbsp;country)</pre>
 </li>
 </ul>
+<a name="customerGroup-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>customerGroup</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;customerGroup(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="customerGroup-com.commercetools.api.models.customer_group.CustomerGroupReference-">
 <!--   -->
 </a>
@@ -315,6 +359,15 @@ extends java.lang.Object</pre>
 <h4>customerGroup</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;customerGroup(@Nullable
                                   <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</pre>
+</li>
+</ul>
+<a name="channel-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channel</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;channel(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>,<a href="../../../../../com/commercetools/api/models/channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="channel-com.commercetools.api.models.channel.ChannelReference-">
@@ -347,6 +400,15 @@ extends java.lang.Object</pre>
                                java.time.ZonedDateTime&nbsp;validUntil)</pre>
 </li>
 </ul>
+<a name="discounted-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>discounted</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;discounted(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="discounted-com.commercetools.api.models.common.DiscountedPrice-">
 <!--   -->
 </a>
@@ -355,6 +417,15 @@ extends java.lang.Object</pre>
 <h4>discounted</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;discounted(@Nullable
                                <a href="../../../../../com/commercetools/api/models/common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</pre>
+</li>
+</ul>
+<a name="custom-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>custom</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;custom(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<a href="../../../../../com/commercetools/api/models/type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="custom-com.commercetools.api.models.type.CustomFields-">
@@ -375,6 +446,24 @@ extends java.lang.Object</pre>
 <h4>tiers</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;tiers(@Nullable
                           <a href="../../../../../com/commercetools/api/models/common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</pre>
+</li>
+</ul>
+<a name="withTiers-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withTiers</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;withTiers(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
+<a name="plusTiers-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>plusTiers</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&nbsp;plusTiers(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,<a href="../../../../../com/commercetools/api/models/common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="tiers-java.util.List-">
@@ -492,6 +581,20 @@ public&nbsp;java.util.List&lt;<a href="../../../../../com/commercetools/api/mode
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds Price without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

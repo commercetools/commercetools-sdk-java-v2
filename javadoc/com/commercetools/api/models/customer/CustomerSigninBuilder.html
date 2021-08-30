@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":42,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":42,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":9,"i15":10,"i16":10};
+var methods = {"i0":10,"i1":10,"i2":42,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":42,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":9,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">CustomerSigninBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -150,69 +155,79 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#anonymousCart-java.util.function.Function-">anonymousCart</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a>,<a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#anonymousCartId-java.lang.String-">anonymousCartId</a></span>(java.lang.String&nbsp;anonymousCartId)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#anonymousCartSignInMode-com.commercetools.api.models.customer.AnonymousCartSignInMode-">anonymousCartSignInMode</a></span>(<a href="../../../../../com/commercetools/api/models/customer/AnonymousCartSignInMode.html" title="interface in com.commercetools.api.models.customer">AnonymousCartSignInMode</a>&nbsp;anonymousCartSignInMode)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#anonymousId-java.lang.String-">anonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds CustomerSignin without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#email-java.lang.String-">email</a></span>(java.lang.String&nbsp;email)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getAnonymousCart--">getAnonymousCart</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getAnonymousCartId--">getAnonymousCartId</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/AnonymousCartSignInMode.html" title="interface in com.commercetools.api.models.customer">AnonymousCartSignInMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getAnonymousCartSignInMode--">getAnonymousCartSignInMode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getAnonymousId--">getAnonymousId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getEmail--">getEmail</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getPassword--">getPassword</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#getUpdateProductData--">getUpdateProductData</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#of-com.commercetools.api.models.customer.CustomerSignin-">of</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#password-java.lang.String-">password</a></span>(java.lang.String&nbsp;password)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html#updateProductData-java.lang.Boolean-">updateProductData</a></span>(java.lang.Boolean&nbsp;updateProductData)</code>&nbsp;</td>
 </tr>
@@ -283,6 +298,15 @@ extends java.lang.Object</pre>
 public&nbsp;<a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a>&nbsp;anonymousCartId(@Nullable
                                                          java.lang.String&nbsp;anonymousCartId)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="anonymousCart-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>anonymousCart</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a>&nbsp;anonymousCart(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a>,<a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a>&gt;&nbsp;builder)</pre>
 </li>
 </ul>
 <a name="anonymousCart-com.commercetools.api.models.cart.CartResourceIdentifier-">
@@ -402,6 +426,20 @@ public&nbsp;java.lang.Boolean&nbsp;getUpdateProductData()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/customer/CustomerSignin.html" title="interface in com.commercetools.api.models.customer">CustomerSignin</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds CustomerSignin without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

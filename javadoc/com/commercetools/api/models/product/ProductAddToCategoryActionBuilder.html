@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">ProductAddToCategoryActionBuilder</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -149,34 +154,44 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#buildUnchecked--">buildUnchecked</a></span>()</code>
+<div class="block">builds ProductAddToCategoryAction without checking for non null required values</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#category-com.commercetools.api.models.category.CategoryResourceIdentifier-">category</a></span>(<a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&nbsp;category)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#category-java.util.function.Function-">category</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a>,<a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#getCategory--">getCategory</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#getOrderHint--">getOrderHint</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#getStaged--">getStaged</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#of-com.commercetools.api.models.product.ProductAddToCategoryAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#orderHint-java.lang.String-">orderHint</a></span>(java.lang.String&nbsp;orderHint)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html#staged-java.lang.Boolean-">staged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
 </tr>
@@ -219,6 +234,15 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="category-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>category</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryActionBuilder.html" title="class in com.commercetools.api.models.product">ProductAddToCategoryActionBuilder</a>&nbsp;category(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a>,<a href="../../../../../com/commercetools/api/models/category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a>&gt;&nbsp;builder)</pre>
+</li>
+</ul>
 <a name="category-com.commercetools.api.models.category.CategoryResourceIdentifier-">
 <!--   -->
 </a>
@@ -284,6 +308,20 @@ public&nbsp;java.lang.Boolean&nbsp;getStaged()</pre>
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&nbsp;build()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build--">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="buildUnchecked--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildUnchecked</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/product/ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>&nbsp;buildUnchecked()</pre>
+<div class="block">builds ProductAddToCategoryAction without checking for non null required values</div>
 </li>
 </ul>
 <a name="of--">

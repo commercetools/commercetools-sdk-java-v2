@@ -18,6 +18,8 @@ dependencies {
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version ctpJvmSdkVersion
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version ctpJvmSdkVersion
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version ctpJvmSdkVersion
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

@@ -87,6 +87,10 @@ To migrate from the 1.x to the 2.x, there is a guideline below:
 
 * [Documentation](docs/Readme.md)
 
+## Migration from JVM SDK v1 to Java SDK v2
+
+* [Migration guidelines from v1 to v2](Migration.md)
+
 [](definitions for the top badges)
 
 [snyk]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2

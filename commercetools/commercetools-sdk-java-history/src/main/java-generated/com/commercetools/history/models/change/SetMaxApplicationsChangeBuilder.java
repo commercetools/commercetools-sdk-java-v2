@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetMaxApplicationsChangeBuilder {
+public final class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicationsChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class SetMaxApplicationsChangeBuilder {
     }
 
     public SetMaxApplicationsChange build() {
+        Objects.requireNonNull(change, SetMaxApplicationsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMaxApplicationsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMaxApplicationsChange.class + ": nextValue is missing");
+        return new SetMaxApplicationsChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetMaxApplicationsChange without checking for non null required values
+     */
+    public SetMaxApplicationsChange buildUnchecked() {
         return new SetMaxApplicationsChangeImpl(change, previousValue, nextValue);
     }
 

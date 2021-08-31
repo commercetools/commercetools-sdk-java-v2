@@ -2,13 +2,15 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionDraftBuilder {
+public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
@@ -27,6 +29,24 @@ public final class SubscriptionDraftBuilder {
     public SubscriptionDraftBuilder changes(
             @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+
+    public SubscriptionDraftBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
 
@@ -50,6 +70,24 @@ public final class SubscriptionDraftBuilder {
     public SubscriptionDraftBuilder messages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
+        return this;
+    }
+
+    public SubscriptionDraftBuilder withMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        this.messages = new ArrayList<>();
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        if (this.messages == null) {
+            this.messages = new ArrayList<>();
+        }
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
 
@@ -90,6 +128,14 @@ public final class SubscriptionDraftBuilder {
     }
 
     public SubscriptionDraft build() {
+        Objects.requireNonNull(destination, SubscriptionDraft.class + ": destination is missing");
+        return new SubscriptionDraftImpl(changes, destination, key, messages, format);
+    }
+
+    /**
+     * builds SubscriptionDraft without checking for non null required values
+     */
+    public SubscriptionDraft buildUnchecked() {
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
 

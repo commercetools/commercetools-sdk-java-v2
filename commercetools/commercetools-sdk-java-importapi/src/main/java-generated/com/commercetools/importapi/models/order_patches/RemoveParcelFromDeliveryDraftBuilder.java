@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.order_patches;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveParcelFromDeliveryDraftBuilder {
+public final class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParcelFromDeliveryDraft> {
 
     private String parcelId;
 
@@ -20,6 +21,14 @@ public final class RemoveParcelFromDeliveryDraftBuilder {
     }
 
     public RemoveParcelFromDeliveryDraft build() {
+        Objects.requireNonNull(parcelId, RemoveParcelFromDeliveryDraft.class + ": parcelId is missing");
+        return new RemoveParcelFromDeliveryDraftImpl(parcelId);
+    }
+
+    /**
+     * builds RemoveParcelFromDeliveryDraft without checking for non null required values
+     */
+    public RemoveParcelFromDeliveryDraft buildUnchecked() {
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);
     }
 

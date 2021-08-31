@@ -2,11 +2,14 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeChangeFieldDefinitionLabelActionBuilder {
+public final class TypeChangeFieldDefinitionLabelActionBuilder
+        implements Builder<TypeChangeFieldDefinitionLabelAction> {
 
     private String fieldName;
 
@@ -14,6 +17,12 @@ public final class TypeChangeFieldDefinitionLabelActionBuilder {
 
     public TypeChangeFieldDefinitionLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
+        return this;
+    }
+
+    public TypeChangeFieldDefinitionLabelActionBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -32,6 +41,15 @@ public final class TypeChangeFieldDefinitionLabelActionBuilder {
     }
 
     public TypeChangeFieldDefinitionLabelAction build() {
+        Objects.requireNonNull(fieldName, TypeChangeFieldDefinitionLabelAction.class + ": fieldName is missing");
+        Objects.requireNonNull(label, TypeChangeFieldDefinitionLabelAction.class + ": label is missing");
+        return new TypeChangeFieldDefinitionLabelActionImpl(fieldName, label);
+    }
+
+    /**
+     * builds TypeChangeFieldDefinitionLabelAction without checking for non null required values
+     */
+    public TypeChangeFieldDefinitionLabelAction buildUnchecked() {
         return new TypeChangeFieldDefinitionLabelActionImpl(fieldName, label);
     }
 

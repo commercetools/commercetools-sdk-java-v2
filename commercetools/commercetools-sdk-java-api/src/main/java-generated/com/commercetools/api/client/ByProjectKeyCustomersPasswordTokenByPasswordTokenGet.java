@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get Customer by passwordToken</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
         ApiMethod<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet, com.commercetools.api.models.customer.Customer>
@@ -84,10 +81,16 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
         this.passwordToken = passwordToken;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

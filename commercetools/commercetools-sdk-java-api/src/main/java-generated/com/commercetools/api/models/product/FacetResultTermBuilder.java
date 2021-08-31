@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FacetResultTermBuilder {
+public final class FacetResultTermBuilder implements Builder<FacetResultTerm> {
 
     private java.lang.Object term;
 
@@ -46,6 +47,15 @@ public final class FacetResultTermBuilder {
     }
 
     public FacetResultTerm build() {
+        Objects.requireNonNull(term, FacetResultTerm.class + ": term is missing");
+        Objects.requireNonNull(count, FacetResultTerm.class + ": count is missing");
+        return new FacetResultTermImpl(term, count, productCount);
+    }
+
+    /**
+     * builds FacetResultTerm without checking for non null required values
+     */
+    public FacetResultTerm buildUnchecked() {
         return new FacetResultTermImpl(term, count, productCount);
     }
 

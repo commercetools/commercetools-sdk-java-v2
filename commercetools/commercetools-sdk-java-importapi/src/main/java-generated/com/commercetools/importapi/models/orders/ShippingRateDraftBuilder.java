@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingRateDraftBuilder {
+public final class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     private com.commercetools.importapi.models.common.Money price;
 
@@ -18,8 +20,20 @@ public final class ShippingRateDraftBuilder {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
+    public ShippingRateDraftBuilder price(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingRateDraftBuilder price(final com.commercetools.importapi.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+
+    public ShippingRateDraftBuilder freeAbove(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+        this.freeAbove = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -56,6 +70,14 @@ public final class ShippingRateDraftBuilder {
     }
 
     public ShippingRateDraft build() {
+        Objects.requireNonNull(price, ShippingRateDraft.class + ": price is missing");
+        return new ShippingRateDraftImpl(price, freeAbove, tiers);
+    }
+
+    /**
+     * builds ShippingRateDraft without checking for non null required values
+     */
+    public ShippingRateDraft buildUnchecked() {
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 

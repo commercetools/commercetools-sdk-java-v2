@@ -2,15 +2,24 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductStateTransitionMessagePayloadBuilder {
+public final class ProductStateTransitionMessagePayloadBuilder
+        implements Builder<ProductStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference state;
 
     private Boolean force;
+
+    public ProductStateTransitionMessagePayloadBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ProductStateTransitionMessagePayloadBuilder state(
             final com.commercetools.api.models.state.StateReference state) {
@@ -32,6 +41,15 @@ public final class ProductStateTransitionMessagePayloadBuilder {
     }
 
     public ProductStateTransitionMessagePayload build() {
+        Objects.requireNonNull(state, ProductStateTransitionMessagePayload.class + ": state is missing");
+        Objects.requireNonNull(force, ProductStateTransitionMessagePayload.class + ": force is missing");
+        return new ProductStateTransitionMessagePayloadImpl(state, force);
+    }
+
+    /**
+     * builds ProductStateTransitionMessagePayload without checking for non null required values
+     */
+    public ProductStateTransitionMessagePayload buildUnchecked() {
         return new ProductStateTransitionMessagePayloadImpl(state, force);
     }
 

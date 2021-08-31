@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetAssetCustomFieldChangeBuilder {
+public final class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomFieldChange> {
 
     private String change;
 
@@ -32,6 +34,12 @@ public final class SetAssetCustomFieldChangeBuilder {
 
     public SetAssetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
+        return this;
+    }
+
+    public SetAssetCustomFieldChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
 
@@ -76,6 +84,19 @@ public final class SetAssetCustomFieldChangeBuilder {
     }
 
     public SetAssetCustomFieldChange build() {
+        Objects.requireNonNull(change, SetAssetCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetAssetCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId, SetAssetCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(asset, SetAssetCustomFieldChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetCustomFieldChange.class + ": previousValue is missing");
+        return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetAssetCustomFieldChange without checking for non null required values
+     */
+    public SetAssetCustomFieldChange buildUnchecked() {
         return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
     }
 

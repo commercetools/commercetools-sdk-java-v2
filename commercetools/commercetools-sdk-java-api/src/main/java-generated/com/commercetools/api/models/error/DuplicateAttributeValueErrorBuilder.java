@@ -2,11 +2,13 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateAttributeValueErrorBuilder {
+public final class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAttributeValueError> {
 
     private String message;
 
@@ -14,6 +16,12 @@ public final class DuplicateAttributeValueErrorBuilder {
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DuplicateAttributeValueErrorBuilder attribute(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build();
         return this;
     }
 
@@ -32,6 +40,15 @@ public final class DuplicateAttributeValueErrorBuilder {
     }
 
     public DuplicateAttributeValueError build() {
+        Objects.requireNonNull(message, DuplicateAttributeValueError.class + ": message is missing");
+        Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
+        return new DuplicateAttributeValueErrorImpl(message, attribute);
+    }
+
+    /**
+     * builds DuplicateAttributeValueError without checking for non null required values
+     */
+    public DuplicateAttributeValueError buildUnchecked() {
         return new DuplicateAttributeValueErrorImpl(message, attribute);
     }
 

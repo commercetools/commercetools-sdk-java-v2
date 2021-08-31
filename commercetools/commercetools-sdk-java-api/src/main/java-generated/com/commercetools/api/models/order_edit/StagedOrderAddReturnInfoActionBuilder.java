@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddReturnInfoActionBuilder {
+public final class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrderAddReturnInfoAction> {
 
     @Nullable
     private String returnTrackingId;
@@ -26,6 +28,22 @@ public final class StagedOrderAddReturnInfoActionBuilder {
     public StagedOrderAddReturnInfoActionBuilder items(
             final com.commercetools.api.models.order.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public StagedOrderAddReturnInfoActionBuilder withItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderAddReturnInfoActionBuilder plusItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
         return this;
     }
 
@@ -55,6 +73,14 @@ public final class StagedOrderAddReturnInfoActionBuilder {
     }
 
     public StagedOrderAddReturnInfoAction build() {
+        Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");
+        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
+    }
+
+    /**
+     * builds StagedOrderAddReturnInfoAction without checking for non null required values
+     */
+    public StagedOrderAddReturnInfoAction buildUnchecked() {
         return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 

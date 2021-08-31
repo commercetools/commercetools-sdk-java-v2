@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartChangeTaxCalculationModeActionBuilder {
+public final class CartChangeTaxCalculationModeActionBuilder implements Builder<CartChangeTaxCalculationModeAction> {
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
@@ -21,6 +22,15 @@ public final class CartChangeTaxCalculationModeActionBuilder {
     }
 
     public CartChangeTaxCalculationModeAction build() {
+        Objects.requireNonNull(taxCalculationMode,
+            CartChangeTaxCalculationModeAction.class + ": taxCalculationMode is missing");
+        return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
+    }
+
+    /**
+     * builds CartChangeTaxCalculationModeAction without checking for non null required values
+     */
+    public CartChangeTaxCalculationModeAction buildUnchecked() {
         return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
     }
 

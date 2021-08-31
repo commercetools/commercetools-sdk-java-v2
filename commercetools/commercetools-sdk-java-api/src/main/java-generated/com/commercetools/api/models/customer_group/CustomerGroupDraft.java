@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,25 +19,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupDraft {
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> in the project.
+    *  If not, a <code>DuplicateField</code> <a href="/../api/errors#400-bad-request-1">error</a> is thrown.</p>
+    */
     @NotNull
     @JsonProperty("groupName")
     public String getGroupName();
 
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     public void setKey(final String key);
 
     public void setGroupName(final String groupName);
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static CustomerGroupDraft of() {
         return new CustomerGroupDraftImpl();

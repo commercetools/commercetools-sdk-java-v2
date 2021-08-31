@@ -76,26 +76,44 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
         this.projectKey = projectKey;
     }
 
+    /**
+     * set orderEditId with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final String orderEditId) {
         return copy().withQueryParam("orderEditId", orderEditId);
     }
 
+    /**
+     * add additional orderEditId query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final String orderEditId) {
         return copy().addQueryParam("orderEditId", orderEditId);
     }
 
+    /**
+     * set country with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country) {
         return copy().withQueryParam("country", country);
     }
 
+    /**
+     * add additional country query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final String country) {
         return copy().addQueryParam("country", country);
     }
 
+    /**
+     * set state with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state) {
         return copy().withQueryParam("state", state);
     }
 
+    /**
+     * add additional state query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final String state) {
         return copy().addQueryParam("state", state);
     }

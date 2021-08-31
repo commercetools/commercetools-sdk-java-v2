@@ -2,11 +2,13 @@
 package com.commercetools.importapi.models.importoperations;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportOperationPagedResponseBuilder {
+public final class ImportOperationPagedResponseBuilder implements Builder<ImportOperationPagedResponse> {
 
     private Integer limit;
 
@@ -44,6 +46,24 @@ public final class ImportOperationPagedResponseBuilder {
         return this;
     }
 
+    public ImportOperationPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
+        return this;
+    }
+
+    public ImportOperationPagedResponseBuilder plusResults(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
+        return this;
+    }
+
     public ImportOperationPagedResponseBuilder results(
             final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results) {
         this.results = results;
@@ -71,6 +91,18 @@ public final class ImportOperationPagedResponseBuilder {
     }
 
     public ImportOperationPagedResponse build() {
+        Objects.requireNonNull(limit, ImportOperationPagedResponse.class + ": limit is missing");
+        Objects.requireNonNull(offset, ImportOperationPagedResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ImportOperationPagedResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ImportOperationPagedResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImportOperationPagedResponse.class + ": results is missing");
+        return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
+    }
+
+    /**
+     * builds ImportOperationPagedResponse without checking for non null required values
+     */
+    public ImportOperationPagedResponse buildUnchecked() {
         return new ImportOperationPagedResponseImpl(limit, offset, count, total, results);
     }
 

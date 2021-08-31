@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemTaxAmountChangeBuilder {
+public final class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTaxAmountChange> {
 
     private String change;
 
@@ -22,6 +24,12 @@ public final class SetLineItemTaxAmountChangeBuilder {
 
     public SetLineItemTaxAmountChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -42,8 +50,20 @@ public final class SetLineItemTaxAmountChangeBuilder {
     }
 
     public SetLineItemTaxAmountChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemTaxAmountChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -78,6 +98,19 @@ public final class SetLineItemTaxAmountChangeBuilder {
     }
 
     public SetLineItemTaxAmountChange build() {
+        Objects.requireNonNull(change, SetLineItemTaxAmountChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemTaxAmountChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemTaxAmountChange.class + ": variant is missing");
+        Objects.requireNonNull(taxMode, SetLineItemTaxAmountChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetLineItemTaxAmountChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemTaxAmountChange.class + ": previousValue is missing");
+        return new SetLineItemTaxAmountChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemTaxAmountChange without checking for non null required values
+     */
+    public SetLineItemTaxAmountChange buildUnchecked() {
         return new SetLineItemTaxAmountChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
     }
 

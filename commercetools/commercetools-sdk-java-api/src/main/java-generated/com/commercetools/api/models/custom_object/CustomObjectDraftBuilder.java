@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomObjectDraftBuilder {
+public final class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     private String container;
 
@@ -57,6 +58,16 @@ public final class CustomObjectDraftBuilder {
     }
 
     public CustomObjectDraft build() {
+        Objects.requireNonNull(container, CustomObjectDraft.class + ": container is missing");
+        Objects.requireNonNull(key, CustomObjectDraft.class + ": key is missing");
+        Objects.requireNonNull(value, CustomObjectDraft.class + ": value is missing");
+        return new CustomObjectDraftImpl(container, key, value, version);
+    }
+
+    /**
+     * builds CustomObjectDraft without checking for non null required values
+     */
+    public CustomObjectDraft buildUnchecked() {
         return new CustomObjectDraftImpl(container, key, value, version);
     }
 

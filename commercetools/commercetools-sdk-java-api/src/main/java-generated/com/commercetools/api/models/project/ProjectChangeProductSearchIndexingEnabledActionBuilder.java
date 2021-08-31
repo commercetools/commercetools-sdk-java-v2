@@ -3,10 +3,12 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeProductSearchIndexingEnabledActionBuilder {
+public final class ProjectChangeProductSearchIndexingEnabledActionBuilder
+        implements Builder<ProjectChangeProductSearchIndexingEnabledAction> {
 
     private Boolean enabled;
 
@@ -20,6 +22,14 @@ public final class ProjectChangeProductSearchIndexingEnabledActionBuilder {
     }
 
     public ProjectChangeProductSearchIndexingEnabledAction build() {
+        Objects.requireNonNull(enabled, ProjectChangeProductSearchIndexingEnabledAction.class + ": enabled is missing");
+        return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
+    }
+
+    /**
+     * builds ProjectChangeProductSearchIndexingEnabledAction without checking for non null required values
+     */
+    public ProjectChangeProductSearchIndexingEnabledAction buildUnchecked() {
         return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
     }
 

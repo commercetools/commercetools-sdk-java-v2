@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomLineItemDiscountSetMessageBuilder {
+public final class OrderCustomLineItemDiscountSetMessageBuilder
+        implements Builder<OrderCustomLineItemDiscountSetMessage> {
 
     private String id;
 
@@ -61,8 +64,20 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -89,6 +104,14 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -105,9 +128,33 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
         return this;
     }
 
+    public OrderCustomLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
     public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -174,6 +221,29 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessage build() {
+        Objects.requireNonNull(id, OrderCustomLineItemDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomLineItemDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomLineItemDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            OrderCustomLineItemDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            OrderCustomLineItemDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomLineItemDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderCustomLineItemDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessage.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
+        return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
+            discountedPricePerQuantity, taxedPrice);
+    }
+
+    /**
+     * builds OrderCustomLineItemDiscountSetMessage without checking for non null required values
+     */
+    public OrderCustomLineItemDiscountSetMessage buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
             discountedPricePerQuantity, taxedPrice);

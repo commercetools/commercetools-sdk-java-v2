@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemTaxedPriceChangeBuilder {
+public final class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTaxedPriceChange> {
 
     private String change;
 
@@ -24,6 +26,12 @@ public final class SetLineItemTaxedPriceChangeBuilder {
     }
 
     public SetLineItemTaxedPriceChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxedPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -35,8 +43,20 @@ public final class SetLineItemTaxedPriceChangeBuilder {
     }
 
     public SetLineItemTaxedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemTaxedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -67,6 +87,18 @@ public final class SetLineItemTaxedPriceChangeBuilder {
     }
 
     public SetLineItemTaxedPriceChange build() {
+        Objects.requireNonNull(change, SetLineItemTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemTaxedPriceChange.class + ": lineItem is missing");
+        Objects.requireNonNull(lineItemId, SetLineItemTaxedPriceChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(nextValue, SetLineItemTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemTaxedPriceChange.class + ": previousValue is missing");
+        return new SetLineItemTaxedPriceChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemTaxedPriceChange without checking for non null required values
+     */
+    public SetLineItemTaxedPriceChange buildUnchecked() {
         return new SetLineItemTaxedPriceChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);
     }
 

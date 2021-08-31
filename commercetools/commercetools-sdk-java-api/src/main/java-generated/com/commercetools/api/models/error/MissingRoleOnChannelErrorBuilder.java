@@ -2,13 +2,15 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingRoleOnChannelErrorBuilder {
+public final class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnChannelError> {
 
     private String message;
 
@@ -19,6 +21,13 @@ public final class MissingRoleOnChannelErrorBuilder {
 
     public MissingRoleOnChannelErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public MissingRoleOnChannelErrorBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -48,6 +57,15 @@ public final class MissingRoleOnChannelErrorBuilder {
     }
 
     public MissingRoleOnChannelError build() {
+        Objects.requireNonNull(message, MissingRoleOnChannelError.class + ": message is missing");
+        Objects.requireNonNull(missingRole, MissingRoleOnChannelError.class + ": missingRole is missing");
+        return new MissingRoleOnChannelErrorImpl(message, channel, missingRole);
+    }
+
+    /**
+     * builds MissingRoleOnChannelError without checking for non null required values
+     */
+    public MissingRoleOnChannelError buildUnchecked() {
         return new MissingRoleOnChannelErrorImpl(message, channel, missingRole);
     }
 

@@ -1,0 +1,13 @@
+
+dependencies {
+    api project(":rmf:rmf-java-base")
+    api("org.apache.httpcomponents.client5:httpclient5") {
+        version {
+            strictly "[5.0,6.0["
+            prefer "5.1"
+        }
+    }
+    api "commons-io:commons-io" version commons.io
+
+    implementation "javax.validation:validation-api:${versions.validation}"
+}

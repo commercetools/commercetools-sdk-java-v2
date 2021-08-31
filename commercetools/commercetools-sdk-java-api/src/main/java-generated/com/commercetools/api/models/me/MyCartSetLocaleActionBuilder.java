@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartSetLocaleActionBuilder {
+public final class MyCartSetLocaleActionBuilder implements Builder<MyCartSetLocaleAction> {
 
     @Nullable
     private String locale;
@@ -24,6 +25,13 @@ public final class MyCartSetLocaleActionBuilder {
     }
 
     public MyCartSetLocaleAction build() {
+        return new MyCartSetLocaleActionImpl(locale);
+    }
+
+    /**
+     * builds MyCartSetLocaleAction without checking for non null required values
+     */
+    public MyCartSetLocaleAction buildUnchecked() {
         return new MyCartSetLocaleActionImpl(locale);
     }
 

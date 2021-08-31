@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Delete ShoppingList by ID</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>
@@ -108,26 +105,44 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
         this.ID = ID;
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

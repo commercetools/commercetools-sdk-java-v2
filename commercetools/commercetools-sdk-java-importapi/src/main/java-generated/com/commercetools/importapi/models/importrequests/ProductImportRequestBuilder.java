@@ -2,17 +2,37 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductImportRequestBuilder {
+public final class ProductImportRequestBuilder implements Builder<ProductImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
     public ProductImportRequestBuilder resources(
             final com.commercetools.importapi.models.products.ProductImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
+        return this;
+    }
+
+    public ProductImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources
+                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
+        return this;
+    }
+
+    public ProductImportRequestBuilder plusResources(
+            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources
+                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
         return this;
     }
 
@@ -27,6 +47,14 @@ public final class ProductImportRequestBuilder {
     }
 
     public ProductImportRequest build() {
+        Objects.requireNonNull(resources, ProductImportRequest.class + ": resources is missing");
+        return new ProductImportRequestImpl(resources);
+    }
+
+    /**
+     * builds ProductImportRequest without checking for non null required values
+     */
+    public ProductImportRequest buildUnchecked() {
         return new ProductImportRequestImpl(resources);
     }
 

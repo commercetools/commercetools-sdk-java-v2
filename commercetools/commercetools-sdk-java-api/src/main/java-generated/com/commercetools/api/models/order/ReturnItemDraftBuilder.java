@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReturnItemDraftBuilder {
+public final class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     private Long quantity;
 
@@ -73,6 +74,15 @@ public final class ReturnItemDraftBuilder {
     }
 
     public ReturnItemDraft build() {
+        Objects.requireNonNull(quantity, ReturnItemDraft.class + ": quantity is missing");
+        Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
+        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
+    }
+
+    /**
+     * builds ReturnItemDraft without checking for non null required values
+     */
+    public ReturnItemDraft buildUnchecked() {
         return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
     }
 

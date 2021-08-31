@@ -2,11 +2,14 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodRemoveShippingRateActionBuilder {
+public final class ShippingMethodRemoveShippingRateActionBuilder
+        implements Builder<ShippingMethodRemoveShippingRateAction> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
@@ -15,6 +18,13 @@ public final class ShippingMethodRemoveShippingRateActionBuilder {
     public ShippingMethodRemoveShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
+        return this;
+    }
+
+    public ShippingMethodRemoveShippingRateActionBuilder shippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -33,6 +43,16 @@ public final class ShippingMethodRemoveShippingRateActionBuilder {
     }
 
     public ShippingMethodRemoveShippingRateAction build() {
+        Objects.requireNonNull(zone, ShippingMethodRemoveShippingRateAction.class + ": zone is missing");
+        Objects.requireNonNull(shippingRate,
+            ShippingMethodRemoveShippingRateAction.class + ": shippingRate is missing");
+        return new ShippingMethodRemoveShippingRateActionImpl(zone, shippingRate);
+    }
+
+    /**
+     * builds ShippingMethodRemoveShippingRateAction without checking for non null required values
+     */
+    public ShippingMethodRemoveShippingRateAction buildUnchecked() {
         return new ShippingMethodRemoveShippingRateActionImpl(zone, shippingRate);
     }
 

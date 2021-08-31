@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.image_search;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResultItemBuilder {
+public final class ResultItemBuilder implements Builder<ResultItem> {
 
     private String imageUrl;
 
@@ -20,6 +22,22 @@ public final class ResultItemBuilder {
     public ResultItemBuilder productVariants(
             final com.commercetools.ml.models.common.ProductVariant... productVariants) {
         this.productVariants = new ArrayList<>(Arrays.asList(productVariants));
+        return this;
+    }
+
+    public ResultItemBuilder withProductVariants(
+            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
+        this.productVariants = new ArrayList<>();
+        this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
+        return this;
+    }
+
+    public ResultItemBuilder plusProductVariants(
+            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
+        if (this.productVariants == null) {
+            this.productVariants = new ArrayList<>();
+        }
+        this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
         return this;
     }
 
@@ -38,6 +56,15 @@ public final class ResultItemBuilder {
     }
 
     public ResultItem build() {
+        Objects.requireNonNull(imageUrl, ResultItem.class + ": imageUrl is missing");
+        Objects.requireNonNull(productVariants, ResultItem.class + ": productVariants is missing");
+        return new ResultItemImpl(imageUrl, productVariants);
+    }
+
+    /**
+     * builds ResultItem without checking for non null required values
+     */
+    public ResultItem buildUnchecked() {
         return new ResultItemImpl(imageUrl, productVariants);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExternalOAuthBuilder {
+public final class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     private String url;
 
@@ -31,6 +32,15 @@ public final class ExternalOAuthBuilder {
     }
 
     public ExternalOAuth build() {
+        Objects.requireNonNull(url, ExternalOAuth.class + ": url is missing");
+        Objects.requireNonNull(authorizationHeader, ExternalOAuth.class + ": authorizationHeader is missing");
+        return new ExternalOAuthImpl(url, authorizationHeader);
+    }
+
+    /**
+     * builds ExternalOAuth without checking for non null required values
+     */
+    public ExternalOAuth buildUnchecked() {
         return new ExternalOAuthImpl(url, authorizationHeader);
     }
 

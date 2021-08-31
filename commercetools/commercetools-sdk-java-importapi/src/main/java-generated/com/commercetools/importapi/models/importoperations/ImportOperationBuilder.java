@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportOperationBuilder {
+public final class ImportOperationBuilder implements Builder<ImportOperation> {
 
     private Long version;
 
@@ -152,6 +153,22 @@ public final class ImportOperationBuilder {
     }
 
     public ImportOperation build() {
+        Objects.requireNonNull(version, ImportOperation.class + ": version is missing");
+        Objects.requireNonNull(importSinkKey, ImportOperation.class + ": importSinkKey is missing");
+        Objects.requireNonNull(resourceKey, ImportOperation.class + ": resourceKey is missing");
+        Objects.requireNonNull(id, ImportOperation.class + ": id is missing");
+        Objects.requireNonNull(state, ImportOperation.class + ": state is missing");
+        Objects.requireNonNull(createdAt, ImportOperation.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ImportOperation.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(expiresAt, ImportOperation.class + ": expiresAt is missing");
+        return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
+            unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
+    }
+
+    /**
+     * builds ImportOperation without checking for non null required values
+     */
+    public ImportOperation buildUnchecked() {
         return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
             unresolvedReferences, createdAt, lastModifiedAt, expiresAt);
     }

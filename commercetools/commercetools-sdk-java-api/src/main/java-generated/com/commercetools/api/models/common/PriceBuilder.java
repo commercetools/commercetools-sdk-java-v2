@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceBuilder {
+public final class PriceBuilder implements Builder<Price> {
 
     private String id;
 
@@ -54,8 +56,22 @@ public final class PriceBuilder {
     }
 
     public PriceBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public PriceBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -74,8 +90,20 @@ public final class PriceBuilder {
         return this;
     }
 
+    public PriceBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
     public PriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
+        return this;
+    }
+
+    public PriceBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -86,6 +114,22 @@ public final class PriceBuilder {
 
     public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
+        return this;
+    }
+
+    public PriceBuilder withTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public PriceBuilder plusTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()).build());
         return this;
     }
 
@@ -143,6 +187,16 @@ public final class PriceBuilder {
     }
 
     public Price build() {
+        Objects.requireNonNull(id, Price.class + ": id is missing");
+        Objects.requireNonNull(value, Price.class + ": value is missing");
+        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
+            tiers);
+    }
+
+    /**
+     * builds Price without checking for non null required values
+     */
+    public Price buildUnchecked() {
         return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
             tiers);
     }

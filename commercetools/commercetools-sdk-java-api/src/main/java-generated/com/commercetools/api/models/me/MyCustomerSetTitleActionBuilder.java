@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCustomerSetTitleActionBuilder {
+public final class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTitleAction> {
 
     @Nullable
     private String title;
@@ -24,6 +25,13 @@ public final class MyCustomerSetTitleActionBuilder {
     }
 
     public MyCustomerSetTitleAction build() {
+        return new MyCustomerSetTitleActionImpl(title);
+    }
+
+    /**
+     * builds MyCustomerSetTitleAction without checking for non null required values
+     */
+    public MyCustomerSetTitleAction buildUnchecked() {
         return new MyCustomerSetTitleActionImpl(title);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetReturnPaymentStateChangeBuilder {
+public final class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaymentStateChange> {
 
     private String change;
 
@@ -44,6 +45,16 @@ public final class SetReturnPaymentStateChangeBuilder {
     }
 
     public SetReturnPaymentStateChange build() {
+        Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetReturnPaymentStateChange.class + ": previousValue is missing");
+        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetReturnPaymentStateChange without checking for non null required values
+     */
+    public SetReturnPaymentStateChange buildUnchecked() {
         return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);
     }
 

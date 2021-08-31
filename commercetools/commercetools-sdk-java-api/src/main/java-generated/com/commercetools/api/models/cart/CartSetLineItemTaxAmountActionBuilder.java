@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetLineItemTaxAmountActionBuilder {
+public final class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLineItemTaxAmountAction> {
 
     private String lineItemId;
 
@@ -17,6 +19,13 @@ public final class CartSetLineItemTaxAmountActionBuilder {
 
     public CartSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public CartSetLineItemTaxAmountActionBuilder externalTaxAmount(
+            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,6 +45,14 @@ public final class CartSetLineItemTaxAmountActionBuilder {
     }
 
     public CartSetLineItemTaxAmountAction build() {
+        Objects.requireNonNull(lineItemId, CartSetLineItemTaxAmountAction.class + ": lineItemId is missing");
+        return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount);
+    }
+
+    /**
+     * builds CartSetLineItemTaxAmountAction without checking for non null required values
+     */
+    public CartSetLineItemTaxAmountAction buildUnchecked() {
         return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount);
     }
 

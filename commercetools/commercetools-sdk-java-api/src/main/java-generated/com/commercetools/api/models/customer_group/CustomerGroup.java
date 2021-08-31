@@ -23,14 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup> {
 
     /**
-    *  <p>The unique ID of the customer group.</p>
+    *  <p>Unique ID of the customer group.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the customer group.</p>
+    *  <p>Current version of the customer group.</p>
     */
     @NotNull
     @JsonProperty("version")
@@ -45,26 +45,29 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+    *  <p>Present on resources updated after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Unique within the project.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();

@@ -2,17 +2,40 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeChangeCartDiscountsActionBuilder {
+public final class DiscountCodeChangeCartDiscountsActionBuilder
+        implements Builder<DiscountCodeChangeCartDiscountsAction> {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+
+    public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
         return this;
     }
 
@@ -27,6 +50,15 @@ public final class DiscountCodeChangeCartDiscountsActionBuilder {
     }
 
     public DiscountCodeChangeCartDiscountsAction build() {
+        Objects.requireNonNull(cartDiscounts,
+            DiscountCodeChangeCartDiscountsAction.class + ": cartDiscounts is missing");
+        return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
+    }
+
+    /**
+     * builds DiscountCodeChangeCartDiscountsAction without checking for non null required values
+     */
+    public DiscountCodeChangeCartDiscountsAction buildUnchecked() {
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
     }
 

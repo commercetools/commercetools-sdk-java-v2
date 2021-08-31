@@ -34,6 +34,7 @@ public interface PaymentDraft {
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    @Deprecated
     @JsonProperty("externalId")
     public String getExternalId();
 
@@ -111,6 +112,7 @@ public interface PaymentDraft {
 
     public void setAnonymousId(final String anonymousId);
 
+    @Deprecated
     public void setExternalId(final String externalId);
 
     public void setInterfaceId(final String interfaceId);

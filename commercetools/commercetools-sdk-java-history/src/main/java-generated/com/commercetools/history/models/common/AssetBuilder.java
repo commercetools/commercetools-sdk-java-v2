@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetBuilder {
+public final class AssetBuilder implements Builder<Asset> {
 
     private String id;
 
@@ -23,13 +25,31 @@ public final class AssetBuilder {
         return this;
     }
 
+    public AssetBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AssetBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    public AssetBuilder description(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AssetBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public AssetBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -64,6 +84,18 @@ public final class AssetBuilder {
     }
 
     public Asset build() {
+        Objects.requireNonNull(id, Asset.class + ": id is missing");
+        Objects.requireNonNull(name, Asset.class + ": name is missing");
+        Objects.requireNonNull(description, Asset.class + ": description is missing");
+        Objects.requireNonNull(custom, Asset.class + ": custom is missing");
+        Objects.requireNonNull(key, Asset.class + ": key is missing");
+        return new AssetImpl(id, name, description, custom, key);
+    }
+
+    /**
+     * builds Asset without checking for non null required values
+     */
+    public Asset buildUnchecked() {
         return new AssetImpl(id, name, description, custom, key);
     }
 

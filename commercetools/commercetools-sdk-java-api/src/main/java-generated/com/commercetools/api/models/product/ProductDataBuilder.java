@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDataBuilder {
+public final class ProductDataBuilder implements Builder<ProductData> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -37,6 +39,12 @@ public final class ProductDataBuilder {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    public ProductDataBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDataBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -47,9 +55,32 @@ public final class ProductDataBuilder {
         return this;
     }
 
+    public ProductDataBuilder withCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDataBuilder plusCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+        return this;
+    }
+
     public ProductDataBuilder categories(
             final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
+        return this;
+    }
+
+    public ProductDataBuilder categoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
+                .build();
         return this;
     }
 
@@ -60,8 +91,20 @@ public final class ProductDataBuilder {
     }
 
     public ProductDataBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductDataBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public ProductDataBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -70,8 +113,20 @@ public final class ProductDataBuilder {
         return this;
     }
 
+    public ProductDataBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
+        return this;
+    }
+
+    public ProductDataBuilder metaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -82,8 +137,20 @@ public final class ProductDataBuilder {
     }
 
     public ProductDataBuilder metaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductDataBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    public ProductDataBuilder masterVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
         return this;
     }
 
@@ -97,9 +164,31 @@ public final class ProductDataBuilder {
         return this;
     }
 
+    public ProductDataBuilder withVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDataBuilder plusVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
+        return this;
+    }
+
     public ProductDataBuilder variants(
             final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
         this.variants = variants;
+        return this;
+    }
+
+    public ProductDataBuilder searchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
         return this;
     }
 
@@ -158,6 +247,20 @@ public final class ProductDataBuilder {
     }
 
     public ProductData build() {
+        Objects.requireNonNull(name, ProductData.class + ": name is missing");
+        Objects.requireNonNull(categories, ProductData.class + ": categories is missing");
+        Objects.requireNonNull(slug, ProductData.class + ": slug is missing");
+        Objects.requireNonNull(masterVariant, ProductData.class + ": masterVariant is missing");
+        Objects.requireNonNull(variants, ProductData.class + ": variants is missing");
+        Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");
+        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
+            metaKeywords, masterVariant, variants, searchKeywords);
+    }
+
+    /**
+     * builds ProductData without checking for non null required values
+     */
+    public ProductData buildUnchecked() {
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
             metaKeywords, masterVariant, variants, searchKeywords);
     }

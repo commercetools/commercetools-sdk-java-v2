@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeAssetOrderChangeBuilder {
+public final class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderChange> {
 
     private String change;
 
@@ -25,6 +27,24 @@ public final class ChangeAssetOrderChangeBuilder {
         return this;
     }
 
+    public ChangeAssetOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeAssetOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+        return this;
+    }
+
     public ChangeAssetOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
         this.previousValue = previousValue;
@@ -34,6 +54,22 @@ public final class ChangeAssetOrderChangeBuilder {
     public ChangeAssetOrderChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public ChangeAssetOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeAssetOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 
@@ -56,6 +92,16 @@ public final class ChangeAssetOrderChangeBuilder {
     }
 
     public ChangeAssetOrderChange build() {
+        Objects.requireNonNull(change, ChangeAssetOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeAssetOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeAssetOrderChange.class + ": nextValue is missing");
+        return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeAssetOrderChange without checking for non null required values
+     */
+    public ChangeAssetOrderChange buildUnchecked() {
         return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
     }
 

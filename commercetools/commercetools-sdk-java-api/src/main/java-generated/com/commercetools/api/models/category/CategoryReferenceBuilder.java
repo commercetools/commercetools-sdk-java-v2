@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryReferenceBuilder {
+public final class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class CategoryReferenceBuilder {
 
     public CategoryReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CategoryReferenceBuilder obj(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class CategoryReferenceBuilder {
     }
 
     public CategoryReference build() {
+        Objects.requireNonNull(id, CategoryReference.class + ": id is missing");
+        return new CategoryReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds CategoryReference without checking for non null required values
+     */
+    public CategoryReference buildUnchecked() {
         return new CategoryReferenceImpl(id, obj);
     }
 

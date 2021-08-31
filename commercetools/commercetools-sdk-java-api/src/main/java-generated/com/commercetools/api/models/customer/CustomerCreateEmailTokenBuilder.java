@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerCreateEmailTokenBuilder {
+public final class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEmailToken> {
 
     private String id;
 
@@ -46,6 +47,15 @@ public final class CustomerCreateEmailTokenBuilder {
     }
 
     public CustomerCreateEmailToken build() {
+        Objects.requireNonNull(id, CustomerCreateEmailToken.class + ": id is missing");
+        Objects.requireNonNull(ttlMinutes, CustomerCreateEmailToken.class + ": ttlMinutes is missing");
+        return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
+    }
+
+    /**
+     * builds CustomerCreateEmailToken without checking for non null required values
+     */
+    public CustomerCreateEmailToken buildUnchecked() {
         return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
     }
 

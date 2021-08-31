@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemImportDraftBuilder {
+public final class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> {
 
     @Nullable
     private String productId;
@@ -44,14 +46,32 @@ public final class LineItemImportDraftBuilder {
         return this;
     }
 
+    public LineItemImportDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public LineItemImportDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
     public LineItemImportDraftBuilder variant(
+            Function<com.commercetools.api.models.order.ProductVariantImportDraftBuilder, com.commercetools.api.models.order.ProductVariantImportDraftBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.order.ProductVariantImportDraftBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemImportDraftBuilder variant(
             final com.commercetools.api.models.order.ProductVariantImportDraft variant) {
         this.variant = variant;
+        return this;
+    }
+
+    public LineItemImportDraftBuilder price(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 
@@ -70,9 +90,32 @@ public final class LineItemImportDraftBuilder {
         return this;
     }
 
+    public LineItemImportDraftBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public LineItemImportDraftBuilder plusState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
     public LineItemImportDraftBuilder state(
             @Nullable final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
+        return this;
+    }
+
+    public LineItemImportDraftBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -83,8 +126,22 @@ public final class LineItemImportDraftBuilder {
     }
 
     public LineItemImportDraftBuilder distributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public LineItemImportDraftBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
+        return this;
+    }
+
+    public LineItemImportDraftBuilder taxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -95,8 +152,21 @@ public final class LineItemImportDraftBuilder {
     }
 
     public LineItemImportDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemImportDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public LineItemImportDraftBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -158,6 +228,18 @@ public final class LineItemImportDraftBuilder {
     }
 
     public LineItemImportDraft build() {
+        Objects.requireNonNull(name, LineItemImportDraft.class + ": name is missing");
+        Objects.requireNonNull(variant, LineItemImportDraft.class + ": variant is missing");
+        Objects.requireNonNull(price, LineItemImportDraft.class + ": price is missing");
+        Objects.requireNonNull(quantity, LineItemImportDraft.class + ": quantity is missing");
+        return new LineItemImportDraftImpl(productId, name, variant, price, quantity, state, supplyChannel,
+            distributionChannel, taxRate, custom, shippingDetails);
+    }
+
+    /**
+     * builds LineItemImportDraft without checking for non null required values
+     */
+    public LineItemImportDraft buildUnchecked() {
         return new LineItemImportDraftImpl(productId, name, variant, price, quantity, state, supplyChannel,
             distributionChannel, taxRate, custom, shippingDetails);
     }

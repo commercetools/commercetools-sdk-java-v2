@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentStatusInterfaceCodeSetMessageBuilder {
+public final class PaymentStatusInterfaceCodeSetMessageBuilder
+        implements Builder<PaymentStatusInterfaceCodeSetMessage> {
 
     private String id;
 
@@ -58,8 +61,20 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
     }
 
     public PaymentStatusInterfaceCodeSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public PaymentStatusInterfaceCodeSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public PaymentStatusInterfaceCodeSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -82,6 +97,14 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
 
     public PaymentStatusInterfaceCodeSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public PaymentStatusInterfaceCodeSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -153,6 +176,28 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
     }
 
     public PaymentStatusInterfaceCodeSetMessage build() {
+        Objects.requireNonNull(id, PaymentStatusInterfaceCodeSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentStatusInterfaceCodeSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentStatusInterfaceCodeSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentStatusInterfaceCodeSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentStatusInterfaceCodeSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentStatusInterfaceCodeSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentStatusInterfaceCodeSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessage.class + ": paymentId is missing");
+        Objects.requireNonNull(interfaceCode,
+            PaymentStatusInterfaceCodeSetMessage.class + ": interfaceCode is missing");
+        return new PaymentStatusInterfaceCodeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentId,
+            interfaceCode);
+    }
+
+    /**
+     * builds PaymentStatusInterfaceCodeSetMessage without checking for non null required values
+     */
+    public PaymentStatusInterfaceCodeSetMessage buildUnchecked() {
         return new PaymentStatusInterfaceCodeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentId,
             interfaceCode);

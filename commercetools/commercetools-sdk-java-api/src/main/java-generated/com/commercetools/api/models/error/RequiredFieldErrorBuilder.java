@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RequiredFieldErrorBuilder {
+public final class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     private String message;
 
@@ -31,6 +32,15 @@ public final class RequiredFieldErrorBuilder {
     }
 
     public RequiredFieldError build() {
+        Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");
+        Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
+        return new RequiredFieldErrorImpl(message, field);
+    }
+
+    /**
+     * builds RequiredFieldError without checking for non null required values
+     */
+    public RequiredFieldError buildUnchecked() {
         return new RequiredFieldErrorImpl(message, field);
     }
 

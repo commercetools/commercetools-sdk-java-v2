@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectNotConfiguredForLanguagesErrorBuilder {
+public final class ProjectNotConfiguredForLanguagesErrorBuilder
+        implements Builder<ProjectNotConfiguredForLanguagesError> {
 
     private String message;
 
@@ -40,6 +42,14 @@ public final class ProjectNotConfiguredForLanguagesErrorBuilder {
     }
 
     public ProjectNotConfiguredForLanguagesError build() {
+        Objects.requireNonNull(message, ProjectNotConfiguredForLanguagesError.class + ": message is missing");
+        return new ProjectNotConfiguredForLanguagesErrorImpl(message, languages);
+    }
+
+    /**
+     * builds ProjectNotConfiguredForLanguagesError without checking for non null required values
+     */
+    public ProjectNotConfiguredForLanguagesError buildUnchecked() {
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, languages);
     }
 

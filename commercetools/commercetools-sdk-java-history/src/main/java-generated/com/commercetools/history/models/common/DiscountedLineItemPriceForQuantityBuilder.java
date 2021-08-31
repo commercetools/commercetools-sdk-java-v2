@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedLineItemPriceForQuantityBuilder {
+public final class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
     private Integer quantity;
 
@@ -14,6 +16,14 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 
@@ -32,6 +42,16 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
     }
 
     public DiscountedLineItemPriceForQuantity build() {
+        Objects.requireNonNull(quantity, DiscountedLineItemPriceForQuantity.class + ": quantity is missing");
+        Objects.requireNonNull(discountedPrice,
+            DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
+        return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
+    }
+
+    /**
+     * builds DiscountedLineItemPriceForQuantity without checking for non null required values
+     */
+    public DiscountedLineItemPriceForQuantity buildUnchecked() {
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
 

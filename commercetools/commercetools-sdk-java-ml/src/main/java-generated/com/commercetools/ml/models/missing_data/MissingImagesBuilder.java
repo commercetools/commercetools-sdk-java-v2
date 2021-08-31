@@ -2,17 +2,25 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingImagesBuilder {
+public final class MissingImagesBuilder implements Builder<MissingImages> {
 
     private com.commercetools.ml.models.common.ProductReference product;
 
     private Long variantId;
 
     private Long imageCount;
+
+    public MissingImagesBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
 
     public MissingImagesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
@@ -42,6 +50,16 @@ public final class MissingImagesBuilder {
     }
 
     public MissingImages build() {
+        Objects.requireNonNull(product, MissingImages.class + ": product is missing");
+        Objects.requireNonNull(variantId, MissingImages.class + ": variantId is missing");
+        Objects.requireNonNull(imageCount, MissingImages.class + ": imageCount is missing");
+        return new MissingImagesImpl(product, variantId, imageCount);
+    }
+
+    /**
+     * builds MissingImages without checking for non null required values
+     */
+    public MissingImages buildUnchecked() {
         return new MissingImagesImpl(product, variantId, imageCount);
     }
 

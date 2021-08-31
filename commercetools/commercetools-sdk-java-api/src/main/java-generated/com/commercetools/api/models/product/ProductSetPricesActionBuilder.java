@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetPricesActionBuilder {
+public final class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAction> {
 
     @Nullable
     private Long variantId;
@@ -33,6 +35,22 @@ public final class ProductSetPricesActionBuilder {
 
     public ProductSetPricesActionBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+
+    public ProductSetPricesActionBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ProductSetPricesActionBuilder plusPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -67,6 +85,14 @@ public final class ProductSetPricesActionBuilder {
     }
 
     public ProductSetPricesAction build() {
+        Objects.requireNonNull(prices, ProductSetPricesAction.class + ": prices is missing");
+        return new ProductSetPricesActionImpl(variantId, sku, prices, staged);
+    }
+
+    /**
+     * builds ProductSetPricesAction without checking for non null required values
+     */
+    public ProductSetPricesAction buildUnchecked() {
         return new ProductSetPricesActionImpl(variantId, sku, prices, staged);
     }
 

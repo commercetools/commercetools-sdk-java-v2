@@ -2,16 +2,24 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListSetSlugActionBuilder {
+public final class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSetSlugAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
+
+    public ShoppingListSetSlugActionBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ShoppingListSetSlugActionBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -25,6 +33,13 @@ public final class ShoppingListSetSlugActionBuilder {
     }
 
     public ShoppingListSetSlugAction build() {
+        return new ShoppingListSetSlugActionImpl(slug);
+    }
+
+    /**
+     * builds ShoppingListSetSlugAction without checking for non null required values
+     */
+    public ShoppingListSetSlugAction buildUnchecked() {
         return new ShoppingListSetSlugActionImpl(slug);
     }
 

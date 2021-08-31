@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderAddReturnInfoActionBuilder {
+public final class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnInfoAction> {
 
     @Nullable
     private String returnTrackingId;
@@ -25,6 +27,22 @@ public final class OrderAddReturnInfoActionBuilder {
 
     public OrderAddReturnInfoActionBuilder items(final com.commercetools.api.models.order.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public OrderAddReturnInfoActionBuilder withItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public OrderAddReturnInfoActionBuilder plusItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
         return this;
     }
 
@@ -54,6 +72,14 @@ public final class OrderAddReturnInfoActionBuilder {
     }
 
     public OrderAddReturnInfoAction build() {
+        Objects.requireNonNull(items, OrderAddReturnInfoAction.class + ": items is missing");
+        return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
+    }
+
+    /**
+     * builds OrderAddReturnInfoAction without checking for non null required values
+     */
+    public OrderAddReturnInfoAction buildUnchecked() {
         return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 

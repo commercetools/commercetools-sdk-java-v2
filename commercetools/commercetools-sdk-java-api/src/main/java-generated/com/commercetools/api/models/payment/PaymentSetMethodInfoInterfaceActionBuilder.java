@@ -3,10 +3,11 @@ package com.commercetools.api.models.payment;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetMethodInfoInterfaceActionBuilder {
+public final class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<PaymentSetMethodInfoInterfaceAction> {
 
     private String _interface;
 
@@ -20,6 +21,14 @@ public final class PaymentSetMethodInfoInterfaceActionBuilder {
     }
 
     public PaymentSetMethodInfoInterfaceAction build() {
+        Objects.requireNonNull(_interface, PaymentSetMethodInfoInterfaceAction.class + ": interface is missing");
+        return new PaymentSetMethodInfoInterfaceActionImpl(_interface);
+    }
+
+    /**
+     * builds PaymentSetMethodInfoInterfaceAction without checking for non null required values
+     */
+    public PaymentSetMethodInfoInterfaceAction buildUnchecked() {
         return new PaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
 

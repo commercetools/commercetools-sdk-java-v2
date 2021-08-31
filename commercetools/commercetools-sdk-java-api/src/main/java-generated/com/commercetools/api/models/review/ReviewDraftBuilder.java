@@ -2,13 +2,15 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewDraftBuilder {
+public final class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     @Nullable
     private String key;
@@ -89,8 +91,21 @@ public final class ReviewDraftBuilder {
     }
 
     public ReviewDraftBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ReviewDraftBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public ReviewDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -155,6 +170,14 @@ public final class ReviewDraftBuilder {
     }
 
     public ReviewDraft build() {
+        return new ReviewDraftImpl(key, uniquenessValue, locale, authorName, title, text, target, state, rating,
+            customer, custom);
+    }
+
+    /**
+     * builds ReviewDraft without checking for non null required values
+     */
+    public ReviewDraft buildUnchecked() {
         return new ReviewDraftImpl(key, uniquenessValue, locale, authorName, title, text, target, state, rating,
             customer, custom);
     }

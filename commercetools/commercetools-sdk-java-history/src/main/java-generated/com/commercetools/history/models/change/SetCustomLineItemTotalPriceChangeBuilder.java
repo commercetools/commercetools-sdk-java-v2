@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomLineItemTotalPriceChangeBuilder {
+public final class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCustomLineItemTotalPriceChange> {
 
     private String change;
 
@@ -24,6 +26,13 @@ public final class SetCustomLineItemTotalPriceChangeBuilder {
     }
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
@@ -35,8 +44,20 @@ public final class SetCustomLineItemTotalPriceChangeBuilder {
     }
 
     public SetCustomLineItemTotalPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    public SetCustomLineItemTotalPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetCustomLineItemTotalPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -67,6 +88,20 @@ public final class SetCustomLineItemTotalPriceChangeBuilder {
     }
 
     public SetCustomLineItemTotalPriceChange build() {
+        Objects.requireNonNull(change, SetCustomLineItemTotalPriceChange.class + ": change is missing");
+        Objects.requireNonNull(customLineItem, SetCustomLineItemTotalPriceChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemTotalPriceChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemTotalPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemTotalPriceChange.class + ": previousValue is missing");
+        return new SetCustomLineItemTotalPriceChangeImpl(change, customLineItem, customLineItemId, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetCustomLineItemTotalPriceChange without checking for non null required values
+     */
+    public SetCustomLineItemTotalPriceChange buildUnchecked() {
         return new SetCustomLineItemTotalPriceChangeImpl(change, customLineItem, customLineItemId, nextValue,
             previousValue);
     }

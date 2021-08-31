@@ -2,13 +2,15 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelPagedQueryResponseBuilder {
+public final class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class ChannelPagedQueryResponseBuilder {
         return this;
     }
 
+    public ChannelPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
+        return this;
+    }
+
+    public ChannelPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
+        return this;
+    }
+
     public ChannelPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.channel.Channel> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class ChannelPagedQueryResponseBuilder {
     }
 
     public ChannelPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ChannelPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ChannelPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ChannelPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ChannelPagedQueryResponse.class + ": results is missing");
+        return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ChannelPagedQueryResponse without checking for non null required values
+     */
+    public ChannelPagedQueryResponse buildUnchecked() {
         return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemBuilder {
+public final class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
 
@@ -27,8 +29,20 @@ public final class CustomLineItemBuilder {
         return this;
     }
 
+    public CustomLineItemBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public CustomLineItemBuilder money(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.money = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -37,8 +51,20 @@ public final class CustomLineItemBuilder {
         return this;
     }
 
+    public CustomLineItemBuilder taxedPrice(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder taxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    public CustomLineItemBuilder totalPrice(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -86,6 +112,20 @@ public final class CustomLineItemBuilder {
     }
 
     public CustomLineItem build() {
+        Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
+        Objects.requireNonNull(money, CustomLineItem.class + ": money is missing");
+        Objects.requireNonNull(taxedPrice, CustomLineItem.class + ": taxedPrice is missing");
+        Objects.requireNonNull(totalPrice, CustomLineItem.class + ": totalPrice is missing");
+        Objects.requireNonNull(slug, CustomLineItem.class + ": slug is missing");
+        Objects.requireNonNull(quantity, CustomLineItem.class + ": quantity is missing");
+        return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
+    }
+
+    /**
+     * builds CustomLineItem without checking for non null required values
+     */
+    public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
     }
 

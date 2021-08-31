@@ -2,13 +2,15 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionBuilder {
+public final class ExtensionBuilder implements Builder<Extension> {
 
     private String id;
 
@@ -55,8 +57,20 @@ public final class ExtensionBuilder {
     }
 
     public ExtensionBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ExtensionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ExtensionBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -77,6 +91,22 @@ public final class ExtensionBuilder {
 
     public ExtensionBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
+        return this;
+    }
+
+    public ExtensionBuilder withTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        this.triggers = new ArrayList<>();
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionBuilder plusTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+        if (this.triggers == null) {
+            this.triggers = new ArrayList<>();
+        }
+        this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
 
@@ -136,6 +166,20 @@ public final class ExtensionBuilder {
     }
 
     public Extension build() {
+        Objects.requireNonNull(id, Extension.class + ": id is missing");
+        Objects.requireNonNull(version, Extension.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Extension.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Extension.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(destination, Extension.class + ": destination is missing");
+        Objects.requireNonNull(triggers, Extension.class + ": triggers is missing");
+        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
+            triggers, timeoutInMs);
+    }
+
+    /**
+     * builds Extension without checking for non null required values
+     */
+    public Extension buildUnchecked() {
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
             triggers, timeoutInMs);
     }

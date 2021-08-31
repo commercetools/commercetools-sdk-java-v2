@@ -2,13 +2,15 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreSetDistributionChannelsActionBuilder {
+public final class StoreSetDistributionChannelsActionBuilder implements Builder<StoreSetDistributionChannelsAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
@@ -16,6 +18,24 @@ public final class StoreSetDistributionChannelsActionBuilder {
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
+        return this;
+    }
+
+    public StoreSetDistributionChannelsActionBuilder withDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannels = new ArrayList<>();
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        if (this.distributionChannels == null) {
+            this.distributionChannels = new ArrayList<>();
+        }
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
 
@@ -31,6 +51,13 @@ public final class StoreSetDistributionChannelsActionBuilder {
     }
 
     public StoreSetDistributionChannelsAction build() {
+        return new StoreSetDistributionChannelsActionImpl(distributionChannels);
+    }
+
+    /**
+     * builds StoreSetDistributionChannelsAction without checking for non null required values
+     */
+    public StoreSetDistributionChannelsAction buildUnchecked() {
         return new StoreSetDistributionChannelsActionImpl(distributionChannels);
     }
 

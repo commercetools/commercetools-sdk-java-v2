@@ -3,10 +3,11 @@ package com.commercetools.api.models.category;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryChangeOrderHintActionBuilder {
+public final class CategoryChangeOrderHintActionBuilder implements Builder<CategoryChangeOrderHintAction> {
 
     private String orderHint;
 
@@ -20,6 +21,14 @@ public final class CategoryChangeOrderHintActionBuilder {
     }
 
     public CategoryChangeOrderHintAction build() {
+        Objects.requireNonNull(orderHint, CategoryChangeOrderHintAction.class + ": orderHint is missing");
+        return new CategoryChangeOrderHintActionImpl(orderHint);
+    }
+
+    /**
+     * builds CategoryChangeOrderHintAction without checking for non null required values
+     */
+    public CategoryChangeOrderHintAction buildUnchecked() {
         return new CategoryChangeOrderHintActionImpl(orderHint);
     }
 

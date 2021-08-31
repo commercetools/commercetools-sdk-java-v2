@@ -63,6 +63,14 @@ public class ApiFactory {
         return create(clientSupplier).withProjectKey(projectKey);
     }
 
+    public static ApiRoot create(final ClientCredentials credentials) {
+        return ApiRootBuilder.of().defaultClient(credentials).build();
+    }
+
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return ApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
+    }
+
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
         return ApiRootBuilder.of().defaultClient(credentials, tokenEndpoint, apiEndpoint).build();
@@ -127,6 +135,10 @@ public class ApiFactory {
 
     public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
         return ApiRoot.fromClient(clientSupplier.get());
+    }
+
+    public static ApiHttpClient defaultClient(final ClientCredentials credentials) {
+        return ApiRootBuilder.of().defaultClient(credentials).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

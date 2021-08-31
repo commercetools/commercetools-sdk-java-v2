@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentMethodInfoBuilder {
+public final class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     @Nullable
     private String paymentInterface;
@@ -26,6 +28,12 @@ public final class PaymentMethodInfoBuilder {
 
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
         this.method = method;
+        return this;
+    }
+
+    public PaymentMethodInfoBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -50,6 +58,13 @@ public final class PaymentMethodInfoBuilder {
     }
 
     public PaymentMethodInfo build() {
+        return new PaymentMethodInfoImpl(paymentInterface, method, name);
+    }
+
+    /**
+     * builds PaymentMethodInfo without checking for non null required values
+     */
+    public PaymentMethodInfo buildUnchecked() {
         return new PaymentMethodInfoImpl(paymentInterface, method, name);
     }
 

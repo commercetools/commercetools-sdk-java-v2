@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddAssetActionBuilder {
+public final class ProductAddAssetActionBuilder implements Builder<ProductAddAssetAction> {
 
     @Nullable
     private Long variantId;
@@ -36,6 +38,12 @@ public final class ProductAddAssetActionBuilder {
 
     public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+
+    public ProductAddAssetActionBuilder asset(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build();
         return this;
     }
 
@@ -74,6 +82,14 @@ public final class ProductAddAssetActionBuilder {
     }
 
     public ProductAddAssetAction build() {
+        Objects.requireNonNull(asset, ProductAddAssetAction.class + ": asset is missing");
+        return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
+    }
+
+    /**
+     * builds ProductAddAssetAction without checking for non null required values
+     */
+    public ProductAddAssetAction buildUnchecked() {
         return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
     }
 

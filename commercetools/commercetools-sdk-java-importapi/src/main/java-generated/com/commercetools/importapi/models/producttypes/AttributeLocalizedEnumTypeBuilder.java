@@ -2,17 +2,39 @@
 package com.commercetools.importapi.models.producttypes;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeLocalizedEnumTypeBuilder {
+public final class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocalizedEnumType> {
 
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values;
 
     public AttributeLocalizedEnumTypeBuilder values(
             final com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue... values) {
         this.values = new ArrayList<>(Arrays.asList(values));
+        return this;
+    }
+
+    public AttributeLocalizedEnumTypeBuilder withValues(
+            Function<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public AttributeLocalizedEnumTypeBuilder plusValues(
+            Function<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder> builder) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValueBuilder.of())
+                    .build());
         return this;
     }
 
@@ -27,6 +49,14 @@ public final class AttributeLocalizedEnumTypeBuilder {
     }
 
     public AttributeLocalizedEnumType build() {
+        Objects.requireNonNull(values, AttributeLocalizedEnumType.class + ": values is missing");
+        return new AttributeLocalizedEnumTypeImpl(values);
+    }
+
+    /**
+     * builds AttributeLocalizedEnumType without checking for non null required values
+     */
+    public AttributeLocalizedEnumType buildUnchecked() {
         return new AttributeLocalizedEnumTypeImpl(values);
     }
 

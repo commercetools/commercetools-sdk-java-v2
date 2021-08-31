@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get TaxCategory by key</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyTaxCategoriesKeyByKeyGet
         extends ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet, com.commercetools.api.models.tax_category.TaxCategory>
@@ -82,10 +79,16 @@ public class ByProjectKeyTaxCategoriesKeyByKeyGet
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

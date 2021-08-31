@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddedToCategoryMessageBuilder {
+public final class ProductAddedToCategoryMessageBuilder implements Builder<ProductAddedToCategoryMessage> {
 
     private String id;
 
@@ -58,8 +60,20 @@ public final class ProductAddedToCategoryMessageBuilder {
     }
 
     public ProductAddedToCategoryMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductAddedToCategoryMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductAddedToCategoryMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -85,8 +99,22 @@ public final class ProductAddedToCategoryMessageBuilder {
     }
 
     public ProductAddedToCategoryMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductAddedToCategoryMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public ProductAddedToCategoryMessageBuilder category(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
 
@@ -153,6 +181,23 @@ public final class ProductAddedToCategoryMessageBuilder {
     }
 
     public ProductAddedToCategoryMessage build() {
+        Objects.requireNonNull(id, ProductAddedToCategoryMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductAddedToCategoryMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductAddedToCategoryMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductAddedToCategoryMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductAddedToCategoryMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductAddedToCategoryMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductAddedToCategoryMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(category, ProductAddedToCategoryMessage.class + ": category is missing");
+        Objects.requireNonNull(staged, ProductAddedToCategoryMessage.class + ": staged is missing");
+        return new ProductAddedToCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
+    }
+
+    /**
+     * builds ProductAddedToCategoryMessage without checking for non null required values
+     */
+    public ProductAddedToCategoryMessage buildUnchecked() {
         return new ProductAddedToCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderStateTransitionMessageBuilder {
+public final class OrderStateTransitionMessageBuilder implements Builder<OrderStateTransitionMessage> {
 
     private String id;
 
@@ -61,8 +63,20 @@ public final class OrderStateTransitionMessageBuilder {
     }
 
     public OrderStateTransitionMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderStateTransitionMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderStateTransitionMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -88,13 +102,33 @@ public final class OrderStateTransitionMessageBuilder {
     }
 
     public OrderStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    public OrderStateTransitionMessageBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderStateTransitionMessageBuilder state(final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
+        return this;
+    }
+
+    public OrderStateTransitionMessageBuilder oldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 
@@ -166,6 +200,23 @@ public final class OrderStateTransitionMessageBuilder {
     }
 
     public OrderStateTransitionMessage build() {
+        Objects.requireNonNull(id, OrderStateTransitionMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStateTransitionMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStateTransitionMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStateTransitionMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStateTransitionMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStateTransitionMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStateTransitionMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(state, OrderStateTransitionMessage.class + ": state is missing");
+        Objects.requireNonNull(force, OrderStateTransitionMessage.class + ": force is missing");
+        return new OrderStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, oldState, force);
+    }
+
+    /**
+     * builds OrderStateTransitionMessage without checking for non null required values
+     */
+    public OrderStateTransitionMessage buildUnchecked() {
         return new OrderStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, state, oldState, force);
     }

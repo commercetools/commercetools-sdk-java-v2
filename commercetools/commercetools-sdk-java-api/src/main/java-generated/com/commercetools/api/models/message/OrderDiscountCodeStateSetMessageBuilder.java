@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDiscountCodeStateSetMessageBuilder {
+public final class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDiscountCodeStateSetMessage> {
 
     private String id;
 
@@ -61,8 +63,20 @@ public final class OrderDiscountCodeStateSetMessageBuilder {
     }
 
     public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderDiscountCodeStateSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -89,8 +103,23 @@ public final class OrderDiscountCodeStateSetMessageBuilder {
     }
 
     public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public OrderDiscountCodeStateSetMessageBuilder discountCode(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -169,6 +198,25 @@ public final class OrderDiscountCodeStateSetMessageBuilder {
     }
 
     public OrderDiscountCodeStateSetMessage build() {
+        Objects.requireNonNull(id, OrderDiscountCodeStateSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderDiscountCodeStateSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderDiscountCodeStateSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderDiscountCodeStateSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderDiscountCodeStateSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderDiscountCodeStateSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderDiscountCodeStateSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(discountCode, OrderDiscountCodeStateSetMessage.class + ": discountCode is missing");
+        Objects.requireNonNull(state, OrderDiscountCodeStateSetMessage.class + ": state is missing");
+        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
+            oldState);
+    }
+
+    /**
+     * builds OrderDiscountCodeStateSetMessage without checking for non null required values
+     */
+    public OrderDiscountCodeStateSetMessage buildUnchecked() {
         return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
             oldState);

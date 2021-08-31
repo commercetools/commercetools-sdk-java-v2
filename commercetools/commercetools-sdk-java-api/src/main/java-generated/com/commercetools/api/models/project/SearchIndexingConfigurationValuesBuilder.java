@@ -2,13 +2,15 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchIndexingConfigurationValuesBuilder {
+public final class SearchIndexingConfigurationValuesBuilder implements Builder<SearchIndexingConfigurationValues> {
 
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
@@ -28,6 +30,12 @@ public final class SearchIndexingConfigurationValuesBuilder {
     public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
             @Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
 
@@ -53,6 +61,13 @@ public final class SearchIndexingConfigurationValuesBuilder {
     }
 
     public SearchIndexingConfigurationValues build() {
+        return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
+    }
+
+    /**
+     * builds SearchIndexingConfigurationValues without checking for non null required values
+     */
+    public SearchIndexingConfigurationValues buildUnchecked() {
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 

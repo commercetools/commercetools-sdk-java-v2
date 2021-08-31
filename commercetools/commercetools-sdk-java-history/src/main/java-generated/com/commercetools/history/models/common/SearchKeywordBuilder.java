@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchKeywordBuilder {
+public final class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     private String text;
 
@@ -14,6 +16,13 @@ public final class SearchKeywordBuilder {
 
     public SearchKeywordBuilder text(final String text) {
         this.text = text;
+        return this;
+    }
+
+    public SearchKeywordBuilder suggestTokenizer(
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizerBuilder> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of())
+                .build();
         return this;
     }
 
@@ -32,6 +41,15 @@ public final class SearchKeywordBuilder {
     }
 
     public SearchKeyword build() {
+        Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
+        Objects.requireNonNull(suggestTokenizer, SearchKeyword.class + ": suggestTokenizer is missing");
+        return new SearchKeywordImpl(text, suggestTokenizer);
+    }
+
+    /**
+     * builds SearchKeyword without checking for non null required values
+     */
+    public SearchKeyword buildUnchecked() {
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 

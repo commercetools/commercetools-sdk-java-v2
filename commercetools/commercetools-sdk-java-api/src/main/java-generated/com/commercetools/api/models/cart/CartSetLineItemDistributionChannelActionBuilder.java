@@ -2,13 +2,16 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetLineItemDistributionChannelActionBuilder {
+public final class CartSetLineItemDistributionChannelActionBuilder
+        implements Builder<CartSetLineItemDistributionChannelAction> {
 
     private String lineItemId;
 
@@ -17,6 +20,14 @@ public final class CartSetLineItemDistributionChannelActionBuilder {
 
     public CartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public CartSetLineItemDistributionChannelActionBuilder distributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,6 +47,14 @@ public final class CartSetLineItemDistributionChannelActionBuilder {
     }
 
     public CartSetLineItemDistributionChannelAction build() {
+        Objects.requireNonNull(lineItemId, CartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
+        return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
+    }
+
+    /**
+     * builds CartSetLineItemDistributionChannelAction without checking for non null required values
+     */
+    public CartSetLineItemDistributionChannelAction buildUnchecked() {
         return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 

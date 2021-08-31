@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetAddressChangeBuilder {
+public final class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     private String change;
 
@@ -19,8 +21,20 @@ public final class SetAddressChangeBuilder {
         return this;
     }
 
+    public SetAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
     public SetAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetAddressChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -42,6 +56,16 @@ public final class SetAddressChangeBuilder {
     }
 
     public SetAddressChange build() {
+        Objects.requireNonNull(change, SetAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAddressChange.class + ": previousValue is missing");
+        return new SetAddressChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetAddressChange without checking for non null required values
+     */
+    public SetAddressChange buildUnchecked() {
         return new SetAddressChangeImpl(change, nextValue, previousValue);
     }
 

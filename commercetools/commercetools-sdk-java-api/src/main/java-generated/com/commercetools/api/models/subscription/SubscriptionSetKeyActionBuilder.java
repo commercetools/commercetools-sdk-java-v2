@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionSetKeyActionBuilder {
+public final class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetKeyAction> {
 
     @Nullable
     private String key;
@@ -24,6 +25,13 @@ public final class SubscriptionSetKeyActionBuilder {
     }
 
     public SubscriptionSetKeyAction build() {
+        return new SubscriptionSetKeyActionImpl(key);
+    }
+
+    /**
+     * builds SubscriptionSetKeyAction without checking for non null required values
+     */
+    public SubscriptionSetKeyAction buildUnchecked() {
         return new SubscriptionSetKeyActionImpl(key);
     }
 

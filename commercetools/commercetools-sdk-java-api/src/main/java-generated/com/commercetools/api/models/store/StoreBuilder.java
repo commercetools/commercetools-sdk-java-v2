@@ -2,13 +2,15 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreBuilder {
+public final class StoreBuilder implements Builder<Store> {
 
     private String id;
 
@@ -61,8 +63,20 @@ public final class StoreBuilder {
     }
 
     public StoreBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public StoreBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public StoreBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -73,6 +87,12 @@ public final class StoreBuilder {
 
     public StoreBuilder key(final String key) {
         this.key = key;
+        return this;
+    }
+
+    public StoreBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -97,6 +117,24 @@ public final class StoreBuilder {
         return this;
     }
 
+    public StoreBuilder withDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.distributionChannels = new ArrayList<>();
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StoreBuilder plusDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        if (this.distributionChannels == null) {
+            this.distributionChannels = new ArrayList<>();
+        }
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
     public StoreBuilder distributionChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
@@ -109,9 +147,33 @@ public final class StoreBuilder {
         return this;
     }
 
+    public StoreBuilder withSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannels = new ArrayList<>();
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StoreBuilder plusSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        if (this.supplyChannels == null) {
+            this.supplyChannels = new ArrayList<>();
+        }
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
+        return this;
+    }
+
     public StoreBuilder supplyChannels(
             @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
+        return this;
+    }
+
+    public StoreBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -175,6 +237,20 @@ public final class StoreBuilder {
     }
 
     public Store build() {
+        Objects.requireNonNull(id, Store.class + ": id is missing");
+        Objects.requireNonNull(version, Store.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Store.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Store.class + ": key is missing");
+        Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");
+        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
+            distributionChannels, supplyChannels, custom);
+    }
+
+    /**
+     * builds Store without checking for non null required values
+     */
+    public Store buildUnchecked() {
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
             distributionChannels, supplyChannels, custom);
     }

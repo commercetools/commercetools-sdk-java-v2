@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetProductPriceCustomTypeChangeBuilder {
+public final class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProductPriceCustomTypeChange> {
 
     private String change;
 
@@ -27,8 +29,20 @@ public final class SetProductPriceCustomTypeChangeBuilder {
     }
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public SetProductPriceCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetProductPriceCustomTypeChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -55,6 +69,17 @@ public final class SetProductPriceCustomTypeChangeBuilder {
     }
 
     public SetProductPriceCustomTypeChange build() {
+        Objects.requireNonNull(change, SetProductPriceCustomTypeChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetProductPriceCustomTypeChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetProductPriceCustomTypeChange.class + ": nextValue is missing");
+        return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetProductPriceCustomTypeChange without checking for non null required values
+     */
+    public SetProductPriceCustomTypeChange buildUnchecked() {
         return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

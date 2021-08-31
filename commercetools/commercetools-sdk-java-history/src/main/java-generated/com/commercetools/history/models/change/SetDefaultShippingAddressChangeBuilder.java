@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDefaultShippingAddressChangeBuilder {
+public final class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaultShippingAddressChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetDefaultShippingAddressChangeBuilder {
     }
 
     public SetDefaultShippingAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public SetDefaultShippingAddressChangeBuilder nextValue(
             final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetDefaultShippingAddressChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class SetDefaultShippingAddressChangeBuilder {
     }
 
     public SetDefaultShippingAddressChange build() {
+        Objects.requireNonNull(change, SetDefaultShippingAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetDefaultShippingAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDefaultShippingAddressChange.class + ": previousValue is missing");
+        return new SetDefaultShippingAddressChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetDefaultShippingAddressChange without checking for non null required values
+     */
+    public SetDefaultShippingAddressChange buildUnchecked() {
         return new SetDefaultShippingAddressChangeImpl(change, nextValue, previousValue);
     }
 

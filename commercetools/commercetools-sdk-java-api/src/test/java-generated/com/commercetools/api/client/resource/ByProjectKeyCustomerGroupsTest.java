@@ -61,7 +61,9 @@ public class ByProjectKeyCustomerGroupsTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWhere("where").createHttpRequest(),
+                "get", "/test_projectKey/customer-groups?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
@@ -87,11 +89,6 @@ public class ByProjectKeyCustomerGroupsTest {
                         .get()
                         .withWithTotal(true)
                         .createHttpRequest(), "get", "/test_projectKey/customer-groups?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .customerGroups()
-                        .get()
-                        .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -113,12 +110,12 @@ public class ByProjectKeyCustomerGroupsTest {
 
     private Object[] executeMethodParameters() {
         return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWithTotal(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLRequestBuilder {
+public final class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
 
     private String query;
 
@@ -25,6 +27,12 @@ public final class GraphQLRequestBuilder {
 
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
         this.operationName = operationName;
+        return this;
+    }
+
+    public GraphQLRequestBuilder variables(
+            Function<com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder, com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder> builder) {
+        this.variables = builder.apply(com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder.of()).build();
         return this;
     }
 
@@ -49,6 +57,14 @@ public final class GraphQLRequestBuilder {
     }
 
     public GraphQLRequest build() {
+        Objects.requireNonNull(query, GraphQLRequest.class + ": query is missing");
+        return new GraphQLRequestImpl(query, operationName, variables);
+    }
+
+    /**
+     * builds GraphQLRequest without checking for non null required values
+     */
+    public GraphQLRequest buildUnchecked() {
         return new GraphQLRequestImpl(query, operationName, variables);
     }
 

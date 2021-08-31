@@ -20,6 +20,7 @@ public final class PaymentDraftImpl implements PaymentDraft {
 
     private String anonymousId;
 
+    @Deprecated
     private String externalId;
 
     private String interfaceId;
@@ -96,6 +97,7 @@ public final class PaymentDraftImpl implements PaymentDraft {
         return this.anonymousId;
     }
 
+    @Deprecated
     public String getExternalId() {
         return this.externalId;
     }
@@ -178,6 +180,7 @@ public final class PaymentDraftImpl implements PaymentDraft {
         this.anonymousId = anonymousId;
     }
 
+    @Deprecated
     public void setExternalId(final String externalId) {
         this.externalId = externalId;
     }

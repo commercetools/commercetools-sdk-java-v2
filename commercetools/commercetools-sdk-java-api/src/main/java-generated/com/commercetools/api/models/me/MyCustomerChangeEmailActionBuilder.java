@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCustomerChangeEmailActionBuilder {
+public final class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerChangeEmailAction> {
 
     private String email;
 
@@ -20,6 +21,14 @@ public final class MyCustomerChangeEmailActionBuilder {
     }
 
     public MyCustomerChangeEmailAction build() {
+        Objects.requireNonNull(email, MyCustomerChangeEmailAction.class + ": email is missing");
+        return new MyCustomerChangeEmailActionImpl(email);
+    }
+
+    /**
+     * builds MyCustomerChangeEmailAction without checking for non null required values
+     */
+    public MyCustomerChangeEmailAction buildUnchecked() {
         return new MyCustomerChangeEmailActionImpl(email);
     }
 

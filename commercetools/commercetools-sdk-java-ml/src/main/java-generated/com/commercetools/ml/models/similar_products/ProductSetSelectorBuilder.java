@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetSelectorBuilder {
+public final class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     private String projectKey;
 
@@ -97,6 +98,15 @@ public final class ProductSetSelectorBuilder {
     }
 
     public ProductSetSelector build() {
+        Objects.requireNonNull(projectKey, ProductSetSelector.class + ": projectKey is missing");
+        return new ProductSetSelectorImpl(projectKey, productIds, productTypeIds, staged, includeVariants,
+            productSetLimit);
+    }
+
+    /**
+     * builds ProductSetSelector without checking for non null required values
+     */
+    public ProductSetSelector buildUnchecked() {
         return new ProductSetSelectorImpl(projectKey, productIds, productTypeIds, staged, includeVariants,
             productSetLimit);
     }

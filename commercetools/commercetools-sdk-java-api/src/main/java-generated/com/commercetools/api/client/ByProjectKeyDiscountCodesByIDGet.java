@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get DiscountCode by ID</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyDiscountCodesByIDGet
         extends ApiMethod<ByProjectKeyDiscountCodesByIDGet, com.commercetools.api.models.discount_code.DiscountCode>
@@ -82,10 +79,16 @@ public class ByProjectKeyDiscountCodesByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyDiscountCodesByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyDiscountCodesByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

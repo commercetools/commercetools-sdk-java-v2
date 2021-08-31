@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShippingRateInputSetMessagePayloadBuilder {
+public final class OrderShippingRateInputSetMessagePayloadBuilder
+        implements Builder<OrderShippingRateInputSetMessagePayload> {
 
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
@@ -39,6 +41,13 @@ public final class OrderShippingRateInputSetMessagePayloadBuilder {
     }
 
     public OrderShippingRateInputSetMessagePayload build() {
+        return new OrderShippingRateInputSetMessagePayloadImpl(shippingRateInput, oldShippingRateInput);
+    }
+
+    /**
+     * builds OrderShippingRateInputSetMessagePayload without checking for non null required values
+     */
+    public OrderShippingRateInputSetMessagePayload buildUnchecked() {
         return new OrderShippingRateInputSetMessagePayloadImpl(shippingRateInput, oldShippingRateInput);
     }
 

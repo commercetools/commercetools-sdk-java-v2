@@ -2,13 +2,16 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetCustomLineItemShippingDetailsActionBuilder {
+public final class CartSetCustomLineItemShippingDetailsActionBuilder
+        implements Builder<CartSetCustomLineItemShippingDetailsAction> {
 
     private String customLineItemId;
 
@@ -17,6 +20,13 @@ public final class CartSetCustomLineItemShippingDetailsActionBuilder {
 
     public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    public CartSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,6 +46,15 @@ public final class CartSetCustomLineItemShippingDetailsActionBuilder {
     }
 
     public CartSetCustomLineItemShippingDetailsAction build() {
+        Objects.requireNonNull(customLineItemId,
+            CartSetCustomLineItemShippingDetailsAction.class + ": customLineItemId is missing");
+        return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
+    }
+
+    /**
+     * builds CartSetCustomLineItemShippingDetailsAction without checking for non null required values
+     */
+    public CartSetCustomLineItemShippingDetailsAction buildUnchecked() {
         return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
     }
 

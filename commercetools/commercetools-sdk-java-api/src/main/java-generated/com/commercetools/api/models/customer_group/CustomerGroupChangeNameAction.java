@@ -18,6 +18,9 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
 
     String CHANGE_NAME = "changeName";
 
+    /**
+    *  <p>User-defined unique name for the customer group.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();

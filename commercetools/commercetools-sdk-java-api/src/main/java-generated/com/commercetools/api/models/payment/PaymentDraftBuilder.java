@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentDraftBuilder {
+public final class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
@@ -16,6 +18,7 @@ public final class PaymentDraftBuilder {
     @Nullable
     private String anonymousId;
 
+    @Deprecated
     @Nullable
     private String externalId;
 
@@ -55,6 +58,13 @@ public final class PaymentDraftBuilder {
     private String key;
 
     public PaymentDraftBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PaymentDraftBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
         return this;
@@ -65,6 +75,7 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    @Deprecated
     public PaymentDraftBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
@@ -75,8 +86,20 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    public PaymentDraftBuilder amountPlanned(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public PaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
+        return this;
+    }
+
+    public PaymentDraftBuilder amountAuthorized(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amountAuthorized = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -91,8 +114,20 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    public PaymentDraftBuilder amountPaid(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amountPaid = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public PaymentDraftBuilder amountPaid(@Nullable final com.commercetools.api.models.common.Money amountPaid) {
         this.amountPaid = amountPaid;
+        return this;
+    }
+
+    public PaymentDraftBuilder amountRefunded(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amountRefunded = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -103,8 +138,21 @@ public final class PaymentDraftBuilder {
     }
 
     public PaymentDraftBuilder paymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PaymentDraftBuilder paymentMethodInfo(
             @Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
+        return this;
+    }
+
+    public PaymentDraftBuilder paymentStatus(
+            Function<com.commercetools.api.models.payment.PaymentStatusDraftBuilder, com.commercetools.api.models.payment.PaymentStatusDraftBuilder> builder) {
+        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusDraftBuilder.of()).build();
         return this;
     }
 
@@ -120,6 +168,22 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    public PaymentDraftBuilder withTransactions(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
+        this.transactions = new ArrayList<>();
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentDraftBuilder plusTransactions(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
+        if (this.transactions == null) {
+            this.transactions = new ArrayList<>();
+        }
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()).build());
+        return this;
+    }
+
     public PaymentDraftBuilder transactions(
             @Nullable final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions) {
         this.transactions = transactions;
@@ -132,9 +196,33 @@ public final class PaymentDraftBuilder {
         return this;
     }
 
+    public PaymentDraftBuilder withInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.interfaceInteractions = new ArrayList<>();
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentDraftBuilder plusInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        if (this.interfaceInteractions == null) {
+            this.interfaceInteractions = new ArrayList<>();
+        }
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build());
+        return this;
+    }
+
     public PaymentDraftBuilder interfaceInteractions(
             @Nullable final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions) {
         this.interfaceInteractions = interfaceInteractions;
+        return this;
+    }
+
+    public PaymentDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -158,6 +246,7 @@ public final class PaymentDraftBuilder {
         return this.anonymousId;
     }
 
+    @Deprecated
     @Nullable
     public String getExternalId() {
         return this.externalId;
@@ -223,6 +312,16 @@ public final class PaymentDraftBuilder {
     }
 
     public PaymentDraft build() {
+        Objects.requireNonNull(amountPlanned, PaymentDraft.class + ": amountPlanned is missing");
+        return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
+            authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions,
+            interfaceInteractions, custom, key);
+    }
+
+    /**
+     * builds PaymentDraft without checking for non null required values
+     */
+    public PaymentDraft buildUnchecked() {
         return new PaymentDraftImpl(customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized,
             authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions,
             interfaceInteractions, custom, key);

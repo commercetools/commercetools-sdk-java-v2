@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodSetPredicateActionBuilder {
+public final class ShippingMethodSetPredicateActionBuilder implements Builder<ShippingMethodSetPredicateAction> {
 
     @Nullable
     private String predicate;
@@ -24,6 +25,13 @@ public final class ShippingMethodSetPredicateActionBuilder {
     }
 
     public ShippingMethodSetPredicateAction build() {
+        return new ShippingMethodSetPredicateActionImpl(predicate);
+    }
+
+    /**
+     * builds ShippingMethodSetPredicateAction without checking for non null required values
+     */
+    public ShippingMethodSetPredicateAction buildUnchecked() {
         return new ShippingMethodSetPredicateActionImpl(predicate);
     }
 

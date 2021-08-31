@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateFieldErrorBuilder {
+public final class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> {
 
     private String message;
 
@@ -48,6 +49,14 @@ public final class DuplicateFieldErrorBuilder {
     }
 
     public DuplicateFieldError build() {
+        Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
+        return new DuplicateFieldErrorImpl(message, field, duplicateValue);
+    }
+
+    /**
+     * builds DuplicateFieldError without checking for non null required values
+     */
+    public DuplicateFieldError buildUnchecked() {
         return new DuplicateFieldErrorImpl(message, field, duplicateValue);
     }
 

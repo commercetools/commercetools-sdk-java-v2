@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetLineItemPriceActionBuilder {
+public final class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedOrderSetLineItemPriceAction> {
 
     private String lineItemId;
 
@@ -17,6 +19,12 @@ public final class StagedOrderSetLineItemPriceActionBuilder {
 
     public StagedOrderSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public StagedOrderSetLineItemPriceActionBuilder externalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class StagedOrderSetLineItemPriceActionBuilder {
     }
 
     public StagedOrderSetLineItemPriceAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemPriceAction.class + ": lineItemId is missing");
+        return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);
+    }
+
+    /**
+     * builds StagedOrderSetLineItemPriceAction without checking for non null required values
+     */
+    public StagedOrderSetLineItemPriceAction buildUnchecked() {
         return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 

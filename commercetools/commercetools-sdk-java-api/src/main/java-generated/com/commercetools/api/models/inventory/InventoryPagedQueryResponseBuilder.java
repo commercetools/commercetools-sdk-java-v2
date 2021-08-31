@@ -2,13 +2,15 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryPagedQueryResponseBuilder {
+public final class InventoryPagedQueryResponseBuilder implements Builder<InventoryPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class InventoryPagedQueryResponseBuilder {
         return this;
     }
 
+    public InventoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
+        return this;
+    }
+
+    public InventoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
+        return this;
+    }
+
     public InventoryPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class InventoryPagedQueryResponseBuilder {
     }
 
     public InventoryPagedQueryResponse build() {
+        Objects.requireNonNull(limit, InventoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, InventoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, InventoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, InventoryPagedQueryResponse.class + ": results is missing");
+        return new InventoryPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds InventoryPagedQueryResponse without checking for non null required values
+     */
+    public InventoryPagedQueryResponse buildUnchecked() {
         return new InventoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

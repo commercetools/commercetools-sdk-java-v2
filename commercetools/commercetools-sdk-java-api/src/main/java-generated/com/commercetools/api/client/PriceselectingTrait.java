@@ -6,7 +6,7 @@ import java.util.List;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public interface PriceselectingTrait<T> {
+public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
     List<String> getPriceCurrency();
 
     List<String> getPriceCountry();
@@ -19,15 +19,72 @@ public interface PriceselectingTrait<T> {
 
     List<String> getStoreProjection();
 
-    T withPriceCurrency(final String priceCurrency);
+    /**
+     * set priceCurrency with the specificied value
+     */
+    PriceselectingTrait<T> withPriceCurrency(final String priceCurrency);
 
-    T withPriceCountry(final String priceCountry);
+    /**
+     * add additional priceCurrency query parameter
+     */
+    PriceselectingTrait<T> addPriceCurrency(final String priceCurrency);
 
-    T withPriceCustomerGroup(final String priceCustomerGroup);
+    /**
+     * set priceCountry with the specificied value
+     */
+    PriceselectingTrait<T> withPriceCountry(final String priceCountry);
 
-    T withPriceChannel(final String priceChannel);
+    /**
+     * add additional priceCountry query parameter
+     */
+    PriceselectingTrait<T> addPriceCountry(final String priceCountry);
 
-    T withLocaleProjection(final String localeProjection);
+    /**
+     * set priceCustomerGroup with the specificied value
+     */
+    PriceselectingTrait<T> withPriceCustomerGroup(final String priceCustomerGroup);
 
-    T withStoreProjection(final String storeProjection);
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    PriceselectingTrait<T> addPriceCustomerGroup(final String priceCustomerGroup);
+
+    /**
+     * set priceChannel with the specificied value
+     */
+    PriceselectingTrait<T> withPriceChannel(final String priceChannel);
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    PriceselectingTrait<T> addPriceChannel(final String priceChannel);
+
+    /**
+     * set localeProjection with the specificied value
+     */
+    PriceselectingTrait<T> withLocaleProjection(final String localeProjection);
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    PriceselectingTrait<T> addLocaleProjection(final String localeProjection);
+
+    /**
+     * set storeProjection with the specificied value
+     */
+    PriceselectingTrait<T> withStoreProjection(final String storeProjection);
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    PriceselectingTrait<T> addStoreProjection(final String storeProjection);
+
+    default PriceselectingTrait<T> asPriceselectingTrait() {
+        return this;
+    }
+
+    @SuppressWarnings("unchecked")
+    default T asPriceselectingTraitToBaseType() {
+        return (T) this;
+    }
 }

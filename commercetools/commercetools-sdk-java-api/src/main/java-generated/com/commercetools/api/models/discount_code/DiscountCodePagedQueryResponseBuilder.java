@@ -2,13 +2,15 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodePagedQueryResponseBuilder {
+public final class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCodePagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class DiscountCodePagedQueryResponseBuilder {
         return this;
     }
 
+    public DiscountCodePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
+        return this;
+    }
+
+    public DiscountCodePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
+        return this;
+    }
+
     public DiscountCodePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class DiscountCodePagedQueryResponseBuilder {
     }
 
     public DiscountCodePagedQueryResponse build() {
+        Objects.requireNonNull(limit, DiscountCodePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, DiscountCodePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, DiscountCodePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, DiscountCodePagedQueryResponse.class + ": results is missing");
+        return new DiscountCodePagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds DiscountCodePagedQueryResponse without checking for non null required values
+     */
+    public DiscountCodePagedQueryResponse buildUnchecked() {
         return new DiscountCodePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

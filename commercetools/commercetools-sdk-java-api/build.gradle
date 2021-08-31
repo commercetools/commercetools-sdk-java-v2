@@ -9,7 +9,8 @@ dependencies {
     api commons.lang3
 
     testImplementation project(':commercetools:commercetools-http-client')
-    testImplementation commons.io
+    testImplementation project(':commercetools:commercetools-apachehttp-client')
+    testImplementation 'commons-io:commons-io' version commons.io
     testImplementation "com.google.code.gson:gson:${versions.gson}"
 }
 
@@ -20,6 +21,6 @@ task runMainMethodThreadLeakTest(type: JavaExec) {
     group = "Execution"
     description = "Run the main method thread leak test class"
     classpath = sourceSets.test.runtimeClasspath
-    main = "com.commercetools.MainMethodThreadLeakTest"
+    mainClass = "com.commercetools.MainMethodThreadLeakTest"
     timeout = Duration.ofSeconds(20)
 }

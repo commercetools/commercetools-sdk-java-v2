@@ -2,13 +2,15 @@
 package com.commercetools.api.models.custom_object;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomObjectPagedQueryResponseBuilder {
+public final class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObjectPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class CustomObjectPagedQueryResponseBuilder {
         return this;
     }
 
+    public CustomObjectPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
+        return this;
+    }
+
+    public CustomObjectPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
+        return this;
+    }
+
     public CustomObjectPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.custom_object.CustomObject> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class CustomObjectPagedQueryResponseBuilder {
     }
 
     public CustomObjectPagedQueryResponse build() {
+        Objects.requireNonNull(limit, CustomObjectPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomObjectPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CustomObjectPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CustomObjectPagedQueryResponse.class + ": results is missing");
+        return new CustomObjectPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds CustomObjectPagedQueryResponse without checking for non null required values
+     */
+    public CustomObjectPagedQueryResponse buildUnchecked() {
         return new CustomObjectPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

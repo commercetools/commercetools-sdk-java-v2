@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneySetAttributeBuilder {
+public final class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     @Nullable
     private String name;
@@ -41,6 +42,14 @@ public final class MoneySetAttributeBuilder {
     }
 
     public MoneySetAttribute build() {
+        Objects.requireNonNull(value, MoneySetAttribute.class + ": value is missing");
+        return new MoneySetAttributeImpl(name, value);
+    }
+
+    /**
+     * builds MoneySetAttribute without checking for non null required values
+     */
+    public MoneySetAttribute buildUnchecked() {
         return new MoneySetAttributeImpl(name, value);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerEmailVerifiedMessageBuilder {
+public final class CustomerEmailVerifiedMessageBuilder implements Builder<CustomerEmailVerifiedMessage> {
 
     private String id;
 
@@ -54,8 +56,20 @@ public final class CustomerEmailVerifiedMessageBuilder {
     }
 
     public CustomerEmailVerifiedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerEmailVerifiedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CustomerEmailVerifiedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -77,6 +91,14 @@ public final class CustomerEmailVerifiedMessageBuilder {
 
     public CustomerEmailVerifiedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public CustomerEmailVerifiedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -130,6 +152,21 @@ public final class CustomerEmailVerifiedMessageBuilder {
     }
 
     public CustomerEmailVerifiedMessage build() {
+        Objects.requireNonNull(id, CustomerEmailVerifiedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerEmailVerifiedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerEmailVerifiedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerEmailVerifiedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerEmailVerifiedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerEmailVerifiedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerEmailVerifiedMessage.class + ": resourceVersion is missing");
+        return new CustomerEmailVerifiedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+    }
+
+    /**
+     * builds CustomerEmailVerifiedMessage without checking for non null required values
+     */
+    public CustomerEmailVerifiedMessage buildUnchecked() {
         return new CustomerEmailVerifiedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }

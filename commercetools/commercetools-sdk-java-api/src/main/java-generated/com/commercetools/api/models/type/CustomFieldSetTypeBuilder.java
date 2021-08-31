@@ -3,10 +3,11 @@ package com.commercetools.api.models.type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldSetTypeBuilder {
+public final class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
 
     private com.commercetools.api.models.type.FieldType elementType;
 
@@ -20,6 +21,14 @@ public final class CustomFieldSetTypeBuilder {
     }
 
     public CustomFieldSetType build() {
+        Objects.requireNonNull(elementType, CustomFieldSetType.class + ": elementType is missing");
+        return new CustomFieldSetTypeImpl(elementType);
+    }
+
+    /**
+     * builds CustomFieldSetType without checking for non null required values
+     */
+    public CustomFieldSetType buildUnchecked() {
         return new CustomFieldSetTypeImpl(elementType);
     }
 

@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentTransactionStateChangedMessageBuilder {
+public final class PaymentTransactionStateChangedMessageBuilder
+        implements Builder<PaymentTransactionStateChangedMessage> {
 
     private String id;
 
@@ -58,8 +61,20 @@ public final class PaymentTransactionStateChangedMessageBuilder {
     }
 
     public PaymentTransactionStateChangedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public PaymentTransactionStateChangedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public PaymentTransactionStateChangedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -82,6 +97,14 @@ public final class PaymentTransactionStateChangedMessageBuilder {
 
     public PaymentTransactionStateChangedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public PaymentTransactionStateChangedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -154,6 +177,28 @@ public final class PaymentTransactionStateChangedMessageBuilder {
     }
 
     public PaymentTransactionStateChangedMessage build() {
+        Objects.requireNonNull(id, PaymentTransactionStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentTransactionStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentTransactionStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            PaymentTransactionStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            PaymentTransactionStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentTransactionStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            PaymentTransactionStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(transactionId,
+            PaymentTransactionStateChangedMessage.class + ": transactionId is missing");
+        Objects.requireNonNull(state, PaymentTransactionStateChangedMessage.class + ": state is missing");
+        return new PaymentTransactionStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transactionId,
+            state);
+    }
+
+    /**
+     * builds PaymentTransactionStateChangedMessage without checking for non null required values
+     */
+    public PaymentTransactionStateChangedMessage buildUnchecked() {
         return new PaymentTransactionStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transactionId,
             state);

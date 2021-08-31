@@ -2,16 +2,24 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountSetDescriptionActionBuilder {
+public final class CartDiscountSetDescriptionActionBuilder implements Builder<CartDiscountSetDescriptionAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
+
+    public CartDiscountSetDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public CartDiscountSetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -25,6 +33,13 @@ public final class CartDiscountSetDescriptionActionBuilder {
     }
 
     public CartDiscountSetDescriptionAction build() {
+        return new CartDiscountSetDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds CartDiscountSetDescriptionAction without checking for non null required values
+     */
+    public CartDiscountSetDescriptionAction buildUnchecked() {
         return new CartDiscountSetDescriptionActionImpl(description);
     }
 

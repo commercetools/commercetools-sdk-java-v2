@@ -96,10 +96,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
         this.storeKey = storeKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

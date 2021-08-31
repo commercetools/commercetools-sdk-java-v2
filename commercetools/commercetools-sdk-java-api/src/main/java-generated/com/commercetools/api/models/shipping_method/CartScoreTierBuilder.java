@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartScoreTierBuilder {
+public final class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     private Double score;
 
@@ -26,8 +28,21 @@ public final class CartScoreTierBuilder {
         return this;
     }
 
+    public CartScoreTierBuilder price(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+
+    public CartScoreTierBuilder priceFunction(
+            Function<com.commercetools.api.models.shipping_method.PriceFunctionBuilder, com.commercetools.api.models.shipping_method.PriceFunctionBuilder> builder) {
+        this.priceFunction = builder.apply(com.commercetools.api.models.shipping_method.PriceFunctionBuilder.of())
+                .build();
         return this;
     }
 
@@ -62,6 +77,14 @@ public final class CartScoreTierBuilder {
     }
 
     public CartScoreTier build() {
+        Objects.requireNonNull(score, CartScoreTier.class + ": score is missing");
+        return new CartScoreTierImpl(score, price, priceFunction, isMatching);
+    }
+
+    /**
+     * builds CartScoreTier without checking for non null required values
+     */
+    public CartScoreTier buildUnchecked() {
         return new CartScoreTierImpl(score, price, priceFunction, isMatching);
     }
 

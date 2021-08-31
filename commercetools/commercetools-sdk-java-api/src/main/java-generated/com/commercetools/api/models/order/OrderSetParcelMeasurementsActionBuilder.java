@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetParcelMeasurementsActionBuilder {
+public final class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSetParcelMeasurementsAction> {
 
     private String parcelId;
 
@@ -17,6 +19,12 @@ public final class OrderSetParcelMeasurementsActionBuilder {
 
     public OrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public OrderSetParcelMeasurementsActionBuilder measurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class OrderSetParcelMeasurementsActionBuilder {
     }
 
     public OrderSetParcelMeasurementsAction build() {
+        Objects.requireNonNull(parcelId, OrderSetParcelMeasurementsAction.class + ": parcelId is missing");
+        return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);
+    }
+
+    /**
+     * builds OrderSetParcelMeasurementsAction without checking for non null required values
+     */
+    public OrderSetParcelMeasurementsAction buildUnchecked() {
         return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 

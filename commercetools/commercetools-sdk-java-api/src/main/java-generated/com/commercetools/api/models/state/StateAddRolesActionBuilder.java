@@ -3,10 +3,11 @@ package com.commercetools.api.models.state;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateAddRolesActionBuilder {
+public final class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> {
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
@@ -26,6 +27,14 @@ public final class StateAddRolesActionBuilder {
     }
 
     public StateAddRolesAction build() {
+        Objects.requireNonNull(roles, StateAddRolesAction.class + ": roles is missing");
+        return new StateAddRolesActionImpl(roles);
+    }
+
+    /**
+     * builds StateAddRolesAction without checking for non null required values
+     */
+    public StateAddRolesAction buildUnchecked() {
         return new StateAddRolesActionImpl(roles);
     }
 

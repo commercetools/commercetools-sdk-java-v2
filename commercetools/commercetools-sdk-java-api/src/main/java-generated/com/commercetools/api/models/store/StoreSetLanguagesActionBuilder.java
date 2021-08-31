@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreSetLanguagesActionBuilder {
+public final class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguagesAction> {
 
     @Nullable
     private java.util.List<String> languages;
@@ -29,6 +30,13 @@ public final class StoreSetLanguagesActionBuilder {
     }
 
     public StoreSetLanguagesAction build() {
+        return new StoreSetLanguagesActionImpl(languages);
+    }
+
+    /**
+     * builds StoreSetLanguagesAction without checking for non null required values
+     */
+    public StoreSetLanguagesAction buildUnchecked() {
         return new StoreSetLanguagesActionImpl(languages);
     }
 

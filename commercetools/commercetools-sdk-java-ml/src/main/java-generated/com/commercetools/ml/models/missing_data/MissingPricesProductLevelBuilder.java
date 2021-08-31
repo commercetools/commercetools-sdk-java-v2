@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesProductLevelBuilder {
+public final class MissingPricesProductLevelBuilder implements Builder<MissingPricesProductLevel> {
 
     private Long total;
 
@@ -31,6 +32,15 @@ public final class MissingPricesProductLevelBuilder {
     }
 
     public MissingPricesProductLevel build() {
+        Objects.requireNonNull(total, MissingPricesProductLevel.class + ": total is missing");
+        Objects.requireNonNull(missingPrices, MissingPricesProductLevel.class + ": missingPrices is missing");
+        return new MissingPricesProductLevelImpl(total, missingPrices);
+    }
+
+    /**
+     * builds MissingPricesProductLevel without checking for non null required values
+     */
+    public MissingPricesProductLevel buildUnchecked() {
         return new MissingPricesProductLevelImpl(total, missingPrices);
     }
 

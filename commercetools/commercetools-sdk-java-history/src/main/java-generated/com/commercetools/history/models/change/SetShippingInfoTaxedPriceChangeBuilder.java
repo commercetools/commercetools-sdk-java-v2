@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetShippingInfoTaxedPriceChangeBuilder {
+public final class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippingInfoTaxedPriceChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetShippingInfoTaxedPriceChangeBuilder {
     }
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    public SetShippingInfoTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedPrice nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetShippingInfoTaxedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class SetShippingInfoTaxedPriceChangeBuilder {
     }
 
     public SetShippingInfoTaxedPriceChange build() {
+        Objects.requireNonNull(change, SetShippingInfoTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetShippingInfoTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetShippingInfoTaxedPriceChange.class + ": previousValue is missing");
+        return new SetShippingInfoTaxedPriceChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetShippingInfoTaxedPriceChange without checking for non null required values
+     */
+    public SetShippingInfoTaxedPriceChange buildUnchecked() {
         return new SetShippingInfoTaxedPriceChangeImpl(change, nextValue, previousValue);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MaxResourceLimitExceededErrorBuilder {
+public final class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResourceLimitExceededError> {
 
     private String message;
 
@@ -32,6 +33,15 @@ public final class MaxResourceLimitExceededErrorBuilder {
     }
 
     public MaxResourceLimitExceededError build() {
+        Objects.requireNonNull(message, MaxResourceLimitExceededError.class + ": message is missing");
+        Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");
+        return new MaxResourceLimitExceededErrorImpl(message, exceededResource);
+    }
+
+    /**
+     * builds MaxResourceLimitExceededError without checking for non null required values
+     */
+    public MaxResourceLimitExceededError buildUnchecked() {
         return new MaxResourceLimitExceededErrorImpl(message, exceededResource);
     }
 

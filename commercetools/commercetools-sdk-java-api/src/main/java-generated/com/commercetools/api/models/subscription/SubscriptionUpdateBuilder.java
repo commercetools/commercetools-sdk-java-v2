@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionUpdateBuilder {
+public final class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class SubscriptionUpdateBuilder {
     }
 
     public SubscriptionUpdate build() {
+        Objects.requireNonNull(version, SubscriptionUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, SubscriptionUpdate.class + ": actions is missing");
+        return new SubscriptionUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds SubscriptionUpdate without checking for non null required values
+     */
+    public SubscriptionUpdate buildUnchecked() {
         return new SubscriptionUpdateImpl(version, actions);
     }
 

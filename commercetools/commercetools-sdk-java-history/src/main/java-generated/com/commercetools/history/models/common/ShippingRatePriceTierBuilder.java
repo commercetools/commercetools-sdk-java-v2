@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingRatePriceTierBuilder {
+public final class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTier> {
 
     private com.commercetools.history.models.common.ShippingRateTierType type;
 
@@ -20,6 +21,14 @@ public final class ShippingRatePriceTierBuilder {
     }
 
     public ShippingRatePriceTier build() {
+        Objects.requireNonNull(type, ShippingRatePriceTier.class + ": type is missing");
+        return new ShippingRatePriceTierImpl(type);
+    }
+
+    /**
+     * builds ShippingRatePriceTier without checking for non null required values
+     */
+    public ShippingRatePriceTier buildUnchecked() {
         return new ShippingRatePriceTierImpl(type);
     }
 

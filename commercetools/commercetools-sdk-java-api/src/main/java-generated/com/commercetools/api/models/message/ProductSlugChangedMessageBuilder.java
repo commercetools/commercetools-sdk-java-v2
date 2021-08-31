@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSlugChangedMessageBuilder {
+public final class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChangedMessage> {
 
     private String id;
 
@@ -59,8 +61,20 @@ public final class ProductSlugChangedMessageBuilder {
     }
 
     public ProductSlugChangedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSlugChangedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductSlugChangedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -86,13 +100,33 @@ public final class ProductSlugChangedMessageBuilder {
     }
 
     public ProductSlugChangedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductSlugChangedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    public ProductSlugChangedMessageBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductSlugChangedMessageBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+
+    public ProductSlugChangedMessageBuilder oldSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.oldSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -155,6 +189,22 @@ public final class ProductSlugChangedMessageBuilder {
     }
 
     public ProductSlugChangedMessage build() {
+        Objects.requireNonNull(id, ProductSlugChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductSlugChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductSlugChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductSlugChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductSlugChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductSlugChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductSlugChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(slug, ProductSlugChangedMessage.class + ": slug is missing");
+        return new ProductSlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
+    }
+
+    /**
+     * builds ProductSlugChangedMessage without checking for non null required values
+     */
+    public ProductSlugChangedMessage buildUnchecked() {
         return new ProductSlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
     }

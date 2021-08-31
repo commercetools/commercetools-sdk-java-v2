@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountReferenceBuilder {
+public final class ProductDiscountReferenceBuilder implements Builder<ProductDiscountReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class ProductDiscountReferenceBuilder {
 
     public ProductDiscountReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ProductDiscountReferenceBuilder obj(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscountBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class ProductDiscountReferenceBuilder {
     }
 
     public ProductDiscountReference build() {
+        Objects.requireNonNull(id, ProductDiscountReference.class + ": id is missing");
+        return new ProductDiscountReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ProductDiscountReference without checking for non null required values
+     */
+    public ProductDiscountReference buildUnchecked() {
         return new ProductDiscountReferenceImpl(id, obj);
     }
 

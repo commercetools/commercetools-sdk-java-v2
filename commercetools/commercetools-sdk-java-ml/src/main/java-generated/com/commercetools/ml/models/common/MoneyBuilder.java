@@ -3,10 +3,11 @@ package com.commercetools.ml.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneyBuilder {
+public final class MoneyBuilder implements Builder<Money> {
 
     private Long centAmount;
 
@@ -31,6 +32,15 @@ public final class MoneyBuilder {
     }
 
     public Money build() {
+        Objects.requireNonNull(centAmount, Money.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
+        return new MoneyImpl(centAmount, currencyCode);
+    }
+
+    /**
+     * builds Money without checking for non null required values
+     */
+    public Money buildUnchecked() {
         return new MoneyImpl(centAmount, currencyCode);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeReferenceBuilder {
+public final class ProductTypeReferenceBuilder implements Builder<ProductTypeReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class ProductTypeReferenceBuilder {
 
     public ProductTypeReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ProductTypeReferenceBuilder obj(
+            Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class ProductTypeReferenceBuilder {
     }
 
     public ProductTypeReference build() {
+        Objects.requireNonNull(id, ProductTypeReference.class + ": id is missing");
+        return new ProductTypeReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ProductTypeReference without checking for non null required values
+     */
+    public ProductTypeReference buildUnchecked() {
         return new ProductTypeReferenceImpl(id, obj);
     }
 

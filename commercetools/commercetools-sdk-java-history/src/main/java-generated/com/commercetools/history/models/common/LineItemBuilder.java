@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemBuilder {
+public final class LineItemBuilder implements Builder<LineItem> {
 
     private String addedAt;
 
@@ -33,6 +35,12 @@ public final class LineItemBuilder {
         return this;
     }
 
+    public LineItemBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public LineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
@@ -40,6 +48,12 @@ public final class LineItemBuilder {
 
     public LineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public LineItemBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -53,8 +67,20 @@ public final class LineItemBuilder {
         return this;
     }
 
+    public LineItemBuilder productSlug(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.productSlug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public LineItemBuilder productSlug(final com.commercetools.history.models.common.LocalizedString productSlug) {
         this.productSlug = productSlug;
+        return this;
+    }
+
+    public LineItemBuilder productType(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -65,6 +91,12 @@ public final class LineItemBuilder {
 
     public LineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public LineItemBuilder variant(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
         return this;
     }
 
@@ -119,6 +151,24 @@ public final class LineItemBuilder {
     }
 
     public LineItem build() {
+        Objects.requireNonNull(addedAt, LineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(custom, LineItem.class + ": custom is missing");
+        Objects.requireNonNull(id, LineItem.class + ": id is missing");
+        Objects.requireNonNull(name, LineItem.class + ": name is missing");
+        Objects.requireNonNull(productId, LineItem.class + ": productId is missing");
+        Objects.requireNonNull(productSlug, LineItem.class + ": productSlug is missing");
+        Objects.requireNonNull(productType, LineItem.class + ": productType is missing");
+        Objects.requireNonNull(quantity, LineItem.class + ": quantity is missing");
+        Objects.requireNonNull(variant, LineItem.class + ": variant is missing");
+        Objects.requireNonNull(variantId, LineItem.class + ": variantId is missing");
+        return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,
+            variantId);
+    }
+
+    /**
+     * builds LineItem without checking for non null required values
+     */
+    public LineItem buildUnchecked() {
         return new LineItemImpl(addedAt, custom, id, name, productId, productSlug, productType, quantity, variant,
             variantId);
     }

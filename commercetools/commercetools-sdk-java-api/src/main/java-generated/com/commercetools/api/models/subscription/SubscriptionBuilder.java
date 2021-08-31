@@ -2,13 +2,15 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionBuilder {
+public final class SubscriptionBuilder implements Builder<Subscription> {
 
     private String id;
 
@@ -58,8 +60,20 @@ public final class SubscriptionBuilder {
     }
 
     public SubscriptionBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public SubscriptionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public SubscriptionBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -70,6 +84,24 @@ public final class SubscriptionBuilder {
 
     public SubscriptionBuilder changes(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+
+    public SubscriptionBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionBuilder plusChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
 
@@ -92,6 +124,24 @@ public final class SubscriptionBuilder {
     public SubscriptionBuilder messages(
             final com.commercetools.api.models.subscription.MessageSubscription... messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
+        return this;
+    }
+
+    public SubscriptionBuilder withMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        this.messages = new ArrayList<>();
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionBuilder plusMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        if (this.messages == null) {
+            this.messages = new ArrayList<>();
+        }
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
 
@@ -163,6 +213,23 @@ public final class SubscriptionBuilder {
     }
 
     public Subscription build() {
+        Objects.requireNonNull(id, Subscription.class + ": id is missing");
+        Objects.requireNonNull(version, Subscription.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Subscription.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Subscription.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(changes, Subscription.class + ": changes is missing");
+        Objects.requireNonNull(destination, Subscription.class + ": destination is missing");
+        Objects.requireNonNull(messages, Subscription.class + ": messages is missing");
+        Objects.requireNonNull(format, Subscription.class + ": format is missing");
+        Objects.requireNonNull(status, Subscription.class + ": status is missing");
+        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
+            destination, key, messages, format, status);
+    }
+
+    /**
+     * builds Subscription without checking for non null required values
+     */
+    public Subscription buildUnchecked() {
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
             destination, key, messages, format, status);
     }

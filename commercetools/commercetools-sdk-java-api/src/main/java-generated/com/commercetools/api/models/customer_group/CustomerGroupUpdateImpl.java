@@ -30,10 +30,18 @@ public final class CustomerGroupUpdateImpl implements CustomerGroupUpdate {
     public CustomerGroupUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the customer group on which the changes should be applied.
+    *  If the expected version does not match the actual version, a 409 Conflict
+    *  will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>List of update actions to be performed on the customer group.</p>
+    */
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> getActions() {
         return this.actions;
     }

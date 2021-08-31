@@ -2,13 +2,15 @@
 package com.commercetools.api.models.api_client;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ApiClientPagedQueryResponseBuilder {
+public final class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class ApiClientPagedQueryResponseBuilder {
         return this;
     }
 
+    public ApiClientPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
+        return this;
+    }
+
+    public ApiClientPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
+        return this;
+    }
+
     public ApiClientPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.api_client.ApiClient> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class ApiClientPagedQueryResponseBuilder {
     }
 
     public ApiClientPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ApiClientPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ApiClientPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ApiClientPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ApiClientPagedQueryResponse.class + ": results is missing");
+        return new ApiClientPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ApiClientPagedQueryResponse without checking for non null required values
+     */
+    public ApiClientPagedQueryResponse buildUnchecked() {
         return new ApiClientPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

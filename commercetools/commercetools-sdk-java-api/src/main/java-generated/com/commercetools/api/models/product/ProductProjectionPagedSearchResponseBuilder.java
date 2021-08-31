@@ -2,13 +2,16 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductProjectionPagedSearchResponseBuilder {
+public final class ProductProjectionPagedSearchResponseBuilder
+        implements Builder<ProductProjectionPagedSearchResponse> {
 
     private Long limit;
 
@@ -49,9 +52,31 @@ public final class ProductProjectionPagedSearchResponseBuilder {
         return this;
     }
 
+    public ProductProjectionPagedSearchResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductProjectionPagedSearchResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
     public ProductProjectionPagedSearchResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
         this.results = results;
+        return this;
+    }
+
+    public ProductProjectionPagedSearchResponseBuilder facets(
+            Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
+        this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
         return this;
     }
 
@@ -87,6 +112,18 @@ public final class ProductProjectionPagedSearchResponseBuilder {
     }
 
     public ProductProjectionPagedSearchResponse build() {
+        Objects.requireNonNull(limit, ProductProjectionPagedSearchResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ProductProjectionPagedSearchResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ProductProjectionPagedSearchResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProductProjectionPagedSearchResponse.class + ": results is missing");
+        Objects.requireNonNull(facets, ProductProjectionPagedSearchResponse.class + ": facets is missing");
+        return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
+    }
+
+    /**
+     * builds ProductProjectionPagedSearchResponse without checking for non null required values
+     */
+    public ProductProjectionPagedSearchResponse buildUnchecked() {
         return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
     }
 

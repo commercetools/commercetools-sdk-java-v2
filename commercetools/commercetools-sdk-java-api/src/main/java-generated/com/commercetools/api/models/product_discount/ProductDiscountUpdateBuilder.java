@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountUpdateBuilder {
+public final class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class ProductDiscountUpdateBuilder {
     }
 
     public ProductDiscountUpdate build() {
+        Objects.requireNonNull(version, ProductDiscountUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ProductDiscountUpdate.class + ": actions is missing");
+        return new ProductDiscountUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds ProductDiscountUpdate without checking for non null required values
+     */
+    public ProductDiscountUpdate buildUnchecked() {
         return new ProductDiscountUpdateImpl(version, actions);
     }
 

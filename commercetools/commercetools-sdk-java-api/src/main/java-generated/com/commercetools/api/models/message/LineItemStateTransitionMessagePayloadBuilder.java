@@ -2,11 +2,14 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemStateTransitionMessagePayloadBuilder {
+public final class LineItemStateTransitionMessagePayloadBuilder
+        implements Builder<LineItemStateTransitionMessagePayload> {
 
     private String lineItemId;
 
@@ -34,8 +37,20 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
     }
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemStateTransitionMessagePayloadBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
+        return this;
+    }
+
+    public LineItemStateTransitionMessagePayloadBuilder toState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 
@@ -66,6 +81,19 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
     }
 
     public LineItemStateTransitionMessagePayload build() {
+        Objects.requireNonNull(lineItemId, LineItemStateTransitionMessagePayload.class + ": lineItemId is missing");
+        Objects.requireNonNull(transitionDate,
+            LineItemStateTransitionMessagePayload.class + ": transitionDate is missing");
+        Objects.requireNonNull(quantity, LineItemStateTransitionMessagePayload.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, LineItemStateTransitionMessagePayload.class + ": fromState is missing");
+        Objects.requireNonNull(toState, LineItemStateTransitionMessagePayload.class + ": toState is missing");
+        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
+    }
+
+    /**
+     * builds LineItemStateTransitionMessagePayload without checking for non null required values
+     */
+    public LineItemStateTransitionMessagePayload buildUnchecked() {
         return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.ml.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaskTokenBuilder {
+public final class TaskTokenBuilder implements Builder<TaskToken> {
 
     private String taskId;
 
@@ -31,6 +32,15 @@ public final class TaskTokenBuilder {
     }
 
     public TaskToken build() {
+        Objects.requireNonNull(taskId, TaskToken.class + ": taskId is missing");
+        Objects.requireNonNull(uriPath, TaskToken.class + ": uriPath is missing");
+        return new TaskTokenImpl(taskId, uriPath);
+    }
+
+    /**
+     * builds TaskToken without checking for non null required values
+     */
+    public TaskToken buildUnchecked() {
         return new TaskTokenImpl(taskId, uriPath);
     }
 

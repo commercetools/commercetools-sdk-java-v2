@@ -2,13 +2,16 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetCustomLineItemCustomTypeActionBuilder {
+public final class OrderSetCustomLineItemCustomTypeActionBuilder
+        implements Builder<OrderSetCustomLineItemCustomTypeAction> {
 
     private String customLineItemId;
 
@@ -24,8 +27,20 @@ public final class OrderSetCustomLineItemCustomTypeActionBuilder {
     }
 
     public OrderSetCustomLineItemCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public OrderSetCustomLineItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public OrderSetCustomLineItemCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -50,6 +65,15 @@ public final class OrderSetCustomLineItemCustomTypeActionBuilder {
     }
 
     public OrderSetCustomLineItemCustomTypeAction build() {
+        Objects.requireNonNull(customLineItemId,
+            OrderSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
+        return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
+    }
+
+    /**
+     * builds OrderSetCustomLineItemCustomTypeAction without checking for non null required values
+     */
+    public OrderSetCustomLineItemCustomTypeAction buildUnchecked() {
         return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
     }
 

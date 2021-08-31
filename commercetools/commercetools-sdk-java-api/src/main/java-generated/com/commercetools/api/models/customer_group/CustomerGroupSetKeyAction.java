@@ -17,7 +17,7 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
     */
 
     @JsonProperty("key")

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.label;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentLabelBuilder {
+public final class PaymentLabelBuilder implements Builder<PaymentLabel> {
 
     private String key;
 
@@ -14,6 +16,12 @@ public final class PaymentLabelBuilder {
 
     public PaymentLabelBuilder key(final String key) {
         this.key = key;
+        return this;
+    }
+
+    public PaymentLabelBuilder amountPlanned(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -31,6 +39,15 @@ public final class PaymentLabelBuilder {
     }
 
     public PaymentLabel build() {
+        Objects.requireNonNull(key, PaymentLabel.class + ": key is missing");
+        Objects.requireNonNull(amountPlanned, PaymentLabel.class + ": amountPlanned is missing");
+        return new PaymentLabelImpl(key, amountPlanned);
+    }
+
+    /**
+     * builds PaymentLabel without checking for non null required values
+     */
+    public PaymentLabel buildUnchecked() {
         return new PaymentLabelImpl(key, amountPlanned);
     }
 

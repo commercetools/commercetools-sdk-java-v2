@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReservationBuilder {
+public final class ReservationBuilder implements Builder<Reservation> {
 
     private Integer quantity;
 
@@ -18,6 +20,12 @@ public final class ReservationBuilder {
 
     public ReservationBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public ReservationBuilder owner(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.owner = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -53,6 +61,17 @@ public final class ReservationBuilder {
     }
 
     public Reservation build() {
+        Objects.requireNonNull(quantity, Reservation.class + ": quantity is missing");
+        Objects.requireNonNull(owner, Reservation.class + ": owner is missing");
+        Objects.requireNonNull(createdAt, Reservation.class + ": createdAt is missing");
+        Objects.requireNonNull(checkoutStartedAt, Reservation.class + ": checkoutStartedAt is missing");
+        return new ReservationImpl(quantity, owner, createdAt, checkoutStartedAt);
+    }
+
+    /**
+     * builds Reservation without checking for non null required values
+     */
+    public Reservation buildUnchecked() {
         return new ReservationImpl(quantity, owner, createdAt, checkoutStartedAt);
     }
 

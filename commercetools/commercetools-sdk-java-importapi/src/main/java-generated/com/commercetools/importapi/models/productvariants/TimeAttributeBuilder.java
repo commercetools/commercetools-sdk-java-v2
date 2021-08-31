@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TimeAttributeBuilder {
+public final class TimeAttributeBuilder implements Builder<TimeAttribute> {
 
     @Nullable
     private String name;
@@ -35,6 +36,14 @@ public final class TimeAttributeBuilder {
     }
 
     public TimeAttribute build() {
+        Objects.requireNonNull(value, TimeAttribute.class + ": value is missing");
+        return new TimeAttributeImpl(name, value);
+    }
+
+    /**
+     * builds TimeAttribute without checking for non null required values
+     */
+    public TimeAttribute buildUnchecked() {
         return new TimeAttributeImpl(name, value);
     }
 

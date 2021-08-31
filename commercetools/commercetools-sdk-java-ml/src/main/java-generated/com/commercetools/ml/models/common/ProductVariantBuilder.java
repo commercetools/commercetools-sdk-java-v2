@@ -2,17 +2,25 @@
 package com.commercetools.ml.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantBuilder {
+public final class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private com.commercetools.ml.models.common.ProductReference product;
 
     private Boolean staged;
 
     private Integer variantId;
+
+    public ProductVariantBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
 
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
@@ -42,6 +50,16 @@ public final class ProductVariantBuilder {
     }
 
     public ProductVariant build() {
+        Objects.requireNonNull(product, ProductVariant.class + ": product is missing");
+        Objects.requireNonNull(staged, ProductVariant.class + ": staged is missing");
+        Objects.requireNonNull(variantId, ProductVariant.class + ": variantId is missing");
+        return new ProductVariantImpl(product, staged, variantId);
+    }
+
+    /**
+     * builds ProductVariant without checking for non null required values
+     */
+    public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(product, staged, variantId);
     }
 

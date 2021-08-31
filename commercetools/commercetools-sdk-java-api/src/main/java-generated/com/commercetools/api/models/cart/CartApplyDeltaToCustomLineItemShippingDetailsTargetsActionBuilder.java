@@ -2,11 +2,14 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder {
+public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
+        implements Builder<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction> {
 
     private String customLineItemId;
 
@@ -21,6 +24,22 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBui
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
             final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
         this.targetsDelta = new ArrayList<>(Arrays.asList(targetsDelta));
+        return this;
+    }
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
+        this.targetsDelta = new ArrayList<>();
+        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
+        return this;
+    }
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
+        if (this.targetsDelta == null) {
+            this.targetsDelta = new ArrayList<>();
+        }
+        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 
@@ -39,6 +58,17 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBui
     }
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction build() {
+        Objects.requireNonNull(customLineItemId,
+            CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(targetsDelta,
+            CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");
+        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, targetsDelta);
+    }
+
+    /**
+     * builds CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction without checking for non null required values
+     */
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction buildUnchecked() {
         return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, targetsDelta);
     }
 

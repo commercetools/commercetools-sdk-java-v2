@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantChannelAvailabilityBuilder {
+public final class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
 
     @Nullable
     private Boolean isOnStock;
@@ -50,6 +51,13 @@ public final class ProductVariantChannelAvailabilityBuilder {
     }
 
     public ProductVariantChannelAvailability build() {
+        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
+    }
+
+    /**
+     * builds ProductVariantChannelAvailability without checking for non null required values
+     */
+    public ProductVariantChannelAvailability buildUnchecked() {
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
 

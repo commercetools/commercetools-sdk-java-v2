@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryDeletedMessageBuilder {
+public final class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEntryDeletedMessage> {
 
     private String id;
 
@@ -58,8 +60,20 @@ public final class InventoryEntryDeletedMessageBuilder {
     }
 
     public InventoryEntryDeletedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public InventoryEntryDeletedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public InventoryEntryDeletedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -85,6 +99,14 @@ public final class InventoryEntryDeletedMessageBuilder {
     }
 
     public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -92,6 +114,12 @@ public final class InventoryEntryDeletedMessageBuilder {
 
     public InventoryEntryDeletedMessageBuilder sku(final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public InventoryEntryDeletedMessageBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -153,6 +181,23 @@ public final class InventoryEntryDeletedMessageBuilder {
     }
 
     public InventoryEntryDeletedMessage build() {
+        Objects.requireNonNull(id, InventoryEntryDeletedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntryDeletedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntryDeletedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntryDeletedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, InventoryEntryDeletedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, InventoryEntryDeletedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, InventoryEntryDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(sku, InventoryEntryDeletedMessage.class + ": sku is missing");
+        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessage.class + ": supplyChannel is missing");
+        return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
+    }
+
+    /**
+     * builds InventoryEntryDeletedMessage without checking for non null required values
+     */
+    public InventoryEntryDeletedMessage buildUnchecked() {
         return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
     }

@@ -2,13 +2,16 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetItemShippingAddressCustomTypeActionBuilder {
+public final class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
+        implements Builder<StagedOrderSetItemShippingAddressCustomTypeAction> {
 
     private String addressKey;
 
@@ -24,8 +27,20 @@ public final class StagedOrderSetItemShippingAddressCustomTypeActionBuilder {
     }
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -50,6 +65,15 @@ public final class StagedOrderSetItemShippingAddressCustomTypeActionBuilder {
     }
 
     public StagedOrderSetItemShippingAddressCustomTypeAction build() {
+        Objects.requireNonNull(addressKey,
+            StagedOrderSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
+        return new StagedOrderSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
+    }
+
+    /**
+     * builds StagedOrderSetItemShippingAddressCustomTypeAction without checking for non null required values
+     */
+    public StagedOrderSetItemShippingAddressCustomTypeAction buildUnchecked() {
         return new StagedOrderSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
 

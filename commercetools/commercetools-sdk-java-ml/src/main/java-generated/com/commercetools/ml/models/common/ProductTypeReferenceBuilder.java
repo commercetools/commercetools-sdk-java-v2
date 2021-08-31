@@ -3,10 +3,11 @@ package com.commercetools.ml.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeReferenceBuilder {
+public final class ProductTypeReferenceBuilder implements Builder<ProductTypeReference> {
 
     private String id;
 
@@ -20,6 +21,14 @@ public final class ProductTypeReferenceBuilder {
     }
 
     public ProductTypeReference build() {
+        Objects.requireNonNull(id, ProductTypeReference.class + ": id is missing");
+        return new ProductTypeReferenceImpl(id);
+    }
+
+    /**
+     * builds ProductTypeReference without checking for non null required values
+     */
+    public ProductTypeReference buildUnchecked() {
         return new ProductTypeReferenceImpl(id);
     }
 

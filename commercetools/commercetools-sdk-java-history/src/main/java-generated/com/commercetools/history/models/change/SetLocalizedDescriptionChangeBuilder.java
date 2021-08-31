@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLocalizedDescriptionChangeBuilder {
+public final class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalizedDescriptionChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetLocalizedDescriptionChangeBuilder {
     }
 
     public SetLocalizedDescriptionChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLocalizedDescriptionChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetLocalizedDescriptionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class SetLocalizedDescriptionChangeBuilder {
     }
 
     public SetLocalizedDescriptionChange build() {
+        Objects.requireNonNull(change, SetLocalizedDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetLocalizedDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetLocalizedDescriptionChange.class + ": nextValue is missing");
+        return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetLocalizedDescriptionChange without checking for non null required values
+     */
+    public SetLocalizedDescriptionChange buildUnchecked() {
         return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

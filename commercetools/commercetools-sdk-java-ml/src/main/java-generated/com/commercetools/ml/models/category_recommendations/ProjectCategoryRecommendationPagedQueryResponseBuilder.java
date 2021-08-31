@@ -2,11 +2,14 @@
 package com.commercetools.ml.models.category_recommendations;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
+public final class ProjectCategoryRecommendationPagedQueryResponseBuilder
+        implements Builder<ProjectCategoryRecommendationPagedQueryResponse> {
 
     private Long count;
 
@@ -39,9 +42,38 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
         return this;
     }
 
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
+                .build());
+        return this;
+    }
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
+                .build());
+        return this;
+    }
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results) {
         this.results = results;
+        return this;
+    }
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder> builder) {
+        this.meta = builder
+                .apply(
+                    com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder.of())
+                .build();
         return this;
     }
 
@@ -72,6 +104,18 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
     }
 
     public ProjectCategoryRecommendationPagedQueryResponse build() {
+        Objects.requireNonNull(count, ProjectCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, ProjectCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, ProjectCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProjectCategoryRecommendationPagedQueryResponse.class + ": results is missing");
+        Objects.requireNonNull(meta, ProjectCategoryRecommendationPagedQueryResponse.class + ": meta is missing");
+        return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds ProjectCategoryRecommendationPagedQueryResponse without checking for non null required values
+     */
+    public ProjectCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
     }
 

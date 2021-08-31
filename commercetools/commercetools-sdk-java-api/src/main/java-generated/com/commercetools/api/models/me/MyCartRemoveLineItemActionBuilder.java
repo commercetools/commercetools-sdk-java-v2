@@ -2,13 +2,15 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartRemoveLineItemActionBuilder {
+public final class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLineItemAction> {
 
     private String lineItemId;
 
@@ -35,14 +37,36 @@ public final class MyCartRemoveLineItemActionBuilder {
     }
 
     public MyCartRemoveLineItemActionBuilder externalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    public MyCartRemoveLineItemActionBuilder externalPrice(
             @Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
 
     public MyCartRemoveLineItemActionBuilder externalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MyCartRemoveLineItemActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
+        return this;
+    }
+
+    public MyCartRemoveLineItemActionBuilder shippingDetailsToRemove(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetailsToRemove = builder
+                .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -77,6 +101,15 @@ public final class MyCartRemoveLineItemActionBuilder {
     }
 
     public MyCartRemoveLineItemAction build() {
+        Objects.requireNonNull(lineItemId, MyCartRemoveLineItemAction.class + ": lineItemId is missing");
+        return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
+            shippingDetailsToRemove);
+    }
+
+    /**
+     * builds MyCartRemoveLineItemAction without checking for non null required values
+     */
+    public MyCartRemoveLineItemAction buildUnchecked() {
         return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetAnonymousIdActionBuilder {
+public final class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymousIdAction> {
 
     @Nullable
     private String anonymousId;
@@ -24,6 +25,13 @@ public final class CartSetAnonymousIdActionBuilder {
     }
 
     public CartSetAnonymousIdAction build() {
+        return new CartSetAnonymousIdActionImpl(anonymousId);
+    }
+
+    /**
+     * builds CartSetAnonymousIdAction without checking for non null required values
+     */
+    public CartSetAnonymousIdAction buildUnchecked() {
         return new CartSetAnonymousIdActionImpl(anonymousId);
     }
 

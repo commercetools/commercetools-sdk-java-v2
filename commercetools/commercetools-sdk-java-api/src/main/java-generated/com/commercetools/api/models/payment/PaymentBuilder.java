@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentBuilder {
+public final class PaymentBuilder implements Builder<Payment> {
 
     private String id;
 
@@ -70,13 +72,31 @@ public final class PaymentBuilder {
     }
 
     public PaymentBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public PaymentBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
 
+    public PaymentBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
     public PaymentBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
+        return this;
+    }
+
+    public PaymentBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
@@ -101,8 +121,21 @@ public final class PaymentBuilder {
     }
 
     public PaymentBuilder paymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PaymentBuilder paymentMethodInfo(
             final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
+        return this;
+    }
+
+    public PaymentBuilder paymentStatus(
+            Function<com.commercetools.api.models.payment.PaymentStatusBuilder, com.commercetools.api.models.payment.PaymentStatusBuilder> builder) {
+        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusBuilder.of()).build();
         return this;
     }
 
@@ -113,6 +146,22 @@ public final class PaymentBuilder {
 
     public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         this.transactions = new ArrayList<>(Arrays.asList(transactions));
+        return this;
+    }
+
+    public PaymentBuilder withTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        this.transactions = new ArrayList<>();
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentBuilder plusTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        if (this.transactions == null) {
+            this.transactions = new ArrayList<>();
+        }
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
         return this;
     }
 
@@ -128,9 +177,33 @@ public final class PaymentBuilder {
         return this;
     }
 
+    public PaymentBuilder withInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.interfaceInteractions = new ArrayList<>();
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentBuilder plusInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        if (this.interfaceInteractions == null) {
+            this.interfaceInteractions = new ArrayList<>();
+        }
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());
+        return this;
+    }
+
     public PaymentBuilder interfaceInteractions(
             final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions) {
         this.interfaceInteractions = interfaceInteractions;
+        return this;
+    }
+
+    public PaymentBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -216,6 +289,24 @@ public final class PaymentBuilder {
     }
 
     public Payment build() {
+        Objects.requireNonNull(id, Payment.class + ": id is missing");
+        Objects.requireNonNull(version, Payment.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Payment.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Payment.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(amountPlanned, Payment.class + ": amountPlanned is missing");
+        Objects.requireNonNull(paymentMethodInfo, Payment.class + ": paymentMethodInfo is missing");
+        Objects.requireNonNull(paymentStatus, Payment.class + ": paymentStatus is missing");
+        Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");
+        Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");
+        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
+            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
+            key);
+    }
+
+    /**
+     * builds Payment without checking for non null required values
+     */
+    public Payment buildUnchecked() {
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
             interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
             key);

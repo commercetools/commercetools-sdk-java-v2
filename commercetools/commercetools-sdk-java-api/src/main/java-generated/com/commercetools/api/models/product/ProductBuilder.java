@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductBuilder {
+public final class ProductBuilder implements Builder<Product> {
 
     private String id;
 
@@ -61,8 +63,20 @@ public final class ProductBuilder {
     }
 
     public ProductBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -77,8 +91,21 @@ public final class ProductBuilder {
     }
 
     public ProductBuilder productType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
+        return this;
+    }
+
+    public ProductBuilder masterData(
+            Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
+        this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of()).build();
         return this;
     }
 
@@ -95,6 +122,14 @@ public final class ProductBuilder {
 
     public ProductBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
+        return this;
+    }
+
+    public ProductBuilder reviewRatingStatistics(
+            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
+        this.reviewRatingStatistics = builder
+                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of())
+                .build();
         return this;
     }
 
@@ -159,6 +194,20 @@ public final class ProductBuilder {
     }
 
     public Product build() {
+        Objects.requireNonNull(id, Product.class + ": id is missing");
+        Objects.requireNonNull(version, Product.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Product.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Product.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(productType, Product.class + ": productType is missing");
+        Objects.requireNonNull(masterData, Product.class + ": masterData is missing");
+        return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
+            masterData, taxCategory, state, reviewRatingStatistics);
+    }
+
+    /**
+     * builds Product without checking for non null required values
+     */
+    public Product buildUnchecked() {
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
             masterData, taxCategory, state, reviewRatingStatistics);
     }

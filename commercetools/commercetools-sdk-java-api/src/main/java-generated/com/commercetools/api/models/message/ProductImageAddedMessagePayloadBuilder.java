@@ -2,11 +2,13 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductImageAddedMessagePayloadBuilder {
+public final class ProductImageAddedMessagePayloadBuilder implements Builder<ProductImageAddedMessagePayload> {
 
     private Long variantId;
 
@@ -16,6 +18,12 @@ public final class ProductImageAddedMessagePayloadBuilder {
 
     public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
         this.variantId = variantId;
+        return this;
+    }
+
+    public ProductImageAddedMessagePayloadBuilder image(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build();
         return this;
     }
 
@@ -42,6 +50,16 @@ public final class ProductImageAddedMessagePayloadBuilder {
     }
 
     public ProductImageAddedMessagePayload build() {
+        Objects.requireNonNull(variantId, ProductImageAddedMessagePayload.class + ": variantId is missing");
+        Objects.requireNonNull(image, ProductImageAddedMessagePayload.class + ": image is missing");
+        Objects.requireNonNull(staged, ProductImageAddedMessagePayload.class + ": staged is missing");
+        return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);
+    }
+
+    /**
+     * builds ProductImageAddedMessagePayload without checking for non null required values
+     */
+    public ProductImageAddedMessagePayload buildUnchecked() {
         return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);
     }
 

@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Update State by key</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyStatesKeyByKeyPost
         extends ApiMethod<ByProjectKeyStatesKeyByKeyPost, com.commercetools.api.models.state.State>
@@ -94,10 +91,16 @@ public class ByProjectKeyStatesKeyByKeyPost
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyStatesKeyByKeyPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyStatesKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

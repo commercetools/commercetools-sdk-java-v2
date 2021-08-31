@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemProductVariantImportDraftBuilder {
+public final class LineItemProductVariantImportDraftBuilder implements Builder<LineItemProductVariantImportDraft> {
 
     @Nullable
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
@@ -26,6 +28,14 @@ public final class LineItemProductVariantImportDraftBuilder {
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
     public LineItemProductVariantImportDraftBuilder productVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public LineItemProductVariantImportDraftBuilder productVariant(
             @Nullable final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
         return this;
@@ -39,6 +49,22 @@ public final class LineItemProductVariantImportDraftBuilder {
     public LineItemProductVariantImportDraftBuilder prices(
             @Nullable final com.commercetools.importapi.models.orders.LineItemPrice... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+
+    public LineItemProductVariantImportDraftBuilder withPrices(
+            Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()).build());
+        return this;
+    }
+
+    public LineItemProductVariantImportDraftBuilder plusPrices(
+            Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.add(builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()).build());
         return this;
     }
 
@@ -63,6 +89,22 @@ public final class LineItemProductVariantImportDraftBuilder {
     public LineItemProductVariantImportDraftBuilder images(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+
+    public LineItemProductVariantImportDraftBuilder withImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public LineItemProductVariantImportDraftBuilder plusImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
         return this;
     }
 
@@ -98,6 +140,13 @@ public final class LineItemProductVariantImportDraftBuilder {
     }
 
     public LineItemProductVariantImportDraft build() {
+        return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);
+    }
+
+    /**
+     * builds LineItemProductVariantImportDraft without checking for non null required values
+     */
+    public LineItemProductVariantImportDraft buildUnchecked() {
         return new LineItemProductVariantImportDraftImpl(productVariant, sku, prices, attributes, images);
     }
 

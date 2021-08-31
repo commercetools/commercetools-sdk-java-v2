@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MultiBuyCustomLineItemsTargetBuilder {
+public final class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCustomLineItemsTarget> {
 
     private String predicate;
 
@@ -69,6 +70,19 @@ public final class MultiBuyCustomLineItemsTargetBuilder {
     }
 
     public MultiBuyCustomLineItemsTarget build() {
+        Objects.requireNonNull(predicate, MultiBuyCustomLineItemsTarget.class + ": predicate is missing");
+        Objects.requireNonNull(triggerQuantity, MultiBuyCustomLineItemsTarget.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity,
+            MultiBuyCustomLineItemsTarget.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(selectionMode, MultiBuyCustomLineItemsTarget.class + ": selectionMode is missing");
+        return new MultiBuyCustomLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
+            selectionMode);
+    }
+
+    /**
+     * builds MultiBuyCustomLineItemsTarget without checking for non null required values
+     */
+    public MultiBuyCustomLineItemsTarget buildUnchecked() {
         return new MultiBuyCustomLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
             selectionMode);
     }

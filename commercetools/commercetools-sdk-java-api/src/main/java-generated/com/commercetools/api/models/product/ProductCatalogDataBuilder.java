@@ -2,11 +2,13 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductCatalogDataBuilder {
+public final class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     private Boolean published;
 
@@ -21,8 +23,20 @@ public final class ProductCatalogDataBuilder {
         return this;
     }
 
+    public ProductCatalogDataBuilder current(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+        this.current = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
+        return this;
+    }
+
     public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
         this.current = current;
+        return this;
+    }
+
+    public ProductCatalogDataBuilder staged(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
         return this;
     }
 
@@ -53,6 +67,17 @@ public final class ProductCatalogDataBuilder {
     }
 
     public ProductCatalogData build() {
+        Objects.requireNonNull(published, ProductCatalogData.class + ": published is missing");
+        Objects.requireNonNull(current, ProductCatalogData.class + ": current is missing");
+        Objects.requireNonNull(staged, ProductCatalogData.class + ": staged is missing");
+        Objects.requireNonNull(hasStagedChanges, ProductCatalogData.class + ": hasStagedChanges is missing");
+        return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
+    }
+
+    /**
+     * builds ProductCatalogData without checking for non null required values
+     */
+    public ProductCatalogData buildUnchecked() {
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
     }
 

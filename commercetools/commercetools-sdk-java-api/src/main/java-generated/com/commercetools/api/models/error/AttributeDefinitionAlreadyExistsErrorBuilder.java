@@ -3,10 +3,12 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeDefinitionAlreadyExistsErrorBuilder {
+public final class AttributeDefinitionAlreadyExistsErrorBuilder
+        implements Builder<AttributeDefinitionAlreadyExistsError> {
 
     private String message;
 
@@ -56,6 +58,21 @@ public final class AttributeDefinitionAlreadyExistsErrorBuilder {
     }
 
     public AttributeDefinitionAlreadyExistsError build() {
+        Objects.requireNonNull(message, AttributeDefinitionAlreadyExistsError.class + ": message is missing");
+        Objects.requireNonNull(conflictingProductTypeId,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeId is missing");
+        Objects.requireNonNull(conflictingProductTypeName,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeName is missing");
+        Objects.requireNonNull(conflictingAttributeName,
+            AttributeDefinitionAlreadyExistsError.class + ": conflictingAttributeName is missing");
+        return new AttributeDefinitionAlreadyExistsErrorImpl(message, conflictingProductTypeId,
+            conflictingProductTypeName, conflictingAttributeName);
+    }
+
+    /**
+     * builds AttributeDefinitionAlreadyExistsError without checking for non null required values
+     */
+    public AttributeDefinitionAlreadyExistsError buildUnchecked() {
         return new AttributeDefinitionAlreadyExistsErrorImpl(message, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }

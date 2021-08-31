@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeReviewRatingStatisticsChangeBuilder {
+public final class ChangeReviewRatingStatisticsChangeBuilder implements Builder<ChangeReviewRatingStatisticsChange> {
 
     private String change;
 
@@ -20,8 +22,22 @@ public final class ChangeReviewRatingStatisticsChangeBuilder {
     }
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeReviewRatingStatisticsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
+                .build();
         return this;
     }
 
@@ -44,6 +60,16 @@ public final class ChangeReviewRatingStatisticsChangeBuilder {
     }
 
     public ChangeReviewRatingStatisticsChange build() {
+        Objects.requireNonNull(change, ChangeReviewRatingStatisticsChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeReviewRatingStatisticsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeReviewRatingStatisticsChange.class + ": previousValue is missing");
+        return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeReviewRatingStatisticsChange without checking for non null required values
+     */
+    public ChangeReviewRatingStatisticsChange buildUnchecked() {
         return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);
     }
 

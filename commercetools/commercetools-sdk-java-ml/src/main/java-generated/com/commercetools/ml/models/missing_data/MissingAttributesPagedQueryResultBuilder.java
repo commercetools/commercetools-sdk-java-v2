@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingAttributesPagedQueryResultBuilder {
+public final class MissingAttributesPagedQueryResultBuilder implements Builder<MissingAttributesPagedQueryResult> {
 
     private Long count;
 
@@ -39,9 +41,31 @@ public final class MissingAttributesPagedQueryResultBuilder {
         return this;
     }
 
+    public MissingAttributesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesBuilder.of()).build());
+        return this;
+    }
+
+    public MissingAttributesPagedQueryResultBuilder plusResults(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesBuilder.of()).build());
+        return this;
+    }
+
     public MissingAttributesPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results) {
         this.results = results;
+        return this;
+    }
+
+    public MissingAttributesPagedQueryResultBuilder meta(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder, com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder.of()).build();
         return this;
     }
 
@@ -72,6 +96,18 @@ public final class MissingAttributesPagedQueryResultBuilder {
     }
 
     public MissingAttributesPagedQueryResult build() {
+        Objects.requireNonNull(count, MissingAttributesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingAttributesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingAttributesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingAttributesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingAttributesPagedQueryResult.class + ": meta is missing");
+        return new MissingAttributesPagedQueryResultImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds MissingAttributesPagedQueryResult without checking for non null required values
+     */
+    public MissingAttributesPagedQueryResult buildUnchecked() {
         return new MissingAttributesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

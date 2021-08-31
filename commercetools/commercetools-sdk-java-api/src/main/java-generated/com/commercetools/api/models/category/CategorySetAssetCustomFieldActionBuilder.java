@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySetAssetCustomFieldActionBuilder {
+public final class CategorySetAssetCustomFieldActionBuilder implements Builder<CategorySetAssetCustomFieldAction> {
 
     @Nullable
     private String assetId;
@@ -61,6 +62,14 @@ public final class CategorySetAssetCustomFieldActionBuilder {
     }
 
     public CategorySetAssetCustomFieldAction build() {
+        Objects.requireNonNull(name, CategorySetAssetCustomFieldAction.class + ": name is missing");
+        return new CategorySetAssetCustomFieldActionImpl(assetId, assetKey, name, value);
+    }
+
+    /**
+     * builds CategorySetAssetCustomFieldAction without checking for non null required values
+     */
+    public CategorySetAssetCustomFieldAction buildUnchecked() {
         return new CategorySetAssetCustomFieldActionImpl(assetId, assetKey, name, value);
     }
 

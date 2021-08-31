@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListPagedQueryResponseBuilder {
+public final class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingListPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class ShoppingListPagedQueryResponseBuilder {
         return this;
     }
 
+    public ShoppingListPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
+        return this;
+    }
+
     public ShoppingListPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class ShoppingListPagedQueryResponseBuilder {
     }
 
     public ShoppingListPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ShoppingListPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ShoppingListPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ShoppingListPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ShoppingListPagedQueryResponse.class + ": results is missing");
+        return new ShoppingListPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ShoppingListPagedQueryResponse without checking for non null required values
+     */
+    public ShoppingListPagedQueryResponse buildUnchecked() {
         return new ShoppingListPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

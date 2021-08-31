@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TextLineItemDraftBuilder {
+public final class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     @Nullable
     private java.time.ZonedDateTime addedAt;
@@ -29,14 +31,32 @@ public final class TextLineItemDraftBuilder {
         return this;
     }
 
+    public TextLineItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
 
     public TextLineItemDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public TextLineItemDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public TextLineItemDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -75,6 +95,14 @@ public final class TextLineItemDraftBuilder {
     }
 
     public TextLineItemDraft build() {
+        Objects.requireNonNull(name, TextLineItemDraft.class + ": name is missing");
+        return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
+    }
+
+    /**
+     * builds TextLineItemDraft without checking for non null required values
+     */
+    public TextLineItemDraft buildUnchecked() {
         return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
     }
 

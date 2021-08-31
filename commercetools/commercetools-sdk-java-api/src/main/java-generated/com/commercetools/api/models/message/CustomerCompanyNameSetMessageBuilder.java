@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerCompanyNameSetMessageBuilder {
+public final class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCompanyNameSetMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class CustomerCompanyNameSetMessageBuilder {
     }
 
     public CustomerCompanyNameSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerCompanyNameSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CustomerCompanyNameSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -79,6 +93,14 @@ public final class CustomerCompanyNameSetMessageBuilder {
 
     public CustomerCompanyNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public CustomerCompanyNameSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -141,6 +163,22 @@ public final class CustomerCompanyNameSetMessageBuilder {
     }
 
     public CustomerCompanyNameSetMessage build() {
+        Objects.requireNonNull(id, CustomerCompanyNameSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerCompanyNameSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerCompanyNameSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerCompanyNameSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerCompanyNameSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerCompanyNameSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerCompanyNameSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(companyName, CustomerCompanyNameSetMessage.class + ": companyName is missing");
+        return new CustomerCompanyNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, companyName);
+    }
+
+    /**
+     * builds CustomerCompanyNameSetMessage without checking for non null required values
+     */
+    public CustomerCompanyNameSetMessage buildUnchecked() {
         return new CustomerCompanyNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, companyName);
     }

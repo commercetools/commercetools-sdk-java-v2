@@ -2,13 +2,15 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionPagedQueryResponseBuilder {
+public final class ExtensionPagedQueryResponseBuilder implements Builder<ExtensionPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class ExtensionPagedQueryResponseBuilder {
         return this;
     }
 
+    public ExtensionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
+        return this;
+    }
+
     public ExtensionPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.extension.Extension> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class ExtensionPagedQueryResponseBuilder {
     }
 
     public ExtensionPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ExtensionPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ExtensionPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ExtensionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ExtensionPagedQueryResponse.class + ": results is missing");
+        return new ExtensionPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ExtensionPagedQueryResponse without checking for non null required values
+     */
+    public ExtensionPagedQueryResponse buildUnchecked() {
         return new ExtensionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

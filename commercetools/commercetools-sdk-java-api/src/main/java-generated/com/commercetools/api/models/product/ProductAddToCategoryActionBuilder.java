@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddToCategoryActionBuilder {
+public final class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCategoryAction> {
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier category;
 
@@ -17,6 +19,13 @@ public final class ProductAddToCategoryActionBuilder {
 
     @Nullable
     private Boolean staged;
+
+    public ProductAddToCategoryActionBuilder category(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProductAddToCategoryActionBuilder category(
             final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
@@ -49,6 +58,14 @@ public final class ProductAddToCategoryActionBuilder {
     }
 
     public ProductAddToCategoryAction build() {
+        Objects.requireNonNull(category, ProductAddToCategoryAction.class + ": category is missing");
+        return new ProductAddToCategoryActionImpl(category, orderHint, staged);
+    }
+
+    /**
+     * builds ProductAddToCategoryAction without checking for non null required values
+     */
+    public ProductAddToCategoryAction buildUnchecked() {
         return new ProductAddToCategoryActionImpl(category, orderHint, staged);
     }
 

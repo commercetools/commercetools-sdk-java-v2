@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySetAssetDescriptionActionBuilder {
+public final class CategorySetAssetDescriptionActionBuilder implements Builder<CategorySetAssetDescriptionAction> {
 
     @Nullable
     private String assetId;
@@ -26,6 +28,12 @@ public final class CategorySetAssetDescriptionActionBuilder {
 
     public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+
+    public CategorySetAssetDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -51,6 +59,13 @@ public final class CategorySetAssetDescriptionActionBuilder {
     }
 
     public CategorySetAssetDescriptionAction build() {
+        return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
+    }
+
+    /**
+     * builds CategorySetAssetDescriptionAction without checking for non null required values
+     */
+    public CategorySetAssetDescriptionAction buildUnchecked() {
         return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
     }
 

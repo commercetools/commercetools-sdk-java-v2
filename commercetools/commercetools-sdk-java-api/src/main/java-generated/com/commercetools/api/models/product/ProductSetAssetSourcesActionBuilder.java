@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetAssetSourcesActionBuilder {
+public final class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAssetSourcesAction> {
 
     @Nullable
     private Long variantId;
@@ -58,6 +60,22 @@ public final class ProductSetAssetSourcesActionBuilder {
         return this;
     }
 
+    public ProductSetAssetSourcesActionBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductSetAssetSourcesActionBuilder plusSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
     public ProductSetAssetSourcesActionBuilder sources(
             final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
@@ -94,6 +112,14 @@ public final class ProductSetAssetSourcesActionBuilder {
     }
 
     public ProductSetAssetSourcesAction build() {
+        Objects.requireNonNull(sources, ProductSetAssetSourcesAction.class + ": sources is missing");
+        return new ProductSetAssetSourcesActionImpl(variantId, sku, staged, assetId, assetKey, sources);
+    }
+
+    /**
+     * builds ProductSetAssetSourcesAction without checking for non null required values
+     */
+    public ProductSetAssetSourcesAction buildUnchecked() {
         return new ProductSetAssetSourcesActionImpl(variantId, sku, staged, assetId, assetKey, sources);
     }
 

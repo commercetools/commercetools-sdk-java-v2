@@ -2,11 +2,13 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLErrorBuilder {
+public final class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     private String message;
 
@@ -22,6 +24,24 @@ public final class GraphQLErrorBuilder {
     public GraphQLErrorBuilder locations(
             final com.commercetools.api.models.graph_ql.GraphQLErrorLocation... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+
+    public GraphQLErrorBuilder withLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations
+                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
+        return this;
+    }
+
+    public GraphQLErrorBuilder plusLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations
+                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
         return this;
     }
 
@@ -54,6 +74,16 @@ public final class GraphQLErrorBuilder {
     }
 
     public GraphQLError build() {
+        Objects.requireNonNull(message, GraphQLError.class + ": message is missing");
+        Objects.requireNonNull(locations, GraphQLError.class + ": locations is missing");
+        Objects.requireNonNull(path, GraphQLError.class + ": path is missing");
+        return new GraphQLErrorImpl(message, locations, path);
+    }
+
+    /**
+     * builds GraphQLError without checking for non null required values
+     */
+    public GraphQLError buildUnchecked() {
         return new GraphQLErrorImpl(message, locations, path);
     }
 

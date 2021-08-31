@@ -84,7 +84,7 @@ public interface CartDiscountDraft {
     *  <p>States whether the discount can only be used in a connection with a DiscountCode.
     *  Defaults to <code>false</code>.</p>
     */
-    @NotNull
+
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();
 

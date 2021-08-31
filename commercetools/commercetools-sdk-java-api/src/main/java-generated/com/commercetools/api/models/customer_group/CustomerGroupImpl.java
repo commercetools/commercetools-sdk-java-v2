@@ -57,14 +57,14 @@ public final class CustomerGroupImpl implements CustomerGroup {
     }
 
     /**
-    *  <p>The unique ID of the customer group.</p>
+    *  <p>Unique ID of the customer group.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the customer group.</p>
+    *  <p>Current version of the customer group.</p>
     */
     public Long getVersion() {
         return this.version;
@@ -79,26 +79,29 @@ public final class CustomerGroupImpl implements CustomerGroup {
     }
 
     /**
-    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+    *  <p>Present on resources updated after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the customer group.</p>
     */
     public String getKey() {
         return this.key;
     }
 
+    /**
+    *  <p>Unique within the project.</p>
+    */
     public String getName() {
         return this.name;
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderStoreSetMessageBuilder {
+public final class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class OrderStoreSetMessageBuilder {
     }
 
     public OrderStoreSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderStoreSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderStoreSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,8 +97,22 @@ public final class OrderStoreSetMessageBuilder {
     }
 
     public OrderStoreSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderStoreSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public OrderStoreSetMessageBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -141,6 +169,22 @@ public final class OrderStoreSetMessageBuilder {
     }
 
     public OrderStoreSetMessage build() {
+        Objects.requireNonNull(id, OrderStoreSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderStoreSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderStoreSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderStoreSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderStoreSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderStoreSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderStoreSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(store, OrderStoreSetMessage.class + ": store is missing");
+        return new OrderStoreSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, store);
+    }
+
+    /**
+     * builds OrderStoreSetMessage without checking for non null required values
+     */
+    public OrderStoreSetMessage buildUnchecked() {
         return new OrderStoreSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, store);
     }

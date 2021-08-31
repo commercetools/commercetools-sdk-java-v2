@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeIsSearchableChangeBuilder {
+public final class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchableChange> {
 
     private String change;
 
@@ -53,6 +54,17 @@ public final class ChangeIsSearchableChangeBuilder {
     }
 
     public ChangeIsSearchableChange build() {
+        Objects.requireNonNull(change, ChangeIsSearchableChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, ChangeIsSearchableChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeIsSearchableChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeIsSearchableChange.class + ": previousValue is missing");
+        return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeIsSearchableChange without checking for non null required values
+     */
+    public ChangeIsSearchableChange buildUnchecked() {
         return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
     }
 

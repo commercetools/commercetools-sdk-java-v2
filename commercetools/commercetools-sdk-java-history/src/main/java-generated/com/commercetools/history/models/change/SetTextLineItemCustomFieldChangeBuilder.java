@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetTextLineItemCustomFieldChangeBuilder {
+public final class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextLineItemCustomFieldChange> {
 
     private String change;
 
@@ -32,6 +34,13 @@ public final class SetTextLineItemCustomFieldChangeBuilder {
 
     public SetTextLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
+        return this;
+    }
+
+    public SetTextLineItemCustomFieldChangeBuilder textLineItem(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.textLineItem = builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -76,6 +85,20 @@ public final class SetTextLineItemCustomFieldChangeBuilder {
     }
 
     public SetTextLineItemCustomFieldChange build() {
+        Objects.requireNonNull(change, SetTextLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetTextLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId, SetTextLineItemCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(textLineItem, SetTextLineItemCustomFieldChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(nextValue, SetTextLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetTextLineItemCustomFieldChange.class + ": previousValue is missing");
+        return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetTextLineItemCustomFieldChange without checking for non null required values
+     */
+    public SetTextLineItemCustomFieldChange buildUnchecked() {
         return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,
             previousValue);
     }

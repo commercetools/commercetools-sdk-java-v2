@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentPagedQueryResponseBuilder {
+public final class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class PaymentPagedQueryResponseBuilder {
         return this;
     }
 
+    public PaymentPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
+        return this;
+    }
+
+    public PaymentPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
+        return this;
+    }
+
     public PaymentPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.payment.Payment> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class PaymentPagedQueryResponseBuilder {
     }
 
     public PaymentPagedQueryResponse build() {
+        Objects.requireNonNull(limit, PaymentPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, PaymentPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, PaymentPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, PaymentPagedQueryResponse.class + ": results is missing");
+        return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds PaymentPagedQueryResponse without checking for non null required values
+     */
+    public PaymentPagedQueryResponse buildUnchecked() {
         return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

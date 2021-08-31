@@ -2,13 +2,15 @@
 package com.commercetools.api.models.custom_object;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomObjectReferenceBuilder {
+public final class CustomObjectReferenceBuilder implements Builder<CustomObjectReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class CustomObjectReferenceBuilder {
 
     public CustomObjectReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public CustomObjectReferenceBuilder obj(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class CustomObjectReferenceBuilder {
     }
 
     public CustomObjectReference build() {
+        Objects.requireNonNull(id, CustomObjectReference.class + ": id is missing");
+        return new CustomObjectReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds CustomObjectReference without checking for non null required values
+     */
+    public CustomObjectReference buildUnchecked() {
         return new CustomObjectReferenceImpl(id, obj);
     }
 

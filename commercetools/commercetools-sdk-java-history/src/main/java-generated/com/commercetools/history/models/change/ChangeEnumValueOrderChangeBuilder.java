@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeEnumValueOrderChangeBuilder {
+public final class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValueOrderChange> {
 
     private String change;
 
@@ -32,6 +34,22 @@ public final class ChangeEnumValueOrderChangeBuilder {
         return this;
     }
 
+    public ChangeEnumValueOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeEnumValueOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
     public ChangeEnumValueOrderChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
         this.nextValue = nextValue;
@@ -41,6 +59,24 @@ public final class ChangeEnumValueOrderChangeBuilder {
     public ChangeEnumValueOrderChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.EnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public ChangeEnumValueOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeEnumValueOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
         return this;
     }
 
@@ -67,6 +103,17 @@ public final class ChangeEnumValueOrderChangeBuilder {
     }
 
     public ChangeEnumValueOrderChange build() {
+        Objects.requireNonNull(change, ChangeEnumValueOrderChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeEnumValueOrderChange.class + ": fieldName is missing");
+        Objects.requireNonNull(nextValue, ChangeEnumValueOrderChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeEnumValueOrderChange.class + ": previousValue is missing");
+        return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeEnumValueOrderChange without checking for non null required values
+     */
+    public ChangeEnumValueOrderChange buildUnchecked() {
         return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
     }
 

@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get ShippingMethod by ID</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyShippingMethodsByIDGet extends
         ApiMethod<ByProjectKeyShippingMethodsByIDGet, com.commercetools.api.models.shipping_method.ShippingMethod>
@@ -83,10 +80,16 @@ public class ByProjectKeyShippingMethodsByIDGet extends
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShippingMethodsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShippingMethodsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

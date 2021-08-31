@@ -2,11 +2,13 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodAddShippingRateActionBuilder {
+public final class ShippingMethodAddShippingRateActionBuilder implements Builder<ShippingMethodAddShippingRateAction> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
@@ -15,6 +17,13 @@ public final class ShippingMethodAddShippingRateActionBuilder {
     public ShippingMethodAddShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
+        return this;
+    }
+
+    public ShippingMethodAddShippingRateActionBuilder shippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -33,6 +42,15 @@ public final class ShippingMethodAddShippingRateActionBuilder {
     }
 
     public ShippingMethodAddShippingRateAction build() {
+        Objects.requireNonNull(zone, ShippingMethodAddShippingRateAction.class + ": zone is missing");
+        Objects.requireNonNull(shippingRate, ShippingMethodAddShippingRateAction.class + ": shippingRate is missing");
+        return new ShippingMethodAddShippingRateActionImpl(zone, shippingRate);
+    }
+
+    /**
+     * builds ShippingMethodAddShippingRateAction without checking for non null required values
+     */
+    public ShippingMethodAddShippingRateAction buildUnchecked() {
         return new ShippingMethodAddShippingRateActionImpl(zone, shippingRate);
     }
 

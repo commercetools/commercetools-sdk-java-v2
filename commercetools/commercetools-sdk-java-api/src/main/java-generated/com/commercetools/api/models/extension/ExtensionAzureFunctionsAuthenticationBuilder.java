@@ -3,10 +3,12 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionAzureFunctionsAuthenticationBuilder {
+public final class ExtensionAzureFunctionsAuthenticationBuilder
+        implements Builder<ExtensionAzureFunctionsAuthentication> {
 
     private String key;
 
@@ -20,6 +22,14 @@ public final class ExtensionAzureFunctionsAuthenticationBuilder {
     }
 
     public ExtensionAzureFunctionsAuthentication build() {
+        Objects.requireNonNull(key, ExtensionAzureFunctionsAuthentication.class + ": key is missing");
+        return new ExtensionAzureFunctionsAuthenticationImpl(key);
+    }
+
+    /**
+     * builds ExtensionAzureFunctionsAuthentication without checking for non null required values
+     */
+    public ExtensionAzureFunctionsAuthentication buildUnchecked() {
         return new ExtensionAzureFunctionsAuthenticationImpl(key);
     }
 

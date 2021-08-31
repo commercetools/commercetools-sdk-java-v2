@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListLineItemDraftBuilder {
+public final class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
 
     @Nullable
     private java.time.ZonedDateTime addedAt;
@@ -30,6 +32,12 @@ public final class ShoppingListLineItemDraftBuilder {
 
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
+        return this;
+    }
+
+    public ShoppingListLineItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -90,6 +98,13 @@ public final class ShoppingListLineItemDraftBuilder {
     }
 
     public ShoppingListLineItemDraft build() {
+        return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
+    }
+
+    /**
+     * builds ShoppingListLineItemDraft without checking for non null required values
+     */
+    public ShoppingListLineItemDraft buildUnchecked() {
         return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
     }
 

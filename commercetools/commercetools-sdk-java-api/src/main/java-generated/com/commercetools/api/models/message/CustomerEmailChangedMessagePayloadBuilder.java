@@ -3,10 +3,11 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerEmailChangedMessagePayloadBuilder {
+public final class CustomerEmailChangedMessagePayloadBuilder implements Builder<CustomerEmailChangedMessagePayload> {
 
     private String email;
 
@@ -20,6 +21,14 @@ public final class CustomerEmailChangedMessagePayloadBuilder {
     }
 
     public CustomerEmailChangedMessagePayload build() {
+        Objects.requireNonNull(email, CustomerEmailChangedMessagePayload.class + ": email is missing");
+        return new CustomerEmailChangedMessagePayloadImpl(email);
+    }
+
+    /**
+     * builds CustomerEmailChangedMessagePayload without checking for non null required values
+     */
+    public CustomerEmailChangedMessagePayload buildUnchecked() {
         return new CustomerEmailChangedMessagePayloadImpl(email);
     }
 

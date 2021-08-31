@@ -2,17 +2,35 @@
 package com.commercetools.importapi.models.importrequests;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceImportRequestBuilder {
+public final class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
 
     public PriceImportRequestBuilder resources(
             final com.commercetools.importapi.models.prices.PriceImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
+        return this;
+    }
+
+    public PriceImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
+        return this;
+    }
+
+    public PriceImportRequestBuilder plusResources(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
 
@@ -27,6 +45,14 @@ public final class PriceImportRequestBuilder {
     }
 
     public PriceImportRequest build() {
+        Objects.requireNonNull(resources, PriceImportRequest.class + ": resources is missing");
+        return new PriceImportRequestImpl(resources);
+    }
+
+    /**
+     * builds PriceImportRequest without checking for non null required values
+     */
+    public PriceImportRequest buildUnchecked() {
         return new PriceImportRequestImpl(resources);
     }
 

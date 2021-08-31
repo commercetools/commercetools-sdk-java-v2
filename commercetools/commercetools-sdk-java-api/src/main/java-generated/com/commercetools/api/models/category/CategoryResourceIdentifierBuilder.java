@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryResourceIdentifierBuilder {
+public final class CategoryResourceIdentifierBuilder implements Builder<CategoryResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class CategoryResourceIdentifierBuilder {
     }
 
     public CategoryResourceIdentifier build() {
+        return new CategoryResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds CategoryResourceIdentifier without checking for non null required values
+     */
+    public CategoryResourceIdentifier buildUnchecked() {
         return new CategoryResourceIdentifierImpl(id, key);
     }
 

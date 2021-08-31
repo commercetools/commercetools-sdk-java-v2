@@ -2,13 +2,15 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeReferenceBuilder {
+public final class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class DiscountCodeReferenceBuilder {
 
     public DiscountCodeReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public DiscountCodeReferenceBuilder obj(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class DiscountCodeReferenceBuilder {
     }
 
     public DiscountCodeReference build() {
+        Objects.requireNonNull(id, DiscountCodeReference.class + ": id is missing");
+        return new DiscountCodeReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds DiscountCodeReference without checking for non null required values
+     */
+    public DiscountCodeReference buildUnchecked() {
         return new DiscountCodeReferenceImpl(id, obj);
     }
 

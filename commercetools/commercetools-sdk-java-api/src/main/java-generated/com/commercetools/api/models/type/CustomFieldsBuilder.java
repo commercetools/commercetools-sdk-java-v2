@@ -2,11 +2,13 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldsBuilder {
+public final class CustomFieldsBuilder implements Builder<CustomFields> {
 
     private com.commercetools.api.models.type.TypeReference type;
 
@@ -14,6 +16,12 @@ public final class CustomFieldsBuilder {
 
     public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
+        return this;
+    }
+
+    public CustomFieldsBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -31,6 +39,15 @@ public final class CustomFieldsBuilder {
     }
 
     public CustomFields build() {
+        Objects.requireNonNull(type, CustomFields.class + ": type is missing");
+        Objects.requireNonNull(fields, CustomFields.class + ": fields is missing");
+        return new CustomFieldsImpl(type, fields);
+    }
+
+    /**
+     * builds CustomFields without checking for non null required values
+     */
+    public CustomFields buildUnchecked() {
         return new CustomFieldsImpl(type, fields);
     }
 

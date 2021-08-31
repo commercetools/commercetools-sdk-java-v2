@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditReferenceBuilder {
+public final class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class OrderEditReferenceBuilder {
 
     public OrderEditReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public OrderEditReferenceBuilder obj(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class OrderEditReferenceBuilder {
     }
 
     public OrderEditReference build() {
+        Objects.requireNonNull(id, OrderEditReference.class + ": id is missing");
+        return new OrderEditReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds OrderEditReference without checking for non null required values
+     */
+    public OrderEditReference buildUnchecked() {
         return new OrderEditReferenceImpl(id, obj);
     }
 

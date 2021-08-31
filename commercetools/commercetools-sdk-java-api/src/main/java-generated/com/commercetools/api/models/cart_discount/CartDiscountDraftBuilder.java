@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountDraftBuilder {
+public final class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -36,6 +38,7 @@ public final class CartDiscountDraftBuilder {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    @Nullable
     private Boolean requiresDiscountCode;
 
     @Nullable
@@ -44,6 +47,12 @@ public final class CartDiscountDraftBuilder {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    public CartDiscountDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CartDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -51,6 +60,12 @@ public final class CartDiscountDraftBuilder {
 
     public CartDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public CartDiscountDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -97,7 +112,7 @@ public final class CartDiscountDraftBuilder {
         return this;
     }
 
-    public CartDiscountDraftBuilder requiresDiscountCode(final Boolean requiresDiscountCode) {
+    public CartDiscountDraftBuilder requiresDiscountCode(@Nullable final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
         return this;
     }
@@ -105,6 +120,12 @@ public final class CartDiscountDraftBuilder {
     public CartDiscountDraftBuilder stackingMode(
             @Nullable final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
         this.stackingMode = stackingMode;
+        return this;
+    }
+
+    public CartDiscountDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -159,6 +180,7 @@ public final class CartDiscountDraftBuilder {
         return this.validUntil;
     }
 
+    @Nullable
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
@@ -174,6 +196,18 @@ public final class CartDiscountDraftBuilder {
     }
 
     public CartDiscountDraft build() {
+        Objects.requireNonNull(name, CartDiscountDraft.class + ": name is missing");
+        Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
+        Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
+        Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
+        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
+            validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+    }
+
+    /**
+     * builds CartDiscountDraft without checking for non null required values
+     */
+    public CartDiscountDraft buildUnchecked() {
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
             validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAvailabilityBuilder {
+public final class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
 
     @Nullable
     private Boolean isOnStock;
@@ -34,6 +36,14 @@ public final class ProductVariantAvailabilityBuilder {
 
     public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    public ProductVariantAvailabilityBuilder channels(
+            Function<com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder> builder) {
+        this.channels = builder
+                .apply(com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder.of())
+                .build();
         return this;
     }
 
@@ -64,6 +74,13 @@ public final class ProductVariantAvailabilityBuilder {
     }
 
     public ProductVariantAvailability build() {
+        return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
+    }
+
+    /**
+     * builds ProductVariantAvailability without checking for non null required values
+     */
+    public ProductVariantAvailability buildUnchecked() {
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 

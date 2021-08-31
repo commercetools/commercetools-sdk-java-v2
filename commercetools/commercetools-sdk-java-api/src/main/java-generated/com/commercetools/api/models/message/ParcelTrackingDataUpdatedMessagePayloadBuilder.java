@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
+public final class ParcelTrackingDataUpdatedMessagePayloadBuilder
+        implements Builder<ParcelTrackingDataUpdatedMessagePayload> {
 
     private String deliveryId;
 
@@ -24,6 +27,12 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
 
@@ -47,6 +56,15 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
     }
 
     public ParcelTrackingDataUpdatedMessagePayload build() {
+        Objects.requireNonNull(deliveryId, ParcelTrackingDataUpdatedMessagePayload.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcelId, ParcelTrackingDataUpdatedMessagePayload.class + ": parcelId is missing");
+        return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData);
+    }
+
+    /**
+     * builds ParcelTrackingDataUpdatedMessagePayload without checking for non null required values
+     */
+    public ParcelTrackingDataUpdatedMessagePayload buildUnchecked() {
         return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData);
     }
 

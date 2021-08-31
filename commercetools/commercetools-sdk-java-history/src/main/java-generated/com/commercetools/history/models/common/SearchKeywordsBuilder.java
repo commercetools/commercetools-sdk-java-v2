@@ -3,12 +3,13 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchKeywordsBuilder {
+public final class SearchKeywordsBuilder implements Builder<SearchKeywords> {
 
-    private Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values;
+    private Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values = new HashMap<>();
 
     public SearchKeywordsBuilder values(
             final Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values) {
@@ -30,6 +31,14 @@ public final class SearchKeywordsBuilder {
     }
 
     public SearchKeywords build() {
+        Objects.requireNonNull(values, SearchKeywords.class + ": values are missing");
+        return new SearchKeywordsImpl(values);
+    }
+
+    /**
+     * builds SearchKeywords without checking for non null required values
+     */
+    public SearchKeywords buildUnchecked() {
         return new SearchKeywordsImpl(values);
     }
 

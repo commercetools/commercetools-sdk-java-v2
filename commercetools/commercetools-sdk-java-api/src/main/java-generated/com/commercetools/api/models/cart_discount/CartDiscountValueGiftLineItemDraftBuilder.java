@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountValueGiftLineItemDraftBuilder {
+public final class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDiscountValueGiftLineItemDraft> {
 
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
@@ -19,6 +21,13 @@ public final class CartDiscountValueGiftLineItemDraftBuilder {
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    public CartDiscountValueGiftLineItemDraftBuilder product(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
             final com.commercetools.api.models.product.ProductResourceIdentifier product) {
@@ -62,6 +71,15 @@ public final class CartDiscountValueGiftLineItemDraftBuilder {
     }
 
     public CartDiscountValueGiftLineItemDraft build() {
+        Objects.requireNonNull(product, CartDiscountValueGiftLineItemDraft.class + ": product is missing");
+        Objects.requireNonNull(variantId, CartDiscountValueGiftLineItemDraft.class + ": variantId is missing");
+        return new CartDiscountValueGiftLineItemDraftImpl(product, variantId, supplyChannel, distributionChannel);
+    }
+
+    /**
+     * builds CartDiscountValueGiftLineItemDraft without checking for non null required values
+     */
+    public CartDiscountValueGiftLineItemDraft buildUnchecked() {
         return new CartDiscountValueGiftLineItemDraftImpl(product, variantId, supplyChannel, distributionChannel);
     }
 

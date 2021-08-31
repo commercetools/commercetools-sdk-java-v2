@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceExternalDiscountSetMessageBuilder {
+public final class ProductPriceExternalDiscountSetMessageBuilder
+        implements Builder<ProductPriceExternalDiscountSetMessage> {
 
     private String id;
 
@@ -69,8 +72,20 @@ public final class ProductPriceExternalDiscountSetMessageBuilder {
     }
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductPriceExternalDiscountSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -97,6 +112,14 @@ public final class ProductPriceExternalDiscountSetMessageBuilder {
     }
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -119,6 +142,12 @@ public final class ProductPriceExternalDiscountSetMessageBuilder {
 
     public ProductPriceExternalDiscountSetMessageBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public ProductPriceExternalDiscountSetMessageBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -204,6 +233,28 @@ public final class ProductPriceExternalDiscountSetMessageBuilder {
     }
 
     public ProductPriceExternalDiscountSetMessage build() {
+        Objects.requireNonNull(id, ProductPriceExternalDiscountSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPriceExternalDiscountSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPriceExternalDiscountSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt,
+            ProductPriceExternalDiscountSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber,
+            ProductPriceExternalDiscountSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPriceExternalDiscountSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ProductPriceExternalDiscountSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variantId, ProductPriceExternalDiscountSetMessage.class + ": variantId is missing");
+        Objects.requireNonNull(priceId, ProductPriceExternalDiscountSetMessage.class + ": priceId is missing");
+        Objects.requireNonNull(staged, ProductPriceExternalDiscountSetMessage.class + ": staged is missing");
+        return new ProductPriceExternalDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId,
+            variantKey, sku, priceId, discounted, staged);
+    }
+
+    /**
+     * builds ProductPriceExternalDiscountSetMessage without checking for non null required values
+     */
+    public ProductPriceExternalDiscountSetMessage buildUnchecked() {
         return new ProductPriceExternalDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId,
             variantKey, sku, priceId, discounted, staged);

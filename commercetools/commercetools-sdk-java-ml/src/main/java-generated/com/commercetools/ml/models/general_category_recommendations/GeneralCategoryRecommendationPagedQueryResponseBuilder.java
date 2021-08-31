@@ -2,11 +2,14 @@
 package com.commercetools.ml.models.general_category_recommendations;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
+public final class GeneralCategoryRecommendationPagedQueryResponseBuilder
+        implements Builder<GeneralCategoryRecommendationPagedQueryResponse> {
 
     private Long count;
 
@@ -37,6 +40,28 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
         return this;
     }
 
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
+                        .of())
+                .build());
+        return this;
+    }
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
+                        .of())
+                .build());
+        return this;
+    }
+
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
         this.results = results;
@@ -60,6 +85,17 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
     }
 
     public GeneralCategoryRecommendationPagedQueryResponse build() {
+        Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, GeneralCategoryRecommendationPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");
+        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
+    }
+
+    /**
+     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non null required values
+     */
+    public GeneralCategoryRecommendationPagedQueryResponse buildUnchecked() {
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
     }
 

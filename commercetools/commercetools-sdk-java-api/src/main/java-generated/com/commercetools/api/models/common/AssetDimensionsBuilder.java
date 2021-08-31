@@ -3,10 +3,11 @@ package com.commercetools.api.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetDimensionsBuilder {
+public final class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     private Integer w;
 
@@ -31,6 +32,15 @@ public final class AssetDimensionsBuilder {
     }
 
     public AssetDimensions build() {
+        Objects.requireNonNull(w, AssetDimensions.class + ": w is missing");
+        Objects.requireNonNull(h, AssetDimensions.class + ": h is missing");
+        return new AssetDimensionsImpl(w, h);
+    }
+
+    /**
+     * builds AssetDimensions without checking for non null required values
+     */
+    public AssetDimensions buildUnchecked() {
         return new AssetDimensionsImpl(w, h);
     }
 

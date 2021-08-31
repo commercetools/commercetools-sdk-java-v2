@@ -2,15 +2,23 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAddedMessagePayloadBuilder {
+public final class ProductVariantAddedMessagePayloadBuilder implements Builder<ProductVariantAddedMessagePayload> {
 
     private com.commercetools.api.models.product.ProductVariant variant;
 
     private Boolean staged;
+
+    public ProductVariantAddedMessagePayloadBuilder variant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
+        return this;
+    }
 
     public ProductVariantAddedMessagePayloadBuilder variant(
             final com.commercetools.api.models.product.ProductVariant variant) {
@@ -32,6 +40,15 @@ public final class ProductVariantAddedMessagePayloadBuilder {
     }
 
     public ProductVariantAddedMessagePayload build() {
+        Objects.requireNonNull(variant, ProductVariantAddedMessagePayload.class + ": variant is missing");
+        Objects.requireNonNull(staged, ProductVariantAddedMessagePayload.class + ": staged is missing");
+        return new ProductVariantAddedMessagePayloadImpl(variant, staged);
+    }
+
+    /**
+     * builds ProductVariantAddedMessagePayload without checking for non null required values
+     */
+    public ProductVariantAddedMessagePayload buildUnchecked() {
         return new ProductVariantAddedMessagePayloadImpl(variant, staged);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductChangeAssetNameActionBuilder {
+public final class ProductChangeAssetNameActionBuilder implements Builder<ProductChangeAssetNameAction> {
 
     @Nullable
     private Long variantId;
@@ -52,6 +54,12 @@ public final class ProductChangeAssetNameActionBuilder {
         return this;
     }
 
+    public ProductChangeAssetNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -87,6 +95,14 @@ public final class ProductChangeAssetNameActionBuilder {
     }
 
     public ProductChangeAssetNameAction build() {
+        Objects.requireNonNull(name, ProductChangeAssetNameAction.class + ": name is missing");
+        return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);
+    }
+
+    /**
+     * builds ProductChangeAssetNameAction without checking for non null required values
+     */
+    public ProductChangeAssetNameAction buildUnchecked() {
         return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);
     }
 

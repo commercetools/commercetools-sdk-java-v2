@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShippingInfoSetMessageBuilder {
+public final class OrderShippingInfoSetMessageBuilder implements Builder<OrderShippingInfoSetMessage> {
 
     private String id;
 
@@ -60,8 +62,20 @@ public final class OrderShippingInfoSetMessageBuilder {
     }
 
     public OrderShippingInfoSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderShippingInfoSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderShippingInfoSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -87,14 +101,34 @@ public final class OrderShippingInfoSetMessageBuilder {
     }
 
     public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     public OrderShippingInfoSetMessageBuilder shippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    public OrderShippingInfoSetMessageBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
+        return this;
+    }
+
+    public OrderShippingInfoSetMessageBuilder oldShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.oldShippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
 
@@ -158,6 +192,21 @@ public final class OrderShippingInfoSetMessageBuilder {
     }
 
     public OrderShippingInfoSetMessage build() {
+        Objects.requireNonNull(id, OrderShippingInfoSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShippingInfoSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShippingInfoSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShippingInfoSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShippingInfoSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShippingInfoSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderShippingInfoSetMessage.class + ": resourceVersion is missing");
+        return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
+    }
+
+    /**
+     * builds OrderShippingInfoSetMessage without checking for non null required values
+     */
+    public OrderShippingInfoSetMessage buildUnchecked() {
         return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
     }

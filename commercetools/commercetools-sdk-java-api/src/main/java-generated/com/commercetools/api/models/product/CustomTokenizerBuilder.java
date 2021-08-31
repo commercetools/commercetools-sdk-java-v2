@@ -3,10 +3,11 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomTokenizerBuilder {
+public final class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     private java.util.List<String> inputs;
 
@@ -25,6 +26,14 @@ public final class CustomTokenizerBuilder {
     }
 
     public CustomTokenizer build() {
+        Objects.requireNonNull(inputs, CustomTokenizer.class + ": inputs is missing");
+        return new CustomTokenizerImpl(inputs);
+    }
+
+    /**
+     * builds CustomTokenizer without checking for non null required values
+     */
+    public CustomTokenizer buildUnchecked() {
         return new CustomTokenizerImpl(inputs);
     }
 

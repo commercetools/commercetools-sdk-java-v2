@@ -3,12 +3,13 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FieldContainerBuilder {
+public final class FieldContainerBuilder implements Builder<FieldContainer> {
 
-    private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
+    private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
     public FieldContainerBuilder values(
             final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
@@ -30,6 +31,14 @@ public final class FieldContainerBuilder {
     }
 
     public FieldContainer build() {
+        Objects.requireNonNull(values, FieldContainer.class + ": values are missing");
+        return new FieldContainerImpl(values);
+    }
+
+    /**
+     * builds FieldContainer without checking for non null required values
+     */
+    public FieldContainer buildUnchecked() {
         return new FieldContainerImpl(values);
     }
 

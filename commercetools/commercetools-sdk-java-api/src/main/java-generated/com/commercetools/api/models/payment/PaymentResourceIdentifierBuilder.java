@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentResourceIdentifierBuilder {
+public final class PaymentResourceIdentifierBuilder implements Builder<PaymentResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class PaymentResourceIdentifierBuilder {
     }
 
     public PaymentResourceIdentifier build() {
+        return new PaymentResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds PaymentResourceIdentifier without checking for non null required values
+     */
+    public PaymentResourceIdentifier buildUnchecked() {
         return new PaymentResourceIdentifierImpl(id, key);
     }
 

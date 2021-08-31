@@ -3,10 +3,11 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountChangeTargetActionBuilder {
+public final class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscountChangeTargetAction> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
@@ -21,6 +22,14 @@ public final class CartDiscountChangeTargetActionBuilder {
     }
 
     public CartDiscountChangeTargetAction build() {
+        Objects.requireNonNull(target, CartDiscountChangeTargetAction.class + ": target is missing");
+        return new CartDiscountChangeTargetActionImpl(target);
+    }
+
+    /**
+     * builds CartDiscountChangeTargetAction without checking for non null required values
+     */
+    public CartDiscountChangeTargetAction buildUnchecked() {
         return new CartDiscountChangeTargetActionImpl(target);
     }
 

@@ -12,9 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Get Channel by ID</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyChannelsByIDGet
         extends ApiMethod<ByProjectKeyChannelsByIDGet, com.commercetools.api.models.channel.Channel>
@@ -82,10 +79,16 @@ public class ByProjectKeyChannelsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyChannelsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyChannelsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

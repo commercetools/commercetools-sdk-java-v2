@@ -15,7 +15,7 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "5.12.4"
+    id "com.diffplug.spotless" version "5.14.3"
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
@@ -71,22 +71,24 @@ tasks.register("writeVersionToReadme") {
 
 ext {
     versions = [
-            slf4j: "1.7.30",
-            logback: "1.2.3",
+            slf4j: "1.7.32",
+            logback: "1.2.5",
             findbugs: "3.0.2",
-            jackson: "2.12.3",
+            jackson: "2.12.4",
             junit: "4.13.2",
             validation: "2.0.1.Final",
-            assertJ: "3.19.0",
-            gson: "2.8.6",
-            awaitility: "4.0.3",
-            failsafe: "2.4.0"
+            assertJ: "3.20.2",
+            gson: "2.8.8",
+            awaitility: "4.1.0",
+            failsafe: "2.4.3"
     ]
 
     commons = [
             lang3: 'org.apache.commons:commons-lang3:3.12.0',
-            cli: 'commons-cli:commons-cli:1.4',
-            io: 'commons-io:commons-io:2.8.0',
+            io: {
+                    strictly '[2.8.0,)'
+                    prefer '2.11.0'
+                }
 
     ]
 
@@ -122,7 +124,6 @@ allprojects {
 
     repositories {
         mavenCentral()
-        jcenter()
     }
 
     spotless {
@@ -187,8 +188,8 @@ subprojects { project ->
         testImplementation 'org.skyscreamer:jsonassert:1.5.0'
         testImplementation "com.google.code.gson:gson:${versions.gson}"
         testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.8"
-        testImplementation 'org.mockito:mockito-inline:3.9.0'
-        testImplementation 'org.mockito:mockito-junit-jupiter:3.9.0'
+        testImplementation 'org.mockito:mockito-inline:3.12.4'
+        testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
         testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
     }
 
@@ -290,6 +291,7 @@ def exportedProjects= [
         ":commercetools:commercetools-sdk-compat-v1",
         ":commercetools:commercetools-sdk-java-history",
         ":rmf:rmf-java-base",
+        ":commercetools:commercetools-apachehttp-client",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":rmf:okhttp-client",
@@ -309,10 +311,10 @@ task codeCoverageReport(type: JacocoReport) {
     }
 
     reports {
-        xml.enabled true
+        xml.required = true
         xml.destination file("${buildDir}/reports/jacoco/report.xml")
-        html.enabled false
-        csv.enabled false
+        html.required = false
+        csv.required = false
     }
 }
 

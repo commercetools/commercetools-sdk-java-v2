@@ -72,10 +72,16 @@ public class ByProjectKeyMeDelete
         this.projectKey = projectKey;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyMeDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyMeDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }

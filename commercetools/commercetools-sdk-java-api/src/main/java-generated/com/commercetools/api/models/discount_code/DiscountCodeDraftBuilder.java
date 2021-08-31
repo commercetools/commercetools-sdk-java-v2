@@ -2,13 +2,15 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeDraftBuilder {
+public final class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
@@ -44,8 +46,20 @@ public final class DiscountCodeDraftBuilder {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    public DiscountCodeDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public DiscountCodeDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -63,6 +77,26 @@ public final class DiscountCodeDraftBuilder {
     public DiscountCodeDraftBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder plusCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
         return this;
     }
 
@@ -89,6 +123,12 @@ public final class DiscountCodeDraftBuilder {
 
     public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -176,6 +216,16 @@ public final class DiscountCodeDraftBuilder {
     }
 
     public DiscountCodeDraft build() {
+        Objects.requireNonNull(code, DiscountCodeDraft.class + ": code is missing");
+        Objects.requireNonNull(cartDiscounts, DiscountCodeDraft.class + ": cartDiscounts is missing");
+        return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,
+            maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
+    }
+
+    /**
+     * builds DiscountCodeDraft without checking for non null required values
+     */
+    public DiscountCodeDraft buildUnchecked() {
         return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,
             maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
     }

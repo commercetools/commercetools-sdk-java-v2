@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderRemoveLineItemActionBuilder {
+public final class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrderRemoveLineItemAction> {
 
     private String lineItemId;
 
@@ -35,14 +37,36 @@ public final class StagedOrderRemoveLineItemActionBuilder {
     }
 
     public StagedOrderRemoveLineItemActionBuilder externalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderRemoveLineItemActionBuilder externalPrice(
             @Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
 
     public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
+        return this;
+    }
+
+    public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetailsToRemove = builder
+                .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -77,6 +101,15 @@ public final class StagedOrderRemoveLineItemActionBuilder {
     }
 
     public StagedOrderRemoveLineItemAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderRemoveLineItemAction.class + ": lineItemId is missing");
+        return new StagedOrderRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
+            shippingDetailsToRemove);
+    }
+
+    /**
+     * builds StagedOrderRemoveLineItemAction without checking for non null required values
+     */
+    public StagedOrderRemoveLineItemAction buildUnchecked() {
         return new StagedOrderRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }

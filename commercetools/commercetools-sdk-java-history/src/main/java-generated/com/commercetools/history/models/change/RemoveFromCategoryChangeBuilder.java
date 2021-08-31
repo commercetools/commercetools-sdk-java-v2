@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveFromCategoryChangeBuilder {
+public final class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCategoryChange> {
 
     private String change;
 
@@ -21,6 +23,12 @@ public final class RemoveFromCategoryChangeBuilder {
         return this;
     }
 
+    public RemoveFromCategoryChangeBuilder category(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
         this.category = category;
         return this;
@@ -29,6 +37,22 @@ public final class RemoveFromCategoryChangeBuilder {
     public RemoveFromCategoryChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public RemoveFromCategoryChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public RemoveFromCategoryChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -41,6 +65,22 @@ public final class RemoveFromCategoryChangeBuilder {
     public RemoveFromCategoryChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public RemoveFromCategoryChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public RemoveFromCategoryChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -67,6 +107,17 @@ public final class RemoveFromCategoryChangeBuilder {
     }
 
     public RemoveFromCategoryChange build() {
+        Objects.requireNonNull(change, RemoveFromCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(category, RemoveFromCategoryChange.class + ": category is missing");
+        Objects.requireNonNull(previousValue, RemoveFromCategoryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveFromCategoryChange.class + ": nextValue is missing");
+        return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);
+    }
+
+    /**
+     * builds RemoveFromCategoryChange without checking for non null required values
+     */
+    public RemoveFromCategoryChange buildUnchecked() {
         return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 

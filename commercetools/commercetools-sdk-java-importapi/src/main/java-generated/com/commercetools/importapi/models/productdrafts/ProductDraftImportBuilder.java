@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.productdrafts;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDraftImportBuilder {
+public final class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     private String key;
 
@@ -57,8 +59,21 @@ public final class ProductDraftImportBuilder {
     }
 
     public ProductDraftImportBuilder productType(
+            Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftImportBuilder productType(
             final com.commercetools.importapi.models.common.ProductTypeKeyReference productType) {
         this.productType = productType;
+        return this;
+    }
+
+    public ProductDraftImportBuilder name(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -67,8 +82,20 @@ public final class ProductDraftImportBuilder {
         return this;
     }
 
+    public ProductDraftImportBuilder slug(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDraftImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+
+    public ProductDraftImportBuilder description(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -84,9 +111,33 @@ public final class ProductDraftImportBuilder {
         return this;
     }
 
+    public ProductDraftImportBuilder withCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDraftImportBuilder plusCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
     public ProductDraftImportBuilder categories(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
         this.categories = categories;
+        return this;
+    }
+
+    public ProductDraftImportBuilder metaTitle(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -97,14 +148,36 @@ public final class ProductDraftImportBuilder {
     }
 
     public ProductDraftImportBuilder metaDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
 
     public ProductDraftImportBuilder metaKeywords(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftImportBuilder metaKeywords(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    public ProductDraftImportBuilder masterVariant(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
+        this.masterVariant = builder
+                .apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
+                .build();
         return this;
     }
 
@@ -120,9 +193,36 @@ public final class ProductDraftImportBuilder {
         return this;
     }
 
+    public ProductDraftImportBuilder withVariants(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
+                    .build());
+        return this;
+    }
+
+    public ProductDraftImportBuilder plusVariants(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
+                    .build());
+        return this;
+    }
+
     public ProductDraftImportBuilder variants(
             @Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> variants) {
         this.variants = variants;
+        return this;
+    }
+
+    public ProductDraftImportBuilder taxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -133,8 +233,21 @@ public final class ProductDraftImportBuilder {
     }
 
     public ProductDraftImportBuilder searchKeywords(
+            Function<com.commercetools.importapi.models.products.SearchKeywordsBuilder, com.commercetools.importapi.models.products.SearchKeywordsBuilder> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.importapi.models.products.SearchKeywordsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftImportBuilder searchKeywords(
             @Nullable final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
+        return this;
+    }
+
+    public ProductDraftImportBuilder state(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -221,6 +334,18 @@ public final class ProductDraftImportBuilder {
     }
 
     public ProductDraftImport build() {
+        Objects.requireNonNull(key, ProductDraftImport.class + ": key is missing");
+        Objects.requireNonNull(productType, ProductDraftImport.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductDraftImport.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductDraftImport.class + ": slug is missing");
+        return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
+            metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
+    }
+
+    /**
+     * builds ProductDraftImport without checking for non null required values
+     */
+    public ProductDraftImport buildUnchecked() {
         return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
             metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
     }

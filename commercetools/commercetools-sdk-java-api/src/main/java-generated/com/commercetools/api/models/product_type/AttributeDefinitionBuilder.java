@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeDefinitionBuilder {
+public final class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
 
     private com.commercetools.api.models.product_type.AttributeType type;
 
@@ -37,6 +39,12 @@ public final class AttributeDefinitionBuilder {
         return this;
     }
 
+    public AttributeDefinitionBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AttributeDefinitionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
@@ -50,6 +58,12 @@ public final class AttributeDefinitionBuilder {
     public AttributeDefinitionBuilder attributeConstraint(
             final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
+        return this;
+    }
+
+    public AttributeDefinitionBuilder inputTip(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -104,6 +118,21 @@ public final class AttributeDefinitionBuilder {
     }
 
     public AttributeDefinition build() {
+        Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");
+        Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
+        Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
+        Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
+        Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");
+        Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");
+        Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");
+        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
+            isSearchable);
+    }
+
+    /**
+     * builds AttributeDefinition without checking for non null required values
+     */
+    public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
             isSearchable);
     }

@@ -3,10 +3,11 @@ package com.commercetools.api.models.type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeChangeInputHintActionBuilder {
+public final class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInputHintAction> {
 
     private String fieldName;
 
@@ -32,6 +33,15 @@ public final class TypeChangeInputHintActionBuilder {
     }
 
     public TypeChangeInputHintAction build() {
+        Objects.requireNonNull(fieldName, TypeChangeInputHintAction.class + ": fieldName is missing");
+        Objects.requireNonNull(inputHint, TypeChangeInputHintAction.class + ": inputHint is missing");
+        return new TypeChangeInputHintActionImpl(fieldName, inputHint);
+    }
+
+    /**
+     * builds TypeChangeInputHintAction without checking for non null required values
+     */
+    public TypeChangeInputHintAction buildUnchecked() {
         return new TypeChangeInputHintActionImpl(fieldName, inputHint);
     }
 

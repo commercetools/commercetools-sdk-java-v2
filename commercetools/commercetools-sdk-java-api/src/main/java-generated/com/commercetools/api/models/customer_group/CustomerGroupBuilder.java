@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupBuilder {
+public final class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     private String id;
 
@@ -53,8 +55,20 @@ public final class CustomerGroupBuilder {
     }
 
     public CustomerGroupBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerGroupBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CustomerGroupBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -70,6 +84,12 @@ public final class CustomerGroupBuilder {
 
     public CustomerGroupBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    public CustomerGroupBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -119,6 +139,19 @@ public final class CustomerGroupBuilder {
     }
 
     public CustomerGroup build() {
+        Objects.requireNonNull(id, CustomerGroup.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerGroup.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerGroup.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerGroup.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, CustomerGroup.class + ": name is missing");
+        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            custom);
+    }
+
+    /**
+     * builds CustomerGroup without checking for non null required values
+     */
+    public CustomerGroup buildUnchecked() {
         return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             custom);
     }

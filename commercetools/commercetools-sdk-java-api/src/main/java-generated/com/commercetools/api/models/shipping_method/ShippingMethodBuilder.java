@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodBuilder {
+public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     private String id;
 
@@ -68,8 +70,20 @@ public final class ShippingMethodBuilder {
     }
 
     public ShippingMethodBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ShippingMethodBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ShippingMethodBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -94,6 +108,13 @@ public final class ShippingMethodBuilder {
     }
 
     public ShippingMethodBuilder localizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingMethodBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
@@ -110,6 +131,22 @@ public final class ShippingMethodBuilder {
         return this;
     }
 
+    public ShippingMethodBuilder withZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
+        this.zoneRates = new ArrayList<>();
+        this.zoneRates.add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodBuilder plusZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
+        if (this.zoneRates == null) {
+            this.zoneRates = new ArrayList<>();
+        }
+        this.zoneRates.add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()).build());
+        return this;
+    }
+
     public ShippingMethodBuilder zoneRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
         this.zoneRates = zoneRates;
@@ -123,6 +160,12 @@ public final class ShippingMethodBuilder {
 
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;
+        return this;
+    }
+
+    public ShippingMethodBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -199,6 +242,22 @@ public final class ShippingMethodBuilder {
     }
 
     public ShippingMethod build() {
+        Objects.requireNonNull(id, ShippingMethod.class + ": id is missing");
+        Objects.requireNonNull(version, ShippingMethod.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ShippingMethod.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ShippingMethod.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, ShippingMethod.class + ": name is missing");
+        Objects.requireNonNull(taxCategory, ShippingMethod.class + ": taxCategory is missing");
+        Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
+        Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
+        return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+    }
+
+    /**
+     * builds ShippingMethod without checking for non null required values
+     */
+    public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }

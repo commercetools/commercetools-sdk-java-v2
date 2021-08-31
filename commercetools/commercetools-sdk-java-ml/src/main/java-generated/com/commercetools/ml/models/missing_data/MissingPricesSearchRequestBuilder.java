@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesSearchRequestBuilder {
+public final class MissingPricesSearchRequestBuilder implements Builder<MissingPricesSearchRequest> {
 
     @Nullable
     private Long limit;
@@ -164,6 +165,14 @@ public final class MissingPricesSearchRequestBuilder {
     }
 
     public MissingPricesSearchRequest build() {
+        return new MissingPricesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants, currencyCode,
+            checkDate, validFrom, validUntil, productIds, productTypeIds);
+    }
+
+    /**
+     * builds MissingPricesSearchRequest without checking for non null required values
+     */
+    public MissingPricesSearchRequest buildUnchecked() {
         return new MissingPricesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants, currencyCode,
             checkDate, validFrom, validUntil, productIds, productTypeIds);
     }

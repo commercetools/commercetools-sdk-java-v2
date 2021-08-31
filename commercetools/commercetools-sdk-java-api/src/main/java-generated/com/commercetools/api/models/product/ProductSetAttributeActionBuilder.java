@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetAttributeActionBuilder {
+public final class ProductSetAttributeActionBuilder implements Builder<ProductSetAttributeAction> {
 
     @Nullable
     private Long variantId;
@@ -74,6 +75,14 @@ public final class ProductSetAttributeActionBuilder {
     }
 
     public ProductSetAttributeAction build() {
+        Objects.requireNonNull(name, ProductSetAttributeAction.class + ": name is missing");
+        return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
+    }
+
+    /**
+     * builds ProductSetAttributeAction without checking for non null required values
+     */
+    public ProductSetAttributeAction buildUnchecked() {
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
     }
 

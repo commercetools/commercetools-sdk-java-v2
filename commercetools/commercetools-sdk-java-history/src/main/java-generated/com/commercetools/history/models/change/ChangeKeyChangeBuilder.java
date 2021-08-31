@@ -3,10 +3,11 @@ package com.commercetools.history.models.change;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeKeyChangeBuilder {
+public final class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
 
     private String change;
 
@@ -42,6 +43,16 @@ public final class ChangeKeyChangeBuilder {
     }
 
     public ChangeKeyChange build() {
+        Objects.requireNonNull(change, ChangeKeyChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeKeyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeKeyChange.class + ": nextValue is missing");
+        return new ChangeKeyChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeKeyChange without checking for non null required values
+     */
+    public ChangeKeyChange buildUnchecked() {
         return new ChangeKeyChangeImpl(change, previousValue, nextValue);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewStateTransitionMessagePayloadBuilder {
+public final class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference oldState;
 
@@ -21,8 +23,20 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
     private Boolean force;
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewStateTransitionMessagePayloadBuilder oldState(
             final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
+        return this;
+    }
+
+    public ReviewStateTransitionMessagePayloadBuilder newState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 
@@ -78,6 +92,22 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
     }
 
     public ReviewStateTransitionMessagePayload build() {
+        Objects.requireNonNull(oldState, ReviewStateTransitionMessagePayload.class + ": oldState is missing");
+        Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
+        Objects.requireNonNull(oldIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics,
+            ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(target, ReviewStateTransitionMessagePayload.class + ": target is missing");
+        Objects.requireNonNull(force, ReviewStateTransitionMessagePayload.class + ": force is missing");
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
+            newIncludedInStatistics, target, force);
+    }
+
+    /**
+     * builds ReviewStateTransitionMessagePayload without checking for non null required values
+     */
+    public ReviewStateTransitionMessagePayload buildUnchecked() {
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
             newIncludedInStatistics, target, force);
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ClientLoggingBuilder {
+public final class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     @Nullable
     private String clientId;
@@ -29,6 +31,12 @@ public final class ClientLoggingBuilder {
 
     public ClientLoggingBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
+        return this;
+    }
+
+    public ClientLoggingBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
@@ -64,6 +72,13 @@ public final class ClientLoggingBuilder {
     }
 
     public ClientLogging build() {
+        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
+    }
+
+    /**
+     * builds ClientLogging without checking for non null required values
+     */
+    public ClientLogging buildUnchecked() {
         return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
     }
 

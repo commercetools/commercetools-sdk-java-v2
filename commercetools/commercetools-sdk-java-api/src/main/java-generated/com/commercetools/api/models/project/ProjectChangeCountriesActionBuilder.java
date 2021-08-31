@@ -3,10 +3,11 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeCountriesActionBuilder {
+public final class ProjectChangeCountriesActionBuilder implements Builder<ProjectChangeCountriesAction> {
 
     private java.util.List<String> countries;
 
@@ -25,6 +26,14 @@ public final class ProjectChangeCountriesActionBuilder {
     }
 
     public ProjectChangeCountriesAction build() {
+        Objects.requireNonNull(countries, ProjectChangeCountriesAction.class + ": countries is missing");
+        return new ProjectChangeCountriesActionImpl(countries);
+    }
+
+    /**
+     * builds ProjectChangeCountriesAction without checking for non null required values
+     */
+    public ProjectChangeCountriesAction buildUnchecked() {
         return new ProjectChangeCountriesActionImpl(countries);
     }
 

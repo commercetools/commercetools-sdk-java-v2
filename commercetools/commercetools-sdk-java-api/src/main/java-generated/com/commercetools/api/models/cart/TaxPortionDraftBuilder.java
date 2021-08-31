@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxPortionDraftBuilder {
+public final class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     @Nullable
     private String name;
@@ -24,6 +26,12 @@ public final class TaxPortionDraftBuilder {
 
     public TaxPortionDraftBuilder rate(final Double rate) {
         this.rate = rate;
+        return this;
+    }
+
+    public TaxPortionDraftBuilder amount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -46,6 +54,15 @@ public final class TaxPortionDraftBuilder {
     }
 
     public TaxPortionDraft build() {
+        Objects.requireNonNull(rate, TaxPortionDraft.class + ": rate is missing");
+        Objects.requireNonNull(amount, TaxPortionDraft.class + ": amount is missing");
+        return new TaxPortionDraftImpl(name, rate, amount);
+    }
+
+    /**
+     * builds TaxPortionDraft without checking for non null required values
+     */
+    public TaxPortionDraft buildUnchecked() {
         return new TaxPortionDraftImpl(name, rate, amount);
     }
 

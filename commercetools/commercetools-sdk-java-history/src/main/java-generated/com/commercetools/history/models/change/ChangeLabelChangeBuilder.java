@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeLabelChangeBuilder {
+public final class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     private String change;
 
@@ -33,8 +35,20 @@ public final class ChangeLabelChangeBuilder {
         return this;
     }
 
+    public ChangeLabelChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ChangeLabelChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeLabelChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -65,6 +79,18 @@ public final class ChangeLabelChangeBuilder {
     }
 
     public ChangeLabelChange build() {
+        Objects.requireNonNull(change, ChangeLabelChange.class + ": change is missing");
+        Objects.requireNonNull(fieldName, ChangeLabelChange.class + ": fieldName is missing");
+        Objects.requireNonNull(attributeName, ChangeLabelChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, ChangeLabelChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeLabelChange.class + ": previousValue is missing");
+        return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeLabelChange without checking for non null required values
+     */
+    public ChangeLabelChange buildUnchecked() {
         return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 

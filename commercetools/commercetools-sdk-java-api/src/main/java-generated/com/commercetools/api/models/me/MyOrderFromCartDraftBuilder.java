@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyOrderFromCartDraftBuilder {
+public final class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft> {
 
     private String id;
 
@@ -31,6 +32,15 @@ public final class MyOrderFromCartDraftBuilder {
     }
 
     public MyOrderFromCartDraft build() {
+        Objects.requireNonNull(id, MyOrderFromCartDraft.class + ": id is missing");
+        Objects.requireNonNull(version, MyOrderFromCartDraft.class + ": version is missing");
+        return new MyOrderFromCartDraftImpl(id, version);
+    }
+
+    /**
+     * builds MyOrderFromCartDraft without checking for non null required values
+     */
+    public MyOrderFromCartDraft buildUnchecked() {
         return new MyOrderFromCartDraftImpl(id, version);
     }
 

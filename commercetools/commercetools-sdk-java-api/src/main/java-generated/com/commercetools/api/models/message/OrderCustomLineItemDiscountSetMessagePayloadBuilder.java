@@ -2,13 +2,16 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
+public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder
+        implements Builder<OrderCustomLineItemDiscountSetMessagePayload> {
 
     private String customLineItemId;
 
@@ -28,9 +31,33 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
         return this;
     }
 
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+        return this;
+    }
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -54,6 +81,18 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
     }
 
     public OrderCustomLineItemDiscountSetMessagePayload build() {
+        Objects.requireNonNull(customLineItemId,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": customLineItemId is missing");
+        Objects.requireNonNull(discountedPricePerQuantity,
+            OrderCustomLineItemDiscountSetMessagePayload.class + ": discountedPricePerQuantity is missing");
+        return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,
+            taxedPrice);
+    }
+
+    /**
+     * builds OrderCustomLineItemDiscountSetMessagePayload without checking for non null required values
+     */
+    public OrderCustomLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity,
             taxedPrice);
     }

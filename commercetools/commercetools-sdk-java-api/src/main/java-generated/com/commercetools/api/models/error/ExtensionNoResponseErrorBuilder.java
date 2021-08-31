@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionNoResponseErrorBuilder {
+public final class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoResponseError> {
 
     private String message;
 
@@ -46,6 +47,15 @@ public final class ExtensionNoResponseErrorBuilder {
     }
 
     public ExtensionNoResponseError build() {
+        Objects.requireNonNull(message, ExtensionNoResponseError.class + ": message is missing");
+        Objects.requireNonNull(extensionId, ExtensionNoResponseError.class + ": extensionId is missing");
+        return new ExtensionNoResponseErrorImpl(message, extensionId, extensionKey);
+    }
+
+    /**
+     * builds ExtensionNoResponseError without checking for non null required values
+     */
+    public ExtensionNoResponseError buildUnchecked() {
         return new ExtensionNoResponseErrorImpl(message, extensionId, extensionKey);
     }
 

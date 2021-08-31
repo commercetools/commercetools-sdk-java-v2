@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LanguageUsedInStoresErrorBuilder {
+public final class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInStoresError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class LanguageUsedInStoresErrorBuilder {
     }
 
     public LanguageUsedInStoresError build() {
+        Objects.requireNonNull(message, LanguageUsedInStoresError.class + ": message is missing");
+        return new LanguageUsedInStoresErrorImpl(message);
+    }
+
+    /**
+     * builds LanguageUsedInStoresError without checking for non null required values
+     */
+    public LanguageUsedInStoresError buildUnchecked() {
         return new LanguageUsedInStoresErrorImpl(message);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeChangeIsSearchableActionBuilder {
+public final class ProductTypeChangeIsSearchableActionBuilder implements Builder<ProductTypeChangeIsSearchableAction> {
 
     private String attributeName;
 
@@ -31,6 +32,15 @@ public final class ProductTypeChangeIsSearchableActionBuilder {
     }
 
     public ProductTypeChangeIsSearchableAction build() {
+        Objects.requireNonNull(attributeName, ProductTypeChangeIsSearchableAction.class + ": attributeName is missing");
+        Objects.requireNonNull(isSearchable, ProductTypeChangeIsSearchableAction.class + ": isSearchable is missing");
+        return new ProductTypeChangeIsSearchableActionImpl(attributeName, isSearchable);
+    }
+
+    /**
+     * builds ProductTypeChangeIsSearchableAction without checking for non null required values
+     */
+    public ProductTypeChangeIsSearchableAction buildUnchecked() {
         return new ProductTypeChangeIsSearchableActionImpl(attributeName, isSearchable);
     }
 

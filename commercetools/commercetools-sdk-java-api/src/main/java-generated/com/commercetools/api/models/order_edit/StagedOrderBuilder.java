@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderBuilder {
+public final class StagedOrderBuilder implements Builder<StagedOrder> {
 
     private String id;
 
@@ -142,8 +144,20 @@ public final class StagedOrderBuilder {
     }
 
     public StagedOrderBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public StagedOrderBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -187,6 +201,22 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder withLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()).build());
+        return this;
+    }
+
     public StagedOrderBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -195,6 +225,22 @@ public final class StagedOrderBuilder {
     public StagedOrderBuilder customLineItems(
             final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
         this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
+        return this;
+    }
+
+    public StagedOrderBuilder withCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
+        this.customLineItems = new ArrayList<>();
+        this.customLineItems.add(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
+        if (this.customLineItems == null) {
+            this.customLineItems = new ArrayList<>();
+        }
+        this.customLineItems.add(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()).build());
         return this;
     }
 
@@ -209,14 +255,32 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
     public StagedOrderBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
 
     public StagedOrderBuilder shippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderBuilder shippingAddress(
             @Nullable final com.commercetools.api.models.common.Address shippingAddress) {
         this.shippingAddress = shippingAddress;
+        return this;
+    }
+
+    public StagedOrderBuilder billingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -234,6 +298,14 @@ public final class StagedOrderBuilder {
     public StagedOrderBuilder taxRoundingMode(
             @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
+        return this;
+    }
+
+    public StagedOrderBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -271,6 +343,12 @@ public final class StagedOrderBuilder {
     }
 
     public StagedOrderBuilder shippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
         return this;
@@ -281,6 +359,22 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder withSyncInfo(
+            Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfoBuilder> builder) {
+        this.syncInfo = new ArrayList<>();
+        this.syncInfo.add(builder.apply(com.commercetools.api.models.order.SyncInfoBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusSyncInfo(
+            Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfoBuilder> builder) {
+        if (this.syncInfo == null) {
+            this.syncInfo = new ArrayList<>();
+        }
+        this.syncInfo.add(builder.apply(com.commercetools.api.models.order.SyncInfoBuilder.of()).build());
+        return this;
+    }
+
     public StagedOrderBuilder syncInfo(final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo) {
         this.syncInfo = syncInfo;
         return this;
@@ -288,6 +382,22 @@ public final class StagedOrderBuilder {
 
     public StagedOrderBuilder returnInfo(@Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
         this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
+        return this;
+    }
+
+    public StagedOrderBuilder withReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        this.returnInfo = new ArrayList<>();
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        if (this.returnInfo == null) {
+            this.returnInfo = new ArrayList<>();
+        }
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
     }
 
@@ -303,6 +413,22 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder withDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
+        this.discountCodes = new ArrayList<>();
+        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
+        if (this.discountCodes == null) {
+            this.discountCodes = new ArrayList<>();
+        }
+        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());
+        return this;
+    }
+
     public StagedOrderBuilder discountCodes(
             @Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.discountCodes = discountCodes;
@@ -314,13 +440,31 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder cart(
+            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of()).build();
+        return this;
+    }
+
     public StagedOrderBuilder cart(@Nullable final com.commercetools.api.models.cart.CartReference cart) {
         this.cart = cart;
         return this;
     }
 
+    public StagedOrderBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public StagedOrderBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public StagedOrderBuilder paymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
         return this;
     }
 
@@ -363,6 +507,22 @@ public final class StagedOrderBuilder {
         return this;
     }
 
+    public StagedOrderBuilder withItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+        return this;
+    }
+
     public StagedOrderBuilder itemShippingAddresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
@@ -372,6 +532,24 @@ public final class StagedOrderBuilder {
     public StagedOrderBuilder refusedGifts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
         this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
+        return this;
+    }
+
+    public StagedOrderBuilder withRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
+        this.refusedGifts = new ArrayList<>();
+        this.refusedGifts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StagedOrderBuilder plusRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
+        if (this.refusedGifts == null) {
+            this.refusedGifts = new ArrayList<>();
+        }
+        this.refusedGifts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
     }
 
@@ -575,6 +753,30 @@ public final class StagedOrderBuilder {
     }
 
     public StagedOrder build() {
+        Objects.requireNonNull(id, StagedOrder.class + ": id is missing");
+        Objects.requireNonNull(version, StagedOrder.class + ": version is missing");
+        Objects.requireNonNull(createdAt, StagedOrder.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, StagedOrder.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(lineItems, StagedOrder.class + ": lineItems is missing");
+        Objects.requireNonNull(customLineItems, StagedOrder.class + ": customLineItems is missing");
+        Objects.requireNonNull(totalPrice, StagedOrder.class + ": totalPrice is missing");
+        Objects.requireNonNull(orderState, StagedOrder.class + ": orderState is missing");
+        Objects.requireNonNull(syncInfo, StagedOrder.class + ": syncInfo is missing");
+        Objects.requireNonNull(lastMessageSequenceNumber, StagedOrder.class + ": lastMessageSequenceNumber is missing");
+        Objects.requireNonNull(origin, StagedOrder.class + ": origin is missing");
+        Objects.requireNonNull(refusedGifts, StagedOrder.class + ": refusedGifts is missing");
+        return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
+            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
+            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
+            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
+            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
+            shippingRateInput, itemShippingAddresses, refusedGifts);
+    }
+
+    /**
+     * builds StagedOrder without checking for non null required values
+     */
+    public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,

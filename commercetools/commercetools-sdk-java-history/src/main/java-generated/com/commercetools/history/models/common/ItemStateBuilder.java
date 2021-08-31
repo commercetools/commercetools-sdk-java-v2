@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ItemStateBuilder {
+public final class ItemStateBuilder implements Builder<ItemState> {
 
     private Integer quantity;
 
@@ -14,6 +16,12 @@ public final class ItemStateBuilder {
 
     public ItemStateBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public ItemStateBuilder state(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -31,6 +39,15 @@ public final class ItemStateBuilder {
     }
 
     public ItemState build() {
+        Objects.requireNonNull(quantity, ItemState.class + ": quantity is missing");
+        Objects.requireNonNull(state, ItemState.class + ": state is missing");
+        return new ItemStateImpl(quantity, state);
+    }
+
+    /**
+     * builds ItemState without checking for non null required values
+     */
+    public ItemState buildUnchecked() {
         return new ItemStateImpl(quantity, state);
     }
 

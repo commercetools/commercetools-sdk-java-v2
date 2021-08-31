@@ -86,59 +86,101 @@ public class ByProjectKeyProductProjectionsSuggestGet
         this.projectKey = projectKey;
     }
 
+    /**
+     * set fuzzy with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final boolean fuzzy) {
         return copy().withQueryParam("fuzzy", fuzzy);
     }
 
+    /**
+     * add additional fuzzy query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final boolean fuzzy) {
         return copy().addQueryParam("fuzzy", fuzzy);
     }
 
+    /**
+     * set staged with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
+    /**
+     * add additional staged query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
+    /**
+     * set sort with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
 
+    /**
+     * add additional sort query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
+    /**
+     * set withTotal with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
+    /**
+     * add additional withTotal query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 
+    /**
+     * set searchKeywords with the specificied value
+     */
     public ByProjectKeyProductProjectionsSuggestGet withSearchKeywords(final String locale,
             final String searchKeywords) {
         return copy().withQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
     }
 
+    /**
+     * add additional searchKeywords query parameter
+     */
     public ByProjectKeyProductProjectionsSuggestGet addSearchKeywords(final String locale,
             final String searchKeywords) {
         return copy().addQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);

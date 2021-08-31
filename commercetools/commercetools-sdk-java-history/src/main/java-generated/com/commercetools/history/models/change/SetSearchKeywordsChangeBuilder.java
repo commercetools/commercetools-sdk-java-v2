@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetSearchKeywordsChangeBuilder {
+public final class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywordsChange> {
 
     private String change;
 
@@ -27,8 +29,20 @@ public final class SetSearchKeywordsChangeBuilder {
     }
 
     public SetSearchKeywordsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
+
+    public SetSearchKeywordsChangeBuilder previousValue(
             final com.commercetools.history.models.common.SearchKeywords previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetSearchKeywordsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
         return this;
     }
 
@@ -55,6 +69,17 @@ public final class SetSearchKeywordsChangeBuilder {
     }
 
     public SetSearchKeywordsChange build() {
+        Objects.requireNonNull(change, SetSearchKeywordsChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetSearchKeywordsChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, SetSearchKeywordsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetSearchKeywordsChange.class + ": nextValue is missing");
+        return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetSearchKeywordsChange without checking for non null required values
+     */
+    public SetSearchKeywordsChange buildUnchecked() {
         return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

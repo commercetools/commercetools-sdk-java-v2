@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductProjectionPagedQueryResponseBuilder {
+public final class ProductProjectionPagedQueryResponseBuilder implements Builder<ProductProjectionPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class ProductProjectionPagedQueryResponseBuilder {
         return this;
     }
 
+    public ProductProjectionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductProjectionPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+        return this;
+    }
+
     public ProductProjectionPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class ProductProjectionPagedQueryResponseBuilder {
     }
 
     public ProductProjectionPagedQueryResponse build() {
+        Objects.requireNonNull(limit, ProductProjectionPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ProductProjectionPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ProductProjectionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ProductProjectionPagedQueryResponse.class + ": results is missing");
+        return new ProductProjectionPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ProductProjectionPagedQueryResponse without checking for non null required values
+     */
+    public ProductProjectionPagedQueryResponse buildUnchecked() {
         return new ProductProjectionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

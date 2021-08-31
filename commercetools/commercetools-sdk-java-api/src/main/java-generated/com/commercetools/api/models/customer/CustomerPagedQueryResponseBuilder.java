@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerPagedQueryResponseBuilder {
+public final class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class CustomerPagedQueryResponseBuilder {
         return this;
     }
 
+    public CustomerPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build());
+        return this;
+    }
+
     public CustomerPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.customer.Customer> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class CustomerPagedQueryResponseBuilder {
     }
 
     public CustomerPagedQueryResponse build() {
+        Objects.requireNonNull(limit, CustomerPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CustomerPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CustomerPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CustomerPagedQueryResponse.class + ": results is missing");
+        return new CustomerPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds CustomerPagedQueryResponse without checking for non null required values
+     */
+    public CustomerPagedQueryResponse buildUnchecked() {
         return new CustomerPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetDeliveryItemsActionBuilder {
+public final class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliveryItemsAction> {
 
     private String deliveryId;
 
@@ -19,6 +21,22 @@ public final class OrderSetDeliveryItemsActionBuilder {
 
     public OrderSetDeliveryItemsActionBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+
+    public OrderSetDeliveryItemsActionBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public OrderSetDeliveryItemsActionBuilder plusItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -37,6 +55,15 @@ public final class OrderSetDeliveryItemsActionBuilder {
     }
 
     public OrderSetDeliveryItemsAction build() {
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryItemsAction.class + ": deliveryId is missing");
+        Objects.requireNonNull(items, OrderSetDeliveryItemsAction.class + ": items is missing");
+        return new OrderSetDeliveryItemsActionImpl(deliveryId, items);
+    }
+
+    /**
+     * builds OrderSetDeliveryItemsAction without checking for non null required values
+     */
+    public OrderSetDeliveryItemsAction buildUnchecked() {
         return new OrderSetDeliveryItemsActionImpl(deliveryId, items);
     }
 

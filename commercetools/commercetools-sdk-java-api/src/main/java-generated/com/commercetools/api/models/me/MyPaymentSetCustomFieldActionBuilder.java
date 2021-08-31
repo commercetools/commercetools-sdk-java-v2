@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyPaymentSetCustomFieldActionBuilder {
+public final class MyPaymentSetCustomFieldActionBuilder implements Builder<MyPaymentSetCustomFieldAction> {
 
     private String name;
 
@@ -35,6 +36,14 @@ public final class MyPaymentSetCustomFieldActionBuilder {
     }
 
     public MyPaymentSetCustomFieldAction build() {
+        Objects.requireNonNull(name, MyPaymentSetCustomFieldAction.class + ": name is missing");
+        return new MyPaymentSetCustomFieldActionImpl(name, value);
+    }
+
+    /**
+     * builds MyPaymentSetCustomFieldAction without checking for non null required values
+     */
+    public MyPaymentSetCustomFieldAction buildUnchecked() {
         return new MyPaymentSetCustomFieldActionImpl(name, value);
     }
 

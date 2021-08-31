@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceUpdateErrorBuilder {
+public final class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> {
 
     private String message;
 
@@ -35,6 +36,14 @@ public final class ResourceUpdateErrorBuilder {
     }
 
     public ResourceUpdateError build() {
+        Objects.requireNonNull(message, ResourceUpdateError.class + ": message is missing");
+        return new ResourceUpdateErrorImpl(message, resource);
+    }
+
+    /**
+     * builds ResourceUpdateError without checking for non null required values
+     */
+    public ResourceUpdateError buildUnchecked() {
         return new ResourceUpdateErrorImpl(message, resource);
     }
 

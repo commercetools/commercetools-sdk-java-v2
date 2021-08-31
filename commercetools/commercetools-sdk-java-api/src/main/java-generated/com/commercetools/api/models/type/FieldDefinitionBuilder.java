@@ -2,13 +2,15 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FieldDefinitionBuilder {
+public final class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     private com.commercetools.api.models.type.FieldType type;
 
@@ -28,6 +30,12 @@ public final class FieldDefinitionBuilder {
 
     public FieldDefinitionBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    public FieldDefinitionBuilder label(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -69,6 +77,17 @@ public final class FieldDefinitionBuilder {
     }
 
     public FieldDefinition build() {
+        Objects.requireNonNull(type, FieldDefinition.class + ": type is missing");
+        Objects.requireNonNull(name, FieldDefinition.class + ": name is missing");
+        Objects.requireNonNull(label, FieldDefinition.class + ": label is missing");
+        Objects.requireNonNull(required, FieldDefinition.class + ": required is missing");
+        return new FieldDefinitionImpl(type, name, label, required, inputHint);
+    }
+
+    /**
+     * builds FieldDefinition without checking for non null required values
+     */
+    public FieldDefinition buildUnchecked() {
         return new FieldDefinitionImpl(type, name, label, required, inputHint);
     }
 

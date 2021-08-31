@@ -2,13 +2,15 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListDraftBuilder {
+public final class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -30,8 +32,20 @@ public final class MyShoppingListDraftBuilder {
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    public MyShoppingListDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public MyShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -47,6 +61,24 @@ public final class MyShoppingListDraftBuilder {
         return this;
     }
 
+    public MyShoppingListDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder plusLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
     public MyShoppingListDraftBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
         this.lineItems = lineItems;
@@ -59,9 +91,33 @@ public final class MyShoppingListDraftBuilder {
         return this;
     }
 
+    public MyShoppingListDraftBuilder withTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
+        this.textLineItems = new ArrayList<>();
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder plusTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
+        return this;
+    }
+
     public MyShoppingListDraftBuilder textLineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
         this.textLineItems = textLineItems;
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -118,6 +174,15 @@ public final class MyShoppingListDraftBuilder {
     }
 
     public MyShoppingListDraft build() {
+        Objects.requireNonNull(name, MyShoppingListDraft.class + ": name is missing");
+        return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
+            deleteDaysAfterLastModification, store);
+    }
+
+    /**
+     * builds MyShoppingListDraft without checking for non null required values
+     */
+    public MyShoppingListDraft buildUnchecked() {
         return new MyShoppingListDraftImpl(name, description, lineItems, textLineItems, custom,
             deleteDaysAfterLastModification, store);
     }

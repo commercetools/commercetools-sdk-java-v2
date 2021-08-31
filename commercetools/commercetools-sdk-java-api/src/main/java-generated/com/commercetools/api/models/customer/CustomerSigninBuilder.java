@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSigninBuilder {
+public final class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     private String email;
 
@@ -43,6 +45,13 @@ public final class CustomerSigninBuilder {
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
+        return this;
+    }
+
+    public CustomerSigninBuilder anonymousCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 
@@ -103,6 +112,16 @@ public final class CustomerSigninBuilder {
     }
 
     public CustomerSignin build() {
+        Objects.requireNonNull(email, CustomerSignin.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerSignin.class + ": password is missing");
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
+            anonymousId, updateProductData);
+    }
+
+    /**
+     * builds CustomerSignin without checking for non null required values
+     */
+    public CustomerSignin buildUnchecked() {
         return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
             anonymousId, updateProductData);
     }

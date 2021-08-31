@@ -2,16 +2,27 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeShoppingListsConfigurationBuilder {
+public final class ProjectChangeShoppingListsConfigurationBuilder
+        implements Builder<ProjectChangeShoppingListsConfiguration> {
 
     @Nullable
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
+
+    public ProjectChangeShoppingListsConfigurationBuilder shoppingListsConfiguration(
+            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
+        this.shoppingListsConfiguration = builder
+                .apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProjectChangeShoppingListsConfigurationBuilder shoppingListsConfiguration(
             @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
@@ -25,6 +36,13 @@ public final class ProjectChangeShoppingListsConfigurationBuilder {
     }
 
     public ProjectChangeShoppingListsConfiguration build() {
+        return new ProjectChangeShoppingListsConfigurationImpl(shoppingListsConfiguration);
+    }
+
+    /**
+     * builds ProjectChangeShoppingListsConfiguration without checking for non null required values
+     */
+    public ProjectChangeShoppingListsConfiguration buildUnchecked() {
         return new ProjectChangeShoppingListsConfigurationImpl(shoppingListsConfiguration);
     }
 

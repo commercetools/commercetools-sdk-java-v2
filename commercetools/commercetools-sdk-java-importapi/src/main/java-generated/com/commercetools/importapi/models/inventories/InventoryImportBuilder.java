@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.inventories;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryImportBuilder {
+public final class InventoryImportBuilder implements Builder<InventoryImport> {
 
     private String key;
 
@@ -54,8 +56,21 @@ public final class InventoryImportBuilder {
     }
 
     public InventoryImportBuilder supplyChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public InventoryImportBuilder supplyChannel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    public InventoryImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 
@@ -98,6 +113,17 @@ public final class InventoryImportBuilder {
     }
 
     public InventoryImport build() {
+        Objects.requireNonNull(key, InventoryImport.class + ": key is missing");
+        Objects.requireNonNull(sku, InventoryImport.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryImport.class + ": quantityOnStock is missing");
+        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
+            custom);
+    }
+
+    /**
+     * builds InventoryImport without checking for non null required values
+     */
+    public InventoryImport buildUnchecked() {
         return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
             custom);
     }

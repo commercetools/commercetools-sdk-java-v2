@@ -33,7 +33,6 @@ public interface ZoneDraft {
     @JsonProperty("description")
     public String getDescription();
 
-    @NotNull
     @Valid
     @JsonProperty("locations")
     public List<Location> getLocations();

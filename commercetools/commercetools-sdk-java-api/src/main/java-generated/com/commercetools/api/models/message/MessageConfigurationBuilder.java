@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MessageConfigurationBuilder {
+public final class MessageConfigurationBuilder implements Builder<MessageConfiguration> {
 
     private Boolean enabled;
 
@@ -35,6 +36,14 @@ public final class MessageConfigurationBuilder {
     }
 
     public MessageConfiguration build() {
+        Objects.requireNonNull(enabled, MessageConfiguration.class + ": enabled is missing");
+        return new MessageConfigurationImpl(enabled, deleteDaysAfterCreation);
+    }
+
+    /**
+     * builds MessageConfiguration without checking for non null required values
+     */
+    public MessageConfiguration buildUnchecked() {
         return new MessageConfigurationImpl(enabled, deleteDaysAfterCreation);
     }
 

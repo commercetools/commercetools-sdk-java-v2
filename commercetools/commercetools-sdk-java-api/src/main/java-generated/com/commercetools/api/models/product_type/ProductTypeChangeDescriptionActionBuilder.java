@@ -3,10 +3,11 @@ package com.commercetools.api.models.product_type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeChangeDescriptionActionBuilder {
+public final class ProductTypeChangeDescriptionActionBuilder implements Builder<ProductTypeChangeDescriptionAction> {
 
     private String description;
 
@@ -20,6 +21,14 @@ public final class ProductTypeChangeDescriptionActionBuilder {
     }
 
     public ProductTypeChangeDescriptionAction build() {
+        Objects.requireNonNull(description, ProductTypeChangeDescriptionAction.class + ": description is missing");
+        return new ProductTypeChangeDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds ProductTypeChangeDescriptionAction without checking for non null required values
+     */
+    public ProductTypeChangeDescriptionAction buildUnchecked() {
         return new ProductTypeChangeDescriptionActionImpl(description);
     }
 

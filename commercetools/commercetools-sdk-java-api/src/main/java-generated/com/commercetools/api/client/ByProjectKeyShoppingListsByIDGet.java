@@ -82,10 +82,16 @@ public class ByProjectKeyShoppingListsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShoppingListsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShoppingListsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

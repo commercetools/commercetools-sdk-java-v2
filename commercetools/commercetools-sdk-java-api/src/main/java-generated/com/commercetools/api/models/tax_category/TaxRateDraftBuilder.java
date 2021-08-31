@@ -2,13 +2,15 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxRateDraftBuilder {
+public final class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     private String name;
 
@@ -55,6 +57,22 @@ public final class TaxRateDraftBuilder {
         return this;
     }
 
+    public TaxRateDraftBuilder withSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+        return this;
+    }
+
+    public TaxRateDraftBuilder plusSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+        return this;
+    }
+
     public TaxRateDraftBuilder subRates(
             @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
         this.subRates = subRates;
@@ -89,6 +107,16 @@ public final class TaxRateDraftBuilder {
     }
 
     public TaxRateDraft build() {
+        Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
+        Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
+        Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
+    }
+
+    /**
+     * builds TaxRateDraft without checking for non null required values
+     */
+    public TaxRateDraft buildUnchecked() {
         return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
     }
 

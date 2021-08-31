@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDistributionChannelsChangeBuilder {
+public final class SetDistributionChannelsChangeBuilder implements Builder<SetDistributionChannelsChange> {
 
     private String change;
 
@@ -25,6 +27,22 @@ public final class SetDistributionChannelsChangeBuilder {
         return this;
     }
 
+    public SetDistributionChannelsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public SetDistributionChannelsChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
     public SetDistributionChannelsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
@@ -34,6 +52,22 @@ public final class SetDistributionChannelsChangeBuilder {
     public SetDistributionChannelsChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public SetDistributionChannelsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public SetDistributionChannelsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -56,6 +90,16 @@ public final class SetDistributionChannelsChangeBuilder {
     }
 
     public SetDistributionChannelsChange build() {
+        Objects.requireNonNull(change, SetDistributionChannelsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetDistributionChannelsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDistributionChannelsChange.class + ": nextValue is missing");
+        return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetDistributionChannelsChange without checking for non null required values
+     */
+    public SetDistributionChannelsChange buildUnchecked() {
         return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
     }
 

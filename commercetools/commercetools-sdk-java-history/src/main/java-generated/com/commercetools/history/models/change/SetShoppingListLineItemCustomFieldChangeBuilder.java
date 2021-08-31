@@ -2,11 +2,14 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetShoppingListLineItemCustomFieldChangeBuilder {
+public final class SetShoppingListLineItemCustomFieldChangeBuilder
+        implements Builder<SetShoppingListLineItemCustomFieldChange> {
 
     private String change;
 
@@ -32,6 +35,14 @@ public final class SetShoppingListLineItemCustomFieldChangeBuilder {
 
     public SetShoppingListLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
+        return this;
+    }
+
+    public SetShoppingListLineItemCustomFieldChangeBuilder lineItem(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
+        this.lineItem = builder
+                .apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -76,6 +87,22 @@ public final class SetShoppingListLineItemCustomFieldChangeBuilder {
     }
 
     public SetShoppingListLineItemCustomFieldChange build() {
+        Objects.requireNonNull(change, SetShoppingListLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(name, SetShoppingListLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(customTypeId,
+            SetShoppingListLineItemCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(lineItem, SetShoppingListLineItemCustomFieldChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetShoppingListLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            SetShoppingListLineItemCustomFieldChange.class + ": previousValue is missing");
+        return new SetShoppingListLineItemCustomFieldChangeImpl(change, name, customTypeId, lineItem, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetShoppingListLineItemCustomFieldChange without checking for non null required values
+     */
+    public SetShoppingListLineItemCustomFieldChange buildUnchecked() {
         return new SetShoppingListLineItemCustomFieldChangeImpl(change, name, customTypeId, lineItem, nextValue,
             previousValue);
     }

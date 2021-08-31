@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetMetaDescriptionChangeBuilder {
+public final class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescriptionChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetMetaDescriptionChangeBuilder {
     }
 
     public SetMetaDescriptionChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetMetaDescriptionChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetMetaDescriptionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class SetMetaDescriptionChangeBuilder {
     }
 
     public SetMetaDescriptionChange build() {
+        Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetMetaDescriptionChange.class + ": nextValue is missing");
+        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetMetaDescriptionChange without checking for non null required values
+     */
+    public SetMetaDescriptionChange buildUnchecked() {
         return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);
     }
 

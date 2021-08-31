@@ -2,13 +2,15 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ModifiedByBuilder {
+public final class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     private String id;
 
@@ -32,6 +34,12 @@ public final class ModifiedByBuilder {
 
     public ModifiedByBuilder type(final String type) {
         this.type = type;
+        return this;
+    }
+
+    public ModifiedByBuilder customer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +91,16 @@ public final class ModifiedByBuilder {
     }
 
     public ModifiedBy build() {
+        Objects.requireNonNull(id, ModifiedBy.class + ": id is missing");
+        Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
+        Objects.requireNonNull(isPlatformClient, ModifiedBy.class + ": isPlatformClient is missing");
+        return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
+    }
+
+    /**
+     * builds ModifiedBy without checking for non null required values
+     */
+    public ModifiedBy buildUnchecked() {
         return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
     }
 

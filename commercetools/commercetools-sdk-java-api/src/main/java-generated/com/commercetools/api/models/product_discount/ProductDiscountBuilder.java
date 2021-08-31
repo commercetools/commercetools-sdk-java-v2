@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountBuilder {
+public final class ProductDiscountBuilder implements Builder<ProductDiscount> {
 
     private String id;
 
@@ -69,13 +71,31 @@ public final class ProductDiscountBuilder {
     }
 
     public ProductDiscountBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductDiscountBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
 
+    public ProductDiscountBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
     public ProductDiscountBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
+        return this;
+    }
+
+    public ProductDiscountBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -86,6 +106,12 @@ public final class ProductDiscountBuilder {
 
     public ProductDiscountBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public ProductDiscountBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -208,6 +234,24 @@ public final class ProductDiscountBuilder {
     }
 
     public ProductDiscount build() {
+        Objects.requireNonNull(id, ProductDiscount.class + ": id is missing");
+        Objects.requireNonNull(version, ProductDiscount.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductDiscount.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductDiscount.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, ProductDiscount.class + ": name is missing");
+        Objects.requireNonNull(value, ProductDiscount.class + ": value is missing");
+        Objects.requireNonNull(predicate, ProductDiscount.class + ": predicate is missing");
+        Objects.requireNonNull(sortOrder, ProductDiscount.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, ProductDiscount.class + ": isActive is missing");
+        Objects.requireNonNull(references, ProductDiscount.class + ": references is missing");
+        return new ProductDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
+            description, value, predicate, sortOrder, isActive, references, validFrom, validUntil);
+    }
+
+    /**
+     * builds ProductDiscount without checking for non null required values
+     */
+    public ProductDiscount buildUnchecked() {
         return new ProductDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, predicate, sortOrder, isActive, references, validFrom, validUntil);
     }

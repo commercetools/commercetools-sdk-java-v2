@@ -3,12 +3,13 @@ package com.commercetools.api.models.product;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SuggestionResultBuilder {
+public final class SuggestionResultBuilder implements Builder<SuggestionResult> {
 
-    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
+    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     public SuggestionResultBuilder values(
             final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
@@ -30,6 +31,14 @@ public final class SuggestionResultBuilder {
     }
 
     public SuggestionResult build() {
+        Objects.requireNonNull(values, SuggestionResult.class + ": values are missing");
+        return new SuggestionResultImpl(values);
+    }
+
+    /**
+     * builds SuggestionResult without checking for non null required values
+     */
+    public SuggestionResult buildUnchecked() {
         return new SuggestionResultImpl(values);
     }
 

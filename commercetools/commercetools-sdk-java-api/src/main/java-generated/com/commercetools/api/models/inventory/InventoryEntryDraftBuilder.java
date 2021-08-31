@@ -2,13 +2,15 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryDraftBuilder {
+public final class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> {
 
     private String sku;
 
@@ -32,6 +34,13 @@ public final class InventoryEntryDraftBuilder {
     }
 
     public InventoryEntryDraftBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public InventoryEntryDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
@@ -49,6 +58,12 @@ public final class InventoryEntryDraftBuilder {
 
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
+        return this;
+    }
+
+    public InventoryEntryDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -87,6 +102,16 @@ public final class InventoryEntryDraftBuilder {
     }
 
     public InventoryEntryDraft build() {
+        Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
+        Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
+        return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
+            custom);
+    }
+
+    /**
+     * builds InventoryEntryDraft without checking for non null required values
+     */
+    public InventoryEntryDraft buildUnchecked() {
         return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
             custom);
     }

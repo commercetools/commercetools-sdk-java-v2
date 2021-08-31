@@ -2,13 +2,15 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateReferenceBuilder {
+public final class StateReferenceBuilder implements Builder<StateReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class StateReferenceBuilder {
 
     public StateReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public StateReferenceBuilder obj(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class StateReferenceBuilder {
     }
 
     public StateReference build() {
+        Objects.requireNonNull(id, StateReference.class + ": id is missing");
+        return new StateReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds StateReference without checking for non null required values
+     */
+    public StateReference buildUnchecked() {
         return new StateReferenceImpl(id, obj);
     }
 

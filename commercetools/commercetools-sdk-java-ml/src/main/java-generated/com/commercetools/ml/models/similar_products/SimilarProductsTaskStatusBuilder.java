@@ -2,13 +2,15 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductsTaskStatusBuilder {
+public final class SimilarProductsTaskStatusBuilder implements Builder<SimilarProductsTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
@@ -24,6 +26,14 @@ public final class SimilarProductsTaskStatusBuilder {
 
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
         this.expires = expires;
+        return this;
+    }
+
+    public SimilarProductsTaskStatusBuilder result(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
+        this.result = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of())
+                .build();
         return this;
     }
 
@@ -47,6 +57,15 @@ public final class SimilarProductsTaskStatusBuilder {
     }
 
     public SimilarProductsTaskStatus build() {
+        Objects.requireNonNull(state, SimilarProductsTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");
+        return new SimilarProductsTaskStatusImpl(state, expires, result);
+    }
+
+    /**
+     * builds SimilarProductsTaskStatus without checking for non null required values
+     */
+    public SimilarProductsTaskStatus buildUnchecked() {
         return new SimilarProductsTaskStatusImpl(state, expires, result);
     }
 

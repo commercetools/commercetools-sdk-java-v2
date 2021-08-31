@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class EnumSetAttributeBuilder {
+public final class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     @Nullable
     private String name;
@@ -40,6 +41,14 @@ public final class EnumSetAttributeBuilder {
     }
 
     public EnumSetAttribute build() {
+        Objects.requireNonNull(value, EnumSetAttribute.class + ": value is missing");
+        return new EnumSetAttributeImpl(name, value);
+    }
+
+    /**
+     * builds EnumSetAttribute without checking for non null required values
+     */
+    public EnumSetAttribute buildUnchecked() {
         return new EnumSetAttributeImpl(name, value);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetVariantAvailabilityChangeBuilder {
+public final class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAvailabilityChange> {
 
     private String change;
 
@@ -34,8 +36,23 @@ public final class SetVariantAvailabilityChangeBuilder {
     }
 
     public SetVariantAvailabilityChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetVariantAvailabilityChangeBuilder previousValue(
             final com.commercetools.history.models.common.ProductVariantAvailability previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetVariantAvailabilityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
+                .build();
         return this;
     }
 
@@ -66,6 +83,18 @@ public final class SetVariantAvailabilityChangeBuilder {
     }
 
     public SetVariantAvailabilityChange build() {
+        Objects.requireNonNull(change, SetVariantAvailabilityChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetVariantAvailabilityChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetVariantAvailabilityChange.class + ": variant is missing");
+        Objects.requireNonNull(previousValue, SetVariantAvailabilityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetVariantAvailabilityChange.class + ": nextValue is missing");
+        return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetVariantAvailabilityChange without checking for non null required values
+     */
+    public SetVariantAvailabilityChange buildUnchecked() {
         return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
     }
 

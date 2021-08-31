@@ -3,10 +3,11 @@ package com.commercetools.api.models.inventory;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryUpdateBuilder {
+public final class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class InventoryEntryUpdateBuilder {
     }
 
     public InventoryEntryUpdate build() {
+        Objects.requireNonNull(version, InventoryEntryUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, InventoryEntryUpdate.class + ": actions is missing");
+        return new InventoryEntryUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds InventoryEntryUpdate without checking for non null required values
+     */
+    public InventoryEntryUpdate buildUnchecked() {
         return new InventoryEntryUpdateImpl(version, actions);
     }
 

@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetItemShippingAddressCustomFieldActionBuilder {
+public final class CartSetItemShippingAddressCustomFieldActionBuilder
+        implements Builder<CartSetItemShippingAddressCustomFieldAction> {
 
     private String addressKey;
 
@@ -46,6 +48,16 @@ public final class CartSetItemShippingAddressCustomFieldActionBuilder {
     }
 
     public CartSetItemShippingAddressCustomFieldAction build() {
+        Objects.requireNonNull(addressKey,
+            CartSetItemShippingAddressCustomFieldAction.class + ": addressKey is missing");
+        Objects.requireNonNull(name, CartSetItemShippingAddressCustomFieldAction.class + ": name is missing");
+        return new CartSetItemShippingAddressCustomFieldActionImpl(addressKey, name, value);
+    }
+
+    /**
+     * builds CartSetItemShippingAddressCustomFieldAction without checking for non null required values
+     */
+    public CartSetItemShippingAddressCustomFieldAction buildUnchecked() {
         return new CartSetItemShippingAddressCustomFieldActionImpl(addressKey, name, value);
     }
 

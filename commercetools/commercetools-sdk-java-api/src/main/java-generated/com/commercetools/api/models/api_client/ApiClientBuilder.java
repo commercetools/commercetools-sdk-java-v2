@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ApiClientBuilder {
+public final class ApiClientBuilder implements Builder<ApiClient> {
 
     private String id;
 
@@ -96,6 +97,16 @@ public final class ApiClientBuilder {
     }
 
     public ApiClient build() {
+        Objects.requireNonNull(id, ApiClient.class + ": id is missing");
+        Objects.requireNonNull(name, ApiClient.class + ": name is missing");
+        Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");
+        return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);
+    }
+
+    /**
+     * builds ApiClient without checking for non null required values
+     */
+    public ApiClient buildUnchecked() {
         return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);
     }
 

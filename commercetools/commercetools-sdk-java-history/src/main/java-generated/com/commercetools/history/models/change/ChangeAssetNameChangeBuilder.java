@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeAssetNameChangeBuilder {
+public final class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChange> {
 
     private String change;
 
@@ -22,14 +24,32 @@ public final class ChangeAssetNameChangeBuilder {
     }
 
     public ChangeAssetNameChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeAssetNameChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
 
     public ChangeAssetNameChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeAssetNameChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeAssetNameChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -56,6 +76,17 @@ public final class ChangeAssetNameChangeBuilder {
     }
 
     public ChangeAssetNameChange build() {
+        Objects.requireNonNull(change, ChangeAssetNameChange.class + ": change is missing");
+        Objects.requireNonNull(asset, ChangeAssetNameChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, ChangeAssetNameChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeAssetNameChange.class + ": previousValue is missing");
+        return new ChangeAssetNameChangeImpl(change, asset, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeAssetNameChange without checking for non null required values
+     */
+    public ChangeAssetNameChange buildUnchecked() {
         return new ChangeAssetNameChangeImpl(change, asset, nextValue, previousValue);
     }
 

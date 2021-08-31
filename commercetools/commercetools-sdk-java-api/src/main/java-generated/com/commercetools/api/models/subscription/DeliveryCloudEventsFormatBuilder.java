@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryCloudEventsFormatBuilder {
+public final class DeliveryCloudEventsFormatBuilder implements Builder<DeliveryCloudEventsFormat> {
 
     private String cloudEventsVersion;
 
@@ -20,6 +21,14 @@ public final class DeliveryCloudEventsFormatBuilder {
     }
 
     public DeliveryCloudEventsFormat build() {
+        Objects.requireNonNull(cloudEventsVersion, DeliveryCloudEventsFormat.class + ": cloudEventsVersion is missing");
+        return new DeliveryCloudEventsFormatImpl(cloudEventsVersion);
+    }
+
+    /**
+     * builds DeliveryCloudEventsFormat without checking for non null required values
+     */
+    public DeliveryCloudEventsFormat buildUnchecked() {
         return new DeliveryCloudEventsFormatImpl(cloudEventsVersion);
     }
 

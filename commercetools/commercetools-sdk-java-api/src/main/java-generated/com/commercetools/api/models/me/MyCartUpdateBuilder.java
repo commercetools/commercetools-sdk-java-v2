@@ -3,10 +3,11 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartUpdateBuilder {
+public final class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     private Long version;
 
@@ -37,6 +38,15 @@ public final class MyCartUpdateBuilder {
     }
 
     public MyCartUpdate build() {
+        Objects.requireNonNull(version, MyCartUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, MyCartUpdate.class + ": actions is missing");
+        return new MyCartUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds MyCartUpdate without checking for non null required values
+     */
+    public MyCartUpdate buildUnchecked() {
         return new MyCartUpdateImpl(version, actions);
     }
 

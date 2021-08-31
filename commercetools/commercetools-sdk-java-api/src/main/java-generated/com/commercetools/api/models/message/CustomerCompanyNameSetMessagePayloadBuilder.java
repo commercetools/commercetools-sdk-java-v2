@@ -3,10 +3,12 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerCompanyNameSetMessagePayloadBuilder {
+public final class CustomerCompanyNameSetMessagePayloadBuilder
+        implements Builder<CustomerCompanyNameSetMessagePayload> {
 
     private String companyName;
 
@@ -20,6 +22,14 @@ public final class CustomerCompanyNameSetMessagePayloadBuilder {
     }
 
     public CustomerCompanyNameSetMessagePayload build() {
+        Objects.requireNonNull(companyName, CustomerCompanyNameSetMessagePayload.class + ": companyName is missing");
+        return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
+    }
+
+    /**
+     * builds CustomerCompanyNameSetMessagePayload without checking for non null required values
+     */
+    public CustomerCompanyNameSetMessagePayload buildUnchecked() {
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
     }
 

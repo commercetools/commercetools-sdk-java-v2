@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewCreatedMessageBuilder {
+public final class ReviewCreatedMessageBuilder implements Builder<ReviewCreatedMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class ReviewCreatedMessageBuilder {
     }
 
     public ReviewCreatedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,8 +97,22 @@ public final class ReviewCreatedMessageBuilder {
     }
 
     public ReviewCreatedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public ReviewCreatedMessageBuilder review(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.review = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
         return this;
     }
 
@@ -141,6 +169,22 @@ public final class ReviewCreatedMessageBuilder {
     }
 
     public ReviewCreatedMessage build() {
+        Objects.requireNonNull(id, ReviewCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReviewCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReviewCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReviewCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReviewCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReviewCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReviewCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(review, ReviewCreatedMessage.class + ": review is missing");
+        return new ReviewCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, review);
+    }
+
+    /**
+     * builds ReviewCreatedMessage without checking for non null required values
+     */
+    public ReviewCreatedMessage buildUnchecked() {
         return new ReviewCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, review);
     }

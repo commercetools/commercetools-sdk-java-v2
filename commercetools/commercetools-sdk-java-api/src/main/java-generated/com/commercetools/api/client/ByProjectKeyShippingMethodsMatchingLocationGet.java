@@ -81,34 +81,58 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
         this.projectKey = projectKey;
     }
 
+    /**
+     * set country with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country) {
         return copy().withQueryParam("country", country);
     }
 
+    /**
+     * add additional country query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final String country) {
         return copy().addQueryParam("country", country);
     }
 
+    /**
+     * set state with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state) {
         return copy().withQueryParam("state", state);
     }
 
+    /**
+     * add additional state query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addState(final String state) {
         return copy().addQueryParam("state", state);
     }
 
+    /**
+     * set currency with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency) {
         return copy().withQueryParam("currency", currency);
     }
 
+    /**
+     * add additional currency query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final String currency) {
         return copy().addQueryParam("currency", currency);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntryQuantitySetMessageBuilder {
+public final class InventoryEntryQuantitySetMessageBuilder implements Builder<InventoryEntryQuantitySetMessage> {
 
     private String id;
 
@@ -62,8 +64,20 @@ public final class InventoryEntryQuantitySetMessageBuilder {
     }
 
     public InventoryEntryQuantitySetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public InventoryEntryQuantitySetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public InventoryEntryQuantitySetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -86,6 +100,14 @@ public final class InventoryEntryQuantitySetMessageBuilder {
 
     public InventoryEntryQuantitySetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public InventoryEntryQuantitySetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -175,6 +197,31 @@ public final class InventoryEntryQuantitySetMessageBuilder {
     }
 
     public InventoryEntryQuantitySetMessage build() {
+        Objects.requireNonNull(id, InventoryEntryQuantitySetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, InventoryEntryQuantitySetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, InventoryEntryQuantitySetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, InventoryEntryQuantitySetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, InventoryEntryQuantitySetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, InventoryEntryQuantitySetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            InventoryEntryQuantitySetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(oldQuantityOnStock,
+            InventoryEntryQuantitySetMessage.class + ": oldQuantityOnStock is missing");
+        Objects.requireNonNull(newQuantityOnStock,
+            InventoryEntryQuantitySetMessage.class + ": newQuantityOnStock is missing");
+        Objects.requireNonNull(oldAvailableQuantity,
+            InventoryEntryQuantitySetMessage.class + ": oldAvailableQuantity is missing");
+        Objects.requireNonNull(newAvailableQuantity,
+            InventoryEntryQuantitySetMessage.class + ": newAvailableQuantity is missing");
+        return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
+            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);
+    }
+
+    /**
+     * builds InventoryEntryQuantitySetMessage without checking for non null required values
+     */
+    public InventoryEntryQuantitySetMessage buildUnchecked() {
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
             newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);

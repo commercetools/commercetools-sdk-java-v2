@@ -3,10 +3,11 @@ package com.commercetools.api.models.graph_ql;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GraphQLErrorLocationBuilder {
+public final class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation> {
 
     private Integer line;
 
@@ -31,6 +32,15 @@ public final class GraphQLErrorLocationBuilder {
     }
 
     public GraphQLErrorLocation build() {
+        Objects.requireNonNull(line, GraphQLErrorLocation.class + ": line is missing");
+        Objects.requireNonNull(column, GraphQLErrorLocation.class + ": column is missing");
+        return new GraphQLErrorLocationImpl(line, column);
+    }
+
+    /**
+     * builds GraphQLErrorLocation without checking for non null required values
+     */
+    public GraphQLErrorLocation buildUnchecked() {
         return new GraphQLErrorLocationImpl(line, column);
     }
 

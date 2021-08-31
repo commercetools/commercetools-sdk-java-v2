@@ -3,10 +3,11 @@ package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeCountBuilder {
+public final class AttributeCountBuilder implements Builder<AttributeCount> {
 
     private Integer productTypeAttributes;
 
@@ -42,6 +43,16 @@ public final class AttributeCountBuilder {
     }
 
     public AttributeCount build() {
+        Objects.requireNonNull(productTypeAttributes, AttributeCount.class + ": productTypeAttributes is missing");
+        Objects.requireNonNull(variantAttributes, AttributeCount.class + ": variantAttributes is missing");
+        Objects.requireNonNull(missingAttributeValues, AttributeCount.class + ": missingAttributeValues is missing");
+        return new AttributeCountImpl(productTypeAttributes, variantAttributes, missingAttributeValues);
+    }
+
+    /**
+     * builds AttributeCount without checking for non null required values
+     */
+    public AttributeCount buildUnchecked() {
         return new AttributeCountImpl(productTypeAttributes, variantAttributes, missingAttributeValues);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentReferenceBuilder {
+public final class PaymentReferenceBuilder implements Builder<PaymentReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class PaymentReferenceBuilder {
 
     public PaymentReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public PaymentReferenceBuilder obj(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class PaymentReferenceBuilder {
     }
 
     public PaymentReference build() {
+        Objects.requireNonNull(id, PaymentReference.class + ": id is missing");
+        return new PaymentReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds PaymentReference without checking for non null required values
+     */
+    public PaymentReference buildUnchecked() {
         return new PaymentReferenceImpl(id, obj);
     }
 

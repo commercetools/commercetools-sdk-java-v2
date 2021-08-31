@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerBuilder {
+public final class CustomerBuilder implements Builder<Customer> {
 
     private String id;
 
@@ -110,8 +112,20 @@ public final class CustomerBuilder {
     }
 
     public CustomerBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CustomerBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -175,6 +189,22 @@ public final class CustomerBuilder {
         return this;
     }
 
+    public CustomerBuilder withAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerBuilder plusAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+        return this;
+    }
+
     public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
         this.addresses = addresses;
         return this;
@@ -221,8 +251,22 @@ public final class CustomerBuilder {
     }
 
     public CustomerBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public CustomerBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -248,6 +292,22 @@ public final class CustomerBuilder {
 
     public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public CustomerBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
         return this;
     }
 
@@ -395,6 +455,24 @@ public final class CustomerBuilder {
     }
 
     public Customer build() {
+        Objects.requireNonNull(id, Customer.class + ": id is missing");
+        Objects.requireNonNull(version, Customer.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Customer.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(email, Customer.class + ": email is missing");
+        Objects.requireNonNull(password, Customer.class + ": password is missing");
+        Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
+        Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
+        return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
+            email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
+            defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
+            externalId, customerGroup, custom, locale, salutation, key, stores);
+    }
+
+    /**
+     * builds Customer without checking for non null required values
+     */
+    public Customer buildUnchecked() {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,

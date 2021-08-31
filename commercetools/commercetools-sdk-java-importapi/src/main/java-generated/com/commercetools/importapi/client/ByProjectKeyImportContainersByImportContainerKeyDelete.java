@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Deletes the import container given by the key.</p>
 */
@@ -79,6 +82,26 @@ public class ByProjectKeyImportContainersByImportContainerKeyDelete extends
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyImportContainersByImportContainerKeyDelete that = (ByProjectKeyImportContainersByImportContainerKeyDelete) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importContainerKey, that.importContainerKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importContainerKey).toHashCode();
     }
 
     @Override

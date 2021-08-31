@@ -17,6 +17,9 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Search Product Projection</p>
 */
@@ -158,6 +161,24 @@ public class ByProjectKeyProductProjectionsSearchPost
                 .map(Map.Entry::getValue)
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductProjectionsSearchPost that = (ByProjectKeyProductProjectionsSearchPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(formParams, that.formParams).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(formParams).toHashCode();
     }
 
     @Override

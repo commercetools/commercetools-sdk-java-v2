@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Creates an order from a Cart.
 *  The cart must have a shipping address set before creating an order.
@@ -96,6 +99,26 @@ public class ByProjectKeyOrdersPost extends ApiMethod<ByProjectKeyOrdersPost, co
      */
     public ByProjectKeyOrdersPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyOrdersPost that = (ByProjectKeyOrdersPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(orderFromCartDraft, that.orderFromCartDraft)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(orderFromCartDraft).toHashCode();
     }
 
     @Override

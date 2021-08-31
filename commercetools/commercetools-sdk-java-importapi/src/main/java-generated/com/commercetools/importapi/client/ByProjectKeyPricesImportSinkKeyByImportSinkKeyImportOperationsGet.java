@@ -14,6 +14,9 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Retrieves all price import operations of an import sink key.</p>
 */
@@ -191,6 +194,26 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet e
      */
     public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {
         return copy().addQueryParam("debug", debug);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet that = (ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkKey, that.importSinkKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();
     }
 
     @Override

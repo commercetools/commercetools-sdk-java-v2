@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>You can use the query endpoint to get the full representations of products.
 *  REMARK: We suggest to use the performance optimized search endpoint which has a bunch functionalities,
@@ -304,6 +307,24 @@ public class ByProjectKeyProductsGet extends
      */
     public ByProjectKeyProductsGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductsGet that = (ByProjectKeyProductsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
     }
 
     @Override

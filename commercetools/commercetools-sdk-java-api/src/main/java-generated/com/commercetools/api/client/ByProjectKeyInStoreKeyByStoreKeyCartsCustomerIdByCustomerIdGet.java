@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Retrieves the active cart of the customer that has been modified most recently in a specific Store.
 *  The {storeKey} path parameter maps to a Store's key.</p>
@@ -113,6 +116,27 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet that = (ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(customerId, that.customerId)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(customerId).toHashCode();
     }
 
     @Override

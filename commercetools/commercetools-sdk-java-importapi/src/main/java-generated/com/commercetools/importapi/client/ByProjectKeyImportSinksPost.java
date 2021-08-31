@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Creates a new import sink.</p>
 */
@@ -76,6 +79,26 @@ public class ByProjectKeyImportSinksPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyImportSinksPost that = (ByProjectKeyImportSinksPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkDraft, that.importSinkDraft)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkDraft).toHashCode();
     }
 
     @Override

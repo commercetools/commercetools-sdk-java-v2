@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Response Representation: PagedQueryResult with a results array of ProjectCategoryrecommendation, sorted by confidence scores in descending order and the meta information of ProjectCategoryrecommendationMeta.</p>
 */
@@ -168,6 +171,24 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(final double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyRecommendationsProjectCategoriesByProductIdGet that = (ByProjectKeyRecommendationsProjectCategoriesByProductIdGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(productId, that.productId).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(productId).toHashCode();
     }
 
     @Override

@@ -14,6 +14,9 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Retrieves all <a href="ctp:import:type:ImportOperation">ImportOperations</a> of a given ImportContainer key.</p>
 */
@@ -193,6 +196,26 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(final boolean debug) {
         return copy().addQueryParam("debug", debug);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet that = (ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importContainerKey, that.importContainerKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importContainerKey).toHashCode();
     }
 
     @Override

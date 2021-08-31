@@ -1,10 +1,6 @@
-# Guide to migrate from the JVM SDK 1.x to the Java SDK 2.x
+# Guide to migrate from the JVM SDK v1 to the Java SDK v2
 
-This guide helps developers to migrate from the version 1.x to the version 2.x of Java SDK.
-
-The main difference is that the new JAVA SDK follow the structure of the api path.
-
-So:   <strong>projectKey + endpoint + http method(get or post) + execution. </strong>
+This guide helps developers to migrate from the JVM SDK v1 to the Java SDK v2.
 
 ## Table of content
 

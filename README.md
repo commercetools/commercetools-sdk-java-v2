@@ -79,6 +79,10 @@ dependencies {
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
 * `commercetools-sdk-java-ml`: models and request builders for the machine learning API
 
+### Migration Guidelines
+To migrate from the 1.x to the 2.x, there is a guideline below:
+* [Migration guidelines from v1 to v2](../Migration.md)
+
 ## Documentation
 
 * [Documentation](docs/Readme.md)

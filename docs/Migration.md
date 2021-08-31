@@ -2,10 +2,6 @@
 
 This guide helps developers to migrate from the version 1.x to the version 2.x of Java SDK.
 
-The main difference is that the new JAVA SDK follow the structure of the api path.
-
-So:   <strong>projectKey + endpoint + http method(get or post) + execution. </strong>
-
 ## Table of content
 
 * [Client Configuration and Creation](#client-configuration-and-creation)

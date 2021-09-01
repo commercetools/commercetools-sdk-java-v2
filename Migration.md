@@ -143,7 +143,7 @@ About the *DraftBuilder* the main difference is that in the 2.x there are not in
 ```
 <a id="create-command"></a>
 ### Create Command
-In the 2.x there are not dedicated classes for the *Create Command*, but there are builders (you can see better in the *Update Command*). It means that to have a request it needs to have a draft to build to pass into the *post()* method.
+In the 2.x there are not dedicated classes for the *Create Command*, but there are builders (you can see better in the *Update Command*). It means that to have a request it needs to have a draft to build which has to be passed into the *post()* method.
 
 Here the differences:
 

@@ -139,7 +139,7 @@ About the *DraftBuilder* the main difference is that in the 2.x there are not in
 ```
 <a id="create-command"></a>
 ### Create Command
-In the 2.x there are not dedicated classes for the *Create Command*, but there are builders (you can see better in the *Update Command*). It means that to have a request it needs to have a draft to build which has to be passed into the *post()* method.
+In the 2.x there are not dedicated classes for the *Create Command*, but there are builders (you can see better in the [Update Command](#update-command)). It means that to have a request it needs to have a draft to build which has to be passed into the *post()* method.
 
 Here the differences:
 
@@ -177,7 +177,7 @@ The main difference in this case is that we replaced the <strong>SphereJsonUtils
 ```
 <a id="update-command"></a>
 ### Update Command
-Like the *Create Command* there are not dedicated classes for the *Update Command* but you can use the <strong>UpdateBuilder</strong> to create the type of update action to apply in the <strong>post</strong> method.
+Like the [Create Command](#create-command), there are not dedicated classes for the *Update Command*, but the use of the <strong>UpdateBuilder</strong> to create the type of update action to apply in the <strong>post</strong> method is substantial to build the update action.
 
 Here the differences:
 
@@ -205,7 +205,7 @@ Here the differences:
 
 <a id="query-getbyid"></a>
 ### Query - GetById
-In case of query by Id, the 2.x is not so different from the previous cases in the 1.x, except that we are going to use <strong>get</strong> before other ways to filter our request.
+In case of query by Id, the 2.x is not so different from the previous cases, except that it uses the <strong>get</strong> method before other ways to filter our request.
 
 1.x
 ```java

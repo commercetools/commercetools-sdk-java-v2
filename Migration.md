@@ -40,7 +40,7 @@ The benefit is that after the <strong>ApiRootBuilder</strong> has been defined, 
 
 <a id="timout-setting"></a>
 ### Timeout Setting
-In both versions is the <strong>executeBlocking()</strong> method that sets the time out.
+In both versions is the <strong>executeBlocking()</strong> method that sets the timeout.
 
 1.x
 ```java

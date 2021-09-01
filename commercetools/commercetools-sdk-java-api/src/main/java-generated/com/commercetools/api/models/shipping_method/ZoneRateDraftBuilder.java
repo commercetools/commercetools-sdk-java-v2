@@ -2,11 +2,13 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneRateDraftBuilder {
+public final class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
@@ -20,6 +22,24 @@ public final class ZoneRateDraftBuilder {
     public ZoneRateDraftBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
+        return this;
+    }
+
+    public ZoneRateDraftBuilder withShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        this.shippingRates = new ArrayList<>();
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneRateDraftBuilder plusShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
+        if (this.shippingRates == null) {
+            this.shippingRates = new ArrayList<>();
+        }
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of()).build());
         return this;
     }
 
@@ -38,6 +58,15 @@ public final class ZoneRateDraftBuilder {
     }
 
     public ZoneRateDraft build() {
+        Objects.requireNonNull(zone, ZoneRateDraft.class + ": zone is missing");
+        Objects.requireNonNull(shippingRates, ZoneRateDraft.class + ": shippingRates is missing");
+        return new ZoneRateDraftImpl(zone, shippingRates);
+    }
+
+    /**
+     * builds ZoneRateDraft without checking for non null required values
+     */
+    public ZoneRateDraft buildUnchecked() {
         return new ZoneRateDraftImpl(zone, shippingRates);
     }
 

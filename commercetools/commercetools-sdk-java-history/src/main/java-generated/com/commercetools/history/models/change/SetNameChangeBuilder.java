@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetNameChangeBuilder {
+public final class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetNameChangeBuilder {
     }
 
     public SetNameChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetNameChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetNameChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class SetNameChangeBuilder {
     }
 
     public SetNameChange build() {
+        Objects.requireNonNull(change, SetNameChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetNameChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetNameChange.class + ": nextValue is missing");
+        return new SetNameChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetNameChange without checking for non null required values
+     */
+    public SetNameChange buildUnchecked() {
         return new SetNameChangeImpl(change, previousValue, nextValue);
     }
 

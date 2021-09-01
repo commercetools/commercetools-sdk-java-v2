@@ -74,13 +74,14 @@ dependencies {
 * `commercetools-http-client`: alias for commercetools-okhttp-client4
 * `commercetools-okhttp-client3`: uses OkHttp client 3.0
 * `commercetools-okhttp-client4`: uses OkHttp client 4.0
+* `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
 * `commercetools-sdk-java-api`: models and request builders for the product API
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
 * `commercetools-sdk-java-ml`: models and request builders for the machine learning API
 
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
-* [Migration guidelines from v1 to v2](../Migration.md)
+* [Migration guidelines from v1 to v2](Migration.md)
 
 ## Documentation
 

@@ -3,10 +3,12 @@ package com.commercetools.api.models.payment;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentChangeTransactionTimestampActionBuilder {
+public final class PaymentChangeTransactionTimestampActionBuilder
+        implements Builder<PaymentChangeTransactionTimestampAction> {
 
     private String transactionId;
 
@@ -31,6 +33,16 @@ public final class PaymentChangeTransactionTimestampActionBuilder {
     }
 
     public PaymentChangeTransactionTimestampAction build() {
+        Objects.requireNonNull(transactionId,
+            PaymentChangeTransactionTimestampAction.class + ": transactionId is missing");
+        Objects.requireNonNull(timestamp, PaymentChangeTransactionTimestampAction.class + ": timestamp is missing");
+        return new PaymentChangeTransactionTimestampActionImpl(transactionId, timestamp);
+    }
+
+    /**
+     * builds PaymentChangeTransactionTimestampAction without checking for non null required values
+     */
+    public PaymentChangeTransactionTimestampAction buildUnchecked() {
         return new PaymentChangeTransactionTimestampActionImpl(transactionId, timestamp);
     }
 

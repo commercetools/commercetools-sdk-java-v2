@@ -3,10 +3,11 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetStagedActionsActionBuilder {
+public final class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEditSetStagedActionsAction> {
 
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
@@ -27,6 +28,14 @@ public final class OrderEditSetStagedActionsActionBuilder {
     }
 
     public OrderEditSetStagedActionsAction build() {
+        Objects.requireNonNull(stagedActions, OrderEditSetStagedActionsAction.class + ": stagedActions is missing");
+        return new OrderEditSetStagedActionsActionImpl(stagedActions);
+    }
+
+    /**
+     * builds OrderEditSetStagedActionsAction without checking for non null required values
+     */
+    public OrderEditSetStagedActionsAction buildUnchecked() {
         return new OrderEditSetStagedActionsActionImpl(stagedActions);
     }
 

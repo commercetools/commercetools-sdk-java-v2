@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditAppliedMessageBuilder {
+public final class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedMessage> {
 
     private String id;
 
@@ -58,8 +60,20 @@ public final class OrderEditAppliedMessageBuilder {
     }
 
     public OrderEditAppliedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderEditAppliedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderEditAppliedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -85,13 +99,33 @@ public final class OrderEditAppliedMessageBuilder {
     }
 
     public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    public OrderEditAppliedMessageBuilder edit(
+            Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
+        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderEditAppliedMessageBuilder edit(final com.commercetools.api.models.order_edit.OrderEditReference edit) {
         this.edit = edit;
+        return this;
+    }
+
+    public OrderEditAppliedMessageBuilder result(
+            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
         return this;
     }
 
@@ -153,6 +187,23 @@ public final class OrderEditAppliedMessageBuilder {
     }
 
     public OrderEditAppliedMessage build() {
+        Objects.requireNonNull(id, OrderEditAppliedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderEditAppliedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderEditAppliedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderEditAppliedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderEditAppliedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderEditAppliedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderEditAppliedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(edit, OrderEditAppliedMessage.class + ": edit is missing");
+        Objects.requireNonNull(result, OrderEditAppliedMessage.class + ": result is missing");
+        return new OrderEditAppliedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, edit, result);
+    }
+
+    /**
+     * builds OrderEditAppliedMessage without checking for non null required values
+     */
+    public OrderEditAppliedMessage buildUnchecked() {
         return new OrderEditAppliedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, edit, result);
     }

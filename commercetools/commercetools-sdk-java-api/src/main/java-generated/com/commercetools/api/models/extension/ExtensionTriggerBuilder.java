@@ -3,10 +3,11 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionTriggerBuilder {
+public final class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
 
@@ -38,6 +39,15 @@ public final class ExtensionTriggerBuilder {
     }
 
     public ExtensionTrigger build() {
+        Objects.requireNonNull(resourceTypeId, ExtensionTrigger.class + ": resourceTypeId is missing");
+        Objects.requireNonNull(actions, ExtensionTrigger.class + ": actions is missing");
+        return new ExtensionTriggerImpl(resourceTypeId, actions);
+    }
+
+    /**
+     * builds ExtensionTrigger without checking for non null required values
+     */
+    public ExtensionTrigger buildUnchecked() {
         return new ExtensionTriggerImpl(resourceTypeId, actions);
     }
 

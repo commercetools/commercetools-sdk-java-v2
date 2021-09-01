@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddressDraftBuilder {
+public final class AddressDraftBuilder implements Builder<AddressDraft> {
 
     @Nullable
     private String id;
@@ -212,6 +214,12 @@ public final class AddressDraftBuilder {
         return this;
     }
 
+    public AddressDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
     public AddressDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
@@ -347,6 +355,16 @@ public final class AddressDraftBuilder {
     }
 
     public AddressDraft build() {
+        Objects.requireNonNull(country, AddressDraft.class + ": country is missing");
+        return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+    }
+
+    /**
+     * builds AddressDraft without checking for non null required values
+     */
+    public AddressDraft buildUnchecked() {
         return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
             pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);

@@ -2,11 +2,13 @@
 package com.commercetools.importapi.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedPriceBuilder {
+public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -14,6 +16,13 @@ public final class DiscountedPriceBuilder {
 
     public DiscountedPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
+        return this;
+    }
+
+    public DiscountedPriceBuilder discount(
+            Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
@@ -32,6 +41,15 @@ public final class DiscountedPriceBuilder {
     }
 
     public DiscountedPrice build() {
+        Objects.requireNonNull(value, DiscountedPrice.class + ": value is missing");
+        Objects.requireNonNull(discount, DiscountedPrice.class + ": discount is missing");
+        return new DiscountedPriceImpl(value, discount);
+    }
+
+    /**
+     * builds DiscountedPrice without checking for non null required values
+     */
+    public DiscountedPrice buildUnchecked() {
         return new DiscountedPriceImpl(value, discount);
     }
 

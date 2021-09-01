@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemDraftBuilder {
+public final class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -30,6 +32,12 @@ public final class CustomLineItemDraftBuilder {
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    public CustomLineItemDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -37,6 +45,12 @@ public final class CustomLineItemDraftBuilder {
 
     public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder money(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -57,14 +71,34 @@ public final class CustomLineItemDraftBuilder {
     }
 
     public CustomLineItemDraftBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
     public CustomLineItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public CustomLineItemDraftBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -111,6 +145,18 @@ public final class CustomLineItemDraftBuilder {
     }
 
     public CustomLineItemDraft build() {
+        Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
+        Objects.requireNonNull(quantity, CustomLineItemDraft.class + ": quantity is missing");
+        Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
+        Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
+        return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,
+            shippingDetails);
+    }
+
+    /**
+     * builds CustomLineItemDraft without checking for non null required values
+     */
+    public CustomLineItemDraft buildUnchecked() {
         return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,
             shippingDetails);
     }

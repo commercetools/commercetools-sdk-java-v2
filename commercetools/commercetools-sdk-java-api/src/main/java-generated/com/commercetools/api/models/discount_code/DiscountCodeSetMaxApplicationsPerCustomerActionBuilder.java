@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder {
+public final class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
+        implements Builder<DiscountCodeSetMaxApplicationsPerCustomerAction> {
 
     @Nullable
     private Long maxApplicationsPerCustomer;
@@ -25,6 +27,13 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder {
     }
 
     public DiscountCodeSetMaxApplicationsPerCustomerAction build() {
+        return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl(maxApplicationsPerCustomer);
+    }
+
+    /**
+     * builds DiscountCodeSetMaxApplicationsPerCustomerAction without checking for non null required values
+     */
+    public DiscountCodeSetMaxApplicationsPerCustomerAction buildUnchecked() {
         return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl(maxApplicationsPerCustomer);
     }
 

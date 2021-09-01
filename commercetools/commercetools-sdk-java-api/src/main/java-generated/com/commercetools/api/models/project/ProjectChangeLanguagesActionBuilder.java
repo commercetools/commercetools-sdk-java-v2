@@ -3,10 +3,11 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectChangeLanguagesActionBuilder {
+public final class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChangeLanguagesAction> {
 
     private java.util.List<String> languages;
 
@@ -25,6 +26,14 @@ public final class ProjectChangeLanguagesActionBuilder {
     }
 
     public ProjectChangeLanguagesAction build() {
+        Objects.requireNonNull(languages, ProjectChangeLanguagesAction.class + ": languages is missing");
+        return new ProjectChangeLanguagesActionImpl(languages);
+    }
+
+    /**
+     * builds ProjectChangeLanguagesAction without checking for non null required values
+     */
+    public ProjectChangeLanguagesAction buildUnchecked() {
         return new ProjectChangeLanguagesActionImpl(languages);
     }
 

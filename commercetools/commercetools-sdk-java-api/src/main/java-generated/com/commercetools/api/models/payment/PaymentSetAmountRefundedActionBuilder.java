@@ -2,16 +2,24 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetAmountRefundedActionBuilder {
+public final class PaymentSetAmountRefundedActionBuilder implements Builder<PaymentSetAmountRefundedAction> {
 
     @Nullable
     private com.commercetools.api.models.common.Money amount;
+
+    public PaymentSetAmountRefundedActionBuilder amount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
 
     public PaymentSetAmountRefundedActionBuilder amount(
             @Nullable final com.commercetools.api.models.common.Money amount) {
@@ -25,6 +33,13 @@ public final class PaymentSetAmountRefundedActionBuilder {
     }
 
     public PaymentSetAmountRefundedAction build() {
+        return new PaymentSetAmountRefundedActionImpl(amount);
+    }
+
+    /**
+     * builds PaymentSetAmountRefundedAction without checking for non null required values
+     */
+    public PaymentSetAmountRefundedAction buildUnchecked() {
         return new PaymentSetAmountRefundedActionImpl(amount);
     }
 

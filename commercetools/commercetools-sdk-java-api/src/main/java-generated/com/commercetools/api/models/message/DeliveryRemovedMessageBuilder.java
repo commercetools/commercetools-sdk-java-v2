@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryRemovedMessageBuilder {
+public final class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class DeliveryRemovedMessageBuilder {
     }
 
     public DeliveryRemovedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public DeliveryRemovedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public DeliveryRemovedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,8 +97,22 @@ public final class DeliveryRemovedMessageBuilder {
     }
 
     public DeliveryRemovedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public DeliveryRemovedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public DeliveryRemovedMessageBuilder delivery(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
         return this;
     }
 
@@ -141,6 +169,22 @@ public final class DeliveryRemovedMessageBuilder {
     }
 
     public DeliveryRemovedMessage build() {
+        Objects.requireNonNull(id, DeliveryRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, DeliveryRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(delivery, DeliveryRemovedMessage.class + ": delivery is missing");
+        return new DeliveryRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+    }
+
+    /**
+     * builds DeliveryRemovedMessage without checking for non null required values
+     */
+    public DeliveryRemovedMessage buildUnchecked() {
         return new DeliveryRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
     }

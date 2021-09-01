@@ -4,6 +4,8 @@ package io.vrap.rmf.base.client;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class ApiHttpResponse<U> extends Base {
@@ -103,5 +105,27 @@ public class ApiHttpResponse<U> extends Base {
 
     private ApiHttpResponse<U> copy() {
         return new ApiHttpResponse<>(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ApiHttpResponse<?> response = (ApiHttpResponse<?>) o;
+
+        return new EqualsBuilder().append(statusCode, response.statusCode)
+                .append(headers, response.headers)
+                .append(body, response.body)
+                .append(message, response.message)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(statusCode).append(headers).append(body).append(message).toHashCode();
     }
 }

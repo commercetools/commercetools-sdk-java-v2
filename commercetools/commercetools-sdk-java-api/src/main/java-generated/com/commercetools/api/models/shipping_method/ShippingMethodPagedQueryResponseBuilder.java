@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodPagedQueryResponseBuilder {
+public final class ShippingMethodPagedQueryResponseBuilder implements Builder<ShippingMethodPagedQueryResponse> {
 
     @Nullable
     private Long limit;
@@ -49,6 +51,24 @@ public final class ShippingMethodPagedQueryResponseBuilder {
         return this;
     }
 
+    public ShippingMethodPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+        return this;
+    }
+
     public ShippingMethodPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
         this.results = results;
@@ -79,6 +99,15 @@ public final class ShippingMethodPagedQueryResponseBuilder {
     }
 
     public ShippingMethodPagedQueryResponse build() {
+        Objects.requireNonNull(count, ShippingMethodPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(results, ShippingMethodPagedQueryResponse.class + ": results is missing");
+        return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ShippingMethodPagedQueryResponse without checking for non null required values
+     */
+    public ShippingMethodPagedQueryResponse buildUnchecked() {
         return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

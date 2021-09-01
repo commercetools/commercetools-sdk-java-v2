@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderTransitionLineItemStateActionBuilder {
+public final class OrderTransitionLineItemStateActionBuilder implements Builder<OrderTransitionLineItemStateAction> {
 
     private String lineItemId;
 
@@ -32,8 +34,20 @@ public final class OrderTransitionLineItemStateActionBuilder {
     }
 
     public OrderTransitionLineItemStateActionBuilder fromState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public OrderTransitionLineItemStateActionBuilder fromState(
             final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
         this.fromState = fromState;
+        return this;
+    }
+
+    public OrderTransitionLineItemStateActionBuilder toState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 
@@ -71,6 +85,18 @@ public final class OrderTransitionLineItemStateActionBuilder {
     }
 
     public OrderTransitionLineItemStateAction build() {
+        Objects.requireNonNull(lineItemId, OrderTransitionLineItemStateAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(quantity, OrderTransitionLineItemStateAction.class + ": quantity is missing");
+        Objects.requireNonNull(fromState, OrderTransitionLineItemStateAction.class + ": fromState is missing");
+        Objects.requireNonNull(toState, OrderTransitionLineItemStateAction.class + ": toState is missing");
+        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
+            actualTransitionDate);
+    }
+
+    /**
+     * builds OrderTransitionLineItemStateAction without checking for non null required values
+     */
+    public OrderTransitionLineItemStateAction buildUnchecked() {
         return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
             actualTransitionDate);
     }

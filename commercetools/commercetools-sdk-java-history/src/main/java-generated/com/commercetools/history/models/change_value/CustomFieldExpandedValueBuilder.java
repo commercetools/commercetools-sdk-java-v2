@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change_value;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldExpandedValueBuilder {
+public final class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpandedValue> {
 
     private String name;
 
@@ -21,6 +23,12 @@ public final class CustomFieldExpandedValueBuilder {
 
     public CustomFieldExpandedValueBuilder value(final java.lang.Object value) {
         this.value = value;
+        return this;
+    }
+
+    public CustomFieldExpandedValueBuilder label(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -42,6 +50,16 @@ public final class CustomFieldExpandedValueBuilder {
     }
 
     public CustomFieldExpandedValue build() {
+        Objects.requireNonNull(name, CustomFieldExpandedValue.class + ": name is missing");
+        Objects.requireNonNull(value, CustomFieldExpandedValue.class + ": value is missing");
+        Objects.requireNonNull(label, CustomFieldExpandedValue.class + ": label is missing");
+        return new CustomFieldExpandedValueImpl(name, value, label);
+    }
+
+    /**
+     * builds CustomFieldExpandedValue without checking for non null required values
+     */
+    public CustomFieldExpandedValue buildUnchecked() {
         return new CustomFieldExpandedValueImpl(name, value, label);
     }
 

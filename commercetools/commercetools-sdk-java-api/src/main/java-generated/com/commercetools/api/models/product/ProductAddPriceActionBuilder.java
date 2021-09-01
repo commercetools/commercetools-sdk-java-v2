@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductAddPriceActionBuilder {
+public final class ProductAddPriceActionBuilder implements Builder<ProductAddPriceAction> {
 
     @Nullable
     private Long variantId;
@@ -28,6 +30,12 @@ public final class ProductAddPriceActionBuilder {
 
     public ProductAddPriceActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public ProductAddPriceActionBuilder price(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 
@@ -61,6 +69,14 @@ public final class ProductAddPriceActionBuilder {
     }
 
     public ProductAddPriceAction build() {
+        Objects.requireNonNull(price, ProductAddPriceAction.class + ": price is missing");
+        return new ProductAddPriceActionImpl(variantId, sku, price, staged);
+    }
+
+    /**
+     * builds ProductAddPriceAction without checking for non null required values
+     */
+    public ProductAddPriceAction buildUnchecked() {
         return new ProductAddPriceActionImpl(variantId, sku, price, staged);
     }
 

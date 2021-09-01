@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeBuilder {
+public final class ProductTypeBuilder implements Builder<ProductType> {
 
     private String id;
 
@@ -55,8 +57,20 @@ public final class ProductTypeBuilder {
     }
 
     public ProductTypeBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ProductTypeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ProductTypeBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +97,24 @@ public final class ProductTypeBuilder {
     public ProductTypeBuilder attributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductTypeBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductTypeBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 
@@ -137,6 +169,20 @@ public final class ProductTypeBuilder {
     }
 
     public ProductType build() {
+        Objects.requireNonNull(id, ProductType.class + ": id is missing");
+        Objects.requireNonNull(version, ProductType.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductType.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductType.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, ProductType.class + ": name is missing");
+        Objects.requireNonNull(description, ProductType.class + ": description is missing");
+        return new ProductTypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
+            description, attributes);
+    }
+
+    /**
+     * builds ProductType without checking for non null required values
+     */
+    public ProductType buildUnchecked() {
         return new ProductTypeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             description, attributes);
     }

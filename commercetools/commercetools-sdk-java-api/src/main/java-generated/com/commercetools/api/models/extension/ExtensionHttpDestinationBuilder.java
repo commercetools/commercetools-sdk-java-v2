@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionHttpDestinationBuilder {
+public final class ExtensionHttpDestinationBuilder implements Builder<ExtensionHttpDestination> {
 
     private String url;
 
@@ -36,6 +37,14 @@ public final class ExtensionHttpDestinationBuilder {
     }
 
     public ExtensionHttpDestination build() {
+        Objects.requireNonNull(url, ExtensionHttpDestination.class + ": url is missing");
+        return new ExtensionHttpDestinationImpl(url, authentication);
+    }
+
+    /**
+     * builds ExtensionHttpDestination without checking for non null required values
+     */
+    public ExtensionHttpDestination buildUnchecked() {
         return new ExtensionHttpDestinationImpl(url, authentication);
     }
 

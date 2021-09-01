@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReturnItemBuilder {
+public final class ReturnItemBuilder implements Builder<ReturnItem> {
 
     private String id;
 
@@ -99,6 +100,21 @@ public final class ReturnItemBuilder {
     }
 
     public ReturnItem build() {
+        Objects.requireNonNull(id, ReturnItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, ReturnItem.class + ": quantity is missing");
+        Objects.requireNonNull(type, ReturnItem.class + ": type is missing");
+        Objects.requireNonNull(comment, ReturnItem.class + ": comment is missing");
+        Objects.requireNonNull(shipmentState, ReturnItem.class + ": shipmentState is missing");
+        Objects.requireNonNull(paymentState, ReturnItem.class + ": paymentState is missing");
+        Objects.requireNonNull(lastModifiedAt, ReturnItem.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(createdAt, ReturnItem.class + ": createdAt is missing");
+        return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
+    }
+
+    /**
+     * builds ReturnItem without checking for non null required values
+     */
+    public ReturnItem buildUnchecked() {
         return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
     }
 

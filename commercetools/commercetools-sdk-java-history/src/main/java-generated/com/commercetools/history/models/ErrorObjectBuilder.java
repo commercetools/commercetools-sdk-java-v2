@@ -3,10 +3,11 @@ package com.commercetools.history.models;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ErrorObjectBuilder {
+public final class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     private String code;
 
@@ -31,6 +32,15 @@ public final class ErrorObjectBuilder {
     }
 
     public ErrorObject build() {
+        Objects.requireNonNull(code, ErrorObject.class + ": code is missing");
+        Objects.requireNonNull(message, ErrorObject.class + ": message is missing");
+        return new ErrorObjectImpl(code, message);
+    }
+
+    /**
+     * builds ErrorObject without checking for non null required values
+     */
+    public ErrorObject buildUnchecked() {
         return new ErrorObjectImpl(code, message);
     }
 

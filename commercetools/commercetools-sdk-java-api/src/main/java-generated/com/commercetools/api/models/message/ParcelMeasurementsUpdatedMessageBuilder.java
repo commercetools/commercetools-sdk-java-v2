@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelMeasurementsUpdatedMessageBuilder {
+public final class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMeasurementsUpdatedMessage> {
 
     private String id;
 
@@ -61,8 +63,20 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
     }
 
     public ParcelMeasurementsUpdatedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ParcelMeasurementsUpdatedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ParcelMeasurementsUpdatedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -89,6 +103,14 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
     }
 
     public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -101,6 +123,12 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
 
     public ParcelMeasurementsUpdatedMessageBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    public ParcelMeasurementsUpdatedMessageBuilder measurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
 
@@ -167,6 +195,25 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
     }
 
     public ParcelMeasurementsUpdatedMessage build() {
+        Objects.requireNonNull(id, ParcelMeasurementsUpdatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ParcelMeasurementsUpdatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ParcelMeasurementsUpdatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ParcelMeasurementsUpdatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ParcelMeasurementsUpdatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ParcelMeasurementsUpdatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            ParcelMeasurementsUpdatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(deliveryId, ParcelMeasurementsUpdatedMessage.class + ": deliveryId is missing");
+        Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessage.class + ": parcelId is missing");
+        return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
+            measurements);
+    }
+
+    /**
+     * builds ParcelMeasurementsUpdatedMessage without checking for non null required values
+     */
+    public ParcelMeasurementsUpdatedMessage buildUnchecked() {
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
             measurements);

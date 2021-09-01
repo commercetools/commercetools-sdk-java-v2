@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantPatchBuilder {
+public final class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
 
@@ -19,8 +21,23 @@ public final class ProductVariantPatchBuilder {
     private Boolean staged;
 
     public ProductVariantPatchBuilder productVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductVariantPatchBuilder productVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
+        return this;
+    }
+
+    public ProductVariantPatchBuilder attributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.AttributesBuilder> builder) {
+        this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of())
+                .build();
         return this;
     }
 
@@ -50,6 +67,14 @@ public final class ProductVariantPatchBuilder {
     }
 
     public ProductVariantPatch build() {
+        Objects.requireNonNull(productVariant, ProductVariantPatch.class + ": productVariant is missing");
+        return new ProductVariantPatchImpl(productVariant, attributes, staged);
+    }
+
+    /**
+     * builds ProductVariantPatch without checking for non null required values
+     */
+    public ProductVariantPatch buildUnchecked() {
         return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceExistsErrorBuilder {
+public final class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError> {
 
     private String message;
 
@@ -36,6 +37,14 @@ public final class ReferenceExistsErrorBuilder {
     }
 
     public ReferenceExistsError build() {
+        Objects.requireNonNull(message, ReferenceExistsError.class + ": message is missing");
+        return new ReferenceExistsErrorImpl(message, referencedBy);
+    }
+
+    /**
+     * builds ReferenceExistsError without checking for non null required values
+     */
+    public ReferenceExistsError buildUnchecked() {
         return new ReferenceExistsErrorImpl(message, referencedBy);
     }
 

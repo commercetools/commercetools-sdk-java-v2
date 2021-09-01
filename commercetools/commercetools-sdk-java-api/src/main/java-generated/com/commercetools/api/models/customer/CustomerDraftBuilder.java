@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerDraftBuilder {
+public final class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     @Nullable
     private String customerNumber;
@@ -129,6 +131,13 @@ public final class CustomerDraftBuilder {
     }
 
     public CustomerDraftBuilder anonymousCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerDraftBuilder anonymousCart(
             @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
         this.anonymousCart = anonymousCart;
         return this;
@@ -157,6 +166,22 @@ public final class CustomerDraftBuilder {
     public CustomerDraftBuilder addresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+
+    public CustomerDraftBuilder withAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerDraftBuilder plusAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 
@@ -207,8 +232,22 @@ public final class CustomerDraftBuilder {
     }
 
     public CustomerDraftBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public CustomerDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -235,6 +274,22 @@ public final class CustomerDraftBuilder {
     public CustomerDraftBuilder stores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public CustomerDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
 
@@ -374,6 +429,18 @@ public final class CustomerDraftBuilder {
     }
 
     public CustomerDraft build() {
+        Objects.requireNonNull(email, CustomerDraft.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerDraft.class + ": password is missing");
+        return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
+            anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
+            defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
+            externalId, customerGroup, custom, locale, salutation, key, stores);
+    }
+
+    /**
+     * builds CustomerDraft without checking for non null required values
+     */
+    public CustomerDraft buildUnchecked() {
         return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
             anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,

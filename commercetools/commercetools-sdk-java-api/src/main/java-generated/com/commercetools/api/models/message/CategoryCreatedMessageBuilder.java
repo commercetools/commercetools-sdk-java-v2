@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryCreatedMessageBuilder {
+public final class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class CategoryCreatedMessageBuilder {
     }
 
     public CategoryCreatedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CategoryCreatedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CategoryCreatedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,8 +97,22 @@ public final class CategoryCreatedMessageBuilder {
     }
 
     public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public CategoryCreatedMessageBuilder category(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
 
@@ -141,6 +169,22 @@ public final class CategoryCreatedMessageBuilder {
     }
 
     public CategoryCreatedMessage build() {
+        Objects.requireNonNull(id, CategoryCreatedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CategoryCreatedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CategoryCreatedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CategoryCreatedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CategoryCreatedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CategoryCreatedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CategoryCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(category, CategoryCreatedMessage.class + ": category is missing");
+        return new CategoryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category);
+    }
+
+    /**
+     * builds CategoryCreatedMessage without checking for non null required values
+     */
+    public CategoryCreatedMessage buildUnchecked() {
         return new CategoryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category);
     }

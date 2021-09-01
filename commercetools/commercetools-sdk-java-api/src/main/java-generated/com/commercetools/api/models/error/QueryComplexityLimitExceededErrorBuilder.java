@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class QueryComplexityLimitExceededErrorBuilder {
+public final class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryComplexityLimitExceededError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class QueryComplexityLimitExceededErrorBuilder {
     }
 
     public QueryComplexityLimitExceededError build() {
+        Objects.requireNonNull(message, QueryComplexityLimitExceededError.class + ": message is missing");
+        return new QueryComplexityLimitExceededErrorImpl(message);
+    }
+
+    /**
+     * builds QueryComplexityLimitExceededError without checking for non null required values
+     */
+    public QueryComplexityLimitExceededError buildUnchecked() {
         return new QueryComplexityLimitExceededErrorImpl(message);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryUpdateBuilder {
+public final class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class TaxCategoryUpdateBuilder {
     }
 
     public TaxCategoryUpdate build() {
+        Objects.requireNonNull(version, TaxCategoryUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, TaxCategoryUpdate.class + ": actions is missing");
+        return new TaxCategoryUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds TaxCategoryUpdate without checking for non null required values
+     */
+    public TaxCategoryUpdate buildUnchecked() {
         return new TaxCategoryUpdateImpl(version, actions);
     }
 

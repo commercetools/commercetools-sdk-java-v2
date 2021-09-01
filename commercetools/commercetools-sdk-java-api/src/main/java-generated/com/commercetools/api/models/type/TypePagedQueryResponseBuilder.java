@@ -2,13 +2,15 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypePagedQueryResponseBuilder {
+public final class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class TypePagedQueryResponseBuilder {
         return this;
     }
 
+    public TypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
+        return this;
+    }
+
     public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
         this.results = results;
         return this;
@@ -73,6 +91,17 @@ public final class TypePagedQueryResponseBuilder {
     }
 
     public TypePagedQueryResponse build() {
+        Objects.requireNonNull(limit, TypePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, TypePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, TypePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, TypePagedQueryResponse.class + ": results is missing");
+        return new TypePagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds TypePagedQueryResponse without checking for non null required values
+     */
+    public TypePagedQueryResponse buildUnchecked() {
         return new TypePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

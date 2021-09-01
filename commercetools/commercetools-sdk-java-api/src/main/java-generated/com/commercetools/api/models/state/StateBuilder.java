@@ -2,13 +2,15 @@
 package com.commercetools.api.models.state;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateBuilder {
+public final class StateBuilder implements Builder<State> {
 
     private String id;
 
@@ -65,8 +67,20 @@ public final class StateBuilder {
     }
 
     public StateBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public StateBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public StateBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -85,8 +99,20 @@ public final class StateBuilder {
         return this;
     }
 
+    public StateBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public StateBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public StateBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -117,6 +143,22 @@ public final class StateBuilder {
 
     public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
+        return this;
+    }
+
+    public StateBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public StateBuilder plusTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
     }
 
@@ -189,6 +231,22 @@ public final class StateBuilder {
     }
 
     public State build() {
+        Objects.requireNonNull(id, State.class + ": id is missing");
+        Objects.requireNonNull(version, State.class + ": version is missing");
+        Objects.requireNonNull(createdAt, State.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, State.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, State.class + ": key is missing");
+        Objects.requireNonNull(type, State.class + ": type is missing");
+        Objects.requireNonNull(initial, State.class + ": initial is missing");
+        Objects.requireNonNull(builtIn, State.class + ": builtIn is missing");
+        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,
+            description, initial, builtIn, roles, transitions);
+    }
+
+    /**
+     * builds State without checking for non null required values
+     */
+    public State buildUnchecked() {
         return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,
             description, initial, builtIn, roles, transitions);
     }

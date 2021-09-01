@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountDraftBuilder {
+public final class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -32,6 +34,12 @@ public final class ProductDiscountDraftBuilder {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    public ProductDiscountDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
@@ -39,6 +47,12 @@ public final class ProductDiscountDraftBuilder {
 
     public ProductDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public ProductDiscountDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -120,6 +134,19 @@ public final class ProductDiscountDraftBuilder {
     }
 
     public ProductDiscountDraft build() {
+        Objects.requireNonNull(name, ProductDiscountDraft.class + ": name is missing");
+        Objects.requireNonNull(value, ProductDiscountDraft.class + ": value is missing");
+        Objects.requireNonNull(predicate, ProductDiscountDraft.class + ": predicate is missing");
+        Objects.requireNonNull(sortOrder, ProductDiscountDraft.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, ProductDiscountDraft.class + ": isActive is missing");
+        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,
+            validUntil);
+    }
+
+    /**
+     * builds ProductDiscountDraft without checking for non null required values
+     */
+    public ProductDiscountDraft buildUnchecked() {
         return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,
             validUntil);
     }

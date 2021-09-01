@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerEmailVerifyBuilder {
+public final class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> {
 
     @Nullable
     private Long version;
@@ -35,6 +36,14 @@ public final class CustomerEmailVerifyBuilder {
     }
 
     public CustomerEmailVerify build() {
+        Objects.requireNonNull(tokenValue, CustomerEmailVerify.class + ": tokenValue is missing");
+        return new CustomerEmailVerifyImpl(version, tokenValue);
+    }
+
+    /**
+     * builds CustomerEmailVerify without checking for non null required values
+     */
+    public CustomerEmailVerify buildUnchecked() {
         return new CustomerEmailVerifyImpl(version, tokenValue);
     }
 

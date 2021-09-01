@@ -2,11 +2,13 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneRateBuilder {
+public final class ZoneRateBuilder implements Builder<ZoneRate> {
 
     private com.commercetools.api.models.zone.ZoneReference zone;
 
@@ -20,6 +22,24 @@ public final class ZoneRateBuilder {
     public ZoneRateBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
+        return this;
+    }
+
+    public ZoneRateBuilder withShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        this.shippingRates = new ArrayList<>();
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneRateBuilder plusShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        if (this.shippingRates == null) {
+            this.shippingRates = new ArrayList<>();
+        }
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
     }
 
@@ -38,6 +58,15 @@ public final class ZoneRateBuilder {
     }
 
     public ZoneRate build() {
+        Objects.requireNonNull(zone, ZoneRate.class + ": zone is missing");
+        Objects.requireNonNull(shippingRates, ZoneRate.class + ": shippingRates is missing");
+        return new ZoneRateImpl(zone, shippingRates);
+    }
+
+    /**
+     * builds ZoneRate without checking for non null required values
+     */
+    public ZoneRate buildUnchecked() {
         return new ZoneRateImpl(zone, shippingRates);
     }
 

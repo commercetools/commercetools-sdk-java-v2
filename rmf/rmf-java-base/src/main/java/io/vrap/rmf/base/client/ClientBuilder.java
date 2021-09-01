@@ -14,8 +14,9 @@ import io.vrap.rmf.base.client.oauth2.*;
 
 import org.apache.commons.lang3.SystemUtils;
 
-public class ClientBuilder {
+public class ClientBuilder implements Builder<ApiHttpClient> {
     public static final String COMMERCETOOLS = "commercetools";
+    static final String userAgent = "commercetools-sdk-java-v2/";
 
     private URI apiBaseUrl;
     private Supplier<ErrorMiddleware> errorMiddleware;
@@ -307,7 +308,6 @@ public class ClientBuilder {
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;
         String sdkVersion = BuildInfo.VERSION;
-        return "commercetools-java-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch
-                + ")";
+        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
     }
 }

@@ -12,8 +12,11 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
-*  <p>Retrieves the ImportOperation of a given ID.</p>
+*  <p>Retrieves the import operation with the given id.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsByIdGet extends
@@ -91,6 +94,27 @@ public class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperation
 
     public void setId(final String id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsByIdGet that = (ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsByIdGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkKey, that.importSinkKey)
+                .append(id, that.id)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).append(id).toHashCode();
     }
 
     @Override

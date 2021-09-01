@@ -3,10 +3,11 @@ package com.commercetools.api.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class GeoJsonPointBuilder {
+public final class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     private java.util.List<Double> coordinates;
 
@@ -25,6 +26,14 @@ public final class GeoJsonPointBuilder {
     }
 
     public GeoJsonPoint build() {
+        Objects.requireNonNull(coordinates, GeoJsonPoint.class + ": coordinates is missing");
+        return new GeoJsonPointImpl(coordinates);
+    }
+
+    /**
+     * builds GeoJsonPoint without checking for non null required values
+     */
+    public GeoJsonPoint buildUnchecked() {
         return new GeoJsonPointImpl(coordinates);
     }
 

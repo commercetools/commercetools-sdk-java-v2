@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeQuantityChangeBuilder {
+public final class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange> {
 
     private String change;
 
@@ -20,8 +22,23 @@ public final class ChangeQuantityChangeBuilder {
     }
 
     public ChangeQuantityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChangeQuantityChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeQuantityChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -44,6 +61,16 @@ public final class ChangeQuantityChangeBuilder {
     }
 
     public ChangeQuantityChange build() {
+        Objects.requireNonNull(change, ChangeQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, ChangeQuantityChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeQuantityChange.class + ": previousValue is missing");
+        return new ChangeQuantityChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeQuantityChange without checking for non null required values
+     */
+    public ChangeQuantityChange buildUnchecked() {
         return new ChangeQuantityChangeImpl(change, nextValue, previousValue);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordBuilder {
+public final class RecordBuilder implements Builder<Record> {
 
     private Integer version;
 
@@ -43,6 +45,12 @@ public final class RecordBuilder {
         return this;
     }
 
+    public RecordBuilder modifiedBy(
+            Function<com.commercetools.history.models.ModifiedByBuilder, com.commercetools.history.models.ModifiedByBuilder> builder) {
+        this.modifiedBy = builder.apply(com.commercetools.history.models.ModifiedByBuilder.of()).build();
+        return this;
+    }
+
     public RecordBuilder modifiedBy(final com.commercetools.history.models.ModifiedBy modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -70,6 +78,12 @@ public final class RecordBuilder {
 
     public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
+        return this;
+    }
+
+    public RecordBuilder resource(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -124,6 +138,24 @@ public final class RecordBuilder {
     }
 
     public Record build() {
+        Objects.requireNonNull(version, Record.class + ": version is missing");
+        Objects.requireNonNull(previousVersion, Record.class + ": previousVersion is missing");
+        Objects.requireNonNull(type, Record.class + ": type is missing");
+        Objects.requireNonNull(modifiedBy, Record.class + ": modifiedBy is missing");
+        Objects.requireNonNull(modifiedAt, Record.class + ": modifiedAt is missing");
+        Objects.requireNonNull(label, Record.class + ": label is missing");
+        Objects.requireNonNull(previousLabel, Record.class + ": previousLabel is missing");
+        Objects.requireNonNull(changes, Record.class + ": changes is missing");
+        Objects.requireNonNull(resource, Record.class + ": resource is missing");
+        Objects.requireNonNull(withoutChanges, Record.class + ": withoutChanges is missing");
+        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
+            resource, withoutChanges);
+    }
+
+    /**
+     * builds Record without checking for non null required values
+     */
+    public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
             resource, withoutChanges);
     }

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetCustomFieldActionBuilder {
+public final class StagedOrderSetCustomFieldActionBuilder implements Builder<StagedOrderSetCustomFieldAction> {
 
     private String name;
 
@@ -35,6 +36,14 @@ public final class StagedOrderSetCustomFieldActionBuilder {
     }
 
     public StagedOrderSetCustomFieldAction build() {
+        Objects.requireNonNull(name, StagedOrderSetCustomFieldAction.class + ": name is missing");
+        return new StagedOrderSetCustomFieldActionImpl(name, value);
+    }
+
+    /**
+     * builds StagedOrderSetCustomFieldAction without checking for non null required values
+     */
+    public StagedOrderSetCustomFieldAction buildUnchecked() {
         return new StagedOrderSetCustomFieldActionImpl(name, value);
     }
 

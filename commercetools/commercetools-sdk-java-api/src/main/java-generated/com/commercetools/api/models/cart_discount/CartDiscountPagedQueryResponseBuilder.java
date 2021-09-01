@@ -2,13 +2,15 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountPagedQueryResponseBuilder {
+public final class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscountPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class CartDiscountPagedQueryResponseBuilder {
         return this;
     }
 
+    public CartDiscountPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build());
+        return this;
+    }
+
+    public CartDiscountPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build());
+        return this;
+    }
+
     public CartDiscountPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class CartDiscountPagedQueryResponseBuilder {
     }
 
     public CartDiscountPagedQueryResponse build() {
+        Objects.requireNonNull(limit, CartDiscountPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CartDiscountPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CartDiscountPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CartDiscountPagedQueryResponse.class + ": results is missing");
+        return new CartDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds CartDiscountPagedQueryResponse without checking for non null required values
+     */
+    public CartDiscountPagedQueryResponse buildUnchecked() {
         return new CartDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

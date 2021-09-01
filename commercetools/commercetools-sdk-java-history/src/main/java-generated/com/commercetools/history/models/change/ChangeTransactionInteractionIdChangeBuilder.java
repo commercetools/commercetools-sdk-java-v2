@@ -2,11 +2,14 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTransactionInteractionIdChangeBuilder {
+public final class ChangeTransactionInteractionIdChangeBuilder
+        implements Builder<ChangeTransactionInteractionIdChange> {
 
     private String change;
 
@@ -18,6 +21,14 @@ public final class ChangeTransactionInteractionIdChangeBuilder {
 
     public ChangeTransactionInteractionIdChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeTransactionInteractionIdChangeBuilder transaction(
+            Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
+        this.transaction = builder
+                .apply(com.commercetools.history.models.change_value.TransactionChangeValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -54,6 +65,18 @@ public final class ChangeTransactionInteractionIdChangeBuilder {
     }
 
     public ChangeTransactionInteractionIdChange build() {
+        Objects.requireNonNull(change, ChangeTransactionInteractionIdChange.class + ": change is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionInteractionIdChange.class + ": transaction is missing");
+        Objects.requireNonNull(nextValue, ChangeTransactionInteractionIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue,
+            ChangeTransactionInteractionIdChange.class + ": previousValue is missing");
+        return new ChangeTransactionInteractionIdChangeImpl(change, transaction, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeTransactionInteractionIdChange without checking for non null required values
+     */
+    public ChangeTransactionInteractionIdChange buildUnchecked() {
         return new ChangeTransactionInteractionIdChangeImpl(change, transaction, nextValue, previousValue);
     }
 

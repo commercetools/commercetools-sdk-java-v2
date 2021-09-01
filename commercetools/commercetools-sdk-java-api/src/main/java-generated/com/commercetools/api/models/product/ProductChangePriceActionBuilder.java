@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductChangePriceActionBuilder {
+public final class ProductChangePriceActionBuilder implements Builder<ProductChangePriceAction> {
 
     private String priceId;
 
@@ -19,6 +21,12 @@ public final class ProductChangePriceActionBuilder {
 
     public ProductChangePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public ProductChangePriceActionBuilder price(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 
@@ -46,6 +54,15 @@ public final class ProductChangePriceActionBuilder {
     }
 
     public ProductChangePriceAction build() {
+        Objects.requireNonNull(priceId, ProductChangePriceAction.class + ": priceId is missing");
+        Objects.requireNonNull(price, ProductChangePriceAction.class + ": price is missing");
+        return new ProductChangePriceActionImpl(priceId, price, staged);
+    }
+
+    /**
+     * builds ProductChangePriceAction without checking for non null required values
+     */
+    public ProductChangePriceAction buildUnchecked() {
         return new ProductChangePriceActionImpl(priceId, price, staged);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeFieldDefinitionOrderChangeBuilder {
+public final class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFieldDefinitionOrderChange> {
 
     private String change;
 
@@ -25,6 +27,24 @@ public final class ChangeFieldDefinitionOrderChangeBuilder {
         return this;
     }
 
+    public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue) {
         this.previousValue = previousValue;
@@ -34,6 +54,24 @@ public final class ChangeFieldDefinitionOrderChangeBuilder {
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
     }
 
@@ -56,6 +94,16 @@ public final class ChangeFieldDefinitionOrderChangeBuilder {
     }
 
     public ChangeFieldDefinitionOrderChange build() {
+        Objects.requireNonNull(change, ChangeFieldDefinitionOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeFieldDefinitionOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeFieldDefinitionOrderChange.class + ": nextValue is missing");
+        return new ChangeFieldDefinitionOrderChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeFieldDefinitionOrderChange without checking for non null required values
+     */
+    public ChangeFieldDefinitionOrderChange buildUnchecked() {
         return new ChangeFieldDefinitionOrderChangeImpl(change, previousValue, nextValue);
     }
 

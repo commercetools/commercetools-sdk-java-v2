@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderExcerptBuilder {
+public final class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     private com.commercetools.api.models.common.TypedMoney totalPrice;
 
@@ -19,6 +21,12 @@ public final class OrderExcerptBuilder {
 
     public OrderExcerptBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
+        return this;
+    }
+
+    public OrderExcerptBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
         return this;
     }
 
@@ -46,6 +54,15 @@ public final class OrderExcerptBuilder {
     }
 
     public OrderExcerpt build() {
+        Objects.requireNonNull(totalPrice, OrderExcerpt.class + ": totalPrice is missing");
+        Objects.requireNonNull(version, OrderExcerpt.class + ": version is missing");
+        return new OrderExcerptImpl(totalPrice, taxedPrice, version);
+    }
+
+    /**
+     * builds OrderExcerpt without checking for non null required values
+     */
+    public OrderExcerpt buildUnchecked() {
         return new OrderExcerptImpl(totalPrice, taxedPrice, version);
     }
 

@@ -12,9 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Delete MyPayment by key</p>
-*/
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyMePaymentsKeyByKeyDelete
         extends ApiMethod<ByProjectKeyMePaymentsKeyByKeyDelete, com.commercetools.api.models.me.MyPayment>
@@ -87,20 +87,50 @@ public class ByProjectKeyMePaymentsKeyByKeyDelete
         this.key = key;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyMePaymentsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyMePaymentsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyMePaymentsKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyMePaymentsKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyMePaymentsKeyByKeyDelete that = (ByProjectKeyMePaymentsKeyByKeyDelete) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(key, that.key).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(key).toHashCode();
     }
 
     @Override

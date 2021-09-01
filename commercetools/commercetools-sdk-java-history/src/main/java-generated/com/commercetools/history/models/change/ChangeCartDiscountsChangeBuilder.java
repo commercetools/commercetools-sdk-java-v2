@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeCartDiscountsChangeBuilder {
+public final class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDiscountsChange> {
 
     private String change;
 
@@ -25,6 +27,22 @@ public final class ChangeCartDiscountsChangeBuilder {
         return this;
     }
 
+    public ChangeCartDiscountsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeCartDiscountsChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
     public ChangeCartDiscountsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
@@ -34,6 +52,22 @@ public final class ChangeCartDiscountsChangeBuilder {
     public ChangeCartDiscountsChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public ChangeCartDiscountsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeCartDiscountsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -56,6 +90,16 @@ public final class ChangeCartDiscountsChangeBuilder {
     }
 
     public ChangeCartDiscountsChange build() {
+        Objects.requireNonNull(change, ChangeCartDiscountsChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeCartDiscountsChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeCartDiscountsChange.class + ": nextValue is missing");
+        return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeCartDiscountsChange without checking for non null required values
+     */
+    public ChangeCartDiscountsChange buildUnchecked() {
         return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StorePagedQueryResponseBuilder {
+public final class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class StorePagedQueryResponseBuilder {
         return this;
     }
 
+    public StorePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
+        return this;
+    }
+
+    public StorePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
+        return this;
+    }
+
     public StorePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.store.Store> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class StorePagedQueryResponseBuilder {
     }
 
     public StorePagedQueryResponse build() {
+        Objects.requireNonNull(limit, StorePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, StorePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, StorePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, StorePagedQueryResponse.class + ": results is missing");
+        return new StorePagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds StorePagedQueryResponse without checking for non null required values
+     */
+    public StorePagedQueryResponse buildUnchecked() {
         return new StorePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TrackingDataBuilder {
+public final class TrackingDataBuilder implements Builder<TrackingData> {
 
     private String trackingId;
 
@@ -64,6 +65,18 @@ public final class TrackingDataBuilder {
     }
 
     public TrackingData build() {
+        Objects.requireNonNull(trackingId, TrackingData.class + ": trackingId is missing");
+        Objects.requireNonNull(carrier, TrackingData.class + ": carrier is missing");
+        Objects.requireNonNull(provider, TrackingData.class + ": provider is missing");
+        Objects.requireNonNull(providerTransaction, TrackingData.class + ": providerTransaction is missing");
+        Objects.requireNonNull(isReturn, TrackingData.class + ": isReturn is missing");
+        return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);
+    }
+
+    /**
+     * builds TrackingData without checking for non null required values
+     */
+    public TrackingData buildUnchecked() {
         return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);
     }
 

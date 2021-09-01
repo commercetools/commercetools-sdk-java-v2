@@ -2,13 +2,16 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetCustomLineItemTaxRateActionBuilder {
+public final class StagedOrderSetCustomLineItemTaxRateActionBuilder
+        implements Builder<StagedOrderSetCustomLineItemTaxRateAction> {
 
     private String customLineItemId;
 
@@ -17,6 +20,13 @@ public final class StagedOrderSetCustomLineItemTaxRateActionBuilder {
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    public StagedOrderSetCustomLineItemTaxRateActionBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,6 +46,15 @@ public final class StagedOrderSetCustomLineItemTaxRateActionBuilder {
     }
 
     public StagedOrderSetCustomLineItemTaxRateAction build() {
+        Objects.requireNonNull(customLineItemId,
+            StagedOrderSetCustomLineItemTaxRateAction.class + ": customLineItemId is missing");
+        return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
+    }
+
+    /**
+     * builds StagedOrderSetCustomLineItemTaxRateAction without checking for non null required values
+     */
+    public StagedOrderSetCustomLineItemTaxRateAction buildUnchecked() {
         return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
     }
 

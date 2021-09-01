@@ -2,11 +2,14 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeChangeLocalizedEnumValueLabelActionBuilder {
+public final class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
+        implements Builder<ProductTypeChangeLocalizedEnumValueLabelAction> {
 
     private String attributeName;
 
@@ -14,6 +17,13 @@ public final class ProductTypeChangeLocalizedEnumValueLabelActionBuilder {
 
     public ProductTypeChangeLocalizedEnumValueLabelActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -32,6 +42,17 @@ public final class ProductTypeChangeLocalizedEnumValueLabelActionBuilder {
     }
 
     public ProductTypeChangeLocalizedEnumValueLabelAction build() {
+        Objects.requireNonNull(attributeName,
+            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newValue,
+            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": newValue is missing");
+        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);
+    }
+
+    /**
+     * builds ProductTypeChangeLocalizedEnumValueLabelAction without checking for non null required values
+     */
+    public ProductTypeChangeLocalizedEnumValueLabelAction buildUnchecked() {
         return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);
     }
 

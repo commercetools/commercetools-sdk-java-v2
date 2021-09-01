@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartSetCustomFieldActionBuilder {
+public final class MyCartSetCustomFieldActionBuilder implements Builder<MyCartSetCustomFieldAction> {
 
     private String name;
 
@@ -35,6 +36,14 @@ public final class MyCartSetCustomFieldActionBuilder {
     }
 
     public MyCartSetCustomFieldAction build() {
+        Objects.requireNonNull(name, MyCartSetCustomFieldAction.class + ": name is missing");
+        return new MyCartSetCustomFieldActionImpl(name, value);
+    }
+
+    /**
+     * builds MyCartSetCustomFieldAction without checking for non null required values
+     */
+    public MyCartSetCustomFieldAction buildUnchecked() {
         return new MyCartSetCustomFieldActionImpl(name, value);
     }
 

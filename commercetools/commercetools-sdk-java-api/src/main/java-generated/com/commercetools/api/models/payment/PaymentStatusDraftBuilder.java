@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentStatusDraftBuilder {
+public final class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     @Nullable
     private String interfaceCode;
@@ -26,6 +28,12 @@ public final class PaymentStatusDraftBuilder {
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
+        return this;
+    }
+
+    public PaymentStatusDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 
@@ -51,6 +59,13 @@ public final class PaymentStatusDraftBuilder {
     }
 
     public PaymentStatusDraft build() {
+        return new PaymentStatusDraftImpl(interfaceCode, interfaceText, state);
+    }
+
+    /**
+     * builds PaymentStatusDraft without checking for non null required values
+     */
+    public PaymentStatusDraft buildUnchecked() {
         return new PaymentStatusDraftImpl(interfaceCode, interfaceText, state);
     }
 

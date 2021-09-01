@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentTransactionAddedMessageBuilder {
+public final class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTransactionAddedMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class PaymentTransactionAddedMessageBuilder {
     }
 
     public PaymentTransactionAddedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public PaymentTransactionAddedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public PaymentTransactionAddedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -84,8 +98,22 @@ public final class PaymentTransactionAddedMessageBuilder {
     }
 
     public PaymentTransactionAddedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PaymentTransactionAddedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public PaymentTransactionAddedMessageBuilder transaction(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build();
         return this;
     }
 
@@ -143,6 +171,22 @@ public final class PaymentTransactionAddedMessageBuilder {
     }
 
     public PaymentTransactionAddedMessage build() {
+        Objects.requireNonNull(id, PaymentTransactionAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, PaymentTransactionAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, PaymentTransactionAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, PaymentTransactionAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, PaymentTransactionAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, PaymentTransactionAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, PaymentTransactionAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(transaction, PaymentTransactionAddedMessage.class + ": transaction is missing");
+        return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transaction);
+    }
+
+    /**
+     * builds PaymentTransactionAddedMessage without checking for non null required values
+     */
+    public PaymentTransactionAddedMessage buildUnchecked() {
         return new PaymentTransactionAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transaction);
     }

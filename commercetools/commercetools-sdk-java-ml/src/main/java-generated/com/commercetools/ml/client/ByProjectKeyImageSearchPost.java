@@ -15,6 +15,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Accepts an image file and returns similar products from product catalogue.</p>
 */
@@ -93,20 +96,50 @@ public class ByProjectKeyImageSearchPost
         this.projectKey = projectKey;
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyImageSearchPost withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyImageSearchPost addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyImageSearchPost withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyImageSearchPost addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyImageSearchPost that = (ByProjectKeyImageSearchPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(file, that.file).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(file).toHashCode();
     }
 
     @Override

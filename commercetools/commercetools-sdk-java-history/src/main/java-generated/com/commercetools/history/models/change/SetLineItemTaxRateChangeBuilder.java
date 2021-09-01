@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemTaxRateChangeBuilder {
+public final class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRateChange> {
 
     private String change;
 
@@ -26,6 +28,12 @@ public final class SetLineItemTaxRateChangeBuilder {
     }
 
     public SetLineItemTaxRateChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTaxRateChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -41,8 +49,20 @@ public final class SetLineItemTaxRateChangeBuilder {
         return this;
     }
 
+    public SetLineItemTaxRateChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
     public SetLineItemTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemTaxRateChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -77,6 +97,19 @@ public final class SetLineItemTaxRateChangeBuilder {
     }
 
     public SetLineItemTaxRateChange build() {
+        Objects.requireNonNull(change, SetLineItemTaxRateChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemTaxRateChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemTaxRateChange.class + ": variant is missing");
+        Objects.requireNonNull(taxMode, SetLineItemTaxRateChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetLineItemTaxRateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemTaxRateChange.class + ": previousValue is missing");
+        return new SetLineItemTaxRateChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemTaxRateChange without checking for non null required values
+     */
+    public SetLineItemTaxRateChange buildUnchecked() {
         return new SetLineItemTaxRateChangeImpl(change, lineItem, variant, taxMode, nextValue, previousValue);
     }
 

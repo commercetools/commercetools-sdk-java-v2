@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetAssetDescriptionActionBuilder {
+public final class ProductSetAssetDescriptionActionBuilder implements Builder<ProductSetAssetDescriptionAction> {
 
     @Nullable
     private Long variantId;
@@ -54,6 +56,12 @@ public final class ProductSetAssetDescriptionActionBuilder {
     }
 
     public ProductSetAssetDescriptionActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSetAssetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
@@ -90,6 +98,13 @@ public final class ProductSetAssetDescriptionActionBuilder {
     }
 
     public ProductSetAssetDescriptionAction build() {
+        return new ProductSetAssetDescriptionActionImpl(variantId, sku, staged, assetId, assetKey, description);
+    }
+
+    /**
+     * builds ProductSetAssetDescriptionAction without checking for non null required values
+     */
+    public ProductSetAssetDescriptionAction buildUnchecked() {
         return new ProductSetAssetDescriptionActionImpl(variantId, sku, staged, assetId, assetKey, description);
     }
 

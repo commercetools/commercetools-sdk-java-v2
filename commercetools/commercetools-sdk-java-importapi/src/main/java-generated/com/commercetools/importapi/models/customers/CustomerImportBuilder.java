@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.customers;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerImportBuilder {
+public final class CustomerImportBuilder implements Builder<CustomerImport> {
 
     private String key;
 
@@ -101,6 +103,22 @@ public final class CustomerImportBuilder {
         return this;
     }
 
+    public CustomerImportBuilder withStores(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerImportBuilder plusStores(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
     public CustomerImportBuilder stores(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores) {
         this.stores = stores;
@@ -158,6 +176,14 @@ public final class CustomerImportBuilder {
     }
 
     public CustomerImportBuilder customerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
@@ -166,6 +192,24 @@ public final class CustomerImportBuilder {
     public CustomerImportBuilder addresses(
             final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+
+    public CustomerImportBuilder withAddresses(
+            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses
+                .add(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerImportBuilder plusAddresses(
+            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses
+                .add(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()).build());
         return this;
     }
 
@@ -207,6 +251,12 @@ public final class CustomerImportBuilder {
 
     public CustomerImportBuilder locale(@Nullable final String locale) {
         this.locale = locale;
+        return this;
+    }
+
+    public CustomerImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 
@@ -327,6 +377,19 @@ public final class CustomerImportBuilder {
     }
 
     public CustomerImport build() {
+        Objects.requireNonNull(key, CustomerImport.class + ": key is missing");
+        Objects.requireNonNull(email, CustomerImport.class + ": email is missing");
+        Objects.requireNonNull(password, CustomerImport.class + ": password is missing");
+        Objects.requireNonNull(addresses, CustomerImport.class + ": addresses is missing");
+        return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
+            title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
+            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);
+    }
+
+    /**
+     * builds CustomerImport without checking for non null required values
+     */
+    public CustomerImport buildUnchecked() {
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
             defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);

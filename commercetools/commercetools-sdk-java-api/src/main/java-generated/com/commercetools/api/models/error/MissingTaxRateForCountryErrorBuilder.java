@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingTaxRateForCountryErrorBuilder {
+public final class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxRateForCountryError> {
 
     private String message;
 
@@ -59,6 +60,15 @@ public final class MissingTaxRateForCountryErrorBuilder {
     }
 
     public MissingTaxRateForCountryError build() {
+        Objects.requireNonNull(message, MissingTaxRateForCountryError.class + ": message is missing");
+        Objects.requireNonNull(taxCategoryId, MissingTaxRateForCountryError.class + ": taxCategoryId is missing");
+        return new MissingTaxRateForCountryErrorImpl(message, taxCategoryId, country, state);
+    }
+
+    /**
+     * builds MissingTaxRateForCountryError without checking for non null required values
+     */
+    public MissingTaxRateForCountryError buildUnchecked() {
         return new MissingTaxRateForCountryErrorImpl(message, taxCategoryId, country, state);
     }
 

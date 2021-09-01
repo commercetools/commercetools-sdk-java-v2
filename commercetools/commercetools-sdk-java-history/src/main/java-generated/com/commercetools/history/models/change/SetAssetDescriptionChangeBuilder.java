@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetAssetDescriptionChangeBuilder {
+public final class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescriptionChange> {
 
     private String change;
 
@@ -22,14 +24,32 @@ public final class SetAssetDescriptionChangeBuilder {
     }
 
     public SetAssetDescriptionChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
+        return this;
+    }
+
+    public SetAssetDescriptionChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
 
     public SetAssetDescriptionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetAssetDescriptionChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetAssetDescriptionChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -56,6 +76,17 @@ public final class SetAssetDescriptionChangeBuilder {
     }
 
     public SetAssetDescriptionChange build() {
+        Objects.requireNonNull(change, SetAssetDescriptionChange.class + ": change is missing");
+        Objects.requireNonNull(asset, SetAssetDescriptionChange.class + ": asset is missing");
+        Objects.requireNonNull(nextValue, SetAssetDescriptionChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetAssetDescriptionChange.class + ": previousValue is missing");
+        return new SetAssetDescriptionChangeImpl(change, asset, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetAssetDescriptionChange without checking for non null required values
+     */
+    public SetAssetDescriptionChange buildUnchecked() {
         return new SetAssetDescriptionChangeImpl(change, asset, nextValue, previousValue);
     }
 

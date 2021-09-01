@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderFromCartDraftBuilder {
+public final class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     @Deprecated
     @Nullable
@@ -37,6 +39,12 @@ public final class OrderFromCartDraftBuilder {
     @Deprecated
     public OrderFromCartDraftBuilder id(@Nullable final String id) {
         this.id = id;
+        return this;
+    }
+
+    public OrderFromCartDraftBuilder cart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();
         return this;
     }
 
@@ -121,6 +129,15 @@ public final class OrderFromCartDraftBuilder {
     }
 
     public OrderFromCartDraft build() {
+        Objects.requireNonNull(version, OrderFromCartDraft.class + ": version is missing");
+        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
+            state);
+    }
+
+    /**
+     * builds OrderFromCartDraft without checking for non null required values
+     */
+    public OrderFromCartDraft buildUnchecked() {
         return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
             state);
     }

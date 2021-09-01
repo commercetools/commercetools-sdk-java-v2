@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingImagesTaskStatusBuilder {
+public final class MissingImagesTaskStatusBuilder implements Builder<MissingImagesTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
@@ -21,6 +23,13 @@ public final class MissingImagesTaskStatusBuilder {
 
     public MissingImagesTaskStatusBuilder expires(final java.time.ZonedDateTime expires) {
         this.expires = expires;
+        return this;
+    }
+
+    public MissingImagesTaskStatusBuilder result(
+            Function<com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder, com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder> builder) {
+        this.result = builder.apply(com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder.of())
+                .build();
         return this;
     }
 
@@ -43,6 +52,16 @@ public final class MissingImagesTaskStatusBuilder {
     }
 
     public MissingImagesTaskStatus build() {
+        Objects.requireNonNull(state, MissingImagesTaskStatus.class + ": state is missing");
+        Objects.requireNonNull(expires, MissingImagesTaskStatus.class + ": expires is missing");
+        Objects.requireNonNull(result, MissingImagesTaskStatus.class + ": result is missing");
+        return new MissingImagesTaskStatusImpl(state, expires, result);
+    }
+
+    /**
+     * builds MissingImagesTaskStatus without checking for non null required values
+     */
+    public MissingImagesTaskStatus buildUnchecked() {
         return new MissingImagesTaskStatusImpl(state, expires, result);
     }
 

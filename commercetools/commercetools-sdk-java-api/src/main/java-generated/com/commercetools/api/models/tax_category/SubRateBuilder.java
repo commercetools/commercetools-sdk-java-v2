@@ -3,10 +3,11 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubRateBuilder {
+public final class SubRateBuilder implements Builder<SubRate> {
 
     private String name;
 
@@ -31,6 +32,15 @@ public final class SubRateBuilder {
     }
 
     public SubRate build() {
+        Objects.requireNonNull(name, SubRate.class + ": name is missing");
+        Objects.requireNonNull(amount, SubRate.class + ": amount is missing");
+        return new SubRateImpl(name, amount);
+    }
+
+    /**
+     * builds SubRate without checking for non null required values
+     */
+    public SubRate buildUnchecked() {
         return new SubRateImpl(name, amount);
     }
 

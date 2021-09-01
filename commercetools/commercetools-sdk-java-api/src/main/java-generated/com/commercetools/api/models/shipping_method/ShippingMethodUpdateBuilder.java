@@ -3,10 +3,11 @@ package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodUpdateBuilder {
+public final class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate> {
 
     private Long version;
 
@@ -38,6 +39,15 @@ public final class ShippingMethodUpdateBuilder {
     }
 
     public ShippingMethodUpdate build() {
+        Objects.requireNonNull(version, ShippingMethodUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ShippingMethodUpdate.class + ": actions is missing");
+        return new ShippingMethodUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds ShippingMethodUpdate without checking for non null required values
+     */
+    public ShippingMethodUpdate buildUnchecked() {
         return new ShippingMethodUpdateImpl(version, actions);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetBillingAddressChangeBuilder {
+public final class SetBillingAddressChangeBuilder implements Builder<SetBillingAddressChange> {
 
     private String change;
 
@@ -19,8 +21,20 @@ public final class SetBillingAddressChangeBuilder {
         return this;
     }
 
+    public SetBillingAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
     public SetBillingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetBillingAddressChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class SetBillingAddressChangeBuilder {
     }
 
     public SetBillingAddressChange build() {
+        Objects.requireNonNull(change, SetBillingAddressChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetBillingAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetBillingAddressChange.class + ": previousValue is missing");
+        return new SetBillingAddressChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetBillingAddressChange without checking for non null required values
+     */
+    public SetBillingAddressChange buildUnchecked() {
         return new SetBillingAddressChangeImpl(change, nextValue, previousValue);
     }
 

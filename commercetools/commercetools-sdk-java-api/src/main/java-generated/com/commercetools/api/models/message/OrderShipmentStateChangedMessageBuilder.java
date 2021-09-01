@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShipmentStateChangedMessageBuilder {
+public final class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShipmentStateChangedMessage> {
 
     private String id;
 
@@ -59,8 +61,20 @@ public final class OrderShipmentStateChangedMessageBuilder {
     }
 
     public OrderShipmentStateChangedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderShipmentStateChangedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderShipmentStateChangedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +97,14 @@ public final class OrderShipmentStateChangedMessageBuilder {
 
     public OrderShipmentStateChangedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public OrderShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -157,6 +179,24 @@ public final class OrderShipmentStateChangedMessageBuilder {
     }
 
     public OrderShipmentStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderShipmentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderShipmentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderShipmentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderShipmentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderShipmentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderShipmentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            OrderShipmentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessage.class + ": shipmentState is missing");
+        return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
+            oldShipmentState);
+    }
+
+    /**
+     * builds OrderShipmentStateChangedMessage without checking for non null required values
+     */
+    public OrderShipmentStateChangedMessage buildUnchecked() {
         return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
             oldShipmentState);

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodReferenceBuilder {
+public final class ShippingMethodReferenceBuilder implements Builder<ShippingMethodReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class ShippingMethodReferenceBuilder {
 
     public ShippingMethodReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ShippingMethodReferenceBuilder obj(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build();
         return this;
     }
 
@@ -36,6 +44,14 @@ public final class ShippingMethodReferenceBuilder {
     }
 
     public ShippingMethodReference build() {
+        Objects.requireNonNull(id, ShippingMethodReference.class + ": id is missing");
+        return new ShippingMethodReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ShippingMethodReference without checking for non null required values
+     */
+    public ShippingMethodReference buildUnchecked() {
         return new ShippingMethodReferenceImpl(id, obj);
     }
 

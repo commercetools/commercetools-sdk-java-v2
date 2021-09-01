@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantImportBuilder {
+public final class ProductVariantImportBuilder implements Builder<ProductVariantImport> {
 
     private String key;
 
@@ -64,6 +66,22 @@ public final class ProductVariantImportBuilder {
         return this;
     }
 
+    public ProductVariantImportBuilder withImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportBuilder plusImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
     public ProductVariantImportBuilder images(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
@@ -76,6 +94,22 @@ public final class ProductVariantImportBuilder {
         return this;
     }
 
+    public ProductVariantImportBuilder withAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportBuilder plusAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+        return this;
+    }
+
     public ProductVariantImportBuilder assets(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
         this.assets = assets;
@@ -84,6 +118,12 @@ public final class ProductVariantImportBuilder {
 
     public ProductVariantImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
+        return this;
+    }
+
+    public ProductVariantImportBuilder product(
+            Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -131,6 +171,16 @@ public final class ProductVariantImportBuilder {
     }
 
     public ProductVariantImport build() {
+        Objects.requireNonNull(key, ProductVariantImport.class + ": key is missing");
+        Objects.requireNonNull(isMasterVariant, ProductVariantImport.class + ": isMasterVariant is missing");
+        Objects.requireNonNull(product, ProductVariantImport.class + ": product is missing");
+        return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
+    }
+
+    /**
+     * builds ProductVariantImport without checking for non null required values
+     */
+    public ProductVariantImport buildUnchecked() {
         return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceChangedErrorBuilder {
+public final class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     private String message;
 
@@ -47,6 +48,16 @@ public final class PriceChangedErrorBuilder {
     }
 
     public PriceChangedError build() {
+        Objects.requireNonNull(message, PriceChangedError.class + ": message is missing");
+        Objects.requireNonNull(lineItems, PriceChangedError.class + ": lineItems is missing");
+        Objects.requireNonNull(shipping, PriceChangedError.class + ": shipping is missing");
+        return new PriceChangedErrorImpl(message, lineItems, shipping);
+    }
+
+    /**
+     * builds PriceChangedError without checking for non null required values
+     */
+    public PriceChangedError buildUnchecked() {
         return new PriceChangedErrorImpl(message, lineItems, shipping);
     }
 

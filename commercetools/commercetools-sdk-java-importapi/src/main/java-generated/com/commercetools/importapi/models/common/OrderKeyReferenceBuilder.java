@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderKeyReferenceBuilder {
+public final class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
 
     private String key;
 
@@ -20,6 +21,14 @@ public final class OrderKeyReferenceBuilder {
     }
 
     public OrderKeyReference build() {
+        Objects.requireNonNull(key, OrderKeyReference.class + ": key is missing");
+        return new OrderKeyReferenceImpl(key);
+    }
+
+    /**
+     * builds OrderKeyReference without checking for non null required values
+     */
+    public OrderKeyReference buildUnchecked() {
         return new OrderKeyReferenceImpl(key);
     }
 

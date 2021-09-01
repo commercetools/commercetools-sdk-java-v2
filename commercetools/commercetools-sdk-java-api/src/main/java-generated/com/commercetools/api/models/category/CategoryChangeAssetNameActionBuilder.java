@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryChangeAssetNameActionBuilder {
+public final class CategoryChangeAssetNameActionBuilder implements Builder<CategoryChangeAssetNameAction> {
 
     @Nullable
     private String assetId;
@@ -25,6 +27,12 @@ public final class CategoryChangeAssetNameActionBuilder {
 
     public CategoryChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+
+    public CategoryChangeAssetNameActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -48,6 +56,14 @@ public final class CategoryChangeAssetNameActionBuilder {
     }
 
     public CategoryChangeAssetNameAction build() {
+        Objects.requireNonNull(name, CategoryChangeAssetNameAction.class + ": name is missing");
+        return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
+    }
+
+    /**
+     * builds CategoryChangeAssetNameAction without checking for non null required values
+     */
+    public CategoryChangeAssetNameAction buildUnchecked() {
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
     }
 

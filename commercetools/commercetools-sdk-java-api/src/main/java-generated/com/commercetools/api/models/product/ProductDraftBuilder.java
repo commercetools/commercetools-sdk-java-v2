@@ -2,13 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDraftBuilder {
+public final class ProductDraftBuilder implements Builder<ProductDraft> {
 
     private com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType;
 
@@ -56,13 +58,33 @@ public final class ProductDraftBuilder {
     private Boolean publish;
 
     public ProductDraftBuilder productType(
+            Function<com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder, com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder> builder) {
+        this.productType = builder
+                .apply(com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {
         this.productType = productType;
         return this;
     }
 
+    public ProductDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ProductDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public ProductDraftBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -73,6 +95,12 @@ public final class ProductDraftBuilder {
 
     public ProductDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public ProductDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -88,9 +116,34 @@ public final class ProductDraftBuilder {
         return this;
     }
 
+    public ProductDraftBuilder withCategories(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories.add(
+            builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDraftBuilder plusCategories(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.add(
+            builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
     public ProductDraftBuilder categories(
             @Nullable final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories) {
         this.categories = categories;
+        return this;
+    }
+
+    public ProductDraftBuilder categoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
+                .build();
         return this;
     }
 
@@ -101,8 +154,20 @@ public final class ProductDraftBuilder {
     }
 
     public ProductDraftBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductDraftBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
+        return this;
+    }
+
+    public ProductDraftBuilder metaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -113,8 +178,21 @@ public final class ProductDraftBuilder {
     }
 
     public ProductDraftBuilder metaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ProductDraftBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    public ProductDraftBuilder masterVariant(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
+        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -130,6 +208,22 @@ public final class ProductDraftBuilder {
         return this;
     }
 
+    public ProductDraftBuilder withVariants(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDraftBuilder plusVariants(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of()).build());
+        return this;
+    }
+
     public ProductDraftBuilder variants(
             @Nullable final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants) {
         this.variants = variants;
@@ -139,6 +233,12 @@ public final class ProductDraftBuilder {
     public ProductDraftBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
+        return this;
+    }
+
+    public ProductDraftBuilder searchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
         return this;
     }
 
@@ -236,6 +336,18 @@ public final class ProductDraftBuilder {
     }
 
     public ProductDraft build() {
+        Objects.requireNonNull(productType, ProductDraft.class + ": productType is missing");
+        Objects.requireNonNull(name, ProductDraft.class + ": name is missing");
+        Objects.requireNonNull(slug, ProductDraft.class + ": slug is missing");
+        return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
+            metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
+            publish);
+    }
+
+    /**
+     * builds ProductDraft without checking for non null required values
+     */
+    public ProductDraft buildUnchecked() {
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
             publish);

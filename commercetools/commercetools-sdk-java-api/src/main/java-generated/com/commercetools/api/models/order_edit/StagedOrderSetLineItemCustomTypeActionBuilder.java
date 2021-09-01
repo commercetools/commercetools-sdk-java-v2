@@ -2,13 +2,16 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderSetLineItemCustomTypeActionBuilder {
+public final class StagedOrderSetLineItemCustomTypeActionBuilder
+        implements Builder<StagedOrderSetLineItemCustomTypeAction> {
 
     private String lineItemId;
 
@@ -24,8 +27,20 @@ public final class StagedOrderSetLineItemCustomTypeActionBuilder {
     }
 
     public StagedOrderSetLineItemCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetLineItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public StagedOrderSetLineItemCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -50,6 +65,14 @@ public final class StagedOrderSetLineItemCustomTypeActionBuilder {
     }
 
     public StagedOrderSetLineItemCustomTypeAction build() {
+        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemCustomTypeAction.class + ": lineItemId is missing");
+        return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+    }
+
+    /**
+     * builds StagedOrderSetLineItemCustomTypeAction without checking for non null required values
+     */
+    public StagedOrderSetLineItemCustomTypeAction buildUnchecked() {
         return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 

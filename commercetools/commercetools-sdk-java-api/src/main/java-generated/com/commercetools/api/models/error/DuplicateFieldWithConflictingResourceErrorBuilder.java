@@ -3,10 +3,12 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateFieldWithConflictingResourceErrorBuilder {
+public final class DuplicateFieldWithConflictingResourceErrorBuilder
+        implements Builder<DuplicateFieldWithConflictingResourceError> {
 
     private String message;
 
@@ -54,6 +56,19 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
     }
 
     public DuplicateFieldWithConflictingResourceError build() {
+        Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");
+        Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");
+        Objects.requireNonNull(duplicateValue,
+            DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");
+        Objects.requireNonNull(conflictingResource,
+            DuplicateFieldWithConflictingResourceError.class + ": conflictingResource is missing");
+        return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
+    }
+
+    /**
+     * builds DuplicateFieldWithConflictingResourceError without checking for non null required values
+     */
+    public DuplicateFieldWithConflictingResourceError buildUnchecked() {
         return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
     }
 

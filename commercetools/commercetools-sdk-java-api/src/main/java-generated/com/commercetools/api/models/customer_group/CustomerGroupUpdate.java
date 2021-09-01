@@ -18,10 +18,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupUpdate
         extends com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction> {
 
+    /**
+    *  <p>Expected version of the customer group on which the changes should be applied.
+    *  If the expected version does not match the actual version, a 409 Conflict
+    *  will be returned.</p>
+    */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>List of update actions to be performed on the customer group.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("actions")

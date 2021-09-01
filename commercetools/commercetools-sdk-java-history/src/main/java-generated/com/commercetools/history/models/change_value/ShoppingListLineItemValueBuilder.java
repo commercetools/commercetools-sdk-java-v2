@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change_value;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListLineItemValueBuilder {
+public final class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLineItemValue> {
 
     private String id;
 
@@ -16,6 +18,12 @@ public final class ShoppingListLineItemValueBuilder {
 
     public ShoppingListLineItemValueBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ShoppingListLineItemValueBuilder name(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -42,6 +50,16 @@ public final class ShoppingListLineItemValueBuilder {
     }
 
     public ShoppingListLineItemValue build() {
+        Objects.requireNonNull(id, ShoppingListLineItemValue.class + ": id is missing");
+        Objects.requireNonNull(name, ShoppingListLineItemValue.class + ": name is missing");
+        Objects.requireNonNull(variantId, ShoppingListLineItemValue.class + ": variantId is missing");
+        return new ShoppingListLineItemValueImpl(id, name, variantId);
+    }
+
+    /**
+     * builds ShoppingListLineItemValue without checking for non null required values
+     */
+    public ShoppingListLineItemValue buildUnchecked() {
         return new ShoppingListLineItemValueImpl(id, name, variantId);
     }
 

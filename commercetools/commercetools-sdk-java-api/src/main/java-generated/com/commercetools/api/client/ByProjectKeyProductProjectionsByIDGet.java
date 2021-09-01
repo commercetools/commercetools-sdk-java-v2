@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Gets the current or staged representation of a product in a catalog by ID.
 *  When used with an API client that has the view_published_products:{projectKey} scope,
@@ -113,68 +116,134 @@ public class ByProjectKeyProductProjectionsByIDGet
         this.ID = ID;
     }
 
+    /**
+     * set staged with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
+    /**
+     * add additional staged query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
+    /**
+     * set priceCurrency with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final String priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
     }
 
+    /**
+     * add additional priceCurrency query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCurrency(final String priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
 
+    /**
+     * set priceCountry with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCountry(final String priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
     }
 
+    /**
+     * add additional priceCountry query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCountry(final String priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
     }
 
+    /**
+     * set priceCustomerGroup with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
+    /**
+     * set priceChannel with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withPriceChannel(final String priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
     }
 
+    /**
+     * add additional priceChannel query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addPriceChannel(final String priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
     }
 
+    /**
+     * set localeProjection with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final String localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
     }
 
+    /**
+     * add additional localeProjection query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addLocaleProjection(final String localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
     }
 
+    /**
+     * set storeProjection with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withStoreProjection(final String storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
     }
 
+    /**
+     * add additional storeProjection query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addStoreProjection(final String storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyProductProjectionsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyProductProjectionsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductProjectionsByIDGet that = (ByProjectKeyProductProjectionsByIDGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(ID, that.ID).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(ID).toHashCode();
     }
 
     @Override

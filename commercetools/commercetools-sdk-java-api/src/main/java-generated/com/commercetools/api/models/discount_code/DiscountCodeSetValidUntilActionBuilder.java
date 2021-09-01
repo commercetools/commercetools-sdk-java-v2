@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeSetValidUntilActionBuilder {
+public final class DiscountCodeSetValidUntilActionBuilder implements Builder<DiscountCodeSetValidUntilAction> {
 
     @Nullable
     private java.time.ZonedDateTime validUntil;
@@ -24,6 +25,13 @@ public final class DiscountCodeSetValidUntilActionBuilder {
     }
 
     public DiscountCodeSetValidUntilAction build() {
+        return new DiscountCodeSetValidUntilActionImpl(validUntil);
+    }
+
+    /**
+     * builds DiscountCodeSetValidUntilAction without checking for non null required values
+     */
+    public DiscountCodeSetValidUntilAction buildUnchecked() {
         return new DiscountCodeSetValidUntilActionImpl(validUntil);
     }
 

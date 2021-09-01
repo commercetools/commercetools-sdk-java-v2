@@ -3,10 +3,11 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionInputBuilder {
+public final class ExtensionInputBuilder implements Builder<ExtensionInput> {
 
     private com.commercetools.api.models.extension.ExtensionAction action;
 
@@ -31,6 +32,15 @@ public final class ExtensionInputBuilder {
     }
 
     public ExtensionInput build() {
+        Objects.requireNonNull(action, ExtensionInput.class + ": action is missing");
+        Objects.requireNonNull(resource, ExtensionInput.class + ": resource is missing");
+        return new ExtensionInputImpl(action, resource);
+    }
+
+    /**
+     * builds ExtensionInput without checking for non null required values
+     */
+    public ExtensionInput buildUnchecked() {
         return new ExtensionInputImpl(action, resource);
     }
 

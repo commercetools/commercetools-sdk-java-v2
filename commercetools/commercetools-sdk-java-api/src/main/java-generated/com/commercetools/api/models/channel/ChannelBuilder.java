@@ -2,13 +2,15 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelBuilder {
+public final class ChannelBuilder implements Builder<Channel> {
 
     private String id;
 
@@ -67,8 +69,20 @@ public final class ChannelBuilder {
     }
 
     public ChannelBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ChannelBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ChannelBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -92,13 +106,31 @@ public final class ChannelBuilder {
         return this;
     }
 
+    public ChannelBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ChannelBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    public ChannelBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ChannelBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    public ChannelBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -108,8 +140,22 @@ public final class ChannelBuilder {
     }
 
     public ChannelBuilder reviewRatingStatistics(
+            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
+        this.reviewRatingStatistics = builder
+                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ChannelBuilder reviewRatingStatistics(
             @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
         this.reviewRatingStatistics = reviewRatingStatistics;
+        return this;
+    }
+
+    public ChannelBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -188,6 +234,20 @@ public final class ChannelBuilder {
     }
 
     public Channel build() {
+        Objects.requireNonNull(id, Channel.class + ": id is missing");
+        Objects.requireNonNull(version, Channel.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Channel.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Channel.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(key, Channel.class + ": key is missing");
+        Objects.requireNonNull(roles, Channel.class + ": roles is missing");
+        return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,
+            description, address, reviewRatingStatistics, custom, geoLocation);
+    }
+
+    /**
+     * builds Channel without checking for non null required values
+     */
+    public Channel buildUnchecked() {
         return new ChannelImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, roles, name,
             description, address, reviewRatingStatistics, custom, geoLocation);
     }

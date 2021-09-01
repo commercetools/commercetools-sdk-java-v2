@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDiscountedPriceChangeBuilder {
+public final class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPriceChange> {
 
     private String change;
 
@@ -41,8 +43,20 @@ public final class SetDiscountedPriceChangeBuilder {
     }
 
     public SetDiscountedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    public SetDiscountedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.Price previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetDiscountedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
 
@@ -76,6 +90,19 @@ public final class SetDiscountedPriceChangeBuilder {
     }
 
     public SetDiscountedPriceChange build() {
+        Objects.requireNonNull(change, SetDiscountedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, SetDiscountedPriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetDiscountedPriceChange.class + ": variant is missing");
+        Objects.requireNonNull(priceId, SetDiscountedPriceChange.class + ": priceId is missing");
+        Objects.requireNonNull(previousValue, SetDiscountedPriceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDiscountedPriceChange.class + ": nextValue is missing");
+        return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetDiscountedPriceChange without checking for non null required values
+     */
+    public SetDiscountedPriceChange buildUnchecked() {
         return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
     }
 

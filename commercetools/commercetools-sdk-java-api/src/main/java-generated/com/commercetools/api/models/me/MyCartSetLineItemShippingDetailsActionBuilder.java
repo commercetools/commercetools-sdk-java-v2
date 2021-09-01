@@ -2,13 +2,16 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartSetLineItemShippingDetailsActionBuilder {
+public final class MyCartSetLineItemShippingDetailsActionBuilder
+        implements Builder<MyCartSetLineItemShippingDetailsAction> {
 
     private String lineItemId;
 
@@ -17,6 +20,13 @@ public final class MyCartSetLineItemShippingDetailsActionBuilder {
 
     public MyCartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -36,6 +46,14 @@ public final class MyCartSetLineItemShippingDetailsActionBuilder {
     }
 
     public MyCartSetLineItemShippingDetailsAction build() {
+        Objects.requireNonNull(lineItemId, MyCartSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
+        return new MyCartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
+    }
+
+    /**
+     * builds MyCartSetLineItemShippingDetailsAction without checking for non null required values
+     */
+    public MyCartSetLineItemShippingDetailsAction buildUnchecked() {
         return new MyCartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
 

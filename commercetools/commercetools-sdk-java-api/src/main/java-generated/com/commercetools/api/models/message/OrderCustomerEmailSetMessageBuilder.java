@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderCustomerEmailSetMessageBuilder {
+public final class OrderCustomerEmailSetMessageBuilder implements Builder<OrderCustomerEmailSetMessage> {
 
     private String id;
 
@@ -60,8 +62,20 @@ public final class OrderCustomerEmailSetMessageBuilder {
     }
 
     public OrderCustomerEmailSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderCustomerEmailSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderCustomerEmailSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +97,14 @@ public final class OrderCustomerEmailSetMessageBuilder {
 
     public OrderCustomerEmailSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public OrderCustomerEmailSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -156,6 +178,21 @@ public final class OrderCustomerEmailSetMessageBuilder {
     }
 
     public OrderCustomerEmailSetMessage build() {
+        Objects.requireNonNull(id, OrderCustomerEmailSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderCustomerEmailSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderCustomerEmailSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderCustomerEmailSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderCustomerEmailSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderCustomerEmailSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderCustomerEmailSetMessage.class + ": resourceVersion is missing");
+        return new OrderCustomerEmailSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email, oldEmail);
+    }
+
+    /**
+     * builds OrderCustomerEmailSetMessage without checking for non null required values
+     */
+    public OrderCustomerEmailSetMessage buildUnchecked() {
         return new OrderCustomerEmailSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email, oldEmail);
     }

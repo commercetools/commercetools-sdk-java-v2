@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.common;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateKeyReferenceBuilder {
+public final class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
 
     private String key;
 
@@ -20,6 +21,14 @@ public final class StateKeyReferenceBuilder {
     }
 
     public StateKeyReference build() {
+        Objects.requireNonNull(key, StateKeyReference.class + ": key is missing");
+        return new StateKeyReferenceImpl(key);
+    }
+
+    /**
+     * builds StateKeyReference without checking for non null required values
+     */
+    public StateKeyReference buildUnchecked() {
         return new StateKeyReferenceImpl(key);
     }
 

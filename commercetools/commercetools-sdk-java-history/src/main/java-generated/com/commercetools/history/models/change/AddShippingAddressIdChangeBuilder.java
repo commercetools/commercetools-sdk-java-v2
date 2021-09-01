@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddShippingAddressIdChangeBuilder {
+public final class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAddressIdChange> {
 
     private String change;
 
@@ -41,6 +43,12 @@ public final class AddShippingAddressIdChangeBuilder {
         return this;
     }
 
+    public AddShippingAddressIdChangeBuilder address(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
     public AddShippingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {
         this.address = address;
         return this;
@@ -63,6 +71,17 @@ public final class AddShippingAddressIdChangeBuilder {
     }
 
     public AddShippingAddressIdChange build() {
+        Objects.requireNonNull(change, AddShippingAddressIdChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddShippingAddressIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddShippingAddressIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(address, AddShippingAddressIdChange.class + ": address is missing");
+        return new AddShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
+    }
+
+    /**
+     * builds AddShippingAddressIdChange without checking for non null required values
+     */
+    public AddShippingAddressIdChange buildUnchecked() {
         return new AddShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 

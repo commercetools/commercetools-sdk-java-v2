@@ -3,10 +3,11 @@ package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedEnumFieldBuilder {
+public final class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
 
     private String value;
 
@@ -20,6 +21,14 @@ public final class LocalizedEnumFieldBuilder {
     }
 
     public LocalizedEnumField build() {
+        Objects.requireNonNull(value, LocalizedEnumField.class + ": value is missing");
+        return new LocalizedEnumFieldImpl(value);
+    }
+
+    /**
+     * builds LocalizedEnumField without checking for non null required values
+     */
+    public LocalizedEnumField buildUnchecked() {
         return new LocalizedEnumFieldImpl(value);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.history.models.label;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StringLabelBuilder {
+public final class StringLabelBuilder implements Builder<StringLabel> {
 
     private String value;
 
@@ -20,6 +21,14 @@ public final class StringLabelBuilder {
     }
 
     public StringLabel build() {
+        Objects.requireNonNull(value, StringLabel.class + ": value is missing");
+        return new StringLabelImpl(value);
+    }
+
+    /**
+     * builds StringLabel without checking for non null required values
+     */
+    public StringLabel buildUnchecked() {
         return new StringLabelImpl(value);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetValidFromAndUntilChangeBuilder {
+public final class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAndUntilChange> {
 
     private String change;
 
@@ -20,8 +22,23 @@ public final class SetValidFromAndUntilChangeBuilder {
     }
 
     public SetValidFromAndUntilChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetValidFromAndUntilChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ValidFromAndUntilValue previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetValidFromAndUntilChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -44,6 +61,16 @@ public final class SetValidFromAndUntilChangeBuilder {
     }
 
     public SetValidFromAndUntilChange build() {
+        Objects.requireNonNull(change, SetValidFromAndUntilChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetValidFromAndUntilChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetValidFromAndUntilChange.class + ": nextValue is missing");
+        return new SetValidFromAndUntilChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetValidFromAndUntilChange without checking for non null required values
+     */
+    public SetValidFromAndUntilChange buildUnchecked() {
         return new SetValidFromAndUntilChangeImpl(change, previousValue, nextValue);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferencedResourceNotFoundErrorBuilder {
+public final class ReferencedResourceNotFoundErrorBuilder implements Builder<ReferencedResourceNotFoundError> {
 
     private String message;
 
@@ -60,6 +61,15 @@ public final class ReferencedResourceNotFoundErrorBuilder {
     }
 
     public ReferencedResourceNotFoundError build() {
+        Objects.requireNonNull(message, ReferencedResourceNotFoundError.class + ": message is missing");
+        Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
+        return new ReferencedResourceNotFoundErrorImpl(message, typeId, id, key);
+    }
+
+    /**
+     * builds ReferencedResourceNotFoundError without checking for non null required values
+     */
+    public ReferencedResourceNotFoundError buildUnchecked() {
         return new ReferencedResourceNotFoundErrorImpl(message, typeId, id, key);
     }
 

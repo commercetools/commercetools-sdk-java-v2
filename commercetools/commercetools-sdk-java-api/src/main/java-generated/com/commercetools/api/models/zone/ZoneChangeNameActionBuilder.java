@@ -3,10 +3,11 @@ package com.commercetools.api.models.zone;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneChangeNameActionBuilder {
+public final class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction> {
 
     private String name;
 
@@ -20,6 +21,14 @@ public final class ZoneChangeNameActionBuilder {
     }
 
     public ZoneChangeNameAction build() {
+        Objects.requireNonNull(name, ZoneChangeNameAction.class + ": name is missing");
+        return new ZoneChangeNameActionImpl(name);
+    }
+
+    /**
+     * builds ZoneChangeNameAction without checking for non null required values
+     */
+    public ZoneChangeNameAction buildUnchecked() {
         return new ZoneChangeNameActionImpl(name);
     }
 

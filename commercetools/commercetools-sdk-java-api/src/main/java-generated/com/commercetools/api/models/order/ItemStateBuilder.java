@@ -3,10 +3,11 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ItemStateBuilder {
+public final class ItemStateBuilder implements Builder<ItemState> {
 
     private Double quantity;
 
@@ -31,6 +32,15 @@ public final class ItemStateBuilder {
     }
 
     public ItemState build() {
+        Objects.requireNonNull(quantity, ItemState.class + ": quantity is missing");
+        Objects.requireNonNull(state, ItemState.class + ": state is missing");
+        return new ItemStateImpl(quantity, state);
+    }
+
+    /**
+     * builds ItemState without checking for non null required values
+     */
+    public ItemState buildUnchecked() {
         return new ItemStateImpl(quantity, state);
     }
 

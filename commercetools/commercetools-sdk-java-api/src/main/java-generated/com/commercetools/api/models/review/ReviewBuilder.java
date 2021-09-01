@@ -2,13 +2,15 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewBuilder {
+public final class ReviewBuilder implements Builder<Review> {
 
     private String id;
 
@@ -80,8 +82,20 @@ public final class ReviewBuilder {
     }
 
     public ReviewBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ReviewBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ReviewBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -140,8 +154,20 @@ public final class ReviewBuilder {
         return this;
     }
 
+    public ReviewBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public ReviewBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -236,6 +262,19 @@ public final class ReviewBuilder {
     }
 
     public Review build() {
+        Objects.requireNonNull(id, Review.class + ": id is missing");
+        Objects.requireNonNull(version, Review.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Review.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Review.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(includedInStatistics, Review.class + ": includedInStatistics is missing");
+        return new ReviewImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, uniquenessValue,
+            locale, authorName, title, text, target, includedInStatistics, rating, state, customer, custom);
+    }
+
+    /**
+     * builds Review without checking for non null required values
+     */
+    public Review buildUnchecked() {
         return new ReviewImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, uniquenessValue,
             locale, authorName, title, text, target, includedInStatistics, rating, state, customer, custom);
     }

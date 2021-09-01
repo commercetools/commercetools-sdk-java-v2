@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemShippingDetailsChangeBuilder {
+public final class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineItemShippingDetailsChange> {
 
     private String change;
 
@@ -27,8 +29,21 @@ public final class SetLineItemShippingDetailsChangeBuilder {
     }
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemShippingDetailsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemShippingDetailsChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of())
+                .build();
         return this;
     }
 
@@ -55,6 +70,17 @@ public final class SetLineItemShippingDetailsChangeBuilder {
     }
 
     public SetLineItemShippingDetailsChange build() {
+        Objects.requireNonNull(change, SetLineItemShippingDetailsChange.class + ": change is missing");
+        Objects.requireNonNull(lineItemId, SetLineItemShippingDetailsChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(nextValue, SetLineItemShippingDetailsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemShippingDetailsChange.class + ": previousValue is missing");
+        return new SetLineItemShippingDetailsChangeImpl(change, lineItemId, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemShippingDetailsChange without checking for non null required values
+     */
+    public SetLineItemShippingDetailsChange buildUnchecked() {
         return new SetLineItemShippingDetailsChangeImpl(change, lineItemId, nextValue, previousValue);
     }
 

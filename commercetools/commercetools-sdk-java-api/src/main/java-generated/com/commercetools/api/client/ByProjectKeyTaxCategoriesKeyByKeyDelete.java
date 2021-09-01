@@ -12,9 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Delete TaxCategory by key</p>
-*/
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyTaxCategoriesKeyByKeyDelete extends
         ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyDelete, com.commercetools.api.models.tax_category.TaxCategory>
@@ -88,20 +88,50 @@ public class ByProjectKeyTaxCategoriesKeyByKeyDelete extends
         this.key = key;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyTaxCategoriesKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyTaxCategoriesKeyByKeyDelete that = (ByProjectKeyTaxCategoriesKeyByKeyDelete) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(key, that.key).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(key).toHashCode();
     }
 
     @Override

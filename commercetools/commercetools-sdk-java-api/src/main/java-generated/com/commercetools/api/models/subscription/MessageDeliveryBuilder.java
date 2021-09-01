@@ -2,13 +2,15 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MessageDeliveryBuilder {
+public final class MessageDeliveryBuilder implements Builder<MessageDelivery> {
 
     private String projectKey;
 
@@ -38,6 +40,14 @@ public final class MessageDeliveryBuilder {
 
     public MessageDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+        return this;
+    }
+
+    public MessageDeliveryBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -74,6 +84,14 @@ public final class MessageDeliveryBuilder {
 
     public MessageDeliveryBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public MessageDeliveryBuilder payloadNotIncluded(
+            Function<com.commercetools.api.models.subscription.PayloadNotIncludedBuilder, com.commercetools.api.models.subscription.PayloadNotIncludedBuilder> builder) {
+        this.payloadNotIncluded = builder
+                .apply(com.commercetools.api.models.subscription.PayloadNotIncludedBuilder.of())
+                .build();
         return this;
     }
 
@@ -125,6 +143,23 @@ public final class MessageDeliveryBuilder {
     }
 
     public MessageDelivery build() {
+        Objects.requireNonNull(projectKey, MessageDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, MessageDelivery.class + ": resource is missing");
+        Objects.requireNonNull(id, MessageDelivery.class + ": id is missing");
+        Objects.requireNonNull(version, MessageDelivery.class + ": version is missing");
+        Objects.requireNonNull(createdAt, MessageDelivery.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, MessageDelivery.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, MessageDelivery.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resourceVersion, MessageDelivery.class + ": resourceVersion is missing");
+        Objects.requireNonNull(payloadNotIncluded, MessageDelivery.class + ": payloadNotIncluded is missing");
+        return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
+            lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
+    }
+
+    /**
+     * builds MessageDelivery without checking for non null required values
+     */
+    public MessageDelivery buildUnchecked() {
         return new MessageDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version, createdAt,
             lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }

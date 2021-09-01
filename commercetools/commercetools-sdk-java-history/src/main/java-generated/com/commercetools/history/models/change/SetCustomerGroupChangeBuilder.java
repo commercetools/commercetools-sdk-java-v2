@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomerGroupChangeBuilder {
+public final class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class SetCustomerGroupChangeBuilder {
     }
 
     public SetCustomerGroupChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public SetCustomerGroupChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetCustomerGroupChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class SetCustomerGroupChangeBuilder {
     }
 
     public SetCustomerGroupChange build() {
+        Objects.requireNonNull(change, SetCustomerGroupChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomerGroupChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomerGroupChange.class + ": nextValue is missing");
+        return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds SetCustomerGroupChange without checking for non null required values
+     */
+    public SetCustomerGroupChange buildUnchecked() {
         return new SetCustomerGroupChangeImpl(change, previousValue, nextValue);
     }
 

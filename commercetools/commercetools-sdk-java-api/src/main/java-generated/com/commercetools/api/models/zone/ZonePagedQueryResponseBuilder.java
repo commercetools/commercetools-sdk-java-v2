@@ -2,13 +2,15 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZonePagedQueryResponseBuilder {
+public final class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class ZonePagedQueryResponseBuilder {
         return this;
     }
 
+    public ZonePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
+        return this;
+    }
+
+    public ZonePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
+        return this;
+    }
+
     public ZonePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.zone.Zone> results) {
         this.results = results;
         return this;
@@ -73,6 +91,17 @@ public final class ZonePagedQueryResponseBuilder {
     }
 
     public ZonePagedQueryResponse build() {
+        Objects.requireNonNull(limit, ZonePagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, ZonePagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ZonePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, ZonePagedQueryResponse.class + ": results is missing");
+        return new ZonePagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds ZonePagedQueryResponse without checking for non null required values
+     */
+    public ZonePagedQueryResponse buildUnchecked() {
         return new ZonePagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

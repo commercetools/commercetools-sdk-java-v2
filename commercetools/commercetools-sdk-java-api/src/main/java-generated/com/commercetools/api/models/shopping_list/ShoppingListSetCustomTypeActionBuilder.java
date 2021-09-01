@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShoppingListSetCustomTypeActionBuilder {
+public final class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingListSetCustomTypeAction> {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -19,6 +21,12 @@ public final class ShoppingListSetCustomTypeActionBuilder {
     public ShoppingListSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public ShoppingListSetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -39,6 +47,13 @@ public final class ShoppingListSetCustomTypeActionBuilder {
     }
 
     public ShoppingListSetCustomTypeAction build() {
+        return new ShoppingListSetCustomTypeActionImpl(type, fields);
+    }
+
+    /**
+     * builds ShoppingListSetCustomTypeAction without checking for non null required values
+     */
+    public ShoppingListSetCustomTypeAction buildUnchecked() {
         return new ShoppingListSetCustomTypeActionImpl(type, fields);
     }
 

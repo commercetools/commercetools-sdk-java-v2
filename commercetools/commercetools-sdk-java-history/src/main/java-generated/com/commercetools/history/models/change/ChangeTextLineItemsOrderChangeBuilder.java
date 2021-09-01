@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTextLineItemsOrderChangeBuilder {
+public final class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeTextLineItemsOrderChange> {
 
     private String change;
 
@@ -25,6 +27,24 @@ public final class ChangeTextLineItemsOrderChangeBuilder {
         return this;
     }
 
+    public ChangeTextLineItemsOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
+        return this;
+    }
+
     public ChangeTextLineItemsOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> previousValue) {
         this.previousValue = previousValue;
@@ -34,6 +54,24 @@ public final class ChangeTextLineItemsOrderChangeBuilder {
     public ChangeTextLineItemsOrderChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.TextLineItemValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public ChangeTextLineItemsOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
+        return this;
+    }
+
+    public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
         return this;
     }
 
@@ -56,6 +94,16 @@ public final class ChangeTextLineItemsOrderChangeBuilder {
     }
 
     public ChangeTextLineItemsOrderChange build() {
+        Objects.requireNonNull(change, ChangeTextLineItemsOrderChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeTextLineItemsOrderChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTextLineItemsOrderChange.class + ": nextValue is missing");
+        return new ChangeTextLineItemsOrderChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeTextLineItemsOrderChange without checking for non null required values
+     */
+    public ChangeTextLineItemsOrderChange buildUnchecked() {
         return new ChangeTextLineItemsOrderChangeImpl(change, previousValue, nextValue);
     }
 

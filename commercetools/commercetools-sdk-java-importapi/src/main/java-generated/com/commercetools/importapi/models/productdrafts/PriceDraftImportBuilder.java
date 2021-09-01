@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.productdrafts;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceDraftImportBuilder {
+public final class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -50,8 +52,22 @@ public final class PriceDraftImportBuilder {
     }
 
     public PriceDraftImportBuilder customerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PriceDraftImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public PriceDraftImportBuilder channel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -72,8 +88,20 @@ public final class PriceDraftImportBuilder {
     }
 
     public PriceDraftImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    public PriceDraftImportBuilder custom(
             @Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public PriceDraftImportBuilder discounted(
+            Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -85,6 +113,22 @@ public final class PriceDraftImportBuilder {
 
     public PriceDraftImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
+        return this;
+    }
+
+    public PriceDraftImportBuilder withTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public PriceDraftImportBuilder plusTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
         return this;
     }
 
@@ -149,6 +193,15 @@ public final class PriceDraftImportBuilder {
     }
 
     public PriceDraftImport build() {
+        Objects.requireNonNull(value, PriceDraftImport.class + ": value is missing");
+        return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
+            discounted, tiers, key);
+    }
+
+    /**
+     * builds PriceDraftImport without checking for non null required values
+     */
+    public PriceDraftImport buildUnchecked() {
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
             discounted, tiers, key);
     }

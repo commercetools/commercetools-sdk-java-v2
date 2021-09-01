@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InventoryEntrySetRestockableInDaysActionBuilder {
+public final class InventoryEntrySetRestockableInDaysActionBuilder
+        implements Builder<InventoryEntrySetRestockableInDaysAction> {
 
     @Nullable
     private Long restockableInDays;
@@ -24,6 +26,13 @@ public final class InventoryEntrySetRestockableInDaysActionBuilder {
     }
 
     public InventoryEntrySetRestockableInDaysAction build() {
+        return new InventoryEntrySetRestockableInDaysActionImpl(restockableInDays);
+    }
+
+    /**
+     * builds InventoryEntrySetRestockableInDaysAction without checking for non null required values
+     */
+    public InventoryEntrySetRestockableInDaysAction buildUnchecked() {
         return new InventoryEntrySetRestockableInDaysActionImpl(restockableInDays);
     }
 

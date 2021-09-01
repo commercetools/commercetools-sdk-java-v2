@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemTotalPriceChangeBuilder {
+public final class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTotalPriceChange> {
 
     private String change;
 
@@ -22,13 +24,31 @@ public final class SetLineItemTotalPriceChangeBuilder {
     }
 
     public SetLineItemTotalPriceChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemTotalPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    public SetLineItemTotalPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public SetLineItemTotalPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemTotalPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -55,6 +75,17 @@ public final class SetLineItemTotalPriceChangeBuilder {
     }
 
     public SetLineItemTotalPriceChange build() {
+        Objects.requireNonNull(change, SetLineItemTotalPriceChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemTotalPriceChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetLineItemTotalPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemTotalPriceChange.class + ": previousValue is missing");
+        return new SetLineItemTotalPriceChangeImpl(change, lineItem, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemTotalPriceChange without checking for non null required values
+     */
+    public SetLineItemTotalPriceChange buildUnchecked() {
         return new SetLineItemTotalPriceChangeImpl(change, lineItem, nextValue, previousValue);
     }
 

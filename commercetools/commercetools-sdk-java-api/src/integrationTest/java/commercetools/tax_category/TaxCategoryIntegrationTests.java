@@ -17,6 +17,13 @@ public class TaxCategoryIntegrationTests {
         TaxCategoryDraft taxCategoryDraft = TaxCategoryDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomString())
                 .key(CommercetoolsTestUtils.randomKey())
+                .rates(TaxRateDraftBuilder.of()
+                        .name(CommercetoolsTestUtils.randomString())
+                        .amount(0.19)
+                        .includedInPrice(true)
+                        .country("DE")
+                        .state("Berlin")
+                        .build())
                 .build();
 
         TaxCategory taxCategory = CommercetoolsTestUtils.getProjectRoot()

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.discount_code;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeBuilder {
+public final class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     private String id;
 
@@ -79,8 +81,20 @@ public final class DiscountCodeBuilder {
     }
 
     public DiscountCodeBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public DiscountCodeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public DiscountCodeBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -89,8 +103,20 @@ public final class DiscountCodeBuilder {
         return this;
     }
 
+    public DiscountCodeBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public DiscountCodeBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public DiscountCodeBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -108,6 +134,24 @@ public final class DiscountCodeBuilder {
     public DiscountCodeBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+
+    public DiscountCodeBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public DiscountCodeBuilder plusCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
     }
 
@@ -145,6 +189,12 @@ public final class DiscountCodeBuilder {
 
     public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+        return this;
+    }
+
+    public DiscountCodeBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -260,6 +310,24 @@ public final class DiscountCodeBuilder {
     }
 
     public DiscountCode build() {
+        Objects.requireNonNull(id, DiscountCode.class + ": id is missing");
+        Objects.requireNonNull(version, DiscountCode.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DiscountCode.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DiscountCode.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(code, DiscountCode.class + ": code is missing");
+        Objects.requireNonNull(cartDiscounts, DiscountCode.class + ": cartDiscounts is missing");
+        Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
+        Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
+        Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
+        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
+            description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
+            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
+    }
+
+    /**
+     * builds DiscountCode without checking for non null required values
+     */
+    public DiscountCode buildUnchecked() {
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);

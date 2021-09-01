@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemDiscountedPriceChangeBuilder {
+public final class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineItemDiscountedPriceChange> {
 
     private String change;
 
@@ -24,6 +26,12 @@ public final class SetLineItemDiscountedPriceChangeBuilder {
     }
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -35,8 +43,22 @@ public final class SetLineItemDiscountedPriceChangeBuilder {
     }
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLineItemDiscountedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
+                .build();
         return this;
     }
 
@@ -67,6 +89,18 @@ public final class SetLineItemDiscountedPriceChangeBuilder {
     }
 
     public SetLineItemDiscountedPriceChange build() {
+        Objects.requireNonNull(change, SetLineItemDiscountedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(lineItem, SetLineItemDiscountedPriceChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemDiscountedPriceChange.class + ": variant is missing");
+        Objects.requireNonNull(nextValue, SetLineItemDiscountedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetLineItemDiscountedPriceChange.class + ": previousValue is missing");
+        return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetLineItemDiscountedPriceChange without checking for non null required values
+     */
+    public SetLineItemDiscountedPriceChange buildUnchecked() {
         return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
 

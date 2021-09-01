@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageBuilder {
+public final class ImageBuilder implements Builder<Image> {
 
     private String url;
 
@@ -19,6 +21,12 @@ public final class ImageBuilder {
 
     public ImageBuilder url(final String url) {
         this.url = url;
+        return this;
+    }
+
+    public ImageBuilder dimensions(
+            Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
+        this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
 
@@ -46,6 +54,15 @@ public final class ImageBuilder {
     }
 
     public Image build() {
+        Objects.requireNonNull(url, Image.class + ": url is missing");
+        Objects.requireNonNull(dimensions, Image.class + ": dimensions is missing");
+        return new ImageImpl(url, dimensions, label);
+    }
+
+    /**
+     * builds Image without checking for non null required values
+     */
+    public Image buildUnchecked() {
         return new ImageImpl(url, dimensions, label);
     }
 

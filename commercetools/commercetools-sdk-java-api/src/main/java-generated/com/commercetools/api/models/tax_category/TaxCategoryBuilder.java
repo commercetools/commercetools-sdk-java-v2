@@ -2,13 +2,15 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryBuilder {
+public final class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     private String id;
 
@@ -55,8 +57,20 @@ public final class TaxCategoryBuilder {
     }
 
     public TaxCategoryBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public TaxCategoryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public TaxCategoryBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -77,6 +91,22 @@ public final class TaxCategoryBuilder {
 
     public TaxCategoryBuilder rates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
         this.rates = new ArrayList<>(Arrays.asList(rates));
+        return this;
+    }
+
+    public TaxCategoryBuilder withRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.rates = new ArrayList<>();
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryBuilder plusRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        if (this.rates == null) {
+            this.rates = new ArrayList<>();
+        }
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build());
         return this;
     }
 
@@ -135,6 +165,20 @@ public final class TaxCategoryBuilder {
     }
 
     public TaxCategory build() {
+        Objects.requireNonNull(id, TaxCategory.class + ": id is missing");
+        Objects.requireNonNull(version, TaxCategory.class + ": version is missing");
+        Objects.requireNonNull(createdAt, TaxCategory.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, TaxCategory.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, TaxCategory.class + ": name is missing");
+        Objects.requireNonNull(rates, TaxCategory.class + ": rates is missing");
+        return new TaxCategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, description,
+            rates, key);
+    }
+
+    /**
+     * builds TaxCategory without checking for non null required values
+     */
+    public TaxCategory buildUnchecked() {
         return new TaxCategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, description,
             rates, key);
     }

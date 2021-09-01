@@ -2,19 +2,22 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryDraftBuilder {
+public final class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     private String name;
 
     @Nullable
     private String description;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates;
 
     @Nullable
@@ -30,13 +33,30 @@ public final class TaxCategoryDraftBuilder {
         return this;
     }
 
-    public TaxCategoryDraftBuilder rates(final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
+    public TaxCategoryDraftBuilder rates(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
         this.rates = new ArrayList<>(Arrays.asList(rates));
         return this;
     }
 
+    public TaxCategoryDraftBuilder withRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        this.rates = new ArrayList<>();
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryDraftBuilder plusRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
+        if (this.rates == null) {
+            this.rates = new ArrayList<>();
+        }
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build());
+        return this;
+    }
+
     public TaxCategoryDraftBuilder rates(
-            final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
+            @Nullable final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
         this.rates = rates;
         return this;
     }
@@ -55,6 +75,7 @@ public final class TaxCategoryDraftBuilder {
         return this.description;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates() {
         return this.rates;
     }
@@ -65,6 +86,14 @@ public final class TaxCategoryDraftBuilder {
     }
 
     public TaxCategoryDraft build() {
+        Objects.requireNonNull(name, TaxCategoryDraft.class + ": name is missing");
+        return new TaxCategoryDraftImpl(name, description, rates, key);
+    }
+
+    /**
+     * builds TaxCategoryDraft without checking for non null required values
+     */
+    public TaxCategoryDraft buildUnchecked() {
         return new TaxCategoryDraftImpl(name, description, rates, key);
     }
 

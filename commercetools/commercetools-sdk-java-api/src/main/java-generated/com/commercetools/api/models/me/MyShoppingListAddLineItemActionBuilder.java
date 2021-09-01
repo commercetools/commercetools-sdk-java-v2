@@ -2,13 +2,15 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListAddLineItemActionBuilder {
+public final class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppingListAddLineItemAction> {
 
     @Nullable
     private String sku;
@@ -54,6 +56,12 @@ public final class MyShoppingListAddLineItemActionBuilder {
     }
 
     public MyShoppingListAddLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    public MyShoppingListAddLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
@@ -90,6 +98,13 @@ public final class MyShoppingListAddLineItemActionBuilder {
     }
 
     public MyShoppingListAddLineItemAction build() {
+        return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
+    }
+
+    /**
+     * builds MyShoppingListAddLineItemAction without checking for non null required values
+     */
+    public MyShoppingListAddLineItemAction buildUnchecked() {
         return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
     }
 

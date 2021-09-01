@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Set a new password using a token.</p>
 */
@@ -90,6 +93,30 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost that = (ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(customerResetPassword, that.customerResetPassword)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(storeKey)
+                .append(customerResetPassword)
+                .toHashCode();
     }
 
     @Override

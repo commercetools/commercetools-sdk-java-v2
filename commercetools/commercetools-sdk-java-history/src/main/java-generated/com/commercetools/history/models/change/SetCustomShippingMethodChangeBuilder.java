@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCustomShippingMethodChangeBuilder {
+public final class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomShippingMethodChange> {
 
     private String change;
 
@@ -20,8 +22,24 @@ public final class SetCustomShippingMethodChangeBuilder {
     }
 
     public SetCustomShippingMethodChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetCustomShippingMethodChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.CustomShippingMethodChangeValue nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetCustomShippingMethodChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -44,6 +62,16 @@ public final class SetCustomShippingMethodChangeBuilder {
     }
 
     public SetCustomShippingMethodChange build() {
+        Objects.requireNonNull(change, SetCustomShippingMethodChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, SetCustomShippingMethodChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetCustomShippingMethodChange.class + ": previousValue is missing");
+        return new SetCustomShippingMethodChangeImpl(change, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetCustomShippingMethodChange without checking for non null required values
+     */
+    public SetCustomShippingMethodChange buildUnchecked() {
         return new SetCustomShippingMethodChangeImpl(change, nextValue, previousValue);
     }
 

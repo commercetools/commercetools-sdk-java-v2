@@ -2,13 +2,15 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductSearchRequestBuilder {
+public final class SimilarProductSearchRequestBuilder implements Builder<SimilarProductSearchRequest> {
 
     @Nullable
     private Long limit;
@@ -55,6 +57,14 @@ public final class SimilarProductSearchRequestBuilder {
     }
 
     public SimilarProductSearchRequestBuilder similarityMeasures(
+            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
+        this.similarityMeasures = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SimilarProductSearchRequestBuilder similarityMeasures(
             @Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
         this.similarityMeasures = similarityMeasures;
         return this;
@@ -63,6 +73,24 @@ public final class SimilarProductSearchRequestBuilder {
     public SimilarProductSearchRequestBuilder productSetSelectors(
             @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
         this.productSetSelectors = new ArrayList<>(Arrays.asList(productSetSelectors));
+        return this;
+    }
+
+    public SimilarProductSearchRequestBuilder withProductSetSelectors(
+            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
+        this.productSetSelectors = new ArrayList<>();
+        this.productSetSelectors.add(
+            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
+        return this;
+    }
+
+    public SimilarProductSearchRequestBuilder plusProductSetSelectors(
+            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
+        if (this.productSetSelectors == null) {
+            this.productSetSelectors = new ArrayList<>();
+        }
+        this.productSetSelectors.add(
+            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
         return this;
     }
 
@@ -123,6 +151,14 @@ public final class SimilarProductSearchRequestBuilder {
     }
 
     public SimilarProductSearchRequest build() {
+        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
+            productSetSelectors, confidenceMin, confidenceMax);
+    }
+
+    /**
+     * builds SimilarProductSearchRequest without checking for non null required values
+     */
+    public SimilarProductSearchRequest buildUnchecked() {
         return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
             productSetSelectors, confidenceMin, confidenceMax);
     }

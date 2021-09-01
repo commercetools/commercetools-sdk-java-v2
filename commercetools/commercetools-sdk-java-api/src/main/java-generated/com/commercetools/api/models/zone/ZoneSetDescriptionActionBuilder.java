@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneSetDescriptionActionBuilder {
+public final class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescriptionAction> {
 
     @Nullable
     private String description;
@@ -24,6 +25,13 @@ public final class ZoneSetDescriptionActionBuilder {
     }
 
     public ZoneSetDescriptionAction build() {
+        return new ZoneSetDescriptionActionImpl(description);
+    }
+
+    /**
+     * builds ZoneSetDescriptionAction without checking for non null required values
+     */
+    public ZoneSetDescriptionAction buildUnchecked() {
         return new ZoneSetDescriptionActionImpl(description);
     }
 

@@ -3,10 +3,12 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionAuthorizationHeaderAuthenticationBuilder {
+public final class ExtensionAuthorizationHeaderAuthenticationBuilder
+        implements Builder<ExtensionAuthorizationHeaderAuthentication> {
 
     private String headerValue;
 
@@ -20,6 +22,15 @@ public final class ExtensionAuthorizationHeaderAuthenticationBuilder {
     }
 
     public ExtensionAuthorizationHeaderAuthentication build() {
+        Objects.requireNonNull(headerValue,
+            ExtensionAuthorizationHeaderAuthentication.class + ": headerValue is missing");
+        return new ExtensionAuthorizationHeaderAuthenticationImpl(headerValue);
+    }
+
+    /**
+     * builds ExtensionAuthorizationHeaderAuthentication without checking for non null required values
+     */
+    public ExtensionAuthorizationHeaderAuthentication buildUnchecked() {
         return new ExtensionAuthorizationHeaderAuthenticationImpl(headerValue);
     }
 

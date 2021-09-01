@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddFieldDefinitionChangeBuilder {
+public final class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefinitionChange> {
 
     private String change;
 
@@ -14,6 +16,12 @@ public final class AddFieldDefinitionChangeBuilder {
 
     public AddFieldDefinitionChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public AddFieldDefinitionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinitionBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.FieldDefinitionBuilder.of()).build();
         return this;
     }
 
@@ -32,6 +40,15 @@ public final class AddFieldDefinitionChangeBuilder {
     }
 
     public AddFieldDefinitionChange build() {
+        Objects.requireNonNull(change, AddFieldDefinitionChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddFieldDefinitionChange.class + ": nextValue is missing");
+        return new AddFieldDefinitionChangeImpl(change, nextValue);
+    }
+
+    /**
+     * builds AddFieldDefinitionChange without checking for non null required values
+     */
+    public AddFieldDefinitionChange buildUnchecked() {
         return new AddFieldDefinitionChangeImpl(change, nextValue);
     }
 

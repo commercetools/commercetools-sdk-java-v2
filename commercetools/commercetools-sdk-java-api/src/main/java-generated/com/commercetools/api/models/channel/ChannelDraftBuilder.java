@@ -2,13 +2,15 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelDraftBuilder {
+public final class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     private String key;
 
@@ -46,8 +48,20 @@ public final class ChannelDraftBuilder {
         return this;
     }
 
+    public ChannelDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public ChannelDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public ChannelDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -57,8 +71,20 @@ public final class ChannelDraftBuilder {
         return this;
     }
 
+    public ChannelDraftBuilder address(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
     public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
+        return this;
+    }
+
+    public ChannelDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -107,6 +133,14 @@ public final class ChannelDraftBuilder {
     }
 
     public ChannelDraft build() {
+        Objects.requireNonNull(key, ChannelDraft.class + ": key is missing");
+        return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
+    }
+
+    /**
+     * builds ChannelDraft without checking for non null required values
+     */
+    public ChannelDraft buildUnchecked() {
         return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
     }
 

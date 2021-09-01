@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class BooleanSetAttributeBuilder {
+public final class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> {
 
     @Nullable
     private String name;
@@ -40,6 +41,14 @@ public final class BooleanSetAttributeBuilder {
     }
 
     public BooleanSetAttribute build() {
+        Objects.requireNonNull(value, BooleanSetAttribute.class + ": value is missing");
+        return new BooleanSetAttributeImpl(name, value);
+    }
+
+    /**
+     * builds BooleanSetAttribute without checking for non null required values
+     */
+    public BooleanSetAttribute buildUnchecked() {
         return new BooleanSetAttributeImpl(name, value);
     }
 

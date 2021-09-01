@@ -12,9 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Query orders</p>
-*/
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
@@ -107,62 +107,122 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet extends
         this.storeKey = storeKey;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
+    /**
+     * set sort with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
 
+    /**
+     * add additional sort query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
+    /**
+     * set withTotal with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
+    /**
+     * add additional withTotal query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 
+    /**
+     * set where with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
     }
 
+    /**
+     * add additional where query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addWhere(final String where) {
         return copy().addQueryParam("where", where);
     }
 
+    /**
+     * set predicateVar with the specificied value
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withPredicateVar(final String varName,
             final String predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
 
+    /**
+     * add additional predicateVar query parameter
+     */
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet addPredicateVar(final String varName,
             final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet that = (ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(storeKey, that.storeKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).toHashCode();
     }
 
     @Override

@@ -12,9 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Update MyPayment by key</p>
-*/
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyMePaymentsKeyByKeyPost
         extends ApiMethod<ByProjectKeyMePaymentsKeyByKeyPost, com.commercetools.api.models.me.MyPayment>
@@ -94,12 +94,39 @@ public class ByProjectKeyMePaymentsKeyByKeyPost
         this.key = key;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyMePaymentsKeyByKeyPost withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyMePaymentsKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyMePaymentsKeyByKeyPost that = (ByProjectKeyMePaymentsKeyByKeyPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(key, that.key)
+                .append(myPaymentUpdate, that.myPaymentUpdate)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(key).append(myPaymentUpdate).toHashCode();
     }
 
     @Override

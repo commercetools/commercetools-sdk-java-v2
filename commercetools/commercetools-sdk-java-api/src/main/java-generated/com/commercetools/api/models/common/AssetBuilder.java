@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetBuilder {
+public final class AssetBuilder implements Builder<Asset> {
 
     private String id;
 
@@ -38,13 +40,41 @@ public final class AssetBuilder {
         return this;
     }
 
+    public AssetBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public AssetBuilder plusSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
     public AssetBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
 
+    public AssetBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AssetBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public AssetBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -60,6 +90,12 @@ public final class AssetBuilder {
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    public AssetBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -106,6 +142,16 @@ public final class AssetBuilder {
     }
 
     public Asset build() {
+        Objects.requireNonNull(id, Asset.class + ": id is missing");
+        Objects.requireNonNull(sources, Asset.class + ": sources is missing");
+        Objects.requireNonNull(name, Asset.class + ": name is missing");
+        return new AssetImpl(id, sources, name, description, tags, custom, key);
+    }
+
+    /**
+     * builds Asset without checking for non null required values
+     */
+    public Asset buildUnchecked() {
         return new AssetImpl(id, sources, name, description, tags, custom, key);
     }
 

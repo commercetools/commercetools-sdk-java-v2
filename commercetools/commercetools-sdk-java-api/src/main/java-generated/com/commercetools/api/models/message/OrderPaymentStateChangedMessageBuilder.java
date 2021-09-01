@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPaymentStateChangedMessageBuilder {
+public final class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaymentStateChangedMessage> {
 
     private String id;
 
@@ -59,8 +61,20 @@ public final class OrderPaymentStateChangedMessageBuilder {
     }
 
     public OrderPaymentStateChangedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderPaymentStateChangedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderPaymentStateChangedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,6 +97,14 @@ public final class OrderPaymentStateChangedMessageBuilder {
 
     public OrderPaymentStateChangedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    public OrderPaymentStateChangedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -157,6 +179,23 @@ public final class OrderPaymentStateChangedMessageBuilder {
     }
 
     public OrderPaymentStateChangedMessage build() {
+        Objects.requireNonNull(id, OrderPaymentStateChangedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderPaymentStateChangedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderPaymentStateChangedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderPaymentStateChangedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderPaymentStateChangedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderPaymentStateChangedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderPaymentStateChangedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentState, OrderPaymentStateChangedMessage.class + ": paymentState is missing");
+        return new OrderPaymentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentState,
+            oldPaymentState);
+    }
+
+    /**
+     * builds OrderPaymentStateChangedMessage without checking for non null required values
+     */
+    public OrderPaymentStateChangedMessage buildUnchecked() {
         return new OrderPaymentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentState,
             oldPaymentState);

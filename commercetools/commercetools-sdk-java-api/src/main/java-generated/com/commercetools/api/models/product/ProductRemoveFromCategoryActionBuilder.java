@@ -2,18 +2,27 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductRemoveFromCategoryActionBuilder {
+public final class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRemoveFromCategoryAction> {
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier category;
 
     @Nullable
     private Boolean staged;
+
+    public ProductRemoveFromCategoryActionBuilder category(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProductRemoveFromCategoryActionBuilder category(
             final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
@@ -36,6 +45,14 @@ public final class ProductRemoveFromCategoryActionBuilder {
     }
 
     public ProductRemoveFromCategoryAction build() {
+        Objects.requireNonNull(category, ProductRemoveFromCategoryAction.class + ": category is missing");
+        return new ProductRemoveFromCategoryActionImpl(category, staged);
+    }
+
+    /**
+     * builds ProductRemoveFromCategoryAction without checking for non null required values
+     */
+    public ProductRemoveFromCategoryAction buildUnchecked() {
         return new ProductRemoveFromCategoryActionImpl(category, staged);
     }
 

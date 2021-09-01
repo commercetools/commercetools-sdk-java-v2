@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddToCategoryChangeBuilder {
+public final class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> {
 
     private String change;
 
@@ -21,6 +23,12 @@ public final class AddToCategoryChangeBuilder {
         return this;
     }
 
+    public AddToCategoryChangeBuilder category(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public AddToCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
         this.category = category;
         return this;
@@ -32,6 +40,22 @@ public final class AddToCategoryChangeBuilder {
         return this;
     }
 
+    public AddToCategoryChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public AddToCategoryChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
     public AddToCategoryChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
@@ -40,6 +64,22 @@ public final class AddToCategoryChangeBuilder {
 
     public AddToCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public AddToCategoryChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public AddToCategoryChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -66,6 +106,17 @@ public final class AddToCategoryChangeBuilder {
     }
 
     public AddToCategoryChange build() {
+        Objects.requireNonNull(change, AddToCategoryChange.class + ": change is missing");
+        Objects.requireNonNull(category, AddToCategoryChange.class + ": category is missing");
+        Objects.requireNonNull(previousValue, AddToCategoryChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddToCategoryChange.class + ": nextValue is missing");
+        return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
+    }
+
+    /**
+     * builds AddToCategoryChange without checking for non null required values
+     */
+    public AddToCategoryChange buildUnchecked() {
         return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.review;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReviewRatingStatisticsBuilder {
+public final class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatistics> {
 
     private Double averageRating;
 
@@ -64,6 +65,18 @@ public final class ReviewRatingStatisticsBuilder {
     }
 
     public ReviewRatingStatistics build() {
+        Objects.requireNonNull(averageRating, ReviewRatingStatistics.class + ": averageRating is missing");
+        Objects.requireNonNull(highestRating, ReviewRatingStatistics.class + ": highestRating is missing");
+        Objects.requireNonNull(lowestRating, ReviewRatingStatistics.class + ": lowestRating is missing");
+        Objects.requireNonNull(count, ReviewRatingStatistics.class + ": count is missing");
+        Objects.requireNonNull(ratingsDistribution, ReviewRatingStatistics.class + ": ratingsDistribution is missing");
+        return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
+    }
+
+    /**
+     * builds ReviewRatingStatistics without checking for non null required values
+     */
+    public ReviewRatingStatistics buildUnchecked() {
         return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
     }
 

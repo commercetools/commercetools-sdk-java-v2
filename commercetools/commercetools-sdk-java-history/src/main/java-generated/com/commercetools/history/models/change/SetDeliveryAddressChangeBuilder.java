@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDeliveryAddressChangeBuilder {
+public final class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddressChange> {
 
     private String change;
 
@@ -26,8 +28,20 @@ public final class SetDeliveryAddressChangeBuilder {
         return this;
     }
 
+    public SetDeliveryAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
     public SetDeliveryAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetDeliveryAddressChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -54,6 +68,17 @@ public final class SetDeliveryAddressChangeBuilder {
     }
 
     public SetDeliveryAddressChange build() {
+        Objects.requireNonNull(change, SetDeliveryAddressChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, SetDeliveryAddressChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(nextValue, SetDeliveryAddressChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDeliveryAddressChange.class + ": previousValue is missing");
+        return new SetDeliveryAddressChangeImpl(change, deliveryId, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetDeliveryAddressChange without checking for non null required values
+     */
+    public SetDeliveryAddressChange buildUnchecked() {
         return new SetDeliveryAddressChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 

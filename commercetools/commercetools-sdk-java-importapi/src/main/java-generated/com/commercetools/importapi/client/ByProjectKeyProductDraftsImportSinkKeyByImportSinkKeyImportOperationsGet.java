@@ -14,8 +14,11 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
-*  <p>Retrieves all ProductDraft ImportOperations of a given ImportSink key.</p>
+*  <p>Retrieves all import operations of an import sink key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet extends
@@ -109,56 +112,112 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperatio
         this.importSinkKey = importSinkKey;
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final double limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final double offset) {
         return copy().addQueryParam("offset", offset);
     }
 
+    /**
+     * set sort with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
     }
 
+    /**
+     * add additional sort query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort) {
         return copy().addQueryParam("sort", sort);
     }
 
+    /**
+     * set resourceKey with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
             final String resourceKey) {
         return copy().withQueryParam("resourceKey", resourceKey);
     }
 
+    /**
+     * add additional resourceKey query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
             final String resourceKey) {
         return copy().addQueryParam("resourceKey", resourceKey);
     }
 
+    /**
+     * set state with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withState(
             final ProcessingState state) {
         return copy().withQueryParam("state", state);
     }
 
+    /**
+     * add additional state query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addState(
             final ProcessingState state) {
         return copy().addQueryParam("state", state);
     }
 
+    /**
+     * set debug with the specificied value
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {
         return copy().withQueryParam("debug", debug);
     }
 
+    /**
+     * add additional debug query parameter
+     */
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {
         return copy().addQueryParam("debug", debug);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet that = (ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkKey, that.importSinkKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();
     }
 
     @Override

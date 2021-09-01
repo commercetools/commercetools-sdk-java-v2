@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPagedQueryResponseBuilder {
+public final class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class OrderPagedQueryResponseBuilder {
         return this;
     }
 
+    public OrderPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
+        return this;
+    }
+
+    public OrderPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
+        return this;
+    }
+
     public OrderPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.order.Order> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class OrderPagedQueryResponseBuilder {
     }
 
     public OrderPagedQueryResponse build() {
+        Objects.requireNonNull(limit, OrderPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, OrderPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, OrderPagedQueryResponse.class + ": results is missing");
+        return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds OrderPagedQueryResponse without checking for non null required values
+     */
+    public OrderPagedQueryResponse buildUnchecked() {
         return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

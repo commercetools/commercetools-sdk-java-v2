@@ -2,13 +2,15 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionBadResponseErrorBuilder {
+public final class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadResponseError> {
 
     private String message;
 
@@ -26,6 +28,12 @@ public final class ExtensionBadResponseErrorBuilder {
     }
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedMessage = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ExtensionBadResponseErrorBuilder localizedMessage(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
@@ -33,6 +41,12 @@ public final class ExtensionBadResponseErrorBuilder {
 
     public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
         this.extensionExtraInfo = extensionExtraInfo;
+        return this;
+    }
+
+    public ExtensionBadResponseErrorBuilder errorByExtension(
+            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
+        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();
         return this;
     }
 
@@ -61,6 +75,15 @@ public final class ExtensionBadResponseErrorBuilder {
     }
 
     public ExtensionBadResponseError build() {
+        Objects.requireNonNull(message, ExtensionBadResponseError.class + ": message is missing");
+        Objects.requireNonNull(errorByExtension, ExtensionBadResponseError.class + ": errorByExtension is missing");
+        return new ExtensionBadResponseErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
+    }
+
+    /**
+     * builds ExtensionBadResponseError without checking for non null required values
+     */
+    public ExtensionBadResponseError buildUnchecked() {
         return new ExtensionBadResponseErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryPagedQueryResponseBuilder {
+public final class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQueryResponse> {
 
     private Long limit;
 
@@ -46,6 +48,22 @@ public final class CategoryPagedQueryResponseBuilder {
         return this;
     }
 
+    public CategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
+        return this;
+    }
+
+    public CategoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
+        return this;
+    }
+
     public CategoryPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.category.Category> results) {
         this.results = results;
@@ -74,6 +92,17 @@ public final class CategoryPagedQueryResponseBuilder {
     }
 
     public CategoryPagedQueryResponse build() {
+        Objects.requireNonNull(limit, CategoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, CategoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, CategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, CategoryPagedQueryResponse.class + ": results is missing");
+        return new CategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds CategoryPagedQueryResponse without checking for non null required values
+     */
+    public CategoryPagedQueryResponse buildUnchecked() {
         return new CategoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

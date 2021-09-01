@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingRateBuilder {
+public final class ShippingRateBuilder implements Builder<ShippingRate> {
 
     private com.commercetools.history.models.common.Money price;
 
@@ -16,8 +18,20 @@ public final class ShippingRateBuilder {
 
     private java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers;
 
+    public ShippingRateBuilder price(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingRateBuilder price(final com.commercetools.history.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+
+    public ShippingRateBuilder freeAbove(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.freeAbove = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -33,6 +47,24 @@ public final class ShippingRateBuilder {
 
     public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
+        return this;
+    }
+
+    public ShippingRateBuilder withTiers(
+            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers
+                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingRateBuilder plusTiers(
+            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers
+                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
         return this;
     }
 
@@ -59,6 +91,17 @@ public final class ShippingRateBuilder {
     }
 
     public ShippingRate build() {
+        Objects.requireNonNull(price, ShippingRate.class + ": price is missing");
+        Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");
+        Objects.requireNonNull(isMatching, ShippingRate.class + ": isMatching is missing");
+        Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");
+        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
+    }
+
+    /**
+     * builds ShippingRate without checking for non null required values
+     */
+    public ShippingRate buildUnchecked() {
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }
 

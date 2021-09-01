@@ -2,13 +2,15 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetCustomTypeActionBuilder {
+public final class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCustomTypeAction> {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -19,6 +21,12 @@ public final class PaymentSetCustomTypeActionBuilder {
     public PaymentSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public PaymentSetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -39,6 +47,13 @@ public final class PaymentSetCustomTypeActionBuilder {
     }
 
     public PaymentSetCustomTypeAction build() {
+        return new PaymentSetCustomTypeActionImpl(type, fields);
+    }
+
+    /**
+     * builds PaymentSetCustomTypeAction without checking for non null required values
+     */
+    public PaymentSetCustomTypeAction buildUnchecked() {
         return new PaymentSetCustomTypeActionImpl(type, fields);
     }
 

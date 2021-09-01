@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>This endpoint takes arbitrary product names or image URLs and generates recommendations from a general set of categories, which cover a broad range of industries. The full list of supported categories can be found <a href="https://docs.commercetools.com/category_recommendations_supported_categories.txt">here</a>. These are independent of the categories that are actually defined in your project. The main  purpose of this API is to provide a quick way to test the behavior of the category recommendations engine for different names and images. In contrast to the <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#project-specific-category-recommendations">project-specific endpoint</a>, this endpoint does not have <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#activating-the-api">activation criteria</a> and is enabled for all projects.</p>
 */
@@ -90,52 +93,106 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
         this.projectKey = projectKey;
     }
 
+    /**
+     * set productImageUrl with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl) {
         return copy().withQueryParam("productImageUrl", productImageUrl);
     }
 
+    /**
+     * add additional productImageUrl query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final String productImageUrl) {
         return copy().addQueryParam("productImageUrl", productImageUrl);
     }
 
+    /**
+     * set productName with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName) {
         return copy().withQueryParam("productName", productName);
     }
 
+    /**
+     * add additional productName query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final String productName) {
         return copy().addQueryParam("productName", productName);
     }
 
+    /**
+     * set limit with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
+    /**
+     * add additional limit query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
+    /**
+     * set offset with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
+    /**
+     * add additional offset query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
+    /**
+     * set confidenceMin with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
     }
 
+    /**
+     * add additional confidenceMin query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final double confidenceMin) {
         return copy().addQueryParam("confidenceMin", confidenceMin);
     }
 
+    /**
+     * set confidenceMax with the specificied value
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
     }
 
+    /**
+     * add additional confidenceMax query parameter
+     */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyRecommendationsGeneralCategoriesGet that = (ByProjectKeyRecommendationsGeneralCategoriesGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
     }
 
     @Override

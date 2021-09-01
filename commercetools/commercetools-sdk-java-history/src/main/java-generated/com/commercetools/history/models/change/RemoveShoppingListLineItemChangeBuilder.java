@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveShoppingListLineItemChangeBuilder {
+public final class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveShoppingListLineItemChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class RemoveShoppingListLineItemChangeBuilder {
     }
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+        return this;
+    }
+
+    public RemoveShoppingListLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.LineItem previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveShoppingListLineItemChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class RemoveShoppingListLineItemChangeBuilder {
     }
 
     public RemoveShoppingListLineItemChange build() {
+        Objects.requireNonNull(change, RemoveShoppingListLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveShoppingListLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveShoppingListLineItemChange.class + ": nextValue is missing");
+        return new RemoveShoppingListLineItemChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds RemoveShoppingListLineItemChange without checking for non null required values
+     */
+    public RemoveShoppingListLineItemChange buildUnchecked() {
         return new RemoveShoppingListLineItemChangeImpl(change, previousValue, nextValue);
     }
 

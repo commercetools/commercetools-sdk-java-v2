@@ -3,10 +3,11 @@ package com.commercetools.api.models.customer_group;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupChangeNameActionBuilder {
+public final class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGroupChangeNameAction> {
 
     private String name;
 
@@ -20,6 +21,14 @@ public final class CustomerGroupChangeNameActionBuilder {
     }
 
     public CustomerGroupChangeNameAction build() {
+        Objects.requireNonNull(name, CustomerGroupChangeNameAction.class + ": name is missing");
+        return new CustomerGroupChangeNameActionImpl(name);
+    }
+
+    /**
+     * builds CustomerGroupChangeNameAction without checking for non null required values
+     */
+    public CustomerGroupChangeNameAction buildUnchecked() {
         return new CustomerGroupChangeNameActionImpl(name);
     }
 

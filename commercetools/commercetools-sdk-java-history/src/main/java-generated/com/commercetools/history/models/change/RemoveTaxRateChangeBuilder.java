@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveTaxRateChangeBuilder {
+public final class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class RemoveTaxRateChangeBuilder {
     }
 
     public RemoveTaxRateChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    public RemoveTaxRateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveTaxRateChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class RemoveTaxRateChangeBuilder {
     }
 
     public RemoveTaxRateChange build() {
+        Objects.requireNonNull(change, RemoveTaxRateChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveTaxRateChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveTaxRateChange.class + ": nextValue is missing");
+        return new RemoveTaxRateChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds RemoveTaxRateChange without checking for non null required values
+     */
+    public RemoveTaxRateChange buildUnchecked() {
         return new RemoveTaxRateChangeImpl(change, previousValue, nextValue);
     }
 

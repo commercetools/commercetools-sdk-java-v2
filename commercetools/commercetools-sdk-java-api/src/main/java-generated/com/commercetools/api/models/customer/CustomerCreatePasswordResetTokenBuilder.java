@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerCreatePasswordResetTokenBuilder {
+public final class CustomerCreatePasswordResetTokenBuilder implements Builder<CustomerCreatePasswordResetToken> {
 
     private String email;
 
@@ -35,6 +36,14 @@ public final class CustomerCreatePasswordResetTokenBuilder {
     }
 
     public CustomerCreatePasswordResetToken build() {
+        Objects.requireNonNull(email, CustomerCreatePasswordResetToken.class + ": email is missing");
+        return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
+    }
+
+    /**
+     * builds CustomerCreatePasswordResetToken without checking for non null required values
+     */
+    public CustomerCreatePasswordResetToken buildUnchecked() {
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
     }
 

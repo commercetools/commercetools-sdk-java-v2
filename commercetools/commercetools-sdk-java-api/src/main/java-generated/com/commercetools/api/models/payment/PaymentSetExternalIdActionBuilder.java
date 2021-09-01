@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetExternalIdActionBuilder {
+public final class PaymentSetExternalIdActionBuilder implements Builder<PaymentSetExternalIdAction> {
 
     @Nullable
     private String externalId;
@@ -24,6 +25,13 @@ public final class PaymentSetExternalIdActionBuilder {
     }
 
     public PaymentSetExternalIdAction build() {
+        return new PaymentSetExternalIdActionImpl(externalId);
+    }
+
+    /**
+     * builds PaymentSetExternalIdAction without checking for non null required values
+     */
+    public PaymentSetExternalIdAction buildUnchecked() {
         return new PaymentSetExternalIdActionImpl(externalId);
     }
 

@@ -3,10 +3,12 @@ package com.commercetools.api.models.type;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeChangeFieldDefinitionOrderActionBuilder {
+public final class TypeChangeFieldDefinitionOrderActionBuilder
+        implements Builder<TypeChangeFieldDefinitionOrderAction> {
 
     private java.util.List<String> fieldNames;
 
@@ -25,6 +27,14 @@ public final class TypeChangeFieldDefinitionOrderActionBuilder {
     }
 
     public TypeChangeFieldDefinitionOrderAction build() {
+        Objects.requireNonNull(fieldNames, TypeChangeFieldDefinitionOrderAction.class + ": fieldNames is missing");
+        return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
+    }
+
+    /**
+     * builds TypeChangeFieldDefinitionOrderAction without checking for non null required values
+     */
+    public TypeChangeFieldDefinitionOrderAction buildUnchecked() {
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
     }
 

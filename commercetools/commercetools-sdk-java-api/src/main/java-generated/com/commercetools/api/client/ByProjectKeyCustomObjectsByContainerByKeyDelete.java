@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Delete CustomObject by container and key</p>
 */
@@ -105,28 +108,67 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         this.key = key;
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyCustomObjectsByContainerByKeyDelete that = (ByProjectKeyCustomObjectsByContainerByKeyDelete) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(container, that.container)
+                .append(key, that.key)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(container).append(key).toHashCode();
     }
 
     @Override

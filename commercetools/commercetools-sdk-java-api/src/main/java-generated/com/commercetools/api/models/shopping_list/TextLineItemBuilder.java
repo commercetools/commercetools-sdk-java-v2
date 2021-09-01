@@ -2,13 +2,15 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TextLineItemBuilder {
+public final class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private java.time.ZonedDateTime addedAt;
 
@@ -29,8 +31,20 @@ public final class TextLineItemBuilder {
         return this;
     }
 
+    public TextLineItemBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    public TextLineItemBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -42,6 +56,12 @@ public final class TextLineItemBuilder {
 
     public TextLineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public TextLineItemBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -82,6 +102,17 @@ public final class TextLineItemBuilder {
     }
 
     public TextLineItem build() {
+        Objects.requireNonNull(addedAt, TextLineItem.class + ": addedAt is missing");
+        Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
+        Objects.requireNonNull(name, TextLineItem.class + ": name is missing");
+        Objects.requireNonNull(quantity, TextLineItem.class + ": quantity is missing");
+        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+    }
+
+    /**
+     * builds TextLineItem without checking for non null required values
+     */
+    public TextLineItem buildUnchecked() {
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
     }
 

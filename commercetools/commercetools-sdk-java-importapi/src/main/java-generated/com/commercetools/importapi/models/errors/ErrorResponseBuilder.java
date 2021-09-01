@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ErrorResponseBuilder {
+public final class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     private Integer statusCode;
 
@@ -79,6 +80,15 @@ public final class ErrorResponseBuilder {
     }
 
     public ErrorResponse build() {
+        Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
+        Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
+        return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
+    }
+
+    /**
+     * builds ErrorResponse without checking for non null required values
+     */
+    public ErrorResponse buildUnchecked() {
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
     }
 

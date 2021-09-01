@@ -14,6 +14,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>This action sets or removes the custom type for an existing customer group.
+*  If present, this action overwrites any existing <a href="/../api/projects/custom-fields#custom">custom</a> type and fields.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupSetCustomTypeActionImpl.class)
 public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAction {
@@ -21,15 +25,15 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+    *  <p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
-    *  Sets the custom fields to this value.</p>
+    *  <p>Valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
+    *  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p>
     */
     @Valid
     @JsonProperty("fields")

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetDeliveryItemsChangeBuilder {
+public final class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsChange> {
 
     private String change;
 
@@ -32,6 +34,22 @@ public final class SetDeliveryItemsChangeBuilder {
         return this;
     }
 
+    public SetDeliveryItemsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public SetDeliveryItemsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
     public SetDeliveryItemsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
         this.nextValue = nextValue;
@@ -41,6 +59,22 @@ public final class SetDeliveryItemsChangeBuilder {
     public SetDeliveryItemsChangeBuilder previousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public SetDeliveryItemsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    public SetDeliveryItemsChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -67,6 +101,17 @@ public final class SetDeliveryItemsChangeBuilder {
     }
 
     public SetDeliveryItemsChange build() {
+        Objects.requireNonNull(change, SetDeliveryItemsChange.class + ": change is missing");
+        Objects.requireNonNull(deliveryId, SetDeliveryItemsChange.class + ": deliveryId is missing");
+        Objects.requireNonNull(nextValue, SetDeliveryItemsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetDeliveryItemsChange.class + ": previousValue is missing");
+        return new SetDeliveryItemsChangeImpl(change, deliveryId, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetDeliveryItemsChange without checking for non null required values
+     */
+    public SetDeliveryItemsChange buildUnchecked() {
         return new SetDeliveryItemsChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 

@@ -2,13 +2,16 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
+public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder
+        implements Builder<MyShoppingListSetTextLineItemCustomTypeAction> {
 
     private String textLineItemId;
 
@@ -24,8 +27,20 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
     }
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public MyShoppingListSetTextLineItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
+        return this;
+    }
+
+    public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
 
@@ -50,6 +65,15 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
     }
 
     public MyShoppingListSetTextLineItemCustomTypeAction build() {
+        Objects.requireNonNull(textLineItemId,
+            MyShoppingListSetTextLineItemCustomTypeAction.class + ": textLineItemId is missing");
+        return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);
+    }
+
+    /**
+     * builds MyShoppingListSetTextLineItemCustomTypeAction without checking for non null required values
+     */
+    public MyShoppingListSetTextLineItemCustomTypeAction buildUnchecked() {
         return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);
     }
 

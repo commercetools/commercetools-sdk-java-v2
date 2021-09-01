@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizableEnumAttributeBuilder {
+public final class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumAttribute> {
 
     @Nullable
     private String name;
@@ -35,6 +36,14 @@ public final class LocalizableEnumAttributeBuilder {
     }
 
     public LocalizableEnumAttribute build() {
+        Objects.requireNonNull(value, LocalizableEnumAttribute.class + ": value is missing");
+        return new LocalizableEnumAttributeImpl(name, value);
+    }
+
+    /**
+     * builds LocalizableEnumAttribute without checking for non null required values
+     */
+    public LocalizableEnumAttribute buildUnchecked() {
         return new LocalizableEnumAttributeImpl(name, value);
     }
 

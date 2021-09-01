@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OutOfStockErrorBuilder {
+public final class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     private String message;
 
@@ -52,6 +53,16 @@ public final class OutOfStockErrorBuilder {
     }
 
     public OutOfStockError build() {
+        Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");
+        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");
+        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");
+        return new OutOfStockErrorImpl(message, lineItems, skus);
+    }
+
+    /**
+     * builds OutOfStockError without checking for non null required values
+     */
+    public OutOfStockError buildUnchecked() {
         return new OutOfStockErrorImpl(message, lineItems, skus);
     }
 

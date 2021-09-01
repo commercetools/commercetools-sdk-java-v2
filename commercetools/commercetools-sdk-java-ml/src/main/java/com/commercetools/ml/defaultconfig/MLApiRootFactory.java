@@ -26,6 +26,14 @@ public class MLApiRootFactory {
         return create(clientSupplier).withProjectKey(projectKey);
     }
 
+    public static ApiRoot create(final ClientCredentials credentials) {
+        return MLApiRootBuilder.of().defaultClient(credentials).build();
+    }
+
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return MLApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
+    }
+
     public static ApiRoot create(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
         return MLApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).build();
@@ -54,6 +62,10 @@ public class MLApiRootFactory {
 
     public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
         return ApiRoot.fromClient(clientSupplier.get());
+    }
+
+    public static ApiHttpClient defaultClient(final ClientCredentials credentials) {
+        return MLApiRootBuilder.of().defaultClient(credentials).buildClient();
     }
 
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

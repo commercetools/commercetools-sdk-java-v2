@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddPlainEnumValueChangeBuilder {
+public final class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValueChange> {
 
     private String change;
 
@@ -21,6 +23,12 @@ public final class AddPlainEnumValueChangeBuilder {
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public AddPlainEnumValueChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +51,16 @@ public final class AddPlainEnumValueChangeBuilder {
     }
 
     public AddPlainEnumValueChange build() {
+        Objects.requireNonNull(change, AddPlainEnumValueChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, AddPlainEnumValueChange.class + ": attributeName is missing");
+        Objects.requireNonNull(nextValue, AddPlainEnumValueChange.class + ": nextValue is missing");
+        return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
+    }
+
+    /**
+     * builds AddPlainEnumValueChange without checking for non null required values
+     */
+    public AddPlainEnumValueChange buildUnchecked() {
         return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
     }
 

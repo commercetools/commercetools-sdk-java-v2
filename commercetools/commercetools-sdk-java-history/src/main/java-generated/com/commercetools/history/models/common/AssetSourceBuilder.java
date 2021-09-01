@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetSourceBuilder {
+public final class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
 
@@ -23,6 +25,12 @@ public final class AssetSourceBuilder {
 
     public AssetSourceBuilder key(final String key) {
         this.key = key;
+        return this;
+    }
+
+    public AssetSourceBuilder dimensions(
+            Function<com.commercetools.history.models.common.AssetDimensionsBuilder, com.commercetools.history.models.common.AssetDimensionsBuilder> builder) {
+        this.dimensions = builder.apply(com.commercetools.history.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
 
@@ -53,6 +61,17 @@ public final class AssetSourceBuilder {
     }
 
     public AssetSource build() {
+        Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
+        Objects.requireNonNull(key, AssetSource.class + ": key is missing");
+        Objects.requireNonNull(dimensions, AssetSource.class + ": dimensions is missing");
+        Objects.requireNonNull(contentType, AssetSource.class + ": contentType is missing");
+        return new AssetSourceImpl(uri, key, dimensions, contentType);
+    }
+
+    /**
+     * builds AssetSource without checking for non null required values
+     */
+    public AssetSource buildUnchecked() {
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 

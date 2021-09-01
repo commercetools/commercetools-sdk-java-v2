@@ -2,13 +2,15 @@
 package com.commercetools.importapi.models.prices;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceImportBuilder {
+public final class PriceImportBuilder implements Builder<PriceImport> {
 
     private String key;
 
@@ -71,14 +73,34 @@ public final class PriceImportBuilder {
     }
 
     public PriceImportBuilder customerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PriceImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
     public PriceImportBuilder channel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public PriceImportBuilder channel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
         this.channel = channel;
+        return this;
+    }
+
+    public PriceImportBuilder discounted(
+            Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -98,9 +120,31 @@ public final class PriceImportBuilder {
         return this;
     }
 
+    public PriceImportBuilder withTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public PriceImportBuilder plusTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
     public PriceImportBuilder tiers(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
         this.tiers = tiers;
+        return this;
+    }
+
+    public PriceImportBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 
@@ -110,8 +154,22 @@ public final class PriceImportBuilder {
     }
 
     public PriceImportBuilder productVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public PriceImportBuilder productVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
+        return this;
+    }
+
+    public PriceImportBuilder product(
+            Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -182,6 +240,18 @@ public final class PriceImportBuilder {
     }
 
     public PriceImport build() {
+        Objects.requireNonNull(key, PriceImport.class + ": key is missing");
+        Objects.requireNonNull(value, PriceImport.class + ": value is missing");
+        Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");
+        Objects.requireNonNull(product, PriceImport.class + ": product is missing");
+        return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
+            publish, tiers, custom, productVariant, product);
+    }
+
+    /**
+     * builds PriceImport without checking for non null required values
+     */
+    public PriceImport buildUnchecked() {
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
             publish, tiers, custom, productVariant, product);
     }

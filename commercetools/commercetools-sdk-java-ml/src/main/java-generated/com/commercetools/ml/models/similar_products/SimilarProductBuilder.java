@@ -2,13 +2,15 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductBuilder {
+public final class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     @Nullable
     private com.commercetools.ml.models.common.ProductReference product;
@@ -19,6 +21,12 @@ public final class SimilarProductBuilder {
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
+    public SimilarProductBuilder product(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
@@ -26,6 +34,12 @@ public final class SimilarProductBuilder {
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
+        return this;
+    }
+
+    public SimilarProductBuilder meta(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder.of()).build();
         return this;
     }
 
@@ -51,6 +65,13 @@ public final class SimilarProductBuilder {
     }
 
     public SimilarProduct build() {
+        return new SimilarProductImpl(product, variantId, meta);
+    }
+
+    /**
+     * builds SimilarProduct without checking for non null required values
+     */
+    public SimilarProduct buildUnchecked() {
         return new SimilarProductImpl(product, variantId, meta);
     }
 

@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentSetKeyActionBuilder {
+public final class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> {
 
     @Nullable
     private String key;
@@ -24,6 +25,13 @@ public final class PaymentSetKeyActionBuilder {
     }
 
     public PaymentSetKeyAction build() {
+        return new PaymentSetKeyActionImpl(key);
+    }
+
+    /**
+     * builds PaymentSetKeyAction without checking for non null required values
+     */
+    public PaymentSetKeyAction buildUnchecked() {
         return new PaymentSetKeyActionImpl(key);
     }
 

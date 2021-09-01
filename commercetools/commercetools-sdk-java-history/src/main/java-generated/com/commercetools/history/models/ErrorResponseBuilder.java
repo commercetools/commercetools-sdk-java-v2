@@ -2,13 +2,15 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ErrorResponseBuilder {
+public final class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     private Integer statusCode;
 
@@ -48,6 +50,22 @@ public final class ErrorResponseBuilder {
         return this;
     }
 
+    public ErrorResponseBuilder withErrors(
+            Function<com.commercetools.history.models.ErrorObjectBuilder, com.commercetools.history.models.ErrorObjectBuilder> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.history.models.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public ErrorResponseBuilder plusErrors(
+            Function<com.commercetools.history.models.ErrorObjectBuilder, com.commercetools.history.models.ErrorObjectBuilder> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.history.models.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
     public ErrorResponseBuilder errors(
             @Nullable final java.util.List<com.commercetools.history.models.ErrorObject> errors) {
         this.errors = errors;
@@ -78,6 +96,15 @@ public final class ErrorResponseBuilder {
     }
 
     public ErrorResponse build() {
+        Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
+        Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
+        return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
+    }
+
+    /**
+     * builds ErrorResponse without checking for non null required values
+     */
+    public ErrorResponse buildUnchecked() {
         return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelReferenceBuilder {
+public final class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     private String id;
 
@@ -17,6 +19,12 @@ public final class ChannelReferenceBuilder {
 
     public ChannelReferenceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public ChannelReferenceBuilder obj(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build();
         return this;
     }
 
@@ -35,6 +43,14 @@ public final class ChannelReferenceBuilder {
     }
 
     public ChannelReference build() {
+        Objects.requireNonNull(id, ChannelReference.class + ": id is missing");
+        return new ChannelReferenceImpl(id, obj);
+    }
+
+    /**
+     * builds ChannelReference without checking for non null required values
+     */
+    public ChannelReference buildUnchecked() {
         return new ChannelReferenceImpl(id, obj);
     }
 

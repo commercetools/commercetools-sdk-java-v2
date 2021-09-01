@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TransitionCustomLineItemStateChangeBuilder {
+public final class TransitionCustomLineItemStateChangeBuilder implements Builder<TransitionCustomLineItemStateChange> {
 
     private String change;
 
@@ -39,6 +41,22 @@ public final class TransitionCustomLineItemStateChangeBuilder {
         return this;
     }
 
+    public TransitionCustomLineItemStateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+        return this;
+    }
+
     public TransitionCustomLineItemStateChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
         this.nextValue = nextValue;
@@ -48,6 +66,22 @@ public final class TransitionCustomLineItemStateChangeBuilder {
     public TransitionCustomLineItemStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.ItemState... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+        return this;
+    }
+
+    public TransitionCustomLineItemStateChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public TransitionCustomLineItemStateChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
         return this;
     }
 
@@ -78,6 +112,18 @@ public final class TransitionCustomLineItemStateChangeBuilder {
     }
 
     public TransitionCustomLineItemStateChange build() {
+        Objects.requireNonNull(change, TransitionCustomLineItemStateChange.class + ": change is missing");
+        Objects.requireNonNull(lineItemId, TransitionCustomLineItemStateChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(stateId, TransitionCustomLineItemStateChange.class + ": stateId is missing");
+        Objects.requireNonNull(nextValue, TransitionCustomLineItemStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, TransitionCustomLineItemStateChange.class + ": previousValue is missing");
+        return new TransitionCustomLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
+    }
+
+    /**
+     * builds TransitionCustomLineItemStateChange without checking for non null required values
+     */
+    public TransitionCustomLineItemStateChange buildUnchecked() {
         return new TransitionCustomLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddBillingAddressIdChangeBuilder {
+public final class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddressIdChange> {
 
     private String change;
 
@@ -41,6 +43,12 @@ public final class AddBillingAddressIdChangeBuilder {
         return this;
     }
 
+    public AddBillingAddressIdChangeBuilder address(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
     public AddBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {
         this.address = address;
         return this;
@@ -63,6 +71,17 @@ public final class AddBillingAddressIdChangeBuilder {
     }
 
     public AddBillingAddressIdChange build() {
+        Objects.requireNonNull(change, AddBillingAddressIdChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddBillingAddressIdChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, AddBillingAddressIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(address, AddBillingAddressIdChange.class + ": address is missing");
+        return new AddBillingAddressIdChangeImpl(change, nextValue, previousValue, address);
+    }
+
+    /**
+     * builds AddBillingAddressIdChange without checking for non null required values
+     */
+    public AddBillingAddressIdChange buildUnchecked() {
         return new AddBillingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 

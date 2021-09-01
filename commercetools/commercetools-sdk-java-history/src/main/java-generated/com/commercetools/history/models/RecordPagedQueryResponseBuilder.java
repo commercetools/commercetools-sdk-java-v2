@@ -2,11 +2,13 @@
 package com.commercetools.history.models;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordPagedQueryResponseBuilder {
+public final class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQueryResponse> {
 
     private Integer limit;
 
@@ -43,6 +45,22 @@ public final class RecordPagedQueryResponseBuilder {
         return this;
     }
 
+    public RecordPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
+        return this;
+    }
+
+    public RecordPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
+        return this;
+    }
+
     public RecordPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.history.models.Record> results) {
         this.results = results;
@@ -70,6 +88,18 @@ public final class RecordPagedQueryResponseBuilder {
     }
 
     public RecordPagedQueryResponse build() {
+        Objects.requireNonNull(limit, RecordPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, RecordPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(total, RecordPagedQueryResponse.class + ": total is missing");
+        Objects.requireNonNull(offset, RecordPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, RecordPagedQueryResponse.class + ": results is missing");
+        return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds RecordPagedQueryResponse without checking for non null required values
+     */
+    public RecordPagedQueryResponse buildUnchecked() {
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

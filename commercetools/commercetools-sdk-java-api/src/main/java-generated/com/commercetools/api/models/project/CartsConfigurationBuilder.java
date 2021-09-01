@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartsConfigurationBuilder {
+public final class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     @Nullable
     private Boolean countryTaxRateFallbackEnabled;
@@ -39,6 +40,13 @@ public final class CartsConfigurationBuilder {
     }
 
     public CartsConfiguration build() {
+        return new CartsConfigurationImpl(countryTaxRateFallbackEnabled, deleteDaysAfterLastModification);
+    }
+
+    /**
+     * builds CartsConfiguration without checking for non null required values
+     */
+    public CartsConfiguration buildUnchecked() {
         return new CartsConfigurationImpl(countryTaxRateFallbackEnabled, deleteDaysAfterLastModification);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetDraftBuilder {
+public final class AssetDraftBuilder implements Builder<AssetDraft> {
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
@@ -31,13 +33,41 @@ public final class AssetDraftBuilder {
         return this;
     }
 
+    public AssetDraftBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public AssetDraftBuilder plusSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
     public AssetDraftBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
 
+    public AssetDraftBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public AssetDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public AssetDraftBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -54,6 +84,12 @@ public final class AssetDraftBuilder {
 
     public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    public AssetDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -96,6 +132,15 @@ public final class AssetDraftBuilder {
     }
 
     public AssetDraft build() {
+        Objects.requireNonNull(sources, AssetDraft.class + ": sources is missing");
+        Objects.requireNonNull(name, AssetDraft.class + ": name is missing");
+        return new AssetDraftImpl(sources, name, description, tags, custom, key);
+    }
+
+    /**
+     * builds AssetDraft without checking for non null required values
+     */
+    public AssetDraft buildUnchecked() {
         return new AssetDraftImpl(sources, name, description, tags, custom, key);
     }
 

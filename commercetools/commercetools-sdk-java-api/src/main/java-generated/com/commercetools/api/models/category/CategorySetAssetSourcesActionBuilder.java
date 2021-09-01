@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySetAssetSourcesActionBuilder {
+public final class CategorySetAssetSourcesActionBuilder implements Builder<CategorySetAssetSourcesAction> {
 
     @Nullable
     private String assetId;
@@ -34,6 +36,22 @@ public final class CategorySetAssetSourcesActionBuilder {
         return this;
     }
 
+    public CategorySetAssetSourcesActionBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    public CategorySetAssetSourcesActionBuilder plusSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
     public CategorySetAssetSourcesActionBuilder sources(
             final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
@@ -55,6 +73,14 @@ public final class CategorySetAssetSourcesActionBuilder {
     }
 
     public CategorySetAssetSourcesAction build() {
+        Objects.requireNonNull(sources, CategorySetAssetSourcesAction.class + ": sources is missing");
+        return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
+    }
+
+    /**
+     * builds CategorySetAssetSourcesAction without checking for non null required values
+     */
+    public CategorySetAssetSourcesAction buildUnchecked() {
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
     }
 

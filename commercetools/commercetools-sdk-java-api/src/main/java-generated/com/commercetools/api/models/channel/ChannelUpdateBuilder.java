@@ -3,10 +3,11 @@ package com.commercetools.api.models.channel;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelUpdateBuilder {
+public final class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     private Long version;
 
@@ -37,6 +38,15 @@ public final class ChannelUpdateBuilder {
     }
 
     public ChannelUpdate build() {
+        Objects.requireNonNull(version, ChannelUpdate.class + ": version is missing");
+        Objects.requireNonNull(actions, ChannelUpdate.class + ": actions is missing");
+        return new ChannelUpdateImpl(version, actions);
+    }
+
+    /**
+     * builds ChannelUpdate without checking for non null required values
+     */
+    public ChannelUpdate buildUnchecked() {
         return new ChannelUpdateImpl(version, actions);
     }
 

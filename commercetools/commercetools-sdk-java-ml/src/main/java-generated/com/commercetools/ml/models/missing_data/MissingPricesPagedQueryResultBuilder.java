@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.missing_data;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesPagedQueryResultBuilder {
+public final class MissingPricesPagedQueryResultBuilder implements Builder<MissingPricesPagedQueryResult> {
 
     private Long count;
 
@@ -39,9 +41,31 @@ public final class MissingPricesPagedQueryResultBuilder {
         return this;
     }
 
+    public MissingPricesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
+        return this;
+    }
+
+    public MissingPricesPagedQueryResultBuilder plusResults(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
+        return this;
+    }
+
     public MissingPricesPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results) {
         this.results = results;
+        return this;
+    }
+
+    public MissingPricesPagedQueryResultBuilder meta(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder, com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder.of()).build();
         return this;
     }
 
@@ -72,6 +96,18 @@ public final class MissingPricesPagedQueryResultBuilder {
     }
 
     public MissingPricesPagedQueryResult build() {
+        Objects.requireNonNull(count, MissingPricesPagedQueryResult.class + ": count is missing");
+        Objects.requireNonNull(total, MissingPricesPagedQueryResult.class + ": total is missing");
+        Objects.requireNonNull(offset, MissingPricesPagedQueryResult.class + ": offset is missing");
+        Objects.requireNonNull(results, MissingPricesPagedQueryResult.class + ": results is missing");
+        Objects.requireNonNull(meta, MissingPricesPagedQueryResult.class + ": meta is missing");
+        return new MissingPricesPagedQueryResultImpl(count, total, offset, results, meta);
+    }
+
+    /**
+     * builds MissingPricesPagedQueryResult without checking for non null required values
+     */
+    public MissingPricesPagedQueryResult buildUnchecked() {
         return new MissingPricesPagedQueryResultImpl(count, total, offset, results, meta);
     }
 

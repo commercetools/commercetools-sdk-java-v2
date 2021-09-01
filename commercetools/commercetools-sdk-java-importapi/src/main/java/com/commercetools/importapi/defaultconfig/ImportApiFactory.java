@@ -78,6 +78,18 @@ public class ImportApiFactory {
         return ApiRoot.fromClient(clientSupplier.get());
     }
 
+    public static ApiRoot create(final ClientCredentials credentials) {
+        return ImportApiRootBuilder.of().defaultClient(credentials).build();
+    }
+
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+        return ImportApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
+    }
+
+    public static ApiHttpClient defaultClient(final ClientCredentials credentials) {
+        return ImportApiRootBuilder.of().defaultClient(credentials).buildClient();
+    }
+
     public static ApiHttpClient defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
             final String apiEndpoint) {
         return ImportApiRootBuilder.of().defaultClient(apiEndpoint, credentials, tokenEndpoint).buildClient();

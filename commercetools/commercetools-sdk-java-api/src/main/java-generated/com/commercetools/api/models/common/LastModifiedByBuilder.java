@@ -2,13 +2,15 @@
 package com.commercetools.api.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LastModifiedByBuilder {
+public final class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     @Nullable
     private String clientId;
@@ -29,6 +31,12 @@ public final class LastModifiedByBuilder {
 
     public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
+        return this;
+    }
+
+    public LastModifiedByBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
@@ -64,6 +72,13 @@ public final class LastModifiedByBuilder {
     }
 
     public LastModifiedBy build() {
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
+    }
+
+    /**
+     * builds LastModifiedBy without checking for non null required values
+     */
+    public LastModifiedBy buildUnchecked() {
         return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
     }
 

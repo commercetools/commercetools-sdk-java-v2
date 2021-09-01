@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveLocationChangeBuilder {
+public final class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class RemoveLocationChangeBuilder {
     }
 
     public RemoveLocationChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
+        return this;
+    }
+
+    public RemoveLocationChangeBuilder previousValue(
             final com.commercetools.history.models.common.Location previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveLocationChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class RemoveLocationChangeBuilder {
     }
 
     public RemoveLocationChange build() {
+        Objects.requireNonNull(change, RemoveLocationChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, RemoveLocationChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveLocationChange.class + ": nextValue is missing");
+        return new RemoveLocationChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds RemoveLocationChange without checking for non null required values
+     */
+    public RemoveLocationChange buildUnchecked() {
         return new RemoveLocationChangeImpl(change, previousValue, nextValue);
     }
 

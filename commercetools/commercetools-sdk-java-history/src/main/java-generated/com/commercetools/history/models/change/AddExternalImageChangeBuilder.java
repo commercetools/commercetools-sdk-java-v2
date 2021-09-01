@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddExternalImageChangeBuilder {
+public final class AddExternalImageChangeBuilder implements Builder<AddExternalImageChange> {
 
     private String change;
 
@@ -32,6 +34,22 @@ public final class AddExternalImageChangeBuilder {
         return this;
     }
 
+    public AddExternalImageChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public AddExternalImageChangeBuilder plusPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
     public AddExternalImageChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
         this.previousValue = previousValue;
@@ -40,6 +58,22 @@ public final class AddExternalImageChangeBuilder {
 
     public AddExternalImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    public AddExternalImageChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+        return this;
+    }
+
+    public AddExternalImageChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
 
@@ -66,6 +100,17 @@ public final class AddExternalImageChangeBuilder {
     }
 
     public AddExternalImageChange build() {
+        Objects.requireNonNull(change, AddExternalImageChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
+        Objects.requireNonNull(previousValue, AddExternalImageChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddExternalImageChange.class + ": nextValue is missing");
+        return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
+    }
+
+    /**
+     * builds AddExternalImageChange without checking for non null required values
+     */
+    public AddExternalImageChange buildUnchecked() {
         return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
     }
 

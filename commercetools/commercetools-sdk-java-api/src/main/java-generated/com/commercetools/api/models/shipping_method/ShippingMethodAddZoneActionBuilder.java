@@ -3,10 +3,11 @@ package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodAddZoneActionBuilder {
+public final class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMethodAddZoneAction> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
@@ -21,6 +22,14 @@ public final class ShippingMethodAddZoneActionBuilder {
     }
 
     public ShippingMethodAddZoneAction build() {
+        Objects.requireNonNull(zone, ShippingMethodAddZoneAction.class + ": zone is missing");
+        return new ShippingMethodAddZoneActionImpl(zone);
+    }
+
+    /**
+     * builds ShippingMethodAddZoneAction without checking for non null required values
+     */
+    public ShippingMethodAddZoneAction buildUnchecked() {
         return new ShippingMethodAddZoneActionImpl(zone);
     }
 

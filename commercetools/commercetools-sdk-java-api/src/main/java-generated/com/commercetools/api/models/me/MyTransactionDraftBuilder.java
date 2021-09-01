@@ -2,13 +2,15 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyTransactionDraftBuilder {
+public final class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     @Nullable
     private java.time.ZonedDateTime timestamp;
@@ -27,6 +29,12 @@ public final class MyTransactionDraftBuilder {
 
     public MyTransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
+        return this;
+    }
+
+    public MyTransactionDraftBuilder amount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -59,6 +67,15 @@ public final class MyTransactionDraftBuilder {
     }
 
     public MyTransactionDraft build() {
+        Objects.requireNonNull(type, MyTransactionDraft.class + ": type is missing");
+        Objects.requireNonNull(amount, MyTransactionDraft.class + ": amount is missing");
+        return new MyTransactionDraftImpl(timestamp, type, amount, interactionId);
+    }
+
+    /**
+     * builds MyTransactionDraft without checking for non null required values
+     */
+    public MyTransactionDraft buildUnchecked() {
         return new MyTransactionDraftImpl(timestamp, type, amount, interactionId);
     }
 

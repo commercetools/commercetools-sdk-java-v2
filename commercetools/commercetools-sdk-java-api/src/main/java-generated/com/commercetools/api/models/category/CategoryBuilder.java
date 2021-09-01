@@ -2,13 +2,15 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategoryBuilder {
+public final class CategoryBuilder implements Builder<Category> {
 
     private String id;
 
@@ -80,8 +82,20 @@ public final class CategoryBuilder {
     }
 
     public CategoryBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CategoryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CategoryBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -90,13 +104,31 @@ public final class CategoryBuilder {
         return this;
     }
 
+    public CategoryBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CategoryBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    public CategoryBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+
+    public CategoryBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -108,6 +140,22 @@ public final class CategoryBuilder {
 
     public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
         this.ancestors = new ArrayList<>(Arrays.asList(ancestors));
+        return this;
+    }
+
+    public CategoryBuilder withAncestors(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.ancestors = new ArrayList<>();
+        this.ancestors.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public CategoryBuilder plusAncestors(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        if (this.ancestors == null) {
+            this.ancestors = new ArrayList<>();
+        }
+        this.ancestors.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
 
@@ -132,8 +180,20 @@ public final class CategoryBuilder {
         return this;
     }
 
+    public CategoryBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
     public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
+        return this;
+    }
+
+    public CategoryBuilder metaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -144,8 +204,20 @@ public final class CategoryBuilder {
     }
 
     public CategoryBuilder metaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public CategoryBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    public CategoryBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -156,6 +228,22 @@ public final class CategoryBuilder {
 
     public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
+        return this;
+    }
+
+    public CategoryBuilder withAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
+        return this;
+    }
+
+    public CategoryBuilder plusAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
     }
 
@@ -257,6 +345,23 @@ public final class CategoryBuilder {
     }
 
     public Category build() {
+        Objects.requireNonNull(id, Category.class + ": id is missing");
+        Objects.requireNonNull(version, Category.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Category.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Category.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, Category.class + ": name is missing");
+        Objects.requireNonNull(slug, Category.class + ": slug is missing");
+        Objects.requireNonNull(ancestors, Category.class + ": ancestors is missing");
+        Objects.requireNonNull(orderHint, Category.class + ": orderHint is missing");
+        return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
+            description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
+            assets, key);
+    }
+
+    /**
+     * builds Category without checking for non null required values
+     */
+    public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
             assets, key);

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTextLineItemQuantityChangeBuilder {
+public final class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTextLineItemQuantityChange> {
 
     private String change;
 
@@ -18,6 +20,13 @@ public final class ChangeTextLineItemQuantityChangeBuilder {
 
     public ChangeTextLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeTextLineItemQuantityChangeBuilder textLineItem(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.textLineItem = builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -54,6 +63,17 @@ public final class ChangeTextLineItemQuantityChangeBuilder {
     }
 
     public ChangeTextLineItemQuantityChange build() {
+        Objects.requireNonNull(change, ChangeTextLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(textLineItem, ChangeTextLineItemQuantityChange.class + ": textLineItem is missing");
+        Objects.requireNonNull(previousValue, ChangeTextLineItemQuantityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeTextLineItemQuantityChange.class + ": nextValue is missing");
+        return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeTextLineItemQuantityChange without checking for non null required values
+     */
+    public ChangeTextLineItemQuantityChange buildUnchecked() {
         return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);
     }
 

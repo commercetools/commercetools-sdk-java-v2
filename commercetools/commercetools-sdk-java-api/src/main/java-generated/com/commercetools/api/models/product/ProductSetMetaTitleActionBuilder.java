@@ -2,19 +2,27 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetMetaTitleActionBuilder {
+public final class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaTitleAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
 
     @Nullable
     private Boolean staged;
+
+    public ProductSetMetaTitleActionBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
 
     public ProductSetMetaTitleActionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
@@ -38,6 +46,13 @@ public final class ProductSetMetaTitleActionBuilder {
     }
 
     public ProductSetMetaTitleAction build() {
+        return new ProductSetMetaTitleActionImpl(metaTitle, staged);
+    }
+
+    /**
+     * builds ProductSetMetaTitleAction without checking for non null required values
+     */
+    public ProductSetMetaTitleAction buildUnchecked() {
         return new ProductSetMetaTitleActionImpl(metaTitle, staged);
     }
 

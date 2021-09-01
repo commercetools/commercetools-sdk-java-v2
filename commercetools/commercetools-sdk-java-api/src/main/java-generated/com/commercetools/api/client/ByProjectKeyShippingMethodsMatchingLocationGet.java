@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyShippingMethodsMatchingLocationGet extends
         ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
@@ -81,36 +84,78 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
         this.projectKey = projectKey;
     }
 
+    /**
+     * set country with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country) {
         return copy().withQueryParam("country", country);
     }
 
+    /**
+     * add additional country query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final String country) {
         return copy().addQueryParam("country", country);
     }
 
+    /**
+     * set state with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state) {
         return copy().withQueryParam("state", state);
     }
 
+    /**
+     * add additional state query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addState(final String state) {
         return copy().addQueryParam("state", state);
     }
 
+    /**
+     * set currency with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency) {
         return copy().withQueryParam("currency", currency);
     }
 
+    /**
+     * add additional currency query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final String currency) {
         return copy().addQueryParam("currency", currency);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyShippingMethodsMatchingLocationGet that = (ByProjectKeyShippingMethodsMatchingLocationGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
     }
 
     @Override

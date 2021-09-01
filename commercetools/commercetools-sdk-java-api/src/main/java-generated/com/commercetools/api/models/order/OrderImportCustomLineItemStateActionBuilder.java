@@ -2,11 +2,14 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderImportCustomLineItemStateActionBuilder {
+public final class OrderImportCustomLineItemStateActionBuilder
+        implements Builder<OrderImportCustomLineItemStateAction> {
 
     private String customLineItemId;
 
@@ -20,6 +23,22 @@ public final class OrderImportCustomLineItemStateActionBuilder {
     public OrderImportCustomLineItemStateActionBuilder state(
             final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
+        return this;
+    }
+
+    public OrderImportCustomLineItemStateActionBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    public OrderImportCustomLineItemStateActionBuilder plusState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 
@@ -38,6 +57,16 @@ public final class OrderImportCustomLineItemStateActionBuilder {
     }
 
     public OrderImportCustomLineItemStateAction build() {
+        Objects.requireNonNull(customLineItemId,
+            OrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(state, OrderImportCustomLineItemStateAction.class + ": state is missing");
+        return new OrderImportCustomLineItemStateActionImpl(customLineItemId, state);
+    }
+
+    /**
+     * builds OrderImportCustomLineItemStateAction without checking for non null required values
+     */
+    public OrderImportCustomLineItemStateAction buildUnchecked() {
         return new OrderImportCustomLineItemStateActionImpl(customLineItemId, state);
     }
 

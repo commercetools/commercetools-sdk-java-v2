@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class UserProvidedIdentifiersBuilder {
+public final class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdentifiers> {
 
     @Nullable
     private String key;
@@ -54,6 +56,12 @@ public final class UserProvidedIdentifiersBuilder {
     }
 
     public UserProvidedIdentifiersBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public UserProvidedIdentifiersBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
@@ -90,6 +98,13 @@ public final class UserProvidedIdentifiersBuilder {
     }
 
     public UserProvidedIdentifiers build() {
+        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
+    }
+
+    /**
+     * builds UserProvidedIdentifiers without checking for non null required values
+     */
+    public UserProvidedIdentifiers buildUnchecked() {
         return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
     }
 

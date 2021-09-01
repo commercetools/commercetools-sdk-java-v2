@@ -3,10 +3,11 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderChangeOrderStateActionBuilder {
+public final class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOrderStateAction> {
 
     private com.commercetools.api.models.order.OrderState orderState;
 
@@ -21,6 +22,14 @@ public final class OrderChangeOrderStateActionBuilder {
     }
 
     public OrderChangeOrderStateAction build() {
+        Objects.requireNonNull(orderState, OrderChangeOrderStateAction.class + ": orderState is missing");
+        return new OrderChangeOrderStateActionImpl(orderState);
+    }
+
+    /**
+     * builds OrderChangeOrderStateAction without checking for non null required values
+     */
+    public OrderChangeOrderStateAction buildUnchecked() {
         return new OrderChangeOrderStateActionImpl(orderState);
     }
 

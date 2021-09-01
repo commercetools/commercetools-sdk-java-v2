@@ -2,13 +2,15 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceDeletedDeliveryBuilder {
+public final class ResourceDeletedDeliveryBuilder implements Builder<ResourceDeletedDelivery> {
 
     private String projectKey;
 
@@ -31,6 +33,14 @@ public final class ResourceDeletedDeliveryBuilder {
 
     public ResourceDeletedDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+        return this;
+    }
+
+    public ResourceDeletedDeliveryBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -82,6 +92,18 @@ public final class ResourceDeletedDeliveryBuilder {
     }
 
     public ResourceDeletedDelivery build() {
+        Objects.requireNonNull(projectKey, ResourceDeletedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceDeletedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceDeletedDelivery.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceDeletedDelivery.class + ": modifiedAt is missing");
+        return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt, dataErasure);
+    }
+
+    /**
+     * builds ResourceDeletedDelivery without checking for non null required values
+     */
+    public ResourceDeletedDelivery buildUnchecked() {
         return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             modifiedAt, dataErasure);
     }

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.customer_group;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupDraftBuilder {
+public final class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     @Nullable
     private String key;
@@ -16,7 +18,7 @@ public final class CustomerGroupDraftBuilder {
     private String groupName;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -28,7 +30,14 @@ public final class CustomerGroupDraftBuilder {
         return this;
     }
 
-    public CustomerGroupDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public CustomerGroupDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerGroupDraftBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -43,11 +52,19 @@ public final class CustomerGroupDraftBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     public CustomerGroupDraft build() {
+        Objects.requireNonNull(groupName, CustomerGroupDraft.class + ": groupName is missing");
+        return new CustomerGroupDraftImpl(key, groupName, custom);
+    }
+
+    /**
+     * builds CustomerGroupDraft without checking for non null required values
+     */
+    public CustomerGroupDraft buildUnchecked() {
         return new CustomerGroupDraftImpl(key, groupName, custom);
     }
 

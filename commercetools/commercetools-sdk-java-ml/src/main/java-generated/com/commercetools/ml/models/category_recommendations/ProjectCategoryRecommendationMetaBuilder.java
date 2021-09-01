@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProjectCategoryRecommendationMetaBuilder {
+public final class ProjectCategoryRecommendationMetaBuilder implements Builder<ProjectCategoryRecommendationMeta> {
 
     @Nullable
     private String productName;
@@ -54,6 +55,15 @@ public final class ProjectCategoryRecommendationMetaBuilder {
     }
 
     public ProjectCategoryRecommendationMeta build() {
+        Objects.requireNonNull(generalCategoryNames,
+            ProjectCategoryRecommendationMeta.class + ": generalCategoryNames is missing");
+        return new ProjectCategoryRecommendationMetaImpl(productName, productImageUrl, generalCategoryNames);
+    }
+
+    /**
+     * builds ProjectCategoryRecommendationMeta without checking for non null required values
+     */
+    public ProjectCategoryRecommendationMeta buildUnchecked() {
         return new ProjectCategoryRecommendationMetaImpl(productName, productImageUrl, generalCategoryNames);
     }
 

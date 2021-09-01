@@ -2,13 +2,15 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceCreatedDeliveryBuilder {
+public final class ResourceCreatedDeliveryBuilder implements Builder<ResourceCreatedDelivery> {
 
     private String projectKey;
 
@@ -28,6 +30,14 @@ public final class ResourceCreatedDeliveryBuilder {
 
     public ResourceCreatedDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+        return this;
+    }
+
+    public ResourceCreatedDeliveryBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
         return this;
     }
 
@@ -69,6 +79,18 @@ public final class ResourceCreatedDeliveryBuilder {
     }
 
     public ResourceCreatedDelivery build() {
+        Objects.requireNonNull(projectKey, ResourceCreatedDelivery.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceCreatedDelivery.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceCreatedDelivery.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceCreatedDelivery.class + ": modifiedAt is missing");
+        return new ResourceCreatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt);
+    }
+
+    /**
+     * builds ResourceCreatedDelivery without checking for non null required values
+     */
+    public ResourceCreatedDelivery buildUnchecked() {
         return new ResourceCreatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
             modifiedAt);
     }

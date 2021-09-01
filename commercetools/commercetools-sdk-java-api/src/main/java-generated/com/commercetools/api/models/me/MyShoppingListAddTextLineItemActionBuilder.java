@@ -2,13 +2,15 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListAddTextLineItemActionBuilder {
+public final class MyShoppingListAddTextLineItemActionBuilder implements Builder<MyShoppingListAddTextLineItemAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -25,8 +27,20 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public MyShoppingListAddTextLineItemActionBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public MyShoppingListAddTextLineItemActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    public MyShoppingListAddTextLineItemActionBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,12 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
 
     public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
+        return this;
+    }
+
+    public MyShoppingListAddTextLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -77,6 +97,14 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
     }
 
     public MyShoppingListAddTextLineItemAction build() {
+        Objects.requireNonNull(name, MyShoppingListAddTextLineItemAction.class + ": name is missing");
+        return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
+    }
+
+    /**
+     * builds MyShoppingListAddTextLineItemAction without checking for non null required values
+     */
+    public MyShoppingListAddTextLineItemAction buildUnchecked() {
         return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
     }
 

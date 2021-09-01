@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemReturnItemBuilder {
+public final class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemReturnItem> {
 
     private String id;
 
@@ -103,6 +104,21 @@ public final class CustomLineItemReturnItemBuilder {
     }
 
     public CustomLineItemReturnItem build() {
+        Objects.requireNonNull(id, CustomLineItemReturnItem.class + ": id is missing");
+        Objects.requireNonNull(quantity, CustomLineItemReturnItem.class + ": quantity is missing");
+        Objects.requireNonNull(shipmentState, CustomLineItemReturnItem.class + ": shipmentState is missing");
+        Objects.requireNonNull(paymentState, CustomLineItemReturnItem.class + ": paymentState is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomLineItemReturnItem.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(createdAt, CustomLineItemReturnItem.class + ": createdAt is missing");
+        Objects.requireNonNull(customLineItemId, CustomLineItemReturnItem.class + ": customLineItemId is missing");
+        return new CustomLineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt,
+            createdAt, customLineItemId);
+    }
+
+    /**
+     * builds CustomLineItemReturnItem without checking for non null required values
+     */
+    public CustomLineItemReturnItem buildUnchecked() {
         return new CustomLineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt,
             createdAt, customLineItemId);
     }

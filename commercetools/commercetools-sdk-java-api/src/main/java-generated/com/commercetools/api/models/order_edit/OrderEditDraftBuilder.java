@@ -2,13 +2,15 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditDraftBuilder {
+public final class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     @Nullable
     private String key;
@@ -46,6 +48,12 @@ public final class OrderEditDraftBuilder {
     public OrderEditDraftBuilder stagedActions(
             @Nullable final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
+        return this;
+    }
+
+    public OrderEditDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -94,6 +102,14 @@ public final class OrderEditDraftBuilder {
     }
 
     public OrderEditDraft build() {
+        Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");
+        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
+    }
+
+    /**
+     * builds OrderEditDraft without checking for non null required values
+     */
+    public OrderEditDraft buildUnchecked() {
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
 

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderBillingAddressSetMessageBuilder {
+public final class OrderBillingAddressSetMessageBuilder implements Builder<OrderBillingAddressSetMessage> {
 
     private String id;
 
@@ -60,8 +62,20 @@ public final class OrderBillingAddressSetMessageBuilder {
     }
 
     public OrderBillingAddressSetMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public OrderBillingAddressSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public OrderBillingAddressSetMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -87,14 +101,34 @@ public final class OrderBillingAddressSetMessageBuilder {
     }
 
     public OrderBillingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public OrderBillingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     public OrderBillingAddressSetMessageBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    public OrderBillingAddressSetMessageBuilder address(
             @Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
+        return this;
+    }
+
+    public OrderBillingAddressSetMessageBuilder oldAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -158,6 +192,21 @@ public final class OrderBillingAddressSetMessageBuilder {
     }
 
     public OrderBillingAddressSetMessage build() {
+        Objects.requireNonNull(id, OrderBillingAddressSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderBillingAddressSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderBillingAddressSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderBillingAddressSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderBillingAddressSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderBillingAddressSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderBillingAddressSetMessage.class + ": resourceVersion is missing");
+        return new OrderBillingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
+    }
+
+    /**
+     * builds OrderBillingAddressSetMessage without checking for non null required values
+     */
+    public OrderBillingAddressSetMessage buildUnchecked() {
         return new OrderBillingAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, oldAddress);
     }

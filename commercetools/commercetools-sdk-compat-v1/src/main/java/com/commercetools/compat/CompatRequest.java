@@ -18,6 +18,9 @@ import io.sphere.sdk.http.HttpRequest;
 import io.sphere.sdk.json.SphereJsonUtils;
 import io.vrap.rmf.base.client.*;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TResult>
         implements ClientRequestCommand<TResult> {
 
@@ -79,5 +82,26 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
     @Override
     public CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(), resultClass);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        CompatRequest<?> request1 = (CompatRequest<?>) o;
+
+        return new EqualsBuilder().append(request, request1.request)
+                .append(resultClass, request1.resultClass)
+                .append(projectKey, request1.projectKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(request).append(resultClass).append(projectKey).toHashCode();
     }
 }

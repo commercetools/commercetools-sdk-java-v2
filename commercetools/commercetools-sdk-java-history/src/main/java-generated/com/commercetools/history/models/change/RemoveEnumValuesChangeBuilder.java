@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveEnumValuesChangeBuilder {
+public final class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesChange> {
 
     private String change;
 
@@ -21,6 +23,12 @@ public final class RemoveEnumValuesChangeBuilder {
 
     public RemoveEnumValuesChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+
+    public RemoveEnumValuesChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +51,16 @@ public final class RemoveEnumValuesChangeBuilder {
     }
 
     public RemoveEnumValuesChange build() {
+        Objects.requireNonNull(change, RemoveEnumValuesChange.class + ": change is missing");
+        Objects.requireNonNull(attributeName, RemoveEnumValuesChange.class + ": attributeName is missing");
+        Objects.requireNonNull(previousValue, RemoveEnumValuesChange.class + ": previousValue is missing");
+        return new RemoveEnumValuesChangeImpl(change, attributeName, previousValue);
+    }
+
+    /**
+     * builds RemoveEnumValuesChange without checking for non null required values
+     */
+    public RemoveEnumValuesChange buildUnchecked() {
         return new RemoveEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 

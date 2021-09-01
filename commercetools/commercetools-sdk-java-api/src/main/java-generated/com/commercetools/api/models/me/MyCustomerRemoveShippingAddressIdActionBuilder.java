@@ -5,10 +5,12 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCustomerRemoveShippingAddressIdActionBuilder {
+public final class MyCustomerRemoveShippingAddressIdActionBuilder
+        implements Builder<MyCustomerRemoveShippingAddressIdAction> {
 
     @Nullable
     private String addressId;
@@ -37,6 +39,13 @@ public final class MyCustomerRemoveShippingAddressIdActionBuilder {
     }
 
     public MyCustomerRemoveShippingAddressIdAction build() {
+        return new MyCustomerRemoveShippingAddressIdActionImpl(addressId, addressKey);
+    }
+
+    /**
+     * builds MyCustomerRemoveShippingAddressIdAction without checking for non null required values
+     */
+    public MyCustomerRemoveShippingAddressIdAction buildUnchecked() {
         return new MyCustomerRemoveShippingAddressIdActionImpl(addressId, addressKey);
     }
 

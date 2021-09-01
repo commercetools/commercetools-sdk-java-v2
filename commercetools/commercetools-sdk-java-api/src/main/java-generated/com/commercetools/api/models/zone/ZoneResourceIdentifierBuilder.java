@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneResourceIdentifierBuilder {
+public final class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdentifier> {
 
     @Nullable
     private String id;
@@ -37,6 +38,13 @@ public final class ZoneResourceIdentifierBuilder {
     }
 
     public ZoneResourceIdentifier build() {
+        return new ZoneResourceIdentifierImpl(id, key);
+    }
+
+    /**
+     * builds ZoneResourceIdentifier without checking for non null required values
+     */
+    public ZoneResourceIdentifier buildUnchecked() {
         return new ZoneResourceIdentifierImpl(id, key);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.similar_products;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductPairBuilder {
+public final class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
 
     private Double confidence;
 
@@ -20,6 +22,24 @@ public final class SimilarProductPairBuilder {
     public SimilarProductPairBuilder products(
             final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
         this.products = new ArrayList<>(Arrays.asList(products));
+        return this;
+    }
+
+    public SimilarProductPairBuilder withProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
+        this.products = new ArrayList<>();
+        this.products
+                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
+        return this;
+    }
+
+    public SimilarProductPairBuilder plusProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
+        if (this.products == null) {
+            this.products = new ArrayList<>();
+        }
+        this.products
+                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
         return this;
     }
 
@@ -38,6 +58,15 @@ public final class SimilarProductPairBuilder {
     }
 
     public SimilarProductPair build() {
+        Objects.requireNonNull(confidence, SimilarProductPair.class + ": confidence is missing");
+        Objects.requireNonNull(products, SimilarProductPair.class + ": products is missing");
+        return new SimilarProductPairImpl(confidence, products);
+    }
+
+    /**
+     * builds SimilarProductPair without checking for non null required values
+     */
+    public SimilarProductPair buildUnchecked() {
         return new SimilarProductPairImpl(confidence, products);
     }
 

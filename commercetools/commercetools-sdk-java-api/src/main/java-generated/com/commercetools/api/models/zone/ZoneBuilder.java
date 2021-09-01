@@ -2,13 +2,15 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneBuilder {
+public final class ZoneBuilder implements Builder<Zone> {
 
     private String id;
 
@@ -55,8 +57,20 @@ public final class ZoneBuilder {
     }
 
     public ZoneBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public ZoneBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public ZoneBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -82,6 +96,22 @@ public final class ZoneBuilder {
 
     public ZoneBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+
+    public ZoneBuilder withLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneBuilder plusLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
 
@@ -135,6 +165,20 @@ public final class ZoneBuilder {
     }
 
     public Zone build() {
+        Objects.requireNonNull(id, Zone.class + ": id is missing");
+        Objects.requireNonNull(version, Zone.class + ": version is missing");
+        Objects.requireNonNull(createdAt, Zone.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, Zone.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(name, Zone.class + ": name is missing");
+        Objects.requireNonNull(locations, Zone.class + ": locations is missing");
+        return new ZoneImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
+            locations);
+    }
+
+    /**
+     * builds Zone without checking for non null required values
+     */
+    public Zone buildUnchecked() {
         return new ZoneImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description,
             locations);
     }

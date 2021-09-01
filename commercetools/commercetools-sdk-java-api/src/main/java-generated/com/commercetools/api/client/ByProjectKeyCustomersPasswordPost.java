@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Change a customers password</p>
 */
@@ -75,6 +78,26 @@ public class ByProjectKeyCustomersPasswordPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyCustomersPasswordPost that = (ByProjectKeyCustomersPasswordPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(customerChangePassword, that.customerChangePassword)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(customerChangePassword).toHashCode();
     }
 
     @Override

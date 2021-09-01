@@ -3,10 +3,11 @@ package com.commercetools.api.models.error;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class QueryTimedOutErrorBuilder {
+public final class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     private String message;
 
@@ -20,6 +21,14 @@ public final class QueryTimedOutErrorBuilder {
     }
 
     public QueryTimedOutError build() {
+        Objects.requireNonNull(message, QueryTimedOutError.class + ": message is missing");
+        return new QueryTimedOutErrorImpl(message);
+    }
+
+    /**
+     * builds QueryTimedOutError without checking for non null required values
+     */
+    public QueryTimedOutError buildUnchecked() {
         return new QueryTimedOutErrorImpl(message);
     }
 

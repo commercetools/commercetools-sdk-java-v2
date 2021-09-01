@@ -5,10 +5,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetImageLabelActionBuilder {
+public final class ProductSetImageLabelActionBuilder implements Builder<ProductSetImageLabelAction> {
 
     @Nullable
     private String sku;
@@ -74,6 +75,14 @@ public final class ProductSetImageLabelActionBuilder {
     }
 
     public ProductSetImageLabelAction build() {
+        Objects.requireNonNull(imageUrl, ProductSetImageLabelAction.class + ": imageUrl is missing");
+        return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);
+    }
+
+    /**
+     * builds ProductSetImageLabelAction without checking for non null required values
+     */
+    public ProductSetImageLabelAction buildUnchecked() {
         return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);
     }
 

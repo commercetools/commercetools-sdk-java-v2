@@ -2,13 +2,15 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerAddressAddedMessageBuilder {
+public final class CustomerAddressAddedMessageBuilder implements Builder<CustomerAddressAddedMessage> {
 
     private String id;
 
@@ -56,8 +58,20 @@ public final class CustomerAddressAddedMessageBuilder {
     }
 
     public CustomerAddressAddedMessageBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerAddressAddedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
+    public CustomerAddressAddedMessageBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
@@ -83,8 +97,22 @@ public final class CustomerAddressAddedMessageBuilder {
     }
 
     public CustomerAddressAddedMessageBuilder resourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CustomerAddressAddedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    public CustomerAddressAddedMessageBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 
@@ -141,6 +169,22 @@ public final class CustomerAddressAddedMessageBuilder {
     }
 
     public CustomerAddressAddedMessage build() {
+        Objects.requireNonNull(id, CustomerAddressAddedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerAddressAddedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerAddressAddedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerAddressAddedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerAddressAddedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerAddressAddedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerAddressAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(address, CustomerAddressAddedMessage.class + ": address is missing");
+        return new CustomerAddressAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+    }
+
+    /**
+     * builds CustomerAddressAddedMessage without checking for non null required values
+     */
+    public CustomerAddressAddedMessage buildUnchecked() {
         return new CustomerAddressAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
     }

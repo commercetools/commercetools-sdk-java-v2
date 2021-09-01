@@ -2,13 +2,15 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryPagedQueryResponseBuilder {
+public final class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategoryPagedQueryResponse> {
 
     private Long limit;
 
@@ -47,6 +49,22 @@ public final class TaxCategoryPagedQueryResponseBuilder {
         return this;
     }
 
+    public TaxCategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryPagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
+        return this;
+    }
+
     public TaxCategoryPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.tax_category.TaxCategory> results) {
         this.results = results;
@@ -75,6 +93,17 @@ public final class TaxCategoryPagedQueryResponseBuilder {
     }
 
     public TaxCategoryPagedQueryResponse build() {
+        Objects.requireNonNull(limit, TaxCategoryPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(count, TaxCategoryPagedQueryResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, TaxCategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(results, TaxCategoryPagedQueryResponse.class + ": results is missing");
+        return new TaxCategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+    }
+
+    /**
+     * builds TaxCategoryPagedQueryResponse without checking for non null required values
+     */
+    public TaxCategoryPagedQueryResponse buildUnchecked() {
         return new TaxCategoryPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 

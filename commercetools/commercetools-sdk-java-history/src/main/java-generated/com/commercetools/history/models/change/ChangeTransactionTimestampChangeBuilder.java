@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTransactionTimestampChangeBuilder {
+public final class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTransactionTimestampChange> {
 
     private String change;
 
@@ -18,6 +20,14 @@ public final class ChangeTransactionTimestampChangeBuilder {
 
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
         this.change = change;
+        return this;
+    }
+
+    public ChangeTransactionTimestampChangeBuilder transaction(
+            Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
+        this.transaction = builder
+                .apply(com.commercetools.history.models.change_value.TransactionChangeValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -54,6 +64,17 @@ public final class ChangeTransactionTimestampChangeBuilder {
     }
 
     public ChangeTransactionTimestampChange build() {
+        Objects.requireNonNull(change, ChangeTransactionTimestampChange.class + ": change is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionTimestampChange.class + ": transaction is missing");
+        Objects.requireNonNull(nextValue, ChangeTransactionTimestampChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, ChangeTransactionTimestampChange.class + ": previousValue is missing");
+        return new ChangeTransactionTimestampChangeImpl(change, transaction, nextValue, previousValue);
+    }
+
+    /**
+     * builds ChangeTransactionTimestampChange without checking for non null required values
+     */
+    public ChangeTransactionTimestampChange buildUnchecked() {
         return new ChangeTransactionTimestampChangeImpl(change, transaction, nextValue, previousValue);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.extension;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExtensionAWSLambdaDestinationBuilder {
+public final class ExtensionAWSLambdaDestinationBuilder implements Builder<ExtensionAWSLambdaDestination> {
 
     private String arn;
 
@@ -42,6 +43,16 @@ public final class ExtensionAWSLambdaDestinationBuilder {
     }
 
     public ExtensionAWSLambdaDestination build() {
+        Objects.requireNonNull(arn, ExtensionAWSLambdaDestination.class + ": arn is missing");
+        Objects.requireNonNull(accessKey, ExtensionAWSLambdaDestination.class + ": accessKey is missing");
+        Objects.requireNonNull(accessSecret, ExtensionAWSLambdaDestination.class + ": accessSecret is missing");
+        return new ExtensionAWSLambdaDestinationImpl(arn, accessKey, accessSecret);
+    }
+
+    /**
+     * builds ExtensionAWSLambdaDestination without checking for non null required values
+     */
+    public ExtensionAWSLambdaDestination buildUnchecked() {
         return new ExtensionAWSLambdaDestinationImpl(arn, accessKey, accessSecret);
     }
 

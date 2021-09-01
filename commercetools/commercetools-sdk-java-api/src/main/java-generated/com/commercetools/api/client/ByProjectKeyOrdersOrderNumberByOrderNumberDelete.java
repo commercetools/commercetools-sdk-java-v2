@@ -12,9 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-/**
-*  <p>Delete Order by orderNumber</p>
-*/
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
         extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, com.commercetools.api.models.order.Order>
@@ -93,28 +93,64 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
         this.orderNumber = orderNumber;
     }
 
+    /**
+     * set dataErasure with the specificied value
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * add additional dataErasure query parameter
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
+    /**
+     * set version with the specificied value
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
+    /**
+     * add additional version query parameter
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyOrdersOrderNumberByOrderNumberDelete that = (ByProjectKeyOrdersOrderNumberByOrderNumberDelete) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(orderNumber, that.orderNumber).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(orderNumber).toHashCode();
     }
 
     @Override

@@ -2,13 +2,15 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MatchingPriceNotFoundErrorBuilder {
+public final class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceNotFoundError> {
 
     private String message;
 
@@ -54,8 +56,22 @@ public final class MatchingPriceNotFoundErrorBuilder {
     }
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder channel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
@@ -98,6 +114,17 @@ public final class MatchingPriceNotFoundErrorBuilder {
     }
 
     public MatchingPriceNotFoundError build() {
+        Objects.requireNonNull(message, MatchingPriceNotFoundError.class + ": message is missing");
+        Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");
+        Objects.requireNonNull(variantId, MatchingPriceNotFoundError.class + ": variantId is missing");
+        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
+            channel);
+    }
+
+    /**
+     * builds MatchingPriceNotFoundError without checking for non null required values
+     */
+    public MatchingPriceNotFoundError buildUnchecked() {
         return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
             channel);
     }

@@ -3,10 +3,12 @@ package com.commercetools.history.models.change_value;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTargetMultiBuyLineItemsChangeValueBuilder {
+public final class ChangeTargetMultiBuyLineItemsChangeValueBuilder
+        implements Builder<ChangeTargetMultiBuyLineItemsChangeValue> {
 
     private String predicate;
 
@@ -65,6 +67,23 @@ public final class ChangeTargetMultiBuyLineItemsChangeValueBuilder {
     }
 
     public ChangeTargetMultiBuyLineItemsChangeValue build() {
+        Objects.requireNonNull(predicate, ChangeTargetMultiBuyLineItemsChangeValue.class + ": predicate is missing");
+        Objects.requireNonNull(triggerQuantity,
+            ChangeTargetMultiBuyLineItemsChangeValue.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity,
+            ChangeTargetMultiBuyLineItemsChangeValue.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(maxOccurrence,
+            ChangeTargetMultiBuyLineItemsChangeValue.class + ": maxOccurrence is missing");
+        Objects.requireNonNull(selectionMode,
+            ChangeTargetMultiBuyLineItemsChangeValue.class + ": selectionMode is missing");
+        return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,
+            maxOccurrence, selectionMode);
+    }
+
+    /**
+     * builds ChangeTargetMultiBuyLineItemsChangeValue without checking for non null required values
+     */
+    public ChangeTargetMultiBuyLineItemsChangeValue buildUnchecked() {
         return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,
             maxOccurrence, selectionMode);
     }

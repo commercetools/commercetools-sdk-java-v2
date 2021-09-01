@@ -1,6 +1,8 @@
 {
   "createdAt": "2019-12-12T11:12:12.000Z",
+  "lastModifiedAt": "2019-12-12T11:12:12.000Z",
   "id": "test-id",
+  "version": 1,
   "parent": {
     "id": "test-id",
     "typeId": "category"
@@ -28,6 +30,7 @@
       "sources": [
         {
           "contentType": "application/json",
+          "uri": "https://commercetools.com",
           "dimensions": {
             "w": 5,
             "h": 10

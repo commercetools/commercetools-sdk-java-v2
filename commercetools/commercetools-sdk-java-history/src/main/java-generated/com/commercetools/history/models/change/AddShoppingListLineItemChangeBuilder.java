@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddShoppingListLineItemChangeBuilder {
+public final class AddShoppingListLineItemChangeBuilder implements Builder<AddShoppingListLineItemChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class AddShoppingListLineItemChangeBuilder {
     }
 
     public AddShoppingListLineItemChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+        return this;
+    }
+
+    public AddShoppingListLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.LineItem previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public AddShoppingListLineItemChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
         return this;
     }
 
@@ -44,6 +58,16 @@ public final class AddShoppingListLineItemChangeBuilder {
     }
 
     public AddShoppingListLineItemChange build() {
+        Objects.requireNonNull(change, AddShoppingListLineItemChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, AddShoppingListLineItemChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, AddShoppingListLineItemChange.class + ": nextValue is missing");
+        return new AddShoppingListLineItemChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds AddShoppingListLineItemChange without checking for non null required values
+     */
+    public AddShoppingListLineItemChange buildUnchecked() {
         return new AddShoppingListLineItemChangeImpl(change, previousValue, nextValue);
     }
 

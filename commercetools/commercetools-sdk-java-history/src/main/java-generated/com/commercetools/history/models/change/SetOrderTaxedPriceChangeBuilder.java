@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetOrderTaxedPriceChangeBuilder {
+public final class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPriceChange> {
 
     private String change;
 
@@ -27,8 +29,20 @@ public final class SetOrderTaxedPriceChangeBuilder {
     }
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    public SetOrderTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetOrderTaxedPriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -55,6 +69,17 @@ public final class SetOrderTaxedPriceChangeBuilder {
     }
 
     public SetOrderTaxedPriceChange build() {
+        Objects.requireNonNull(change, SetOrderTaxedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(taxMode, SetOrderTaxedPriceChange.class + ": taxMode is missing");
+        Objects.requireNonNull(nextValue, SetOrderTaxedPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderTaxedPriceChange.class + ": previousValue is missing");
+        return new SetOrderTaxedPriceChangeImpl(change, taxMode, nextValue, previousValue);
+    }
+
+    /**
+     * builds SetOrderTaxedPriceChange without checking for non null required values
+     */
+    public SetOrderTaxedPriceChange buildUnchecked() {
         return new SetOrderTaxedPriceChangeImpl(change, taxMode, nextValue, previousValue);
     }
 

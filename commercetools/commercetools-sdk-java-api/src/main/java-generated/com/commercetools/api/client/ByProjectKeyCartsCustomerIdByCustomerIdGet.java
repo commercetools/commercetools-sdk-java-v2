@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Retrieves the active cart of the customer that has been modified most recently.
 *  It does not consider carts with CartOrigin Merchant. If no active cart exists, a 404 Not Found error is returned.</p>
@@ -85,12 +88,36 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet
         this.customerId = customerId;
     }
 
+    /**
+     * set expand with the specificied value
+     */
     public ByProjectKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
+    /**
+     * add additional expand query parameter
+     */
     public ByProjectKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyCartsCustomerIdByCustomerIdGet that = (ByProjectKeyCartsCustomerIdByCustomerIdGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(customerId, that.customerId).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(customerId).toHashCode();
     }
 
     @Override

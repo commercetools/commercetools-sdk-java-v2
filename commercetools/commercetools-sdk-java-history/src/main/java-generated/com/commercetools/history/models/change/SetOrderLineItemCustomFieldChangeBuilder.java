@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetOrderLineItemCustomFieldChangeBuilder {
+public final class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrderLineItemCustomFieldChange> {
 
     private String change;
 
@@ -39,6 +41,12 @@ public final class SetOrderLineItemCustomFieldChangeBuilder {
 
     public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
         this.variant = variant;
+        return this;
+    }
+
+    public SetOrderLineItemCustomFieldChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -87,6 +95,21 @@ public final class SetOrderLineItemCustomFieldChangeBuilder {
     }
 
     public SetOrderLineItemCustomFieldChange build() {
+        Objects.requireNonNull(change, SetOrderLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(customTypeId, SetOrderLineItemCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(name, SetOrderLineItemCustomFieldChange.class + ": name is missing");
+        Objects.requireNonNull(variant, SetOrderLineItemCustomFieldChange.class + ": variant is missing");
+        Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");
+        Objects.requireNonNull(nextValue, SetOrderLineItemCustomFieldChange.class + ": nextValue is missing");
+        Objects.requireNonNull(previousValue, SetOrderLineItemCustomFieldChange.class + ": previousValue is missing");
+        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,
+            previousValue);
+    }
+
+    /**
+     * builds SetOrderLineItemCustomFieldChange without checking for non null required values
+     */
+    public SetOrderLineItemCustomFieldChange buildUnchecked() {
         return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,
             previousValue);
     }

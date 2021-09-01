@@ -2,13 +2,15 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxRateBuilder {
+public final class TaxRateBuilder implements Builder<TaxRate> {
 
     @Nullable
     private String id;
@@ -62,6 +64,22 @@ public final class TaxRateBuilder {
         return this;
     }
 
+    public TaxRateBuilder withSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+        return this;
+    }
+
+    public TaxRateBuilder plusSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+        return this;
+    }
+
     public TaxRateBuilder subRates(
             @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
         this.subRates = subRates;
@@ -100,6 +118,17 @@ public final class TaxRateBuilder {
     }
 
     public TaxRate build() {
+        Objects.requireNonNull(name, TaxRate.class + ": name is missing");
+        Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
+        Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");
+        Objects.requireNonNull(country, TaxRate.class + ": country is missing");
+        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
+    }
+
+    /**
+     * builds TaxRate without checking for non null required values
+     */
+    public TaxRate buildUnchecked() {
         return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
     }
 

@@ -3,10 +3,11 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AzureEventGridDestinationBuilder {
+public final class AzureEventGridDestinationBuilder implements Builder<AzureEventGridDestination> {
 
     private String uri;
 
@@ -31,6 +32,15 @@ public final class AzureEventGridDestinationBuilder {
     }
 
     public AzureEventGridDestination build() {
+        Objects.requireNonNull(uri, AzureEventGridDestination.class + ": uri is missing");
+        Objects.requireNonNull(accessKey, AzureEventGridDestination.class + ": accessKey is missing");
+        return new AzureEventGridDestinationImpl(uri, accessKey);
+    }
+
+    /**
+     * builds AzureEventGridDestination without checking for non null required values
+     */
+    public AzureEventGridDestination buildUnchecked() {
         return new AzureEventGridDestinationImpl(uri, accessKey);
     }
 

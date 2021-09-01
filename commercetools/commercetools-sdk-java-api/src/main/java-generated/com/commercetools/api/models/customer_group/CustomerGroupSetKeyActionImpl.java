@@ -35,7 +35,7 @@ public final class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyA
     }
 
     /**
-    *  <p>User-specific unique identifier for the customer group.</p>
+    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
     */
     public String getKey() {
         return this.key;

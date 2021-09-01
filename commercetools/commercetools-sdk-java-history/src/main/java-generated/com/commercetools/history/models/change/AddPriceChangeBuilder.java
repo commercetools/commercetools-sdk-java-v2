@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddPriceChangeBuilder {
+public final class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     private String change;
 
@@ -28,6 +30,12 @@ public final class AddPriceChangeBuilder {
 
     public AddPriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    public AddPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
 
@@ -53,6 +61,17 @@ public final class AddPriceChangeBuilder {
     }
 
     public AddPriceChange build() {
+        Objects.requireNonNull(change, AddPriceChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, AddPriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(priceId, AddPriceChange.class + ": priceId is missing");
+        Objects.requireNonNull(nextValue, AddPriceChange.class + ": nextValue is missing");
+        return new AddPriceChangeImpl(change, catalogData, priceId, nextValue);
+    }
+
+    /**
+     * builds AddPriceChange without checking for non null required values
+     */
+    public AddPriceChange buildUnchecked() {
         return new AddPriceChangeImpl(change, catalogData, priceId, nextValue);
     }
 

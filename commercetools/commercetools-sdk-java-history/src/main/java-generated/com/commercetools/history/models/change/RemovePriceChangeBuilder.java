@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemovePriceChangeBuilder {
+public final class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     private String change;
 
@@ -33,8 +35,20 @@ public final class RemovePriceChangeBuilder {
         return this;
     }
 
+    public RemovePriceChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
     public RemovePriceChangeBuilder previousValue(final com.commercetools.history.models.common.Price previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemovePriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
 
@@ -64,6 +78,18 @@ public final class RemovePriceChangeBuilder {
     }
 
     public RemovePriceChange build() {
+        Objects.requireNonNull(change, RemovePriceChange.class + ": change is missing");
+        Objects.requireNonNull(catalogData, RemovePriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(priceId, RemovePriceChange.class + ": priceId is missing");
+        Objects.requireNonNull(previousValue, RemovePriceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemovePriceChange.class + ": nextValue is missing");
+        return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
+    }
+
+    /**
+     * builds RemovePriceChange without checking for non null required values
+     */
+    public RemovePriceChange buildUnchecked() {
         return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeSlugChangeBuilder {
+public final class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     private String change;
 
@@ -20,8 +22,20 @@ public final class ChangeSlugChangeBuilder {
     }
 
     public ChangeSlugChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ChangeSlugChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeSlugChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
@@ -43,6 +57,16 @@ public final class ChangeSlugChangeBuilder {
     }
 
     public ChangeSlugChange build() {
+        Objects.requireNonNull(change, ChangeSlugChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeSlugChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeSlugChange.class + ": nextValue is missing");
+        return new ChangeSlugChangeImpl(change, previousValue, nextValue);
+    }
+
+    /**
+     * builds ChangeSlugChange without checking for non null required values
+     */
+    public ChangeSlugChange buildUnchecked() {
         return new ChangeSlugChangeImpl(change, previousValue, nextValue);
     }
 

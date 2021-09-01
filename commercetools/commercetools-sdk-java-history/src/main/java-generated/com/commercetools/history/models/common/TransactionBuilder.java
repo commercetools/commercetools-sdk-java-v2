@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TransactionBuilder {
+public final class TransactionBuilder implements Builder<Transaction> {
 
     private String id;
 
@@ -32,6 +34,12 @@ public final class TransactionBuilder {
 
     public TransactionBuilder type(final com.commercetools.history.models.common.TransactionType type) {
         this.type = type;
+        return this;
+    }
+
+    public TransactionBuilder amount(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
@@ -75,6 +83,19 @@ public final class TransactionBuilder {
     }
 
     public Transaction build() {
+        Objects.requireNonNull(id, Transaction.class + ": id is missing");
+        Objects.requireNonNull(timestamp, Transaction.class + ": timestamp is missing");
+        Objects.requireNonNull(type, Transaction.class + ": type is missing");
+        Objects.requireNonNull(amount, Transaction.class + ": amount is missing");
+        Objects.requireNonNull(interactionId, Transaction.class + ": interactionId is missing");
+        Objects.requireNonNull(state, Transaction.class + ": state is missing");
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
+    }
+
+    /**
+     * builds Transaction without checking for non null required values
+     */
+    public Transaction buildUnchecked() {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
     }
 

@@ -2,11 +2,13 @@
 package com.commercetools.ml.models.image_search;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageSearchResponseBuilder {
+public final class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> {
 
     private Integer count;
 
@@ -36,6 +38,22 @@ public final class ImageSearchResponseBuilder {
         return this;
     }
 
+    public ImageSearchResponseBuilder withResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
+        return this;
+    }
+
+    public ImageSearchResponseBuilder plusResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
+        return this;
+    }
+
     public ImageSearchResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.image_search.ResultItem> results) {
         this.results = results;
@@ -59,6 +77,17 @@ public final class ImageSearchResponseBuilder {
     }
 
     public ImageSearchResponse build() {
+        Objects.requireNonNull(count, ImageSearchResponse.class + ": count is missing");
+        Objects.requireNonNull(offset, ImageSearchResponse.class + ": offset is missing");
+        Objects.requireNonNull(total, ImageSearchResponse.class + ": total is missing");
+        Objects.requireNonNull(results, ImageSearchResponse.class + ": results is missing");
+        return new ImageSearchResponseImpl(count, offset, total, results);
+    }
+
+    /**
+     * builds ImageSearchResponse without checking for non null required values
+     */
+    public ImageSearchResponse buildUnchecked() {
         return new ImageSearchResponseImpl(count, offset, total, results);
     }
 

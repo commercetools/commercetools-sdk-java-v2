@@ -2,11 +2,13 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAvailabilityBuilder {
+public final class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
 
     private Boolean isOnStock;
 
@@ -28,6 +30,14 @@ public final class ProductVariantAvailabilityBuilder {
 
     public ProductVariantAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    public ProductVariantAvailabilityBuilder channels(
+            Function<com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder> builder) {
+        this.channels = builder
+                .apply(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder.of())
+                .build();
         return this;
     }
 
@@ -54,6 +64,17 @@ public final class ProductVariantAvailabilityBuilder {
     }
 
     public ProductVariantAvailability build() {
+        Objects.requireNonNull(isOnStock, ProductVariantAvailability.class + ": isOnStock is missing");
+        Objects.requireNonNull(restockableInDays, ProductVariantAvailability.class + ": restockableInDays is missing");
+        Objects.requireNonNull(availableQuantity, ProductVariantAvailability.class + ": availableQuantity is missing");
+        Objects.requireNonNull(channels, ProductVariantAvailability.class + ": channels is missing");
+        return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
+    }
+
+    /**
+     * builds ProductVariantAvailability without checking for non null required values
+     */
+    public ProductVariantAvailability buildUnchecked() {
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 

@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCustomerGroupsGet extends
         ApiMethod<ByProjectKeyCustomerGroupsGet, com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>
@@ -191,6 +194,24 @@ public class ByProjectKeyCustomerGroupsGet extends
      */
     public ByProjectKeyCustomerGroupsGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyCustomerGroupsGet that = (ByProjectKeyCustomerGroupsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
     }
 
     @Override

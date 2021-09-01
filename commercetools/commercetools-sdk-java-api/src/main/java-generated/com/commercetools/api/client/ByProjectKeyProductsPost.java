@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>To create a new product, send a representation that is going to become the initial staged representation
 *  of the new product in the master catalog. If price selection query parameters are provided,
@@ -206,6 +209,26 @@ public class ByProjectKeyProductsPost
      */
     public ByProjectKeyProductsPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductsPost that = (ByProjectKeyProductsPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(productDraft, that.productDraft)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(productDraft).toHashCode();
     }
 
     @Override

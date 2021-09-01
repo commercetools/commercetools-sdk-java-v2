@@ -7,6 +7,8 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class ApiHttpRequest extends Base {
@@ -152,5 +154,27 @@ public class ApiHttpRequest extends Base {
 
     private ApiHttpRequest copy() {
         return new ApiHttpRequest(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ApiHttpRequest request = (ApiHttpRequest) o;
+
+        return new EqualsBuilder().append(method, request.method)
+                .append(uri, request.uri)
+                .append(headers, request.headers)
+                .append(body, request.body)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(method).append(uri).append(headers).append(body).toHashCode();
     }
 }

@@ -54,6 +54,16 @@ public class ApiMethodTest {
         public ApiHttpResponse<Object> executeBlocking(ApiHttpClient client, Duration timeout) {
             return null;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            return reflectionEquals(o);
+        }
+
+        @Override
+        public int hashCode() {
+            return reflectionHashCode();
+        }
     }
 
     private ApiHttpClient createClient() {

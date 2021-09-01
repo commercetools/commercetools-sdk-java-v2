@@ -21,7 +21,7 @@ public final class ImportOperationImpl implements ImportOperation {
 
     private Long version;
 
-    private String importSinkKey;
+    private String importContainerKey;
 
     private String resourceKey;
 
@@ -43,7 +43,7 @@ public final class ImportOperationImpl implements ImportOperation {
 
     @JsonCreator
     ImportOperationImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("importSinkKey") final String importSinkKey,
+            @JsonProperty("importContainerKey") final String importContainerKey,
             @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id,
             @JsonProperty("state") final com.commercetools.importapi.models.common.ProcessingState state,
             @JsonProperty("resourceVersion") final Long resourceVersion,
@@ -53,7 +53,7 @@ public final class ImportOperationImpl implements ImportOperation {
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
         this.version = version;
-        this.importSinkKey = importSinkKey;
+        this.importContainerKey = importContainerKey;
         this.resourceKey = resourceKey;
         this.id = id;
         this.state = state;
@@ -76,10 +76,10 @@ public final class ImportOperationImpl implements ImportOperation {
     }
 
     /**
-    *  <p>The key of the <a href="/import-sink#importsink">ImportSink</a>.</p>
+    *  <p>The key of the <a href="/import-container#importcontainer">importContainer</a>.</p>
     */
-    public String getImportSinkKey() {
-        return this.importSinkKey;
+    public String getImportContainerKey() {
+        return this.importContainerKey;
     }
 
     /**
@@ -149,8 +149,8 @@ public final class ImportOperationImpl implements ImportOperation {
         this.version = version;
     }
 
-    public void setImportSinkKey(final String importSinkKey) {
-        this.importSinkKey = importSinkKey;
+    public void setImportContainerKey(final String importContainerKey) {
+        this.importContainerKey = importContainerKey;
     }
 
     public void setResourceKey(final String resourceKey) {
@@ -210,7 +210,7 @@ public final class ImportOperationImpl implements ImportOperation {
         ImportOperationImpl that = (ImportOperationImpl) o;
 
         return new EqualsBuilder().append(version, that.version)
-                .append(importSinkKey, that.importSinkKey)
+                .append(importContainerKey, that.importContainerKey)
                 .append(resourceKey, that.resourceKey)
                 .append(id, that.id)
                 .append(state, that.state)
@@ -226,7 +226,7 @@ public final class ImportOperationImpl implements ImportOperation {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(version)
-                .append(importSinkKey)
+                .append(importContainerKey)
                 .append(resourceKey)
                 .append(id)
                 .append(state)

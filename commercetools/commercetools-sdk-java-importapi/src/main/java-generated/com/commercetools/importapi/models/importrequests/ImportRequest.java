@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An import request batches multiple import resources of the same import resource type for processing by an import sink.</p>
+*  <p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
 */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CategoryImportRequestImpl.class, name = CategoryImportRequest.CATEGORY),

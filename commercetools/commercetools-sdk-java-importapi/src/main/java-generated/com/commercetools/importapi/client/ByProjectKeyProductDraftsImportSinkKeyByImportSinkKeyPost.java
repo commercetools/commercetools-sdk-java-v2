@@ -12,8 +12,11 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
-*  <p>Creates a request for creating new ProductDrafts or updating existing ones.</p>
+*  <p>Creates import request for creating new product drafts or updating existing ones.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost extends
@@ -92,6 +95,30 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost extends
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost that = (ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkKey, that.importSinkKey)
+                .append(productDraftImportRequest, that.productDraftImportRequest)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(importSinkKey)
+                .append(productDraftImportRequest)
+                .toHashCode();
     }
 
     @Override

@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Create a Token for verifying the Customer's Email</p>
 */
@@ -75,6 +78,26 @@ public class ByProjectKeyCustomersEmailTokenPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyCustomersEmailTokenPost that = (ByProjectKeyCustomersEmailTokenPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(customerCreateEmailToken, that.customerCreateEmailToken)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(customerCreateEmailToken).toHashCode();
     }
 
     @Override

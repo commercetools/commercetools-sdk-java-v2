@@ -32,11 +32,11 @@ public interface ImportOperation {
     public Long getVersion();
 
     /**
-    *  <p>The key of the <a href="/import-sink#importsink">ImportSink</a>.</p>
+    *  <p>The key of the <a href="/import-container#importcontainer">importContainer</a>.</p>
     */
     @NotNull
-    @JsonProperty("importSinkKey")
-    public String getImportSinkKey();
+    @JsonProperty("importContainerKey")
+    public String getImportContainerKey();
 
     /**
     *  <p>The key of the resource.</p>
@@ -103,7 +103,7 @@ public interface ImportOperation {
 
     public void setVersion(final Long version);
 
-    public void setImportSinkKey(final String importSinkKey);
+    public void setImportContainerKey(final String importContainerKey);
 
     public void setResourceKey(final String resourceKey);
 
@@ -136,7 +136,7 @@ public interface ImportOperation {
     public static ImportOperation of(final ImportOperation template) {
         ImportOperationImpl instance = new ImportOperationImpl();
         instance.setVersion(template.getVersion());
-        instance.setImportSinkKey(template.getImportSinkKey());
+        instance.setImportContainerKey(template.getImportContainerKey());
         instance.setResourceKey(template.getResourceKey());
         instance.setId(template.getId());
         instance.setState(template.getState());

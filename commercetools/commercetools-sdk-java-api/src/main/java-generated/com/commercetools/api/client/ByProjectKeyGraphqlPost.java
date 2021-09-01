@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Execute a GraphQL query</p>
 */
@@ -75,6 +78,26 @@ public class ByProjectKeyGraphqlPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyGraphqlPost that = (ByProjectKeyGraphqlPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(graphQLRequest, that.graphQLRequest)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(graphQLRequest).toHashCode();
     }
 
     @Override

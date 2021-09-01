@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Endpoint to update the image search config.</p>
 */
@@ -76,6 +79,26 @@ public class ByProjectKeyImageSearchConfigPost extends
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyImageSearchConfigPost that = (ByProjectKeyImageSearchConfigPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(imageSearchConfigRequest, that.imageSearchConfigRequest)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(imageSearchConfigRequest).toHashCode();
     }
 
     @Override

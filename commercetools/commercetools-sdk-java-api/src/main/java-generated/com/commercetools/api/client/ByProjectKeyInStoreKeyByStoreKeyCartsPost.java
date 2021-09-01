@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Creates a cart in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store's key.
 *  When using this endpoint the cart's store field is always set to the store specified in the path parameter.
@@ -108,6 +111,27 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost
      */
     public ByProjectKeyInStoreKeyByStoreKeyCartsPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCartsPost that = (ByProjectKeyInStoreKeyByStoreKeyCartsPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(cartDraft, that.cartDraft)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(cartDraft).toHashCode();
     }
 
     @Override

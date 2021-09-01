@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Queries orders in a specific Store. The {storeKey} path parameter maps to a Store's key.</p>
 */
@@ -203,6 +206,24 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
      */
     public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyOrdersGet that = (ByProjectKeyInStoreKeyByStoreKeyOrdersGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(storeKey, that.storeKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).toHashCode();
     }
 
     @Override

@@ -14,8 +14,11 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
-*  <p>Retrieves all Order ImportOperations of a given ImportSink key.</p>
+*  <p>Retrieves all order import operations of an import sink key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet extends
@@ -191,6 +194,26 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet e
      */
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {
         return copy().addQueryParam("debug", debug);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet that = (ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(importSinkKey, that.importSinkKey)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();
     }
 
     @Override

@@ -53,4 +53,14 @@ public abstract class AutoCloseableService extends Base implements AutoCloseable
             InternalLogger.getLogger(AutoCloseableService.class).error(() -> "Error on closing resource.", e);
         }
     }
+
+    @Override
+    public boolean equals(final Object o) {
+        return reflectionEquals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return reflectionHashCode();
+    }
 }

@@ -15,6 +15,11 @@ public class ByProjectKeyProductTypesRequestBuilder {
         this.projectKey = projectKey;
     }
 
+    public ByProjectKeyProductTypesImportContainersRequestBuilder importContainers() {
+        return new ByProjectKeyProductTypesImportContainersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    @Deprecated
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder importSinkKeyWithImportSinkKeyValue(
             String importSinkKey) {
         return new ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder(apiHttpClient, projectKey,

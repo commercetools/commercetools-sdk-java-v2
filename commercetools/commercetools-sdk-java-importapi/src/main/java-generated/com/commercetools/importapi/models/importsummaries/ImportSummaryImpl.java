@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Describes the status of an <a href="/import-sink#importsink">ImportSink</a> by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.
-*  Can be used to monitor the import progress per <a href="/import-sink">Import Sink</a>.</p>
+*  <p>Describes the status of an <a href="/import-container#importcontainer">ImportContainer</a> by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.
+*  Can be used to monitor the import progress per <a href="/import-container">Import Container</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSummaryImpl implements ImportSummary {
@@ -36,7 +36,7 @@ public final class ImportSummaryImpl implements ImportSummary {
     }
 
     /**
-    *  <p>The import status of an <a href="/import-sink#importsink">ImportSink</a> given by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.</p>
+    *  <p>The import status of an <a href="/import-container#importcontainer">ImportContainer</a> given by the number of resources in each <a href="/processing-state#the-list-of-processing-states">Processing State</a>.</p>
     */
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
         return this.states;

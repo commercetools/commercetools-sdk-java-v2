@@ -6,6 +6,9 @@ import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.http.HandlerStack;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpClient {
 
     private final HandlerStack stack;
@@ -50,5 +53,26 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     @Override
     protected void internalClose() {
         closeQuietly(stack);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ApiHttpClientImpl that = (ApiHttpClientImpl) o;
+
+        return new EqualsBuilder().append(stack, that.stack)
+                .append(baseUri, that.baseUri)
+                .append(serializer, that.serializer)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(stack).append(baseUri).append(serializer).toHashCode();
     }
 }

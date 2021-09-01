@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Authenticate Customer (Sign In). Retrieves the authenticated
 *  customer (a customer that matches the given email/password pair).
@@ -82,6 +85,26 @@ public class ByProjectKeyLoginPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyLoginPost that = (ByProjectKeyLoginPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(customerSignin, that.customerSignin)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(customerSignin).toHashCode();
     }
 
     @Override

@@ -15,6 +15,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
 */
@@ -166,6 +169,27 @@ public class ByProjectKeyProductsByIDImagesPost
      */
     public ByProjectKeyProductsByIDImagesPost addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductsByIDImagesPost that = (ByProjectKeyProductsByIDImagesPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(ID, that.ID)
+                .append(file, that.file)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(ID).append(file).toHashCode();
     }
 
     @Override

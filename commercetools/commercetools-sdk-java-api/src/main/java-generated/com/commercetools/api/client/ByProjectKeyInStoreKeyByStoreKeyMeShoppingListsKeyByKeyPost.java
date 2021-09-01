@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Update a shopping list found by its Key.</p>
 */
@@ -122,6 +125,32 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost extends
      */
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost that = (ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(key, that.key)
+                .append(myShoppingListUpdate, that.myShoppingListUpdate)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(storeKey)
+                .append(key)
+                .append(myShoppingListUpdate)
+                .toHashCode();
     }
 
     @Override

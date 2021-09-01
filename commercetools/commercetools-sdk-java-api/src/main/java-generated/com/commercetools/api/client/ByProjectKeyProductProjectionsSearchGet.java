@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>Search Product Projection</p>
 */
@@ -426,6 +429,24 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addText(final String locale, final String text) {
         return copy().addQueryParam(String.format("text.%s", locale), text);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyProductProjectionsSearchGet that = (ByProjectKeyProductProjectionsSearchGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
     }
 
     @Override

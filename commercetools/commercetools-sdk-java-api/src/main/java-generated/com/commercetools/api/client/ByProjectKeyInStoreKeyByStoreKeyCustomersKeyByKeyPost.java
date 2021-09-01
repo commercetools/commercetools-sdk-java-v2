@@ -12,6 +12,9 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
 *  <p>If the customer exists in the commercetools project but the stores field references a different store,
 *  this method returns a ResourceNotFound error.</p>
@@ -121,6 +124,32 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost that = (ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(key, that.key)
+                .append(customerUpdate, that.customerUpdate)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(storeKey)
+                .append(key)
+                .append(customerUpdate)
+                .toHashCode();
     }
 
     @Override

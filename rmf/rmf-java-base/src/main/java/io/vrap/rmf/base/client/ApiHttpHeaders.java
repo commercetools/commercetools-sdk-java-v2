@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class ApiHttpHeaders extends Base {
 
     public static class StringHeaderEntry extends HeaderEntry<String, String> {
@@ -57,6 +60,24 @@ public class ApiHttpHeaders extends Base {
                 return "{key=" + key + ", value=**removed from output**}";
             }
             return "{" + "key=" + key + ", value=" + value + '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o)
+                return true;
+
+            if (o == null || getClass() != o.getClass())
+                return false;
+
+            HeaderEntry<?, ?> that = (HeaderEntry<?, ?>) o;
+
+            return new EqualsBuilder().append(key, that.key).append(value, that.value).isEquals();
+        }
+
+        @Override
+        public int hashCode() {
+            return new HashCodeBuilder(17, 37).append(key).append(value).toHashCode();
         }
     }
 
@@ -163,5 +184,23 @@ public class ApiHttpHeaders extends Base {
             return (StringHeaderEntry) entry;
         }
         return headerEntry(entry.getKey(), entry.getValue());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ApiHttpHeaders headers1 = (ApiHttpHeaders) o;
+
+        return new EqualsBuilder().append(headers, headers1.headers).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(headers).toHashCode();
     }
 }

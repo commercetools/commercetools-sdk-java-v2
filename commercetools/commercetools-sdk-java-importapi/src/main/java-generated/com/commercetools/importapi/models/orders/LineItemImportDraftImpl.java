@@ -110,7 +110,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     /**
     *  <p>Maps to <code>LineItem.supplyChannel</code>.
     *  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Supply Channel is created.</p>
+    *  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
@@ -119,7 +119,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     /**
     *  <p>Maps to <code>LineItem.distributionChannel</code>.
     *  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Distribution Channel is created.</p>
+    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
         return this.distributionChannel;

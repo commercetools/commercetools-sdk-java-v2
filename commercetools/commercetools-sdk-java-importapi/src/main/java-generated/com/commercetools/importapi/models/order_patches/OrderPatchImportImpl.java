@@ -42,7 +42,7 @@ public final class OrderPatchImportImpl implements OrderPatchImport {
     }
 
     /**
-    *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>ValidationFailed</code>.</p>
+    *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
     */
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {
         return this.fields;

@@ -17,39 +17,48 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OperationStates {
 
     /**
-    *  <p>The number of resources in the <code>ValidationFailed</code> state.</p>
+    *  <p>The number of resources in the <code>processing</code> state.</p>
     */
     @NotNull
-    @JsonProperty("ValidationFailed")
+    @JsonProperty("processing")
+    public Long getProcessing();
+
+    /**
+    *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+    */
+    @NotNull
+    @JsonProperty("validationFailed")
     public Long getValidationFailed();
 
     /**
-    *  <p>The number of resources in the <code>Unresolved</code> state.</p>
+    *  <p>The number of resources in the <code>unresolved</code> state.</p>
     */
     @NotNull
-    @JsonProperty("Unresolved")
+    @JsonProperty("unresolved")
     public Long getUnresolved();
 
     /**
-    *  <p>The number of resources in the <code>WaitForMasterVariant</code> state.</p>
+    *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
     */
     @NotNull
-    @JsonProperty("WaitForMasterVariant")
+    @JsonProperty("waitForMasterVariant")
     public Long getWaitForMasterVariant();
 
     /**
-    *  <p>The number of resources in the <code>Imported</code> state.</p>
+    *  <p>The number of resources in the <code>imported</code> state.</p>
     */
     @NotNull
-    @JsonProperty("Imported")
+    @JsonProperty("imported")
     public Long getImported();
 
     /**
-    *  <p>The number of resources in the <code>Rejected</code> state.</p>
+    *  <p>The number of resources in the <code>rejected</code> state.</p>
     */
     @NotNull
-    @JsonProperty("Rejected")
+    @JsonProperty("rejected")
     public Long getRejected();
+
+    public void setProcessing(final Long processing);
 
     public void setValidationFailed(final Long validationFailed);
 
@@ -67,6 +76,7 @@ public interface OperationStates {
 
     public static OperationStates of(final OperationStates template) {
         OperationStatesImpl instance = new OperationStatesImpl();
+        instance.setProcessing(template.getProcessing());
         instance.setValidationFailed(template.getValidationFailed());
         instance.setUnresolved(template.getUnresolved());
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());

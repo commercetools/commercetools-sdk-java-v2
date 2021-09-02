@@ -16,10 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationState {
 
     /**
-    	<p>This is an initial state of import resource and is currently unresolved.</p>
+    	<p>This is an initial state of import resource and is currently processing.</p>
 
     */
-    ImportOperationState UNRESOLVED = ImportOperationStateEnum.UNRESOLVED;
+    ImportOperationState PROCESSING = ImportOperationStateEnum.PROCESSING;
     /**
     	<p>The validation of the import resource failed.</p>
 
@@ -27,9 +27,9 @@ public interface ImportOperationState {
     ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
 
     enum ImportOperationStateEnum implements ImportOperationState {
-        UNRESOLVED("Unresolved"),
+        PROCESSING("processing"),
 
-        VALIDATION_FAILED("ValidationFailed");
+        VALIDATION_FAILED("validationFailed");
         private final String jsonName;
 
         private ImportOperationStateEnum(final String jsonName) {

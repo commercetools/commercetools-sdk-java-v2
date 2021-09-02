@@ -9,75 +9,89 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OperationStatesBuilder implements Builder<OperationStates> {
 
-    private Long ValidationFailed;
+    private Long processing;
 
-    private Long Unresolved;
+    private Long validationFailed;
 
-    private Long WaitForMasterVariant;
+    private Long unresolved;
 
-    private Long Imported;
+    private Long waitForMasterVariant;
 
-    private Long Rejected;
+    private Long imported;
 
-    public OperationStatesBuilder ValidationFailed(final Long ValidationFailed) {
-        this.ValidationFailed = ValidationFailed;
+    private Long rejected;
+
+    public OperationStatesBuilder processing(final Long processing) {
+        this.processing = processing;
         return this;
     }
 
-    public OperationStatesBuilder Unresolved(final Long Unresolved) {
-        this.Unresolved = Unresolved;
+    public OperationStatesBuilder validationFailed(final Long validationFailed) {
+        this.validationFailed = validationFailed;
         return this;
     }
 
-    public OperationStatesBuilder WaitForMasterVariant(final Long WaitForMasterVariant) {
-        this.WaitForMasterVariant = WaitForMasterVariant;
+    public OperationStatesBuilder unresolved(final Long unresolved) {
+        this.unresolved = unresolved;
         return this;
     }
 
-    public OperationStatesBuilder Imported(final Long Imported) {
-        this.Imported = Imported;
+    public OperationStatesBuilder waitForMasterVariant(final Long waitForMasterVariant) {
+        this.waitForMasterVariant = waitForMasterVariant;
         return this;
     }
 
-    public OperationStatesBuilder Rejected(final Long Rejected) {
-        this.Rejected = Rejected;
+    public OperationStatesBuilder imported(final Long imported) {
+        this.imported = imported;
         return this;
+    }
+
+    public OperationStatesBuilder rejected(final Long rejected) {
+        this.rejected = rejected;
+        return this;
+    }
+
+    public Long getProcessing() {
+        return this.processing;
     }
 
     public Long getValidationFailed() {
-        return this.ValidationFailed;
+        return this.validationFailed;
     }
 
     public Long getUnresolved() {
-        return this.Unresolved;
+        return this.unresolved;
     }
 
     public Long getWaitForMasterVariant() {
-        return this.WaitForMasterVariant;
+        return this.waitForMasterVariant;
     }
 
     public Long getImported() {
-        return this.Imported;
+        return this.imported;
     }
 
     public Long getRejected() {
-        return this.Rejected;
+        return this.rejected;
     }
 
     public OperationStates build() {
-        Objects.requireNonNull(ValidationFailed, OperationStates.class + ": ValidationFailed is missing");
-        Objects.requireNonNull(Unresolved, OperationStates.class + ": Unresolved is missing");
-        Objects.requireNonNull(WaitForMasterVariant, OperationStates.class + ": WaitForMasterVariant is missing");
-        Objects.requireNonNull(Imported, OperationStates.class + ": Imported is missing");
-        Objects.requireNonNull(Rejected, OperationStates.class + ": Rejected is missing");
-        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
+        Objects.requireNonNull(processing, OperationStates.class + ": processing is missing");
+        Objects.requireNonNull(validationFailed, OperationStates.class + ": validationFailed is missing");
+        Objects.requireNonNull(unresolved, OperationStates.class + ": unresolved is missing");
+        Objects.requireNonNull(waitForMasterVariant, OperationStates.class + ": waitForMasterVariant is missing");
+        Objects.requireNonNull(imported, OperationStates.class + ": imported is missing");
+        Objects.requireNonNull(rejected, OperationStates.class + ": rejected is missing");
+        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
+            rejected);
     }
 
     /**
      * builds OperationStates without checking for non null required values
      */
     public OperationStates buildUnchecked() {
-        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
+        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
+            rejected);
     }
 
     public static OperationStatesBuilder of() {
@@ -86,11 +100,12 @@ public final class OperationStatesBuilder implements Builder<OperationStates> {
 
     public static OperationStatesBuilder of(final OperationStates template) {
         OperationStatesBuilder builder = new OperationStatesBuilder();
-        builder.ValidationFailed = template.getValidationFailed();
-        builder.Unresolved = template.getUnresolved();
-        builder.WaitForMasterVariant = template.getWaitForMasterVariant();
-        builder.Imported = template.getImported();
-        builder.Rejected = template.getRejected();
+        builder.processing = template.getProcessing();
+        builder.validationFailed = template.getValidationFailed();
+        builder.unresolved = template.getUnresolved();
+        builder.waitForMasterVariant = template.getWaitForMasterVariant();
+        builder.imported = template.getImported();
+        builder.rejected = template.getRejected();
         return builder;
     }
 

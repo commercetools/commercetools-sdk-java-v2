@@ -97,7 +97,7 @@ public final class ImportOperationImpl implements ImportOperation {
     }
 
     /**
-    *  <p>The import status of the resource. Set to <code>Rejected</code> or <code>ValidationFailed</code> if the import of the resource was not successful.</p>
+    *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getState() {
         return this.state;

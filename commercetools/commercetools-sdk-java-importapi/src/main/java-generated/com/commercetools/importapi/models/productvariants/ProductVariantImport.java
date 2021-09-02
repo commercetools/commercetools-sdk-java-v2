@@ -40,7 +40,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
     *  <p>Maps to <code>ProductVariant.attributes</code>.
-    *  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>Unresolved</code>.</p>
+    *  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p>
     */
     @Valid
     @JsonProperty("attributes")
@@ -70,7 +70,7 @@ public interface ProductVariantImport extends ImportResource {
     /**
     *  <p>The <a href="/../api/projects/products#productvariant">Product</a> to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>.
     *  The Reference to the <a href="/../api/projects/products#product">Product</a> with which the ProductVariant is associated.
-    *  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Product is created.</p>
+    *  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Product is created.</p>
     */
     @NotNull
     @Valid

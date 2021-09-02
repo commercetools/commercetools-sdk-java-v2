@@ -25,7 +25,7 @@ public interface ProductVariantPatch {
     /**
     *  <p>The <a href="/../api/projects/products#productvariant">ProductVariant</a> to which this patch is applied.
     *  The Reference to the <a href="/../api/projects/products#productvariant">ProductVariant</a> with which the ProductVariantPatch is associated.
-    *  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductVariant is created.</p>
+    *  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
     */
     @NotNull
     @Valid
@@ -34,7 +34,7 @@ public interface ProductVariantPatch {
 
     /**
     *  <p>Maps to <code>ProductVariant.attributes</code>.
-    *  The referenced attribute must be defined in an already existing <a href="/../api/projects/productTypes#producttype">ProductType</a> in the commercetools Project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>Unresolved</code>.</p>
+    *  The referenced attribute must be defined in an already existing <a href="/../api/projects/productTypes#producttype">ProductType</a> in the commercetools Project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p>
     */
     @Valid
     @JsonProperty("attributes")

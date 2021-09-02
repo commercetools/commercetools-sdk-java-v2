@@ -10,18 +10,23 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>Unresolved</code>.</p>
+*  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ProcessingState {
 
     /**
-    	<p>The validation of the resource failed.</p>
+    	<p>This is an initial state of import resource and is currently in progress.</p>
+
+    */
+    ProcessingState PROCESSING = ProcessingStateEnum.PROCESSING;
+    /**
+    	<p>The validation of the import resource failed.</p>
 
     */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    	<p>There may be unresolved references and they need to be resolved further.</p>
+    	<p>Import operation contains key references to other resources that are not present in platform yet.</p>
 
     */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
@@ -42,15 +47,17 @@ public interface ProcessingState {
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
 
     enum ProcessingStateEnum implements ProcessingState {
-        VALIDATION_FAILED("ValidationFailed"),
+        PROCESSING("processing"),
 
-        UNRESOLVED("Unresolved"),
+        VALIDATION_FAILED("validationFailed"),
 
-        WAIT_FOR_MASTER_VARIANT("WaitForMasterVariant"),
+        UNRESOLVED("unresolved"),
 
-        IMPORTED("Imported"),
+        WAIT_FOR_MASTER_VARIANT("waitForMasterVariant"),
 
-        REJECTED("Rejected");
+        IMPORTED("imported"),
+
+        REJECTED("rejected");
         private final String jsonName;
 
         private ProcessingStateEnum(final String jsonName) {

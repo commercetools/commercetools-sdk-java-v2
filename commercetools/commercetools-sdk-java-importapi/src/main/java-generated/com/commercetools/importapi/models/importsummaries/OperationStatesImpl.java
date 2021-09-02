@@ -16,6 +16,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OperationStatesImpl implements OperationStates {
 
+    private Long processing;
+
     private Long validationFailed;
 
     private Long unresolved;
@@ -27,10 +29,12 @@ public final class OperationStatesImpl implements OperationStates {
     private Long rejected;
 
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("ValidationFailed") final Long validationFailed,
-            @JsonProperty("Unresolved") final Long unresolved,
-            @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant,
-            @JsonProperty("Imported") final Long imported, @JsonProperty("Rejected") final Long rejected) {
+    OperationStatesImpl(@JsonProperty("processing") final Long processing,
+            @JsonProperty("validationFailed") final Long validationFailed,
+            @JsonProperty("unresolved") final Long unresolved,
+            @JsonProperty("waitForMasterVariant") final Long waitForMasterVariant,
+            @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected) {
+        this.processing = processing;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
         this.waitForMasterVariant = waitForMasterVariant;
@@ -42,38 +46,49 @@ public final class OperationStatesImpl implements OperationStates {
     }
 
     /**
-    *  <p>The number of resources in the <code>ValidationFailed</code> state.</p>
+    *  <p>The number of resources in the <code>processing</code> state.</p>
+    */
+    public Long getProcessing() {
+        return this.processing;
+    }
+
+    /**
+    *  <p>The number of resources in the <code>validationFailed</code> state.</p>
     */
     public Long getValidationFailed() {
         return this.validationFailed;
     }
 
     /**
-    *  <p>The number of resources in the <code>Unresolved</code> state.</p>
+    *  <p>The number of resources in the <code>unresolved</code> state.</p>
     */
     public Long getUnresolved() {
         return this.unresolved;
     }
 
     /**
-    *  <p>The number of resources in the <code>WaitForMasterVariant</code> state.</p>
+    *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
     */
     public Long getWaitForMasterVariant() {
         return this.waitForMasterVariant;
     }
 
     /**
-    *  <p>The number of resources in the <code>Imported</code> state.</p>
+    *  <p>The number of resources in the <code>imported</code> state.</p>
     */
     public Long getImported() {
         return this.imported;
     }
 
     /**
-    *  <p>The number of resources in the <code>Rejected</code> state.</p>
+    *  <p>The number of resources in the <code>rejected</code> state.</p>
     */
     public Long getRejected() {
         return this.rejected;
+    }
+
+    public void setProcessing(final Long processing) {
+        this.processing = processing;
     }
 
     public void setValidationFailed(final Long validationFailed) {
@@ -106,7 +121,8 @@ public final class OperationStatesImpl implements OperationStates {
 
         OperationStatesImpl that = (OperationStatesImpl) o;
 
-        return new EqualsBuilder().append(validationFailed, that.validationFailed)
+        return new EqualsBuilder().append(processing, that.processing)
+                .append(validationFailed, that.validationFailed)
                 .append(unresolved, that.unresolved)
                 .append(waitForMasterVariant, that.waitForMasterVariant)
                 .append(imported, that.imported)
@@ -116,7 +132,8 @@ public final class OperationStatesImpl implements OperationStates {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(validationFailed)
+        return new HashCodeBuilder(17, 37).append(processing)
+                .append(validationFailed)
                 .append(unresolved)
                 .append(waitForMasterVariant)
                 .append(imported)

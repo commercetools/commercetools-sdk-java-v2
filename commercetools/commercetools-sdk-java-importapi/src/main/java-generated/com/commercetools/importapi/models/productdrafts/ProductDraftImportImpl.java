@@ -93,7 +93,7 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
     *  <p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
     *  Maps to <code>Product.productType</code>.
     *  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the ProductDraft is associated.
-    *  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductType is created.</p>
+    *  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
     */
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {
         return this.productType;
@@ -120,7 +120,7 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
 
     /**
     *  <p>The Reference to the <a href="/../api/projects/categories#category">Categories</a> with which the ProductDraft is associated.
-    *  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Categories are created.</p>
+    *  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Categories are created.</p>
     */
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
         return this.categories;
@@ -179,7 +179,7 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
 
     /**
     *  <p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the ProductDraft is associated.
-    *  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary TaxCategory is created.</p>
+    *  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
@@ -210,7 +210,7 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
 
     /**
     *  <p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the ProductDraft is associated.
-    *  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary State is created.</p>
+    *  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary State is created.</p>
     */
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
         return this.state;

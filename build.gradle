@@ -200,6 +200,16 @@ subprojects { project ->
         testClassesDirs = sourceSets.integrationTest.output.classesDirs
         classpath = sourceSets.integrationTest.runtimeClasspath
         shouldRunAfter(test)
+
+        testLogging {
+            events "failed"
+            exceptionFormat "full"
+
+            info {
+                events "failed"
+                exceptionFormat "full"
+            }
+        }
     }
     check.dependsOn(integrationTest)
 

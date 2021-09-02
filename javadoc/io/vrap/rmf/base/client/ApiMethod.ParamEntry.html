@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,18 +181,38 @@ implements java.util.Map.Entry&lt;K,V&gt;</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">K</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#getKey--">getKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">V</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#reflectionEquals-java.lang.Object-">reflectionEquals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#reflectionHashCode--">reflectionHashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">V</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#setValue-V-">setValue</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#toUriString--">toUriString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -202,14 +222,14 @@ implements java.util.Map.Entry&lt;K,V&gt;</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.util.Map.Entry">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;java.util.Map.Entry</h3>
-<code>comparingByKey, comparingByKey, comparingByValue, comparingByValue, equals, hashCode</code></li>
+<code>comparingByKey, comparingByKey, comparingByValue, comparingByValue</code></li>
 </ul>
 </li>
 </ul>
@@ -326,10 +346,67 @@ implements java.util.Map.Entry&lt;K,V&gt;</pre>
 <a name="toUriString--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toUriString</h4>
 <pre>public&nbsp;java.lang.String&nbsp;toUriString()</pre>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>equals</code>&nbsp;in interface&nbsp;<code>java.util.Map.Entry&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">K</a>,<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">V</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>hashCode</code>&nbsp;in interface&nbsp;<code>java.util.Map.Entry&lt;<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">K</a>,<a href="../../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="type parameter in ApiMethod.ParamEntry">V</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="reflectionEquals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reflectionEquals</h4>
+<pre>protected&nbsp;boolean&nbsp;reflectionEquals(java.lang.Object&nbsp;o)</pre>
+</li>
+</ul>
+<a name="reflectionHashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>reflectionHashCode</h4>
+<pre>public&nbsp;int&nbsp;reflectionHashCode()</pre>
 </li>
 </ul>
 </li>

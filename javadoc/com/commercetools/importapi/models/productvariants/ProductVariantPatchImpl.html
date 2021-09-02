@@ -244,7 +244,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/productvar
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;getProductVariant()</pre>
 <div class="block"><p>The <a href="/../api/projects/products#productvariant">ProductVariant</a> to which this patch is applied.
   The Reference to the <a href="/../api/projects/products#productvariant">ProductVariant</a> with which the ProductVariantPatch is associated.
-  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary ProductVariant is created.</p></div>
+  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html#getProductVariant--">getProductVariant</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a></code></dd>
@@ -259,7 +259,7 @@ implements <a href="../../../../../com/commercetools/importapi/models/productvar
 <h4>getAttributes</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&nbsp;getAttributes()</pre>
 <div class="block"><p>Maps to <code>ProductVariant.attributes</code>.
-  The referenced attribute must be defined in an already existing <a href="/../api/projects/productTypes#producttype">ProductType</a> in the commercetools Project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>Unresolved</code>.</p></div>
+  The referenced attribute must be defined in an already existing <a href="/../api/projects/productTypes#producttype">ProductType</a> in the commercetools Project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html#getAttributes--">getAttributes</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a></code></dd>

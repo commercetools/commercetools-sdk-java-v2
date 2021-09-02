@@ -282,7 +282,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <pre>@Valid
 @Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;getAttributes()</pre>
 <div class="block"><p>Maps to <code>ProductVariant.attributes</code>.
-  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>Unresolved</code>.</p></div>
+  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 </li>
 </ul>
 <a name="getImages--">
@@ -328,7 +328,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 @NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;getProduct()</pre>
 <div class="block"><p>The <a href="/../api/projects/products#productvariant">Product</a> to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>.
   The Reference to the <a href="/../api/projects/products#product">Product</a> with which the ProductVariant is associated.
-  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>Unresolved</code> until the necessary Product is created.</p></div>
+  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Product is created.</p></div>
 </li>
 </ul>
 <a name="setSku-java.lang.String-">

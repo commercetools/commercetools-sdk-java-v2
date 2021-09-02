@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -262,23 +262,31 @@ extends java.lang.Object</pre>
            java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#reflectionEquals-java.lang.Object-">reflectionEquals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#reflectionHashCode--">reflectionHashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#withHeader-java.lang.String-java.lang.String-">withHeader</a></span>(java.lang.String&nbsp;key,
           java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders.StringHeaderEntry...-">withHeaders</a></span>(<a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.StringHeaderEntry.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders.StringHeaderEntry</a>...&nbsp;headers)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#withHeaders-java.util.List-">withHeaders</a></span>(java.util.List&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.String&gt;&gt;&nbsp;headers)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html#withoutHeader-java.lang.String-">withoutHeader</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
@@ -579,23 +587,33 @@ public&nbsp;java.lang.String&nbsp;getFirst(java.lang.String&nbsp;key)</pre>
 <li class="blockList">
 <h4>equals</h4>
 <pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
 </li>
 </ul>
 <a name="hashCode--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>hashCode</h4>
 <pre>public&nbsp;int&nbsp;hashCode()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
+</li>
+</ul>
+<a name="reflectionEquals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reflectionEquals</h4>
+<pre>protected&nbsp;boolean&nbsp;reflectionEquals(java.lang.Object&nbsp;o)</pre>
+</li>
+</ul>
+<a name="reflectionHashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>reflectionHashCode</h4>
+<pre>public&nbsp;int&nbsp;reflectionHashCode()</pre>
 </li>
 </ul>
 </li>

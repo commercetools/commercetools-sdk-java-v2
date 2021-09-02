@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":6,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":6,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -180,10 +180,18 @@ implements java.lang.AutoCloseable</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/AutoCloseableService.html#isClosed--">isClosed</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/AutoCloseableService.html#reflectionEquals-java.lang.Object-">reflectionEquals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/AutoCloseableService.html#reflectionHashCode--">reflectionHashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/AutoCloseableService.html#rejectExecutionIfClosed-java.lang.String-">rejectExecutionIfClosed</a></span>(java.lang.String&nbsp;message)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/AutoCloseableService.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -282,10 +290,6 @@ implements java.lang.AutoCloseable</pre>
 <li class="blockList">
 <h4>equals</h4>
 <pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
 </li>
 </ul>
 <a name="hashCode--">
@@ -295,16 +299,12 @@ implements java.lang.AutoCloseable</pre>
 <li class="blockList">
 <h4>hashCode</h4>
 <pre>public&nbsp;int&nbsp;hashCode()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
 </li>
 </ul>
 <a name="toString--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
 <pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
@@ -312,6 +312,24 @@ implements java.lang.AutoCloseable</pre>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
+</li>
+</ul>
+<a name="reflectionEquals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reflectionEquals</h4>
+<pre>protected&nbsp;boolean&nbsp;reflectionEquals(java.lang.Object&nbsp;o)</pre>
+</li>
+</ul>
+<a name="reflectionHashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>reflectionHashCode</h4>
+<pre>public&nbsp;int&nbsp;reflectionHashCode()</pre>
 </li>
 </ul>
 </li>

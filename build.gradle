@@ -304,13 +304,45 @@ def exportedProjects= [
         ":commercetools:commercetools-apachehttp-client",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
-        ":rmf:okhttp-client",
+        ":commercetools:internal-docs",
+        ":rmf:okhttp-client"
 ]
+
 task alljavadoc(type: Javadoc) {
+    dependsOn(':commercetools:taglets:jar')
     source exportedProjects.collect { project(it).sourceSets.main.allJava }
-    classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
+    classpath = files(exportedProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
-    options.noTimestamp = true
+    excludes = [
+        '**/*Test.java',
+        '**/test/*.java'
+    ]
+    options {
+        overview = "src/main/javadoc/overview.html"
+        noTimestamp = true
+        bottom = """
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <span id="custom-javascripts"></span>
+            <script src="{@docRoot}/resources/javascripts/main.js"></script>
+            <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
+
+    """
+        taglets 'com.commercetools.build.taglets.CodeTaglet'
+        tagletPath(files(project.rootDir.absolutePath + "/commercetools/taglets/build/libs/taglets.jar").files as File[])
+    }
+
+    options.addBooleanOption('-allow-script-in-comments', true)
+    options.addStringOption('Xdoclint:missing,syntax,accessibility,reference')
+
+    doLast{
+        copy{
+            from "src/main/javadoc/resources"
+            into "${buildDir}/docs/javadoc/resources"
+        }
+    }
 }
 
 task codeCoverageReport(type: JacocoReport) {

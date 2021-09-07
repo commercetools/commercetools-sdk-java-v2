@@ -47,14 +47,14 @@ public final class InvalidStateTransitionErrorImpl implements InvalidStateTransi
     }
 
     /**
-    *  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p>
+    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
         return this.currentState;
     }
 
     /**
-    *  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p>
+    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
         return this.newState;

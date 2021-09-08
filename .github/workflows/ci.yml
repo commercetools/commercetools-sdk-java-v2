@@ -18,7 +18,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: '8'
 
       - name: Retrieve branch name
@@ -81,6 +81,9 @@ jobs:
             with:
                 distribution: 'temurin'
                 java-version: '11'
+
+          - run: ./gradlew commercetools:javadoc-taglets:shadowJar -Ptaglets && ls -la
+            working-directory: sdk
 
           - run: ./gradlew alljavadoc -Ptaglets
             working-directory: sdk

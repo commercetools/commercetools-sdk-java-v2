@@ -11,5 +11,5 @@ include 'commercetools:commercetools-sdk-java-history'
 include 'commercetools:commercetools-sdk-compat-v1'
 include 'commercetools:commercetools-apachehttp-client'
 include 'commercetools:internal-docs'
-include 'commercetools:taglets'
+include 'commercetools:javadoc-taglets'
 

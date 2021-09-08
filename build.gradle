@@ -309,7 +309,7 @@ def exportedProjects= [
 ]
 
 task alljavadoc(type: Javadoc) {
-    dependsOn(':commercetools:taglets:shadowJar')
+    dependsOn(':commercetools:javadoc-taglets:shadowJar')
     source exportedProjects.collect { project(it).sourceSets.main.allJava }
     classpath = files(exportedProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")

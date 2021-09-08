@@ -61,39 +61,43 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   docs:
-      name: Build and release docs
+    name: Build and release docs
 
-      runs-on: ubuntu-latest
-      steps:
-          - name: Checkout
-            uses: actions/checkout@v2
-            with:
-                path: sdk
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: sdk
 
-          - name: Checkout
-            uses: actions/checkout@v2
-            with:
-                path: doc
-                ref: gh-pages
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: doc
+          ref: gh-pages
 
-          - name: Setup Java
-            uses: actions/setup-java@v2
-            with:
-                distribution: 'temurin'
-                java-version: '11'
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '11'
 
-          - run: ./gradlew commercetools:javadoc-taglets:shadowJar -Ptaglets && ls -la
-            working-directory: sdk
+      - run: ./gradlew commercetools:javadoc-taglets:shadowJar && ls -la
+        working-directory: sdk
 
-          - run: ./gradlew alljavadoc -Ptaglets
-            working-directory: sdk
+      - run: ./gradlew alljavadoc
+        continue-on-error: true
+        working-directory: sdk
 
-          - run: rm -rf doc/testdoc && mv sdk/build/docs/javadoc doc/testdoc
+      - run: ls -la && cat build/tmp/alljavadoc/javadoc.options
+        working-directory: sdk
 
-          - uses: stefanzweifel/git-auto-commit-action@v4
-            with:
-                repository: doc
-                commit_message: "Update javadoc"
-                commit_user_name: Auto Mation
-                commit_user_email: automation@commercetools.com
-                commit_author: Auto Mation <automation@commercetools.com>
+#          - run: rm -rf doc/testdoc && mv sdk/build/docs/javadoc doc/testdoc
+#
+#          - uses: stefanzweifel/git-auto-commit-action@v4
+#            with:
+#                repository: doc
+#                commit_message: "Update javadoc"
+#                commit_user_name: Auto Mation
+#                commit_user_email: automation@commercetools.com
+#                commit_author: Auto Mation <automation@commercetools.com>

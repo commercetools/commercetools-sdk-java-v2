@@ -2,17 +2,14 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
-sourceCompatibility = 1.9
-targetCompatibility = 1.9
+sourceCompatibility = JavaVersion.VERSION_1_9
+targetCompatibility = JavaVersion.VERSION_1_9
 
 dependencies {
     implementation "com.github.javaparser:javaparser-symbol-solver-core:3.20.2"
 }
 
 shadowJar {
-    onlyIf {
-        project.hasProperty("taglets")
-    }
     archiveFileName = 'taglets.jar'
     minimize()
     destinationDirectory = file("../../")

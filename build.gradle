@@ -20,6 +20,13 @@ plugins {
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
+configurations {
+    taglet
+}
+dependencies {
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.0.0'
+}
+
 import java.text.SimpleDateFormat
 
 def globalVersion = new Version(version)
@@ -309,7 +316,6 @@ def exportedProjects= [
 ]
 
 task alljavadoc(type: Javadoc) {
-    dependsOn(':commercetools:javadoc-taglets:shadowJar')
     source exportedProjects.collect { project(it).sourceSets.main.allJava }
     classpath = files(exportedProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
@@ -318,6 +324,12 @@ task alljavadoc(type: Javadoc) {
         '**/test/*.java'
     ]
     options {
+        setMemberLevel JavadocMemberLevel.PUBLIC
+        setAuthor false
+        noTimestamp = true
+
+        links "https://docs.oracle.com/javase/8/docs/api/"
+
         overview = "src/main/javadoc/overview.html"
         noTimestamp = true
         bottom = """
@@ -331,7 +343,7 @@ task alljavadoc(type: Javadoc) {
 
     """
         taglets 'com.commercetools.build.taglets.CodeTaglet'
-        tagletPath(files(project.rootDir.absolutePath + "/taglets.jar").files as File[])
+        tagletPath(configurations.taglet.files as File[])
     }
 
     options.addBooleanOption('-allow-script-in-comments', true)

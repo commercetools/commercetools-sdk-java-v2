@@ -20,14 +20,14 @@ public interface InvalidStateTransitionError extends ErrorObject {
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
-    *  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p>
+    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
     */
     @NotNull
     @JsonProperty("currentState")
     public ProcessingState getCurrentState();
 
     /**
-    *  <p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p>
+    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
     */
     @NotNull
     @JsonProperty("newState")

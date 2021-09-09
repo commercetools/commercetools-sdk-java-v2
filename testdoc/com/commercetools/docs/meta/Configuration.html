@@ -132,31 +132,37 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
 
     <div id="example-ExamplesTest-instance--%s" class=code-example><pre><code class='java'>// ApiRoot config for Europe projects
-ApiRoot apiRoot = ApiRootBuilder.of().defaultClient(
-        ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl()).build();
+ApiRoot apiRoot = ApiRootBuilder.of()
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .withScopes("your-scopes")
+                    .build(),
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
-    <div id="example-ImportExamplesTest-instance--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-        ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-        ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_US_CENTRAL1.getApiUrl()).build();
+    <div id="example-ImportExamplesTest-instance--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ImportApiRootBuilder.of()
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .withScopes("your-scopes")
+                    .build(),
+            ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(), ServiceRegion.GCP_US_CENTRAL1.getApiUrl())
+        .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ImportExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
-    <div id="example-ImportExamplesTest-euInstance--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-        ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-        ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
-        ServiceRegion.GCP_US_CENTRAL1.getApiUrl()).build();
+    <div id="example-ImportExamplesTest-euInstance--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ImportApiRootBuilder.of()
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .withScopes("your-scopes")
+                    .build(),
+            ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(), ServiceRegion.GCP_US_CENTRAL1.getApiUrl())
+        .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ImportExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
 </li>
 </ul>

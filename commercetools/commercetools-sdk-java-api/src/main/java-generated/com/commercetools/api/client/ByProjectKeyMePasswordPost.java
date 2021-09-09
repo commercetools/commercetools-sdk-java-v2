@@ -23,18 +23,19 @@ public class ByProjectKeyMePasswordPost
 
     private String projectKey;
 
-    private Object obj;
+    private com.commercetools.api.models.customer.MyCustomerChangePassword myCustomerChangePassword;
 
-    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey, Object obj) {
+    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey,
+            com.commercetools.api.models.customer.MyCustomerChangePassword myCustomerChangePassword) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.obj = obj;
+        this.myCustomerChangePassword = myCustomerChangePassword;
     }
 
     public ByProjectKeyMePasswordPost(ByProjectKeyMePasswordPost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.obj = t.obj;
+        this.myCustomerChangePassword = t.myCustomerChangePassword;
     }
 
     @Override
@@ -45,7 +46,7 @@ public class ByProjectKeyMePasswordPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(obj);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCustomerChangePassword);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {
@@ -87,12 +88,14 @@ public class ByProjectKeyMePasswordPost
 
         ByProjectKeyMePasswordPost that = (ByProjectKeyMePasswordPost) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(myCustomerChangePassword, that.myCustomerChangePassword)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(obj).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey).append(myCustomerChangePassword).toHashCode();
     }
 
     @Override

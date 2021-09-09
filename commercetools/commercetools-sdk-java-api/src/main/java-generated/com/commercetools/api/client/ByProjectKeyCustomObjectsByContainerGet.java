@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -105,6 +106,23 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
+     * set where with the specificied values
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withWhere(final List<String> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addWhere(final List<String> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand) {
@@ -119,6 +137,23 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set predicateVar with the specificied value
      */
     public ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName, final String predicateVar) {
@@ -130,6 +165,27 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
      */
     public ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    /**
+     * set predicateVar with the specificied values
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName,
+            final List<String> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().withoutQueryParam(placeholderName)
+                .addQueryParams(
+                    predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional predicateVar query parameters
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName,
+            final List<String> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().addQueryParams(
+            predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
     }
 
     @Override

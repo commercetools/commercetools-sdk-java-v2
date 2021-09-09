@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -108,6 +109,24 @@ public class ByProjectKeyShoppingListsByIDDelete
     }
 
     /**
+     * set dataErasure with the specificied values
+     */
+    public ByProjectKeyShoppingListsByIDDelete withDataErasure(final List<Boolean> dataErasure) {
+        return copy().withoutQueryParam("dataErasure")
+                .addQueryParams(dataErasure.stream()
+                        .map(s -> new ParamEntry<>("dataErasure", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional dataErasure query parameters
+     */
+    public ByProjectKeyShoppingListsByIDDelete addDataErasure(final List<Boolean> dataErasure) {
+        return copy().addQueryParams(
+            dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set version with the specificied value
      */
     public ByProjectKeyShoppingListsByIDDelete withVersion(final long version) {
@@ -122,6 +141,23 @@ public class ByProjectKeyShoppingListsByIDDelete
     }
 
     /**
+     * set version with the specificied values
+     */
+    public ByProjectKeyShoppingListsByIDDelete withVersion(final List<Long> version) {
+        return copy().withoutQueryParam("version")
+                .addQueryParams(
+                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional version query parameters
+     */
+    public ByProjectKeyShoppingListsByIDDelete addVersion(final List<Long> version) {
+        return copy().addQueryParams(
+            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyShoppingListsByIDDelete withExpand(final String expand) {
@@ -133,6 +169,23 @@ public class ByProjectKeyShoppingListsByIDDelete
      */
     public ByProjectKeyShoppingListsByIDDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyShoppingListsByIDDelete withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyShoppingListsByIDDelete addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

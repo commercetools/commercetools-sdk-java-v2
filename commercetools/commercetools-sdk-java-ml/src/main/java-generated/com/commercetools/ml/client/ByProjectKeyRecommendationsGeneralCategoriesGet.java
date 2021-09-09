@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -108,6 +109,25 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
+     * set productImageUrl with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final List<String> productImageUrl) {
+        return copy().withoutQueryParam("productImageUrl")
+                .addQueryParams(productImageUrl.stream()
+                        .map(s -> new ParamEntry<>("productImageUrl", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional productImageUrl query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final List<String> productImageUrl) {
+        return copy().addQueryParams(productImageUrl.stream()
+                .map(s -> new ParamEntry<>("productImageUrl", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set productName with the specificied value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName) {
@@ -119,6 +139,24 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final String productName) {
         return copy().addQueryParam("productName", productName);
+    }
+
+    /**
+     * set productName with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final List<String> productName) {
+        return copy().withoutQueryParam("productName")
+                .addQueryParams(productName.stream()
+                        .map(s -> new ParamEntry<>("productName", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional productName query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final List<String> productName) {
+        return copy().addQueryParams(
+            productName.stream().map(s -> new ParamEntry<>("productName", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -136,6 +174,23 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
+     * set limit with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final List<Integer> limit) {
+        return copy().withoutQueryParam("limit")
+                .addQueryParams(
+                    limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional limit query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final List<Integer> limit) {
+        return copy().addQueryParams(
+            limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set offset with the specificied value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final int offset) {
@@ -147,6 +202,23 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
+    }
+
+    /**
+     * set offset with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final List<Integer> offset) {
+        return copy().withoutQueryParam("offset")
+                .addQueryParams(
+                    offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional offset query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final List<Integer> offset) {
+        return copy().addQueryParams(
+            offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -164,6 +236,25 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
+     * set confidenceMin with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final List<Double> confidenceMin) {
+        return copy().withoutQueryParam("confidenceMin")
+                .addQueryParams(confidenceMin.stream()
+                        .map(s -> new ParamEntry<>("confidenceMin", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional confidenceMin query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final List<Double> confidenceMin) {
+        return copy().addQueryParams(confidenceMin.stream()
+                .map(s -> new ParamEntry<>("confidenceMin", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set confidenceMax with the specificied value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final double confidenceMax) {
@@ -175,6 +266,25 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
+    }
+
+    /**
+     * set confidenceMax with the specificied values
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final List<Double> confidenceMax) {
+        return copy().withoutQueryParam("confidenceMax")
+                .addQueryParams(confidenceMax.stream()
+                        .map(s -> new ParamEntry<>("confidenceMax", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional confidenceMax query parameters
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final List<Double> confidenceMax) {
+        return copy().addQueryParams(confidenceMax.stream()
+                .map(s -> new ParamEntry<>("confidenceMax", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     @Override

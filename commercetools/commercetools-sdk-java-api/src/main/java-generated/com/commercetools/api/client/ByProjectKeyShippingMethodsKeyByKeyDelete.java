@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -104,6 +105,23 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
     }
 
     /**
+     * set version with the specificied values
+     */
+    public ByProjectKeyShippingMethodsKeyByKeyDelete withVersion(final List<Long> version) {
+        return copy().withoutQueryParam("version")
+                .addQueryParams(
+                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional version query parameters
+     */
+    public ByProjectKeyShippingMethodsKeyByKeyDelete addVersion(final List<Long> version) {
+        return copy().addQueryParams(
+            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyShippingMethodsKeyByKeyDelete withExpand(final String expand) {
@@ -115,6 +133,23 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
      */
     public ByProjectKeyShippingMethodsKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyShippingMethodsKeyByKeyDelete withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyShippingMethodsKeyByKeyDelete addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

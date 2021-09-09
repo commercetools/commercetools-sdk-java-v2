@@ -18,7 +18,6 @@ import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
-import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -28,12 +27,12 @@ public class ExamplesTest {
     private ApiRoot createClient() {
         ApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(
-                        ClientCredentials.of()
-                                .withClientId("your-client-id")
-                                .withClientSecret("your-client-secret")
-                                .withScopes("your-scopes")
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .build();
 
         return apiRoot;
@@ -41,13 +40,15 @@ public class ExamplesTest {
 
     public void instance() {
         // ApiRoot config for Europe projects
-        ApiRoot apiRoot = ApiRootBuilder.of().defaultClient(
-                ClientCredentials.of().withClientId("your-client-id")
-                        .withClientSecret("your-client-secret")
-                        .withScopes("your-scopes")
-                        .build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                ServiceRegion.GCP_EUROPE_WEST1.getApiUrl()).build();
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build();
     }
 
     public void performRequest() {

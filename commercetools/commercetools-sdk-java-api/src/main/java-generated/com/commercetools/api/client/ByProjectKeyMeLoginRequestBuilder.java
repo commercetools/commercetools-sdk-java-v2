@@ -15,8 +15,8 @@ public class ByProjectKeyMeLoginRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyMeLoginPost post(Object obj) {
-        return new ByProjectKeyMeLoginPost(apiHttpClient, projectKey, obj);
+    public ByProjectKeyMeLoginPost post(com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+        return new ByProjectKeyMeLoginPost(apiHttpClient, projectKey, customerSignin);
     }
 
 }

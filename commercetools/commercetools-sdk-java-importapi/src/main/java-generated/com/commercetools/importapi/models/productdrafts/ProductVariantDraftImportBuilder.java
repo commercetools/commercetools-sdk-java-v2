@@ -15,7 +15,6 @@ public final class ProductVariantDraftImportBuilder implements Builder<ProductVa
     @Nullable
     private String sku;
 
-    @Nullable
     private String key;
 
     @Nullable
@@ -35,7 +34,7 @@ public final class ProductVariantDraftImportBuilder implements Builder<ProductVa
         return this;
     }
 
-    public ProductVariantDraftImportBuilder key(@Nullable final String key) {
+    public ProductVariantDraftImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
@@ -143,7 +142,6 @@ public final class ProductVariantDraftImportBuilder implements Builder<ProductVa
         return this.sku;
     }
 
-    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -169,6 +167,7 @@ public final class ProductVariantDraftImportBuilder implements Builder<ProductVa
     }
 
     public ProductVariantDraftImport build() {
+        Objects.requireNonNull(key, ProductVariantDraftImport.class + ": key is missing");
         return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);
     }
 

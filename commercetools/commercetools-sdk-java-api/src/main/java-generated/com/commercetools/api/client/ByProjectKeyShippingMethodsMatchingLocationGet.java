@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -99,6 +100,23 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
+     * set country with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final List<String> country) {
+        return copy().withoutQueryParam("country")
+                .addQueryParams(
+                    country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional country query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final List<String> country) {
+        return copy().addQueryParams(
+            country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set state with the specificied value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state) {
@@ -110,6 +128,23 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet addState(final String state) {
         return copy().addQueryParam("state", state);
+    }
+
+    /**
+     * set state with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withState(final List<String> state) {
+        return copy().withoutQueryParam("state")
+                .addQueryParams(
+                    state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional state query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final List<String> state) {
+        return copy().addQueryParams(
+            state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -127,6 +162,24 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
+     * set currency with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final List<String> currency) {
+        return copy().withoutQueryParam("currency")
+                .addQueryParams(currency.stream()
+                        .map(s -> new ParamEntry<>("currency", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional currency query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final List<String> currency) {
+        return copy().addQueryParams(
+            currency.stream().map(s -> new ParamEntry<>("currency", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand) {
@@ -138,6 +191,23 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

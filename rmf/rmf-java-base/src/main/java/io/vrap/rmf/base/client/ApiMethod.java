@@ -215,6 +215,18 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         return c;
     }
 
+    /**
+     * add the query parameters
+     * @param queryParams list of query parameters
+     * @return T
+     */
+    public T addQueryParams(final List<ParamEntry<String, String>> queryParams) {
+        T c = copy();
+
+        ((ApiMethod<T, TResult>) c).queryParams.addAll(queryParams);
+        return c;
+    }
+
     public List<ParamEntry<String, String>> getQueryParams() {
         return new ArrayList<>(this.queryParams);
     }

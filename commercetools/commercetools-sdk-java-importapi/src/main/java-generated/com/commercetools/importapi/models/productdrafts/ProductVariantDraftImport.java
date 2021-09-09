@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.Image;
@@ -25,6 +26,7 @@ public interface ProductVariantDraftImport {
     @JsonProperty("sku")
     public String getSku();
 
+    @NotNull
     @JsonProperty("key")
     public String getKey();
 

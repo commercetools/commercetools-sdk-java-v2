@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -166,6 +167,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set fuzzy with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFuzzy(final List<Boolean> fuzzy) {
+        return copy().withoutQueryParam("fuzzy")
+                .addQueryParams(
+                    fuzzy.stream().map(s -> new ParamEntry<>("fuzzy", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional fuzzy query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFuzzy(final List<Boolean> fuzzy) {
+        return copy().addQueryParams(
+            fuzzy.stream().map(s -> new ParamEntry<>("fuzzy", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set fuzzyLevel with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final double fuzzyLevel) {
@@ -177,6 +195,24 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final double fuzzyLevel) {
         return copy().addQueryParam("fuzzyLevel", fuzzyLevel);
+    }
+
+    /**
+     * set fuzzyLevel with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final List<Double> fuzzyLevel) {
+        return copy().withoutQueryParam("fuzzyLevel")
+                .addQueryParams(fuzzyLevel.stream()
+                        .map(s -> new ParamEntry<>("fuzzyLevel", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional fuzzyLevel query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final List<Double> fuzzyLevel) {
+        return copy().addQueryParams(
+            fuzzyLevel.stream().map(s -> new ParamEntry<>("fuzzyLevel", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -194,6 +230,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set markMatchingVariants with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final List<Boolean> markMatchingVariants) {
+        return copy().withoutQueryParam("markMatchingVariants")
+                .addQueryParams(markMatchingVariants.stream()
+                        .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional markMatchingVariants query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final List<Boolean> markMatchingVariants) {
+        return copy().addQueryParams(markMatchingVariants.stream()
+                .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set staged with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withStaged(final boolean staged) {
@@ -205,6 +260,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
+    }
+
+    /**
+     * set staged with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withStaged(final List<Boolean> staged) {
+        return copy().withoutQueryParam("staged")
+                .addQueryParams(
+                    staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional staged query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addStaged(final List<Boolean> staged) {
+        return copy().addQueryParams(
+            staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -222,6 +294,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set filter with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFilter(final List<String> filter) {
+        return copy().withoutQueryParam("filter")
+                .addQueryParams(
+                    filter.stream().map(s -> new ParamEntry<>("filter", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filter query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFilter(final List<String> filter) {
+        return copy().addQueryParams(
+            filter.stream().map(s -> new ParamEntry<>("filter", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set filterFacets with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final String filterFacets) {
@@ -233,6 +322,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final String filterFacets) {
         return copy().addQueryParam("filter.facets", filterFacets);
+    }
+
+    /**
+     * set filterFacets with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final List<String> filterFacets) {
+        return copy().withoutQueryParam("filter.facets")
+                .addQueryParams(filterFacets.stream()
+                        .map(s -> new ParamEntry<>("filter.facets", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filterFacets query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final List<String> filterFacets) {
+        return copy().addQueryParams(filterFacets.stream()
+                .map(s -> new ParamEntry<>("filter.facets", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -250,6 +358,24 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set filterQuery with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final List<String> filterQuery) {
+        return copy().withoutQueryParam("filter.query")
+                .addQueryParams(filterQuery.stream()
+                        .map(s -> new ParamEntry<>("filter.query", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filterQuery query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final List<String> filterQuery) {
+        return copy().addQueryParams(
+            filterQuery.stream().map(s -> new ParamEntry<>("filter.query", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set facet with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withFacet(final String facet) {
@@ -261,6 +387,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addFacet(final String facet) {
         return copy().addQueryParam("facet", facet);
+    }
+
+    /**
+     * set facet with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFacet(final List<String> facet) {
+        return copy().withoutQueryParam("facet")
+                .addQueryParams(
+                    facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional facet query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFacet(final List<String> facet) {
+        return copy().addQueryParams(
+            facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -278,6 +421,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set sort with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withSort(final List<String> sort) {
+        return copy().withoutQueryParam("sort")
+                .addQueryParams(
+                    sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional sort query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addSort(final List<String> sort) {
+        return copy().addQueryParams(
+            sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set limit with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withLimit(final int limit) {
@@ -289,6 +449,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
+    }
+
+    /**
+     * set limit with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Integer> limit) {
+        return copy().withoutQueryParam("limit")
+                .addQueryParams(
+                    limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional limit query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addLimit(final List<Integer> limit) {
+        return copy().addQueryParams(
+            limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -306,6 +483,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set offset with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Integer> offset) {
+        return copy().withoutQueryParam("offset")
+                .addQueryParams(
+                    offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional offset query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addOffset(final List<Integer> offset) {
+        return copy().addQueryParams(
+            offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set withTotal with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withWithTotal(final boolean withTotal) {
@@ -317,6 +511,24 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final List<Boolean> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final List<Boolean> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -334,6 +546,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set priceCurrency with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final List<String> priceCurrency) {
+        return copy().withoutQueryParam("priceCurrency")
+                .addQueryParams(priceCurrency.stream()
+                        .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCurrency query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final List<String> priceCurrency) {
+        return copy().addQueryParams(priceCurrency.stream()
+                .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set priceCountry with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final String priceCountry) {
@@ -345,6 +576,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final String priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
+    }
+
+    /**
+     * set priceCountry with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final List<String> priceCountry) {
+        return copy().withoutQueryParam("priceCountry")
+                .addQueryParams(priceCountry.stream()
+                        .map(s -> new ParamEntry<>("priceCountry", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCountry query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final List<String> priceCountry) {
+        return copy().addQueryParams(priceCountry.stream()
+                .map(s -> new ParamEntry<>("priceCountry", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -362,6 +612,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set priceCustomerGroup with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final List<String> priceCustomerGroup) {
+        return copy().withoutQueryParam("priceCustomerGroup")
+                .addQueryParams(priceCustomerGroup.stream()
+                        .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(final List<String> priceCustomerGroup) {
+        return copy().addQueryParams(priceCustomerGroup.stream()
+                .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set priceChannel with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final String priceChannel) {
@@ -373,6 +642,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final String priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
+    }
+
+    /**
+     * set priceChannel with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final List<String> priceChannel) {
+        return copy().withoutQueryParam("priceChannel")
+                .addQueryParams(priceChannel.stream()
+                        .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceChannel query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final List<String> priceChannel) {
+        return copy().addQueryParams(priceChannel.stream()
+                .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -390,6 +678,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set localeProjection with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final List<String> localeProjection) {
+        return copy().withoutQueryParam("localeProjection")
+                .addQueryParams(localeProjection.stream()
+                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional localeProjection query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final List<String> localeProjection) {
+        return copy().addQueryParams(localeProjection.stream()
+                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set storeProjection with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final String storeProjection) {
@@ -401,6 +708,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final String storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
+    }
+
+    /**
+     * set storeProjection with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final List<String> storeProjection) {
+        return copy().withoutQueryParam("storeProjection")
+                .addQueryParams(storeProjection.stream()
+                        .map(s -> new ParamEntry<>("storeProjection", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional storeProjection query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final List<String> storeProjection) {
+        return copy().addQueryParams(storeProjection.stream()
+                .map(s -> new ParamEntry<>("storeProjection", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -418,6 +744,23 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set text with the specificied value
      */
     public ByProjectKeyProductProjectionsSearchGet withText(final String locale, final String text) {
@@ -429,6 +772,25 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      */
     public ByProjectKeyProductProjectionsSearchGet addText(final String locale, final String text) {
         return copy().addQueryParam(String.format("text.%s", locale), text);
+    }
+
+    /**
+     * set text with the specificied values
+     */
+    public ByProjectKeyProductProjectionsSearchGet withText(final String locale, final List<String> text) {
+        final String placeholderName = String.format("var.%s", locale);
+        return copy().withoutQueryParam(placeholderName)
+                .addQueryParams(
+                    text.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional text query parameters
+     */
+    public ByProjectKeyProductProjectionsSearchGet addText(final String locale, final List<String> text) {
+        final String placeholderName = String.format("var.%s", locale);
+        return copy().addQueryParams(
+            text.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
     }
 
     @Override

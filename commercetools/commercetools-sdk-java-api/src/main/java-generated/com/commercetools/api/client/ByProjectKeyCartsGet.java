@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -114,6 +115,24 @@ public class ByProjectKeyCartsGet
     }
 
     /**
+     * set customerId with the specificied values
+     */
+    public ByProjectKeyCartsGet withCustomerId(final List<String> customerId) {
+        return copy().withoutQueryParam("customerId")
+                .addQueryParams(customerId.stream()
+                        .map(s -> new ParamEntry<>("customerId", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional customerId query parameters
+     */
+    public ByProjectKeyCartsGet addCustomerId(final List<String> customerId) {
+        return copy().addQueryParams(
+            customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyCartsGet withExpand(final String expand) {
@@ -125,6 +144,23 @@ public class ByProjectKeyCartsGet
      */
     public ByProjectKeyCartsGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyCartsGet withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyCartsGet addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -142,6 +178,23 @@ public class ByProjectKeyCartsGet
     }
 
     /**
+     * set sort with the specificied values
+     */
+    public ByProjectKeyCartsGet withSort(final List<String> sort) {
+        return copy().withoutQueryParam("sort")
+                .addQueryParams(
+                    sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional sort query parameters
+     */
+    public ByProjectKeyCartsGet addSort(final List<String> sort) {
+        return copy().addQueryParams(
+            sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set limit with the specificied value
      */
     public ByProjectKeyCartsGet withLimit(final int limit) {
@@ -153,6 +206,23 @@ public class ByProjectKeyCartsGet
      */
     public ByProjectKeyCartsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
+    }
+
+    /**
+     * set limit with the specificied values
+     */
+    public ByProjectKeyCartsGet withLimit(final List<Integer> limit) {
+        return copy().withoutQueryParam("limit")
+                .addQueryParams(
+                    limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional limit query parameters
+     */
+    public ByProjectKeyCartsGet addLimit(final List<Integer> limit) {
+        return copy().addQueryParams(
+            limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -170,6 +240,23 @@ public class ByProjectKeyCartsGet
     }
 
     /**
+     * set offset with the specificied values
+     */
+    public ByProjectKeyCartsGet withOffset(final List<Integer> offset) {
+        return copy().withoutQueryParam("offset")
+                .addQueryParams(
+                    offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional offset query parameters
+     */
+    public ByProjectKeyCartsGet addOffset(final List<Integer> offset) {
+        return copy().addQueryParams(
+            offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set withTotal with the specificied value
      */
     public ByProjectKeyCartsGet withWithTotal(final boolean withTotal) {
@@ -181,6 +268,24 @@ public class ByProjectKeyCartsGet
      */
     public ByProjectKeyCartsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specificied values
+     */
+    public ByProjectKeyCartsGet withWithTotal(final List<Boolean> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     */
+    public ByProjectKeyCartsGet addWithTotal(final List<Boolean> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -198,6 +303,23 @@ public class ByProjectKeyCartsGet
     }
 
     /**
+     * set where with the specificied values
+     */
+    public ByProjectKeyCartsGet withWhere(final List<String> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     */
+    public ByProjectKeyCartsGet addWhere(final List<String> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set predicateVar with the specificied value
      */
     public ByProjectKeyCartsGet withPredicateVar(final String varName, final String predicateVar) {
@@ -209,6 +331,25 @@ public class ByProjectKeyCartsGet
      */
     public ByProjectKeyCartsGet addPredicateVar(final String varName, final String predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    /**
+     * set predicateVar with the specificied values
+     */
+    public ByProjectKeyCartsGet withPredicateVar(final String varName, final List<String> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().withoutQueryParam(placeholderName)
+                .addQueryParams(
+                    predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional predicateVar query parameters
+     */
+    public ByProjectKeyCartsGet addPredicateVar(final String varName, final List<String> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().addQueryParams(
+            predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
     }
 
     @Override

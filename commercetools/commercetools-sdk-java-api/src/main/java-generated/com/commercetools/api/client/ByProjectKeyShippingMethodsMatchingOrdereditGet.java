@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -94,6 +95,24 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     }
 
     /**
+     * set orderEditId with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final List<String> orderEditId) {
+        return copy().withoutQueryParam("orderEditId")
+                .addQueryParams(orderEditId.stream()
+                        .map(s -> new ParamEntry<>("orderEditId", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional orderEditId query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final List<String> orderEditId) {
+        return copy().addQueryParams(
+            orderEditId.stream().map(s -> new ParamEntry<>("orderEditId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set country with the specificied value
      */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country) {
@@ -108,6 +127,23 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     }
 
     /**
+     * set country with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final List<String> country) {
+        return copy().withoutQueryParam("country")
+                .addQueryParams(
+                    country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional country query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final List<String> country) {
+        return copy().addQueryParams(
+            country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set state with the specificied value
      */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state) {
@@ -119,6 +155,23 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
      */
     public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final String state) {
         return copy().addQueryParam("state", state);
+    }
+
+    /**
+     * set state with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final List<String> state) {
+        return copy().withoutQueryParam("state")
+                .addQueryParams(
+                    state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional state query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final List<String> state) {
+        return copy().addQueryParams(
+            state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

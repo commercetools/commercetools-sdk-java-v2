@@ -7,7 +7,7 @@ import com.commercetools.importapi.defaultconfig.ServiceRegion;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-public class ExamplesTest {
+public class ExampleTest {
 
     public void createApiRootUS() {
         // ApiRoot config for United States projects

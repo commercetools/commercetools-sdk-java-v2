@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-public class ExamplesTest {
+public class ExampleTest {
 
     public ApiRoot createClient() {
         ApiRoot apiRoot = ApiRootBuilder.of()

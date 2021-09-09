@@ -1,0 +1,19 @@
+.new-in-release, .change-in-release, .removed-in-release, .fixed-in-release {
+    border-left-width: 6px;
+    border-left-style: solid;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
+.new-in-release:before { content:"  NEW: "; }
+.new-in-release { border-left-color: #23bb03; }
+
+.removed-in-release { border-left-color: red; }
+.removed-in-release:before { content:"  REMOVED: "; }
+
+.change-in-release { border-left-color: #F8981D; }
+.change-in-release:before { content:"  CHANGE: "; }
+
+.fixed-in-release { border-left-color: #3640ff; }
+.fixed-in-release:before { content:"  FIXED: "; }

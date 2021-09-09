@@ -19,7 +19,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: '8'
 
       - name: Retrieve branch name
@@ -107,8 +107,8 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
-          java-version: '8'
+          distribution: 'temurin'
+          java-version: '11'
 
       - run: ./gradlew alljavadoc
         working-directory: sdk

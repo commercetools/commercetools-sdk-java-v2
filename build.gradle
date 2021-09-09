@@ -20,6 +20,13 @@ plugins {
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
+configurations {
+    taglet
+}
+dependencies {
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.0.0'
+}
+
 import java.text.SimpleDateFormat
 
 def globalVersion = new Version(version)
@@ -289,8 +296,8 @@ subprojects { project ->
         }
     }
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 def exportedProjects= [
@@ -304,13 +311,49 @@ def exportedProjects= [
         ":commercetools:commercetools-apachehttp-client",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
-        ":rmf:okhttp-client",
+        ":commercetools:internal-docs",
+        ":rmf:okhttp-client"
 ]
+
 task alljavadoc(type: Javadoc) {
     source exportedProjects.collect { project(it).sourceSets.main.allJava }
-    classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
+    classpath = files(exportedProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
-    options.noTimestamp = true
+    excludes = [
+        '**/*Test.java',
+        '**/test/*.java'
+    ]
+    options {
+        setMemberLevel JavadocMemberLevel.PUBLIC
+        setAuthor false
+        noTimestamp = true
+
+        links "https://docs.oracle.com/javase/8/docs/api/"
+
+        overview = "src/main/javadoc/overview.html"
+        noTimestamp = true
+        bottom = """
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            <span id="custom-javascripts"></span>
+            <script src="{@docRoot}/resources/javascripts/main.js"></script>
+            <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
+
+    """
+        taglets 'com.commercetools.build.taglets.CodeTaglet'
+        tagletPath(configurations.taglet.files as File[])
+        addBooleanOption('-allow-script-in-comments', true)
+        addStringOption('Xdoclint:missing,syntax,accessibility,reference', '-quiet')
+        addStringOption('source', '8')
+    }
+
+    doLast{
+        copy{
+            from "src/main/javadoc/resources"
+            into "${buildDir}/docs/javadoc/resources"
+        }
+    }
 }
 
 task codeCoverageReport(type: JacocoReport) {

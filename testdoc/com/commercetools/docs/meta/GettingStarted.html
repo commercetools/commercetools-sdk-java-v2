@@ -139,35 +139,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
     <p>Simple instantiation:</p>
 
-    <div id="example-ExamplesTest-createClient--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ApiRootBuilder.of()
-        .defaultClient(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-        .build();
-
-return apiRoot;
+    <div id="example-ExamplesTest-instance--%s" class=code-example><pre><code class='java'>// ApiRoot config for Europe projects
+ApiRoot apiRoot = ApiRootBuilder.of().defaultClient(
+        ClientCredentials.of().withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .withScopes("your-scopes")
+                .build(),
+        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl()).build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
     For projects in the USA you should specify in addition to the previous parameters the auth and api urls:
 
-    <pre><code>
-    class Main {
-        public void main() {
-            // ApiRoot config for United States projects
-            ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-                ClientCredentials.of().withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-                ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
-                ServiceRegion.GCP_US_CENTRAL1.getApiUrl()).build();
-        }
-    }
-    </code></pre>
+   <div id="example-ImportExamplesTest-instance--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
+        ClientCredentials.of().withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .withScopes("your-scopes")
+                .build(),
+        ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
+        ServiceRegion.GCP_US_CENTRAL1.getApiUrl()).build();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ImportExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
     <h3 id=perform-requests>Performing requests</h3>
 
@@ -176,16 +167,15 @@ return apiRoot;
 
     Example:
 
-    <pre><code>
-    final CompletableFuture&lt;ApiHttpResponse&lt;TaxCategoryPagedQueryResponse&gt;&gt; future = apiRoot
-                    .withProjectKey("my-project")
-                    .taxCategories()
-                    .get()
-                    .withWhere("name = :name")
-                    .withPredicateVar("name", "de19")
-                    .execute();
-    </code></pre>
-    See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L34)
+   <div id="example-ExamplesTest-performRequest--%s" class=code-example><pre><code class='java'>ApiRoot apiRoot = createClient();
+final CompletableFuture&lt;ApiHttpResponse&lt;TaxCategoryPagedQueryResponse&gt;&gt; future = apiRoot
+        .withProjectKey("my-project")
+        .taxCategories()
+        .get()
+        .withWhere("name = :name")
+        .withPredicateVar("name", "de19")
+        .execute();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
     <h3 id=closing>Closing the client</h3>
 

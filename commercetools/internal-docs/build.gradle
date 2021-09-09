@@ -1,4 +1,5 @@
 dependencies {
     implementation project(":commercetools:commercetools-sdk-java-api")
+    implementation project(":commercetools:commercetools-sdk-java-importapi")
     implementation project(":commercetools:commercetools-http-client")
 }

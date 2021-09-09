@@ -15,24 +15,11 @@ package com.commercetools.docs.meta;
 
     <p>Simple instantiation:</p>
 
-    {@include.example example.ExamplesTest#createClient()}
+    {@include.example example.ExamplesTest#instance()}
 
     For projects in the USA you should specify in addition to the previous parameters the auth and api urls:
 
-    <pre>{@code
-    class Main {
-        public void main() {
-            // ApiRoot config for United States projects
-            ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-                ClientCredentials.of().withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-                ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
-                ServiceRegion.GCP_US_CENTRAL1.getApiUrl()).build();
-        }
-    }
-    }</pre>
+   {@include.example example.ImportExamplesTest#instance()}
 
     <h3 id=perform-requests>Performing requests</h3>
 
@@ -41,16 +28,7 @@ package com.commercetools.docs.meta;
 
     Example:
 
-    <pre>{@code
-    final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot
-                    .withProjectKey("my-project")
-                    .taxCategories()
-                    .get()
-                    .withWhere("name = :name")
-                    .withPredicateVar("name", "de19")
-                    .execute();
-    }</pre>
-    See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L34)
+   {@include.example example.ExamplesTest#performRequest()}
 
     <h3 id=closing>Closing the client</h3>
 

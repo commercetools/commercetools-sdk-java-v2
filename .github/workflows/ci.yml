@@ -83,10 +83,6 @@ jobs:
           java-version: '11'
 
       - run: ./gradlew alljavadoc
-        continue-on-error: true
-        working-directory: sdk
-
-      - run: ls -la && cat build/tmp/alljavadoc/javadoc.options
         working-directory: sdk
 
       - run: rm -rf doc/testdoc && mv sdk/build/docs/javadoc doc/testdoc

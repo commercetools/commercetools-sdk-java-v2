@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -91,6 +92,23 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     }
 
     /**
+     * set cartId with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingCartGet withCartId(final List<String> cartId) {
+        return copy().withoutQueryParam("cartId")
+                .addQueryParams(
+                    cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional cartId query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingCartGet addCartId(final List<String> cartId) {
+        return copy().addQueryParams(
+            cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set expand with the specificied value
      */
     public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final String expand) {
@@ -102,6 +120,23 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
      */
     public ByProjectKeyShippingMethodsMatchingCartGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final List<String> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingCartGet addExpand(final List<String> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

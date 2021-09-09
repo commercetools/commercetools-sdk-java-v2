@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -87,6 +88,23 @@ public class ByProjectKeyMeDelete
      */
     public ByProjectKeyMeDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
+    }
+
+    /**
+     * set version with the specificied values
+     */
+    public ByProjectKeyMeDelete withVersion(final List<Long> version) {
+        return copy().withoutQueryParam("version")
+                .addQueryParams(
+                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional version query parameters
+     */
+    public ByProjectKeyMeDelete addVersion(final List<Long> version) {
+        return copy().addQueryParams(
+            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

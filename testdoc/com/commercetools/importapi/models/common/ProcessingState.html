@@ -127,7 +127,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">ProcessingState</span></pre>
-<div class="block"><p>Represents the status of a resource under an import process. Every resource has the initial state <code>processing</code>.</p></div>
+<div class="block"><p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p></div>
 </li>
 </ul>
 </div>
@@ -175,42 +175,42 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#IMPORTED">IMPORTED</a></span></code></th>
 <td class="colLast">
-<div class="block">The resource was successfully imported.</div>
+<div class="block">Resource was successfully imported.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#PROCESSING">PROCESSING</a></span></code></th>
 <td class="colLast">
-<div class="block">This is an initial state of import resource and is currently in progress.</div>
+<div class="block">Initial state assigned if the format (JSON structure and fields) meets the Import API's specification.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#REJECTED">REJECTED</a></span></code></th>
 <td class="colLast">
-<div class="block">The resource could not be imported.</div>
+<div class="block">Resource could not be imported.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#UNRESOLVED">UNRESOLVED</a></span></code></th>
 <td class="colLast">
-<div class="block">Import operation contains key references to other resources that are not present in platform yet.</div>
+<div class="block">Import Request contains key references to resources that are currently not present in the platform.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VALIDATION_FAILED">VALIDATION_FAILED</a></span></code></th>
 <td class="colLast">
-<div class="block">The validation of the import resource failed.</div>
+<div class="block">Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the platform constraints.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#WAIT_FOR_MASTER_VARIANT">WAIT_FOR_MASTER_VARIANT</a></span></code></th>
 <td class="colLast">
-<div class="block">Wait for a master variant to arrive.</div>
+<div class="block">Waiting for a master variant to arrive.</div>
 </td>
 </tr>
 </table>
@@ -285,7 +285,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>PROCESSING</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> PROCESSING</pre>
-<div class="block"><p>This is an initial state of import resource and is currently in progress.</p></div>
+<div class="block"><p>Initial state assigned if the format (JSON structure and fields) meets the Import API's specification. The resource import is in progress.</p></div>
 </li>
 </ul>
 <a id="VALIDATION_FAILED">
@@ -295,7 +295,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>VALIDATION_FAILED</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> VALIDATION_FAILED</pre>
-<div class="block"><p>The validation of the import resource failed.</p></div>
+<div class="block"><p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the platform constraints.</p></div>
 </li>
 </ul>
 <a id="UNRESOLVED">
@@ -305,7 +305,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>UNRESOLVED</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> UNRESOLVED</pre>
-<div class="block"><p>Import operation contains key references to other resources that are not present in platform yet.</p></div>
+<div class="block"><p>Import Request contains key references to resources that are currently not present in the platform.</p></div>
 </li>
 </ul>
 <a id="WAIT_FOR_MASTER_VARIANT">
@@ -315,7 +315,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>WAIT_FOR_MASTER_VARIANT</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> WAIT_FOR_MASTER_VARIANT</pre>
-<div class="block"><p>Wait for a master variant to arrive. The product import has required attributes and thus requires a master variant that provides those.</p></div>
+<div class="block"><p>Waiting for a master variant to arrive. The Product Import has required attributes and thus a master variant that provides those is required.</p></div>
 </li>
 </ul>
 <a id="IMPORTED">
@@ -325,7 +325,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>IMPORTED</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> IMPORTED</pre>
-<div class="block"><p>The resource was successfully imported.</p></div>
+<div class="block"><p>Resource was successfully imported.</p></div>
 </li>
 </ul>
 <a id="REJECTED">
@@ -335,7 +335,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>REJECTED</h4>
 <pre>static final&nbsp;<a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a> REJECTED</pre>
-<div class="block"><p>The resource could not be imported.</p></div>
+<div class="block"><p>Resource could not be imported. References were resolved, but the system could not import the data into the platform due to an internal server error and the limit of retry has been reached.</p></div>
 </li>
 </ul>
 </li>

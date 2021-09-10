@@ -158,6 +158,10 @@ nexusPublishing {
     }
 }
 
+def excludeProjects = [
+    'internal-docs'
+]
+
 subprojects { project ->
 
     apply plugin: 'idea'
@@ -248,7 +252,7 @@ subprojects { project ->
         buildInfoPackage = "io.vrap.rmf.base.client"
     }
 
-    if (project.file("build.gradle").exists()) {
+    if (project.file("build.gradle").exists() && !excludeProjects.contains(project.name)) {
 
         publishing {
             repositories {
@@ -300,7 +304,7 @@ subprojects { project ->
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-def exportedProjects= [
+def documentationProjects= [
         ":commercetools:commercetools-http-client",
         ":commercetools:commercetools-sdk-java-api",
         ":commercetools:commercetools-sdk-java-importapi",
@@ -316,8 +320,8 @@ def exportedProjects= [
 ]
 
 task alljavadoc(type: Javadoc) {
-    source exportedProjects.collect { project(it).sourceSets.main.allJava }
-    classpath = files(exportedProjects.collect { project(it).sourceSets.test.compileClasspath })
+    source documentationProjects.collect { project(it).sourceSets.main.allJava }
+    classpath = files(documentationProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
     excludes = [
         '**/*Test.java',
@@ -339,8 +343,7 @@ task alljavadoc(type: Javadoc) {
             <span id="custom-javascripts"></span>
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
-
-    """
+        """
         taglets 'com.commercetools.build.taglets.CodeTaglet'
         tagletPath(configurations.taglet.files as File[])
         addBooleanOption('-allow-script-in-comments', true)
@@ -348,7 +351,7 @@ task alljavadoc(type: Javadoc) {
         addStringOption('source', '8')
     }
 
-    doLast{
+    doLast {
         copy{
             from "src/main/javadoc/resources"
             into "${buildDir}/docs/javadoc/resources"

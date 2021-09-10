@@ -15,12 +15,15 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
+import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 
 public class ExamplesTest {
 
@@ -174,6 +177,11 @@ public class ExamplesTest {
                 .build();
     }
 
+    public void executeBlocking() {
+        ApiRoot apiRoot = createClient();
+        Project project = apiRoot.withProjectKey("my-project").get().executeBlocking().getBody();
+    }
+
     public void proxy() {
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
@@ -189,6 +197,7 @@ public class ExamplesTest {
                 .build();
     }
 
+    @Test
     public void immutableRequest() {
         ApiRoot apiRoot = createClient();
         final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.withProjectKey("my-project")
@@ -198,5 +207,8 @@ public class ExamplesTest {
                 .withPredicateVar("name", "de19");
 
         final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withPredicateVar("name", "de07");
+
+        Assertions.assertThat(taxCategoriesGet.getQueryParam("var.name").get(0)).isEqualTo("de19");
+        Assertions.assertThat(taxCategoriesGet2.getQueryParam("var.name").get(0)).isEqualTo("de07");
     }
 }

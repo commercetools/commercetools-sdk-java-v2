@@ -32,7 +32,7 @@ package com.commercetools.docs.meta;
 
     <h3 id=model-factories>Model factory methods</h3>
 
-    Each model has a factory method <pre>{@code ::of()}</pre> to create a new empty instance. The method `::builder()` returns a new builder instance.
+    Each model has a factory method {@code ::of()} to create a new empty instance. The method {@code ::builder()} returns a new builder instance.
 
     <h3 id=middlewares>Middlewares</h3>
 

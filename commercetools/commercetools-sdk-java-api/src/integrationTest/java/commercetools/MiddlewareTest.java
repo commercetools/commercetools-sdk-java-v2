@@ -8,8 +8,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.commercetools.api.defaultconfig.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.project.Project;
@@ -31,7 +31,7 @@ public class MiddlewareTest {
         String projectKey = CommercetoolsTestUtils.getProjectKey();
 
         AtomicInteger count = new AtomicInteger();
-        ByProjectKeyRequestBuilder b = ApiRootBuilder.of()
+        ProjectApiRoot b = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of()
                             .withClientId(CommercetoolsTestUtils.getClientId())
@@ -43,7 +43,7 @@ public class MiddlewareTest {
                     return next.apply(request);
                 })
                 .withRetryMiddleware(3, singletonList(404))
-                .buildForProject(projectKey);
+                .buildProjectRoot(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
             Category category = b.categories()

@@ -277,8 +277,16 @@ public class ApiRootBuilder {
         return builder::build;
     }
 
+    /**
+     * @deprecated use {@link #buildProjectRoot(String)}  instead
+     */
+    @Deprecated()
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);
+    }
+
+    public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,

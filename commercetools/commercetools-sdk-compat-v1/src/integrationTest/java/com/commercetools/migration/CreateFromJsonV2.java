@@ -14,6 +14,6 @@ public class CreateFromJsonV2 implements MigrateV2Example {
     public void v2() throws IOException {
         final CategoryDraft categoryDraft = JsonUtils.fromJsonString(TestUtils.stringFromResource("category.json"),
             CategoryDraft.class);
-        final Category category = projectClient().with().categories().post(categoryDraft).executeBlocking().getBody();
+        final Category category = projectClient().categories().post(categoryDraft).executeBlocking().getBody();
     }
 }

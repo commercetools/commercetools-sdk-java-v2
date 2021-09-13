@@ -9,8 +9,7 @@ public class GetByIdCommandV2 implements MigrateV2Example {
     private Category category;
     @Override
     public void v2() throws IOException {
-        Category queriedCategory = projectClient().with()
-                .categories()
+        Category queriedCategory = projectClient().categories()
                 .withId(category.getId())
                 .get()
                 .withExpand("parent")

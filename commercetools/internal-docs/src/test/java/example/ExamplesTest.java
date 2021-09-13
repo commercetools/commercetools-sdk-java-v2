@@ -154,7 +154,7 @@ public class ExamplesTest {
 
     public void executeBlocking() {
         ProjectApiRoot apiRoot = createProjectClient();
-        Project project = apiRoot.with().get().executeBlocking().getBody();
+        Project project = apiRoot.get().executeBlocking().getBody();
     }
 
     public void proxy() {
@@ -175,8 +175,7 @@ public class ExamplesTest {
     @Test
     public void immutableRequest() {
         ProjectApiRoot apiRoot = createProjectClient();
-        final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.with()
-                .taxCategories()
+        final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.taxCategories()
                 .get()
                 .withWhere("name = :name")
                 .withPredicateVar("name", "de19");

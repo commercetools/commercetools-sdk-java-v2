@@ -21,8 +21,7 @@ public class UpdateCommandV2 implements MigrateV2Example {
                 .actions(CategoryChangeNameActionBuilder.of().name(newName).build())
                 .build();
 
-        Category updatedCategory = projectClient().with()
-                .categories()
+        Category updatedCategory = projectClient().categories()
                 .withId(category.getId())
                 .post(categoryUpdate)
                 .executeBlocking()

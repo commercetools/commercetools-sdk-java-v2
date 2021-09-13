@@ -33,6 +33,14 @@ public class ProjectApiRoot implements Closeable {
         return ApiRoot.fromClient(apiHttpClient).withProjectKey(projectKey);
     }
 
+    public ByProjectKeyGet get() {
+        return with().get();
+    }
+
+    public ByProjectKeyPost post(com.commercetools.api.models.project.ProjectUpdate projectUpdate) {
+        return with().post(projectUpdate);
+    }
+
     public ByProjectKeyCategoriesRequestBuilder categories() {
         return with().categories();
     }

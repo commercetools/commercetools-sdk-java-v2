@@ -46,6 +46,6 @@ public class Retry implements MigrateExample {
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .buildProjectRoot("projectKey");
 
-        final CategoryPagedQueryResponse body = projectClient.with().categories().get().executeBlocking().getBody();
+        final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();
     }
 }

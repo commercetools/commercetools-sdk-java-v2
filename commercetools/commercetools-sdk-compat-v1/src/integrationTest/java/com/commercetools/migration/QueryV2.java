@@ -8,8 +8,7 @@ import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 public class QueryV2 implements MigrateV2Example {
     @Override
     public void v2() throws IOException {
-        CategoryPagedQueryResponse response = projectClient().with()
-                .categories()
+        CategoryPagedQueryResponse response = projectClient().categories()
                 .get()
                 .withWhere("id = :id")
                 .withPredicateVar("id", "id123")

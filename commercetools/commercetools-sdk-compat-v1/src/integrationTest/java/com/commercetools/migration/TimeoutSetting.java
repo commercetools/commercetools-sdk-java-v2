@@ -19,7 +19,8 @@ public class TimeoutSetting implements MigrateExample {
 
     @Override
     public void v2() {
-        CategoryPagedQueryResponse response = projectClient().categories()
+        CategoryPagedQueryResponse response = projectClient().with()
+                .categories()
                 .get()
                 .executeBlocking(Duration.ofSeconds(45))
                 .getBody();

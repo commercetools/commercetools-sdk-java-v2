@@ -9,7 +9,7 @@
 
 This repository contains the commercetools platform and import-api java sdks generated from our api reference.
 
-* [Getting Started](docs/GettingStarted.md)
+* [Getting Started](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/GettingStarted.html)
 
 ## Installation
 
@@ -85,7 +85,7 @@ To migrate from the 1.x to the 2.x, there is a guideline below:
 
 ## Documentation
 
-* [Documentation](docs/Readme.md)
+* [Documentation](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc)
 
 [](definitions for the top badges)
 

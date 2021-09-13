@@ -16,6 +16,6 @@ public class CreateV2Command implements MigrateV2Example {
         LocalizedString name = LocalizedStringBuilder.of().addValue(en, "name").build();
         LocalizedString slug = LocalizedStringBuilder.of().addValue(en, "slug").build();
         CategoryDraft categoryDraft = CategoryDraftBuilder.of().name(name).slug(slug).build();
-        Category category = projectClient().categories().post(categoryDraft).executeBlocking().getBody();
+        Category category = projectClient().with().categories().post(categoryDraft).executeBlocking().getBody();
     }
 }

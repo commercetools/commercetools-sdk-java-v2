@@ -8,9 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.commercetools.api.defaultconfig.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
@@ -22,28 +22,27 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class ExamplesTest {
 
-    private ApiRoot createClient() {
-        ApiRoot apiRoot = ApiRootBuilder.of()
+    private ProjectApiRoot createProjectClient() {
+        return ApiRootBuilder.of()
                 .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .build();
-
-        return apiRoot;
+                        ClientCredentials.of()
+                                .withClientId("your-client-id")
+                                .withClientSecret("your-client-secret")
+                                .withScopes("your-scopes")
+                                .build(),
+                        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .buildProjectRoot("my-project");
     }
 
     public void instance() {
         // ApiRoot config for Europe projects
-        ApiRoot apiRoot = ApiRootBuilder.of()
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of()
                             .withClientId("your-client-id")
@@ -51,13 +50,12 @@ public class ExamplesTest {
                             .withScopes("your-scopes")
                             .build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .build();
+                .buildProjectRoot("my-project");
     }
 
     public void performRequest() {
-        ApiRoot apiRoot = createClient();
+        ProjectApiRoot apiRoot = createProjectClient();
         final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot
-                .withProjectKey("my-project")
                 .taxCategories()
                 .get()
                 .withWhere("name = :name")
@@ -66,15 +64,7 @@ public class ExamplesTest {
     }
 
     public void usage() {
-        ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .build();
+        ProjectApiRoot apiRoot = createProjectClient();
 
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .name(LocalizedStringBuilder.of().addValue("en", "name").build())
@@ -87,14 +77,14 @@ public class ExamplesTest {
                 .build();
 
         // Use in the previous step configured ApiRoot instance to send and receive a newly created Category
-        Category category = apiRoot.withProjectKey("project-key")
+        Category category = apiRoot
                 .categories()
                 .post(categoryDraft)
                 .executeBlocking()
                 .getBody();
 
         // Get Category by id
-        Category queriedCategory = apiRoot.withProjectKey("project-key")
+        Category queriedCategory = apiRoot
                 .categories()
                 .withId(category.getId())
                 .get()
@@ -102,7 +92,7 @@ public class ExamplesTest {
                 .getBody();
 
         // Get Category by key
-        Category queriedCategoryByKey = apiRoot.withProjectKey("project-key")
+        Category queriedCategoryByKey = apiRoot
                 .categories()
                 .withKey(category.getKey())
                 .get()
@@ -110,7 +100,7 @@ public class ExamplesTest {
                 .getBody();
 
         // Query Categories
-        CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
+        CategoryPagedQueryResponse response = apiRoot
                 .categories()
                 .get()
                 .withWhere("id = :catId")
@@ -119,7 +109,7 @@ public class ExamplesTest {
                 .getBody();
 
         // Delete Category by id
-        Category deletedCategory = apiRoot.withProjectKey("project-key")
+        Category deletedCategory = apiRoot
                 .categories()
                 .withId(category.getId())
                 .delete()
@@ -138,7 +128,7 @@ public class ExamplesTest {
                 .actions(updateActions)
                 .build();
 
-        Category updatedCategory = apiRoot.withProjectKey("project-key")
+        Category updatedCategory = apiRoot
                 .categories()
                 .withId(category.getId())
                 .post(categoryUpdate)
@@ -146,7 +136,7 @@ public class ExamplesTest {
                 .getBody();
 
         // Delete Category by key
-        Category deletedCategoryByKey = apiRoot.withProjectKey("project-key")
+        Category deletedCategoryByKey = apiRoot
                 .categories()
                 .withKey(category.getKey())
                 .delete()
@@ -156,7 +146,7 @@ public class ExamplesTest {
     }
 
     public void middleware() {
-        ApiRoot apiRoot = ApiRootBuilder.of()
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of()
                             .withClientId("your-client-id")
@@ -165,28 +155,28 @@ public class ExamplesTest {
                             .build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
-                .build();
+                .buildProjectRoot("my-project");
     }
 
     public void retry() {
-        ApiRoot apiRoot = ApiRootBuilder.of()
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
                     ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
-                .build();
+                .buildProjectRoot("my-project");
     }
 
     public void executeBlocking() {
-        ApiRoot apiRoot = createClient();
-        Project project = apiRoot.withProjectKey("my-project").get().executeBlocking().getBody();
+        ProjectApiRoot apiRoot = createProjectClient();
+        Project project = apiRoot.with().get().executeBlocking().getBody();
     }
 
     public void proxy() {
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
-        ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+        ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
                 .defaultClient(
                     ClientCredentials.of()
                             .withClientId("your-client-id")
@@ -194,13 +184,13 @@ public class ExamplesTest {
                             .withScopes("your-scopes")
                             .build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .build();
+                .buildProjectRoot("my-project");
     }
 
     @Test
     public void immutableRequest() {
-        ApiRoot apiRoot = createClient();
-        final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.withProjectKey("my-project")
+        ProjectApiRoot apiRoot = createProjectClient();
+        final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.with()
                 .taxCategories()
                 .get()
                 .withWhere("name = :name")

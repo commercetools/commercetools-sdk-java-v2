@@ -6,6 +6,9 @@ import java.io.IOException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Default implementation of {@link ResponseSerializer} using Jackson ObjectMapper
+ */
 class ResponseSerializerImpl implements ResponseSerializer {
 
     private final ObjectMapper mapper;

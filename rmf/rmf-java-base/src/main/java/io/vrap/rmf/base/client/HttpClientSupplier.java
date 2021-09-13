@@ -7,6 +7,9 @@ import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.error.BaseException;
 
+/**
+ * Interface to supply a HTTP client implementation specified by a {@link ServiceLoader}
+ */
 public interface HttpClientSupplier extends Supplier<VrapHttpClient> {
 
     static Supplier<VrapHttpClient> of() {

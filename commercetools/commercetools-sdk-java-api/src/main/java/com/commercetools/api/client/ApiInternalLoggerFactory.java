@@ -6,6 +6,9 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.http.InternalLogger;
 
+/**
+ * Create an internal logger with the API path of the request
+ */
 public class ApiInternalLoggerFactory {
 
     public static InternalLogger get(final ApiHttpRequest httpRequest, final String topic) {

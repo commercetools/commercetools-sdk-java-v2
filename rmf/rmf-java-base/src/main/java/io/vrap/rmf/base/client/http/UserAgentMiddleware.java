@@ -8,6 +8,9 @@ import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
+/**
+ * Middleware to add a user agent string as header to a request
+ */
 public class UserAgentMiddleware implements Middleware {
     private final String userAgent;
 

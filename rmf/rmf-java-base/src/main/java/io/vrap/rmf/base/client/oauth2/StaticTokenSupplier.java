@@ -5,6 +5,9 @@ import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 
+/**
+ * Token supplier using a specified token
+ */
 public class StaticTokenSupplier implements TokenSupplier {
 
     private final AuthenticationToken token;

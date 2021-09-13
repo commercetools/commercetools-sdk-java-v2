@@ -6,6 +6,10 @@ import java.util.function.Supplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Unified logger instance to perform logging only for configured logging levels.
+ * Creates a hierarchy of loggers for requests and responses
+ */
 public class InternalLogger {
     private final Logger underlyingLogger;
 

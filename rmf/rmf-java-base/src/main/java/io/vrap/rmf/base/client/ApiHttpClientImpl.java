@@ -9,6 +9,9 @@ import io.vrap.rmf.base.client.http.HandlerStack;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Default implementation of an {@link ApiHttpClient}
+ */
 public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpClient {
 
     private final HandlerStack stack;

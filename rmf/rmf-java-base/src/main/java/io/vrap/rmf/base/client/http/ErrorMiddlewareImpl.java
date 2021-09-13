@@ -7,6 +7,9 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.ExceptionFactory;
 
+/**
+ * Default implementation of an {@link ErrorMiddleware} to create exceptions based on the HTTP status code
+ */
 class ErrorMiddlewareImpl implements ErrorMiddleware {
     private final ResponseSerializer serializer;
 

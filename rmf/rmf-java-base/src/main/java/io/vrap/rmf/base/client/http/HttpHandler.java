@@ -5,6 +5,9 @@ import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.*;
 
+/**
+ * Handler to execute the given request using a HTTP client
+ */
 public class HttpHandler extends AutoCloseableService {
     private final VrapHttpClient httpClient;
 

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+/**
+ * Token supplier using anonymous flow
+ */
 public class AnonymousSessionTokenSupplier extends AutoCloseableService implements TokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 

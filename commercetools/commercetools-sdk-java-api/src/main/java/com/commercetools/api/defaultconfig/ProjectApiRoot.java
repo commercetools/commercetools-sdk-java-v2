@@ -8,6 +8,9 @@ import com.commercetools.api.client.*;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
+/**
+ * Project scoped API root
+ */
 public class ProjectApiRoot implements Closeable {
     private final String projectKey;
     private final ApiHttpClient apiHttpClient;

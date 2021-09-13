@@ -5,6 +5,9 @@ import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.AutoCloseableService;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
+/**
+ * Handler for retrieving an oauth authentication token
+ */
 public class OAuthHandler extends AutoCloseableService {
     private final TokenSupplier supplier;
     private AuthenticationToken token;

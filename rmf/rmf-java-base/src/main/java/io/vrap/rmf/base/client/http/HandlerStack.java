@@ -11,6 +11,9 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AutoCloseableService;
 
+/**
+ * The HandlerStack is used to execute the middlewares in order and transfer the request using the specified {@link HttpHandler}
+ */
 public class HandlerStack extends AutoCloseableService {
     private final HttpHandler handler;
 

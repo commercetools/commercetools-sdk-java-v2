@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Default implementation for the internal logger middleware
+ */
 class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private static final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddlewareImpl.class);
     private final InternalLoggerFactory factory;

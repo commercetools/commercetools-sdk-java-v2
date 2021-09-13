@@ -6,6 +6,9 @@ import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.http.HandlerStack;
 
+/**
+ * Interface for an HTTP client accessing the API and mapping to a known output type
+ */
 public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
     public String CLOSED_MESSAGE = "Client is already closed.";
 

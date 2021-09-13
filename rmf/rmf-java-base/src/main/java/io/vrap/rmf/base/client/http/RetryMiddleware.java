@@ -21,6 +21,9 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Implementation for a retry of a requests upon configured response status codes
+ */
 public class RetryMiddleware implements Middleware, AutoCloseable {
     @Deprecated
     public static final int DEFAULT_MAX_PARALLEL_REQUESTS = 2;

@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
+/**
+ * Builder to create a {@link ApiRoot} or a project scoped {@link ProjectApiRoot}
+ */
 public class ApiRootBuilder {
     private final ClientBuilder builder;
 

@@ -15,6 +15,9 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Default implementation for the OAuthMiddleware with automatic retry upon expired access
+ */
 class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final OAuthHandler authHandler;
     private static final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);

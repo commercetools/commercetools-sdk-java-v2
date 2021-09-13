@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Default implementation for the internal logger middleware
+ * Default implementation for the {@link InternalLoggerMiddleware}
  */
 class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private static final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddlewareImpl.class);

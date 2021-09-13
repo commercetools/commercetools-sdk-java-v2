@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Default implementation for the OAuthMiddleware with automatic retry upon expired access
+ * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
  */
 class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final OAuthHandler authHandler;

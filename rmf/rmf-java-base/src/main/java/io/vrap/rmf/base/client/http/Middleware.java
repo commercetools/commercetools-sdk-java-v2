@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 /**
- * Interface for a HTTP middleware used to modify requests & responses
+ * Interface for a HTTP middleware used to modify a request and the response
  */
 public interface Middleware {
 

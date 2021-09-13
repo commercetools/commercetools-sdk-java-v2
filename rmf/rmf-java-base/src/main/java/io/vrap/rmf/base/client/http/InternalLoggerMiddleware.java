@@ -2,7 +2,7 @@
 package io.vrap.rmf.base.client.http;
 
 /**
- * Middleware instrumenting the internal logger
+ * Middleware instrumenting the {@link InternalLogger}
  */
 public interface InternalLoggerMiddleware extends Middleware {
 

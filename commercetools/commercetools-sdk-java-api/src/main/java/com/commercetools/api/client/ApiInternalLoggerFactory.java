@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.http.InternalLogger;
 
 /**
- * Create an internal logger with the API path of the request
+ * Creates an {@link InternalLogger} with the API path of the request
  */
 public class ApiInternalLoggerFactory {
 

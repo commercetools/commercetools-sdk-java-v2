@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 
 /**
- * Module to configure the default jackson ObjectMapper e.g. to deserialize attributes and custom fields
+ * Module to configure the default jackson {@link com.fasterxml.jackson.databind.ObjectMapper} e.g. to deserialize attributes and custom fields
  */
 public class ApiModule extends SimpleModule {
     private static final long serialVersionUID = 0L;

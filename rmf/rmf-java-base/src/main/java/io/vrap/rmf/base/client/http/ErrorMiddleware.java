@@ -4,7 +4,7 @@ package io.vrap.rmf.base.client.http;
 import io.vrap.rmf.base.client.ResponseSerializer;
 
 /**
- * Interface for an error middleware implementation. Used to convert API errors to Exceptions
+ * Used to convert API errors to Exceptions
  */
 public interface ErrorMiddleware extends Middleware {
 

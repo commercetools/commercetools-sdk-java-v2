@@ -6,7 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * Implementation of a non executable ApiHttpClient
+ * Implementation of a non executable {@link ApiHttpClient}
  */
 public class SerializerOnlyApiHttpClient implements ApiHttpClient {
     public static final String NO_EXECUTABLE_API_CLIENT = "No executable api client";

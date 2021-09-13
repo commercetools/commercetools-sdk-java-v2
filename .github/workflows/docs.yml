@@ -1,6 +1,9 @@
 on:
-  - workflow_dispatch
-
+  workflow_dispatch:
+    inputs:
+        version:
+            description: 'SDK API version'
+            required: true
 name: Deploy docs
 
 jobs:
@@ -26,7 +29,7 @@ jobs:
           distribution: 'temurin'
           java-version: '16'
 
-      - run: ./gradlew alljavadoc
+      - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk
 
       - run: rm -rf doc/javadoc && mv sdk/build/docs/javadoc doc

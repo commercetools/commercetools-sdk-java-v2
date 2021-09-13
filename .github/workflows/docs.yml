@@ -1,0 +1,42 @@
+on:
+  - workflow_dispatch
+
+name: AutoRelease
+
+jobs:
+  docs:
+    name: Build and release docs
+
+    runs-on: ubuntu-latest
+    needs: [release_tag]
+    if: startsWith( github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: sdk
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: doc
+          ref: gh-pages
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '16'
+
+      - run: ./gradlew alljavadoc
+        working-directory: sdk
+
+      - run: rm -rf doc/javadoc && mv sdk/build/docs/javadoc doc
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: doc
+          commit_message: "Update javadoc"
+          commit_user_name: Auto Mation
+          commit_user_email: automation@commercetools.com
+          commit_author: Auto Mation <automation@commercetools.com>

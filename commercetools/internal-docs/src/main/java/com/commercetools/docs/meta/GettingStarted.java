@@ -13,17 +13,17 @@ package com.commercetools.docs.meta;
 
     <h3 id=instantiation>Instantiation</h3>
 
-    <p>Simple instantiation:</p>
+    <p>Creating an instance for a project:</p>
 
     {@include.example example.ExamplesTest#instance()}
 
-    For projects in the USA you should specify in addition to the previous parameters the auth and api urls:
+    For projects in the US region you should specify in addition to the previous parameters the auth and api urls:
 
    {@include.example example.ImportExamplesTest#instance()}
 
     <h3 id=perform-requests>Performing requests</h3>
 
-    A client works on the abstraction level of one HTTP request for one project.
+    A client works on the abstraction level of one HTTP request.
     With one client you can start multiple requests in parallel, it is thread-safe.
 
     Example:
@@ -32,7 +32,7 @@ package com.commercetools.docs.meta;
 
     <h3 id=closing>Closing the client</h3>
 
-    The client holds resources like thread pools and IO connections, so call ApiRoot.close() to release them.
+    The client holds resources like thread pools and IO connections, so call {@code close()} to release them.
  */
 public class GettingStarted {
 }

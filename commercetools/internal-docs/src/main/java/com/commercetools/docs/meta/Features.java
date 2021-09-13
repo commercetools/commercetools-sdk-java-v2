@@ -8,16 +8,15 @@ package com.commercetools.docs.meta;
 
     The SDK API uses:
 
-    - CompletionStage
-    - Java Date API: ZonedDateTime, LocalDate and LocalTime
-    - Function
+    - {@link java.util.concurrent.CompletionStage}
+    - Java Date API: {@link java.time.ZonedDateTime}, {@link java.time.LocalDate} and {@link java.time.LocalTime}
+    - {@link FunctionalInterface functional interfaces}
 
     <h3 id=request-builders>Request builders</h3>
 
     The SDK provides a request builder which allows to explore the API while writing the program.
 
     {@include.example example.ExamplesTest#performRequest()}
-
 
     The request method objects are immutable as shown in this example.
 
@@ -44,7 +43,7 @@ package com.commercetools.docs.meta;
 
     {@include.example example.ExamplesTest#middleware()}
 
-    The authentication, logging and other functionality has been implemented in middlewares and is added by default to the HandlerStack
+    The authentication, logging and other functionality has been implemented in middlewares and is added by default to the {@link io.vrap.rmf.base.client.http.HandlerStack}
     in the {@link io.vrap.rmf.base.client.ClientBuilder}
 
  */

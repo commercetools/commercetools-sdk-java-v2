@@ -10,6 +10,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 /**
  * Interface for a HTTP middleware used to modify a request and the response
  */
+@FunctionalInterface
 public interface Middleware {
 
     CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,

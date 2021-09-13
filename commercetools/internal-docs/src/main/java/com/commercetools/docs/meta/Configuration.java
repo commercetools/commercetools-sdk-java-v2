@@ -6,7 +6,6 @@ package com.commercetools.docs.meta;
 
     Creating http requests starts from the ApiRoot which  holds information specific to the project. To configure the ApiRoot use the following method:
 
-
     {@include.example example.ExamplesTest#instance()}
 
     {@include.example example.ImportExamplesTest#instance()}

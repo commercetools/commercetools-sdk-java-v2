@@ -6,6 +6,7 @@ import java.io.Closeable;
 import com.commercetools.history.client.ApiRoot;
 import com.commercetools.history.client.ByProjectKeyByResourceTypeRequestBuilder;
 import com.commercetools.history.client.ByProjectKeyRequestBuilder;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 

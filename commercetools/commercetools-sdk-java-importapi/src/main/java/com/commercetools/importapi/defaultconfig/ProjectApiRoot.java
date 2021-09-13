@@ -4,6 +4,7 @@ package com.commercetools.importapi.defaultconfig;
 import java.io.Closeable;
 
 import com.commercetools.importapi.client.*;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 

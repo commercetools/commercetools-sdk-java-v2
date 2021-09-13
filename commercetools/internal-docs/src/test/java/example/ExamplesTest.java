@@ -31,12 +31,12 @@ public class ExamplesTest {
     private ProjectApiRoot createProjectClient() {
         return ApiRootBuilder.of()
                 .defaultClient(
-                        ClientCredentials.of()
-                                .withClientId("your-client-id")
-                                .withClientSecret("your-client-secret")
-                                .withScopes("your-scopes")
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .withScopes("your-scopes")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .buildProjectRoot("my-project");
     }
 
@@ -55,8 +55,7 @@ public class ExamplesTest {
 
     public void performRequest() {
         ProjectApiRoot apiRoot = createProjectClient();
-        final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot
-                .taxCategories()
+        final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot.taxCategories()
                 .get()
                 .withWhere("name = :name")
                 .withPredicateVar("name", "de19")
@@ -77,31 +76,20 @@ public class ExamplesTest {
                 .build();
 
         // Use in the previous step configured ApiRoot instance to send and receive a newly created Category
-        Category category = apiRoot
-                .categories()
-                .post(categoryDraft)
-                .executeBlocking()
-                .getBody();
+        Category category = apiRoot.categories().post(categoryDraft).executeBlocking().getBody();
 
         // Get Category by id
-        Category queriedCategory = apiRoot
-                .categories()
-                .withId(category.getId())
-                .get()
-                .executeBlocking()
-                .getBody();
+        Category queriedCategory = apiRoot.categories().withId(category.getId()).get().executeBlocking().getBody();
 
         // Get Category by key
-        Category queriedCategoryByKey = apiRoot
-                .categories()
+        Category queriedCategoryByKey = apiRoot.categories()
                 .withKey(category.getKey())
                 .get()
                 .executeBlocking()
                 .getBody();
 
         // Query Categories
-        CategoryPagedQueryResponse response = apiRoot
-                .categories()
+        CategoryPagedQueryResponse response = apiRoot.categories()
                 .get()
                 .withWhere("id = :catId")
                 .withPredicateVar("catId", category.getId())
@@ -109,8 +97,7 @@ public class ExamplesTest {
                 .getBody();
 
         // Delete Category by id
-        Category deletedCategory = apiRoot
-                .categories()
+        Category deletedCategory = apiRoot.categories()
                 .withId(category.getId())
                 .delete()
                 .withVersion(1)
@@ -128,16 +115,14 @@ public class ExamplesTest {
                 .actions(updateActions)
                 .build();
 
-        Category updatedCategory = apiRoot
-                .categories()
+        Category updatedCategory = apiRoot.categories()
                 .withId(category.getId())
                 .post(categoryUpdate)
                 .executeBlocking()
                 .getBody();
 
         // Delete Category by key
-        Category deletedCategoryByKey = apiRoot
-                .categories()
+        Category deletedCategoryByKey = apiRoot.categories()
                 .withKey(category.getKey())
                 .delete()
                 .withVersion(category.getVersion())

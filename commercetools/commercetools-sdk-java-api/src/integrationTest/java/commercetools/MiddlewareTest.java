@@ -46,8 +46,7 @@ public class MiddlewareTest {
                 .buildProjectRoot(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
-            Category category = b.with()
-                    .categories()
+            Category category = b.categories()
                     .withId("fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
                     .get()
                     .executeBlocking()

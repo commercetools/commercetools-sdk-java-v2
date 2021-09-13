@@ -1,7 +1,7 @@
 on:
   - workflow_dispatch
 
-name: AutoRelease
+name: Deploy docs
 
 jobs:
   docs:

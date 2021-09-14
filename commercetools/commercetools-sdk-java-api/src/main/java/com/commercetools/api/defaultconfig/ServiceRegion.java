@@ -45,6 +45,6 @@ public enum ServiceRegion {
     }
 
     public String getOAuthAnonymousTokenUrl(final String projectKey) {
-        return regionHosts.authUrl + "/" + projectKey + "/anonymous/token";
+        return regionHosts.authUrl + "/oauth/" + projectKey + "/anonymous/token";
     }
 }

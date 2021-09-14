@@ -55,7 +55,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-            ref: master
+            ref: main
 
       - name: Retrieve branch name
         id: branch_name

@@ -1,6 +1,8 @@
 
 package io.vrap.rmf.base.client.oauth2;
 
+import static io.vrap.rmf.base.client.ApiHttpHeaders.headerEntry;
+
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -12,25 +14,30 @@ import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-/**
- * Token supplier using password flow
- */
-public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
+public class RefreshFlowTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
 
-    public GlobalCustomerPasswordTokenSupplier(final String clientId, final String clientSecret, final String email,
-            final String password, final String scope, final String tokenEndpoint,
-            final VrapHttpClient vrapHttpClient) {
+    private final TokenStorage tokenStorage;
+
+    public RefreshFlowTokenSupplier(final String clientId, final String clientSecret, final String tokenEndpoint,
+            final TokenStorage tokenStorage, final VrapHttpClient vrapHttpClient) {
         this.vrapHttpClient = vrapHttpClient;
-        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, email, password, scope, tokenEndpoint);
+        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, tokenEndpoint);
+        this.tokenStorage = tokenStorage;
     }
 
     @Override
-    public CompletableFuture<AuthenticationToken> getToken() {
-        return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -> {
+    public CompletableFuture<AuthenticationToken> refreshToken() {
+        final AuthenticationToken token = tokenStorage.getToken();
+        if (token.getRefresherToken() == null) {
+            throw new AuthException(400, "No refresh_token given", null);
+        }
+        final String body = "grant_type=refresh_token&refresh_token=" + token.getRefresherToken();
+        final ApiHttpRequest request = apiHttpRequest.withBody(body);
+        return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
             if (throwable != null) {
                 logger.error(() -> response, throwable);
             }
@@ -48,26 +55,18 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
     }
 
     @Override
-    public CompletableFuture<AuthenticationToken> refreshToken() {
-        return getToken();
+    public CompletableFuture<AuthenticationToken> getToken() {
+        return refreshToken();
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,
-            final String email, final String password, final String scope, final String tokenEndpoint) {
+            final String tokenEndpoint) {
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-
-        final String body;
-        if (scope == null || scope.isEmpty()) {
-            body = "grant_type=password&username=" + email + "&password=" + password;
-        }
-        else {
-            body = "grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope;
-        }
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", "Basic " + auth)
-                .withHeader("Content-Type", "application/x-www-form-urlencoded");
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
-            body.getBytes(StandardCharsets.UTF_8));
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+            headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
+            headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders, null);
     }
 
     @Override

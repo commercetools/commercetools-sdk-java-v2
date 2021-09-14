@@ -15,6 +15,7 @@ import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.oauth2.TokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 /**
@@ -124,6 +125,20 @@ public class ApiRootBuilder {
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
         builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage) {
+        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient) {
+        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage, httpClient);
 
         return this;
     }

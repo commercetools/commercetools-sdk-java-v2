@@ -172,6 +172,37 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             credentials.getScopes(), tokenEndpoint, httpClient);
     }
 
+    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage) {
+        return withTokenSupplier(createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, requireNonNull(httpClient)));
+    }
+
+    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {
+        return withTokenSupplier(createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClient));
+    }
+
+    private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,
+            final String anonTokenEndpoint, final String refreshTokenEndpoint, final TokenStorage tokenStorage,
+            final VrapHttpClient httpClient) {
+        final RefreshFlowTokenSupplier refreshFlowTokenSupplier = createRefreshFlowSupplier(credentials,
+            refreshTokenEndpoint, tokenStorage, httpClient);
+
+        final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier = new AnonymousFlowTokenSupplier(
+            credentials.getClientId(), credentials.getClientSecret(), credentials.getScopes(), anonTokenEndpoint,
+            refreshFlowTokenSupplier, httpClient);
+
+        return new TokenStorageSupplier(tokenStorage, anonymousFlowTokenSupplier);
+    }
+
+    private RefreshFlowTokenSupplier createRefreshFlowSupplier(final ClientCredentials credentials,
+            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient) {
+        return new RefreshFlowTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), tokenEndpoint,
+            tokenStorage, httpClient);
+    }
+
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint) {
         return withTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint,

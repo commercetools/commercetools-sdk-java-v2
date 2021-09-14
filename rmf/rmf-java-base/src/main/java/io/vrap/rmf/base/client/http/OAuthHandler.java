@@ -1,19 +1,29 @@
 
 package io.vrap.rmf.base.client.http;
 
+import java.time.Duration;
+
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.AutoCloseableService;
+import io.vrap.rmf.base.client.oauth2.InMemoryTokenSupplier;
+import io.vrap.rmf.base.client.oauth2.RefreshableTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+import io.vrap.rmf.base.client.utils.ClientUtils;
 
 /**
  * Handler for retrieving an oauth authentication token
  */
 public class OAuthHandler extends AutoCloseableService {
-    private final TokenSupplier supplier;
-    private AuthenticationToken token;
+    private final Duration waitTimeout;
+    private final RefreshableTokenSupplier supplier;
 
     public OAuthHandler(final TokenSupplier supplier) {
-        this.supplier = supplier;
+        this(new InMemoryTokenSupplier(supplier), Duration.ofSeconds(5));
+    }
+
+    public OAuthHandler(RefreshableTokenSupplier supplier, Duration waitTimeout) {
+        this.waitTimeout = waitTimeout;
+        this.supplier = new InMemoryTokenSupplier(supplier);
     }
 
     static String authHeader(final AuthenticationToken token) {
@@ -21,17 +31,11 @@ public class OAuthHandler extends AutoCloseableService {
     }
 
     public AuthenticationToken getToken() {
-        if (token == null || token.isExpired())
-            synchronized (this) {
-                if (token == null || token.isExpired())
-                    supplier.getToken().thenApply(authenticationToken -> token = authenticationToken).join();
-            }
-        return token;
+        return ClientUtils.blockingWait(supplier.getToken(), waitTimeout);
     }
 
     public AuthenticationToken refreshToken() {
-        token = null;
-        return getToken();
+        return ClientUtils.blockingWait(supplier.refreshToken(), waitTimeout);
     }
 
     @Override

@@ -1,6 +1,8 @@
 
 package io.vrap.rmf.base.client.oauth2;
 
+import static io.vrap.rmf.base.client.ApiHttpHeaders.headerEntry;
+
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -12,20 +14,20 @@ import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-/**
- * Token supplier using password flow
- */
-public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
+public class AnonymousFlowTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
 
-    public GlobalCustomerPasswordTokenSupplier(final String clientId, final String clientSecret, final String email,
-            final String password, final String scope, final String tokenEndpoint,
+    private final RefreshFlowTokenSupplier refreshFlowTokenSupplier;
+
+    public AnonymousFlowTokenSupplier(final String clientId, final String clientSecret, final String scope,
+            final String tokenEndpoint, final RefreshFlowTokenSupplier refreshFlowTokenSupplier,
             final VrapHttpClient vrapHttpClient) {
         this.vrapHttpClient = vrapHttpClient;
-        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, email, password, scope, tokenEndpoint);
+        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint);
+        this.refreshFlowTokenSupplier = refreshFlowTokenSupplier;
     }
 
     @Override
@@ -49,23 +51,23 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
 
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
-        return getToken();
+        return refreshFlowTokenSupplier.refreshToken();
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,
-            final String email, final String password, final String scope, final String tokenEndpoint) {
+            final String scope, final String tokenEndpoint) {
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+            headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
+            headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));
         final String body;
         if (scope == null || scope.isEmpty()) {
-            body = "grant_type=password&username=" + email + "&password=" + password;
+            body = "grant_type=client_credentials";
         }
         else {
-            body = "grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope;
+            body = "grant_type=client_credentials&scope=" + scope;
         }
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", "Basic " + auth)
-                .withHeader("Content-Type", "application/x-www-form-urlencoded");
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
             body.getBytes(StandardCharsets.UTF_8));
     }

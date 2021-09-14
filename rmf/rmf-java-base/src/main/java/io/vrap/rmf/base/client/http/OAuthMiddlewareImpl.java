@@ -48,6 +48,9 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
             final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return failsafeExecutor.getStageAsync(() -> {
+            if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {
+                return next.apply(request);
+            }
             AuthenticationToken token = authHandler.getToken();
             return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));
         });

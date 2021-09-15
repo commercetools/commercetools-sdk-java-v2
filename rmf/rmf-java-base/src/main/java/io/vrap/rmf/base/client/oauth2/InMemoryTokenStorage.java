@@ -19,9 +19,7 @@ public class InMemoryTokenStorage implements TokenStorage {
     }
 
     @Override
-    public void setToken(AuthenticationToken token) {
-        synchronized (this) {
-            this.token = token;
-        }
+    public synchronized void setToken(AuthenticationToken token) {
+        this.token = token;
     }
 }

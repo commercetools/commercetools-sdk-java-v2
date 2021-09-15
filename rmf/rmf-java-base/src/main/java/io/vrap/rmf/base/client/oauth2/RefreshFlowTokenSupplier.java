@@ -32,10 +32,10 @@ public class RefreshFlowTokenSupplier extends AutoCloseableService implements Re
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
         final AuthenticationToken token = tokenStorage.getToken();
-        if (token.getRefresherToken() == null) {
+        if (token.getRefreshToken() == null) {
             throw new AuthException(400, "No refresh_token given", null);
         }
-        final String body = "grant_type=refresh_token&refresh_token=" + token.getRefresherToken();
+        final String body = "grant_type=refresh_token&refresh_token=" + token.getRefreshToken();
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
             if (throwable != null) {

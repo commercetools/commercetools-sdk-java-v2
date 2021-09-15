@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.AuthenticationToken;
 /**
  * Token supplier using a specified token
  */
-public class StaticTokenSupplier implements RefreshableTokenSupplier {
+public class StaticTokenSupplier implements TokenSupplier {
 
     private final AuthenticationToken token;
 
@@ -18,11 +18,6 @@ public class StaticTokenSupplier implements RefreshableTokenSupplier {
 
     @Override
     public CompletableFuture<AuthenticationToken> getToken() {
-        return CompletableFuture.completedFuture(this.token);
-    }
-
-    @Override
-    public CompletableFuture<AuthenticationToken> refreshToken() {
         return CompletableFuture.completedFuture(this.token);
     }
 }

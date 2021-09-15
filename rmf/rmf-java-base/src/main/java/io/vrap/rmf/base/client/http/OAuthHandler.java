@@ -14,16 +14,25 @@ import io.vrap.rmf.base.client.utils.ClientUtils;
  * Handler for retrieving an oauth authentication token
  */
 public class OAuthHandler extends AutoCloseableService {
+    public static final Duration WAIT_TIMEOUT = Duration.ofSeconds(5);
     private final Duration waitTimeout;
     private final RefreshableTokenSupplier supplier;
 
     public OAuthHandler(final TokenSupplier supplier) {
-        this(new InMemoryTokenSupplier(supplier), Duration.ofSeconds(5));
+        this(new InMemoryTokenSupplier(supplier), WAIT_TIMEOUT);
+    }
+
+    public OAuthHandler(final TokenSupplier supplier, Duration waitTimeout) {
+        this(new InMemoryTokenSupplier(supplier), waitTimeout);
+    }
+
+    public OAuthHandler(final RefreshableTokenSupplier supplier) {
+        this(supplier, WAIT_TIMEOUT);
     }
 
     public OAuthHandler(RefreshableTokenSupplier supplier, Duration waitTimeout) {
         this.waitTimeout = waitTimeout;
-        this.supplier = new InMemoryTokenSupplier(supplier);
+        this.supplier = supplier;
     }
 
     static String authHeader(final AuthenticationToken token) {

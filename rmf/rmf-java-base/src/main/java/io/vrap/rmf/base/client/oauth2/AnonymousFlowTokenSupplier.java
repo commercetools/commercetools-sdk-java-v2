@@ -51,7 +51,10 @@ public class AnonymousFlowTokenSupplier extends AutoCloseableService implements 
 
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
-        return refreshFlowTokenSupplier.refreshToken();
+        return refreshFlowTokenSupplier.refreshToken().exceptionallyCompose(throwable -> {
+            logger.error(() -> throwable);
+            return getToken();
+        });
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,

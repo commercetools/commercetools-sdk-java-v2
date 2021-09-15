@@ -32,7 +32,6 @@ public class MeIntegrationTest {
 
         Assertions.assertThat(categories).isInstanceOf(CategoryPagedQueryResponse.class);
 
-
         TokenStorage storage = new InMemoryTokenStorage();
         final ProjectApiRoot meClient = ApiRootBuilder.of(client)
                 .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())

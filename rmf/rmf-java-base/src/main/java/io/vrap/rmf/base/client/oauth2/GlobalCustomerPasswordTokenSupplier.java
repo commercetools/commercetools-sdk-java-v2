@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 /**
  * Token supplier using password flow
  */
-public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
+public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService implements TokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
     private final VrapHttpClient vrapHttpClient;
@@ -45,11 +45,6 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
         })
                 .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
                         .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
-    }
-
-    @Override
-    public CompletableFuture<AuthenticationToken> refreshToken() {
-        return getToken();
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,

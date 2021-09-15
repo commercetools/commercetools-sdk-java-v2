@@ -37,6 +37,7 @@ public class RefreshFlowTokenSupplier extends AutoCloseableService implements Re
         }
         final String body = "grant_type=refresh_token&refresh_token=" + token.getRefreshToken();
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
+        logger.debug(() -> request);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
             if (throwable != null) {
                 logger.error(() -> response, throwable);

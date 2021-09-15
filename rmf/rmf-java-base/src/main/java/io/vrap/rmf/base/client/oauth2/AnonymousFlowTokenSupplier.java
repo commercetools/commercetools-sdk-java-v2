@@ -34,6 +34,7 @@ public class AnonymousFlowTokenSupplier extends AutoCloseableService implements 
 
     @Override
     public CompletableFuture<AuthenticationToken> getToken() {
+        logger.debug(() -> apiHttpRequest);
         return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -> {
             if (throwable != null) {
                 logger.error(() -> response, throwable);

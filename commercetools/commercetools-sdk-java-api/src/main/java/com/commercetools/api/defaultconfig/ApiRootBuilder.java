@@ -3,6 +3,7 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -22,7 +23,9 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
  * Builder to create a {@link ApiRoot} or a project scoped {@link ProjectApiRoot}
  */
 public class ApiRootBuilder {
+    private static final String PROJECT_KEY_MUST_BE_SET = "projectKey must be set";
     private final ClientBuilder builder;
+    private String projectKey;
 
     private ApiRootBuilder(ClientBuilder builder) {
         this.builder = builder;
@@ -38,6 +41,12 @@ public class ApiRootBuilder {
 
     public static ApiRootBuilder of(final HandlerStack stack) {
         return new ApiRootBuilder(ClientBuilder.of(stack));
+    }
+
+    public ApiRootBuilder withProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+
+        return this;
     }
 
     public ApiRootBuilder withHandlerStack(final HandlerStack stack) {
@@ -125,6 +134,26 @@ public class ApiRootBuilder {
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
         builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials,
+            final ServiceRegion serviceRegion, final TokenStorage storage) {
+        withApiBaseUrl(serviceRegion.getApiUrl());
+        Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);
+        builder.withAnonymousRefreshFlow(credentials, serviceRegion.getOAuthAnonymousTokenUrl(projectKey),
+                serviceRegion.getOAuthTokenUrl(), storage);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials,
+            final ServiceRegion serviceRegion, final String projectKey, final TokenStorage storage) {
+        withApiBaseUrl(serviceRegion.getApiUrl());
+        withProjectKey(projectKey);
+        builder.withAnonymousRefreshFlow(credentials, serviceRegion.getOAuthAnonymousTokenUrl(projectKey),
+            serviceRegion.getOAuthTokenUrl(), storage);
 
         return this;
     }
@@ -301,6 +330,11 @@ public class ApiRootBuilder {
     @Deprecated()
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);
+    }
+
+    public ProjectApiRoot buildProjectRoot() {
+        Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 
     public ProjectApiRoot buildProjectRoot(final String projectKey) {

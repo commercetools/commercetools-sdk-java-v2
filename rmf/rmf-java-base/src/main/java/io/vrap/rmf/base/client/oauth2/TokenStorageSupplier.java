@@ -1,68 +1,76 @@
 
 package io.vrap.rmf.base.client.oauth2;
 
-import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.utils.ClientUtils;
+import io.vrap.rmf.base.client.http.InternalLogger;
 
 public class TokenStorageSupplier implements RefreshableTokenSupplier {
+    private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
+
     private final TokenStorage storage;
     private final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier;
     private final Object lock = new Object();
-    public static final Duration WAIT_TIMEOUT = Duration.ofSeconds(5);
-    private final Duration waitTimeout;
+
+    private volatile CompletableFuture<AuthenticationToken> tokenFuture;
 
     public TokenStorageSupplier(TokenStorage storage, AnonymousFlowTokenSupplier supplier) {
-        this(storage, supplier, WAIT_TIMEOUT);
-    }
-
-    public TokenStorageSupplier(TokenStorage storage, AnonymousFlowTokenSupplier supplier, Duration waitTimeout) {
         this.storage = storage;
         this.anonymousFlowTokenSupplier = supplier;
-        this.waitTimeout = waitTimeout;
     }
 
     @Override
     public CompletableFuture<AuthenticationToken> getToken() {
         AuthenticationToken token = storage.getToken();
-        if (token == null || token.isExpired()) {
-            synchronized (lock) {
-                token = storage.getToken();
-                if (token != null && token.isExpired() && token.getRefreshToken() != null) {
-                    token = getRefreshToken();
+        if (token != null && !token.isExpired()) {
+            return CompletableFuture.completedFuture(token);
+        }
+        if (token != null) {
+            if (token.getRefreshToken() != null) {
+                synchronized (lock) {
+                    if (tokenFuture == null) {
+                        logger.debug(() -> "using refresh token flow");
+                        tokenFuture = anonymousFlowTokenSupplier.refreshToken().thenApply(this::storeToken);
+                    }
                 }
-                else {
-                    token = getAnonToken();
-                }
-                storage.setToken(token);
             }
         }
-        return CompletableFuture.completedFuture(token);
+        synchronized (lock) {
+            if (tokenFuture == null) {
+                logger.debug(() -> "using anonymous token flow");
+                tokenFuture = anonymousFlowTokenSupplier.getToken().thenApply(this::storeToken);
+            }
+        }
+        return tokenFuture;
     }
 
-    private AuthenticationToken getAnonToken() {
-        return ClientUtils.blockingWait(anonymousFlowTokenSupplier.getToken(), waitTimeout);
+    private void resetTokenFuture() {
+        synchronized (lock) {
+            tokenFuture = null;
+        }
     }
 
-    private AuthenticationToken getRefreshToken() {
-        return ClientUtils.blockingWait(anonymousFlowTokenSupplier.refreshToken(), waitTimeout);
+    private AuthenticationToken storeToken(AuthenticationToken token) {
+        storage.setToken(token);
+        resetTokenFuture();
+        return token;
     }
+
 
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
+        resetTokenFuture();
         AuthenticationToken token = storage.getToken();
 
         if (token != null) {
             synchronized (lock) {
-                token = storage.getToken();
-                if (token != null && token.isExpired()) {
-                    token = getRefreshToken();
-                    storage.setToken(token);
+                if (tokenFuture == null && token.isExpired()) {
+                    logger.debug(() -> "refresh token");
+                    tokenFuture = anonymousFlowTokenSupplier.refreshToken().thenApply(this::storeToken);
                 }
             }
-            return CompletableFuture.completedFuture(token);
+            return tokenFuture;
         }
 
         return getToken();

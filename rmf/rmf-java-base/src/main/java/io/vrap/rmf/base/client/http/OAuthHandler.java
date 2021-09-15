@@ -19,20 +19,16 @@ public class OAuthHandler extends AutoCloseableService {
     private final RefreshableTokenSupplier supplier;
 
     public OAuthHandler(final TokenSupplier supplier) {
-        this(new InMemoryTokenSupplier(supplier), WAIT_TIMEOUT);
-    }
-
-    public OAuthHandler(final TokenSupplier supplier, Duration waitTimeout) {
-        this(new InMemoryTokenSupplier(supplier), waitTimeout);
-    }
-
-    public OAuthHandler(final RefreshableTokenSupplier supplier) {
         this(supplier, WAIT_TIMEOUT);
     }
 
-    public OAuthHandler(RefreshableTokenSupplier supplier, Duration waitTimeout) {
+    public OAuthHandler(final TokenSupplier supplier, Duration waitTimeout) {
+        if (supplier instanceof RefreshableTokenSupplier) {
+            this.supplier = (RefreshableTokenSupplier)supplier;
+        } else {
+            this.supplier = new InMemoryTokenSupplier(supplier);
+        }
         this.waitTimeout = waitTimeout;
-        this.supplier = supplier;
     }
 
     static String authHeader(final AuthenticationToken token) {

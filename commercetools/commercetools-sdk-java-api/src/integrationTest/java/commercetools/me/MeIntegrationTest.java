@@ -10,6 +10,7 @@ import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
@@ -20,7 +21,7 @@ import org.junit.Test;
 public class MeIntegrationTest {
 
     @Test
-    public void createClient() {
+    public void createClient() throws InterruptedException {
         final ClientCredentials credentials = ClientCredentials.of()
                 .withClientId(CommercetoolsTestUtils.getClientId())
                 .withClientSecret(CommercetoolsTestUtils.getClientSecret())
@@ -34,11 +35,9 @@ public class MeIntegrationTest {
 
         TokenStorage storage = new InMemoryTokenStorage();
         final ProjectApiRoot meClient = ApiRootBuilder.of(client)
-                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .withAnonymousRefreshFlow(credentials,
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthAnonymousTokenUrl(CommercetoolsTestUtils.getProjectKey()),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), storage)
-                .buildProjectRoot(CommercetoolsTestUtils.getProjectKey());
+                .withProjectKey(CommercetoolsTestUtils.getProjectKey())
+                .withAnonymousRefreshFlow(credentials, ServiceRegion.GCP_EUROPE_WEST1, storage)
+                .buildProjectRoot();
 
         final Cart cart = meClient.me()
                 .carts()

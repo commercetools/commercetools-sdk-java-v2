@@ -5,12 +5,14 @@ import static io.vrap.rmf.base.client.ApiHttpHeaders.headerEntry;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
+import io.vrap.rmf.base.client.utils.ClientUtils;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -51,9 +53,9 @@ public class AnonymousFlowTokenSupplier extends AutoCloseableService implements 
 
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
-        return refreshFlowTokenSupplier.refreshToken().exceptionallyCompose(throwable -> {
+        return refreshFlowTokenSupplier.refreshToken().exceptionally(throwable -> {
             logger.error(() -> throwable);
-            return getToken();
+            return ClientUtils.blockingWait(getToken(), Duration.ofSeconds(5));
         });
     }
 

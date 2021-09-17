@@ -9,8 +9,8 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.common.ProcessingState;
+import com.commercetools.importapi.models.common.UnresolvedReferences;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -78,7 +78,7 @@ public interface ImportOperation {
     */
     @Valid
     @JsonProperty("unresolvedReferences")
-    public List<KeyReference> getUnresolvedReferences();
+    public List<UnresolvedReferences> getUnresolvedReferences();
 
     /**
     *  <p>The time when the ImportOperation was created.</p>
@@ -119,9 +119,9 @@ public interface ImportOperation {
     public void setErrors(final List<ErrorObject> errors);
 
     @JsonIgnore
-    public void setUnresolvedReferences(final KeyReference... unresolvedReferences);
+    public void setUnresolvedReferences(final UnresolvedReferences... unresolvedReferences);
 
-    public void setUnresolvedReferences(final List<KeyReference> unresolvedReferences);
+    public void setUnresolvedReferences(final List<UnresolvedReferences> unresolvedReferences);
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 

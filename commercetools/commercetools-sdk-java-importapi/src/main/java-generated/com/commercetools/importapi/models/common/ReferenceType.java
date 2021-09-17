@@ -110,6 +110,11 @@ public interface ReferenceType {
 
     */
     ReferenceType TYPE = ReferenceTypeEnum.TYPE;
+    /**
+    	<p>References a custom object</p>
+
+    */
+    ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
 
     enum ReferenceTypeEnum implements ReferenceType {
         CART("cart"),
@@ -148,7 +153,9 @@ public interface ReferenceType {
 
         TAX_CATEGORY("tax-category"),
 
-        TYPE("type");
+        TYPE("type"),
+
+        KEY_VALUE_DOCUMENT("key-value-document");
         private final String jsonName;
 
         private ReferenceTypeEnum(final String jsonName) {

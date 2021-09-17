@@ -13,36 +13,40 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
-*  <p>References a product type by its key.</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference {
+public final class UnresolvedReferencesImpl implements UnresolvedReferences {
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
-    ProductTypeKeyReferenceImpl(@JsonProperty("key") final String key) {
+    UnresolvedReferencesImpl(@JsonProperty("key") final String key,
+            @JsonProperty("typeId") final com.commercetools.importapi.models.common.ReferenceType typeId) {
         this.key = key;
-        this.typeId = PRODUCT_TYPE;
+        this.typeId = typeId;
     }
 
-    public ProductTypeKeyReferenceImpl() {
-        this.typeId = PRODUCT_TYPE;
+    public UnresolvedReferencesImpl() {
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    public void setTypeId(final com.commercetools.importapi.models.common.ReferenceType typeId) {
+        this.typeId = typeId;
     }
 
     @Override
@@ -53,7 +57,7 @@ public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReferenc
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductTypeKeyReferenceImpl that = (ProductTypeKeyReferenceImpl) o;
+        UnresolvedReferencesImpl that = (UnresolvedReferencesImpl) o;
 
         return new EqualsBuilder().append(key, that.key).append(typeId, that.typeId).isEquals();
     }

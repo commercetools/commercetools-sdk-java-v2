@@ -21,26 +21,23 @@ public final class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyRe
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
     ShippingMethodKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnum("shipping-method");
+        this.typeId = SHIPPING_METHOD;
     }
 
     public ShippingMethodKeyReferenceImpl() {
-        this.typeId = ReferenceType.findEnum("shipping-method");
+        this.typeId = SHIPPING_METHOD;
     }
 
     public String getKey() {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

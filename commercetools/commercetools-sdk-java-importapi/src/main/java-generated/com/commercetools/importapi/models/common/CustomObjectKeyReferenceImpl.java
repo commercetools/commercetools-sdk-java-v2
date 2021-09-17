@@ -14,23 +14,27 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a product type by its key.</p>
+*  <p>References a key value document by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference {
+public final class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference {
 
     private String key;
 
     private String typeId;
 
+    private String container;
+
     @JsonCreator
-    ProductTypeKeyReferenceImpl(@JsonProperty("key") final String key) {
+    CustomObjectKeyReferenceImpl(@JsonProperty("key") final String key,
+            @JsonProperty("container") final String container) {
         this.key = key;
-        this.typeId = PRODUCT_TYPE;
+        this.container = container;
+        this.typeId = KEY_VALUE_DOCUMENT;
     }
 
-    public ProductTypeKeyReferenceImpl() {
-        this.typeId = PRODUCT_TYPE;
+    public CustomObjectKeyReferenceImpl() {
+        this.typeId = KEY_VALUE_DOCUMENT;
     }
 
     public String getKey() {
@@ -41,8 +45,16 @@ public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReferenc
         return this.typeId;
     }
 
+    public String getContainer() {
+        return this.container;
+    }
+
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    public void setContainer(final String container) {
+        this.container = container;
     }
 
     @Override
@@ -53,14 +65,17 @@ public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReferenc
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductTypeKeyReferenceImpl that = (ProductTypeKeyReferenceImpl) o;
+        CustomObjectKeyReferenceImpl that = (CustomObjectKeyReferenceImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(typeId, that.typeId).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(container, that.container)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(typeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key).append(typeId).append(container).toHashCode();
     }
 
 }

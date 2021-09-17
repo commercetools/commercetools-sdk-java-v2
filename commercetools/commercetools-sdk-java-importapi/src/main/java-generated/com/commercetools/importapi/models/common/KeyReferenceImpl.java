@@ -21,11 +21,10 @@ public final class KeyReferenceImpl implements KeyReference {
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
-    KeyReferenceImpl(@JsonProperty("key") final String key,
-            @JsonProperty("typeId") final com.commercetools.importapi.models.common.ReferenceType typeId) {
+    KeyReferenceImpl(@JsonProperty("key") final String key, @JsonProperty("typeId") final String typeId) {
         this.key = key;
         this.typeId = typeId;
     }
@@ -37,10 +36,7 @@ public final class KeyReferenceImpl implements KeyReference {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

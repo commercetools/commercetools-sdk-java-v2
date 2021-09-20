@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 
+/**
+ * Class with methods to customize the JSON serialization/deserialization
+ */
 public class JsonUtils {
 
     private static final ObjectMapper OBJECT_MAPPER;
@@ -25,10 +28,19 @@ public class JsonUtils {
         OBJECT_MAPPER = createObjectMapper();
     }
 
+    /**
+     * creates a new {@link ObjectMapper } instance
+     * @return ObjectMapper
+     */
     public static ObjectMapper createObjectMapper() {
         return createObjectMapper(name -> null);
     }
 
+    /**
+     *
+     * @param options configuration for jackson modules supplied by a {@link ModuleSupplier}
+     * @return ObjectMapper
+     */
     public static ObjectMapper createObjectMapper(final ModuleOptions options) {
         ServiceLoader<SimpleModule> loader = ServiceLoader.load(SimpleModule.class,
             SimpleModule.class.getClassLoader());
@@ -50,26 +62,63 @@ public class JsonUtils {
         return objectMapper;
     }
 
+    /**
+     * serializes the given object to JSON as a byte array
+     * @param value object to be serialized
+     * @return json byte array
+     * @throws JsonProcessingException serialization errors
+     */
     public static byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsBytes(value);
     }
 
+    /**
+     * serializes the given object to JSON as a byte array
+     * @param value object to be serialized
+     * @return json string
+     * @throws JsonProcessingException serialization errors
+     */
     public static String toJsonString(final Object value) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsString(value);
     }
 
+    /**
+     * deserializes the given json string to the given class
+     * @param clazz class to serialize to
+     * @param content json as string
+     * @return deserialized object
+     * @throws IOException deserialization errors
+     */
     public static <T> T fromJsonString(final String content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
+    /**
+     * deserializes the given json string to the given class
+     * @param clazz class to serialize to
+     * @param content json as byte array
+     * @return deserialized object
+     * @throws IOException deserialization errors
+     */
     public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
+    /**
+     * deserializes the given json string to the given class
+     * @param clazz class to serialize to
+     * @param content json as inputstream
+     * @return deserialized object
+     * @throws IOException deserialization errors
+     */
     public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
+    /**
+     * default {@link ObjectMapper}
+     * @return ObjectMapper
+     */
     public static ObjectMapper getConfiguredObjectMapper() {
         return OBJECT_MAPPER;
     }
@@ -77,6 +126,8 @@ public class JsonUtils {
     /**
      * Very simple way to "erase" passwords -
      * replaces all field values whose names contains {@code 'pass'} by {@code '**removed from output**'}.
+     * @param node Json object to be redacted
+     * @return Json object
      */
     private static JsonNode secure(final JsonNode node) {
         if (node.isObject()) {
@@ -85,7 +136,8 @@ public class JsonUtils {
             while (fields.hasNext()) {
                 Map.Entry<String, JsonNode> field = fields.next();
                 if (field.getValue().isTextual() && (field.getKey().toLowerCase().contains("pass")
-                        || field.getKey().toLowerCase().contains("access_token"))) {
+                        || field.getKey().toLowerCase().contains("access_token")
+                        || field.getKey().toLowerCase().contains("refresh_token"))) {
                     objectNode.put(field.getKey(), "**removed from output**");
                 }
                 else {

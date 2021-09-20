@@ -17,22 +17,22 @@ package com.commercetools.docs.meta;
 
     {@include.example example.ExamplesTest#instance()}
 
-    For projects in the US region you should specify in addition to the previous parameters the auth and api urls:
+    <p>For projects in the US region you should specify in addition to the previous parameters the auth and api urls:</p>
 
    {@include.example example.ImportExamplesTest#instance()}
 
     <h3 id=perform-requests>Performing requests</h3>
 
-    A client works on the abstraction level of one HTTP request.
-    With one client you can start multiple requests in parallel, it is thread-safe.
+    <p>A client works on the abstraction level of one HTTP request.
+    With one client you can start multiple requests in parallel, it is thread-safe.</p>
 
-    Example:
+    <h4>Example</h4>
 
    {@include.example example.ExamplesTest#performRequest()}
 
     <h3 id=closing>Closing the client</h3>
 
-    The client holds resources like thread pools and IO connections, so call {@code close()} to release them.
+    <p>The client holds resources like thread pools and IO connections, so call {@code close()} to release them.</p>
  */
 public class GettingStarted {
 }

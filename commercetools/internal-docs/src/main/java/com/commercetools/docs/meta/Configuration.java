@@ -4,7 +4,8 @@ package com.commercetools.docs.meta;
 /**
     <h2 id=configuration>Configuration</h2>
 
-    Creating http requests starts from the ApiRoot which  holds information specific to the project. To configure the ApiRoot use the following method:
+    <p>Creating http requests starts from the ApiRoot which  holds information specific to the project. To configure the
+    ApiRoot use the following method:</p>
 
     {@include.example example.ExamplesTest#instance()}
 

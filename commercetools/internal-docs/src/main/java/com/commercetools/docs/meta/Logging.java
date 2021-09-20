@@ -4,23 +4,23 @@ package com.commercetools.docs.meta;
 /**
     <h2 id=logging>Logging</h2>
 
-    Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.
+    <p>Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.</p>
 
     <h2 id=logger-hierarchy>Logger hierarchy</h2>
 
-    The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.
+    <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>
 
-    The child loggers of commercetools are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.
+    <p>The child loggers of commercetools are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.</p>
 
-    The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools for categories, {@code commercetools.categories.response} refers to the responses of the platform.
+    <p>The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools for categories, {@code commercetools.categories.response} refers to the responses of the platform.</p>
 
-    The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):
+    <p>The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):</p>
 
     <pre>{@code
     [OkHttp https://api.europe-west1.gcp.commercetools.com/...] DEBUG commercetools.categories.response - io.vrap.rmf.base.client.ApiHttpResponse@33e37acd[statusCode=200,headers=...,textInterpretedBody={"limit":20,"offset":0,"count":4,"total":4,"results":[{"id":"ca7f64dc-ab41-4e7f-b65b-bfc25bf01111","version":1,"createdAt":"2021-01-06T09:21:55.445Z","lastModifiedAt":"2021-01-06T09:21:55.445Z","key":"random-key-15aab6ee-9a48-4fdc-a8c3-8ff9ff390d60","name":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"slug":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"description":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"ancestors":[],"orderHint":"random-string-a99e6941-3225-4766-923a-4a654652532f","externalId":"random-id-100b3851-29b4-47c1-aef3-860b4cd28f54"}]}]
     }</pre>
 
-    {@code commercetools.categories.response} logs on trace level additional the formatted http response from the platform (abbreviated example):
+    <p>{@code commercetools.categories.response} logs on trace level additional the formatted http response from the platform (abbreviated example):</p>
 
     <pre>{@code
     [OkHttp https://api.europe-west1.gcp.commercetools.com/...] TRACE commercetools.categories.response - 200
@@ -67,7 +67,7 @@ package com.commercetools.docs.meta;
     }
     }</pre>
 
-    {@code commercetools.products.responses.queries} logs only HTTP GET requests and {@code commercetools.products.responses.commands} logs only HTTP POST/DELETE requests.
+    <p>{@code commercetools.products.responses.queries} logs only HTTP GET requests and {@code commercetools.products.responses.commands} logs only HTTP POST/DELETE requests.</p>
 
     <pre>{@code
     [pool-1-thread-1] DEBUG commercetools.products.request.commands - io.vrap.rmf.base.client.ApiHttpRequest@1d2c6948[method=POST,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products",headers=[...],textInterpretedBody={"productType":{"id":"cda39953-23af-4e85-abb0-5b89517ec5f2","typeId":"product-type"},"name":{"random-string-b66de021-d2fa-4262-8837-94a6992a8cdc":"random-string-da28a010-e66b-49d4-a18b-f1bfc145d2f6"},...}]

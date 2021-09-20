@@ -1,5 +1,9 @@
 dependencies {
     implementation project(":commercetools:commercetools-sdk-java-api")
     implementation project(":commercetools:commercetools-sdk-java-importapi")
+    implementation project(":commercetools:commercetools-sdk-java-ml")
+    implementation project(":commercetools:commercetools-sdk-java-history")
     implementation project(":commercetools:commercetools-http-client")
+
+    testImplementation 'commons-io:commons-io' version commons.io
 }

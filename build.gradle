@@ -24,7 +24,7 @@ configurations {
     taglet
 }
 dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.0.0'
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.0'
 }
 
 import java.text.SimpleDateFormat
@@ -346,7 +346,7 @@ task alljavadoc(type: Javadoc) {
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
         """
-        taglets 'com.commercetools.build.taglets.CodeTaglet'
+        taglets 'com.commercetools.build.taglets.CodeTaglet', 'com.commercetools.build.taglets.FileIncludeTaglet'
         tagletPath(configurations.taglet.files as File[])
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,syntax,accessibility,reference', '-quiet')

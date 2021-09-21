@@ -87,7 +87,11 @@ ext {
             assertJ: "3.20.2",
             gson: "2.8.8",
             awaitility: "4.1.0",
-            failsafe: "2.4.3"
+            failsafe: "2.4.3",
+            ctpJvmSdk: {
+                strictly '[1.62.0,)'
+                prefer '2.0.0'
+            }
     ]
 
     commons = [

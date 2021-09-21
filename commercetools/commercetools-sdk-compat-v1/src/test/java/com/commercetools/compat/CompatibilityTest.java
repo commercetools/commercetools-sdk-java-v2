@@ -15,7 +15,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-public class CompatTest {
+public class CompatibilityTest {
     @Test
     public void compatClientExecute() throws ExecutionException, InterruptedException {
         String projectJson = "{\"key\" : \"foo\"}";

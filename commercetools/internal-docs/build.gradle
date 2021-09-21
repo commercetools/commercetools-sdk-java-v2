@@ -3,7 +3,12 @@ dependencies {
     implementation project(":commercetools:commercetools-sdk-java-importapi")
     implementation project(":commercetools:commercetools-sdk-java-ml")
     implementation project(":commercetools:commercetools-sdk-java-history")
+    implementation project(":commercetools:commercetools-sdk-compat-v1")
     implementation project(":commercetools:commercetools-http-client")
+
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version versions.ctpJvmSdk
 
     testImplementation 'commons-io:commons-io' version commons.io
 }

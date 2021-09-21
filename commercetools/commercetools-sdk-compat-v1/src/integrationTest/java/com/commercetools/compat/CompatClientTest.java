@@ -8,9 +8,9 @@ import com.commercetools.api.models.project.Project;
 
 import io.sphere.sdk.categories.queries.CategoryQuery;
 import io.sphere.sdk.projects.queries.ProjectGet;
-
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 

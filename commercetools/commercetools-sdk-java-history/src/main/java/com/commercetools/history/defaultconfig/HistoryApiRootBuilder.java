@@ -61,7 +61,8 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
-    public HistoryApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+    public HistoryApiRootBuilder withHttpExceptionFactory(
+            final Function<ResponseSerializer, HttpExceptionFactory> factory) {
         builder.withHttpExceptionFactory(factory);
         return this;
     }

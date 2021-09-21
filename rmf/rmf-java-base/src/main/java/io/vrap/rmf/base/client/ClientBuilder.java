@@ -329,7 +329,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ApiHttpClient build() {
-        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()), requireNonNull(serializer.get()));
+        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),
+            requireNonNull(serializer.get()));
     }
 
     public static String buildDefaultUserAgent() {

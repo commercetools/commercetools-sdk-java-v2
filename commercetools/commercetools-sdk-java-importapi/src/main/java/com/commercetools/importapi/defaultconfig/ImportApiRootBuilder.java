@@ -61,7 +61,8 @@ public class ImportApiRootBuilder {
         return this;
     }
 
-    public ImportApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+    public ImportApiRootBuilder withHttpExceptionFactory(
+            final Function<ResponseSerializer, HttpExceptionFactory> factory) {
         builder.withHttpExceptionFactory(factory);
         return this;
     }

@@ -10,7 +10,7 @@ import java.time.ZonedDateTime;
 import java.util.Map;
 
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ProjectApiRoot;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.models.product.Attribute;

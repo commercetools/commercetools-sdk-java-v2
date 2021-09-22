@@ -23,7 +23,13 @@ package com.commercetools.docs.meta;
  * the platform can return one error response with multiple errors (<a href="https://docs.commercetools.com/api/errors">listing of error codes</a>).
  * The SDK will then put a {@link io.vrap.rmf.base.client.error.BadRequestException} into a {@link java.util.concurrent.CompletionStage}.
  *
- * @see io.vrap.rmf.base.client.error.BaseException
+ * <h3>Custom HttpExceptionFactory</h3>
+ *
+ * <p>In case a response with a status code of 400 or higher are treated as errors and raise exceptions. These exceptions
+ * are created by the {@link io.vrap.rmf.base.client.error.DefaultHttpExceptionFactory}. In case you want to override the handling you have to implement
+ * this interface and override the default methods if necessary.</p>
+ *
+ * {@include.example example.HttpExceptionFactoryTest}
  */
 public class ExceptionDocumentation {
 }

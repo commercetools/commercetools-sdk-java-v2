@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.client.ApiRoot;
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
+import com.commercetools.importapi.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;

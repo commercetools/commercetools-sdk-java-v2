@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;

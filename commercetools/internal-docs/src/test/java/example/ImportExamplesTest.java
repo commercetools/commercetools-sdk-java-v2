@@ -1,8 +1,8 @@
 
 package example;
 
+import com.commercetools.importapi.client.ProjectApiRoot;
 import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
-import com.commercetools.importapi.defaultconfig.ProjectApiRoot;
 import com.commercetools.importapi.defaultconfig.ServiceRegion;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;

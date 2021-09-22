@@ -21,7 +21,7 @@ The latest stable SDK release can be retrieved from [Maven Central](https://sear
 ```gradle
 ext {
     versions = [
-        commercetools: "6.2.0"
+        commercetools: "<latest version>"
     ]
 }
 
@@ -43,7 +43,7 @@ dependencies {
 
 ```maven
 <properties>
-    <commercetools.version>6.2.0</commercetools.version>
+    <commercetools.version><!-- latest version --></commercetools.version>
 </properties>
 <dependencies>
     <dependency>
@@ -86,8 +86,6 @@ To migrate from the 1.x to the 2.x, there is a guideline below:
 ## Documentation
 
 * [Documentation](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc)
-
-[](definitions for the top badges)
 
 [snyk]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2
 [snyk img]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2/badge.svg

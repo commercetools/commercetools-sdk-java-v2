@@ -3,8 +3,8 @@ package com.commercetools.migration;
 
 import java.io.IOException;
 
-import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;

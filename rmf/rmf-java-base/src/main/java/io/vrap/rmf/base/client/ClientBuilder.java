@@ -5,10 +5,12 @@ import static java.util.Objects.requireNonNull;
 
 import java.net.URI;
 import java.util.*;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
 
@@ -27,7 +29,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private List<Middleware> middlewares = new ArrayList<>();
     private Supplier<HandlerStack> stack;
     private VrapHttpClient httpClient;
-    private ResponseSerializer serializer;
+    private Supplier<ResponseSerializer> serializer;
+    private Supplier<HttpExceptionFactory> httpExceptionFactory;
 
     public static ClientBuilder of() {
         return new ClientBuilder();
@@ -43,13 +46,17 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder(final HandlerStack stack) {
         this.stack = () -> stack;
-        this.serializer = ResponseSerializer.of();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
     }
 
     private ClientBuilder() {
         this.httpClient = HttpClientSupplier.of().get();
         this.stack = stackSupplier();
-        this.serializer = ResponseSerializer.of();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
     }
 
     private Supplier<HandlerStack> stackSupplier() {
@@ -68,7 +75,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private ClientBuilder(final VrapHttpClient httpClient) {
         this.httpClient = httpClient;
         this.stack = stackSupplier();
-        this.serializer = ResponseSerializer.of();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
     }
 
     public ClientBuilder withHandlerStack(final HandlerStack stack) {
@@ -82,7 +91,27 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ClientBuilder withSerializer(final ResponseSerializer serializer) {
+        this.serializer = () -> serializer;
+        return this;
+    }
+
+    public ClientBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
         this.serializer = serializer;
+        return this;
+    }
+
+    public ClientBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
+        this.httpExceptionFactory = () -> factory;
+        return this;
+    }
+
+    public ClientBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+        this.httpExceptionFactory = () -> factory.apply(serializer.get());
+        return this;
+    }
+
+    public ClientBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
+        this.httpExceptionFactory = factory;
         return this;
     }
 
@@ -200,7 +229,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ClientBuilder withErrorMiddleware() {
-        return withErrorMiddleware(() -> ErrorMiddleware.of(serializer));
+        return withErrorMiddleware(() -> ErrorMiddleware.of(httpExceptionFactory.get()));
     }
 
     public ClientBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
@@ -300,7 +329,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ApiHttpClient build() {
-        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()), requireNonNull(serializer));
+        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),
+            requireNonNull(serializer.get()));
     }
 
     public static String buildDefaultUserAgent() {

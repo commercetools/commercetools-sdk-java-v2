@@ -6,6 +6,7 @@ import static java.util.Arrays.asList;
 import java.util.List;
 import java.util.function.Supplier;
 
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
@@ -34,7 +35,7 @@ public class MiddlewareFactory {
             (request,
                     next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get())
                             .withHeader(ApiHttpHeaders.ACCEPT_ENCODING, "gzip")),
-            ErrorMiddleware.of(serializer), InternalLoggerMiddleware.of(internalLoggerFactory),
+            ErrorMiddleware.of(HttpExceptionFactory.of(serializer)), InternalLoggerMiddleware.of(internalLoggerFactory),
             OAuthMiddleware.of(oAuthHandler));
     }
 

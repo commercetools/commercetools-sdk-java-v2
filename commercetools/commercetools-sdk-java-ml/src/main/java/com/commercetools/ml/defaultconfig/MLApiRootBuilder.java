@@ -3,6 +3,7 @@ package com.commercetools.ml.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
@@ -12,6 +13,7 @@ import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
 import com.commercetools.ml.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
@@ -47,6 +49,26 @@ public class MLApiRootBuilder {
 
     public MLApiRootBuilder withSerializer(final ResponseSerializer serializer) {
         builder.withSerializer(serializer);
+        return this;
+    }
+
+    public MLApiRootBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
+        builder.withSerializer(serializer);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
         return this;
     }
 

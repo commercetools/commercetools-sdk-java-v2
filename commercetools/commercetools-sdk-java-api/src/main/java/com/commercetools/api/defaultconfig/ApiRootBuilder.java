@@ -3,6 +3,7 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -14,6 +15,7 @@ import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
@@ -52,6 +54,26 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withSerializer(final ResponseSerializer serializer) {
         builder.withSerializer(serializer);
+        return this;
+    }
+
+    public ApiRootBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
+        builder.withSerializer(serializer);
+        return this;
+    }
+
+    public ApiRootBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public ApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public ApiRootBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
         return this;
     }
 

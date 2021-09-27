@@ -16,16 +16,16 @@ public class ImportExamplesTest {
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_US_CENTRAL1)
-                .buildProjectRoot("my-projectkey");
+                .build("my-projectkey");
     }
 
     public void instance() {
         ApiRoot apiRoot = ImportApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
-                                .withClientId("your-client-id")
-                                .withClientSecret("your-client-secret")
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1)
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         ProjectApiRoot projectApiRoot = ImportApiRootBuilder.of()
@@ -34,6 +34,6 @@ public class ImportExamplesTest {
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("my-projectkey");
+                .build("my-projectkey");
     }
 }

@@ -16,6 +16,6 @@ public interface MigrateV2Example {
         return ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("projectKey");
+                .build("projectKey");
     }
 }

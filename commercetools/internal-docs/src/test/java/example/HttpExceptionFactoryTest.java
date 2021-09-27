@@ -33,7 +33,7 @@ public class HttpExceptionFactoryTest {
         ProjectApiRoot client = ApiRootBuilder.of()
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withHttpExceptionFactory(CustomExceptionFactory::new)
-                .buildProjectRoot("my-project-key");
+                .build("my-project-key");
 
         assertThatExceptionOfType(ApiHttpException.class).isThrownBy(() -> client.get().executeBlocking())
                 .withMessageStartingWith("detailMessage: something bad happened");

@@ -21,6 +21,6 @@ public class Configuration implements MigrateExample {
         final ProjectApiRoot projectRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("projectKey");
+                .build("projectKey");
     }
 }

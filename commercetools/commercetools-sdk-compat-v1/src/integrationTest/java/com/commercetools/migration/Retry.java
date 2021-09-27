@@ -43,7 +43,7 @@ public class Retry implements MigrateExample {
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
-                .buildProjectRoot("projectKey");
+                .build("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();
     }

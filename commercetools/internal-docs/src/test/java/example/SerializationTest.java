@@ -35,7 +35,7 @@ public class SerializationTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withSerializer(ResponseSerializer.of(mapper))
-                .buildProjectRoot("test");
+                .build("test");
 
         ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
 

@@ -36,27 +36,27 @@ public class ExamplesTest {
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void instance() {
         // ApiRoot config for Europe projects
         ApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
-                                .withClientId("your-client-id")
-                                .withClientSecret("your-client-secret")
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1)
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
-        // ApiRoot config for Europe projects
+        // Project scoped ApiRoot config for Europe projects
         ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
                         .withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void performRequest() {
@@ -145,7 +145,7 @@ public class ExamplesTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void retry() {
@@ -153,7 +153,7 @@ public class ExamplesTest {
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void executeBlocking() {
@@ -172,7 +172,7 @@ public class ExamplesTest {
                         .withScopes("your-scopes")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     @Test

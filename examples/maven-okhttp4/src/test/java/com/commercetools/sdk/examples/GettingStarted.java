@@ -16,7 +16,7 @@ public class GettingStarted {
                 ClientCredentials.of().withClientId(System.getenv("CTP_CLIENT_ID"))
                         .withClientSecret(System.getenv("CTP_CLIENT_SECRET"))
                         .build(),
-                ServiceRegion.GCP_EUROPE_WEST1).buildProjectRoot(System.getenv("CTP_PROJECT_KEY"));
+                ServiceRegion.GCP_EUROPE_WEST1).build(System.getenv("CTP_PROJECT_KEY"));
 
         Project response = apiRoot
                 .get()

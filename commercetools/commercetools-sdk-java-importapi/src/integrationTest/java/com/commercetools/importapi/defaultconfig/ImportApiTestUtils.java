@@ -25,14 +25,14 @@ public class ImportApiTestUtils {
                     .defaultClient(
                         ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                         ServiceRegion.GCP_EUROPE_WEST1)
-                    .buildProjectRoot(getProjectKey());
+                    .build(getProjectKey());
         }
         else {
             projectRoot = ImportApiRootBuilder.of()
                     .defaultClient(
                         ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                         ServiceRegion.GCP_EUROPE_WEST1)
-                    .buildProjectRoot(getProjectKey());
+                    .build(getProjectKey());
         }
     }
 

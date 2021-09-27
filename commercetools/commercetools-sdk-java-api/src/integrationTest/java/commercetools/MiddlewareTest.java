@@ -42,7 +42,7 @@ public class MiddlewareTest {
                     return next.apply(request);
                 })
                 .withRetryMiddleware(3, singletonList(404))
-                .buildProjectRoot(projectKey);
+                .build(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
             Category category = b.categories()

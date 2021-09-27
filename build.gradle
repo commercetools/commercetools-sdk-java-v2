@@ -24,7 +24,7 @@ configurations {
     taglet
 }
 dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.2'
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.4'
 }
 
 import java.text.SimpleDateFormat

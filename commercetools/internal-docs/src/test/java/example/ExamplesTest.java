@@ -20,6 +20,7 @@ import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
+import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -57,6 +58,27 @@ public class ExamplesTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build("my-project");
+    }
+
+    public void customHttpClient() {
+        ApiRootBuilder builder = ApiRootBuilder.of(new CtOkHttp4Client());
+    }
+
+    public void wrappedClient() {
+        ApiHttpClient client = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .buildClient();
+
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
+                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withMiddleware((request, next) -> {
+                    return next.apply(request.addHeader("x-custom-header", "custom-header-value"));
+                })
+                .build("my-project-key");
     }
 
     public void performRequest() {

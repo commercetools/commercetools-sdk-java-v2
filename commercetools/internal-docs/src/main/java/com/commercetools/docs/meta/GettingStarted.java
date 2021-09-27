@@ -17,10 +17,6 @@ package com.commercetools.docs.meta;
 
     {@include.example example.ExamplesTest#instance()}
 
-    <p>For projects in the US region you should specify in addition to the previous parameters the auth and api urls:</p>
-
-   {@include.example example.ImportExamplesTest#instance()}
-
     <h3 id=perform-requests>Performing requests</h3>
 
     <p>A client works on the abstraction level of one HTTP request.

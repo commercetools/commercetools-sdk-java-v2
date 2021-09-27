@@ -19,7 +19,17 @@ package com.commercetools.docs.meta;
 
     {@include.example example.ImportExamplesTest#instance()}
 
-    <h3></h3>
+    <h3>Custom HTTP client</h3>
+
+    <p>The builder can be instantiated with a custom {@link io.vrap.rmf.base.client.VrapHttpClient} instance. For example a
+    specific instance of a client</p>
+
+    {@include.example example.ExamplesTest#customHttpClient()}
+
+    <p>This can also be useful to wrap preconfigured clients e.g. with additional middlewares</p>
+
+    {@include.example example.ExamplesTest#wrappedClient()}
+
  */
 public class Configuration {
 }

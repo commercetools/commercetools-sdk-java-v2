@@ -5,9 +5,6 @@ import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importcontainers.ImportContainer;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
-import com.commercetools.importapi.models.importsinks.ImportSink;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraft;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraftBuilder;
 
 import org.junit.Assert;
 import org.junit.Test;

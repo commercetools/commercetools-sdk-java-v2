@@ -43,10 +43,10 @@ public class ExamplesTest {
         // ApiRoot config for Europe projects
         ApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
-                                .withClientId("your-client-id")
-                                .withClientSecret("your-client-secret")
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1)
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         // ApiRoot config for Europe projects

@@ -37,7 +37,7 @@ public class MiddlewareTest {
                             .withClientId(CommercetoolsTestUtils.getClientId())
                             .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> {
                     count.getAndIncrement();
                     return next.apply(request);

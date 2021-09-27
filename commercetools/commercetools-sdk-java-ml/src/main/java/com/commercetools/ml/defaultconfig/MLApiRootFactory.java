@@ -30,7 +30,7 @@ public class MLApiRootFactory {
         return MLApiRootBuilder.of().defaultClient(credentials).build();
     }
 
-    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
         return MLApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
     }
 

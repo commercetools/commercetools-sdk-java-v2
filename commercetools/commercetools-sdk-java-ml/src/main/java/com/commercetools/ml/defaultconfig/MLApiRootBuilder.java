@@ -76,9 +76,10 @@ public class MLApiRootBuilder {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE);
     }
 
-    public MLApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
-        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
-            serviceRegion.getOAuthTokenUrl());
+    public MLApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
+        builder.defaultClient(credentials, serviceRegion);
+
+        return this;
     }
 
     public MLApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

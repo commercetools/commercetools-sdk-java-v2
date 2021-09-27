@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import okhttp3.*;
 
 import com.commercetools.api.client.ApiRoot;
@@ -37,14 +38,11 @@ public class LongRunningTimeoutTest {
         final TokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(getClientId(), getClientSecret(), null,
             ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), new CtOkHttp4Client());
         final AuthenticationToken token = tokenSupplier.getToken().get();
-        final ApiRoot client = ApiRoot.fromClient(ClientBuilder.of(new CtApacheHttpClient())
-                //                .of(new CtOkHttp4Client(builder -> builder.protocols(Arrays.asList(Protocol.HTTP_2, Protocol.HTTP_1_1)).connectTimeout(300, TimeUnit.MILLISECONDS).readTimeout(1000, TimeUnit.MILLISECONDS).retryOnConnectionFailure(true).connectionPool(new ConnectionPool(0, 1, TimeUnit.NANOSECONDS))))
-
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .withClientCredentialsFlow(
+        final ApiRoot client = ApiRootBuilder.of(new CtApacheHttpClient())
+                .defaultClient(
                     ClientCredentials.of().withClientSecret(getClientSecret()).withClientId(getClientId()).build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                .build());
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build();
 
         final ApiHttpResponse<MessagePagedQueryResponse> future = client.withProjectKey(getProjectKey())
                 .messages()

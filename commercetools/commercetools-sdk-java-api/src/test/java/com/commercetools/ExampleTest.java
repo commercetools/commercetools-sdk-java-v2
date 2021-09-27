@@ -35,7 +35,7 @@ public class ExampleTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         return apiRoot;
@@ -60,7 +60,7 @@ public class ExampleTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
@@ -150,16 +150,16 @@ public class ExampleTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
                 .build();
     }
 
     public void retry() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+                .defaultClient(
                     ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .build();
     }
@@ -175,7 +175,7 @@ public class ExampleTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
     }
 

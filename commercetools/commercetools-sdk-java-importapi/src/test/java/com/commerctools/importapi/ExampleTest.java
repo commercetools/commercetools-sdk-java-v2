@@ -17,7 +17,7 @@ public class ExampleTest {
                     .withClientSecret("your-client-secret")
                     .withScopes("your-scopes")
                     .build(),
-            ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(), ServiceRegion.GCP_US_CENTRAL1.getApiUrl());
+            ServiceRegion.GCP_US_CENTRAL1);
     }
 
     public void createApiRootEU() {
@@ -28,6 +28,6 @@ public class ExampleTest {
                     .withClientSecret("your-client-secret")
                     .withScopes("your-scopes")
                     .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+            ServiceRegion.GCP_EUROPE_WEST1);
     }
 }

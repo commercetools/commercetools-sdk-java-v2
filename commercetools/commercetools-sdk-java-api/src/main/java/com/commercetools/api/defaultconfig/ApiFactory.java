@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.client.*;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ServiceRegionConfig;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.http.Middleware;
@@ -67,7 +68,7 @@ public class ApiFactory {
         return ApiRootBuilder.of().defaultClient(credentials).build();
     }
 
-    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
         return ApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
     }
 

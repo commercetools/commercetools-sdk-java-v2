@@ -36,7 +36,7 @@ public class ExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }
 
@@ -49,7 +49,7 @@ public class ExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }
 
@@ -138,16 +138,16 @@ public class ExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
                 .buildProjectRoot("my-project");
     }
 
     public void retry() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+                .defaultClient(
                     ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .buildProjectRoot("my-project");
     }
@@ -168,7 +168,7 @@ public class ExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }
 

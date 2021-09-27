@@ -6,6 +6,7 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
+import com.commercetools.importapi.client.ProjectApiRoot;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 
@@ -16,19 +17,15 @@ import org.assertj.core.api.SoftAssertions;
 
 public class ImportApiTestUtils {
 
-    private static final ByProjectKeyRequestBuilder projectRoot;
+    private static final ProjectApiRoot projectRoot;
 
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if ("OFF".equals(logLevel)) {
-            projectRoot = ImportApiFactory.createForProject(getProjectKey(),
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+            projectRoot = ImportApiRootBuilder.of().defaultClient(ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(), ServiceRegion.GCP_EUROPE_WEST1).buildProjectRoot(getProjectKey());
         }
         else {
-            projectRoot = ImportApiFactory.createForProject(getProjectKey(),
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+            projectRoot = ImportApiRootBuilder.of().defaultClient(ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(), ServiceRegion.GCP_EUROPE_WEST1).buildProjectRoot(getProjectKey());
         }
     }
 
@@ -62,7 +59,7 @@ public class ImportApiTestUtils {
         return System.getenv("CTP_CLIENT_SECRET");
     }
 
-    public static ByProjectKeyRequestBuilder getProjectRoot() {
+    public static ProjectApiRoot getProjectRoot() {
         return projectRoot;
     }
 

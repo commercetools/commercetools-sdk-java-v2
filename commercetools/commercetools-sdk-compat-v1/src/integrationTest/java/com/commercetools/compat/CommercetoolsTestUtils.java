@@ -22,7 +22,7 @@ public class CommercetoolsTestUtils {
         ApiRootBuilder builder = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+                    ServiceRegion.GCP_EUROPE_WEST1);
         client = builder.buildClient();
         projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
     }

@@ -16,7 +16,7 @@ public class ImportExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(), ServiceRegion.GCP_US_CENTRAL1.getApiUrl())
+                    ServiceRegion.GCP_US_CENTRAL1)
                 .buildProjectRoot("my-projectkey");
     }
 
@@ -28,7 +28,7 @@ public class ImportExamplesTest {
                             .withClientSecret("your-client-secret")
                             .withScopes("your-scopes")
                             .build(),
-                    ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(), ServiceRegion.GCP_US_CENTRAL1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-projectkey");
     }
 }

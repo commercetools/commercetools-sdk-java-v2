@@ -77,9 +77,10 @@ public class ImportApiRootBuilder {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
-        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
-            serviceRegion.getOAuthTokenUrl());
+    public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
+        builder.defaultClient(credentials, serviceRegion);
+
+        return this;
     }
 
     public ImportApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,

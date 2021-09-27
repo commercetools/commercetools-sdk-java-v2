@@ -32,7 +32,7 @@ public class MainMethodThreadLeakTest {
                             .withClientSecret(getClientSecret())
                             .withScopes(getScopes())
                             .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
         final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(getProjectKey())
                 .get()

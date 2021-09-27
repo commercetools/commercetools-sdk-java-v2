@@ -11,6 +11,9 @@ import java.util.List;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.common.ProcessingState;
+import com.commercetools.importapi.models.importcontainers.ImportContainer;
+import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
+import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
 import com.commercetools.importapi.models.importoperations.ImportOperation;
 import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
@@ -27,13 +30,13 @@ public class ProductTypeImportIntegrationTest {
     @Test
     public void createAndDelete() throws InterruptedException {
         String importSinkKey = ImportApiTestUtils.randomKey();
-        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of()
+        ImportContainerDraft importSinkDraft = ImportContainerDraftBuilder.of()
                 .key(importSinkKey)
                 .resourceType(ImportResourceType.PRODUCT_TYPE)
                 .build();
 
-        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
-                .importSinks()
+        ImportContainer importSink = ImportApiTestUtils.getProjectRoot()
+                .importContainers()
                 .post(importSinkDraft)
                 .executeBlocking()
                 .getBody();
@@ -48,7 +51,8 @@ public class ProductTypeImportIntegrationTest {
                 .build();
         ImportApiTestUtils.getProjectRoot()
                 .productTypes()
-                .importSinkKeyWithImportSinkKeyValue(importSinkKey)
+                .importContainers()
+                .withImportContainerKeyValue(importSinkKey)
                 .post(importRequest)
                 .executeBlocking()
                 .getBody();

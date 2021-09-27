@@ -20,7 +20,7 @@ public class Configuration implements MigrateExample {
     public void v2() {
         final ProjectApiRoot projectRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("projectKey");
     }
 }

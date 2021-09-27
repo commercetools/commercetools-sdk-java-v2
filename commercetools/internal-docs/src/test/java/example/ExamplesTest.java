@@ -30,12 +30,11 @@ public class ExamplesTest {
 
     private ProjectApiRoot createProjectClient() {
         return ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }
@@ -43,12 +42,11 @@ public class ExamplesTest {
     public void instance() {
         // ApiRoot config for Europe projects
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }
@@ -132,12 +130,11 @@ public class ExamplesTest {
 
     public void middleware() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
                 .buildProjectRoot("my-project");
@@ -145,8 +142,7 @@ public class ExamplesTest {
 
     public void retry() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .buildProjectRoot("my-project");
@@ -162,12 +158,11 @@ public class ExamplesTest {
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
         ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
     }

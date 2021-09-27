@@ -8,10 +8,10 @@ import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 
-import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import okhttp3.*;
 
 import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.message.MessagePagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
@@ -19,7 +19,6 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;

@@ -33,7 +33,6 @@ public enum ServiceRegion implements ServiceRegionConfig {
         return regionHosts.apiUrl;
     }
 
-
     @Override
     public String getAuthUrl() {
         return regionHosts.authUrl;

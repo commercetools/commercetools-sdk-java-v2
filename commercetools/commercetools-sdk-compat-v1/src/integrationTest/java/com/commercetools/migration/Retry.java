@@ -40,8 +40,7 @@ public class Retry implements MigrateExample {
     @Override
     public void v2() {
         final ProjectApiRoot projectClient = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .buildProjectRoot("projectKey");

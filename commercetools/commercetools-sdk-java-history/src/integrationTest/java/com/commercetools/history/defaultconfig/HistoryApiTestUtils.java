@@ -5,7 +5,6 @@ import java.time.Duration;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-import com.commercetools.history.client.ByProjectKeyRequestBuilder;
 import com.commercetools.history.client.ProjectApiRoot;
 import com.commercetools.history.models.common.LocalizedString;
 
@@ -21,14 +20,18 @@ public class HistoryApiTestUtils {
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if ("OFF".equals(logLevel)) {
-            projectRoot = HistoryApiRootBuilder.of().defaultClient(
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                ServiceRegion.GCP_EUROPE_WEST1).buildProjectRoot(getProjectKey());
+            projectRoot = HistoryApiRootBuilder.of()
+                    .defaultClient(
+                        ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
+                        ServiceRegion.GCP_EUROPE_WEST1)
+                    .buildProjectRoot(getProjectKey());
         }
         else {
-            projectRoot = HistoryApiRootBuilder.of().defaultClient(
-                    ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    ServiceRegion.GCP_EUROPE_WEST1).buildProjectRoot(getProjectKey());
+            projectRoot = HistoryApiRootBuilder.of()
+                    .defaultClient(
+                        ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
+                        ServiceRegion.GCP_EUROPE_WEST1)
+                    .buildProjectRoot(getProjectKey());
         }
     }
 

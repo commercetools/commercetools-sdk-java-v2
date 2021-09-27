@@ -29,12 +29,11 @@ public class ExampleTest {
 
     public ApiRoot createClient() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
@@ -54,12 +53,11 @@ public class ExampleTest {
 
     public void usage() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
@@ -144,12 +142,11 @@ public class ExampleTest {
 
     public void middleware() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
                 .build();
@@ -157,8 +154,7 @@ public class ExampleTest {
 
     public void retry() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .build();
@@ -169,12 +165,11 @@ public class ExampleTest {
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
         ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
     }

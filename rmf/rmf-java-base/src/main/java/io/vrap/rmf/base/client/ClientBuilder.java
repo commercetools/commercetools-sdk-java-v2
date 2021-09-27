@@ -177,8 +177,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return defaultClient(apiBaseUrl).withClientCredentialsFlow(credentials, tokenEndpoint);
     }
 
-    public ClientBuilder defaultClient(final ClientCredentials credentials, final ServiceRegionConfig serviceRegionConfig) {
-        return defaultClient(serviceRegionConfig.getApiUrl()).withClientCredentialsFlow(credentials, serviceRegionConfig.getOAuthTokenUrl());
+    public ClientBuilder defaultClient(final ClientCredentials credentials,
+            final ServiceRegionConfig serviceRegionConfig) {
+        return defaultClient(serviceRegionConfig.getApiUrl()).withClientCredentialsFlow(credentials,
+            serviceRegionConfig.getOAuthTokenUrl());
     }
 
     /**

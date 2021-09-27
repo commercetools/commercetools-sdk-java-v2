@@ -26,12 +26,11 @@ public class MainMethodThreadLeakTest {
     public static void main(String[] args)
             throws InterruptedException, ExecutionException, TimeoutException, IOException {
         final ApiRoot client = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId(getClientId())
-                            .withClientSecret(getClientSecret())
-                            .withScopes(getScopes())
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(getClientId())
+                        .withClientSecret(getClientSecret())
+                        .withScopes(getScopes())
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
         final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(getProjectKey())

@@ -11,23 +11,25 @@ public class ExampleTest {
 
     public void createApiRootUS() {
         // ApiRoot config for United States projects
-        ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_US_CENTRAL1).build();
+        ApiRoot apiRoot = ImportApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_US_CENTRAL1)
+                .build();
     }
 
     public void createApiRootEU() {
         // ApiRoot config for United States projects
-        ApiRoot apiRoot = ImportApiRootBuilder.of().defaultClient(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1).build();
+        ApiRoot apiRoot = ImportApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build();
     }
 }

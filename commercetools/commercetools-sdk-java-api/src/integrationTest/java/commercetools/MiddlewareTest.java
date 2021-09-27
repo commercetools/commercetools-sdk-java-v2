@@ -32,11 +32,10 @@ public class MiddlewareTest {
 
         AtomicInteger count = new AtomicInteger();
         ProjectApiRoot b = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId(CommercetoolsTestUtils.getClientId())
-                            .withClientSecret(CommercetoolsTestUtils.getClientSecret())
-                            .build(),
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> {
                     count.getAndIncrement();

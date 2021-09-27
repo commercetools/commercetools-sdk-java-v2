@@ -18,9 +18,6 @@ import com.commercetools.importapi.models.importoperations.ImportOperation;
 import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
-import com.commercetools.importapi.models.importsinks.ImportSink;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraft;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraftBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
 
 import org.junit.Test;

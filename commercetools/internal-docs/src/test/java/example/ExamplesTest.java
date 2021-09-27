@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -33,7 +34,6 @@ public class ExamplesTest {
                 .defaultClient(ClientCredentials.of()
                         .withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
-                        .withScopes("your-scopes")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");
@@ -41,11 +41,19 @@ public class ExamplesTest {
 
     public void instance() {
         // ApiRoot config for Europe projects
-        ProjectApiRoot apiRoot = ApiRootBuilder.of()
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                                .withClientId("your-client-id")
+                                .withClientSecret("your-client-secret")
+                                .build(),
+                        ServiceRegion.GCP_EUROPE_WEST1)
+                .build();
+
+        // ApiRoot config for Europe projects
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
                         .withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
-                        .withScopes("your-scopes")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .buildProjectRoot("my-project");

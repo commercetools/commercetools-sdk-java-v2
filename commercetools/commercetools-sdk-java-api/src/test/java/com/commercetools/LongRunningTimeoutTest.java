@@ -11,6 +11,7 @@ import java.util.concurrent.*;
 import okhttp3.*;
 
 import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.message.MessagePagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
@@ -18,7 +19,6 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
@@ -37,14 +37,11 @@ public class LongRunningTimeoutTest {
         final TokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(getClientId(), getClientSecret(), null,
             ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), new CtOkHttp4Client());
         final AuthenticationToken token = tokenSupplier.getToken().get();
-        final ApiRoot client = ApiRoot.fromClient(ClientBuilder.of(new CtApacheHttpClient())
-                //                .of(new CtOkHttp4Client(builder -> builder.protocols(Arrays.asList(Protocol.HTTP_2, Protocol.HTTP_1_1)).connectTimeout(300, TimeUnit.MILLISECONDS).readTimeout(1000, TimeUnit.MILLISECONDS).retryOnConnectionFailure(true).connectionPool(new ConnectionPool(0, 1, TimeUnit.NANOSECONDS))))
-
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .withClientCredentialsFlow(
+        final ApiRoot client = ApiRootBuilder.of(new CtApacheHttpClient())
+                .defaultClient(
                     ClientCredentials.of().withClientSecret(getClientSecret()).withClientId(getClientId()).build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                .build());
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build();
 
         final ApiHttpResponse<MessagePagedQueryResponse> future = client.withProjectKey(getProjectKey())
                 .messages()

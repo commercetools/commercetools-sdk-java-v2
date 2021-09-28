@@ -32,18 +32,17 @@ public class MiddlewareTest {
 
         AtomicInteger count = new AtomicInteger();
         ProjectApiRoot b = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId(CommercetoolsTestUtils.getClientId())
-                            .withClientSecret(CommercetoolsTestUtils.getClientSecret())
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> {
                     count.getAndIncrement();
                     return next.apply(request);
                 })
                 .withRetryMiddleware(3, singletonList(404))
-                .buildProjectRoot(projectKey);
+                .build(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
             Category category = b.categories()

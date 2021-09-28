@@ -15,7 +15,7 @@ public interface MigrateV2Example {
     default ProjectApiRoot projectClient() {
         return ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildProjectRoot("projectKey");
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("projectKey");
     }
 }

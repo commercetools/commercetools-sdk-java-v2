@@ -62,6 +62,7 @@ jobs:
 
       - name: Test examples
         run: |
+          ./gradlew publishMavenPublicationToMavenLocal
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress -q
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress -q
 

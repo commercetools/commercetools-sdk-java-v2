@@ -81,7 +81,7 @@ public class ApiRootBuilder {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public ApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+    public ApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
         return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
             serviceRegion.getOAuthTokenUrl());
     }
@@ -304,14 +304,22 @@ public class ApiRootBuilder {
     }
 
     /**
-     * @deprecated use {@link #buildProjectRoot(String)}  instead
+     * @deprecated use {@link #build(String)}  instead
      */
-    @Deprecated()
+    @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);
     }
 
+    /**
+     * @deprecated use {@link #build(String)}  instead
+     */
+    @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
+    }
+
+    public ProjectApiRoot build(final String projectKey) {
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 

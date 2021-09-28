@@ -1,7 +1,9 @@
 
 package com.commercetools.history.defaultconfig;
 
-public enum ServiceRegion {
+import io.vrap.rmf.base.client.ServiceRegionConfig;
+
+public enum ServiceRegion implements ServiceRegionConfig {
 
     GCP_EUROPE_WEST1(new RegionHosts("https://history.europe-west1.gcp.commercetools.com",
         "https://auth.europe-west1.gcp.commercetools.com")),

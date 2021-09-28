@@ -82,7 +82,7 @@ public class HistoryApiFactory {
         return HistoryApiRootBuilder.of().defaultClient(credentials).build();
     }
 
-    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
         return HistoryApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
     }
 

@@ -29,13 +29,12 @@ public class ExampleTest {
 
     public ApiRoot createClient() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         return apiRoot;
@@ -54,13 +53,12 @@ public class ExampleTest {
 
     public void usage() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
 
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
@@ -144,22 +142,20 @@ public class ExampleTest {
 
     public void middleware() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
                 .build();
     }
 
     public void retry() {
         ApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
                 .build();
     }
@@ -169,13 +165,12 @@ public class ExampleTest {
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
         ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
     }
 

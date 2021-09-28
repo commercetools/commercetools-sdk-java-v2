@@ -1,7 +1,7 @@
 package com.commercetools.sdk.examples;
 
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.project.Project;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -12,14 +12,13 @@ public class GettingStarted {
 
     @Test
     public void project() {
-        ApiRoot apiRoot = ApiFactory.create(
+        ProjectApiRoot apiRoot = ApiRootBuilder.of().defaultClient(
                 ClientCredentials.of().withClientId(System.getenv("CTP_CLIENT_ID"))
                         .withClientSecret(System.getenv("CTP_CLIENT_SECRET"))
                         .build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+                ServiceRegion.GCP_EUROPE_WEST1).build(System.getenv("CTP_PROJECT_KEY"));
 
-        Project response = apiRoot.withProjectKey(System.getenv("CTP_PROJECT_KEY"))
+        Project response = apiRoot
                 .get()
                 .executeBlocking().getBody();
 

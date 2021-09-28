@@ -1,7 +1,9 @@
 
 package com.commercetools.api.defaultconfig;
 
-public enum ServiceRegion {
+import io.vrap.rmf.base.client.ServiceRegionConfig;
+
+public enum ServiceRegion implements ServiceRegionConfig {
 
     GCP_EUROPE_WEST1(new RegionHosts("https://api.europe-west1.gcp.commercetools.com",
         "https://auth.europe-west1.gcp.commercetools.com")),
@@ -32,15 +34,13 @@ public enum ServiceRegion {
         this.regionHosts = regionHosts;
     }
 
+    @Override
     public String getApiUrl() {
         return regionHosts.apiUrl;
     }
 
+    @Override
     public String getAuthUrl() {
         return regionHosts.authUrl;
-    }
-
-    public String getOAuthTokenUrl() {
-        return regionHosts.authUrl + "/oauth/token";
     }
 }

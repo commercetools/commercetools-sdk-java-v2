@@ -77,9 +77,10 @@ public class HistoryApiRootBuilder {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
-        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
-            serviceRegion.getOAuthTokenUrl());
+    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
+        builder.defaultClient(credentials, serviceRegion);
+
+        return this;
     }
 
     public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
@@ -297,14 +298,22 @@ public class HistoryApiRootBuilder {
     }
 
     /**
-     * @deprecated use {@link #buildProjectRoot(String)}  instead
+     * @deprecated use {@link #build(String)}  instead
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKeyValue(projectKey);
     }
 
+    /**
+     * @deprecated use {@link #build(String)}  instead
+     */
+    @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
+    }
+
+    public ProjectApiRoot build(final String projectKey) {
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 }

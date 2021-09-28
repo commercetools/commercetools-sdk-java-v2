@@ -24,7 +24,7 @@ configurations {
     taglet
 }
 dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.2'
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.4'
 }
 
 import java.text.SimpleDateFormat
@@ -303,6 +303,10 @@ subprojects { project ->
         signing {
             useGpgCmd()
             sign publishing.publications.Maven
+        }
+
+        tasks.withType(Sign) {
+            onlyIf { !version.toString().endsWith("SNAPSHOT") }
         }
     }
 

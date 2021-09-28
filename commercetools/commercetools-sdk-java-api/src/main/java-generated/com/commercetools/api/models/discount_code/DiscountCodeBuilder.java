@@ -60,6 +60,8 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    private Long applicationVersion;
+
     public DiscountCodeBuilder id(final String id) {
         this.id = id;
         return this;
@@ -223,6 +225,11 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this;
     }
 
+    public DiscountCodeBuilder applicationVersion(final Long applicationVersion) {
+        this.applicationVersion = applicationVersion;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -309,6 +316,10 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this.validUntil;
     }
 
+    public Long getApplicationVersion() {
+        return this.applicationVersion;
+    }
+
     public DiscountCode build() {
         Objects.requireNonNull(id, DiscountCode.class + ": id is missing");
         Objects.requireNonNull(version, DiscountCode.class + ": version is missing");
@@ -319,9 +330,10 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
         Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
         Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
         Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
+        Objects.requireNonNull(applicationVersion, DiscountCode.class + ": applicationVersion is missing");
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
-            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
+            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
 
     /**
@@ -330,7 +342,7 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
     public DiscountCode buildUnchecked() {
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
-            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
+            maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
 
     public static DiscountCodeBuilder of() {
@@ -358,6 +370,7 @@ public final class DiscountCodeBuilder implements Builder<DiscountCode> {
         builder.groups = template.getGroups();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();
+        builder.applicationVersion = template.getApplicationVersion();
         return builder;
     }
 

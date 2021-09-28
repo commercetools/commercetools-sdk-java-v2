@@ -136,6 +136,14 @@ public class ByProjectKeyByResourceTypeByIDTest {
                                 .withCustomerId("customerId")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/test_resourceType/test_ID?customerId=customerId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .withIDValue("test_ID")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges"))
+                        .createHttpRequest(), "get",
+                        "/test_projectKey/test_resourceType/test_ID?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -203,6 +211,12 @@ public class ByProjectKeyByResourceTypeByIDTest {
                         .withIDValue("test_ID")
                         .get()
                         .withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .withIDValue("test_ID")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .withIDValue("test_ID")

@@ -11,6 +11,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import com.commercetools.history.models.ChangeHistoryResourceType;
+import com.commercetools.history.models.PlatformInitiatedChange;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -110,6 +111,10 @@ public class ByProjectKeyGet
 
     public List<String> getCustomerId() {
         return this.getQueryParam("customerId");
+    }
+
+    public List<String> getExcludePlatformInitiatedChanges() {
+        return this.getQueryParam("excludePlatformInitiatedChanges");
     }
 
     public List<String> getExpand() {
@@ -496,6 +501,43 @@ public class ByProjectKeyGet
     public ByProjectKeyGet addCustomerId(final List<String> customerId) {
         return copy().addQueryParams(
             customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set excludePlatformInitiatedChanges with the specificied value
+     */
+    public ByProjectKeyGet withExcludePlatformInitiatedChanges(
+            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+        return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
+    }
+
+    /**
+     * add additional excludePlatformInitiatedChanges query parameter
+     */
+    public ByProjectKeyGet addExcludePlatformInitiatedChanges(
+            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+        return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
+    }
+
+    /**
+     * set excludePlatformInitiatedChanges with the specificied values
+     */
+    public ByProjectKeyGet withExcludePlatformInitiatedChanges(
+            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+        return copy().withoutQueryParam("excludePlatformInitiatedChanges")
+                .addQueryParams(excludePlatformInitiatedChanges.stream()
+                        .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional excludePlatformInitiatedChanges query parameters
+     */
+    public ByProjectKeyGet addExcludePlatformInitiatedChanges(
+            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+        return copy().addQueryParams(excludePlatformInitiatedChanges.stream()
+                .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**

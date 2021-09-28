@@ -108,7 +108,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '16'
 
       - name: Retrieve branch name
         id: branch_name

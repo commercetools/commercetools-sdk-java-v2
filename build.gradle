@@ -304,6 +304,10 @@ subprojects { project ->
             useGpgCmd()
             sign publishing.publications.Maven
         }
+
+        tasks.withType(Sign) {
+            onlyIf { !version.toString().endsWith("SNAPSHOT") }
+        }
     }
 
     sourceCompatibility = JavaVersion.VERSION_1_8

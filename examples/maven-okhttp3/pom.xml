@@ -27,7 +27,7 @@
         </plugins>
     </build>
     <properties>
-        <commercetools.version>6.2.1</commercetools.version>
+        <commercetools.version>6.3.0-SNAPSHOT</commercetools.version>
     </properties>
     <dependencies>
         <dependency>

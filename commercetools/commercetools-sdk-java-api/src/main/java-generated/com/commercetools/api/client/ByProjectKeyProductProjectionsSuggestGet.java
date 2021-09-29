@@ -50,12 +50,12 @@ public class ByProjectKeyProductProjectionsSuggestGet
     @Override
     public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, java.lang.Object.class), request, timeout);
+        return blockingWait(client.execute(request, java.lang.Object.class).toCompletableFuture(), request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), java.lang.Object.class);
+        return client.execute(this.createHttpRequest(), java.lang.Object.class).toCompletableFuture();
     }
 
     public String getProjectKey() {

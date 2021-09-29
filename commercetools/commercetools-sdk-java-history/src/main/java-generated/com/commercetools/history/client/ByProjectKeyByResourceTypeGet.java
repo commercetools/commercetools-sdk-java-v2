@@ -52,15 +52,16 @@ public class ByProjectKeyByResourceTypeGet
     public ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.history.models.RecordPagedQueryResponse.class),
+        return blockingWait(client.execute(request, com.commercetools.history.models.RecordPagedQueryResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.history.models.RecordPagedQueryResponse.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.history.models.RecordPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

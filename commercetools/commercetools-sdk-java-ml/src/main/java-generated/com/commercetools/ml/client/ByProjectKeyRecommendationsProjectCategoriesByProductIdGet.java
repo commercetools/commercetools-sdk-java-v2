@@ -57,7 +57,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(client.execute(request,
-            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class),
+            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
@@ -65,7 +66,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse>> execute(
             final ApiHttpClient client) {
         return client.execute(this.createHttpRequest(),
-            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class);
+            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

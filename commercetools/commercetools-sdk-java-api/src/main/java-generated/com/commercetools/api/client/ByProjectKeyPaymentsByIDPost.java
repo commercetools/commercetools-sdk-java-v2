@@ -66,14 +66,16 @@ public class ByProjectKeyPaymentsByIDPost
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.payment.Payment.class), request,
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.payment.Payment.class).toCompletableFuture(), request,
             timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

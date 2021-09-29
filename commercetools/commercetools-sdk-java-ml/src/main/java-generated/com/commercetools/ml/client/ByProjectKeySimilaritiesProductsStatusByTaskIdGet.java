@@ -51,15 +51,18 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class),
+            client.execute(request, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

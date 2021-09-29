@@ -52,17 +52,20 @@ public class ByProjectKeyImportContainersGet extends
     public ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-            client.execute(request,
-                com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse.class),
+        return blockingWait(client
+                .execute(request,
+                    com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

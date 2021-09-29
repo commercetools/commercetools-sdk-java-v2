@@ -54,15 +54,17 @@ public class ByProjectKeyStatesGet
     public ApiHttpResponse<com.commercetools.api.models.state.StatePagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.state.StatePagedQueryResponse.class),
+        return blockingWait(client.execute(request, com.commercetools.api.models.state.StatePagedQueryResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.StatePagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.state.StatePagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.api.models.state.StatePagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

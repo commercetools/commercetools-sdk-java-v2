@@ -65,13 +65,15 @@ public class ByProjectKeyCartsPost extends ApiMethod<ByProjectKeyCartsPost, com.
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.cart.Cart.class), request, timeout);
+        return blockingWait(client.execute(request, com.commercetools.api.models.cart.Cart.class).toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

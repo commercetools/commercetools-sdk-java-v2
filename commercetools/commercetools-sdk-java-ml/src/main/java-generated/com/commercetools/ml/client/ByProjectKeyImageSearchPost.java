@@ -70,15 +70,17 @@ public class ByProjectKeyImageSearchPost
     public ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.ml.models.image_search.ImageSearchResponse.class),
+        return blockingWait(client.execute(request, com.commercetools.ml.models.image_search.ImageSearchResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.ml.models.image_search.ImageSearchResponse.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.ml.models.image_search.ImageSearchResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

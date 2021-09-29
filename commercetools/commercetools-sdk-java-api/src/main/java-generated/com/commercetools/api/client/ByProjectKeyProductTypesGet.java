@@ -56,15 +56,18 @@ public class ByProjectKeyProductTypesGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.api.models.product_type.ProductTypePagedQueryResponse.class),
+            client.execute(request, com.commercetools.api.models.product_type.ProductTypePagedQueryResponse.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_type.ProductTypePagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.product_type.ProductTypePagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.product_type.ProductTypePagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

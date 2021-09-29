@@ -63,14 +63,16 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.custom_object.CustomObject.class),
+        return blockingWait(client.execute(request, com.commercetools.api.models.custom_object.CustomObject.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObject.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObject.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

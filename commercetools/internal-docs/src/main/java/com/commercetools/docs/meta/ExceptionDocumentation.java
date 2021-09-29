@@ -17,6 +17,8 @@ package com.commercetools.docs.meta;
  * <p>{@link io.vrap.rmf.base.client.error.ApiClientException} expresses errors which can be recovered by the client side (HTTP status code {@code >= 400 and < 500}).
  * {@link io.vrap.rmf.base.client.error.ApiServerException} is for server errors.</p>
  *
+ * <img src="{@docRoot}/io/vrap/rmf/base/client/error/exceptionhierarchy.svg" alt="Exception hierarchy" width="95%">
+ *
  * <h3>Errors</h3>
  *
  * If a command cannot be performed due to unfulfilled preconditions

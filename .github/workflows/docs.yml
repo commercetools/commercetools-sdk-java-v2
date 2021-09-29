@@ -29,6 +29,9 @@ jobs:
           distribution: 'temurin'
           java-version: '16'
 
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@1.0.0
+
       - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk
 

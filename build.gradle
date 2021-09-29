@@ -359,11 +359,15 @@ task alljavadoc(type: Javadoc) {
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
         addBooleanOption('linksource', true)
         groups = [
-            "Base Packages": ["io.vrap.rmf.base.*"],
             "API": ["com.commercetools.api.*"],
             "History": ["com.commercetools.history.*"],
             "Import": ["com.commercetools.importapi.*"],
-            "ML": ["com.commercetools.ml.*"]
+            "ML": ["com.commercetools.ml.*"],
+            "Base Packages": ["io.vrap.rmf.base.*"],
+            "HTTP Clients": [
+                "com.commercetools.http.*",
+                "io.vrap.rmf.okhttp.*"
+            ]
         ]
         addStringOption('source', '8')
     }

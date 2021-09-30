@@ -1,8 +1,8 @@
 
 package commercetools.me;
 
-import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;

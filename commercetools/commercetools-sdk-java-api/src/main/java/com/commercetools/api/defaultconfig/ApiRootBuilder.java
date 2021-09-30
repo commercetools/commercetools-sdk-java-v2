@@ -3,8 +3,8 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
-import java.util.function.Function;
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -166,7 +166,7 @@ public class ApiRootBuilder {
         withApiBaseUrl(serviceRegion.getApiUrl());
         Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);
         builder.withAnonymousRefreshFlow(credentials, serviceRegion.getAnonymousFlowTokenURL(projectKey),
-                serviceRegion.getOAuthTokenUrl(), storage);
+            serviceRegion.getOAuthTokenUrl(), storage);
 
         return this;
     }

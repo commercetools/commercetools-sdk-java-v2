@@ -24,8 +24,9 @@ public class OAuthHandler extends AutoCloseableService {
 
     public OAuthHandler(final TokenSupplier supplier, Duration waitTimeout) {
         if (supplier instanceof RefreshableTokenSupplier) {
-            this.supplier = (RefreshableTokenSupplier)supplier;
-        } else {
+            this.supplier = (RefreshableTokenSupplier) supplier;
+        }
+        else {
             this.supplier = new InMemoryTokenSupplier(supplier);
         }
         this.waitTimeout = waitTimeout;

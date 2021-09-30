@@ -57,7 +57,6 @@ public class TokenStorageSupplier implements RefreshableTokenSupplier {
         return token;
     }
 
-
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
         resetTokenFuture();

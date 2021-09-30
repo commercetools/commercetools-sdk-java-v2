@@ -3,14 +3,17 @@ package com.commercetools.ml.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.ml.client.ApiRoot;
 import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
+import com.commercetools.ml.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
@@ -49,13 +52,34 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    public MLApiRootBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
+        builder.withSerializer(serializer);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public MLApiRootBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
     public MLApiRootBuilder defaultClient(final ClientCredentials credentials) {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE);
     }
 
-    public MLApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
-        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
-            serviceRegion.getOAuthTokenUrl());
+    public MLApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
+        builder.defaultClient(credentials, serviceRegion);
+
+        return this;
     }
 
     public MLApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
@@ -270,14 +294,22 @@ public class MLApiRootBuilder {
     }
 
     /**
-     * @deprecated use {@link #buildProjectRoot(String)}  instead
+     * @deprecated use {@link #build(String)}  instead
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);
     }
 
+    /**
+     * @deprecated use {@link #build(String)}  instead
+     */
+    @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
+    }
+
+    public ProjectApiRoot build(final String projectKey) {
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 }

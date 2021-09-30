@@ -3,14 +3,17 @@ package com.commercetools.history.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.history.client.ApiRoot;
 import com.commercetools.history.client.ByProjectKeyRequestBuilder;
+import com.commercetools.history.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
@@ -49,13 +52,35 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
+    public HistoryApiRootBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
+        builder.withSerializer(serializer);
+        return this;
+    }
+
+    public HistoryApiRootBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public HistoryApiRootBuilder withHttpExceptionFactory(
+            final Function<ResponseSerializer, HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
+    public HistoryApiRootBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
+        builder.withHttpExceptionFactory(factory);
+        return this;
+    }
+
     public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials) {
         return defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1);
     }
 
-    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegion serviceRegion) {
-        return defaultClient(URI.create(serviceRegion.getApiUrl())).withClientCredentialsFlow(credentials,
-            serviceRegion.getOAuthTokenUrl());
+    public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
+        builder.defaultClient(credentials, serviceRegion);
+
+        return this;
     }
 
     public HistoryApiRootBuilder defaultClient(final ClientCredentials credentials, final String tokenEndpoint,
@@ -273,14 +298,22 @@ public class HistoryApiRootBuilder {
     }
 
     /**
-     * @deprecated use {@link #buildProjectRoot(String)}  instead
+     * @deprecated use {@link #build(String)}  instead
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
         return ApiRoot.fromClient(builder.build()).withProjectKeyValue(projectKey);
     }
 
+    /**
+     * @deprecated use {@link #build(String)}  instead
+     */
+    @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        return ProjectApiRoot.fromClient(projectKey, builder.build());
+    }
+
+    public ProjectApiRoot build(final String projectKey) {
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 }

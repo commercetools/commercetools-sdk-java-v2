@@ -82,7 +82,7 @@ public class ImportApiFactory {
         return ImportApiRootBuilder.of().defaultClient(credentials).build();
     }
 
-    public static ApiRoot create(final ClientCredentials credentials, ServiceRegion serviceRegion) {
+    public static ApiRoot create(final ClientCredentials credentials, ServiceRegionConfig serviceRegion) {
         return ImportApiRootBuilder.of().defaultClient(credentials, serviceRegion).build();
     }
 

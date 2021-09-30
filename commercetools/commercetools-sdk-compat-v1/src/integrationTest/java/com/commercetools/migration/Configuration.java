@@ -1,8 +1,8 @@
 
 package com.commercetools.migration;
 
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 
 import io.sphere.sdk.client.SphereClient;
@@ -20,7 +20,7 @@ public class Configuration implements MigrateExample {
     public void v2() {
         final ProjectApiRoot projectRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildProjectRoot("projectKey");
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("projectKey");
     }
 }

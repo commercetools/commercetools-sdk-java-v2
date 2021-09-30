@@ -8,9 +8,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
@@ -19,6 +20,7 @@ import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
+import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -30,27 +32,53 @@ public class ExamplesTest {
 
     private ProjectApiRoot createProjectClient() {
         return ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildProjectRoot("my-project");
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
     }
 
     public void instance() {
         // ApiRoot config for Europe projects
-        ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildProjectRoot("my-project");
+        ApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build();
+
+        // Project scoped ApiRoot config for Europe projects
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    public void customHttpClient() {
+        ApiRootBuilder builder = ApiRootBuilder.of(new CtOkHttp4Client());
+    }
+
+    public void wrappedClient() {
+        ApiHttpClient client = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .buildClient();
+
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
+                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withMiddleware((request, next) -> {
+                    return next.apply(request.addHeader("x-custom-header", "custom-header-value"));
+                })
+                .build("my-project-key");
     }
 
     public void performRequest() {
@@ -132,24 +160,22 @@ public class ExamplesTest {
 
     public void middleware() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> next.apply(request.addHeader("X-FOO", "Bar")))
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void retry() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-                    ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
+                .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
-                .buildProjectRoot("my-project");
+                .build("my-project");
     }
 
     public void executeBlocking() {
@@ -162,14 +188,13 @@ public class ExamplesTest {
         VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
 
         ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
-                .defaultClient(
-                    ClientCredentials.of()
-                            .withClientId("your-client-id")
-                            .withClientSecret("your-client-secret")
-                            .withScopes("your-scopes")
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildProjectRoot("my-project");
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
     }
 
     @Test

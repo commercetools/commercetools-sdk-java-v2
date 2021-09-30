@@ -2,9 +2,9 @@
 package com.commercetools.importapi.defaultconfig;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
-import com.commercetools.importapi.models.importsinks.ImportSink;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraft;
-import com.commercetools.importapi.models.importsinks.ImportSinkDraftBuilder;
+import com.commercetools.importapi.models.importcontainers.ImportContainer;
+import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
+import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,13 +13,13 @@ public class ImportSinkIntegrationTests {
 
     @Test
     public void createAndDelete() {
-        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of()
+        ImportContainerDraft importSinkDraft = ImportContainerDraftBuilder.of()
                 .key(ImportApiTestUtils.randomKey())
                 .resourceType(ImportResourceType.PRODUCT_TYPE)
                 .build();
 
-        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
-                .importSinks()
+        ImportContainer importSink = ImportApiTestUtils.getProjectRoot()
+                .importContainers()
                 .post(importSinkDraft)
                 .executeBlocking()
                 .getBody();

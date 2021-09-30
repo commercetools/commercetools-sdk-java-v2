@@ -5,6 +5,7 @@ import java.net.URI;
 import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.client.ApiCorrelationIdProvider;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import io.sphere.sdk.client.SphereApiConfig;
@@ -15,7 +16,6 @@ import io.sphere.sdk.http.HttpResponse;
 import io.sphere.sdk.json.SphereJsonUtils;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.AutoCloseableService;
-import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -25,7 +25,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
 
     private CompatSphereClient(SphereClientConfig clientConfig) {
         final URI resolve = URI.create(clientConfig.getApiUrl()).resolve("/" + clientConfig.getProjectKey() + "/");
-        this.client = ClientBuilder.of()
+        this.client = ApiRootBuilder.of()
                 .defaultClient(resolve)
                 .addCorrelationIdProvider(new ApiCorrelationIdProvider(clientConfig.getProjectKey()))
                 .withClientCredentialsFlow(ClientCredentials.of()
@@ -34,7 +34,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
                         .build(),
                     URI.create(clientConfig.getAuthUrl()).resolve("/oauth/token"))
                 .withSerializer(ResponseSerializer.of(SphereJsonUtils.newObjectMapper()))
-                .build();
+                .buildClient();
         this.clientConfig = clientConfig;
     }
 

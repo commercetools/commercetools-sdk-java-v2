@@ -2,7 +2,7 @@
 package commercetools.me;
 
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ProjectApiRoot;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
@@ -10,7 +10,6 @@ import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;

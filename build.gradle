@@ -15,7 +15,7 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "5.15.0"
+    id "com.diffplug.spotless" version "5.15.2"
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
@@ -24,7 +24,8 @@ configurations {
     taglet
 }
 dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.0.0'
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.4'
+    taglet 'org.jdrupes.taglets:plantuml-taglet:2.0.0'
 }
 
 import java.text.SimpleDateFormat
@@ -87,7 +88,11 @@ ext {
             assertJ: "3.20.2",
             gson: "2.8.8",
             awaitility: "4.1.0",
-            failsafe: "2.4.3"
+            failsafe: "2.4.3",
+            ctpJvmSdk: {
+                strictly '[1.62.0,)'
+                prefer '2.0.0'
+            }
     ]
 
     commons = [
@@ -300,6 +305,10 @@ subprojects { project ->
             useGpgCmd()
             sign publishing.publications.Maven
         }
+
+        tasks.withType(Sign) {
+            onlyIf { !version.toString().endsWith("SNAPSHOT") }
+        }
     }
 
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -334,10 +343,8 @@ task alljavadoc(type: Javadoc) {
         setAuthor false
         noTimestamp = true
 
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/"
-
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
         overview = "src/main/javadoc/overview.html"
-        noTimestamp = true
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
@@ -346,10 +353,22 @@ task alljavadoc(type: Javadoc) {
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
         """
-        taglets 'com.commercetools.build.taglets.CodeTaglet'
-        tagletPath(configurations.taglet.files as File[])
+        taglets = ['com.commercetools.build.taglets.CodeTaglet', 'com.commercetools.build.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
+        tagletPath = configurations.taglet.files as List
         addBooleanOption('-allow-script-in-comments', true)
-        addStringOption('Xdoclint:missing,syntax,accessibility,reference', '-quiet')
+        addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
+        addBooleanOption('linksource', true)
+        groups = [
+            "API": ["com.commercetools.api.*"],
+            "History": ["com.commercetools.history.*"],
+            "Import": ["com.commercetools.importapi.*"],
+            "ML": ["com.commercetools.ml.*"],
+            "Base Packages": ["io.vrap.rmf.base.*"],
+            "HTTP Clients": [
+                "com.commercetools.http.*",
+                "io.vrap.rmf.okhttp.*"
+            ]
+        ]
         addStringOption('source', '8')
     }
 

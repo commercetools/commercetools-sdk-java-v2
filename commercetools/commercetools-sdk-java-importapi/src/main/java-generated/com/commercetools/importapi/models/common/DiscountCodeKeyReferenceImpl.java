@@ -21,23 +21,26 @@ public final class DiscountCodeKeyReferenceImpl implements DiscountCodeKeyRefere
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     DiscountCodeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = DISCOUNT_CODE;
+        this.typeId = ReferenceType.findEnum("discount-code");
     }
 
     public DiscountCodeKeyReferenceImpl() {
-        this.typeId = DISCOUNT_CODE;
+        this.typeId = ReferenceType.findEnum("discount-code");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

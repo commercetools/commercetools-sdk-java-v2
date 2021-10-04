@@ -21,23 +21,26 @@ public final class TypeKeyReferenceImpl implements TypeKeyReference {
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     TypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = TYPE;
+        this.typeId = ReferenceType.findEnum("type");
     }
 
     public TypeKeyReferenceImpl() {
-        this.typeId = TYPE;
+        this.typeId = ReferenceType.findEnum("type");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

@@ -21,7 +21,7 @@ public final class CustomObjectKeyReferenceImpl implements CustomObjectKeyRefere
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     private String container;
 
@@ -30,18 +30,21 @@ public final class CustomObjectKeyReferenceImpl implements CustomObjectKeyRefere
             @JsonProperty("container") final String container) {
         this.key = key;
         this.container = container;
-        this.typeId = KEY_VALUE_DOCUMENT;
+        this.typeId = ReferenceType.findEnum("key-value-document");
     }
 
     public CustomObjectKeyReferenceImpl() {
-        this.typeId = KEY_VALUE_DOCUMENT;
+        this.typeId = ReferenceType.findEnum("key-value-document");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

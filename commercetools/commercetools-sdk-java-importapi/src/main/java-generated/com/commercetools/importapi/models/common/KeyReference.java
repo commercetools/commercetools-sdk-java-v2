@@ -44,9 +44,12 @@ public interface KeyReference {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
     @NotNull
     @JsonProperty("typeId")
-    public String getTypeId();
+    public ReferenceType getTypeId();
 
     public void setKey(final String key);
 

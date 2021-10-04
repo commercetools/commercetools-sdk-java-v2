@@ -32,6 +32,9 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
     private String name;
 
     @Nullable
+    private com.commercetools.api.models.common.LocalizedString localizedName;
+
+    @Nullable
     private String description;
 
     @Nullable
@@ -99,6 +102,18 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     public ShippingMethodBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    public ShippingMethodBuilder localizedName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ShippingMethodBuilder localizedName(
+            @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
+        this.localizedName = localizedName;
         return this;
     }
 
@@ -210,6 +225,11 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     @Nullable
+    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
+        return this.localizedName;
+    }
+
+    @Nullable
     public String getDescription() {
         return this.description;
     }
@@ -251,7 +271,7 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
         Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
         Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }
 
     /**
@@ -259,7 +279,7 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
      */
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }
 
     public static ShippingMethodBuilder of() {
@@ -276,6 +296,7 @@ public final class ShippingMethodBuilder implements Builder<ShippingMethod> {
         builder.createdBy = template.getCreatedBy();
         builder.key = template.getKey();
         builder.name = template.getName();
+        builder.localizedName = template.getLocalizedName();
         builder.description = template.getDescription();
         builder.localizedDescription = template.getLocalizedDescription();
         builder.taxCategory = template.getTaxCategory();

@@ -68,14 +68,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost extends
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.customer.CustomerToken.class), request,
-            timeout);
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.customer.CustomerToken.class).toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerToken.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerToken.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

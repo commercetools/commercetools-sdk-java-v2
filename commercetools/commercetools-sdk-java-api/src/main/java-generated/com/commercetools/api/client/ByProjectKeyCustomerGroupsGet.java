@@ -56,15 +56,18 @@ public class ByProjectKeyCustomerGroupsGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse.class),
+            client.execute(request, com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

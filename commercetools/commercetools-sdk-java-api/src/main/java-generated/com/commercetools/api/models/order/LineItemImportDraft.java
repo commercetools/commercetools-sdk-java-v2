@@ -51,7 +51,7 @@ public interface LineItemImportDraft {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @Valid
     @JsonProperty("state")
@@ -99,7 +99,7 @@ public interface LineItemImportDraft {
 
     public void setPrice(final PriceDraft price);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     @JsonIgnore
     public void setState(final ItemState... state);

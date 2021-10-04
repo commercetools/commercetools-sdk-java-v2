@@ -47,13 +47,16 @@ public class ByProjectKeyMeEmailConfirmPost
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.fasterxml.jackson.databind.JsonNode.class), request, timeout);
+        return blockingWait(
+            client.execute(request, com.fasterxml.jackson.databind.JsonNode.class).toCompletableFuture(), request,
+            timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
+        return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

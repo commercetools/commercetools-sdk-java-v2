@@ -68,15 +68,18 @@ public class ByProjectKeyImportContainersByImportContainerKeyPut extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.importapi.models.importcontainers.ImportContainer.class), request,
-            timeout);
+            client.execute(request, com.commercetools.importapi.models.importcontainers.ImportContainer.class)
+                    .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.importapi.models.importcontainers.ImportContainer.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.importapi.models.importcontainers.ImportContainer.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

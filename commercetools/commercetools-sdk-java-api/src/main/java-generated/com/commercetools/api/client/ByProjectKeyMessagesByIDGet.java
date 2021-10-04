@@ -53,14 +53,16 @@ public class ByProjectKeyMessagesByIDGet
     public ApiHttpResponse<com.commercetools.api.models.message.Message> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.message.Message.class), request,
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.message.Message.class).toCompletableFuture(), request,
             timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.message.Message>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.message.Message.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.message.Message.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

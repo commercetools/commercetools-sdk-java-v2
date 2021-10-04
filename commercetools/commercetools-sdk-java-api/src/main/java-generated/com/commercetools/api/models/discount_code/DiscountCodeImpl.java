@@ -54,6 +54,8 @@ public final class DiscountCodeImpl implements DiscountCode {
 
     private java.time.ZonedDateTime validUntil;
 
+    private Long applicationVersion;
+
     @JsonCreator
     DiscountCodeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -71,7 +73,8 @@ public final class DiscountCodeImpl implements DiscountCode {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("groups") final java.util.List<String> groups,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
+            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
+            @JsonProperty("applicationVersion") final Long applicationVersion) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -91,6 +94,7 @@ public final class DiscountCodeImpl implements DiscountCode {
         this.groups = groups;
         this.validFrom = validFrom;
         this.validUntil = validUntil;
+        this.applicationVersion = applicationVersion;
     }
 
     public DiscountCodeImpl() {
@@ -213,6 +217,16 @@ public final class DiscountCodeImpl implements DiscountCode {
         return this.validUntil;
     }
 
+    /**
+    *  <p>Used for the internal platform only and registers the reservation of use of a discount code.
+    *  Its value is managed by the platform.
+    *  It can change at any time due to internal and external factors.
+    *  It should not be used in customer logic.</p>
+    */
+    public Long getApplicationVersion() {
+        return this.applicationVersion;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -303,6 +317,10 @@ public final class DiscountCodeImpl implements DiscountCode {
         this.validUntil = validUntil;
     }
 
+    public void setApplicationVersion(final Long applicationVersion) {
+        this.applicationVersion = applicationVersion;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -332,6 +350,7 @@ public final class DiscountCodeImpl implements DiscountCode {
                 .append(groups, that.groups)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(applicationVersion, that.applicationVersion)
                 .isEquals();
     }
 
@@ -356,6 +375,7 @@ public final class DiscountCodeImpl implements DiscountCode {
                 .append(groups)
                 .append(validFrom)
                 .append(validUntil)
+                .append(applicationVersion)
                 .toHashCode();
     }
 

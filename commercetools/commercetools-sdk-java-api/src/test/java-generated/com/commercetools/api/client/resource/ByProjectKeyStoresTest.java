@@ -45,7 +45,7 @@ public class ByProjectKeyStoresTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
@@ -56,7 +56,7 @@ public class ByProjectKeyStoresTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 

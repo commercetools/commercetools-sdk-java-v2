@@ -53,14 +53,16 @@ public class ByProjectKeyProductTypesKeyByKeyGet
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.product_type.ProductType.class),
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.product_type.ProductType.class).toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_type.ProductType>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.product_type.ProductType.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.product_type.ProductType.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

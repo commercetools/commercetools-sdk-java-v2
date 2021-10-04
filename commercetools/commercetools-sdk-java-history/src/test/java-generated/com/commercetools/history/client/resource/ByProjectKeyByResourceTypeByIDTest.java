@@ -45,7 +45,7 @@ public class ByProjectKeyByResourceTypeByIDTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
@@ -56,7 +56,7 @@ public class ByProjectKeyByResourceTypeByIDTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
@@ -136,6 +136,14 @@ public class ByProjectKeyByResourceTypeByIDTest {
                                 .withCustomerId("customerId")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/test_resourceType/test_ID?customerId=customerId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .withIDValue("test_ID")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges"))
+                        .createHttpRequest(), "get",
+                        "/test_projectKey/test_resourceType/test_ID?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -203,6 +211,12 @@ public class ByProjectKeyByResourceTypeByIDTest {
                         .withIDValue("test_ID")
                         .get()
                         .withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .withIDValue("test_ID")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .withIDValue("test_ID")

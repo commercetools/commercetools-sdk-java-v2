@@ -56,15 +56,18 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class),
+            client.execute(request, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

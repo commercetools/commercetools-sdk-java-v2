@@ -54,15 +54,17 @@ public class ByProjectKeyReviewsGet extends
     public ApiHttpResponse<com.commercetools.api.models.review.ReviewPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.review.ReviewPagedQueryResponse.class),
+        return blockingWait(client.execute(request, com.commercetools.api.models.review.ReviewPagedQueryResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.ReviewPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.review.ReviewPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.api.models.review.ReviewPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

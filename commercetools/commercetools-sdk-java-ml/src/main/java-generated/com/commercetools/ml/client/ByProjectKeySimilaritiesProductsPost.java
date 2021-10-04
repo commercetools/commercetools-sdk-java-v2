@@ -58,14 +58,16 @@ public class ByProjectKeySimilaritiesProductsPost
     public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(final ApiHttpClient client,
             Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.ml.models.common.TaskToken.class), request,
+        return blockingWait(
+            client.execute(request, com.commercetools.ml.models.common.TaskToken.class).toCompletableFuture(), request,
             timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.common.TaskToken>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.ml.models.common.TaskToken.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.ml.models.common.TaskToken.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

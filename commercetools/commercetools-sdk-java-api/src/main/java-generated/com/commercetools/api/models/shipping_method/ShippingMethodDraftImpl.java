@@ -20,6 +20,8 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
     private String name;
 
+    private com.commercetools.api.models.common.LocalizedString localizedName;
+
     private String description;
 
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
@@ -36,6 +38,7 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
     @JsonCreator
     ShippingMethodDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
+            @JsonProperty("localizedName") final com.commercetools.api.models.common.LocalizedString localizedName,
             @JsonProperty("description") final String description,
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
@@ -44,6 +47,7 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.name = name;
+        this.localizedName = localizedName;
         this.description = description;
         this.localizedDescription = localizedDescription;
         this.taxCategory = taxCategory;
@@ -62,6 +66,10 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
     public String getName() {
         return this.name;
+    }
+
+    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
+        return this.localizedName;
     }
 
     public String getDescription() {
@@ -104,6 +112,10 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
     public void setName(final String name) {
         this.name = name;
+    }
+
+    public void setLocalizedName(final com.commercetools.api.models.common.LocalizedString localizedName) {
+        this.localizedName = localizedName;
     }
 
     public void setDescription(final String description) {
@@ -153,6 +165,7 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
         return new EqualsBuilder().append(key, that.key)
                 .append(name, that.name)
+                .append(localizedName, that.localizedName)
                 .append(description, that.description)
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
@@ -167,6 +180,7 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(key)
                 .append(name)
+                .append(localizedName)
                 .append(description)
                 .append(localizedDescription)
                 .append(taxCategory)

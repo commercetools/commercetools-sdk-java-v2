@@ -62,15 +62,18 @@ public class ByProjectKeyImageSearchConfigPost extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class),
+            client.execute(request, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

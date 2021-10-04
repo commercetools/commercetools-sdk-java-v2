@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CartKeyReferenceImpl.class, name = CartKeyReference.CART),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CategoryKeyReferenceImpl.class, name = CategoryKeyReference.CATEGORY),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.ChannelKeyReferenceImpl.class, name = ChannelKeyReference.CHANNEL),
+        @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CustomObjectKeyReferenceImpl.class, name = CustomObjectKeyReference.KEY_VALUE_DOCUMENT),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl.class, name = CustomerGroupKeyReference.CUSTOMER_GROUP),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CustomerKeyReferenceImpl.class, name = CustomerKeyReference.CUSTOMER),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.DiscountCodeKeyReferenceImpl.class, name = DiscountCodeKeyReference.DISCOUNT_CODE),

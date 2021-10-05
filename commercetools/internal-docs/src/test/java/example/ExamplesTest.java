@@ -3,9 +3,8 @@ package example;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ApiRoot;
@@ -14,7 +13,6 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
-import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
@@ -25,6 +23,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
@@ -90,9 +89,7 @@ public class ExamplesTest {
                 .execute();
     }
 
-    public void usage() {
-        ProjectApiRoot apiRoot = createProjectClient();
-
+    public CategoryDraft draftBuilder() {
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .name(LocalizedStringBuilder.of().addValue("en", "name").build())
                 .slug(LocalizedStringBuilder.of().addValue("en", "slug").build())
@@ -103,8 +100,16 @@ public class ExamplesTest {
                 .orderHint("hint")
                 .build();
 
+        Assertions.assertThat(categoryDraft).isInstanceOf(CategoryDraft.class);
+
+        return categoryDraft;
+    }
+
+    public void usage() {
+        ProjectApiRoot apiRoot = createProjectClient();
+
         // Use in the previous step configured ApiRoot instance to send and receive a newly created Category
-        Category category = apiRoot.categories().post(categoryDraft).executeBlocking().getBody();
+        Category category = apiRoot.categories().post(draftBuilder()).executeBlocking().getBody();
 
         // Get Category by id
         Category queriedCategory = apiRoot.categories().withId(category.getId()).get().executeBlocking().getBody();
@@ -124,28 +129,15 @@ public class ExamplesTest {
                 .executeBlocking()
                 .getBody();
 
-        // Delete Category by id
-        Category deletedCategory = apiRoot.categories()
-                .withId(category.getId())
-                .delete()
-                .withVersion(1)
-                .executeBlocking()
-                .getBody();
-
         // Update Category
-        List<CategoryUpdateAction> updateActions = new ArrayList<>();
-        LocalizedString newName = LocalizedString.of();
-        newName.setValue("key-Temp", "value-Temp");
-        updateActions.add(CategoryChangeNameActionBuilder.of().name(newName).build());
-
-        CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
-                .version(category.getVersion())
-                .actions(updateActions)
-                .build();
-
         Category updatedCategory = apiRoot.categories()
                 .withId(category.getId())
-                .post(categoryUpdate)
+                .post(CategoryUpdateBuilder.of()
+                        .version(category.getVersion())
+                        .actions(CategoryChangeNameActionBuilder.of()
+                                .name(LocalizedStringBuilder.of().addValue("key-Temp", "value-Temp").build())
+                                .build())
+                        .build())
                 .executeBlocking()
                 .getBody();
 
@@ -156,6 +148,61 @@ public class ExamplesTest {
                 .withVersion(category.getVersion())
                 .executeBlocking()
                 .getBody();
+    }
+
+    public void queryPredicateVariable() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.customers()
+                .get()
+                .withWhere("firstName = :firstName and lastName = :lastName",
+                    Arrays.asList(Pair.of("firstName", "John"), Pair.of("lastName", "Doe")));
+
+        apiRoot.customers()
+                .get()
+                .withWhere("firstName = :firstName", "firstName", "John")
+                .addWhere("lastName = :lastName", "lastName", "John");
+
+        apiRoot.customers()
+                .get()
+                .withWhere("firstName = :firstName")
+                .addWhere("lastName = :lastName")
+                .withPredicateVar("firstName", "John")
+                .withPredicateVar("lastName", "Doe");
+    }
+
+    public void queryPredicateVariableArray() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.productProjections()
+                .get()
+                .withWhere("masterVariant(sku in :skus)",
+                    Collections.singletonMap("skus", Arrays.asList("abc", "def")));
+
+        apiRoot.productProjections()
+                .get()
+                .withWhere("masterVariant(sku in :skus)",
+                    Arrays.asList(Pair.of("skus", "abc"), Pair.of("skus", "def")));
+
+        apiRoot.productProjections()
+                .get()
+                .withWhere("masterVariant(sku in :skus)")
+                .withPredicateVar("skus", Arrays.asList("abc", "def"));
+
+        apiRoot.productProjections()
+                .get()
+                .withWhere("masterVariant(sku in :skus)")
+                .withPredicateVar("skus", "abc")
+                .addPredicateVar("skus", "def");
+    }
+
+    public void getByIdOrKey() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.productProjections()
+                .withKey("product-key")
+                .get();
+
+        apiRoot.productProjections()
+                .withId("product-key")
+                .get();
     }
 
     public void middleware() {

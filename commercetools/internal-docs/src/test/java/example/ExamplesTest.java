@@ -196,13 +196,9 @@ public class ExamplesTest {
 
     public void getByIdOrKey() {
         ProjectApiRoot apiRoot = createProjectClient();
-        apiRoot.productProjections()
-                .withKey("product-key")
-                .get();
+        apiRoot.productProjections().withKey("product-key").get();
 
-        apiRoot.productProjections()
-                .withId("product-key")
-                .get();
+        apiRoot.productProjections().withId("product-key").get();
     }
 
     public void middleware() {

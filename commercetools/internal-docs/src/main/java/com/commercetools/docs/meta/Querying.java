@@ -19,6 +19,10 @@ package com.commercetools.docs.meta;
  * <h3>Get by id/key</h3>
  *
  * {@include.example example.ExamplesTest#getByIdOrKey()}
+ *
+ * <h3>Query all</h3>
+ *
+ * {@link com.commercetools.api.client.QueryUtils}
  */
 public class Querying {
 }

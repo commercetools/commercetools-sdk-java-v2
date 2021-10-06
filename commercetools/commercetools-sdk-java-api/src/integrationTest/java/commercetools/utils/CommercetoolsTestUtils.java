@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.UUID;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
@@ -17,6 +18,7 @@ public class CommercetoolsTestUtils {
 
     private static final ApiHttpClient client;
     private static final ByProjectKeyRequestBuilder projectRoot;
+    private static final ProjectApiRoot projectApiRoot;
 
     static {
         ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
@@ -31,6 +33,7 @@ public class CommercetoolsTestUtils {
                     authURL, apiUrl);
         client = builder.buildClient();
         projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
+        projectApiRoot = builder.build(getProjectKey());
     }
 
     public static String randomString() {
@@ -65,6 +68,10 @@ public class CommercetoolsTestUtils {
 
     public static ByProjectKeyRequestBuilder getProjectRoot() {
         return projectRoot;
+    }
+
+    public static ProjectApiRoot getProjectApiRoot() {
+        return projectApiRoot;
     }
 
     public static ApiHttpClient getClient() {

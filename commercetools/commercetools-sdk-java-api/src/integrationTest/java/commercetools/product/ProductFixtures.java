@@ -260,7 +260,7 @@ public class ProductFixtures {
                     .get()
                     .getBody();
         }
-        catch (Exception e) {
+        catch (Exception ignored) {
         }
 
         Assert.assertNotNull(rProduct);

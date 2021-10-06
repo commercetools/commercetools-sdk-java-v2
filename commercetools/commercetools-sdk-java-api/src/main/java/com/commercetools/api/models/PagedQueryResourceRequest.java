@@ -4,6 +4,7 @@ package com.commercetools.api.models;
 import java.util.List;
 import java.util.Map;
 
+import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.ClientRequestCommand;
 import io.vrap.rmf.base.client.RequestCommand;
 
@@ -40,6 +41,12 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
     PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName, final List<String> predicateVar);
 
     PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final List<String> predicateVar);
+
+    List<ApiMethod.ParamEntry<String, String>> getQueryParams();
+
+    List<String> getQueryParam(final String key);
+
+    String getFirstQueryParam(final String key);
 
     default PagedQueryResourceRequest<T, TResult> asPagedQueryResourceRequest() {
         return this;

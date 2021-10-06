@@ -21,7 +21,7 @@ public class ShoppingListIntegrationTests {
     @Test
     public void getById() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withId(shoppingList.getId())
                     .get()
@@ -36,7 +36,7 @@ public class ShoppingListIntegrationTests {
     @Test
     public void getByKey() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withKey(shoppingList.getKey())
                     .get()
@@ -51,7 +51,7 @@ public class ShoppingListIntegrationTests {
     @Test
     public void query() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .get()
                     .withWhere("id=" + "\"" + shoppingList.getId() + "\"")
@@ -71,7 +71,7 @@ public class ShoppingListIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShoppingListSetKeyActionBuilder.of().key(newKey).build());
 
-            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withKey(shoppingList.getKey())
                     .post(ShoppingListUpdateBuilder.of()
@@ -96,7 +96,7 @@ public class ShoppingListIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShoppingListSetKeyActionBuilder.of().key(newKey).build());
 
-            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withId(shoppingList.getId())
                     .post(ShoppingListUpdateBuilder.of()

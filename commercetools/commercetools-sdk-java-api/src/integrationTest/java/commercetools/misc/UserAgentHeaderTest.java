@@ -15,7 +15,7 @@ public class UserAgentHeaderTest {
     @Ignore
     @Test
     public void execute() {
-        ByProjectKeyCategoriesGet request = CommercetoolsTestUtils.getProjectRoot().categories().get();
+        ByProjectKeyCategoriesGet request = CommercetoolsTestUtils.getProjectApiRoot().categories().get();
 
         VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
 

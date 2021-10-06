@@ -35,7 +35,7 @@ public class ChannelFixtures {
                 .geoLocation(GeoJsonPointBuilder.of().coordinates(Arrays.asList(13.0, 51.0)).build())
                 .build();
 
-        Channel channel = CommercetoolsTestUtils.getProjectRoot()
+        Channel channel = CommercetoolsTestUtils.getProjectApiRoot()
                 .channels()
                 .post(channelDraft)
                 .executeBlocking()
@@ -48,7 +48,7 @@ public class ChannelFixtures {
     }
 
     public static Channel deleteChannel(final String id, final Long version) {
-        Channel channel = CommercetoolsTestUtils.getProjectRoot()
+        Channel channel = CommercetoolsTestUtils.getProjectApiRoot()
                 .channels()
                 .withId(id)
                 .delete()

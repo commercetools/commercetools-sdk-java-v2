@@ -21,7 +21,9 @@ plugins {
 }
 
 configurations {
-    taglet
+    taglet {
+        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2021.10")
+    }
 }
 dependencies {
     taglet 'com.commercetools.build.taglets:commercetools-taglets:2.1.4'

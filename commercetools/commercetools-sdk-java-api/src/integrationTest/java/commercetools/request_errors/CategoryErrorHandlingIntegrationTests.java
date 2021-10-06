@@ -16,7 +16,7 @@ public class CategoryErrorHandlingIntegrationTests {
     @Test(expected = RuntimeException.class)
     public void getByNonExistingIdBlocking() {
         CategoryFixtures.withCategory(category -> {
-            CommercetoolsTestUtils.getProjectRoot()
+            CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId("non-existing")
                     .get()
@@ -28,7 +28,7 @@ public class CategoryErrorHandlingIntegrationTests {
     @Test
     public void getByNonExistingIdNonBlocking() {
         CategoryFixtures.withCategory(category -> {
-            CommercetoolsTestUtils.getProjectRoot()
+            CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId("non-existing")
                     .get()
@@ -46,7 +46,7 @@ public class CategoryErrorHandlingIntegrationTests {
     @Test
     public void deleteWithoutVersionNonBlocking() {
         CategoryFixtures.withUpdateableCategory(category -> {
-            CommercetoolsTestUtils.getProjectRoot()
+            CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId(category.getId())
                     .delete()
@@ -67,7 +67,7 @@ public class CategoryErrorHandlingIntegrationTests {
     public void deleteWithoutVersionBlocking() {
         CategoryFixtures.withUpdateableCategory(category -> {
             try {
-                CommercetoolsTestUtils.getProjectRoot()
+                CommercetoolsTestUtils.getProjectApiRoot()
                         .categories()
                         .withId(category.getId())
                         .delete()

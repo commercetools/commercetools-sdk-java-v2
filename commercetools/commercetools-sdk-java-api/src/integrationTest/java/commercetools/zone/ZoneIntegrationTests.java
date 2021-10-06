@@ -24,7 +24,7 @@ public class ZoneIntegrationTests {
     @Test
     public void getById() {
         ZoneFixtures.withZone(zone -> {
-            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot()
+            Zone queriedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withId(zone.getId())
                     .get()
@@ -39,7 +39,7 @@ public class ZoneIntegrationTests {
     @Test
     public void getByKey() {
         ZoneFixtures.withZone(zone -> {
-            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot()
+            Zone queriedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withKey(zone.getKey())
                     .get()
@@ -54,7 +54,7 @@ public class ZoneIntegrationTests {
     @Test
     public void query() {
         ZoneFixtures.withZone(zone -> {
-            ZonePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ZonePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .get()
                     .withWhere("id=" + "\"" + zone.getId() + "\"")
@@ -73,7 +73,7 @@ public class ZoneIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
 
-            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot()
+            Zone updatedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withId(zone.getId())
                     .post(ZoneUpdateBuilder.of().actions(updateActions).version(zone.getVersion()).build())
@@ -94,7 +94,7 @@ public class ZoneIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
 
-            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot()
+            Zone updatedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withKey(zone.getKey())
                     .post(ZoneUpdateBuilder.of().actions(updateActions).version(zone.getVersion()).build())

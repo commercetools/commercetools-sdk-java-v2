@@ -32,7 +32,7 @@ public class SubscriptionFixtures {
                 .messages(Arrays.asList(MessageSubscriptionBuilder.of().resourceTypeId("review").build()))
                 .build();
 
-        Subscription subscription = CommercetoolsTestUtils.getProjectRoot()
+        Subscription subscription = CommercetoolsTestUtils.getProjectApiRoot()
                 .subscriptions()
                 .post(subscriptionDraft)
                 .executeBlocking()
@@ -44,7 +44,7 @@ public class SubscriptionFixtures {
     }
 
     public static Subscription deleteSubscription(final String id, final Long version) {
-        Subscription subscription = CommercetoolsTestUtils.getProjectRoot()
+        Subscription subscription = CommercetoolsTestUtils.getProjectApiRoot()
                 .subscriptions()
                 .withId(id)
                 .delete()

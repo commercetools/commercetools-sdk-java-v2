@@ -32,7 +32,7 @@ public class ZoneFixtures {
                 .description(CommercetoolsTestUtils.randomString())
                 .build();
 
-        Zone zone = CommercetoolsTestUtils.getProjectRoot().zones().post(zoneDraft).executeBlocking().getBody();
+        Zone zone = CommercetoolsTestUtils.getProjectApiRoot().zones().post(zoneDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(zone);
         Assert.assertEquals(zoneDraft.getKey(), zone.getKey());
@@ -41,7 +41,7 @@ public class ZoneFixtures {
     }
 
     public static Zone deleteZone(final String id, final Long version) {
-        Zone zone = CommercetoolsTestUtils.getProjectRoot()
+        Zone zone = CommercetoolsTestUtils.getProjectApiRoot()
                 .zones()
                 .withId(id)
                 .delete()

@@ -27,7 +27,7 @@ public class ProductDiscountFixtures {
 
     public static ProductDiscount createProductDiscount() {
 
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .get()
                 .withWhere("sortOrder=\"0.3\"")
@@ -37,7 +37,7 @@ public class ProductDiscountFixtures {
         if (existing.getCount() != 0) {
             String productDiscountId = existing.getResults().get(0).getId();
             Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getProjectRoot()
+            CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
@@ -57,7 +57,7 @@ public class ProductDiscountFixtures {
                 .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
                 .build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking()
@@ -70,7 +70,7 @@ public class ProductDiscountFixtures {
     }
 
     public static ProductDiscount deleteProductDiscount(final String id, final Long version) {
-        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .withId(id)
                 .delete()

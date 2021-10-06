@@ -22,7 +22,7 @@ public class StateIntegrationTests {
     @Test
     public void getById() {
         StateFixtures.withState(state -> {
-            State queriedState = CommercetoolsTestUtils.getProjectRoot()
+            State queriedState = CommercetoolsTestUtils.getProjectApiRoot()
                     .states()
                     .withId(state.getId())
                     .get()
@@ -37,7 +37,7 @@ public class StateIntegrationTests {
     @Test
     public void query() {
         StateFixtures.withState(state -> {
-            StatePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            StatePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .states()
                     .get()
                     .withWhere("id=" + "\"" + state.getId() + "\"")
@@ -55,7 +55,7 @@ public class StateIntegrationTests {
             List<StateUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(StateChangeKeyActionBuilder.of().key(newKey).build());
-            State updatedState = CommercetoolsTestUtils.getProjectRoot()
+            State updatedState = CommercetoolsTestUtils.getProjectApiRoot()
                     .states()
                     .withId(state.getId())
                     .post(StateUpdateBuilder.of().actions(updateActions).version(state.getVersion()).build())

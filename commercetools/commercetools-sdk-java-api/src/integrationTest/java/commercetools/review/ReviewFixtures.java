@@ -58,7 +58,11 @@ public class ReviewFixtures {
                 .customer(CustomerResourceIdentifierBuilder.of().id(customer.getId()).build())
                 .build();
 
-        Review review = CommercetoolsTestUtils.getProjectApiRoot().reviews().post(reviewDraft).executeBlocking().getBody();
+        Review review = CommercetoolsTestUtils.getProjectApiRoot()
+                .reviews()
+                .post(reviewDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(review);
         Assert.assertEquals(reviewDraft.getKey(), review.getKey());

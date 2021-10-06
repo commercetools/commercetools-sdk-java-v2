@@ -19,7 +19,11 @@ public class ReviewIntegrationTests {
                 .title("review-title-1")
                 .build();
 
-        Review review = CommercetoolsTestUtils.getProjectApiRoot().reviews().post(reviewDraft).executeBlocking().getBody();
+        Review review = CommercetoolsTestUtils.getProjectApiRoot()
+                .reviews()
+                .post(reviewDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(review);
         Assert.assertEquals(reviewDraft.getKey(), review.getKey());

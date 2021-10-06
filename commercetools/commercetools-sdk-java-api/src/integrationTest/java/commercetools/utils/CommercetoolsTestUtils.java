@@ -4,14 +4,12 @@ package commercetools.utils;
 import java.time.Duration;
 import java.util.UUID;
 
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 
-import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {

@@ -139,7 +139,14 @@ apiRoot.productProjections().withId("product-key").get();
 
  <h3>Query all</h3>
 
- <a href="../../api/client/QueryUtils.html" title="class in com.commercetools.api.client"><code>QueryUtils</code></a></div>
+ <div id="example-ExamplesTest-queryAll--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = createProjectClient();
+List&lt;String&gt; ids = QueryUtils.queryAll(apiRoot.productProjections().get(), (productProjections) -&gt; {
+    return productProjections.stream().map(ProductProjection::getId).collect(Collectors.toList());
+}, 100)
+        .thenApply(lists -&gt; lists.stream().flatMap(List::stream).collect(Collectors.toList()))
+        .toCompletableFuture()
+        .join();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

@@ -21,26 +21,23 @@ public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReferenc
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
     ProductTypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnum("product-type");
+        this.typeId = PRODUCT_TYPE;
     }
 
     public ProductTypeKeyReferenceImpl() {
-        this.typeId = ReferenceType.findEnum("product-type");
+        this.typeId = PRODUCT_TYPE;
     }
 
     public String getKey() {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

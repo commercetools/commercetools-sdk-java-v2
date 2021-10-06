@@ -21,26 +21,23 @@ public final class OrderKeyReferenceImpl implements OrderKeyReference {
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
     OrderKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnum("order");
+        this.typeId = ORDER;
     }
 
     public OrderKeyReferenceImpl() {
-        this.typeId = ReferenceType.findEnum("order");
+        this.typeId = ORDER;
     }
 
     public String getKey() {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

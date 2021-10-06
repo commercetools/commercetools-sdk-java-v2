@@ -21,26 +21,23 @@ public final class PaymentKeyReferenceImpl implements PaymentKeyReference {
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
     PaymentKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnum("payment");
+        this.typeId = PAYMENT;
     }
 
     public PaymentKeyReferenceImpl() {
-        this.typeId = ReferenceType.findEnum("payment");
+        this.typeId = PAYMENT;
     }
 
     public String getKey() {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

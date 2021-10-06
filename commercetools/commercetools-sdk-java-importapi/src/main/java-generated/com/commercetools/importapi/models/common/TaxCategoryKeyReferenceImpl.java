@@ -21,26 +21,23 @@ public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReferenc
 
     private String key;
 
-    private com.commercetools.importapi.models.common.ReferenceType typeId;
+    private String typeId;
 
     @JsonCreator
     TaxCategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnum("tax-category");
+        this.typeId = TAX_CATEGORY;
     }
 
     public TaxCategoryKeyReferenceImpl() {
-        this.typeId = ReferenceType.findEnum("tax-category");
+        this.typeId = TAX_CATEGORY;
     }
 
     public String getKey() {
         return this.key;
     }
 
-    /**
-    *  <p>The type of the referenced resource.</p>
-    */
-    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
+    public String getTypeId() {
         return this.typeId;
     }
 

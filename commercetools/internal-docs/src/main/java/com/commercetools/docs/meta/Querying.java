@@ -22,7 +22,7 @@ package com.commercetools.docs.meta;
  *
  * <h3>Query all</h3>
  *
- * {@link com.commercetools.api.client.QueryUtils}
+ * {@include.example example.ExamplesTest#queryAll()}
  */
 public class Querying {
 }

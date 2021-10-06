@@ -5,15 +5,19 @@ import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.QueryUtils;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
+import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
@@ -199,6 +203,16 @@ public class ExamplesTest {
         apiRoot.productProjections().withKey("product-key").get();
 
         apiRoot.productProjections().withId("product-key").get();
+    }
+
+    public void queryAll() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        List<String> ids = QueryUtils.queryAll(apiRoot.productProjections().get(), (productProjections) -> {
+            return productProjections.stream().map(ProductProjection::getId).collect(Collectors.toList());
+        }, 100)
+                .thenApply(lists -> lists.stream().flatMap(List::stream).collect(Collectors.toList()))
+                .toCompletableFuture()
+                .join();
     }
 
     public void middleware() {

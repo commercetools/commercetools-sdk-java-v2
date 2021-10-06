@@ -36,6 +36,8 @@ import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.zone.ZoneFixtures;
 
+import io.vrap.rmf.base.client.error.NotFoundException;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
@@ -194,7 +196,11 @@ public class DeleteEverythingIntegrationTest {
         do {
             response = CommercetoolsTestUtils.getProjectApiRoot().categories().get().executeBlocking().getBody();
             response.getResults().forEach(category -> {
-                CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
+                try {
+                    CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
+                }
+                catch (NotFoundException ignored) {
+                }
             });
         } while (response.getResults().size() != 0);
     }

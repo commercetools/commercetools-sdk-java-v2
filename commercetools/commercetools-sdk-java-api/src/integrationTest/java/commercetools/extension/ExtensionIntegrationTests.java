@@ -23,7 +23,7 @@ public class ExtensionIntegrationTests {
     @Test
     public void getById() {
         ExtensionFixtures.withExtension(extension -> {
-            Extension queriedExtension = CommercetoolsTestUtils.getProjectRoot()
+            Extension queriedExtension = CommercetoolsTestUtils.getProjectApiRoot()
                     .extensions()
                     .withId(extension.getId())
                     .get()
@@ -38,7 +38,7 @@ public class ExtensionIntegrationTests {
     @Test
     public void getByKey() {
         ExtensionFixtures.withExtension(extension -> {
-            Extension queriedExtension = CommercetoolsTestUtils.getProjectRoot()
+            Extension queriedExtension = CommercetoolsTestUtils.getProjectApiRoot()
                     .extensions()
                     .withKey(extension.getKey())
                     .get()
@@ -53,7 +53,7 @@ public class ExtensionIntegrationTests {
     @Test
     public void query() {
         ExtensionFixtures.withExtension(extension -> {
-            ExtensionPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ExtensionPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .extensions()
                     .get()
                     .withWhere("id=" + "\"" + extension.getId() + "\"")
@@ -71,7 +71,7 @@ public class ExtensionIntegrationTests {
             List<ExtensionUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ExtensionSetKeyActionBuilder.of().key(newKey).build());
-            Extension updatedExtension = CommercetoolsTestUtils.getProjectRoot()
+            Extension updatedExtension = CommercetoolsTestUtils.getProjectApiRoot()
                     .extensions()
                     .withId(extension.getId())
                     .post(ExtensionUpdateBuilder.of().actions(updateActions).version(extension.getVersion()).build())
@@ -91,7 +91,7 @@ public class ExtensionIntegrationTests {
             List<ExtensionUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ExtensionSetKeyActionBuilder.of().key(newKey).build());
-            Extension updatedExtension = CommercetoolsTestUtils.getProjectRoot()
+            Extension updatedExtension = CommercetoolsTestUtils.getProjectApiRoot()
                     .extensions()
                     .withKey(extension.getKey())
                     .post(ExtensionUpdateBuilder.of().actions(updateActions).version(extension.getVersion()).build())
@@ -108,7 +108,7 @@ public class ExtensionIntegrationTests {
     @Test
     public void deleteByKey() {
         Extension extension = ExtensionFixtures.createExtension();
-        Extension deletedExtension = CommercetoolsTestUtils.getProjectRoot()
+        Extension deletedExtension = CommercetoolsTestUtils.getProjectApiRoot()
                 .extensions()
                 .withId(extension.getId())
                 .delete()

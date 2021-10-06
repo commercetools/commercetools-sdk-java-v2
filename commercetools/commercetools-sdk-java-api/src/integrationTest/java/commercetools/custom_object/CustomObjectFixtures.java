@@ -33,7 +33,7 @@ public class CustomObjectFixtures {
                 .value((ValueObject) () -> "val")
                 .build();
 
-        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()
+        CustomObject customObject = CommercetoolsTestUtils.getProjectApiRoot()
                 .customObjects()
                 .post(customObjectDraft)
                 .executeBlocking()
@@ -45,7 +45,7 @@ public class CustomObjectFixtures {
     }
 
     public static CustomObject deleteCustomObject(final String container, final String key, final Long version) {
-        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()
+        CustomObject customObject = CommercetoolsTestUtils.getProjectApiRoot()
                 .customObjects()
                 .withContainerAndKey(container, key)
                 .delete()

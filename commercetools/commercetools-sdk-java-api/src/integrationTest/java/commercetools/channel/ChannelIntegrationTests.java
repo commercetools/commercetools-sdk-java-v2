@@ -23,7 +23,7 @@ public class ChannelIntegrationTests {
     @Test
     public void getById() {
         ChannelFixtures.withChannel(channel -> {
-            Channel queriedChannel = CommercetoolsTestUtils.getProjectRoot()
+            Channel queriedChannel = CommercetoolsTestUtils.getProjectApiRoot()
                     .channels()
                     .withId(channel.getId())
                     .get()
@@ -38,7 +38,7 @@ public class ChannelIntegrationTests {
     @Test
     public void query() {
         ChannelFixtures.withChannel(channel -> {
-            ChannelPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ChannelPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .channels()
                     .get()
                     .withWhere("id=" + "\"" + channel.getId() + "\"")
@@ -56,7 +56,7 @@ public class ChannelIntegrationTests {
             List<ChannelUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(ChannelSetGeoLocationActionBuilder.of().build());
 
-            Channel updateChannel = CommercetoolsTestUtils.getProjectRoot()
+            Channel updateChannel = CommercetoolsTestUtils.getProjectApiRoot()
                     .channels()
                     .withId(channel.getId())
                     .post(ChannelUpdateBuilder.of().actions(updateActions).version(channel.getVersion()).build())

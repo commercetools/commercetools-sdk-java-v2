@@ -16,8 +16,6 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {
 
-    private static final ApiHttpClient client;
-    private static final ByProjectKeyRequestBuilder projectRoot;
     private static final ProjectApiRoot projectApiRoot;
 
     static {
@@ -31,8 +29,6 @@ public class CommercetoolsTestUtils {
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     authURL, apiUrl);
-        client = builder.buildClient();
-        projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
         projectApiRoot = builder.build(getProjectKey());
     }
 
@@ -66,16 +62,8 @@ public class CommercetoolsTestUtils {
         return System.getenv("CTP_CLIENT_SECRET");
     }
 
-    public static ByProjectKeyRequestBuilder getProjectRoot() {
-        return projectRoot;
-    }
-
     public static ProjectApiRoot getProjectApiRoot() {
         return projectApiRoot;
-    }
-
-    public static ApiHttpClient getClient() {
-        return client;
     }
 
     public static void assertEventually(final Duration maxWaitTime, final Duration waitBeforeRetry,

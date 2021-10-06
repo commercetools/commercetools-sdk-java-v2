@@ -19,7 +19,7 @@ public class ProjectIntegrationTests {
     @Test
     public void byKeyGet() throws Exception {
         String projectKey = CommercetoolsTestUtils.getProjectKey();
-        Project project = CommercetoolsTestUtils.getProjectRoot().get().executeBlocking().getBody();
+        Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();
         Assert.assertNotNull(project);
         Assert.assertEquals(projectKey, project.getKey());
     }
@@ -29,8 +29,8 @@ public class ProjectIntegrationTests {
         List<String> countries = Arrays.asList("DE");
         List<ProjectUpdateAction> updateActions = new ArrayList<>();
         updateActions.add(ProjectChangeCountriesActionBuilder.of().countries(countries).build());
-        Project project = CommercetoolsTestUtils.getProjectRoot().get().executeBlocking().getBody();
-        Project updatedProject = CommercetoolsTestUtils.getProjectRoot()
+        Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();
+        Project updatedProject = CommercetoolsTestUtils.getProjectApiRoot()
                 .post(ProjectUpdateBuilder.of().actions(updateActions).version(project.getVersion()).build())
                 .executeBlocking()
                 .getBody();

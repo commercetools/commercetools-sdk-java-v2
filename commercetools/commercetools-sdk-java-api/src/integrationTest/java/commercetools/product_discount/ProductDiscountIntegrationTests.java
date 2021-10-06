@@ -28,7 +28,7 @@ public class ProductDiscountIntegrationTests {
                 .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
                 .build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking()
@@ -37,7 +37,7 @@ public class ProductDiscountIntegrationTests {
         Assert.assertNotNull(productDiscount);
         Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
 
-        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .withId(productDiscount.getId())
                 .delete()
@@ -52,7 +52,7 @@ public class ProductDiscountIntegrationTests {
     @Test
     public void getById() {
         ProductDiscountFixtures.withProductDiscount(productDiscount -> {
-            ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+            ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withId(productDiscount.getId())
                     .get()
@@ -67,7 +67,7 @@ public class ProductDiscountIntegrationTests {
     @Test
     public void getByKey() {
         ProductDiscountFixtures.withProductDiscount(productDiscount -> {
-            ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+            ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withKey(productDiscount.getKey())
                     .get()
@@ -82,7 +82,7 @@ public class ProductDiscountIntegrationTests {
     @Test
     public void query() {
         ProductDiscountFixtures.withProductDiscount(productDiscount -> {
-            ProductDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ProductDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .get()
                     .withWhere("id=" + "\"" + productDiscount.getId() + "\"")
@@ -100,7 +100,7 @@ public class ProductDiscountIntegrationTests {
             List<ProductDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductDiscountSetKeyActionBuilder.of().key(newKey).build());
-            ProductDiscount updatedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+            ProductDiscount updatedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withId(productDiscount.getId())
                     .post(ProductDiscountUpdateBuilder.of()
@@ -122,7 +122,7 @@ public class ProductDiscountIntegrationTests {
             List<ProductDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductDiscountSetKeyActionBuilder.of().key(newKey).build());
-            ProductDiscount updatedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
+            ProductDiscount updatedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withKey(productDiscount.getKey())
                     .post(ProductDiscountUpdateBuilder.of()

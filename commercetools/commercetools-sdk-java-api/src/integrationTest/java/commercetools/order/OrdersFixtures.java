@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 public class OrdersFixtures {
     public static Order deleteOrder(final String id, final Long version) {
-        Order order = CommercetoolsTestUtils.getProjectRoot()
+        Order order = CommercetoolsTestUtils.getProjectApiRoot()
                 .orders()
                 .withId(id)
                 .delete()
@@ -24,7 +24,7 @@ public class OrdersFixtures {
     }
 
     public static OrderEdit deleteOrderEdit(final String id, final Long version) {
-        OrderEdit orderEdit = CommercetoolsTestUtils.getProjectRoot()
+        OrderEdit orderEdit = CommercetoolsTestUtils.getProjectApiRoot()
                 .orders()
                 .edits()
                 .withId(id)

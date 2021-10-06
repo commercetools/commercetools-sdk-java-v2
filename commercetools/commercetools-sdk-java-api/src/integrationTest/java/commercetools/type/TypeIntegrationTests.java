@@ -23,7 +23,7 @@ public class TypeIntegrationTests {
     @Test
     public void getById() {
         TypeFixtures.withType(type -> {
-            Type queriedType = CommercetoolsTestUtils.getProjectRoot()
+            Type queriedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withId(type.getId())
                     .get()
@@ -38,7 +38,7 @@ public class TypeIntegrationTests {
     @Test
     public void getByKey() {
         TypeFixtures.withType(type -> {
-            Type queriedType = CommercetoolsTestUtils.getProjectRoot()
+            Type queriedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withKey(type.getKey())
                     .get()
@@ -53,7 +53,7 @@ public class TypeIntegrationTests {
     @Test
     public void query() {
         TypeFixtures.withType(type -> {
-            TypePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            TypePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .get()
                     .withWhere("id=" + "\"" + type.getId() + "\"")
@@ -72,7 +72,7 @@ public class TypeIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(TypeChangeKeyActionBuilder.of().key(newKey).build());
 
-            Type updatedType = CommercetoolsTestUtils.getProjectRoot()
+            Type updatedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withId(type.getId())
                     .post(TypeUpdateBuilder.of().actions(updateActions).version(type.getVersion()).build())
@@ -93,7 +93,7 @@ public class TypeIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(TypeChangeKeyActionBuilder.of().key(newKey).build());
 
-            Type updatedType = CommercetoolsTestUtils.getProjectRoot()
+            Type updatedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withKey(type.getKey())
                     .post(TypeUpdateBuilder.of().actions(updateActions).version(type.getVersion()).build())
@@ -110,7 +110,7 @@ public class TypeIntegrationTests {
     @Test
     public void deleteByKey() {
         Type type = TypeFixtures.createType();
-        Type deletedType = CommercetoolsTestUtils.getProjectRoot()
+        Type deletedType = CommercetoolsTestUtils.getProjectApiRoot()
                 .types()
                 .withKey(type.getKey())
                 .delete()

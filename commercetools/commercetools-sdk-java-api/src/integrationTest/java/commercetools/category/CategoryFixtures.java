@@ -50,7 +50,7 @@ public class CategoryFixtures {
                         .build()))
                 .build();
 
-        Type type = CommercetoolsTestUtils.getProjectRoot().types().post(typeDraft).executeBlocking().getBody();
+        Type type = CommercetoolsTestUtils.getProjectApiRoot().types().post(typeDraft).executeBlocking().getBody();
 
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
@@ -72,12 +72,12 @@ public class CategoryFixtures {
                         .build()))
                 .build();
 
-        return CommercetoolsTestUtils.getProjectRoot().categories().post(categoryDraft).executeBlocking().getBody();
+        return CommercetoolsTestUtils.getProjectApiRoot().categories().post(categoryDraft).executeBlocking().getBody();
     }
 
     public static Category deleteCategory(final String id, final Long version) {
 
-        return CommercetoolsTestUtils.getProjectRoot()
+        return CommercetoolsTestUtils.getProjectApiRoot()
                 .categories()
                 .withId(id)
                 .delete()

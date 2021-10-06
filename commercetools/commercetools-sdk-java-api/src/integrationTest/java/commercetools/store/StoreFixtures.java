@@ -28,7 +28,7 @@ public class StoreFixtures {
     public static Store createStore() {
         StoreDraft storeDraft = StoreDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).build();
 
-        Store store = CommercetoolsTestUtils.getProjectRoot().stores().post(storeDraft).executeBlocking().getBody();
+        Store store = CommercetoolsTestUtils.getProjectApiRoot().stores().post(storeDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(store);
         Assert.assertEquals(storeDraft.getKey(), store.getKey());
@@ -37,7 +37,7 @@ public class StoreFixtures {
     }
 
     public static Store deleteStore(final String id, final Long version) {
-        Store store = CommercetoolsTestUtils.getProjectRoot()
+        Store store = CommercetoolsTestUtils.getProjectApiRoot()
                 .stores()
                 .withId(id)
                 .delete()

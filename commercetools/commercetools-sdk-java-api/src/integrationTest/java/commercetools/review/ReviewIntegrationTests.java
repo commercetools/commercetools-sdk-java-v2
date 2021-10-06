@@ -19,12 +19,12 @@ public class ReviewIntegrationTests {
                 .title("review-title-1")
                 .build();
 
-        Review review = CommercetoolsTestUtils.getProjectRoot().reviews().post(reviewDraft).executeBlocking().getBody();
+        Review review = CommercetoolsTestUtils.getProjectApiRoot().reviews().post(reviewDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(review);
         Assert.assertEquals(reviewDraft.getKey(), review.getKey());
 
-        Review deletedReview = CommercetoolsTestUtils.getProjectRoot()
+        Review deletedReview = CommercetoolsTestUtils.getProjectApiRoot()
                 .reviews()
                 .withId(review.getId())
                 .delete()
@@ -39,7 +39,7 @@ public class ReviewIntegrationTests {
     @Test
     public void getById() {
         ReviewFixtures.withReview(review -> {
-            Review queriedReview = CommercetoolsTestUtils.getProjectRoot()
+            Review queriedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withId(review.getId())
                     .get()
@@ -53,7 +53,7 @@ public class ReviewIntegrationTests {
     @Test
     public void getByKey() {
         ReviewFixtures.withReview(review -> {
-            Review queriedReview = CommercetoolsTestUtils.getProjectRoot()
+            Review queriedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withKey(review.getKey())
                     .get()
@@ -67,7 +67,7 @@ public class ReviewIntegrationTests {
     @Test
     public void query() {
         ReviewFixtures.withReview(review -> {
-            ReviewPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ReviewPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .get()
                     .withWhere("id=" + "\"" + review.getId() + "\"")
@@ -85,7 +85,7 @@ public class ReviewIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());
 
-            Review updatedReview = CommercetoolsTestUtils.getProjectRoot()
+            Review updatedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withId(review.getId())
                     .post(ReviewUpdateBuilder.of().actions(updateActions).version(review.getVersion()).build())
@@ -106,7 +106,7 @@ public class ReviewIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());
 
-            Review updatedReview = CommercetoolsTestUtils.getProjectRoot()
+            Review updatedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withKey(review.getKey())
                     .post(ReviewUpdateBuilder.of().actions(updateActions).version(review.getVersion()).build())

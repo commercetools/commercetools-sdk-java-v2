@@ -31,7 +31,7 @@ public class CustomerGroupFixtures {
                 .groupName(CommercetoolsTestUtils.randomString())
                 .build();
 
-        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot()
+        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectApiRoot()
                 .customerGroups()
                 .post(customerGroupDraft)
                 .executeBlocking()
@@ -44,7 +44,7 @@ public class CustomerGroupFixtures {
     }
 
     public static CustomerGroup deleteCustomerGroup(final String id, final Long version) {
-        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot()
+        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectApiRoot()
                 .customerGroups()
                 .withId(id)
                 .delete()

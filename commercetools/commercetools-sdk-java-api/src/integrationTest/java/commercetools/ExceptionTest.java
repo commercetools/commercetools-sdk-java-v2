@@ -13,7 +13,7 @@ public class ExceptionTest {
     @Test
     public void testException() {
         Assertions.assertThatExceptionOfType(NotFoundException.class)
-                .isThrownBy(() -> CommercetoolsTestUtils.getProjectRoot()
+                .isThrownBy(() -> CommercetoolsTestUtils.getProjectApiRoot()
                         .categories()
                         .withKey("unknown-category")
                         .get()

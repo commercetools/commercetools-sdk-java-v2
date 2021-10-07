@@ -21,23 +21,26 @@ public final class PriceKeyReferenceImpl implements PriceKeyReference {
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     PriceKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = PRICE;
+        this.typeId = ReferenceType.findEnum("price");
     }
 
     public PriceKeyReferenceImpl() {
-        this.typeId = PRICE;
+        this.typeId = ReferenceType.findEnum("price");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

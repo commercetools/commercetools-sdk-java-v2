@@ -21,23 +21,26 @@ public final class ProductVariantKeyReferenceImpl implements ProductVariantKeyRe
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     ProductVariantKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = PRODUCT_VARIANT;
+        this.typeId = ReferenceType.findEnum("product-variant");
     }
 
     public ProductVariantKeyReferenceImpl() {
-        this.typeId = PRODUCT_VARIANT;
+        this.typeId = ReferenceType.findEnum("product-variant");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

@@ -21,23 +21,26 @@ public final class CartKeyReferenceImpl implements CartKeyReference {
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     CartKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = CART;
+        this.typeId = ReferenceType.findEnum("cart");
     }
 
     public CartKeyReferenceImpl() {
-        this.typeId = CART;
+        this.typeId = ReferenceType.findEnum("cart");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

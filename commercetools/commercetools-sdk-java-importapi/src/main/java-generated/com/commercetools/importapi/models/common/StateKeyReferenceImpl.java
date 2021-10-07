@@ -21,23 +21,26 @@ public final class StateKeyReferenceImpl implements StateKeyReference {
 
     private String key;
 
-    private String typeId;
+    private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
     StateKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = STATE;
+        this.typeId = ReferenceType.findEnum("state");
     }
 
     public StateKeyReferenceImpl() {
-        this.typeId = STATE;
+        this.typeId = ReferenceType.findEnum("state");
     }
 
     public String getKey() {
         return this.key;
     }
 
-    public String getTypeId() {
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }
 

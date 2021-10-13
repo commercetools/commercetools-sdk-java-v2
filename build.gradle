@@ -15,14 +15,14 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "5.16.0"
+    id "com.diffplug.spotless" version "5.17.0"
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 configurations {
     taglet {
-        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2021.10")
+        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2021.12")
     }
 }
 dependencies {

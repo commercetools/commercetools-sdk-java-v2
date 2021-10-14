@@ -18,7 +18,7 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
     private String scope;
 
     @Nullable
-    private java.time.ZonedDateTime createdAt;
+    private String secret;
 
     @Nullable
     private java.time.LocalDate lastUsedAt;
@@ -27,7 +27,7 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
     private java.time.ZonedDateTime deleteAt;
 
     @Nullable
-    private String secret;
+    private java.time.ZonedDateTime createdAt;
 
     public ApiClientBuilder id(final String id) {
         this.id = id;
@@ -44,8 +44,8 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
         return this;
     }
 
-    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {
-        this.createdAt = createdAt;
+    public ApiClientBuilder secret(@Nullable final String secret) {
+        this.secret = secret;
         return this;
     }
 
@@ -59,8 +59,8 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
         return this;
     }
 
-    public ApiClientBuilder secret(@Nullable final String secret) {
-        this.secret = secret;
+    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {
+        this.createdAt = createdAt;
         return this;
     }
 
@@ -77,8 +77,8 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     @Nullable
-    public java.time.ZonedDateTime getCreatedAt() {
-        return this.createdAt;
+    public String getSecret() {
+        return this.secret;
     }
 
     @Nullable
@@ -92,22 +92,22 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     @Nullable
-    public String getSecret() {
-        return this.secret;
+    public java.time.ZonedDateTime getCreatedAt() {
+        return this.createdAt;
     }
 
     public ApiClient build() {
         Objects.requireNonNull(id, ApiClient.class + ": id is missing");
         Objects.requireNonNull(name, ApiClient.class + ": name is missing");
         Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");
-        return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);
+        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);
     }
 
     /**
      * builds ApiClient without checking for non null required values
      */
     public ApiClient buildUnchecked() {
-        return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);
+        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);
     }
 
     public static ApiClientBuilder of() {
@@ -119,10 +119,10 @@ public final class ApiClientBuilder implements Builder<ApiClient> {
         builder.id = template.getId();
         builder.name = template.getName();
         builder.scope = template.getScope();
-        builder.createdAt = template.getCreatedAt();
+        builder.secret = template.getSecret();
         builder.lastUsedAt = template.getLastUsedAt();
         builder.deleteAt = template.getDeleteAt();
-        builder.secret = template.getSecret();
+        builder.createdAt = template.getCreatedAt();
         return builder;
     }
 

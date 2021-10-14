@@ -16,10 +16,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ApiClientDraftImpl.class)
 public interface ApiClientDraft {
 
+    /**
+    *  <p>Name of the API Client.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
+    */
     @NotNull
     @JsonProperty("scope")
     public String getScope();

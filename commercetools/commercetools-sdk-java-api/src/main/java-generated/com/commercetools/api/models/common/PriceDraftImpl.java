@@ -32,7 +32,7 @@ public final class PriceDraftImpl implements PriceDraft {
 
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     @JsonCreator
     PriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -43,7 +43,7 @@ public final class PriceDraftImpl implements PriceDraft {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.value = value;
         this.country = country;
         this.customerGroup = customerGroup;
@@ -93,7 +93,7 @@ public final class PriceDraftImpl implements PriceDraft {
         return this.tiers;
     }
 
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
@@ -134,7 +134,7 @@ public final class PriceDraftImpl implements PriceDraft {
         this.tiers = tiers;
     }
 
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
     }
 

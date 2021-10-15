@@ -15,43 +15,43 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = DiscountedPriceImpl.class)
-public interface DiscountedPrice {
+@JsonDeserialize(as = DiscountedPriceDraftImpl.class)
+public interface DiscountedPriceDraft {
 
     @NotNull
     @Valid
     @JsonProperty("value")
-    public TypedMoney getValue();
+    public Money getValue();
 
     @NotNull
     @Valid
     @JsonProperty("discount")
     public ProductDiscountReference getDiscount();
 
-    public void setValue(final TypedMoney value);
+    public void setValue(final Money value);
 
     public void setDiscount(final ProductDiscountReference discount);
 
-    public static DiscountedPrice of() {
-        return new DiscountedPriceImpl();
+    public static DiscountedPriceDraft of() {
+        return new DiscountedPriceDraftImpl();
     }
 
-    public static DiscountedPrice of(final DiscountedPrice template) {
-        DiscountedPriceImpl instance = new DiscountedPriceImpl();
+    public static DiscountedPriceDraft of(final DiscountedPriceDraft template) {
+        DiscountedPriceDraftImpl instance = new DiscountedPriceDraftImpl();
         instance.setValue(template.getValue());
         instance.setDiscount(template.getDiscount());
         return instance;
     }
 
-    public static DiscountedPriceBuilder builder() {
-        return DiscountedPriceBuilder.of();
+    public static DiscountedPriceDraftBuilder builder() {
+        return DiscountedPriceDraftBuilder.of();
     }
 
-    public static DiscountedPriceBuilder builder(final DiscountedPrice template) {
-        return DiscountedPriceBuilder.of(template);
+    public static DiscountedPriceDraftBuilder builder(final DiscountedPriceDraft template) {
+        return DiscountedPriceDraftBuilder.of(template);
     }
 
-    default <T> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
+    default <T> T withDiscountedPriceDraft(Function<DiscountedPriceDraft, T> helper) {
         return helper.apply(this);
     }
 }

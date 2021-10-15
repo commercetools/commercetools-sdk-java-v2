@@ -10,17 +10,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
-    private com.commercetools.api.models.common.Money value;
+    private com.commercetools.api.models.common.TypedMoney value;
 
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
-    public DiscountedPriceBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    public DiscountedPriceBuilder value(final com.commercetools.api.models.common.Money value) {
+    public DiscountedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -39,7 +33,7 @@ public final class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         return this;
     }
 
-    public com.commercetools.api.models.common.Money getValue() {
+    public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 

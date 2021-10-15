@@ -14,23 +14,23 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedPriceImpl implements DiscountedPrice {
+public final class DiscountedPriceDraftImpl implements DiscountedPriceDraft {
 
-    private com.commercetools.api.models.common.TypedMoney value;
+    private com.commercetools.api.models.common.Money value;
 
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     @JsonCreator
-    DiscountedPriceImpl(@JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
+    DiscountedPriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
             @JsonProperty("discount") final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
         this.value = value;
         this.discount = discount;
     }
 
-    public DiscountedPriceImpl() {
+    public DiscountedPriceDraftImpl() {
     }
 
-    public com.commercetools.api.models.common.TypedMoney getValue() {
+    public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
@@ -38,7 +38,7 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
         return this.discount;
     }
 
-    public void setValue(final com.commercetools.api.models.common.TypedMoney value) {
+    public void setValue(final com.commercetools.api.models.common.Money value) {
         this.value = value;
     }
 
@@ -54,7 +54,7 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        DiscountedPriceImpl that = (DiscountedPriceImpl) o;
+        DiscountedPriceDraftImpl that = (DiscountedPriceDraftImpl) o;
 
         return new EqualsBuilder().append(value, that.value).append(discount, that.discount).isEquals();
     }

@@ -53,7 +53,7 @@ public interface QueryPrice {
 
     @Valid
     @JsonProperty("discounted")
-    public DiscountedPrice getDiscounted();
+    public DiscountedPriceDraft getDiscounted();
 
     @Valid
     @JsonProperty("custom")
@@ -77,7 +77,7 @@ public interface QueryPrice {
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public void setDiscounted(final DiscountedPrice discounted);
+    public void setDiscounted(final DiscountedPriceDraft discounted);
 
     public void setCustom(final CustomFields custom);
 

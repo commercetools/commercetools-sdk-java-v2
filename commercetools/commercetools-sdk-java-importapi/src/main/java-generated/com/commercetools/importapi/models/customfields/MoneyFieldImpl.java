@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A field with a money value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneyFieldImpl implements MoneyField {
+public class MoneyFieldImpl implements MoneyField {
 
     private String type;
 

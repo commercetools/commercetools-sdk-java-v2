@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSetCustomFieldAction {
+public class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSetCustomFieldAction {
 
     private String action;
 

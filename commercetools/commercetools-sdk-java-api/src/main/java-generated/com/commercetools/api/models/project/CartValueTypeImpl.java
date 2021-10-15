@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartValueTypeImpl implements CartValueType {
+public class CartValueTypeImpl implements CartValueType {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 

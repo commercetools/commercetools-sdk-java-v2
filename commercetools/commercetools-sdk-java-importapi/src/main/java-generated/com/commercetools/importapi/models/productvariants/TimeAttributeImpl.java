@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This type represents an attribute whose value is a time.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TimeAttributeImpl implements TimeAttribute {
+public class TimeAttributeImpl implements TimeAttribute {
 
     private String name;
 

@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCommentAction> {
+public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCommentAction> {
 
     @Nullable
     private String comment;

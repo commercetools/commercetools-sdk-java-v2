@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneReferenceImpl implements ZoneReference {
+public class ZoneReferenceImpl implements ZoneReference {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 

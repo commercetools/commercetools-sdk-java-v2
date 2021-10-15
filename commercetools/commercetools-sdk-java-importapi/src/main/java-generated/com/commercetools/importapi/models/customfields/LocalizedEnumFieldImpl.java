@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A field with a localized enum value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedEnumFieldImpl implements LocalizedEnumField {
+public class LocalizedEnumFieldImpl implements LocalizedEnumField {
 
     private String type;
 

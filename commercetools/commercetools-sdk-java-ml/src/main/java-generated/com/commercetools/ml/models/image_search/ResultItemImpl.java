@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResultItemImpl implements ResultItem {
+public class ResultItemImpl implements ResultItem {
 
     private String imageUrl;
 

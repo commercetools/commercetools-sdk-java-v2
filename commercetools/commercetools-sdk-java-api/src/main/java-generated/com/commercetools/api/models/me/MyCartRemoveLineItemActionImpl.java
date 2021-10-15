@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemAction {
+public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemAction {
 
     private String action;
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The width and height of the Asset Source.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AssetDimensionsImpl implements AssetDimensions {
+public class AssetDimensionsImpl implements AssetDimensions {
 
     private Integer w;
 

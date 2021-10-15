@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLineItemCustomTypeChange> {
+public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLineItemCustomTypeChange> {
 
     private String change;
 

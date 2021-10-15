@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTier> {
+public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTier> {
 
     private com.commercetools.history.models.common.ShippingRateTierType type;
 

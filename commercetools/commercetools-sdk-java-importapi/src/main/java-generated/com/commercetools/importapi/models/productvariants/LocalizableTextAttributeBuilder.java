@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizableTextAttributeBuilder implements Builder<LocalizableTextAttribute> {
+public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextAttribute> {
 
     @Nullable
     private String name;

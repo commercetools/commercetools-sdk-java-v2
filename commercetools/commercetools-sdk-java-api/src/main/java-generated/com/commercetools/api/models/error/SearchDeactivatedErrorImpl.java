@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchDeactivatedErrorImpl implements SearchDeactivatedError {
+public class SearchDeactivatedErrorImpl implements SearchDeactivatedError {
 
     private String code;
 

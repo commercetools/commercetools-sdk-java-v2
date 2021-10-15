@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeValueChangeValueImpl implements ChangeValueChangeValue {
+public class ChangeValueChangeValueImpl implements ChangeValueChangeValue {
 
     private String type;
 

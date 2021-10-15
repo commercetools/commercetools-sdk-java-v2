@@ -10,8 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderShippingAddressSetMessagePayloadBuilder
-        implements Builder<OrderShippingAddressSetMessagePayload> {
+public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<OrderShippingAddressSetMessagePayload> {
 
     @Nullable
     private com.commercetools.api.models.common.Address address;

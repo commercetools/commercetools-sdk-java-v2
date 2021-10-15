@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductTypeImportRequestBuilder implements Builder<ProductTypeImportRequest> {
+public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources;
 

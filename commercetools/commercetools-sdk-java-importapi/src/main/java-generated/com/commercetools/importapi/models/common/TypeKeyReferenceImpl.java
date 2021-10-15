@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References a type by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeKeyReferenceImpl implements TypeKeyReference {
+public class TypeKeyReferenceImpl implements TypeKeyReference {
 
     private String key;
 

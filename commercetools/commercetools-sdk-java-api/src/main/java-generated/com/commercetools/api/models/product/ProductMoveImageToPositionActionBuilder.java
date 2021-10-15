@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductMoveImageToPositionActionBuilder implements Builder<ProductMoveImageToPositionAction> {
+public class ProductMoveImageToPositionActionBuilder implements Builder<ProductMoveImageToPositionAction> {
 
     @Nullable
     private Long variantId;

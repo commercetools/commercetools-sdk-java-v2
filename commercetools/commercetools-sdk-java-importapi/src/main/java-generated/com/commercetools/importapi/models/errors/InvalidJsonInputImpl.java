@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidJsonInputImpl implements InvalidJsonInput {
+public class InvalidJsonInputImpl implements InvalidJsonInput {
 
     private String code;
 

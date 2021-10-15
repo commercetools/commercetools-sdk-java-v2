@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> {
+public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> {
 
     @Nullable
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;

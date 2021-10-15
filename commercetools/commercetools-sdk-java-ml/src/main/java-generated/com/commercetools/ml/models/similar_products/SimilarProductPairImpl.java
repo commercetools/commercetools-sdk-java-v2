@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A pair of SimilarProducts</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductPairImpl implements SimilarProductPair {
+public class SimilarProductPairImpl implements SimilarProductPair {
 
     private Double confidence;
 

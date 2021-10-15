@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery {
+public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery {
 
     private String projectKey;
 

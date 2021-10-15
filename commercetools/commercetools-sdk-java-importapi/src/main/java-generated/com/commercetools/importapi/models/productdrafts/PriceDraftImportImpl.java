@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation of a Price Draft for the import purpose.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceDraftImportImpl implements PriceDraftImport {
+public class PriceDraftImportImpl implements PriceDraftImport {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 

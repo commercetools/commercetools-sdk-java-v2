@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddAddressAction> {
+public class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddAddressAction> {
 
     private com.commercetools.api.models.common.BaseAddress address;
 

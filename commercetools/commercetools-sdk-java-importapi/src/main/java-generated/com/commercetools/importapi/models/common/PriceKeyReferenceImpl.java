@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References a price by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceKeyReferenceImpl implements PriceKeyReference {
+public class PriceKeyReferenceImpl implements PriceKeyReference {
 
     private String key;
 

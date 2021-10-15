@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMessage> {
+public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMessage> {
 
     private String id;
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  The client application should validate the constraints described in the error message before sending the request again.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidOperationImpl implements InvalidOperation {
+public class InvalidOperationImpl implements InvalidOperation {
 
     private String code;
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Maps the custom field names to the actual values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FieldContainerImpl implements FieldContainer {
+public class FieldContainerImpl implements FieldContainer {
 
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
 

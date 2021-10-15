@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Different from Address in that <code>key</code> is required and <code>id</code> is not supported.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerAddressImpl implements CustomerAddress {
+public class CustomerAddressImpl implements CustomerAddress {
 
     private String key;
 

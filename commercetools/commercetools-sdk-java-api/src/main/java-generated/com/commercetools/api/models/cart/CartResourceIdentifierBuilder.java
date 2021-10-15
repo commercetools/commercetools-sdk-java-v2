@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartResourceIdentifierBuilder implements Builder<CartResourceIdentifier> {
+public class CartResourceIdentifierBuilder implements Builder<CartResourceIdentifier> {
 
     @Nullable
     private String id;

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidFromAction {
+public class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidFromAction {
 
     private String action;
 

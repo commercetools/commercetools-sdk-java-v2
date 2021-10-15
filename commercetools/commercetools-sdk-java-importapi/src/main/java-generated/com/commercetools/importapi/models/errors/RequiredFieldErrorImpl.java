@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A required field is missing a value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RequiredFieldErrorImpl implements RequiredFieldError {
+public class RequiredFieldErrorImpl implements RequiredFieldError {
 
     private String code;
 

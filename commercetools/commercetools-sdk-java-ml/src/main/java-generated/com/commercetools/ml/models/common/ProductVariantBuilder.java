@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantBuilder implements Builder<ProductVariant> {
+public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private com.commercetools.ml.models.common.ProductReference product;
 

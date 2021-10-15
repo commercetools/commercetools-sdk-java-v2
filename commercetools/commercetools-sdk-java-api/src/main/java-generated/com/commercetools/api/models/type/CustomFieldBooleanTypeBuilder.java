@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBooleanType> {
+public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBooleanType> {
 
     public CustomFieldBooleanType build() {
         return new CustomFieldBooleanTypeImpl();

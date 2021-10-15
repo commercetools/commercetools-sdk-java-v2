@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class QueryPriceBuilder implements Builder<QueryPrice> {
+public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     private String id;
 

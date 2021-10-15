@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References an order by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderKeyReferenceImpl implements OrderKeyReference {
+public class OrderKeyReferenceImpl implements OrderKeyReference {
 
     private String key;
 

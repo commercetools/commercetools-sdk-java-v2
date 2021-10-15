@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTransactionAction> {
+public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTransactionAction> {
 
     private com.commercetools.api.models.payment.TransactionDraft transaction;
 

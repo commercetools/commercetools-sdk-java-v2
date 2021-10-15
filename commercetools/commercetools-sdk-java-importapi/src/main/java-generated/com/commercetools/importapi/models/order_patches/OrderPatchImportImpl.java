@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <a href="/../api/projects/orders#order">Orders</a> in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPatchImportImpl implements OrderPatchImport {
+public class OrderPatchImportImpl implements OrderPatchImport {
 
     private String orderNumber;
 

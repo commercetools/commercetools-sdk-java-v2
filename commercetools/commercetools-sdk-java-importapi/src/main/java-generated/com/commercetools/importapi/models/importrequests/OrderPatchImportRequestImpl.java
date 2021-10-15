@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The request body to <a href="#import-orderpatches">import OrderPatches</a>. The data to be imported are represented by <a href="#orderpatchimport">OrderPatchImport</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderPatchImportRequestImpl implements OrderPatchImportRequest {
+public class OrderPatchImportRequestImpl implements OrderPatchImportRequest {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
+public class CustomLineItemDraftImpl implements CustomLineItemDraft {
 
     private com.commercetools.api.models.common.LocalizedString name;
 

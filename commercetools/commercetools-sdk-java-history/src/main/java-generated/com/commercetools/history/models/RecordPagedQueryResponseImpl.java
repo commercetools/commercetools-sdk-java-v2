@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Response to a query request for <a href="#record">Record</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse {
+public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse {
 
     private Integer limit;
 

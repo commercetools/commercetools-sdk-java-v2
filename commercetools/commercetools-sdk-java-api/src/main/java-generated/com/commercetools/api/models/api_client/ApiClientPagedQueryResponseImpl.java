@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:ApiClient">APIClient</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryResponse {
+public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryResponse {
 
     private Long limit;
 

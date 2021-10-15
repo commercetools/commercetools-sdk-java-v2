@@ -33,7 +33,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  </code></pre>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchKeywordsImpl implements SearchKeywords {
+public class SearchKeywordsImpl implements SearchKeywords {
 
     private Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values;
 

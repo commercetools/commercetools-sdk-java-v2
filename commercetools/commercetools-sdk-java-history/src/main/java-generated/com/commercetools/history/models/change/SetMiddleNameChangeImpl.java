@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetMiddleNameChangeImpl implements SetMiddleNameChange {
+public class SetMiddleNameChangeImpl implements SetMiddleNameChange {
 
     private String type;
 

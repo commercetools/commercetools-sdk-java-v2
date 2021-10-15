@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The request body to <a href="#import-productdrafts">import ProductDrafts</a>. Contains data for <a href="/../api/projects/products#productdraft">Products</a> to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDraftImportRequestImpl implements ProductDraftImportRequest {
+public class ProductDraftImportRequestImpl implements ProductDraftImportRequest {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 

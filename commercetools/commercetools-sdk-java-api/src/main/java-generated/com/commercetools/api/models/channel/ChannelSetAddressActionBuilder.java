@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddressAction> {
+public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddressAction> {
 
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;

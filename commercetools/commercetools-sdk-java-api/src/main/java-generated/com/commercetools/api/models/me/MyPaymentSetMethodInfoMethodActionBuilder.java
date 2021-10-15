@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaymentSetMethodInfoMethodAction> {
+public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaymentSetMethodInfoMethodAction> {
 
     @Nullable
     private String method;

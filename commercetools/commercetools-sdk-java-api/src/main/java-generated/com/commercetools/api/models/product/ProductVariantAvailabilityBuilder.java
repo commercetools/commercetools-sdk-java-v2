@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
+public class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
 
     @Nullable
     private Boolean isOnStock;

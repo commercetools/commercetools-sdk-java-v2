@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> {
+public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 

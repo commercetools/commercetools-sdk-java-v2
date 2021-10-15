@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySetDescriptionActionBuilder implements Builder<CategorySetDescriptionAction> {
+public class CategorySetDescriptionActionBuilder implements Builder<CategorySetDescriptionAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;

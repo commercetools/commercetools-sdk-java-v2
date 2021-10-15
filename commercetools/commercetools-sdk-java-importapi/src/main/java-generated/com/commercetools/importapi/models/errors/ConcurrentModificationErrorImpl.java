@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
+public class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
 
     private String code;
 

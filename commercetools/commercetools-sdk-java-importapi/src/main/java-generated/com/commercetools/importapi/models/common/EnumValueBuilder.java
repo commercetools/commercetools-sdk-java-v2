@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class EnumValueBuilder implements Builder<EnumValue> {
+public class EnumValueBuilder implements Builder<EnumValue> {
 
     private String key;
 

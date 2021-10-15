@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRateChange> {
+public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRateChange> {
 
     private String change;
 

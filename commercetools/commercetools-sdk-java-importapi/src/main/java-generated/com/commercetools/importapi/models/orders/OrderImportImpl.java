@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>An OrderImport is a snapshot of an order at the time it was imported.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderImportImpl implements OrderImport {
+public class OrderImportImpl implements OrderImport {
 
     private String orderNumber;
 

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SearchKeywordsImpl implements SearchKeywords {
+public class SearchKeywordsImpl implements SearchKeywords {
 
     private Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values;
 

@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
+public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;

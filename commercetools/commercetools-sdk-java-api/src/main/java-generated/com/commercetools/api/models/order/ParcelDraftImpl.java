@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ParcelDraftImpl implements ParcelDraft {
+public class ParcelDraftImpl implements ParcelDraft {
 
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 

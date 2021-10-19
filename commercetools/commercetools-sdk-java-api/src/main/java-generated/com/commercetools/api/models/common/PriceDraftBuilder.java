@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceDraftBuilder implements Builder<PriceDraft> {
+public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     private com.commercetools.api.models.common.Money value;
 
@@ -36,7 +36,7 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
     @Nullable
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     public PriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -130,13 +130,13 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     public PriceDraftBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
-        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
 
     public PriceDraftBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
         return this;
     }
@@ -181,7 +181,7 @@ public final class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 

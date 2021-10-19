@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CategorySetExternalIdActionBuilder implements Builder<CategorySetExternalIdAction> {
+public class CategorySetExternalIdActionBuilder implements Builder<CategorySetExternalIdAction> {
 
     @Nullable
     private String externalId;

@@ -8,8 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductStateTransitionMessagePayloadBuilder
-        implements Builder<ProductStateTransitionMessagePayload> {
+public class ProductStateTransitionMessagePayloadBuilder implements Builder<ProductStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference state;
 

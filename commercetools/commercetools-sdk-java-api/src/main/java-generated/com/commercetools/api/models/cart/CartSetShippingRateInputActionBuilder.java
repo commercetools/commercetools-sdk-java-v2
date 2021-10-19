@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartSetShippingRateInputActionBuilder implements Builder<CartSetShippingRateInputAction> {
+public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShippingRateInputAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;

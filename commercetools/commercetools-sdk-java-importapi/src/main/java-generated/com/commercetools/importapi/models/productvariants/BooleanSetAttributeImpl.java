@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This type represents an attribute whose value is set of boolean values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
+public class BooleanSetAttributeImpl implements BooleanSetAttribute {
 
     private String name;
 

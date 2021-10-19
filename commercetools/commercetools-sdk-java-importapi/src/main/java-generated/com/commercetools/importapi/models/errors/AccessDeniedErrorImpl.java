@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This is the generic error code for access denied. In case of a wrong scope, an <a href="#invalidscopeerror">InvalidScopeError</a> will be returned.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AccessDeniedErrorImpl implements AccessDeniedError {
+public class AccessDeniedErrorImpl implements AccessDeniedError {
 
     private String code;
 

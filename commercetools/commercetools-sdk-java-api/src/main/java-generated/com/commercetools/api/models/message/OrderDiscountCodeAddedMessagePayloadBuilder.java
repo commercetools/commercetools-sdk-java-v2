@@ -8,8 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderDiscountCodeAddedMessagePayloadBuilder
-        implements Builder<OrderDiscountCodeAddedMessagePayload> {
+public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<OrderDiscountCodeAddedMessagePayload> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 

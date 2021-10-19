@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddTextLineItemChangeImpl implements AddTextLineItemChange {
+public class AddTextLineItemChangeImpl implements AddTextLineItemChange {
 
     private String type;
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxRateImpl implements TaxRate {
+public class TaxRateImpl implements TaxRate {
 
     private String id;
 

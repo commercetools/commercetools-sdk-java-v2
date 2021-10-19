@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References a tax category by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference {
+public class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference {
 
     private String key;
 

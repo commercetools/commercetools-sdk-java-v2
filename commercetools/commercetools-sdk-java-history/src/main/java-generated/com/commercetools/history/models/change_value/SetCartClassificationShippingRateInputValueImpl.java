@@ -17,8 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the cart classification shipping input rate value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetCartClassificationShippingRateInputValueImpl
-        implements SetCartClassificationShippingRateInputValue {
+public class SetCartClassificationShippingRateInputValueImpl implements SetCartClassificationShippingRateInputValue {
 
     private String type;
 

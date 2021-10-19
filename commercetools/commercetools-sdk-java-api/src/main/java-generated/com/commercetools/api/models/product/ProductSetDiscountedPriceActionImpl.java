@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {
+public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {
 
     private String action;
 
@@ -22,12 +22,12 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
 
     private Boolean staged;
 
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     @JsonCreator
     ProductSetDiscountedPriceActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.priceId = priceId;
         this.staged = staged;
         this.discounted = discounted;
@@ -50,7 +50,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
         return this.staged;
     }
 
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
@@ -62,7 +62,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
         this.staged = staged;
     }
 
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
     }
 

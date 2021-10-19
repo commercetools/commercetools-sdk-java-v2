@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <a href="/../api/projects/products#productvariant">ProductVariants</a> in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantPatchImpl implements ProductVariantPatch {
+public class ProductVariantPatchImpl implements ProductVariantPatch {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
 

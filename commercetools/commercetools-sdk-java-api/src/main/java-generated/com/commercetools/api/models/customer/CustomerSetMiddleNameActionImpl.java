@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleNameAction {
+public class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleNameAction {
 
     private String action;
 

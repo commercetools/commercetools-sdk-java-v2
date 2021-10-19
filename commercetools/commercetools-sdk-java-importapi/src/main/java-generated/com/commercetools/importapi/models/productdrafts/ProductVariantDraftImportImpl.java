@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation of a Product Variant Draft for the import purpose.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantDraftImportImpl implements ProductVariantDraftImport {
+public class ProductVariantDraftImportImpl implements ProductVariantDraftImport {
 
     private String sku;
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This type represents an attribute whose value is a number.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class NumberAttributeImpl implements NumberAttribute {
+public class NumberAttributeImpl implements NumberAttribute {
 
     private String name;
 

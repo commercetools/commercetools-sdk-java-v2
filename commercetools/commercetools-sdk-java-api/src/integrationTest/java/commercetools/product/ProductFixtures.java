@@ -157,7 +157,7 @@ public class ProductFixtures {
                 .country("DE")
                 .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
                 .channel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
-                .discounted(DiscountedPriceBuilder.of()
+                .discounted(DiscountedPriceDraftBuilder.of()
                         .value(CentPrecisionMoneyDraftBuilder.of().centAmount(200L).currencyCode("EUR").build())
                         .discount(ProductDiscountReferenceBuilder.of().id(productDiscount.getId()).build())
                         .build())

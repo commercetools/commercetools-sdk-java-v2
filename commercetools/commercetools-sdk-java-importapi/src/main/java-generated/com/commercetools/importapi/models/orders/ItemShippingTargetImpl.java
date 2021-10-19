@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The item's shipping target.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ItemShippingTargetImpl implements ItemShippingTarget {
+public class ItemShippingTargetImpl implements ItemShippingTarget {
 
     private String addressKey;
 

@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCustomerEmailAction> {
+public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCustomerEmailAction> {
 
     @Nullable
     private String email;

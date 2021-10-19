@@ -13,7 +13,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountValueExternalDraftImpl implements ProductDiscountValueExternalDraft {
+public class ProductDiscountValueExternalDraftImpl implements ProductDiscountValueExternalDraft {
 
     private String type;
 

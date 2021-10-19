@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
+public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
 
     private com.commercetools.api.models.product_type.AttributeType type;
 

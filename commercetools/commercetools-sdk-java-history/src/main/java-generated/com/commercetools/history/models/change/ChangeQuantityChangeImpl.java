@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Update action for <code>changeQuantity</code> on inventories</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeQuantityChangeImpl implements ChangeQuantityChange {
+public class ChangeQuantityChangeImpl implements ChangeQuantityChange {
 
     private String type;
 

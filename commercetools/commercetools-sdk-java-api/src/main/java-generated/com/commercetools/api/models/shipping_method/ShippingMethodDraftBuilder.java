@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
+public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
 
     @Nullable
     private String key;

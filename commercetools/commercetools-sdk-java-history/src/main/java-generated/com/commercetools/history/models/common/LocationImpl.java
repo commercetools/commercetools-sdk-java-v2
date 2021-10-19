@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocationImpl implements Location {
+public class LocationImpl implements Location {
 
     private String country;
 

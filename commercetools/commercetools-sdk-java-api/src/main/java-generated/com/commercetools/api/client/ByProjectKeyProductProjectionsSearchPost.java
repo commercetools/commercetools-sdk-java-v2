@@ -24,8 +24,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Search Product Projection</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductProjectionsSearchPost
-        extends ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.fasterxml.jackson.databind.JsonNode>
+public class ByProjectKeyProductProjectionsSearchPost extends
+        ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
 
     private String projectKey;
@@ -67,18 +67,21 @@ public class ByProjectKeyProductProjectionsSearchPost
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.fasterxml.jackson.databind.JsonNode.class).toCompletableFuture(), request,
-            timeout);
+            client.execute(request, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse.class)
+                    .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class)
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.product.ProductProjectionPagedSearchResponse.class)
                 .toCompletableFuture();
     }
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References a store by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StoreKeyReferenceImpl implements StoreKeyReference {
+public class StoreKeyReferenceImpl implements StoreKeyReference {
 
     private String key;
 

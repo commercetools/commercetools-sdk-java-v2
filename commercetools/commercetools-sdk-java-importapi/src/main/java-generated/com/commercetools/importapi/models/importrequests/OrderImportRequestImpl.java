@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The request body to <a href="#import-orders">import Orders</a>. Contains data for <a href="/../api/projects/orders#order">Orders</a> to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderImportRequestImpl implements OrderImportRequest {
+public class OrderImportRequestImpl implements OrderImportRequest {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 

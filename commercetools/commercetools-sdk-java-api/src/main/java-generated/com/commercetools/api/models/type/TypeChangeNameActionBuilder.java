@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction> {
+public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 

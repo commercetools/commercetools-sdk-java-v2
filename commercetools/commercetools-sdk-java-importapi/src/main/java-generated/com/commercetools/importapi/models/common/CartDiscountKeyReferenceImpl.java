@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>References a cart discount by its key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountKeyReferenceImpl implements CartDiscountKeyReference {
+public class CartDiscountKeyReferenceImpl implements CartDiscountKeyReference {
 
     private String key;
 

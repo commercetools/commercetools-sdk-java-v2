@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Response format from image search endpoint.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImageSearchResponseImpl implements ImageSearchResponse {
+public class ImageSearchResponseImpl implements ImageSearchResponse {
 
     private Integer count;
 

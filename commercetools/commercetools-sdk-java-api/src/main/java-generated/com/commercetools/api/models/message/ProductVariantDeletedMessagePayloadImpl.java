@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload {
+public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload {
 
     private String type;
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Used as a response to a query request for <a href="#importsink">ImportSinks</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse {
+public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse {
 
     private Integer limit;
 

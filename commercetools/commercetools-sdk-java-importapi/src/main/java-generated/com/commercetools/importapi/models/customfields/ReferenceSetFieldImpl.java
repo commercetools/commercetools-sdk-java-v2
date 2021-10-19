@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A field with a reference set value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceSetFieldImpl implements ReferenceSetField {
+public class ReferenceSetFieldImpl implements ReferenceSetField {
 
     private String type;
 

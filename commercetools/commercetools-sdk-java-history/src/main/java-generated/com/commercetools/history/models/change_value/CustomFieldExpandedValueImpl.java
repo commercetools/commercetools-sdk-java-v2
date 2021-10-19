@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Only available if <code>expand</code> is set to true</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue {
+public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue {
 
     private String name;
 

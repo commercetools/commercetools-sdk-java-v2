@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class QueryPriceBuilder implements Builder<QueryPrice> {
+public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     private String id;
 
@@ -32,7 +32,7 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     private java.time.ZonedDateTime validUntil;
 
     @Nullable
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
@@ -97,13 +97,13 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     public QueryPriceBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
-        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
 
     public QueryPriceBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
         return this;
     }
@@ -180,7 +180,7 @@ public final class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 

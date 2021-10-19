@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Used as a response to a query request for <a href="#importcontainer">ImportContainers</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse {
+public class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse {
 
     private Integer limit;
 

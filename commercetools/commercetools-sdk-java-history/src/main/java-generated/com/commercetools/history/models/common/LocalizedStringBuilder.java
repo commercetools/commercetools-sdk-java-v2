@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedStringBuilder implements Builder<LocalizedString> {
+public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     private Map<String, String> values = new HashMap<>();
 

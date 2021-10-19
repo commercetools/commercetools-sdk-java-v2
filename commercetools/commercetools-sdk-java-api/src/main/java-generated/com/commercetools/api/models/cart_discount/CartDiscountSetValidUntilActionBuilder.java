@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountSetValidUntilActionBuilder implements Builder<CartDiscountSetValidUntilAction> {
+public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDiscountSetValidUntilAction> {
 
     @Nullable
     private java.time.ZonedDateTime validUntil;

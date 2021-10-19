@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerDeletedMessagePayloadBuilder implements Builder<CustomerDeletedMessagePayload> {
+public class CustomerDeletedMessagePayloadBuilder implements Builder<CustomerDeletedMessagePayload> {
 
     public CustomerDeletedMessagePayload build() {
         return new CustomerDeletedMessagePayloadImpl();

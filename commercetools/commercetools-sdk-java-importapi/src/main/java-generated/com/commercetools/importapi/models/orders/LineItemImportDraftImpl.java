@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemImportDraftImpl implements LineItemImportDraft {
+public class LineItemImportDraftImpl implements LineItemImportDraft {
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 

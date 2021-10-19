@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneySetFieldBuilder implements Builder<MoneySetField> {
+public class MoneySetFieldBuilder implements Builder<MoneySetField> {
 
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 

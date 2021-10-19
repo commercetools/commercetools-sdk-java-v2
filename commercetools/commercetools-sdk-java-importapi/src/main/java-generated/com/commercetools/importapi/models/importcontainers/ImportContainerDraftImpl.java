@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation sent to the server when creating an <a href="#importcontainer">ImportContainer</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportContainerDraftImpl implements ImportContainerDraft {
+public class ImportContainerDraftImpl implements ImportContainerDraft {
 
     private String key;
 

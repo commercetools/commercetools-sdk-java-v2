@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Can be used to monitor the import progress per <a href="/import-container">Import Container</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSummaryImpl implements ImportSummary {
+public class ImportSummaryImpl implements ImportSummary {
 
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
 

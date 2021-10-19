@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineItemTotalPrice> {
+public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineItemTotalPrice> {
 
     private com.commercetools.api.models.common.Money price;
 

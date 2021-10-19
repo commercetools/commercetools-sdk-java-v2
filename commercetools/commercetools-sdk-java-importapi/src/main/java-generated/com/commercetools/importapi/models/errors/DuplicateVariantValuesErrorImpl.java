@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Every <a href="/../api/projects/products#productvariant">Product Variant</a> must have a distinct combination of SKU, prices, and custom attribute values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError {
+public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError {
 
     private String code;
 

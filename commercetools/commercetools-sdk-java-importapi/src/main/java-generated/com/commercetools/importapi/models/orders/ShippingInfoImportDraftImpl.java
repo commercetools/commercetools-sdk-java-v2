@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft {
+public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft {
 
     private String shippingMethodName;
 

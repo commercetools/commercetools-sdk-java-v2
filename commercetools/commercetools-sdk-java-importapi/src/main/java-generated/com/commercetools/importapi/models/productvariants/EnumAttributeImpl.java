@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  The attribute value refers to the key of the enum value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class EnumAttributeImpl implements EnumAttribute {
+public class EnumAttributeImpl implements EnumAttribute {
 
     private String name;
 

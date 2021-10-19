@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliveryItemsAction> {
+public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliveryItemsAction> {
 
     private String deliveryId;
 

@@ -121,6 +121,11 @@ public class ByProjectKeyProductsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "/test_projectKey/products/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "/test_projectKey/products/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -287,6 +292,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").products().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")

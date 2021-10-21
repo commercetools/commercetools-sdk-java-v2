@@ -14,17 +14,22 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.zone.Zone> results;
 
     public ZonePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public ZonePagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
 
     public ZonePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public ZonePagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -73,6 +73,10 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -82,27 +86,23 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.zone.Zone> getResults() {
         return this.results;
     }
 
     public ZonePagedQueryResponse build() {
         Objects.requireNonNull(limit, ZonePagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, ZonePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ZonePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ZonePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, ZonePagedQueryResponse.class + ": results is missing");
-        return new ZonePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ZonePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds ZonePagedQueryResponse without checking for non null required values
      */
     public ZonePagedQueryResponse buildUnchecked() {
-        return new ZonePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ZonePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static ZonePagedQueryResponseBuilder of() {
@@ -112,9 +112,9 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
     public static ZonePagedQueryResponseBuilder of(final ZonePagedQueryResponse template) {
         ZonePagedQueryResponseBuilder builder = new ZonePagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

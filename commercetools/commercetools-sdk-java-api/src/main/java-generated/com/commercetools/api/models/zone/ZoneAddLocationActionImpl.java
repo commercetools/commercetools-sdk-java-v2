@@ -34,6 +34,9 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
         return this.action;
     }
 
+    /**
+    *  <p>Location to be added to the Zone.</p>
+    */
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }

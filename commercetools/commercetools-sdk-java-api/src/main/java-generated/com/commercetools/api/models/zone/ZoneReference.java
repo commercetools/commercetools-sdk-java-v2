@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -13,17 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:Zone">Zone</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference {
 
     String ZONE = "zone";
 
+    /**
+    *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <a href="/general-concepts#reference-expansion">Reference Expansion</a> for Zones.</p>
+    */
     @Valid
     @JsonProperty("obj")
     public Zone getObj();
 
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:Zone">Zone</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
     public void setObj(final Zone obj);
+
+    public void setId(final String id);
 
     public static ZoneReference of() {
         return new ZoneReferenceImpl();

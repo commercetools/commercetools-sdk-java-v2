@@ -22,51 +22,71 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Zone extends BaseResource, com.commercetools.api.models.DomainResource<Zone> {
 
     /**
-    *  <p>The unique ID of the zone.</p>
+    *  <p>Unique ID of the Zone.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the zone.</p>
+    *  <p>Current version of the Zone.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the Zone was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the Zone was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for a zone.
-    *  Must be unique across a project.
-    *  The field can be reset using the Set Key UpdateAction.</p>
+    *  <p>User-defined unique identifier for the Zone.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Name of the Zone.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>Description of the Zone.</p>
+    */
+
     @JsonProperty("description")
     public String getDescription();
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("locations")

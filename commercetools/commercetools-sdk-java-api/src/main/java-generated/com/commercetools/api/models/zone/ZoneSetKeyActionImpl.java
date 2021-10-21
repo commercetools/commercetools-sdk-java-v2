@@ -35,7 +35,7 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
     }
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
     */
     public String getKey() {
         return this.key;

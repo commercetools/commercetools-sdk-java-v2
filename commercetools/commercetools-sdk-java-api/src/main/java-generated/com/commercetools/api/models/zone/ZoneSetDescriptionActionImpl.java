@@ -34,6 +34,9 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction {
         return this.action;
     }
 
+    /**
+    *  <p>Description of the Zone.</p>
+    */
     public String getDescription() {
         return this.description;
     }

@@ -30,10 +30,16 @@ public class ZoneUpdateImpl implements ZoneUpdate {
     public ZoneUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
     public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions() {
         return this.actions;
     }

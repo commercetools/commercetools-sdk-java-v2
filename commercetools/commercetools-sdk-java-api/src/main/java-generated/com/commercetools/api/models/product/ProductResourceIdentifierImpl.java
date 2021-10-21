@@ -38,10 +38,16 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier 
         return this.typeId;
     }
 
+    /**
+    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    */
     public String getKey() {
         return this.key;
     }

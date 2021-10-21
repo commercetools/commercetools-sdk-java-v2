@@ -62,8 +62,16 @@ public interface ResourceIdentifier {
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
+    /**
+    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     @JsonProperty("id")
     public String getId();
+
+    /**
+    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     @JsonProperty("key")
     public String getKey();

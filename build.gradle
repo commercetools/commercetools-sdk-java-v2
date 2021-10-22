@@ -206,8 +206,8 @@ subprojects { project ->
         testImplementation 'org.skyscreamer:jsonassert:1.5.0'
         testImplementation "com.google.code.gson:gson:${versions.gson}"
         testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.8"
-        testImplementation 'org.mockito:mockito-inline:3.12.4'
-        testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
+        testImplementation 'org.mockito:mockito-inline:4.0.0'
+        testImplementation 'org.mockito:mockito-junit-jupiter:4.0.0'
         testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
     }
 

@@ -41,7 +41,7 @@ public class ReferenceFieldImpl implements ReferenceField {
     }
 
     /**
-    *  <p>References a resource by its key</p>
+    *  <p>References a resource by key</p>
     */
     public com.commercetools.importapi.models.common.KeyReference getValue() {
         return this.value;

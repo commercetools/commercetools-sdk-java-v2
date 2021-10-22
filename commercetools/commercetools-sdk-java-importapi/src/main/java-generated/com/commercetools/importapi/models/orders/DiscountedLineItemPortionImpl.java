@@ -32,7 +32,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion 
     }
 
     /**
-    *  <p>References a cart discount by its key.</p>
+    *  <p>References a cart discount by key.</p>
     */
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
         return this.discount;

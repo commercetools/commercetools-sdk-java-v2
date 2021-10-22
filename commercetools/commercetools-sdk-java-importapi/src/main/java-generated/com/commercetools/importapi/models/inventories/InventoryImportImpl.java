@@ -79,7 +79,7 @@ public class InventoryImportImpl implements InventoryImport {
     }
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;

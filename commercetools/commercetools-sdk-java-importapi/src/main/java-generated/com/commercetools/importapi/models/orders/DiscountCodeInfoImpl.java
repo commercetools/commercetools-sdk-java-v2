@@ -32,7 +32,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo {
     }
 
     /**
-    *  <p>References a discount code by its key.</p>
+    *  <p>References a discount code by key.</p>
     */
     public com.commercetools.importapi.models.common.DiscountCodeKeyReference getDiscountCode() {
         return this.discountCode;

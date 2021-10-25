@@ -112,7 +112,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft {
     }
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;

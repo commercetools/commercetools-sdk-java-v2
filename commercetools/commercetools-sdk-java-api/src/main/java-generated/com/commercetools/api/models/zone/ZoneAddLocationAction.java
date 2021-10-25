@@ -19,6 +19,9 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
 
     String ADD_LOCATION = "addLocation";
 
+    /**
+    *  <p>Location to be added to the Zone.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("location")

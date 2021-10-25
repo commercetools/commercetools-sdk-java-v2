@@ -34,6 +34,9 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction {
         return this.action;
     }
 
+    /**
+    *  <p>Location to be removed from the Zone.</p>
+    */
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }

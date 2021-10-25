@@ -18,21 +18,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ZoneDraft {
 
     /**
-    *  <p>User-specific unique identifier for a zone.
-    *  Must be unique across a project.
-    *  The field can be reset using the Set Key UpdateAction.</p>
+    *  <p>User-defined unique identifier for the Zone.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Name of the Zone.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>Description of the Zone.</p>
+    */
+
     @JsonProperty("description")
     public String getDescription();
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
     @Valid
     @JsonProperty("locations")
     public List<Location> getLocations();

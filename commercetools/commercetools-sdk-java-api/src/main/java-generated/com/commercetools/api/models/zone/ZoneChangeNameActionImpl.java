@@ -34,6 +34,9 @@ public class ZoneChangeNameActionImpl implements ZoneChangeNameAction {
         return this.action;
     }
 
+    /**
+    *  <p>New name of the Zone.</p>
+    */
     public String getName() {
         return this.name;
     }

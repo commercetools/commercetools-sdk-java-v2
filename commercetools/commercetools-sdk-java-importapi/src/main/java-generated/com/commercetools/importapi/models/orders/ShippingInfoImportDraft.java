@@ -47,14 +47,14 @@ public interface ShippingInfoImportDraft {
     public TaxRate getTaxRate();
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-    *  <p>References a shipping method by its key.</p>
+    *  <p>References a shipping method by key.</p>
     */
     @Valid
     @JsonProperty("shippingMethod")

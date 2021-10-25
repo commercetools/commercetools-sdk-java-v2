@@ -39,6 +39,9 @@ public class CartReferenceImpl implements CartReference {
         return this.typeId;
     }
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
     public String getId() {
         return this.id;
     }

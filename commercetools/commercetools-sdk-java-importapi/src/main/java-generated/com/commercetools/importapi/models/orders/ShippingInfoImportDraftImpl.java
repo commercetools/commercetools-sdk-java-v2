@@ -82,14 +82,14 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft {
     }
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
     }
 
     /**
-    *  <p>References a shipping method by its key.</p>
+    *  <p>References a shipping method by key.</p>
     */
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {
         return this.shippingMethod;

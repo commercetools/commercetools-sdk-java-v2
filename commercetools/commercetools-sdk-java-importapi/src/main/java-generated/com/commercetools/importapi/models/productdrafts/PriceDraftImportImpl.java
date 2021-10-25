@@ -80,14 +80,14 @@ public class PriceDraftImportImpl implements PriceDraftImport {
     }
 
     /**
-    *  <p>References a customer group by its key.</p>
+    *  <p>References a customer group by key.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;

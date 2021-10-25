@@ -36,7 +36,7 @@ public class AttributeNestedTypeImpl implements AttributeNestedType {
     }
 
     /**
-    *  <p>References a product type by its key.</p>
+    *  <p>References a product type by key.</p>
     */
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference() {
         return this.typeReference;

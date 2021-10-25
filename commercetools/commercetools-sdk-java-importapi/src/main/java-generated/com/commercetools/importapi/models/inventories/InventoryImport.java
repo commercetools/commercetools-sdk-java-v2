@@ -46,7 +46,7 @@ public interface InventoryImport extends ImportResource {
     public ZonedDateTime getExpectedDelivery();
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")

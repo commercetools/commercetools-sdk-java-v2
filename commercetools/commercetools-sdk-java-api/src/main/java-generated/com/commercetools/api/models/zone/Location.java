@@ -12,16 +12,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>A geographical location representing a country and optionally a state within this country.  A location can only be assigned to one Zone.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LocationImpl.class)
 public interface Location {
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country code of the geographic location.</p>
     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
+
+    /**
+    *  <p>State within the country.</p>
+    */
 
     @JsonProperty("state")
     public String getState();

@@ -67,7 +67,7 @@ public interface CustomLineItemDraft {
     public List<ItemState> getState();
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     @Valid
     @JsonProperty("taxCategory")

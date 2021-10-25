@@ -43,14 +43,14 @@ public interface PriceDraftImport {
     public String getCountry();
 
     /**
-    *  <p>References a customer group by its key.</p>
+    *  <p>References a customer group by key.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     @Valid
     @JsonProperty("channel")

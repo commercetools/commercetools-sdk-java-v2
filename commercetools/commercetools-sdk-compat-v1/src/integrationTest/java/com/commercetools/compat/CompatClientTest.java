@@ -3,16 +3,27 @@ package com.commercetools.compat;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
+import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
 import com.commercetools.api.models.project.Project;
 
+import io.sphere.sdk.carts.CartDraft;
+import io.sphere.sdk.carts.commands.CartCreateCommand;
 import io.sphere.sdk.categories.queries.CategoryQuery;
+import io.sphere.sdk.models.DefaultCurrencyUnits;
+import io.sphere.sdk.products.ProductProjection;
+import io.sphere.sdk.products.search.ProductProjectionSearch;
 import io.sphere.sdk.projects.queries.ProjectGet;
+import io.sphere.sdk.search.FacetExpression;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
+
+import javax.money.CurrencyUnit;
+import java.util.Currency;
 
 public class CompatClientTest {
     @Test
@@ -42,6 +53,22 @@ public class CompatClientTest {
                 .executeBlocking(CategoryQuery.of(), CategoryPagedQueryResponse.class)
                 .getBody();
         Assertions.assertThat(response).isInstanceOf(CategoryPagedQueryResponse.class);
+    }
+
+    @Test
+    public void compatClientCart() {
+        CompatClient client = CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey());
+
+        Cart cart = client.executeBlocking(CartCreateCommand.of(CartDraft.of(DefaultCurrencyUnits.EUR)), Cart.class).getBody();
+        Assertions.assertThat(cart).isInstanceOf(Cart.class);
+    }
+
+    @Test
+    public void compatClientSearch() {
+        CompatClient client = CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey());
+
+        ProductProjectionPagedSearchResponse response = client.executeBlocking(ProductProjectionSearch.ofCurrent().withFacets(m -> m.categories().id().allTerms()), ProductProjectionPagedSearchResponse.class).getBody();
+        Assertions.assertThat(response).isInstanceOf(ProductProjectionPagedSearchResponse.class);
     }
 
     @Test

@@ -21,7 +21,7 @@
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.DiscountedPrice;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.DiscountedPriceDraft;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
@@ -42,13 +42,13 @@
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    @Valid</span>
 <span class="source-line-no">031</span><span id="line.31">    @JsonProperty("discounted")</span>
-<span class="source-line-no">032</span><span id="line.32">    public DiscountedPrice getDiscounted();</span>
+<span class="source-line-no">032</span><span id="line.32">    public DiscountedPriceDraft getDiscounted();</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    public void setPriceId(final String priceId);</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    public void setStaged(final Boolean staged);</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public void setDiscounted(final DiscountedPrice discounted);</span>
+<span class="source-line-no">038</span><span id="line.38">    public void setDiscounted(final DiscountedPriceDraft discounted);</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
 <span class="source-line-no">040</span><span id="line.40">    public static ProductSetDiscountedPriceAction of() {</span>
 <span class="source-line-no">041</span><span id="line.41">        return new ProductSetDiscountedPriceActionImpl();</span>

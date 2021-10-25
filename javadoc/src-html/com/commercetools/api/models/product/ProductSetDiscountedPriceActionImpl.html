@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">public final class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {</span>
+<span class="source-line-no">017</span><span id="line.17">public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">    private String action;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
@@ -35,12 +35,12 @@
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private Boolean staged;</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.common.DiscountedPrice discounted;</span>
+<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    @JsonCreator</span>
 <span class="source-line-no">028</span><span id="line.28">    ProductSetDiscountedPriceActionImpl(@JsonProperty("priceId") final String priceId,</span>
 <span class="source-line-no">029</span><span id="line.29">            @JsonProperty("staged") final Boolean staged,</span>
-<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {</span>
 <span class="source-line-no">031</span><span id="line.31">        this.priceId = priceId;</span>
 <span class="source-line-no">032</span><span id="line.32">        this.staged = staged;</span>
 <span class="source-line-no">033</span><span id="line.33">        this.discounted = discounted;</span>
@@ -63,7 +63,7 @@
 <span class="source-line-no">050</span><span id="line.50">        return this.staged;</span>
 <span class="source-line-no">051</span><span id="line.51">    }</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
+<span class="source-line-no">053</span><span id="line.53">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
 <span class="source-line-no">054</span><span id="line.54">        return this.discounted;</span>
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
@@ -75,7 +75,7 @@
 <span class="source-line-no">062</span><span id="line.62">        this.staged = staged;</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">065</span><span id="line.65">    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {</span>
 <span class="source-line-no">066</span><span id="line.66">        this.discounted = discounted;</span>
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>

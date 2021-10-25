@@ -23,52 +23,51 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public final class InventoryEntrySetSupplyChannelActionBuilder</span>
-<span class="source-line-no">014</span><span id="line.14">        implements Builder&lt;InventoryEntrySetSupplyChannelAction&gt; {</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    @Nullable</span>
-<span class="source-line-no">017</span><span id="line.17">    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(</span>
-<span class="source-line-no">020</span><span id="line.20">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">021</span><span id="line.21">        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">022</span><span id="line.22">                .build();</span>
-<span class="source-line-no">023</span><span id="line.23">        return this;</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(</span>
-<span class="source-line-no">027</span><span id="line.27">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
-<span class="source-line-no">028</span><span id="line.28">        this.supplyChannel = supplyChannel;</span>
-<span class="source-line-no">029</span><span id="line.29">        return this;</span>
-<span class="source-line-no">030</span><span id="line.30">    }</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    @Nullable</span>
-<span class="source-line-no">033</span><span id="line.33">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
-<span class="source-line-no">034</span><span id="line.34">        return this.supplyChannel;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public InventoryEntrySetSupplyChannelAction build() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     * builds InventoryEntrySetSupplyChannelAction without checking for non null required values</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44">    public InventoryEntrySetSupplyChannelAction buildUnchecked() {</span>
-<span class="source-line-no">045</span><span id="line.45">        return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public static InventoryEntrySetSupplyChannelActionBuilder of() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return new InventoryEntrySetSupplyChannelActionBuilder();</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public static InventoryEntrySetSupplyChannelActionBuilder of(final InventoryEntrySetSupplyChannelAction template) {</span>
-<span class="source-line-no">053</span><span id="line.53">        InventoryEntrySetSupplyChannelActionBuilder builder = new InventoryEntrySetSupplyChannelActionBuilder();</span>
-<span class="source-line-no">054</span><span id="line.54">        builder.supplyChannel = template.getSupplyChannel();</span>
-<span class="source-line-no">055</span><span id="line.55">        return builder;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">}</span>
+<span class="source-line-no">013</span><span id="line.13">public class InventoryEntrySetSupplyChannelActionBuilder implements Builder&lt;InventoryEntrySetSupplyChannelAction&gt; {</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
+<span class="source-line-no">016</span><span id="line.16">    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(</span>
+<span class="source-line-no">019</span><span id="line.19">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">020</span><span id="line.20">        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">021</span><span id="line.21">                .build();</span>
+<span class="source-line-no">022</span><span id="line.22">        return this;</span>
+<span class="source-line-no">023</span><span id="line.23">    }</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(</span>
+<span class="source-line-no">026</span><span id="line.26">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
+<span class="source-line-no">027</span><span id="line.27">        this.supplyChannel = supplyChannel;</span>
+<span class="source-line-no">028</span><span id="line.28">        return this;</span>
+<span class="source-line-no">029</span><span id="line.29">    }</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    @Nullable</span>
+<span class="source-line-no">032</span><span id="line.32">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
+<span class="source-line-no">033</span><span id="line.33">        return this.supplyChannel;</span>
+<span class="source-line-no">034</span><span id="line.34">    }</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    public InventoryEntrySetSupplyChannelAction build() {</span>
+<span class="source-line-no">037</span><span id="line.37">        return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">     * builds InventoryEntrySetSupplyChannelAction without checking for non null required values</span>
+<span class="source-line-no">042</span><span id="line.42">     */</span>
+<span class="source-line-no">043</span><span id="line.43">    public InventoryEntrySetSupplyChannelAction buildUnchecked() {</span>
+<span class="source-line-no">044</span><span id="line.44">        return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public static InventoryEntrySetSupplyChannelActionBuilder of() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return new InventoryEntrySetSupplyChannelActionBuilder();</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static InventoryEntrySetSupplyChannelActionBuilder of(final InventoryEntrySetSupplyChannelAction template) {</span>
+<span class="source-line-no">052</span><span id="line.52">        InventoryEntrySetSupplyChannelActionBuilder builder = new InventoryEntrySetSupplyChannelActionBuilder();</span>
+<span class="source-line-no">053</span><span id="line.53">        builder.supplyChannel = template.getSupplyChannel();</span>
+<span class="source-line-no">054</span><span id="line.54">        return builder;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">}</span>
 
 
 

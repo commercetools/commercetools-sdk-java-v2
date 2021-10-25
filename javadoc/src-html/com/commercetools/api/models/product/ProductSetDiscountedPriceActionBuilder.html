@@ -23,7 +23,7 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public final class ProductSetDiscountedPriceActionBuilder implements Builder&lt;ProductSetDiscountedPriceAction&gt; {</span>
+<span class="source-line-no">013</span><span id="line.13">public class ProductSetDiscountedPriceActionBuilder implements Builder&lt;ProductSetDiscountedPriceAction&gt; {</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">    private String priceId;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">    private Boolean staged;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
-<span class="source-line-no">021</span><span id="line.21">    private com.commercetools.api.models.common.DiscountedPrice discounted;</span>
+<span class="source-line-no">021</span><span id="line.21">    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {</span>
 <span class="source-line-no">024</span><span id="line.24">        this.priceId = priceId;</span>
@@ -44,13 +44,13 @@
 <span class="source-line-no">031</span><span id="line.31">    }</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
 <span class="source-line-no">033</span><span id="line.33">    public ProductSetDiscountedPriceActionBuilder discounted(</span>
-<span class="source-line-no">034</span><span id="line.34">            Function&lt;com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder&gt; builder) {</span>
-<span class="source-line-no">035</span><span id="line.35">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();</span>
+<span class="source-line-no">034</span><span id="line.34">            Function&lt;com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">035</span><span id="line.35">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();</span>
 <span class="source-line-no">036</span><span id="line.36">        return this;</span>
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    public ProductSetDiscountedPriceActionBuilder discounted(</span>
-<span class="source-line-no">040</span><span id="line.40">            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">040</span><span id="line.40">            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {</span>
 <span class="source-line-no">041</span><span id="line.41">        this.discounted = discounted;</span>
 <span class="source-line-no">042</span><span id="line.42">        return this;</span>
 <span class="source-line-no">043</span><span id="line.43">    }</span>
@@ -65,7 +65,7 @@
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    @Nullable</span>
-<span class="source-line-no">055</span><span id="line.55">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
+<span class="source-line-no">055</span><span id="line.55">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
 <span class="source-line-no">056</span><span id="line.56">        return this.discounted;</span>
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>

@@ -11,103 +11,104 @@
 <body class="source-page">
 <main role="main">
 <div class="source-container">
-<pre><span class="source-line-no">001</span><span id="line.1">package com.commercetools.docs.meta;</span>
-<span class="source-line-no">002</span><span id="line.2"></span>
-<span class="source-line-no">003</span><span id="line.3">/**</span>
-<span class="source-line-no">004</span><span id="line.4"> * &lt;h2&gt;Installation&lt;/h2&gt;</span>
-<span class="source-line-no">005</span><span id="line.5"> *</span>
-<span class="source-line-no">006</span><span id="line.6"> * &lt;h3&gt;Modules&lt;/h3&gt;</span>
-<span class="source-line-no">007</span><span id="line.7"> *</span>
-<span class="source-line-no">008</span><span id="line.8"> * &lt;p&gt;For each of our APIs there is a separate module with all type and request classes.&lt;/p&gt;</span>
-<span class="source-line-no">009</span><span id="line.9"> *</span>
-<span class="source-line-no">010</span><span id="line.10"> * &lt;dl&gt;</span>
-<span class="source-line-no">011</span><span id="line.11"> *     &lt;dt&gt;commercetools-sdk-java-api&lt;/dt&gt;</span>
-<span class="source-line-no">012</span><span id="line.12"> *     &lt;dd&gt;models and request builders for the product API&lt;/dd&gt;</span>
-<span class="source-line-no">013</span><span id="line.13"> *     &lt;dt&gt;commercetools-sdk-java-importapi&lt;/dt&gt;</span>
-<span class="source-line-no">014</span><span id="line.14"> *     &lt;dd&gt;models and request builders for the import API&lt;/dd&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> *     &lt;dt&gt;commercetools-sdk-java-ml&lt;/dt&gt;</span>
-<span class="source-line-no">016</span><span id="line.16"> *     &lt;dd&gt;models and request builders for the machine learning API&lt;/dd&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> *     &lt;dt&gt;commercetools-sdk-java-history&lt;/dt&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> *     &lt;dd&gt;models and request builders for the audit API&lt;/dd&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> * &lt;/dl&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> *</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;p&gt;The SDK provides three HTTP client modules and one default module which serves as alias.&lt;/p&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;dl&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> *     &lt;dt&gt;commercetools-okhttp-client4&lt;/dt&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> *     &lt;dd&gt;uses OkHttp client 4.0&lt;/dd&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> *     &lt;dt&gt;commercetools-okhttp-client3&lt;/dt&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> *     &lt;dd&gt;uses OkHttp client 3.0&lt;/dd&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> *     &lt;dt&gt;commercetools-apachehttp-client&lt;/dt&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> *     &lt;dd&gt;uses Apache HTTP async client 5.1&lt;/dd&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> *     &lt;dt&gt;commercetools-http-client&lt;/dt&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> *     &lt;dd&gt;alias for commercetools-okhttp-client4&lt;/dd&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;/dl&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> *</span>
-<span class="source-line-no">033</span><span id="line.33"> * &lt;p&gt;The module &lt;code&gt;rmf-java-base&lt;/code&gt; provides the base classes and common abstractions like {@link io.vrap.rmf.base.client.ApiHttpClient},</span>
-<span class="source-line-no">034</span><span id="line.34"> * {@link io.vrap.rmf.base.client.http.Middleware} etc.&lt;/p&gt;</span>
-<span class="source-line-no">035</span><span id="line.35"> *</span>
-<span class="source-line-no">036</span><span id="line.36"> * All modules are published to Maven Central.</span>
-<span class="source-line-no">037</span><span id="line.37"> *</span>
-<span class="source-line-no">038</span><span id="line.38"> * &lt;h3&gt;Gradle&lt;/h3&gt;</span>
-<span class="source-line-no">039</span><span id="line.39"> *</span>
-<span class="source-line-no">040</span><span id="line.40"> * &lt;pre&gt;{@code</span>
-<span class="source-line-no">041</span><span id="line.41"> * ext {</span>
-<span class="source-line-no">042</span><span id="line.42"> *     versions = [</span>
-<span class="source-line-no">043</span><span id="line.43"> *         commercetools: "&lt;latest version&gt;"</span>
-<span class="source-line-no">044</span><span id="line.44"> *     ]</span>
-<span class="source-line-no">045</span><span id="line.45"> * }</span>
-<span class="source-line-no">046</span><span id="line.46"> *</span>
-<span class="source-line-no">047</span><span id="line.47"> * repositories {</span>
-<span class="source-line-no">048</span><span id="line.48"> *     mavenCentral()</span>
-<span class="source-line-no">049</span><span id="line.49"> * }</span>
-<span class="source-line-no">050</span><span id="line.50"> *</span>
-<span class="source-line-no">051</span><span id="line.51"> * dependencies {</span>
-<span class="source-line-no">052</span><span id="line.52"> *     implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"</span>
-<span class="source-line-no">053</span><span id="line.53"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"</span>
-<span class="source-line-no">054</span><span id="line.54"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"</span>
-<span class="source-line-no">055</span><span id="line.55"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"</span>
-<span class="source-line-no">056</span><span id="line.56"> * }</span>
-<span class="source-line-no">057</span><span id="line.57"> * }&lt;/pre&gt;</span>
-<span class="source-line-no">058</span><span id="line.58"> *</span>
-<span class="source-line-no">059</span><span id="line.59"> * &lt;h3&gt;Maven&lt;/h3&gt;</span>
-<span class="source-line-no">060</span><span id="line.60"> *</span>
-<span class="source-line-no">061</span><span id="line.61"> * &lt;pre&gt;{@code</span>
-<span class="source-line-no">062</span><span id="line.62"> * &lt;properties&gt;</span>
-<span class="source-line-no">063</span><span id="line.63"> *     &lt;commercetools.version&gt;&lt;!-- latest version --&gt;&lt;/commercetools.version&gt;</span>
-<span class="source-line-no">064</span><span id="line.64"> * &lt;/properties&gt;</span>
-<span class="source-line-no">065</span><span id="line.65"> * &lt;dependencies&gt;</span>
-<span class="source-line-no">066</span><span id="line.66"> *     &lt;dependency&gt;</span>
-<span class="source-line-no">067</span><span id="line.67"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
-<span class="source-line-no">068</span><span id="line.68"> *       &lt;artifactId&gt;commercetools-http-client&lt;/artifactId&gt;</span>
-<span class="source-line-no">069</span><span id="line.69"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
-<span class="source-line-no">070</span><span id="line.70"> *     &lt;/dependency&gt;</span>
-<span class="source-line-no">071</span><span id="line.71"> *     &lt;dependency&gt;</span>
-<span class="source-line-no">072</span><span id="line.72"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
-<span class="source-line-no">073</span><span id="line.73"> *       &lt;artifactId&gt;commercetools-sdk-java-api&lt;/artifactId&gt;</span>
-<span class="source-line-no">074</span><span id="line.74"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
-<span class="source-line-no">075</span><span id="line.75"> *     &lt;/dependency&gt;</span>
-<span class="source-line-no">076</span><span id="line.76"> *     &lt;dependency&gt;</span>
-<span class="source-line-no">077</span><span id="line.77"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
-<span class="source-line-no">078</span><span id="line.78"> *       &lt;artifactId&gt;commercetools-sdk-java-importapi&lt;/artifactId&gt;</span>
-<span class="source-line-no">079</span><span id="line.79"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
-<span class="source-line-no">080</span><span id="line.80"> *     &lt;/dependency&gt;</span>
-<span class="source-line-no">081</span><span id="line.81"> *     &lt;dependency&gt;</span>
-<span class="source-line-no">082</span><span id="line.82"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
-<span class="source-line-no">083</span><span id="line.83"> *       &lt;artifactId&gt;commercetools-sdk-java-ml&lt;/artifactId&gt;</span>
-<span class="source-line-no">084</span><span id="line.84"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
-<span class="source-line-no">085</span><span id="line.85"> *     &lt;/dependency&gt;</span>
-<span class="source-line-no">086</span><span id="line.86"> * &lt;/dependencies&gt;</span>
-<span class="source-line-no">087</span><span id="line.87"> * }&lt;/pre&gt;</span>
-<span class="source-line-no">088</span><span id="line.88"> *</span>
-<span class="source-line-no">089</span><span id="line.89"> * &lt;h3&gt;Troubleshooting&lt;/h3&gt;</span>
-<span class="source-line-no">090</span><span id="line.90"> *</span>
-<span class="source-line-no">091</span><span id="line.91"> * &lt;h4&gt;Spring Framework&lt;/h4&gt;</span>
-<span class="source-line-no">092</span><span id="line.92"> *</span>
-<span class="source-line-no">093</span><span id="line.93"> * &lt;p&gt;The Spring Framework has an optional dependency to OkHttp in version 3.x. To avoid problems use the &lt;code&gt;commercetools-okhttp-client3&lt;/code&gt;</span>
-<span class="source-line-no">094</span><span id="line.94"> * or &lt;code&gt;commercetools-apachehttp-client&lt;/code&gt; module instead of the module &lt;code&gt;commercetools-http-client&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95"> */</span>
-<span class="source-line-no">096</span><span id="line.96">public class Installation {</span>
-<span class="source-line-no">097</span><span id="line.97">}</span>
+<pre><span class="source-line-no">001</span><span id="line.1"></span>
+<span class="source-line-no">002</span><span id="line.2">package com.commercetools.docs.meta;</span>
+<span class="source-line-no">003</span><span id="line.3"></span>
+<span class="source-line-no">004</span><span id="line.4">/**</span>
+<span class="source-line-no">005</span><span id="line.5"> * &lt;h2&gt;Installation&lt;/h2&gt;</span>
+<span class="source-line-no">006</span><span id="line.6"> *</span>
+<span class="source-line-no">007</span><span id="line.7"> * &lt;h3&gt;Modules&lt;/h3&gt;</span>
+<span class="source-line-no">008</span><span id="line.8"> *</span>
+<span class="source-line-no">009</span><span id="line.9"> * &lt;p&gt;For each of our APIs there is a separate module with all type and request classes.&lt;/p&gt;</span>
+<span class="source-line-no">010</span><span id="line.10"> *</span>
+<span class="source-line-no">011</span><span id="line.11"> * &lt;dl&gt;</span>
+<span class="source-line-no">012</span><span id="line.12"> *     &lt;dt&gt;commercetools-sdk-java-api&lt;/dt&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> *     &lt;dd&gt;models and request builders for the product API&lt;/dd&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> *     &lt;dt&gt;commercetools-sdk-java-importapi&lt;/dt&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> *     &lt;dd&gt;models and request builders for the import API&lt;/dd&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *     &lt;dt&gt;commercetools-sdk-java-ml&lt;/dt&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> *     &lt;dd&gt;models and request builders for the machine learning API&lt;/dd&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     &lt;dt&gt;commercetools-sdk-java-history&lt;/dt&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *     &lt;dd&gt;models and request builders for the audit API&lt;/dd&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;/dl&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;p&gt;The SDK provides three HTTP client modules and one default module which serves as alias.&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;dl&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> *     &lt;dt&gt;commercetools-okhttp-client4&lt;/dt&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> *     &lt;dd&gt;uses OkHttp client 4.0&lt;/dd&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> *     &lt;dt&gt;commercetools-okhttp-client3&lt;/dt&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> *     &lt;dd&gt;uses OkHttp client 3.0&lt;/dd&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> *     &lt;dt&gt;commercetools-apachehttp-client&lt;/dt&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> *     &lt;dd&gt;uses Apache HTTP async client 5.1&lt;/dd&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> *     &lt;dt&gt;commercetools-http-client&lt;/dt&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> *     &lt;dd&gt;alias for commercetools-okhttp-client4&lt;/dd&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;/dl&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> *</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;p&gt;The module &lt;code&gt;rmf-java-base&lt;/code&gt; provides the base classes and common abstractions like {@link io.vrap.rmf.base.client.ApiHttpClient},</span>
+<span class="source-line-no">035</span><span id="line.35"> * {@link io.vrap.rmf.base.client.http.Middleware} etc.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36"> *</span>
+<span class="source-line-no">037</span><span id="line.37"> * All modules are published to Maven Central.</span>
+<span class="source-line-no">038</span><span id="line.38"> *</span>
+<span class="source-line-no">039</span><span id="line.39"> * &lt;h3&gt;Gradle&lt;/h3&gt;</span>
+<span class="source-line-no">040</span><span id="line.40"> *</span>
+<span class="source-line-no">041</span><span id="line.41"> * &lt;pre&gt;{@code</span>
+<span class="source-line-no">042</span><span id="line.42"> * ext {</span>
+<span class="source-line-no">043</span><span id="line.43"> *     versions = [</span>
+<span class="source-line-no">044</span><span id="line.44"> *         commercetools: "&lt;latest version&gt;"</span>
+<span class="source-line-no">045</span><span id="line.45"> *     ]</span>
+<span class="source-line-no">046</span><span id="line.46"> * }</span>
+<span class="source-line-no">047</span><span id="line.47"> *</span>
+<span class="source-line-no">048</span><span id="line.48"> * repositories {</span>
+<span class="source-line-no">049</span><span id="line.49"> *     mavenCentral()</span>
+<span class="source-line-no">050</span><span id="line.50"> * }</span>
+<span class="source-line-no">051</span><span id="line.51"> *</span>
+<span class="source-line-no">052</span><span id="line.52"> * dependencies {</span>
+<span class="source-line-no">053</span><span id="line.53"> *     implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"</span>
+<span class="source-line-no">054</span><span id="line.54"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"</span>
+<span class="source-line-no">055</span><span id="line.55"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"</span>
+<span class="source-line-no">056</span><span id="line.56"> *     implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"</span>
+<span class="source-line-no">057</span><span id="line.57"> * }</span>
+<span class="source-line-no">058</span><span id="line.58"> * }&lt;/pre&gt;</span>
+<span class="source-line-no">059</span><span id="line.59"> *</span>
+<span class="source-line-no">060</span><span id="line.60"> * &lt;h3&gt;Maven&lt;/h3&gt;</span>
+<span class="source-line-no">061</span><span id="line.61"> *</span>
+<span class="source-line-no">062</span><span id="line.62"> * &lt;pre&gt;{@code</span>
+<span class="source-line-no">063</span><span id="line.63"> * &lt;properties&gt;</span>
+<span class="source-line-no">064</span><span id="line.64"> *     &lt;commercetools.version&gt;&lt;!-- latest version --&gt;&lt;/commercetools.version&gt;</span>
+<span class="source-line-no">065</span><span id="line.65"> * &lt;/properties&gt;</span>
+<span class="source-line-no">066</span><span id="line.66"> * &lt;dependencies&gt;</span>
+<span class="source-line-no">067</span><span id="line.67"> *     &lt;dependency&gt;</span>
+<span class="source-line-no">068</span><span id="line.68"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
+<span class="source-line-no">069</span><span id="line.69"> *       &lt;artifactId&gt;commercetools-http-client&lt;/artifactId&gt;</span>
+<span class="source-line-no">070</span><span id="line.70"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
+<span class="source-line-no">071</span><span id="line.71"> *     &lt;/dependency&gt;</span>
+<span class="source-line-no">072</span><span id="line.72"> *     &lt;dependency&gt;</span>
+<span class="source-line-no">073</span><span id="line.73"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
+<span class="source-line-no">074</span><span id="line.74"> *       &lt;artifactId&gt;commercetools-sdk-java-api&lt;/artifactId&gt;</span>
+<span class="source-line-no">075</span><span id="line.75"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
+<span class="source-line-no">076</span><span id="line.76"> *     &lt;/dependency&gt;</span>
+<span class="source-line-no">077</span><span id="line.77"> *     &lt;dependency&gt;</span>
+<span class="source-line-no">078</span><span id="line.78"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
+<span class="source-line-no">079</span><span id="line.79"> *       &lt;artifactId&gt;commercetools-sdk-java-importapi&lt;/artifactId&gt;</span>
+<span class="source-line-no">080</span><span id="line.80"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
+<span class="source-line-no">081</span><span id="line.81"> *     &lt;/dependency&gt;</span>
+<span class="source-line-no">082</span><span id="line.82"> *     &lt;dependency&gt;</span>
+<span class="source-line-no">083</span><span id="line.83"> *       &lt;groupId&gt;com.commercetools.sdk&lt;/groupId&gt;</span>
+<span class="source-line-no">084</span><span id="line.84"> *       &lt;artifactId&gt;commercetools-sdk-java-ml&lt;/artifactId&gt;</span>
+<span class="source-line-no">085</span><span id="line.85"> *       &lt;version&gt;${commercetools.version}&lt;/version&gt;</span>
+<span class="source-line-no">086</span><span id="line.86"> *     &lt;/dependency&gt;</span>
+<span class="source-line-no">087</span><span id="line.87"> * &lt;/dependencies&gt;</span>
+<span class="source-line-no">088</span><span id="line.88"> * }&lt;/pre&gt;</span>
+<span class="source-line-no">089</span><span id="line.89"> *</span>
+<span class="source-line-no">090</span><span id="line.90"> * &lt;h3&gt;Troubleshooting&lt;/h3&gt;</span>
+<span class="source-line-no">091</span><span id="line.91"> *</span>
+<span class="source-line-no">092</span><span id="line.92"> * &lt;h4&gt;Spring Framework&lt;/h4&gt;</span>
+<span class="source-line-no">093</span><span id="line.93"> *</span>
+<span class="source-line-no">094</span><span id="line.94"> * &lt;p&gt;The Spring Framework has an optional dependency to OkHttp in version 3.x. To avoid problems use the &lt;code&gt;commercetools-okhttp-client3&lt;/code&gt;</span>
+<span class="source-line-no">095</span><span id="line.95"> * or &lt;code&gt;commercetools-apachehttp-client&lt;/code&gt; module instead of the module &lt;code&gt;commercetools-http-client&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96"> */</span>
+<span class="source-line-no">097</span><span id="line.97">public class Installation {</span>
+<span class="source-line-no">098</span><span id="line.98">}</span>
 
 
 

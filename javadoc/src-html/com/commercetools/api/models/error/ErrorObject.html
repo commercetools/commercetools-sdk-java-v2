@@ -31,83 +31,84 @@
 <span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),</span>
 <span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),</span>
 <span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateEnumValuesErrorImpl.class, name = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EditPreviewFailedErrorImpl.class, name = EditPreviewFailedError.EDIT_PREVIEW_FAILED),</span>
-<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl.class, name = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS),</span>
-<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyDoesNotExistErrorImpl.class, name = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST),</span>
-<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = EnumValueIsUsedError.ENUM_VALUE_IS_USED),</span>
-<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),</span>
-<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),</span>
-<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),</span>
-<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),</span>
-<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),</span>
-<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),</span>
-<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GeneralErrorImpl.class, name = GeneralError.GENERAL),</span>
-<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),</span>
-<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InternalConstraintViolatedErrorImpl.class, name = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED),</span>
-<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),</span>
-<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCurrentPasswordErrorImpl.class, name = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD),</span>
-<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),</span>
-<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidInputErrorImpl.class, name = InvalidInputError.INVALID_INPUT),</span>
-<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl.class, name = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS),</span>
-<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidJsonInputErrorImpl.class, name = InvalidJsonInputError.INVALID_JSON_INPUT),</span>
-<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = InvalidOperationError.INVALID_OPERATION),</span>
-<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),</span>
-<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),</span>
-<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),</span>
-<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),</span>
-<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),</span>
-<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),</span>
-<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),</span>
-<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),</span>
-<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),</span>
-<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),</span>
-<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),</span>
-<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),</span>
-<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),</span>
-<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),</span>
-<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),</span>
-<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = ReferenceExistsError.REFERENCE_EXISTS),</span>
-<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND),</span>
-<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),</span>
-<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),</span>
-<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceSizeLimitExceededErrorImpl.class, name = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchDeactivatedErrorImpl.class, name = SearchDeactivatedError.SEARCH_DEACTIVATED),</span>
-<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),</span>
-<span class="source-line-no">074</span><span id="line.74">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),</span>
-<span class="source-line-no">075</span><span id="line.75">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),</span>
-<span class="source-line-no">076</span><span id="line.76">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),</span>
-<span class="source-line-no">077</span><span id="line.77">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),</span>
-<span class="source-line-no">078</span><span id="line.78">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR),</span>
-<span class="source-line-no">079</span><span id="line.79">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })</span>
-<span class="source-line-no">080</span><span id="line.80">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)</span>
-<span class="source-line-no">081</span><span id="line.81">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">082</span><span id="line.82">public interface ErrorObject {</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    @NotNull</span>
-<span class="source-line-no">085</span><span id="line.85">    @JsonProperty("code")</span>
-<span class="source-line-no">086</span><span id="line.86">    public String getCode();</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    @NotNull</span>
-<span class="source-line-no">089</span><span id="line.89">    @JsonProperty("message")</span>
-<span class="source-line-no">090</span><span id="line.90">    public String getMessage();</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public void setMessage(final String message);</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withErrorObject(Function&lt;ErrorObject, T&gt; helper) {</span>
-<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97">}</span>
+<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),</span>
+<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),</span>
+<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),</span>
+<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),</span>
+<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),</span>
+<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateEnumValuesErrorImpl.class, name = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES),</span>
+<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),</span>
+<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE),</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EditPreviewFailedErrorImpl.class, name = EditPreviewFailedError.EDIT_PREVIEW_FAILED),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl.class, name = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyDoesNotExistErrorImpl.class, name = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = EnumValueIsUsedError.ENUM_VALUE_IS_USED),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GeneralErrorImpl.class, name = GeneralError.GENERAL),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InternalConstraintViolatedErrorImpl.class, name = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCurrentPasswordErrorImpl.class, name = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidInputErrorImpl.class, name = InvalidInputError.INVALID_INPUT),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl.class, name = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidJsonInputErrorImpl.class, name = InvalidJsonInputError.INVALID_JSON_INPUT),</span>
+<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = InvalidOperationError.INVALID_OPERATION),</span>
+<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),</span>
+<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),</span>
+<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),</span>
+<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),</span>
+<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),</span>
+<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),</span>
+<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),</span>
+<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),</span>
+<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),</span>
+<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),</span>
+<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),</span>
+<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),</span>
+<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),</span>
+<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),</span>
+<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),</span>
+<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = ReferenceExistsError.REFERENCE_EXISTS),</span>
+<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND),</span>
+<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),</span>
+<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),</span>
+<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceSizeLimitExceededErrorImpl.class, name = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchDeactivatedErrorImpl.class, name = SearchDeactivatedError.SEARCH_DEACTIVATED),</span>
+<span class="source-line-no">074</span><span id="line.74">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),</span>
+<span class="source-line-no">075</span><span id="line.75">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),</span>
+<span class="source-line-no">076</span><span id="line.76">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),</span>
+<span class="source-line-no">077</span><span id="line.77">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),</span>
+<span class="source-line-no">078</span><span id="line.78">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),</span>
+<span class="source-line-no">079</span><span id="line.79">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR),</span>
+<span class="source-line-no">080</span><span id="line.80">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })</span>
+<span class="source-line-no">081</span><span id="line.81">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)</span>
+<span class="source-line-no">082</span><span id="line.82">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">083</span><span id="line.83">public interface ErrorObject {</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    @NotNull</span>
+<span class="source-line-no">086</span><span id="line.86">    @JsonProperty("code")</span>
+<span class="source-line-no">087</span><span id="line.87">    public String getCode();</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    @NotNull</span>
+<span class="source-line-no">090</span><span id="line.90">    @JsonProperty("message")</span>
+<span class="source-line-no">091</span><span id="line.91">    public String getMessage();</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public void setMessage(final String message);</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    default &lt;T&gt; T withErrorObject(Function&lt;ErrorObject, T&gt; helper) {</span>
+<span class="source-line-no">096</span><span id="line.96">        return helper.apply(this);</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98">}</span>
 
 
 

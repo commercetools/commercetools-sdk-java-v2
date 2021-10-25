@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">012</span><span id="line.12">public final class ApiClientBuilder implements Builder&lt;ApiClient&gt; {</span>
+<span class="source-line-no">012</span><span id="line.12">public class ApiClientBuilder implements Builder&lt;ApiClient&gt; {</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
 <span class="source-line-no">014</span><span id="line.14">    private String id;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">    private String scope;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
-<span class="source-line-no">021</span><span id="line.21">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">021</span><span id="line.21">    private String secret;</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
 <span class="source-line-no">024</span><span id="line.24">    private java.time.LocalDate lastUsedAt;</span>
@@ -40,7 +40,7 @@
 <span class="source-line-no">027</span><span id="line.27">    private java.time.ZonedDateTime deleteAt;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
-<span class="source-line-no">030</span><span id="line.30">    private String secret;</span>
+<span class="source-line-no">030</span><span id="line.30">    private java.time.ZonedDateTime createdAt;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    public ApiClientBuilder id(final String id) {</span>
 <span class="source-line-no">033</span><span id="line.33">        this.id = id;</span>
@@ -57,8 +57,8 @@
 <span class="source-line-no">044</span><span id="line.44">        return this;</span>
 <span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">048</span><span id="line.48">        this.createdAt = createdAt;</span>
+<span class="source-line-no">047</span><span id="line.47">    public ApiClientBuilder secret(@Nullable final String secret) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.secret = secret;</span>
 <span class="source-line-no">049</span><span id="line.49">        return this;</span>
 <span class="source-line-no">050</span><span id="line.50">    }</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
@@ -72,8 +72,8 @@
 <span class="source-line-no">059</span><span id="line.59">        return this;</span>
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public ApiClientBuilder secret(@Nullable final String secret) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.secret = secret;</span>
+<span class="source-line-no">062</span><span id="line.62">    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.createdAt = createdAt;</span>
 <span class="source-line-no">064</span><span id="line.64">        return this;</span>
 <span class="source-line-no">065</span><span id="line.65">    }</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
@@ -90,8 +90,8 @@
 <span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
 <span class="source-line-no">079</span><span id="line.79">    @Nullable</span>
-<span class="source-line-no">080</span><span id="line.80">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return this.createdAt;</span>
+<span class="source-line-no">080</span><span id="line.80">    public String getSecret() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return this.secret;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    @Nullable</span>
@@ -105,22 +105,22 @@
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    @Nullable</span>
-<span class="source-line-no">095</span><span id="line.95">    public String getSecret() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.secret;</span>
+<span class="source-line-no">095</span><span id="line.95">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.createdAt;</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    public ApiClient build() {</span>
 <span class="source-line-no">100</span><span id="line.100">        Objects.requireNonNull(id, ApiClient.class + ": id is missing");</span>
 <span class="source-line-no">101</span><span id="line.101">        Objects.requireNonNull(name, ApiClient.class + ": name is missing");</span>
 <span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");</span>
-<span class="source-line-no">103</span><span id="line.103">        return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);</span>
+<span class="source-line-no">103</span><span id="line.103">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);</span>
 <span class="source-line-no">104</span><span id="line.104">    }</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    /**</span>
 <span class="source-line-no">107</span><span id="line.107">     * builds ApiClient without checking for non null required values</span>
 <span class="source-line-no">108</span><span id="line.108">     */</span>
 <span class="source-line-no">109</span><span id="line.109">    public ApiClient buildUnchecked() {</span>
-<span class="source-line-no">110</span><span id="line.110">        return new ApiClientImpl(id, name, scope, createdAt, lastUsedAt, deleteAt, secret);</span>
+<span class="source-line-no">110</span><span id="line.110">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);</span>
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    public static ApiClientBuilder of() {</span>
@@ -132,10 +132,10 @@
 <span class="source-line-no">119</span><span id="line.119">        builder.id = template.getId();</span>
 <span class="source-line-no">120</span><span id="line.120">        builder.name = template.getName();</span>
 <span class="source-line-no">121</span><span id="line.121">        builder.scope = template.getScope();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">122</span><span id="line.122">        builder.secret = template.getSecret();</span>
 <span class="source-line-no">123</span><span id="line.123">        builder.lastUsedAt = template.getLastUsedAt();</span>
 <span class="source-line-no">124</span><span id="line.124">        builder.deleteAt = template.getDeleteAt();</span>
-<span class="source-line-no">125</span><span id="line.125">        builder.secret = template.getSecret();</span>
+<span class="source-line-no">125</span><span id="line.125">        builder.createdAt = template.getCreatedAt();</span>
 <span class="source-line-no">126</span><span id="line.126">        return builder;</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
 <span class="source-line-no">128</span><span id="line.128"></span>

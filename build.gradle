@@ -22,7 +22,7 @@ plugins {
 
 configurations {
     taglet {
-        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2021.12")
+        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:8059")
     }
 }
 dependencies {

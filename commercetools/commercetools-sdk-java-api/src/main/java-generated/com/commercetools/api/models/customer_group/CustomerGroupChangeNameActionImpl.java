@@ -35,7 +35,7 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
     }
 
     /**
-    *  <p>User-defined unique name for the customer group.</p>
+    *  <p>New name of the Customer Group.</p>
     */
     public String getName() {
         return this.name;

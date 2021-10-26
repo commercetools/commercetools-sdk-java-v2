@@ -33,6 +33,9 @@ public interface PriceDraft {
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+    *  <p><a href="/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();

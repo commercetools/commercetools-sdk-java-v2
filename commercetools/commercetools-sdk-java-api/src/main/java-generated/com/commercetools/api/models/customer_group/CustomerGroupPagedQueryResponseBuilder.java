@@ -12,9 +12,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerGroupPagedQueryResponse> {
 
-    private Long offset;
-
     private Long limit;
+
+    private Long offset;
 
     private Long count;
 
@@ -23,13 +23,13 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
 
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results;
 
-    public CustomerGroupPagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
+    public CustomerGroupPagedQueryResponseBuilder limit(final Long limit) {
+        this.limit = limit;
         return this;
     }
 
-    public CustomerGroupPagedQueryResponseBuilder limit(final Long limit) {
-        this.limit = limit;
+    public CustomerGroupPagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -71,12 +71,12 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
         return this;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public Long getLimit() {
         return this.limit;
+    }
+
+    public Long getOffset() {
+        return this.offset;
     }
 
     public Long getCount() {
@@ -93,18 +93,18 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     public CustomerGroupPagedQueryResponse build() {
-        Objects.requireNonNull(offset, CustomerGroupPagedQueryResponse.class + ": offset is missing");
         Objects.requireNonNull(limit, CustomerGroupPagedQueryResponse.class + ": limit is missing");
+        Objects.requireNonNull(offset, CustomerGroupPagedQueryResponse.class + ": offset is missing");
         Objects.requireNonNull(count, CustomerGroupPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, CustomerGroupPagedQueryResponse.class + ": results is missing");
-        return new CustomerGroupPagedQueryResponseImpl(offset, limit, count, total, results);
+        return new CustomerGroupPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds CustomerGroupPagedQueryResponse without checking for non null required values
      */
     public CustomerGroupPagedQueryResponse buildUnchecked() {
-        return new CustomerGroupPagedQueryResponseImpl(offset, limit, count, total, results);
+        return new CustomerGroupPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static CustomerGroupPagedQueryResponseBuilder of() {
@@ -113,8 +113,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
 
     public static CustomerGroupPagedQueryResponseBuilder of(final CustomerGroupPagedQueryResponse template) {
         CustomerGroupPagedQueryResponseBuilder builder = new CustomerGroupPagedQueryResponseBuilder();
-        builder.offset = template.getOffset();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
         builder.results = template.getResults();

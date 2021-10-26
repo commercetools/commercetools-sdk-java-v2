@@ -20,6 +20,9 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
 
     String CUSTOMER_GROUP_SET = "CustomerGroupSet";
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("customerGroup")

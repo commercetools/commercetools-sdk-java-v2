@@ -39,10 +39,16 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
         return this.type;
     }
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
         return this.oldCustomerGroup;
     }

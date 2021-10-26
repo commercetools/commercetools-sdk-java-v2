@@ -23,23 +23,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup> {
 
     /**
-    *  <p>Unique ID of the customer group.</p>
+    *  <p>Unique ID of the Customer Group.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Current version of the customer group.</p>
+    *  <p>Current version of the Customer Group.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the Customer Group was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the Customer Group was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
@@ -59,19 +65,22 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the Customer Group.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Unique within the project.</p>
+    *  <p>Unique name of the Customer Group.</p>
     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>Custom Fields for the Customer Group.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

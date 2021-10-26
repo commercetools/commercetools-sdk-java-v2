@@ -34,20 +34,24 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft {
     }
 
     /**
-    *  <p>User-defined unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the Customer Group.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> in the project.
+    *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> in the Project.
     *  If not, a <code>DuplicateField</code> <a href="/../api/errors#400-bad-request-1">error</a> is thrown.</p>
     */
     public String getGroupName() {
         return this.groupName;
     }
 
+    /**
+    *  <p>Custom Fields for the Customer Group.</p>
+    */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

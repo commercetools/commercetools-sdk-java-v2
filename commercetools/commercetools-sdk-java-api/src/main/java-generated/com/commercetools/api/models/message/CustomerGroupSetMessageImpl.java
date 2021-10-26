@@ -119,6 +119,9 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }

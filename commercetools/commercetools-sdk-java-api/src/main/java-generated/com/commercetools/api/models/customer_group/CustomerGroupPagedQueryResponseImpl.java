@@ -19,9 +19,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQueryResponse {
 
-    private Long offset;
-
     private Long limit;
+
+    private Long offset;
 
     private Long count;
 
@@ -30,12 +30,12 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results;
 
     @JsonCreator
-    CustomerGroupPagedQueryResponseImpl(@JsonProperty("offset") final Long offset,
-            @JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
+    CustomerGroupPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
+            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total,
             @JsonProperty("results") final java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results) {
-        this.offset = offset;
         this.limit = limit;
+        this.offset = offset;
         this.count = count;
         this.total = total;
         this.results = results;
@@ -45,18 +45,18 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     }
 
     /**
+    *  <p>Number of results requested in the query request.</p>
+    */
+    public Long getLimit() {
+        return this.limit;
+    }
+
+    /**
     *  <p>Offset supplied by the client or server default.
     *  It is the number of elements skipped, not a page number.</p>
     */
     public Long getOffset() {
         return this.offset;
-    }
-
-    /**
-    *  <p>Number of results requested in the query request.</p>
-    */
-    public Long getLimit() {
-        return this.limit;
     }
 
     /**
@@ -78,18 +78,18 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     }
 
     /**
-    *  <p>Array of <a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
+    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> getResults() {
         return this.results;
     }
 
-    public void setOffset(final Long offset) {
-        this.offset = offset;
-    }
-
     public void setLimit(final Long limit) {
         this.limit = limit;
+    }
+
+    public void setOffset(final Long offset) {
+        this.offset = offset;
     }
 
     public void setCount(final Long count) {
@@ -118,8 +118,8 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
         CustomerGroupPagedQueryResponseImpl that = (CustomerGroupPagedQueryResponseImpl) o;
 
-        return new EqualsBuilder().append(offset, that.offset)
-                .append(limit, that.limit)
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
                 .append(count, that.count)
                 .append(total, that.total)
                 .append(results, that.results)
@@ -128,8 +128,8 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(offset)
-                .append(limit)
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
                 .append(count)
                 .append(total)
                 .append(results)

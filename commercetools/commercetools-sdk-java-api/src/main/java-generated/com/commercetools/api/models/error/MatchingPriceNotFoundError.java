@@ -35,6 +35,9 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();

@@ -22,19 +22,19 @@ public interface CustomerGroupPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<CustomerGroup> {
 
     /**
+    *  <p>Number of results requested in the query request.</p>
+    */
+    @NotNull
+    @JsonProperty("limit")
+    public Long getLimit();
+
+    /**
     *  <p>Offset supplied by the client or server default.
     *  It is the number of elements skipped, not a page number.</p>
     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
-    /**
-    *  <p>Number of results requested in the query request.</p>
-    */
-    @NotNull
-    @JsonProperty("limit")
-    public Long getLimit();
 
     /**
     *  <p>Actual number of results returned.</p>
@@ -55,16 +55,16 @@ public interface CustomerGroupPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>Array of <a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
+    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
     */
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<CustomerGroup> getResults();
 
-    public void setOffset(final Long offset);
-
     public void setLimit(final Long limit);
+
+    public void setOffset(final Long offset);
 
     public void setCount(final Long count);
 
@@ -81,8 +81,8 @@ public interface CustomerGroupPagedQueryResponse
 
     public static CustomerGroupPagedQueryResponse of(final CustomerGroupPagedQueryResponse template) {
         CustomerGroupPagedQueryResponseImpl instance = new CustomerGroupPagedQueryResponseImpl();
-        instance.setOffset(template.getOffset());
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());

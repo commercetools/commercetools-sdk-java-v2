@@ -35,6 +35,9 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
         return this.action;
     }
 
+    /**
+    *  <p><a href="/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }

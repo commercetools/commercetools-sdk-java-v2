@@ -1,12 +1,14 @@
 
 package io.vrap.rmf.base.client.http;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.FailsafeExecutor;
-import net.jodah.failsafe.RetryPolicy;
+import net.jodah.failsafe.*;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
@@ -24,10 +26,12 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public OAuthMiddlewareImpl(final OAuthHandler oAuthHandler) {
-        this(oAuthHandler, 1);
+        this(oAuthHandler, 1, false);
     }
 
-    public OAuthMiddlewareImpl(final OAuthHandler oauthHandler, final Integer maxRetries) {
+    public OAuthMiddlewareImpl(final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        this.authHandler = oauthHandler;
+
         RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()
                 .handleIf((response, throwable) -> {
                     if (throwable != null) {
@@ -37,11 +41,30 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                 })
                 .onRetry(event -> {
                     logger.debug("Refresh Bearer token #" + event.getAttemptCount());
-                    oauthHandler.refreshToken();
+                    authHandler.refreshToken();
                 })
                 .withMaxRetries(maxRetries);
-        this.authHandler = oauthHandler;
-        this.failsafeExecutor = Failsafe.with(retry);
+        if (useCircuitBreaker) {
+            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<ApiHttpResponse<byte[]>>()
+                    .handleIf((response, throwable) -> {
+                        if (throwable != null) {
+                            return throwable instanceof UnauthorizedException;
+                        }
+                        return response.getStatusCode() == 401;
+                    })
+                    .withDelay((result, failure, context) -> Duration.ofMillis(
+                            Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000))
+                    )
+                    .withFailureThreshold(5, Duration.ofSeconds(1))
+                    .withSuccessThreshold(2)
+                    .onClose(() -> logger.debug("The circuit breaker was closed"))
+                    .onOpen(() -> logger.debug("The circuit breaker was opened"))
+                    .onHalfOpen(() -> logger.debug("The circuit breaker was half-opened"))
+                    ;
+            this.failsafeExecutor = Failsafe.with(retry, circuitBreaker);
+        } else {
+            this.failsafeExecutor = Failsafe.with(retry);
+        }
     }
 
     @Override

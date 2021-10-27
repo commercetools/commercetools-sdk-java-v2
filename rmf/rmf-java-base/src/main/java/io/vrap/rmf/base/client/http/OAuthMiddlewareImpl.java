@@ -2,9 +2,6 @@
 package io.vrap.rmf.base.client.http;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -52,17 +49,16 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                         }
                         return response.getStatusCode() == 401;
                     })
-                    .withDelay((result, failure, context) -> Duration.ofMillis(
-                            Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000))
-                    )
+                    .withDelay((result, failure, context) -> Duration
+                            .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
                     .withFailureThreshold(5, Duration.ofSeconds(1))
                     .withSuccessThreshold(2)
                     .onClose(() -> logger.debug("The circuit breaker was closed"))
                     .onOpen(() -> logger.debug("The circuit breaker was opened"))
-                    .onHalfOpen(() -> logger.debug("The circuit breaker was half-opened"))
-                    ;
+                    .onHalfOpen(() -> logger.debug("The circuit breaker was half-opened"));
             this.failsafeExecutor = Failsafe.with(retry, circuitBreaker);
-        } else {
+        }
+        else {
             this.failsafeExecutor = Failsafe.with(retry);
         }
     }

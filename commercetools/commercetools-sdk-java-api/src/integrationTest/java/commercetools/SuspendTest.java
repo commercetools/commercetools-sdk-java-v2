@@ -1,27 +1,29 @@
+
 package commercetools;
+
+import static commercetools.utils.CommercetoolsTestUtils.getClientId;
+import static commercetools.utils.CommercetoolsTestUtils.getClientSecret;
+import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
+
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+
+import net.jodah.failsafe.CircuitBreakerOpenException;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.project.Project;
-import com.commercetools.http.apachehttp.CtApacheHttpClient;
-import commercetools.utils.CommercetoolsTestUtils;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
-import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import net.jodah.failsafe.CircuitBreakerOpenException;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.CompletableFuture;
-
-import static commercetools.utils.CommercetoolsTestUtils.getClientId;
-import static commercetools.utils.CommercetoolsTestUtils.getClientSecret;
-import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
 public class SuspendTest {
     private static Logger LOGGER = LoggerFactory.getLogger(SuspendTest.class);
     @Test
@@ -36,11 +38,8 @@ public class SuspendTest {
                 .defaultClient(region.getApiUrl())
                 .withClientCredentialsFlow(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    region.getOAuthTokenUrl(),
-                    testAuthClient
-                )
-                .withAuthCircuitBreaker()
-        ;
+                    region.getOAuthTokenUrl(), testAuthClient)
+                .withAuthCircuitBreaker();
 
         final ProjectApiRoot projectApiRoot = builder.build(getProjectKey());
 
@@ -96,7 +95,6 @@ public class SuspendTest {
         Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
         });
-
 
         Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
@@ -157,10 +155,12 @@ public class SuspendTest {
             if (suspended) {
                 if (sendRequest) {
                     httpClient.execute(request);
-                } else {
+                }
+                else {
                     LOGGER.debug("{}: Client suspended", name);
                 }
-                return CompletableFuture.completedFuture(new ApiHttpResponse<>(401, null, "".getBytes(StandardCharsets.UTF_8)));
+                return CompletableFuture
+                        .completedFuture(new ApiHttpResponse<>(401, null, "".getBytes(StandardCharsets.UTF_8)));
             }
             return httpClient.execute(request);
         }

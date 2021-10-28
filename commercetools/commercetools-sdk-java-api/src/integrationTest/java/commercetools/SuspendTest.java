@@ -8,6 +8,7 @@ import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
+import io.vrap.rmf.base.client.oauth2.AuthException;
 import net.jodah.failsafe.CircuitBreakerOpenException;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -31,8 +32,8 @@ public class SuspendTest {
         ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
                 : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
 
-        final TestClient testApiClient = new TestClient("api", HttpClientSupplier.of().get());
-        final TestClient testAuthClient = new TestClient("auth", HttpClientSupplier.of().get());
+        final TestClient testApiClient = new TestClient("api", 401, HttpClientSupplier.of().get());
+        final TestClient testAuthClient = new TestClient("auth", 400, HttpClientSupplier.of().get());
 
         ApiRootBuilder builder = ApiRootBuilder.of(testApiClient)
                 .defaultClient(region.getApiUrl())
@@ -79,26 +80,26 @@ public class SuspendTest {
         LOGGER.debug("Auth client suspended");
         Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
+        }).isInstanceOfAny(AuthException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(AuthException.class);
 
         LOGGER.debug("Unsuspended api client");
         testApiClient.suspended = false;
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(AuthException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(AuthException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(AuthException.class);
 
         Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
@@ -142,12 +143,14 @@ public class SuspendTest {
         private Boolean suspended;
         private Boolean sendRequest;
         private final String name;
+        private final int status;
 
-        public TestClient(final String name, final VrapHttpClient httpClient) {
+        public TestClient(final String name, final int status, final VrapHttpClient httpClient) {
             this.httpClient = httpClient;
             this.name = name;
             this.suspended = false;
             this.sendRequest = true;
+            this.status = status;
         }
 
         @Override
@@ -160,7 +163,7 @@ public class SuspendTest {
                     LOGGER.debug("{}: Client suspended", name);
                 }
                 return CompletableFuture
-                        .completedFuture(new ApiHttpResponse<>(401, null, "".getBytes(StandardCharsets.UTF_8)));
+                        .completedFuture(new ApiHttpResponse<>(status, null, "".getBytes(StandardCharsets.UTF_8)));
             }
             return httpClient.execute(request);
         }

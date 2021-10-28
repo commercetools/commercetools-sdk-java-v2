@@ -55,31 +55,31 @@ public class SuspendTest {
             projectApiRoot.get().executeBlocking();
         });
 
-        Assertions.assertThatExceptionOfType(UnauthorizedException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
 
         testApiClient.sendRequest = false;
 
         Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
 
         testAuthClient.suspended = true;
         testAuthClient.sendRequest = false;
 
         LOGGER.debug("Auth client suspended");
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
 
         Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();

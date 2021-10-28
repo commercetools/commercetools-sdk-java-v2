@@ -87,6 +87,15 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.authRetries = 1;
     }
 
+    private ClientBuilder(final VrapHttpClient httpClient) {
+        this.httpClient = httpClient;
+        this.stack = stackSupplier();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.authRetries = 1;
+    }
+
     /**
      * Ensures the order of default middlewares to create a {@link HandlerStack}
      * @return HandlerStack supplier method
@@ -102,14 +111,6 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             middlewareStack.addAll(middlewares);
             return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
         };
-    }
-
-    private ClientBuilder(final VrapHttpClient httpClient) {
-        this.httpClient = httpClient;
-        this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
-        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
     }
 
     public ClientBuilder withoutAuthCircuitBreaker() {

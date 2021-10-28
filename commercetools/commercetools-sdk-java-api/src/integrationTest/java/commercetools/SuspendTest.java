@@ -8,7 +8,6 @@ import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
-import io.vrap.rmf.base.client.oauth2.AuthException;
 import net.jodah.failsafe.CircuitBreakerOpenException;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -18,6 +17,7 @@ import com.commercetools.api.models.project.Project;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
+import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;

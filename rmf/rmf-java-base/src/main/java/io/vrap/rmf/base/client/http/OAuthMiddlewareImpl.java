@@ -5,11 +5,11 @@ import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import io.vrap.rmf.base.client.oauth2.AuthException;
 import net.jodah.failsafe.*;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
+import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.slf4j.Logger;
@@ -46,7 +46,7 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<ApiHttpResponse<byte[]>>()
                     .handleIf((response, throwable) -> {
                         if (throwable.getCause() instanceof AuthException) {
-                            return ((AuthException)throwable.getCause()).getResponse().getStatusCode() == 400;
+                            return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
                         }
                         return response.getStatusCode() == 400;
                     })

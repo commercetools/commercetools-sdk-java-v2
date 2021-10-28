@@ -114,7 +114,7 @@ public class SuspendTest {
         Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
         });
-        Thread.sleep(100);
+        Thread.sleep(200);
         projectApiRoot.get().executeBlocking();
 
         final Project unsuspendedProject = projectApiRoot.get().executeBlocking().getBody();

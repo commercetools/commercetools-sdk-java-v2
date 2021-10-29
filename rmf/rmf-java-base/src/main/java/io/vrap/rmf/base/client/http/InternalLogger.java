@@ -60,6 +60,13 @@ public class InternalLogger {
         return this;
     }
 
+    public InternalLogger trace(final Supplier<Object> message, final Throwable throwable) {
+        if (underlyingLogger.isTraceEnabled()) {
+            underlyingLogger.trace(message.get().toString(), throwable);
+        }
+        return this;
+    }
+
     public InternalLogger warn(final Supplier<Object> message) {
         if (underlyingLogger.isWarnEnabled()) {
             underlyingLogger.warn(message.get().toString());

@@ -1,9 +1,7 @@
 
 package commercetools;
 
-import static commercetools.utils.CommercetoolsTestUtils.getClientId;
-import static commercetools.utils.CommercetoolsTestUtils.getClientSecret;
-import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
+import static commercetools.utils.CommercetoolsTestUtils.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
@@ -21,6 +19,7 @@ import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -136,6 +135,55 @@ public class SuspendTest {
         projectApiRoot.get().executeBlocking();
         projectApiRoot.get().executeBlocking();
         Assertions.assertThat(openedProject).isInstanceOf(Project.class);
+    }
+
+    @Test
+    @Ignore("only to be executed locally")
+    public void testSuspendedProject() {
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+
+        ApiRootBuilder builder = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
+                    region)
+                .withAuthCircuitBreaker();
+
+        final ProjectApiRoot root = builder.build(getProjectKey());
+
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withNoCause();
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withNoCause();
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withNoCause();
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withNoCause();
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withNoCause();
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
+        Assertions.assertThatExceptionOfType(AuthException.class)
+                .isThrownBy(() -> root.get().executeBlocking())
+                .withCauseInstanceOf(CircuitBreakerOpenException.class);
     }
 
     private static class TestClient implements VrapHttpClient {

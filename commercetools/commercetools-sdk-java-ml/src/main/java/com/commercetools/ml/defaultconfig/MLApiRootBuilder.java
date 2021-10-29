@@ -37,6 +37,21 @@ public class MLApiRootBuilder {
         return new MLApiRootBuilder(ClientBuilder.of(stack));
     }
 
+    public MLApiRootBuilder withAuthCircuitBreaker() {
+        builder.withAuthCircuitBreaker();
+        return this;
+    }
+
+    public MLApiRootBuilder withoutAuthCircuitBreaker() {
+        builder.withoutAuthCircuitBreaker();
+        return this;
+    }
+
+    public MLApiRootBuilder withAuthRetries(final int authRetries) {
+        builder.withAuthRetries(authRetries);
+        return this;
+    }
+
     public MLApiRootBuilder withHandlerStack(final HandlerStack stack) {
         builder.withHandlerStack(stack);
         return this;

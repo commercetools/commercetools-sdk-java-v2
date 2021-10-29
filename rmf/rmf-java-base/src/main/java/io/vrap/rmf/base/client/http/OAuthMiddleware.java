@@ -10,7 +10,11 @@ public interface OAuthMiddleware extends Middleware {
         return new OAuthMiddlewareImpl(oAuthHandler);
     }
 
-    static OAuthMiddleware of(final OAuthHandler oauthHandler, final Integer maxRetries) {
-        return new OAuthMiddlewareImpl(oauthHandler, maxRetries);
+    static OAuthMiddleware of(final OAuthHandler oauthHandler, final int maxRetries) {
+        return new OAuthMiddlewareImpl(oauthHandler, maxRetries, false);
+    }
+
+    static OAuthMiddleware of(final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        return new OAuthMiddlewareImpl(oauthHandler, maxRetries, useCircuitBreaker);
     }
 }

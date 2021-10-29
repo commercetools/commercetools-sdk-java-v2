@@ -28,6 +28,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     static final String userAgent = "commercetools-sdk-java-v2/";
 
     private URI apiBaseUrl;
+    private boolean useAuthCircuitBreaker;
+    private int authRetries;
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryMiddleware> retryMiddleware;
@@ -71,6 +73,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         ResponseSerializer serializer = ResponseSerializer.of();
         this.serializer = () -> serializer;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.useAuthCircuitBreaker = false;
+        this.authRetries = 1;
     }
 
     private ClientBuilder() {
@@ -79,6 +83,17 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         ResponseSerializer serializer = ResponseSerializer.of();
         this.serializer = () -> serializer;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.useAuthCircuitBreaker = false;
+        this.authRetries = 1;
+    }
+
+    private ClientBuilder(final VrapHttpClient httpClient) {
+        this.httpClient = httpClient;
+        this.stack = stackSupplier();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.authRetries = 1;
     }
 
     /**
@@ -98,12 +113,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         };
     }
 
-    private ClientBuilder(final VrapHttpClient httpClient) {
-        this.httpClient = httpClient;
-        this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
-        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+    public ClientBuilder withoutAuthCircuitBreaker() {
+        this.useAuthCircuitBreaker = false;
+        return this;
+    }
+
+    public ClientBuilder withAuthCircuitBreaker() {
+        this.useAuthCircuitBreaker = true;
+        return this;
+    }
+
+    public ClientBuilder withAuthRetries(final int authRetries) {
+        this.authRetries = authRetries;
+        return this;
     }
 
     public ClientBuilder withHandlerStack(final HandlerStack stack) {
@@ -315,7 +337,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
-        return withOAuthMiddleware(OAuthMiddleware.of(oAuthHandler));
+        return withOAuthMiddleware(() -> OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));
     }
 
     public ClientBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {

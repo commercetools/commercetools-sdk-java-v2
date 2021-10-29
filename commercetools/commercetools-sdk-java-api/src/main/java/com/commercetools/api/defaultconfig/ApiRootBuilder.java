@@ -42,6 +42,21 @@ public class ApiRootBuilder {
         return new ApiRootBuilder(ClientBuilder.of(stack));
     }
 
+    public ApiRootBuilder withAuthCircuitBreaker() {
+        builder.withAuthCircuitBreaker();
+        return this;
+    }
+
+    public ApiRootBuilder withoutAuthCircuitBreaker() {
+        builder.withoutAuthCircuitBreaker();
+        return this;
+    }
+
+    public ApiRootBuilder withAuthRetries(final int authRetries) {
+        builder.withAuthRetries(authRetries);
+        return this;
+    }
+
     public ApiRootBuilder withHandlerStack(final HandlerStack stack) {
         builder.withHandlerStack(stack);
         return this;

@@ -6,13 +6,12 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import net.jodah.failsafe.*;
+import net.jodah.failsafe.event.ExecutionAttemptedEvent;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
-
-import net.jodah.failsafe.event.ExecutionAttemptedEvent;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
@@ -42,8 +41,10 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                 })
                 .withMaxRetries(maxRetries);
         if (useCircuitBreaker) {
-            final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback.ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
-                        logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException", event.getLastFailure());
+            final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback
+                    .ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
+                        logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException",
+                            event.getLastFailure());
                         return new AuthException(400, "", null, "Project suspended", null, event.getLastFailure());
                     })
                     .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException);

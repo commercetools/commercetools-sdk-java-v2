@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.error;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;

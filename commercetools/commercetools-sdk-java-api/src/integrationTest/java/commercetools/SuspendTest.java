@@ -56,65 +56,65 @@ public class SuspendTest {
             projectApiRoot.get().executeBlocking();
         });
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(UnauthorizedException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
+        });
 
         testApiClient.sendRequest = false;
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(UnauthorizedException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
+        });
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(UnauthorizedException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
+        });
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(UnauthorizedException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(UnauthorizedException.class, CircuitBreakerOpenException.class);
+        });
 
         testAuthClient.suspended = true;
         testAuthClient.sendRequest = false;
 
         LOGGER.debug("Auth client suspended");
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(AuthException.class);
+        });
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(AuthException.class);
+        });
 
         LOGGER.debug("Unsuspended api client");
         testApiClient.suspended = false;
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(AuthException.class);
+        }).withNoCause();
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(AuthException.class);
+        }).withNoCause();
 
-        Assertions.assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        }).isInstanceOfAny(AuthException.class);
+        }).withNoCause();
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).withCauseInstanceOf(CircuitBreakerOpenException.class);
 
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).withCauseInstanceOf(CircuitBreakerOpenException.class);
 
         testAuthClient.suspended = false;
 
         LOGGER.debug("Unsuspended auth client");
-        Assertions.assertThatExceptionOfType(CircuitBreakerOpenException.class).isThrownBy(() -> {
+        Assertions.assertThatExceptionOfType(AuthException.class).isThrownBy(() -> {
             projectApiRoot.get().executeBlocking();
-        });
+        }).withCauseInstanceOf(CircuitBreakerOpenException.class);
         Thread.sleep(200);
         projectApiRoot.get().executeBlocking();
 

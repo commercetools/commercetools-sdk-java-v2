@@ -12,15 +12,14 @@ import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import net.jodah.failsafe.event.ExecutionAttemptedEvent;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
  */
 class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final OAuthHandler authHandler;
-    private static final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
+    private static final InternalLogger logger = InternalLogger.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public OAuthMiddlewareImpl(final OAuthHandler oAuthHandler) {
@@ -38,11 +37,17 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     return response.getStatusCode() == 401;
                 })
                 .onRetry(event -> {
-                    logger.debug("Refresh Bearer token #" + event.getAttemptCount());
+                    logger.debug(() -> "Refresh Bearer token #" + event.getAttemptCount());
                     authHandler.refreshToken();
                 })
                 .withMaxRetries(maxRetries);
         if (useCircuitBreaker) {
+            final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback.ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
+                        logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException", event.getLastFailure());
+                        return new AuthException(400, "", null, "Project suspended", null, event.getLastFailure());
+                    })
+                    .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException);
+
             final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<ApiHttpResponse<byte[]>>()
                     .handleIf((response, throwable) -> {
                         if (throwable.getCause() instanceof AuthException) {
@@ -52,12 +57,12 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     })
                     .withDelay((result, failure, context) -> Duration
                             .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
-                    .withFailureThreshold(5, Duration.ofSeconds(1))
+                    .withFailureThreshold(5, Duration.ofMinutes(1))
                     .withSuccessThreshold(2)
-                    .onClose(() -> logger.debug("The circuit breaker was closed"))
-                    .onOpen(() -> logger.debug("The circuit breaker was opened"))
-                    .onHalfOpen(() -> logger.debug("The circuit breaker was half-opened"));
-            this.failsafeExecutor = Failsafe.with(retry, circuitBreaker);
+                    .onClose(() -> logger.debug(() -> "The authentication circuit breaker was closed"))
+                    .onOpen(() -> logger.debug(() -> "The authentication circuit breaker was opened"))
+                    .onHalfOpen(() -> logger.debug(() -> "The authentication circuit breaker was half-opened"));
+            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker);
         }
         else {
             this.failsafeExecutor = Failsafe.with(retry);

@@ -18,4 +18,9 @@ public class AuthException extends ApiHttpException {
             final ApiHttpResponse<byte[]> response) {
         super(statusCode, body, headers, message, response);
     }
+
+    public AuthException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
+            final ApiHttpResponse<byte[]> response, Throwable cause) {
+        super(statusCode, body, headers, message, response, cause);
+    }
 }

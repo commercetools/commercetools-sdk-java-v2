@@ -24,7 +24,7 @@ class SrcInfoPlugin : Plugin<Project> {
         return try {
             Runtime.getRuntime().exec("git -C ${project.projectDir} rev-parse HEAD").inputStream.bufferedReader().readLine().orEmpty()
         } catch (e: IOException) {
-            ""
+            "main"
         }
     }
 

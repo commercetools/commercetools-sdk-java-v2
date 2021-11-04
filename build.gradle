@@ -263,6 +263,13 @@ subprojects { project ->
         buildInfoPackage = "io.vrap.rmf.base.client"
     }
 
+    srcInfo {
+        includePackages = [
+            "example",
+            "commercetools"
+        ]
+    }
+
     if (project.file("build.gradle").exists() && !excludeProjects.contains(project.name)) {
 
         publishing {

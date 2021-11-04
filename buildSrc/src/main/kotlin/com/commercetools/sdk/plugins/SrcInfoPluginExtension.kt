@@ -1,7 +1,10 @@
 package com.commercetools.sdk.plugins
 
-import java.io.File
+import org.gradle.api.provider.ListProperty
+import org.gradle.api.provider.Property
 
 interface SrcInfoPluginExtension {
-    val outputDir: File
+    val outputFolder: Property<String>
+    val includePackages: ListProperty<String>
+    val baseFolder: Property<String>
 }

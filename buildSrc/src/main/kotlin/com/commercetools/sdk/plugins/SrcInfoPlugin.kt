@@ -29,12 +29,14 @@ class SrcInfoPlugin : Plugin<Project> {
     }
 
     private fun createExportTask(project: Project) {
+        val extension = project.extensions.create("srcInfo", SrcInfoPluginExtension::class.java)
         val exportTask = project.task("exportSignatures")
         exportTask.group = "documentation"
         exportTask.doLast {
-            project.buildDir.resolve("src-info").mkdir()
-            val javaFiles = project.fileTree(mapOf("dir" to "src", "include" to "**/*.java")).files
-            val fileWriter: Writer = Files.newBufferedWriter(Paths.get(project.buildDir.toString(), "src-info", project.name + ".json"))
+            val outputFolder = extension.outputFolder.map { o -> Paths.get(o) }.getOrElse(project.buildDir.resolve("src-info").toPath())
+            outputFolder.toFile().mkdir()
+            val javaFiles = project.fileTree(mapOf("dir" to extension.baseFolder.getOrElse("src"), "include" to "**/*.java")).files
+            val fileWriter: Writer = Files.newBufferedWriter(outputFolder.resolve(project.name + ".json"))
             val writer = JsonWriter(fileWriter)
             val hash = gitHash(project)
             writer.setIndent("  ")
@@ -42,7 +44,7 @@ class SrcInfoPlugin : Plugin<Project> {
             writer.beginObject()
             javaFiles.forEach { file ->
                 run {
-                    javaFileInfo(file, project, hash).forEach { entry ->
+                    javaFileInfo(file, project, hash, extension.includePackages.orNull).forEach { entry ->
                         run {
                             writer.name(entry.key)
                             writer.beginObject()
@@ -61,9 +63,12 @@ class SrcInfoPlugin : Plugin<Project> {
         }
     }
 
-    private fun javaFileInfo(file: File, project: Project, hash: String):  Map<String, Map<String, String>> {
+    private fun javaFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?):  Map<String, Map<String, String>> {
         val parse: CompilationUnit = StaticJavaParser.parse(file)
         val relativeFile = file.relativeTo(project.rootDir)
+        if (includePackages != null && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
+            return emptyMap()
+        }
         val declarations = parse
                 .types
                 .filterIsInstance<ClassOrInterfaceDeclaration>()

@@ -80,7 +80,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     @NotNull
     @Valid
     @JsonProperty("value")
-    public CartDiscountValueDraft getValue();
+    public CartDiscountValue getValue();
 
     /**
     *  <p>A valid Cart predicate.</p>
@@ -165,7 +165,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
 
     public void setDescription(final LocalizedString description);
 
-    public void setValue(final CartDiscountValueDraft value);
+    public void setValue(final CartDiscountValue value);
 
     public void setCartPredicate(final String cartPredicate);
 

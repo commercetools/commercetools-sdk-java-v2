@@ -34,7 +34,7 @@ public class CartDiscountImpl implements CartDiscount {
 
     private com.commercetools.api.models.common.LocalizedString description;
 
-    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
 
     private String cartPredicate;
 
@@ -65,7 +65,7 @@ public class CartDiscountImpl implements CartDiscount {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("key") final String key,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value,
+            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
             @JsonProperty("cartPredicate") final String cartPredicate,
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target,
             @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive,
@@ -152,7 +152,7 @@ public class CartDiscountImpl implements CartDiscount {
         return this.description;
     }
 
-    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
+    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
         return this.value;
     }
 
@@ -258,7 +258,7 @@ public class CartDiscountImpl implements CartDiscount {
         this.description = description;
     }
 
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
         this.value = value;
     }
 

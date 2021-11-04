@@ -179,6 +179,8 @@ subprojects { project ->
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
+    apply plugin: 'srcinfo'
+
     group='com.commercetools.sdk'
 
     version = globalVersion

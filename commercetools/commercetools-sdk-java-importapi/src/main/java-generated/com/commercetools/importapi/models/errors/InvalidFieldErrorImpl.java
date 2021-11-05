@@ -30,14 +30,18 @@ public class InvalidFieldErrorImpl implements InvalidFieldError {
 
     private java.util.List<java.lang.Object> allowedValues;
 
+    private Long resourceIndex;
+
     @JsonCreator
     InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field,
             @JsonProperty("invalidValue") final java.lang.Object invalidValue,
-            @JsonProperty("allowedValues") final java.util.List<java.lang.Object> allowedValues) {
+            @JsonProperty("allowedValues") final java.util.List<java.lang.Object> allowedValues,
+            @JsonProperty("resourceIndex") final Long resourceIndex) {
         this.message = message;
         this.field = field;
         this.invalidValue = invalidValue;
         this.allowedValues = allowedValues;
+        this.resourceIndex = resourceIndex;
         this.code = INVALID_FIELD;
     }
 
@@ -74,6 +78,10 @@ public class InvalidFieldErrorImpl implements InvalidFieldError {
         return this.allowedValues;
     }
 
+    public Long getResourceIndex() {
+        return this.resourceIndex;
+    }
+
     public void setMessage(final String message) {
         this.message = message;
     }
@@ -94,6 +102,10 @@ public class InvalidFieldErrorImpl implements InvalidFieldError {
         this.allowedValues = allowedValues;
     }
 
+    public void setResourceIndex(final Long resourceIndex) {
+        this.resourceIndex = resourceIndex;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -109,6 +121,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError {
                 .append(field, that.field)
                 .append(invalidValue, that.invalidValue)
                 .append(allowedValues, that.allowedValues)
+                .append(resourceIndex, that.resourceIndex)
                 .isEquals();
     }
 
@@ -119,6 +132,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError {
                 .append(field)
                 .append(invalidValue)
                 .append(allowedValues)
+                .append(resourceIndex)
                 .toHashCode();
     }
 

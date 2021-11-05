@@ -43,6 +43,9 @@ public interface InvalidFieldError extends ErrorObject {
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
 
+    @JsonProperty("resourceIndex")
+    public Long getResourceIndex();
+
     public void setField(final String field);
 
     public void setInvalidValue(final Object invalidValue);
@@ -51,6 +54,8 @@ public interface InvalidFieldError extends ErrorObject {
     public void setAllowedValues(final Object... allowedValues);
 
     public void setAllowedValues(final List<Object> allowedValues);
+
+    public void setResourceIndex(final Long resourceIndex);
 
     public static InvalidFieldError of() {
         return new InvalidFieldErrorImpl();
@@ -62,6 +67,7 @@ public interface InvalidFieldError extends ErrorObject {
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
         instance.setAllowedValues(template.getAllowedValues());
+        instance.setResourceIndex(template.getResourceIndex());
         return instance;
     }
 

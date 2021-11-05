@@ -20,6 +20,9 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     @Nullable
     private java.util.List<java.lang.Object> allowedValues;
 
+    @Nullable
+    private Long resourceIndex;
+
     public InvalidFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
@@ -45,6 +48,11 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    public InvalidFieldErrorBuilder resourceIndex(@Nullable final Long resourceIndex) {
+        this.resourceIndex = resourceIndex;
+        return this;
+    }
+
     public String getMessage() {
         return this.message;
     }
@@ -62,18 +70,23 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this.allowedValues;
     }
 
+    @Nullable
+    public Long getResourceIndex() {
+        return this.resourceIndex;
+    }
+
     public InvalidFieldError build() {
         Objects.requireNonNull(message, InvalidFieldError.class + ": message is missing");
         Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");
         Objects.requireNonNull(invalidValue, InvalidFieldError.class + ": invalidValue is missing");
-        return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues);
+        return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues, resourceIndex);
     }
 
     /**
      * builds InvalidFieldError without checking for non null required values
      */
     public InvalidFieldError buildUnchecked() {
-        return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues);
+        return new InvalidFieldErrorImpl(message, field, invalidValue, allowedValues, resourceIndex);
     }
 
     public static InvalidFieldErrorBuilder of() {
@@ -86,6 +99,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         builder.field = template.getField();
         builder.invalidValue = template.getInvalidValue();
         builder.allowedValues = template.getAllowedValues();
+        builder.resourceIndex = template.getResourceIndex();
         return builder;
     }
 

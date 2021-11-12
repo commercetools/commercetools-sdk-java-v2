@@ -11,22 +11,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = CustomerCompanyNameSetMessageImpl.class)
-public interface CustomerCompanyNameSetMessage extends Message {
+@JsonDeserialize(as = CustomerTitleSetMessageImpl.class)
+public interface CustomerTitleSetMessage extends Message {
 
-    String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
+    String CUSTOMER_TITLE_SET = "CustomerTitleSet";
 
-    @JsonProperty("companyName")
-    public String getCompanyName();
+    @JsonProperty("title")
+    public String getTitle();
 
-    public void setCompanyName(final String companyName);
+    public void setTitle(final String title);
 
-    public static CustomerCompanyNameSetMessage of() {
-        return new CustomerCompanyNameSetMessageImpl();
+    public static CustomerTitleSetMessage of() {
+        return new CustomerTitleSetMessageImpl();
     }
 
-    public static CustomerCompanyNameSetMessage of(final CustomerCompanyNameSetMessage template) {
-        CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();
+    public static CustomerTitleSetMessage of(final CustomerTitleSetMessage template) {
+        CustomerTitleSetMessageImpl instance = new CustomerTitleSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -37,19 +37,19 @@ public interface CustomerCompanyNameSetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setCompanyName(template.getCompanyName());
+        instance.setTitle(template.getTitle());
         return instance;
     }
 
-    public static CustomerCompanyNameSetMessageBuilder builder() {
-        return CustomerCompanyNameSetMessageBuilder.of();
+    public static CustomerTitleSetMessageBuilder builder() {
+        return CustomerTitleSetMessageBuilder.of();
     }
 
-    public static CustomerCompanyNameSetMessageBuilder builder(final CustomerCompanyNameSetMessage template) {
-        return CustomerCompanyNameSetMessageBuilder.of(template);
+    public static CustomerTitleSetMessageBuilder builder(final CustomerTitleSetMessage template) {
+        return CustomerTitleSetMessageBuilder.of(template);
     }
 
-    default <T> T withCustomerCompanyNameSetMessage(Function<CustomerCompanyNameSetMessage, T> helper) {
+    default <T> T withCustomerTitleSetMessage(Function<CustomerTitleSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

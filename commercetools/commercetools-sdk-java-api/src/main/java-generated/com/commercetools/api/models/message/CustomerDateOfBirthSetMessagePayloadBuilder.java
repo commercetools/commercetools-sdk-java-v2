@@ -3,25 +3,28 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<CustomerDateOfBirthSetMessagePayload> {
 
+    @Nullable
     private java.time.LocalDate dateOfBirth;
 
-    public CustomerDateOfBirthSetMessagePayloadBuilder dateOfBirth(final java.time.LocalDate dateOfBirth) {
+    public CustomerDateOfBirthSetMessagePayloadBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
 
+    @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
 
     public CustomerDateOfBirthSetMessagePayload build() {
-        Objects.requireNonNull(dateOfBirth, CustomerDateOfBirthSetMessagePayload.class + ": dateOfBirth is missing");
         return new CustomerDateOfBirthSetMessagePayloadImpl(dateOfBirth);
     }
 

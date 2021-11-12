@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.fasterxml.jackson.annotation.*;
@@ -23,7 +22,6 @@ public interface CustomerGroupSetMessage extends Message {
     /**
     *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
-    @NotNull
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();

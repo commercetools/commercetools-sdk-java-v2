@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDateOfBirthSetMessage> {
+public class CustomerFirstNameSetMessageBuilder implements Builder<CustomerFirstNameSetMessage> {
 
     private String id;
 
@@ -36,68 +36,68 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     @Nullable
-    private java.time.LocalDate dateOfBirth;
+    private String firstName;
 
-    public CustomerDateOfBirthSetMessageBuilder id(final String id) {
+    public CustomerFirstNameSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder version(final Long version) {
+    public CustomerFirstNameSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public CustomerFirstNameSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public CustomerFirstNameSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder lastModifiedBy(
+    public CustomerFirstNameSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder lastModifiedBy(
+    public CustomerFirstNameSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder createdBy(
+    public CustomerFirstNameSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder createdBy(
+    public CustomerFirstNameSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public CustomerFirstNameSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public CustomerFirstNameSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder resourceVersion(final Long resourceVersion) {
+    public CustomerFirstNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder resourceUserProvidedIdentifiers(
+    public CustomerFirstNameSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -105,14 +105,14 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder resourceUserProvidedIdentifiers(
+    public CustomerFirstNameSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public CustomerFirstNameSetMessageBuilder firstName(@Nullable final String firstName) {
+        this.firstName = firstName;
         return this;
     }
 
@@ -160,36 +160,36 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
     }
 
     @Nullable
-    public java.time.LocalDate getDateOfBirth() {
-        return this.dateOfBirth;
+    public String getFirstName() {
+        return this.firstName;
     }
 
-    public CustomerDateOfBirthSetMessage build() {
-        Objects.requireNonNull(id, CustomerDateOfBirthSetMessage.class + ": id is missing");
-        Objects.requireNonNull(version, CustomerDateOfBirthSetMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, CustomerDateOfBirthSetMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, CustomerDateOfBirthSetMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, CustomerDateOfBirthSetMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, CustomerDateOfBirthSetMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, CustomerDateOfBirthSetMessage.class + ": resourceVersion is missing");
-        return new CustomerDateOfBirthSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, dateOfBirth);
+    public CustomerFirstNameSetMessage build() {
+        Objects.requireNonNull(id, CustomerFirstNameSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, CustomerFirstNameSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, CustomerFirstNameSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, CustomerFirstNameSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, CustomerFirstNameSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, CustomerFirstNameSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, CustomerFirstNameSetMessage.class + ": resourceVersion is missing");
+        return new CustomerFirstNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, firstName);
     }
 
     /**
-     * builds CustomerDateOfBirthSetMessage without checking for non null required values
+     * builds CustomerFirstNameSetMessage without checking for non null required values
      */
-    public CustomerDateOfBirthSetMessage buildUnchecked() {
-        return new CustomerDateOfBirthSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, dateOfBirth);
+    public CustomerFirstNameSetMessage buildUnchecked() {
+        return new CustomerFirstNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, firstName);
     }
 
-    public static CustomerDateOfBirthSetMessageBuilder of() {
-        return new CustomerDateOfBirthSetMessageBuilder();
+    public static CustomerFirstNameSetMessageBuilder of() {
+        return new CustomerFirstNameSetMessageBuilder();
     }
 
-    public static CustomerDateOfBirthSetMessageBuilder of(final CustomerDateOfBirthSetMessage template) {
-        CustomerDateOfBirthSetMessageBuilder builder = new CustomerDateOfBirthSetMessageBuilder();
+    public static CustomerFirstNameSetMessageBuilder of(final CustomerFirstNameSetMessage template) {
+        CustomerFirstNameSetMessageBuilder builder = new CustomerFirstNameSetMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
@@ -200,7 +200,7 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.dateOfBirth = template.getDateOfBirth();
+        builder.firstName = template.getFirstName();
         return builder;
     }
 

@@ -11,22 +11,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = CustomerCompanyNameSetMessageImpl.class)
-public interface CustomerCompanyNameSetMessage extends Message {
+@JsonDeserialize(as = CustomerLastNameSetMessageImpl.class)
+public interface CustomerLastNameSetMessage extends Message {
 
-    String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
+    String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
-    @JsonProperty("companyName")
-    public String getCompanyName();
+    @JsonProperty("lastName")
+    public String getLastName();
 
-    public void setCompanyName(final String companyName);
+    public void setLastName(final String lastName);
 
-    public static CustomerCompanyNameSetMessage of() {
-        return new CustomerCompanyNameSetMessageImpl();
+    public static CustomerLastNameSetMessage of() {
+        return new CustomerLastNameSetMessageImpl();
     }
 
-    public static CustomerCompanyNameSetMessage of(final CustomerCompanyNameSetMessage template) {
-        CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();
+    public static CustomerLastNameSetMessage of(final CustomerLastNameSetMessage template) {
+        CustomerLastNameSetMessageImpl instance = new CustomerLastNameSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -37,19 +37,19 @@ public interface CustomerCompanyNameSetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setCompanyName(template.getCompanyName());
+        instance.setLastName(template.getLastName());
         return instance;
     }
 
-    public static CustomerCompanyNameSetMessageBuilder builder() {
-        return CustomerCompanyNameSetMessageBuilder.of();
+    public static CustomerLastNameSetMessageBuilder builder() {
+        return CustomerLastNameSetMessageBuilder.of();
     }
 
-    public static CustomerCompanyNameSetMessageBuilder builder(final CustomerCompanyNameSetMessage template) {
-        return CustomerCompanyNameSetMessageBuilder.of(template);
+    public static CustomerLastNameSetMessageBuilder builder(final CustomerLastNameSetMessage template) {
+        return CustomerLastNameSetMessageBuilder.of(template);
     }
 
-    default <T> T withCustomerCompanyNameSetMessage(Function<CustomerCompanyNameSetMessage, T> helper) {
+    default <T> T withCustomerLastNameSetMessage(Function<CustomerLastNameSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

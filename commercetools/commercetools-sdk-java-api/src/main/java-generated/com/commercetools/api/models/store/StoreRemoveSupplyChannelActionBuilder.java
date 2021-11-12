@@ -4,12 +4,15 @@ package com.commercetools.api.models.store;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemoveSupplyChannelAction> {
 
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
@@ -20,17 +23,17 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     }
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
 
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     public StoreRemoveSupplyChannelAction build() {
-        Objects.requireNonNull(supplyChannel, StoreRemoveSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreRemoveSupplyChannelActionImpl(supplyChannel);
     }
 

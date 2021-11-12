@@ -46,6 +46,8 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
 
     private Long newAvailableQuantity;
 
+    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
+
     @JsonCreator
     InventoryEntryQuantitySetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -60,7 +62,8 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
             @JsonProperty("oldQuantityOnStock") final Long oldQuantityOnStock,
             @JsonProperty("newQuantityOnStock") final Long newQuantityOnStock,
             @JsonProperty("oldAvailableQuantity") final Long oldAvailableQuantity,
-            @JsonProperty("newAvailableQuantity") final Long newAvailableQuantity) {
+            @JsonProperty("newAvailableQuantity") final Long newAvailableQuantity,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -75,6 +78,7 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
         this.newQuantityOnStock = newQuantityOnStock;
         this.oldAvailableQuantity = oldAvailableQuantity;
         this.newAvailableQuantity = newAvailableQuantity;
+        this.supplyChannel = supplyChannel;
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
 
@@ -148,6 +152,10 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
         return this.newAvailableQuantity;
     }
 
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -205,6 +213,10 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
         this.newAvailableQuantity = newAvailableQuantity;
     }
 
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+        this.supplyChannel = supplyChannel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -230,6 +242,7 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
                 .append(newQuantityOnStock, that.newQuantityOnStock)
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -250,6 +263,7 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
                 .append(newQuantityOnStock)
                 .append(oldAvailableQuantity)
                 .append(newAvailableQuantity)
+                .append(supplyChannel)
                 .toHashCode();
     }
 

@@ -58,7 +58,7 @@ public interface LineItemImportDraft {
     public List<ItemState> getState();
 
     /**
-    *  <p>Optional connection to a particular supplier.
+    *  <p>Connection to a particular supplier.
     *  By providing supply channel information, you can uniquely identify
     *  inventory entries that should be reserved.
     *  The provided channel should have the

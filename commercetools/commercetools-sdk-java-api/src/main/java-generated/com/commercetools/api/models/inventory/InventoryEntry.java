@@ -61,7 +61,7 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public String getSku();
 
     /**
-    *  <p>Optional connection to a particular supplier.</p>
+    *  <p>Connection to a particular supplier.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")

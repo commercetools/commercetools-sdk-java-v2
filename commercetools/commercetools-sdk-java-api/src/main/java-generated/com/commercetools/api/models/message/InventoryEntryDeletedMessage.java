@@ -24,7 +24,6 @@ public interface InventoryEntryDeletedMessage extends Message {
     @JsonProperty("sku")
     public String getSku();
 
-    @NotNull
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();

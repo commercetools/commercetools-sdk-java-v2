@@ -43,6 +43,9 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
 
     private Long newAvailableQuantity;
 
+    @Nullable
+    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
+
     public InventoryEntryQuantitySetMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -137,6 +140,18 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
         return this;
     }
 
+    public InventoryEntryQuantitySetMessageBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public InventoryEntryQuantitySetMessageBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -196,6 +211,11 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
         return this.newAvailableQuantity;
     }
 
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
     public InventoryEntryQuantitySetMessage build() {
         Objects.requireNonNull(id, InventoryEntryQuantitySetMessage.class + ": id is missing");
         Objects.requireNonNull(version, InventoryEntryQuantitySetMessage.class + ": version is missing");
@@ -215,7 +235,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
             InventoryEntryQuantitySetMessage.class + ": newAvailableQuantity is missing");
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
-            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);
+            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
     }
 
     /**
@@ -224,7 +244,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     public InventoryEntryQuantitySetMessage buildUnchecked() {
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
-            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);
+            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
     }
 
     public static InventoryEntryQuantitySetMessageBuilder of() {
@@ -247,6 +267,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
         builder.newQuantityOnStock = template.getNewQuantityOnStock();
         builder.oldAvailableQuantity = template.getOldAvailableQuantity();
         builder.newAvailableQuantity = template.getNewAvailableQuantity();
+        builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }
 

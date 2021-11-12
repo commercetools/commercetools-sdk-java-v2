@@ -111,7 +111,7 @@ public class InventoryEntryImpl implements InventoryEntry {
     }
 
     /**
-    *  <p>Optional connection to a particular supplier.</p>
+    *  <p>Connection to a particular supplier.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;

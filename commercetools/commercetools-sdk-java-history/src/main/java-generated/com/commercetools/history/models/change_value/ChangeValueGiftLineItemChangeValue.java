@@ -36,7 +36,6 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     @JsonProperty("variantId")
     public Integer getVariantId();
 
-    @NotNull
     @Valid
     @JsonProperty("supplyChannel")
     public Reference getSupplyChannel();

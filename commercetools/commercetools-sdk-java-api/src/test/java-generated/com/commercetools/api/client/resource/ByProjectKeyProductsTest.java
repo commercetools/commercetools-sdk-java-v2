@@ -45,7 +45,7 @@ public class ByProjectKeyProductsTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
@@ -56,7 +56,7 @@ public class ByProjectKeyProductsTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
@@ -128,6 +128,8 @@ public class ByProjectKeyProductsTest {
                         .withPredicateVar("varName", "var.varName")
                         .createHttpRequest(), "get", "/test_projectKey/products?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().createHttpRequest(), "get",
+                        "/test_projectKey/products", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").products().head().createHttpRequest(), "head",
                         "/test_projectKey/products", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -206,6 +208,7 @@ public class ByProjectKeyProductsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").products().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(null)

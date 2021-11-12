@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FacetResultsBuilder implements Builder<FacetResults> {
+public class FacetResultsBuilder implements Builder<FacetResults> {
 
     private Map<String, com.commercetools.api.models.product.FacetResult> values = new HashMap<>();
 

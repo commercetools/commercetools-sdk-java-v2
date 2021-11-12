@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentReferenceImpl implements PaymentReference {
+public class PaymentReferenceImpl implements PaymentReference {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 
@@ -39,6 +39,9 @@ public final class PaymentReferenceImpl implements PaymentReference {
         return this.typeId;
     }
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
     public String getId() {
         return this.id;
     }

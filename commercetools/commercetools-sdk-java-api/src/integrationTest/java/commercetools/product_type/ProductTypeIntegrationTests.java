@@ -24,7 +24,7 @@ public class ProductTypeIntegrationTests {
     @Test
     public void getById() {
         ProductTypeFixtures.withProductType(productType -> {
-            ProductType queriedProductType = CommercetoolsTestUtils.getProjectRoot()
+            ProductType queriedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withId(productType.getId())
                     .get()
@@ -39,7 +39,7 @@ public class ProductTypeIntegrationTests {
     @Test
     public void getByKey() {
         ProductTypeFixtures.withProductType(productType -> {
-            ProductType queriedProductType = CommercetoolsTestUtils.getProjectRoot()
+            ProductType queriedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withKey(productType.getKey())
                     .get()
@@ -54,7 +54,7 @@ public class ProductTypeIntegrationTests {
     @Test
     public void query() {
         ProductTypeFixtures.withProductType(productType -> {
-            ProductTypePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ProductTypePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .get()
                     .withWhere("id=" + "\"" + productType.getId() + "\"")
@@ -72,7 +72,7 @@ public class ProductTypeIntegrationTests {
             List<ProductTypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductTypeSetKeyActionBuilder.of().key(newKey).build());
-            ProductType updatedProductType = CommercetoolsTestUtils.getProjectRoot()
+            ProductType updatedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withId(productType.getId())
                     .post(
@@ -93,7 +93,7 @@ public class ProductTypeIntegrationTests {
             List<ProductTypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductTypeSetKeyActionBuilder.of().key(newKey).build());
-            ProductType updatedProductType = CommercetoolsTestUtils.getProjectRoot()
+            ProductType updatedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withKey(productType.getKey())
                     .post(
@@ -111,7 +111,7 @@ public class ProductTypeIntegrationTests {
     @Test
     public void deleteByKey() {
         ProductType productType = ProductTypeFixtures.createProductType();
-        ProductType deletedProductType = CommercetoolsTestUtils.getProjectRoot()
+        ProductType deletedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                 .productTypes()
                 .withKey(productType.getKey())
                 .delete()

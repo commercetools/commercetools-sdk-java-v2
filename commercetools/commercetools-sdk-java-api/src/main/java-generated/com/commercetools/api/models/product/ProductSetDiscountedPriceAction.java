@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.common.DiscountedPriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -29,13 +29,13 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
     @Valid
     @JsonProperty("discounted")
-    public DiscountedPrice getDiscounted();
+    public DiscountedPriceDraft getDiscounted();
 
     public void setPriceId(final String priceId);
 
     public void setStaged(final Boolean staged);
 
-    public void setDiscounted(final DiscountedPrice discounted);
+    public void setDiscounted(final DiscountedPriceDraft discounted);
 
     public static ProductSetDiscountedPriceAction of() {
         return new ProductSetDiscountedPriceActionImpl();

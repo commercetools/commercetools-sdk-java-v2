@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSetDiscountedPriceAction> {
+public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSetDiscountedPriceAction> {
 
     private String priceId;
 
@@ -18,7 +18,7 @@ public final class ProductSetDiscountedPriceActionBuilder implements Builder<Pro
     private Boolean staged;
 
     @Nullable
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
@@ -31,13 +31,13 @@ public final class ProductSetDiscountedPriceActionBuilder implements Builder<Pro
     }
 
     public ProductSetDiscountedPriceActionBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
-        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
 
     public ProductSetDiscountedPriceActionBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
         return this;
     }
@@ -52,7 +52,7 @@ public final class ProductSetDiscountedPriceActionBuilder implements Builder<Pro
     }
 
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 

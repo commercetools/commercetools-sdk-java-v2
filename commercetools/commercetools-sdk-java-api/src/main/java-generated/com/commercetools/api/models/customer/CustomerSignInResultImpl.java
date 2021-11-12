@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerSignInResultImpl implements CustomerSignInResult {
+public class CustomerSignInResultImpl implements CustomerSignInResult {
 
     private com.commercetools.api.models.customer.Customer customer;
 

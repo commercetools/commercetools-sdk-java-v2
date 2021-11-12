@@ -105,7 +105,7 @@ public class ProductFixtures {
                             .build())
                 .build();
 
-        ProductType productType = CommercetoolsTestUtils.getProjectRoot()
+        ProductType productType = CommercetoolsTestUtils.getProjectApiRoot()
                 .productTypes()
                 .post(productTypeDraft)
                 .executeBlocking()
@@ -119,7 +119,7 @@ public class ProductFixtures {
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
         Channel channel = ChannelFixtures.createChannel();
 
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .get()
                 .withWhere("sortOrder=\"0.3\"")
@@ -129,7 +129,7 @@ public class ProductFixtures {
         if (existing.getCount() != 0) {
             String productDiscountId = existing.getResults().get(0).getId();
             Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getProjectRoot()
+            CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
@@ -146,7 +146,7 @@ public class ProductFixtures {
                 .isActive(true)
                 .build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking()
@@ -157,7 +157,7 @@ public class ProductFixtures {
                 .country("DE")
                 .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
                 .channel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
-                .discounted(DiscountedPriceBuilder.of()
+                .discounted(DiscountedPriceDraftBuilder.of()
                         .value(CentPrecisionMoneyDraftBuilder.of().centAmount(200L).currencyCode("EUR").build())
                         .discount(ProductDiscountReferenceBuilder.of().id(productDiscount.getId()).build())
                         .build())
@@ -204,7 +204,7 @@ public class ProductFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .build();
 
-        State state = CommercetoolsTestUtils.getProjectRoot().states().post(stateDraft).executeBlocking().getBody();
+        State state = CommercetoolsTestUtils.getProjectApiRoot().states().post(stateDraft).executeBlocking().getBody();
 
         ProductDraft productDraft = ProductDraftBuilder.of()
                 .key(randomKey)
@@ -223,7 +223,7 @@ public class ProductFixtures {
                 .publish(false)
                 .build();
 
-        Product product = CommercetoolsTestUtils.getProjectRoot()
+        Product product = CommercetoolsTestUtils.getProjectApiRoot()
                 .products()
                 .post(productDraft)
                 .executeBlocking()
@@ -239,7 +239,7 @@ public class ProductFixtures {
         try {
             rProduct = CompletableFuture.completedFuture(product).thenComposeAsync(product1 -> {
                 if (product1.getMasterData().getPublished()) {
-                    return CommercetoolsTestUtils.getProjectRoot()
+                    return CommercetoolsTestUtils.getProjectApiRoot()
                             .products()
                             .withId(product1.getId())
                             .post(ProductUpdateBuilder.of()
@@ -251,7 +251,7 @@ public class ProductFixtures {
                 }
                 return CompletableFuture.completedFuture(product1);
             })
-                    .thenComposeAsync(product1 -> CommercetoolsTestUtils.getProjectRoot()
+                    .thenComposeAsync(product1 -> CommercetoolsTestUtils.getProjectApiRoot()
                             .products()
                             .withId(product1.getId())
                             .delete()
@@ -260,7 +260,7 @@ public class ProductFixtures {
                     .get()
                     .getBody();
         }
-        catch (Exception e) {
+        catch (Exception ignored) {
         }
 
         Assert.assertNotNull(rProduct);
@@ -271,7 +271,7 @@ public class ProductFixtures {
     public static Product deleteProductById(final String id, final Long version) {
         Product product = null;
         try {
-            product = CommercetoolsTestUtils.getProjectRoot()
+            product = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withId(id)
                     .get()
@@ -279,7 +279,7 @@ public class ProductFixtures {
                     .thenComposeAsync(productApiHttpResponse -> {
                         Product product1 = productApiHttpResponse.getBody();
                         if (product1.getMasterData().getPublished()) {
-                            return CommercetoolsTestUtils.getProjectRoot()
+                            return CommercetoolsTestUtils.getProjectApiRoot()
                                     .products()
                                     .withId(product1.getId())
                                     .post(ProductUpdateBuilder.of()
@@ -290,7 +290,7 @@ public class ProductFixtures {
                         }
                         return CompletableFuture.completedFuture(productApiHttpResponse);
                     })
-                    .thenComposeAsync(productApiHttpResponse -> CommercetoolsTestUtils.getProjectRoot()
+                    .thenComposeAsync(productApiHttpResponse -> CommercetoolsTestUtils.getProjectApiRoot()
                             .products()
                             .withId(productApiHttpResponse.getBody().getId())
                             .delete()
@@ -308,7 +308,7 @@ public class ProductFixtures {
     }
 
     public static Product deleteProductByKey(final String key, final Long version) {
-        Product product = CommercetoolsTestUtils.getProjectRoot()
+        Product product = CommercetoolsTestUtils.getProjectApiRoot()
                 .products()
                 .withKey(key)
                 .delete()

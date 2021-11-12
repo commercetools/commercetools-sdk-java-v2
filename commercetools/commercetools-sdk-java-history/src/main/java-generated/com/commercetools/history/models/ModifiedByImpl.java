@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <a href="/types#lastmodifiedby">LastModifiedBy</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ModifiedByImpl implements ModifiedBy {
+public class ModifiedByImpl implements ModifiedBy {
 
     private String id;
 

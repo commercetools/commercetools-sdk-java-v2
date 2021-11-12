@@ -22,7 +22,7 @@ public class CustomerIntegrationTests {
     @Test
     public void getById() {
         CustomerFixtures.withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getProjectRoot()
+            Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withId(customer.getId())
                     .get()
@@ -37,7 +37,7 @@ public class CustomerIntegrationTests {
     @Test
     public void getByKey() {
         CustomerFixtures.withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getProjectRoot()
+            Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withKey(customer.getKey())
                     .get()
@@ -52,7 +52,7 @@ public class CustomerIntegrationTests {
     @Test
     public void query() {
         CustomerFixtures.withCustomer(customer -> {
-            CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .get()
                     .withWhere("id=" + "\"" + customer.getId() + "\"")
@@ -71,7 +71,7 @@ public class CustomerIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
 
-            Customer updatedCustomer = CommercetoolsTestUtils.getProjectRoot()
+            Customer updatedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withId(customer.getId())
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
@@ -92,7 +92,7 @@ public class CustomerIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
 
-            Customer updatedCustomer = CommercetoolsTestUtils.getProjectRoot()
+            Customer updatedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withKey(customer.getKey())
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
@@ -109,7 +109,7 @@ public class CustomerIntegrationTests {
     @Test
     public void deleteByKey() {
         Customer customer = CustomerFixtures.createCustomer();
-        Customer deletedCustomer = CommercetoolsTestUtils.getProjectRoot()
+        Customer deletedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                 .customers()
                 .withKey(customer.getKey())
                 .delete()

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemImportDraftImpl implements LineItemImportDraft {
+public class LineItemImportDraftImpl implements LineItemImportDraft {
 
     private String productId;
 
@@ -24,7 +24,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
     private com.commercetools.api.models.common.PriceDraft price;
 
-    private Double quantity;
+    private Long quantity;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
@@ -43,7 +43,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("variant") final com.commercetools.api.models.order.ProductVariantImportDraft variant,
             @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
-            @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
@@ -89,7 +89,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
         return this.price;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -147,7 +147,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
         this.price = price;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

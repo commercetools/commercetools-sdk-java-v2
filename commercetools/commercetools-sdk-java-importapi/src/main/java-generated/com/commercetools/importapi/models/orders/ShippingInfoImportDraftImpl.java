@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft {
+public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft {
 
     private String shippingMethodName;
 
@@ -82,14 +82,14 @@ public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraf
     }
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
     }
 
     /**
-    *  <p>References a shipping method by its key.</p>
+    *  <p>References a shipping method by key.</p>
     */
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {
         return this.shippingMethod;

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
+public class CustomLineItemDraftImpl implements CustomLineItemDraft {
 
     private com.commercetools.importapi.models.common.LocalizedString name;
 
@@ -112,7 +112,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     }
 
     /**
-    *  <p>References a tax category by its key.</p>
+    *  <p>References a tax category by key.</p>
     */
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;

@@ -14,7 +14,7 @@ import org.junit.Assert;
 
 public class CartsFixtures {
     public static Cart deleteCart(final String id, final Long version) {
-        Cart cart = CommercetoolsTestUtils.getProjectRoot()
+        Cart cart = CommercetoolsTestUtils.getProjectApiRoot()
                 .carts()
                 .withId(id)
                 .delete()
@@ -59,7 +59,7 @@ public class CartsFixtures {
     }
 
     public static Cart createCart(final CartDraft cartDraft) {
-        Cart cart = CommercetoolsTestUtils.getProjectRoot().carts().post(cartDraft).executeBlocking().getBody();
+        Cart cart = CommercetoolsTestUtils.getProjectApiRoot().carts().post(cartDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(cart);
         Assert.assertEquals(cart.getCountry(), cartDraft.getCountry());

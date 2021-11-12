@@ -19,7 +19,7 @@ public class InventoryIntegrationTests {
                 .quantityOnStock(10L)
                 .build();
 
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                 .inventory()
                 .post(inventoryEntryDraft)
                 .executeBlocking()
@@ -29,7 +29,7 @@ public class InventoryIntegrationTests {
         Assert.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
         Assert.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
 
-        InventoryEntry deletedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+        InventoryEntry deletedInventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                 .inventory()
                 .withId(inventoryEntry.getId())
                 .delete()
@@ -43,7 +43,7 @@ public class InventoryIntegrationTests {
     @Test
     public void getById() {
         InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
-            InventoryEntry queriedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+            InventoryEntry queriedInventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .withId(inventoryEntry.getId())
                     .get()
@@ -57,7 +57,7 @@ public class InventoryIntegrationTests {
     @Test
     public void query() {
         InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
-            InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectRoot()
+            InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .get()
                     .withWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
@@ -74,7 +74,7 @@ public class InventoryIntegrationTests {
             List<InventoryEntryUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(InventoryEntrySetRestockableInDaysActionBuilder.of().restockableInDays(10L).build());
 
-            InventoryEntry updatedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+            InventoryEntry updatedInventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .withId(inventoryEntry.getId())
                     .post(InventoryEntryUpdateBuilder.of()

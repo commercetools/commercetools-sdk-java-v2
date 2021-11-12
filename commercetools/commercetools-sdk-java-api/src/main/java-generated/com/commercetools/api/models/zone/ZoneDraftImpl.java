@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneDraftImpl implements ZoneDraft {
+public class ZoneDraftImpl implements ZoneDraft {
 
     private String key;
 
@@ -38,22 +38,29 @@ public final class ZoneDraftImpl implements ZoneDraft {
     }
 
     /**
-    *  <p>User-specific unique identifier for a zone.
-    *  Must be unique across a project.
-    *  The field can be reset using the Set Key UpdateAction.</p>
+    *  <p>User-defined unique identifier for the Zone.</p>
     */
     public String getKey() {
         return this.key;
     }
 
+    /**
+    *  <p>Name of the Zone.</p>
+    */
     public String getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the Zone.</p>
+    */
     public String getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
         return this.locations;
     }

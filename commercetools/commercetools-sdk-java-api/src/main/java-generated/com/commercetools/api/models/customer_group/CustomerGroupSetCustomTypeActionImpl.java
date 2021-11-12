@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  If present, this action overwrites any existing <a href="/../api/projects/custom-fields#custom">custom</a> type and fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCustomTypeAction {
+public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCustomTypeAction {
 
     private String action;
 

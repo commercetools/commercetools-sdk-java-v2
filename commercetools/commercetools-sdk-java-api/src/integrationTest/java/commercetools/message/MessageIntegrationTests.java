@@ -17,7 +17,7 @@ public class MessageIntegrationTests {
         Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
 
-        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                 .messages()
                 .get()
                 .executeBlocking()
@@ -32,14 +32,14 @@ public class MessageIntegrationTests {
         Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
 
-        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                 .messages()
                 .get()
                 .executeBlocking()
                 .getBody();
 
         String messageId = response.getResults().get(0).getId();
-        Message message = CommercetoolsTestUtils.getProjectRoot()
+        Message message = CommercetoolsTestUtils.getProjectApiRoot()
                 .messages()
                 .withId(messageId)
                 .get()

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This type represents an attribute whose value is a key reference.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ReferenceAttributeImpl implements ReferenceAttribute {
+public class ReferenceAttributeImpl implements ReferenceAttribute {
 
     private String name;
 
@@ -51,7 +51,7 @@ public final class ReferenceAttributeImpl implements ReferenceAttribute {
     }
 
     /**
-    *  <p>References a resource by its key.</p>
+    *  <p>References a resource by key.</p>
     */
     public com.commercetools.importapi.models.common.KeyReference getValue() {
         return this.value;

@@ -31,7 +31,7 @@ public class CartDiscountFixtures {
                 .permyriad(10L)
                 .build();
 
-        List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getProjectRoot()
+        List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
                 .get()
                 .withWhere("sortOrder=\"0.41\"")
@@ -58,7 +58,7 @@ public class CartDiscountFixtures {
                 .stackingMode(StackingMode.STACKING)
                 .build();
 
-        CartDiscount cartDiscount = CommercetoolsTestUtils.getProjectRoot()
+        CartDiscount cartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
                 .post(cartDiscountDraft)
                 .executeBlocking()
@@ -71,7 +71,7 @@ public class CartDiscountFixtures {
     }
 
     public static CartDiscount deleteCartDiscount(final String id, final Long version) {
-        CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getProjectRoot()
+        CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
                 .withId(id)
                 .delete()

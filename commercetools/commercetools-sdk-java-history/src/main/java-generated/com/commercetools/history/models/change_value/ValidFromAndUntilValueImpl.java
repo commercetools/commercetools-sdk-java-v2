@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue {
+public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue {
 
     private String validFrom;
 

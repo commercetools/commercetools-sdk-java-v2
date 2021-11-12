@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus {
+public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 

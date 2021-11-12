@@ -14,10 +14,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a product by its key.</p>
+*  <p>References a product by key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductKeyReferenceImpl implements ProductKeyReference {
+public class ProductKeyReferenceImpl implements ProductKeyReference {
 
     private String key;
 

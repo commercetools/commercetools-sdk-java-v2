@@ -4,19 +4,17 @@ package commercetools.utils;
 import java.time.Duration;
 import java.util.UUID;
 
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 
-import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {
 
-    private static final ApiHttpClient client;
-    private static final ByProjectKeyRequestBuilder projectRoot;
+    private static final ProjectApiRoot projectApiRoot;
 
     static {
         ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
@@ -29,8 +27,7 @@ public class CommercetoolsTestUtils {
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     authURL, apiUrl);
-        client = builder.buildClient();
-        projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
+        projectApiRoot = builder.build(getProjectKey());
     }
 
     public static String randomString() {
@@ -63,12 +60,8 @@ public class CommercetoolsTestUtils {
         return System.getenv("CTP_CLIENT_SECRET");
     }
 
-    public static ByProjectKeyRequestBuilder getProjectRoot() {
-        return projectRoot;
-    }
-
-    public static ApiHttpClient getClient() {
-        return client;
+    public static ProjectApiRoot getProjectApiRoot() {
+        return projectApiRoot;
     }
 
     public static void assertEventually(final Duration maxWaitTime, final Duration waitBeforeRetry,

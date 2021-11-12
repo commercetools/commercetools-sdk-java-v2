@@ -67,6 +67,9 @@ public interface Reference {
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

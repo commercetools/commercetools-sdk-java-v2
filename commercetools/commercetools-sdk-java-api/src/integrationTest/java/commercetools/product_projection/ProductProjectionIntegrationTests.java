@@ -18,7 +18,7 @@ public class ProductProjectionIntegrationTests {
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
-            ProductProjection productProjection = CommercetoolsTestUtils.getProjectRoot()
+            ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withId(product.getId())
                     .get()
@@ -33,7 +33,7 @@ public class ProductProjectionIntegrationTests {
     @Test
     public void getByKey() {
         ProductFixtures.withProduct(product -> {
-            ProductProjection productProjection = CommercetoolsTestUtils.getProjectRoot()
+            ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withKey(product.getKey())
                     .get()
@@ -49,7 +49,7 @@ public class ProductProjectionIntegrationTests {
     public void query() {
         ProductFixtures.withProduct(product -> {
             ProductProjectionPagedQueryResponse productProjectionPagedQueryResponse = CommercetoolsTestUtils
-                    .getProjectRoot()
+                    .getProjectApiRoot()
                     .productProjections()
                     .get()
                     .withStaged(true)
@@ -64,7 +64,7 @@ public class ProductProjectionIntegrationTests {
     @Test
     public void search() {
         ProductFixtures.withProduct(product -> {
-            ProductProjectionPagedSearchResponse searchResponse = CommercetoolsTestUtils.getProjectRoot()
+            ProductProjectionPagedSearchResponse searchResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .search()
                     .get()
@@ -81,7 +81,7 @@ public class ProductProjectionIntegrationTests {
     @Test
     public void attribute() {
         ProductFixtures.withProduct(product -> {
-            ProductProjection productProjection = CommercetoolsTestUtils.getProjectRoot()
+            ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withKey(product.getKey())
                     .get()

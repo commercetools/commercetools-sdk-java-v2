@@ -37,6 +37,21 @@ public class ImportApiRootBuilder {
         return new ImportApiRootBuilder(ClientBuilder.of(stack));
     }
 
+    public ImportApiRootBuilder withAuthCircuitBreaker() {
+        builder.withAuthCircuitBreaker();
+        return this;
+    }
+
+    public ImportApiRootBuilder withoutAuthCircuitBreaker() {
+        builder.withoutAuthCircuitBreaker();
+        return this;
+    }
+
+    public ImportApiRootBuilder withAuthRetries(final int authRetries) {
+        builder.withAuthRetries(authRetries);
+        return this;
+    }
+
     public ImportApiRootBuilder withHandlerStack(final HandlerStack stack) {
         builder.withHandlerStack(stack);
         return this;

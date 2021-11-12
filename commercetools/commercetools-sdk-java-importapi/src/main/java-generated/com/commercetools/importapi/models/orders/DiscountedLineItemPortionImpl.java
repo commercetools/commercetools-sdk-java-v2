@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion {
+public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion {
 
     private com.commercetools.importapi.models.common.CartDiscountKeyReference discount;
 
@@ -32,7 +32,7 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
     }
 
     /**
-    *  <p>References a cart discount by its key.</p>
+    *  <p>References a cart discount by key.</p>
     */
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
         return this.discount;

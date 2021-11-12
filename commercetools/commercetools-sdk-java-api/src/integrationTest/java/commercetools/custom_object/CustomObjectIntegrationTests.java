@@ -29,7 +29,7 @@ public class CustomObjectIntegrationTests {
     @Test
     public void getByContainerKey() {
         CustomObjectFixtures.withCustomObject(customObject -> {
-            CustomObject queriedCustomObject = CommercetoolsTestUtils.getProjectRoot()
+            CustomObject queriedCustomObject = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .withContainerAndKey(customObject.getContainer(), customObject.getKey())
                     .get()
@@ -50,7 +50,7 @@ public class CustomObjectIntegrationTests {
                     .value((ValueObject) () -> "foo")
                     .build();
 
-            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
+            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .post(customObjectDraft)
                     .executeBlocking()
@@ -72,7 +72,7 @@ public class CustomObjectIntegrationTests {
                     .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "foo"))
                     .build();
 
-            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
+            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .post(customObjectDraft)
                     .executeBlocking()
@@ -88,7 +88,7 @@ public class CustomObjectIntegrationTests {
     @Test
     public void query() {
         CustomObjectFixtures.withCustomObject(customObject -> {
-            CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .get()
                     .withWhere("id=" + "\"" + customObject.getId() + "\"")

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  They are optimized for incremental updates and therefore have a slightly different structure.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportResourceImpl implements ImportResource {
+public class ImportResourceImpl implements ImportResource {
 
     private String key;
 

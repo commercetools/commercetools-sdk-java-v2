@@ -53,14 +53,16 @@ public class ByProjectKeyOrdersEditsKeyByKeyGet
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.order_edit.OrderEdit.class), request,
-            timeout);
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.order_edit.OrderEdit.class).toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

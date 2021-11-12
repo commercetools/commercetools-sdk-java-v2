@@ -45,7 +45,7 @@ public class ByProjectKeyByResourceTypeTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
@@ -56,7 +56,7 @@ public class ByProjectKeyByResourceTypeTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
@@ -126,6 +126,13 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges"))
+                        .createHttpRequest(), "get",
+                        "/test_projectKey/test_resourceType?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
                         .withExpand(true)
                         .createHttpRequest(), "get", "/test_projectKey/test_resourceType?expand=true", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -180,6 +187,11 @@ public class ByProjectKeyByResourceTypeTest {
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()

@@ -14,8 +14,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p><a href="/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Zone">Zone</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier {
+public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 
@@ -38,10 +41,16 @@ public final class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier 
         return this.typeId;
     }
 
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:Zone">Zone</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>Unique key of the referenced <a href="ctp:api:type:Zone">Zone</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
     public String getKey() {
         return this.key;
     }

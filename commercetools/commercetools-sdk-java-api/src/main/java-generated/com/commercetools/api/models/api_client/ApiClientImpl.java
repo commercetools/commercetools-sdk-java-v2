@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ApiClientImpl implements ApiClient {
+public class ApiClientImpl implements ApiClient {
 
     private String id;
 
@@ -22,59 +22,64 @@ public final class ApiClientImpl implements ApiClient {
 
     private String scope;
 
-    private java.time.ZonedDateTime createdAt;
+    private String secret;
 
     private java.time.LocalDate lastUsedAt;
 
     private java.time.ZonedDateTime deleteAt;
 
-    private String secret;
+    private java.time.ZonedDateTime createdAt;
 
     @JsonCreator
     ApiClientImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
-            @JsonProperty("scope") final String scope,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
+            @JsonProperty("scope") final String scope, @JsonProperty("secret") final String secret,
             @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt,
             @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt,
-            @JsonProperty("secret") final String secret) {
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.scope = scope;
-        this.createdAt = createdAt;
+        this.secret = secret;
         this.lastUsedAt = lastUsedAt;
         this.deleteAt = deleteAt;
-        this.secret = secret;
+        this.createdAt = createdAt;
     }
 
     public ApiClientImpl() {
     }
 
     /**
-    *  <p>The unique ID of the API client.
-    *  This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
+    *  <p>Unique ID of the API client.
+    *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>Name of the API Client.</p>
+    */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>A whitespace separated list of the OAuth scopes.
-    *  This is the OAuth2 <code>scope</code> and can be used to obtain a token.</p>
+    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
     */
     public String getScope() {
         return this.scope;
     }
 
-    public java.time.ZonedDateTime getCreatedAt() {
-        return this.createdAt;
+    /**
+    *  <p>Only shown once in the response of creating the API Client.
+    *  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    */
+    public String getSecret() {
+        return this.secret;
     }
 
     /**
-    *  <p>The last day this API Client was used to obtain a token.</p>
+    *  <p>Date of the last day this API Client was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public java.time.LocalDate getLastUsedAt() {
         return this.lastUsedAt;
@@ -88,11 +93,10 @@ public final class ApiClientImpl implements ApiClient {
     }
 
     /**
-    *  <p>The secret is only shown once in the response of creating the API Client.
-    *  This is the OAuth2 <code>client_secret</code> and can be used to obtain a token.</p>
+    *  <p>Date and time (UTC) the API Client was initially created.</p>
     */
-    public String getSecret() {
-        return this.secret;
+    public java.time.ZonedDateTime getCreatedAt() {
+        return this.createdAt;
     }
 
     public void setId(final String id) {
@@ -107,8 +111,8 @@ public final class ApiClientImpl implements ApiClient {
         this.scope = scope;
     }
 
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setSecret(final String secret) {
+        this.secret = secret;
     }
 
     public void setLastUsedAt(final java.time.LocalDate lastUsedAt) {
@@ -119,8 +123,8 @@ public final class ApiClientImpl implements ApiClient {
         this.deleteAt = deleteAt;
     }
 
-    public void setSecret(final String secret) {
-        this.secret = secret;
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     @Override
@@ -136,10 +140,10 @@ public final class ApiClientImpl implements ApiClient {
         return new EqualsBuilder().append(id, that.id)
                 .append(name, that.name)
                 .append(scope, that.scope)
-                .append(createdAt, that.createdAt)
+                .append(secret, that.secret)
                 .append(lastUsedAt, that.lastUsedAt)
                 .append(deleteAt, that.deleteAt)
-                .append(secret, that.secret)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 
@@ -148,10 +152,10 @@ public final class ApiClientImpl implements ApiClient {
         return new HashCodeBuilder(17, 37).append(id)
                 .append(name)
                 .append(scope)
-                .append(createdAt)
+                .append(secret)
                 .append(lastUsedAt)
                 .append(deleteAt)
-                .append(secret)
+                .append(createdAt)
                 .toHashCode();
     }
 

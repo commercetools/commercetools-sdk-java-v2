@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTaskStatus> {
+public class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 

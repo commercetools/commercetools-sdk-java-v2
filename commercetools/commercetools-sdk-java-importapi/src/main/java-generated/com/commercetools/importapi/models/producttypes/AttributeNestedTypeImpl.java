@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeNestedTypeImpl implements AttributeNestedType {
+public class AttributeNestedTypeImpl implements AttributeNestedType {
 
     private String name;
 
@@ -36,7 +36,7 @@ public final class AttributeNestedTypeImpl implements AttributeNestedType {
     }
 
     /**
-    *  <p>References a product type by its key.</p>
+    *  <p>References a product type by key.</p>
     */
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference() {
         return this.typeReference;

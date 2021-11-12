@@ -45,7 +45,7 @@ public class ByProjectKeyTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
@@ -56,7 +56,7 @@ public class ByProjectKeyTest {
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).get())
+        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
@@ -102,6 +102,12 @@ public class ByProjectKeyTest {
                         .get()
                         .withCustomerId("customerId")
                         .createHttpRequest(), "get", "/test_projectKey?customerId=customerId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges"))
+                        .createHttpRequest(), "get",
+                        "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true).createHttpRequest(),
                         "get", "/test_projectKey?expand=true", },
@@ -127,6 +133,10 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
+                                .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get(), } };
     }

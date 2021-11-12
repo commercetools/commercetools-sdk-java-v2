@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountCodeInfo {
 
     /**
-    *  <p>References a discount code by its key.</p>
+    *  <p>References a discount code by key.</p>
     */
     @NotNull
     @Valid

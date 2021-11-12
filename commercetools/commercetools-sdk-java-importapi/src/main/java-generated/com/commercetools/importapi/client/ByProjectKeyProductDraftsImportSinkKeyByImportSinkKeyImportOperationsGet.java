@@ -60,17 +60,20 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperatio
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-            client.execute(request,
-                com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class),
+        return blockingWait(client
+                .execute(request,
+                    com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

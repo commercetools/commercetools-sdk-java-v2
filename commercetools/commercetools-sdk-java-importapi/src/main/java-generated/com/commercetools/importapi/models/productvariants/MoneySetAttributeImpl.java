@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>This type represents an attribute whose value is a set of money objects.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MoneySetAttributeImpl implements MoneySetAttribute {
+public class MoneySetAttributeImpl implements MoneySetAttribute {
 
     private String name;
 

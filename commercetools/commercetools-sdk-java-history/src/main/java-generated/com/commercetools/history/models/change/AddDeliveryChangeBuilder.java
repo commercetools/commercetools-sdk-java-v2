@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
+public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     private String change;
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation sent to the server when creating an <a href="#importsink">ImportSink</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ImportSinkDraftImpl implements ImportSinkDraft {
+public class ImportSinkDraftImpl implements ImportSinkDraft {
 
     private String key;
 

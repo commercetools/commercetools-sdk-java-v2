@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FacetResultTermBuilder implements Builder<FacetResultTerm> {
+public class FacetResultTermBuilder implements Builder<FacetResultTerm> {
 
     private java.lang.Object term;
 

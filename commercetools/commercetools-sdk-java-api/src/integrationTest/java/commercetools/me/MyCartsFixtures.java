@@ -31,7 +31,7 @@ public class MyCartsFixtures {
     }
 
     public static Cart createMeCart(final MyCartDraft myCartDraft) {
-        Cart myCart = CommercetoolsTestUtils.getProjectRoot()
+        Cart myCart = CommercetoolsTestUtils.getProjectApiRoot()
                 .me()
                 .carts()
                 .post(myCartDraft)

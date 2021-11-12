@@ -1,33 +1,33 @@
 
 package io.vrap.rmf.base.client.http;
 
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.FailsafeExecutor;
-import net.jodah.failsafe.RetryPolicy;
+import net.jodah.failsafe.*;
+import net.jodah.failsafe.event.ExecutionAttemptedEvent;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
+import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
  */
 class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final OAuthHandler authHandler;
-    private static final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
+    private static final InternalLogger logger = InternalLogger.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public OAuthMiddlewareImpl(final OAuthHandler oAuthHandler) {
-        this(oAuthHandler, 1);
+        this(oAuthHandler, 1, false);
     }
 
-    public OAuthMiddlewareImpl(final OAuthHandler oauthHandler, final Integer maxRetries) {
+    public OAuthMiddlewareImpl(final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        this.authHandler = oauthHandler;
+
         RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()
                 .handleIf((response, throwable) -> {
                     if (throwable != null) {
@@ -36,12 +36,39 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     return response.getStatusCode() == 401;
                 })
                 .onRetry(event -> {
-                    logger.debug("Refresh Bearer token #" + event.getAttemptCount());
-                    oauthHandler.refreshToken();
+                    logger.debug(() -> "Refresh Bearer token #" + event.getAttemptCount());
+                    authHandler.refreshToken();
                 })
                 .withMaxRetries(maxRetries);
-        this.authHandler = oauthHandler;
-        this.failsafeExecutor = Failsafe.with(retry);
+        if (useCircuitBreaker) {
+            final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback
+                    .ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
+                        logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException");
+                        logger.trace(event::getLastFailure);
+                        return new AuthException(400, "", null, "Project suspended", null, event.getLastFailure());
+                    })
+                    .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException);
+
+            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<ApiHttpResponse<byte[]>>();
+            circuitBreaker.handleIf((response, throwable) -> {
+                if (throwable.getCause() instanceof AuthException) {
+                    return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
+                }
+                return response.getStatusCode() == 400;
+            })
+                    .withDelay((result, failure, context) -> Duration
+                            .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
+                    .withFailureThreshold(5, Duration.ofMinutes(1))
+                    .withSuccessThreshold(2)
+                    .onClose(() -> logger.debug(() -> "The authentication circuit breaker was closed"))
+                    .onOpen(() -> logger.debug(() -> "The authentication circuit breaker was opened"))
+                    .onHalfOpen(() -> logger.debug(() -> "The authentication circuit breaker was half-opened"))
+                    .onFailure(event -> logger.trace(() -> "Authentication failed", event.getFailure()));
+            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker);
+        }
+        else {
+            this.failsafeExecutor = Failsafe.with(retry);
+        }
     }
 
     @Override

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  The name and type property must match the name and type property of an attribute definition of the product type.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class AttributeImpl implements Attribute {
+public class AttributeImpl implements Attribute {
 
     private String name;
 

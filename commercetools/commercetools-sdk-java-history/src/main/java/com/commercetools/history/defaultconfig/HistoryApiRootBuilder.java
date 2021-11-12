@@ -37,6 +37,21 @@ public class HistoryApiRootBuilder {
         return new HistoryApiRootBuilder(ClientBuilder.of(stack));
     }
 
+    public HistoryApiRootBuilder withAuthCircuitBreaker() {
+        builder.withAuthCircuitBreaker();
+        return this;
+    }
+
+    public HistoryApiRootBuilder withoutAuthCircuitBreaker() {
+        builder.withoutAuthCircuitBreaker();
+        return this;
+    }
+
+    public HistoryApiRootBuilder withAuthRetries(final int authRetries) {
+        builder.withAuthRetries(authRetries);
+        return this;
+    }
+
     public HistoryApiRootBuilder withHandlerStack(final HandlerStack stack) {
         builder.withHandlerStack(stack);
         return this;

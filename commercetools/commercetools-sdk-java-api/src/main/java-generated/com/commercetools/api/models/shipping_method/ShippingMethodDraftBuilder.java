@@ -10,12 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
+public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
 
     @Nullable
     private String key;
 
     private String name;
+
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString localizedName;
 
     @Nullable
     private String description;
@@ -42,6 +45,18 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
 
     public ShippingMethodDraftBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder localizedName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder localizedName(
+            @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
+        this.localizedName = localizedName;
         return this;
     }
 
@@ -131,6 +146,11 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
     }
 
     @Nullable
+    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
+        return this.localizedName;
+    }
+
+    @Nullable
     public String getDescription() {
         return this.description;
     }
@@ -167,16 +187,16 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
         Objects.requireNonNull(taxCategory, ShippingMethodDraft.class + ": taxCategory is missing");
         Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");
         Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");
-        return new ShippingMethodDraftImpl(key, name, description, localizedDescription, taxCategory, zoneRates,
-            isDefault, predicate, custom);
+        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
+            zoneRates, isDefault, predicate, custom);
     }
 
     /**
      * builds ShippingMethodDraft without checking for non null required values
      */
     public ShippingMethodDraft buildUnchecked() {
-        return new ShippingMethodDraftImpl(key, name, description, localizedDescription, taxCategory, zoneRates,
-            isDefault, predicate, custom);
+        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
+            zoneRates, isDefault, predicate, custom);
     }
 
     public static ShippingMethodDraftBuilder of() {
@@ -187,6 +207,7 @@ public final class ShippingMethodDraftBuilder implements Builder<ShippingMethodD
         ShippingMethodDraftBuilder builder = new ShippingMethodDraftBuilder();
         builder.key = template.getKey();
         builder.name = template.getName();
+        builder.localizedName = template.getLocalizedName();
         builder.description = template.getDescription();
         builder.localizedDescription = template.getLocalizedDescription();
         builder.taxCategory = template.getTaxCategory();

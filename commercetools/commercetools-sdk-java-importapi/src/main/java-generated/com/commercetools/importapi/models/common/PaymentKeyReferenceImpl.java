@@ -14,10 +14,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a payment by its key.</p>
+*  <p>References a payment by key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentKeyReferenceImpl implements PaymentKeyReference {
+public class PaymentKeyReferenceImpl implements PaymentKeyReference {
 
     private String key;
 

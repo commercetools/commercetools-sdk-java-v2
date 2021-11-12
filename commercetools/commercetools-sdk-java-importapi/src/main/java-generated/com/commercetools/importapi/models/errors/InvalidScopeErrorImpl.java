@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class InvalidScopeErrorImpl implements InvalidScopeError {
+public class InvalidScopeErrorImpl implements InvalidScopeError {
 
     private String code;
 

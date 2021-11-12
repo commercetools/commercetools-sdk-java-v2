@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAddTaxRateAction> {
+public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAddTaxRateAction> {
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 

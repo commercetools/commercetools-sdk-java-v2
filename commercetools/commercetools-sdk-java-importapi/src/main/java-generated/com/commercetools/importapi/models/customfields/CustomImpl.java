@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomImpl implements Custom {
+public class CustomImpl implements Custom {
 
     private com.commercetools.importapi.models.common.TypeKeyReference type;
 

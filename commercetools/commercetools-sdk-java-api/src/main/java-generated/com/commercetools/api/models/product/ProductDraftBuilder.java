@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDraftBuilder implements Builder<ProductDraft> {
+public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     private com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType;
 

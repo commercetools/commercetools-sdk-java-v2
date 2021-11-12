@@ -51,15 +51,17 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.ml.models.missing_data.MissingDataTaskStatus.class), request,
-            timeout);
+            client.execute(request, com.commercetools.ml.models.missing_data.MissingDataTaskStatus.class)
+                    .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.ml.models.missing_data.MissingDataTaskStatus.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.ml.models.missing_data.MissingDataTaskStatus.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemPriceImpl implements LineItemPrice {
+public class LineItemPriceImpl implements LineItemPrice {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -87,14 +87,14 @@ public final class LineItemPriceImpl implements LineItemPrice {
     }
 
     /**
-    *  <p>References a customer group by its key.</p>
+    *  <p>References a customer group by key.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;

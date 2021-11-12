@@ -14,10 +14,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a resource by its key.</p>
+*  <p>References a resource by key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class KeyReferenceImpl implements KeyReference {
+public class KeyReferenceImpl implements KeyReference {
 
     private String key;
 

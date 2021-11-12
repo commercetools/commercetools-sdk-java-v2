@@ -13,7 +13,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedStringType {
+public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedStringType {
 
     private String name;
 

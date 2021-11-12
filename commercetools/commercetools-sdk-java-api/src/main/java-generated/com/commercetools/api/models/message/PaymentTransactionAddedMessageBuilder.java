@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTransactionAddedMessage> {
+public class PaymentTransactionAddedMessageBuilder implements Builder<PaymentTransactionAddedMessage> {
 
     private String id;
 

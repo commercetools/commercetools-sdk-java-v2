@@ -19,30 +19,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClient {
 
     /**
-    *  <p>The unique ID of the API client.
-    *  This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
+    *  <p>Unique ID of the API client.
+    *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+    *  <p>Name of the API Client.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>A whitespace separated list of the OAuth scopes.
-    *  This is the OAuth2 <code>scope</code> and can be used to obtain a token.</p>
+    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
     */
     @NotNull
     @JsonProperty("scope")
     public String getScope();
 
-    @JsonProperty("createdAt")
-    public ZonedDateTime getCreatedAt();
+    /**
+    *  <p>Only shown once in the response of creating the API Client.
+    *  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    */
+
+    @JsonProperty("secret")
+    public String getSecret();
 
     /**
-    *  <p>The last day this API Client was used to obtain a token.</p>
+    *  <p>Date of the last day this API Client was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
 
     @JsonProperty("lastUsedAt")
@@ -56,12 +63,11 @@ public interface ApiClient {
     public ZonedDateTime getDeleteAt();
 
     /**
-    *  <p>The secret is only shown once in the response of creating the API Client.
-    *  This is the OAuth2 <code>client_secret</code> and can be used to obtain a token.</p>
+    *  <p>Date and time (UTC) the API Client was initially created.</p>
     */
 
-    @JsonProperty("secret")
-    public String getSecret();
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
 
     public void setId(final String id);
 
@@ -69,13 +75,13 @@ public interface ApiClient {
 
     public void setScope(final String scope);
 
-    public void setCreatedAt(final ZonedDateTime createdAt);
+    public void setSecret(final String secret);
 
     public void setLastUsedAt(final LocalDate lastUsedAt);
 
     public void setDeleteAt(final ZonedDateTime deleteAt);
 
-    public void setSecret(final String secret);
+    public void setCreatedAt(final ZonedDateTime createdAt);
 
     public static ApiClient of() {
         return new ApiClientImpl();
@@ -86,10 +92,10 @@ public interface ApiClient {
         instance.setId(template.getId());
         instance.setName(template.getName());
         instance.setScope(template.getScope());
-        instance.setCreatedAt(template.getCreatedAt());
+        instance.setSecret(template.getSecret());
         instance.setLastUsedAt(template.getLastUsedAt());
         instance.setDeleteAt(template.getDeleteAt());
-        instance.setSecret(template.getSecret());
+        instance.setCreatedAt(template.getCreatedAt());
         return instance;
     }
 

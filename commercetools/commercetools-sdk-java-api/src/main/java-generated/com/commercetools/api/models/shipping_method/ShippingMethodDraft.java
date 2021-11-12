@@ -27,6 +27,10 @@ public interface ShippingMethodDraft {
     @JsonProperty("name")
     public String getName();
 
+    @Valid
+    @JsonProperty("localizedName")
+    public LocalizedString getLocalizedName();
+
     @JsonProperty("description")
     public String getDescription();
 
@@ -66,6 +70,8 @@ public interface ShippingMethodDraft {
 
     public void setName(final String name);
 
+    public void setLocalizedName(final LocalizedString localizedName);
+
     public void setDescription(final String description);
 
     public void setLocalizedDescription(final LocalizedString localizedDescription);
@@ -91,6 +97,7 @@ public interface ShippingMethodDraft {
         ShippingMethodDraftImpl instance = new ShippingMethodDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
+        instance.setLocalizedName(template.getLocalizedName());
         instance.setDescription(template.getDescription());
         instance.setLocalizedDescription(template.getLocalizedDescription());
         instance.setTaxCategory(template.getTaxCategory());

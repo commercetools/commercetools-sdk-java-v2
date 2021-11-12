@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
+public class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
 
     private String action;
 
@@ -35,7 +35,7 @@ public final class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
     }
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
     */
     public String getKey() {
         return this.key;

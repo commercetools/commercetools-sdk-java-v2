@@ -30,7 +30,7 @@ jobs:
           java-version: '16'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@1.0.0
+        uses: ts-graphviz/setup-graphviz@v1
 
       - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk

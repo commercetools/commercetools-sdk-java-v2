@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class RemoveStateRolesChangeImpl implements RemoveStateRolesChange {
+public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange {
 
     private String type;
 

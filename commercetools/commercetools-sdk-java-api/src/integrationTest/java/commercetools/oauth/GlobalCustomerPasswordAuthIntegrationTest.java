@@ -32,7 +32,7 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
                 .password(password)
                 .build();
 
-        Customer customer = CommercetoolsTestUtils.getProjectRoot()
+        Customer customer = CommercetoolsTestUtils.getProjectApiRoot()
                 .customers()
                 .post(customerDraft)
                 .executeBlocking()

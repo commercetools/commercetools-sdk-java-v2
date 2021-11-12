@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>A field with a time set value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class TimeSetFieldImpl implements TimeSetField {
+public class TimeSetFieldImpl implements TimeSetField {
 
     private String type;
 

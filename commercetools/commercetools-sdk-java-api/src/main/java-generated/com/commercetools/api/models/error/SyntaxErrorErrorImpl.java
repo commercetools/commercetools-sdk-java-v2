@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SyntaxErrorErrorImpl implements SyntaxErrorError {
+public class SyntaxErrorErrorImpl implements SyntaxErrorError {
 
     private String code;
 

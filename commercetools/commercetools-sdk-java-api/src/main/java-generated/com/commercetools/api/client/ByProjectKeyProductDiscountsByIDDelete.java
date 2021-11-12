@@ -55,16 +55,17 @@ public class ByProjectKeyProductDiscountsByIDDelete extends
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-            client.execute(request, com.commercetools.api.models.product_discount.ProductDiscount.class), request,
-            timeout);
+        return blockingWait(client.execute(request, com.commercetools.api.models.product_discount.ProductDiscount.class)
+                .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.product_discount.ProductDiscount.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.api.models.product_discount.ProductDiscount.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

@@ -14,8 +14,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:Zone">Zone</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneReferenceImpl implements ZoneReference {
+public class ZoneReferenceImpl implements ZoneReference {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 
@@ -39,10 +42,16 @@ public final class ZoneReferenceImpl implements ZoneReference {
         return this.typeId;
     }
 
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:Zone">Zone</a>.</p>
+    */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <a href="/general-concepts#reference-expansion">Reference Expansion</a> for Zones.</p>
+    */
     public com.commercetools.api.models.zone.Zone getObj() {
         return this.obj;
     }

@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> {
+public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> {
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 

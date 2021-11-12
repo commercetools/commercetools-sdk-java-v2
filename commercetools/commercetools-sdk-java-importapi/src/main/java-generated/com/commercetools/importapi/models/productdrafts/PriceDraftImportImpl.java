@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The representation of a Price Draft for the import purpose.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class PriceDraftImportImpl implements PriceDraftImport {
+public class PriceDraftImportImpl implements PriceDraftImport {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
@@ -80,14 +80,14 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
     }
 
     /**
-    *  <p>References a customer group by its key.</p>
+    *  <p>References a customer group by key.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>References a channel by its key.</p>
+    *  <p>References a channel by key.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;

@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPortion {
 
     /**
-    *  <p>References a cart discount by its key.</p>
+    *  <p>References a cart discount by key.</p>
     */
     @NotNull
     @Valid

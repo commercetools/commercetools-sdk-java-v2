@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyReference> {
+public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyReference> {
 
     private String key;
 

@@ -55,15 +55,17 @@ public class ByProjectKeyPaymentsGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.api.models.payment.PaymentPagedQueryResponse.class), request,
-            timeout);
+            client.execute(request, com.commercetools.api.models.payment.PaymentPagedQueryResponse.class)
+                    .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.PaymentPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.payment.PaymentPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(), com.commercetools.api.models.payment.PaymentPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

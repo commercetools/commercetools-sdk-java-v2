@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SubscriptionDraftImpl implements SubscriptionDraft {
+public class SubscriptionDraftImpl implements SubscriptionDraft {
 
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 

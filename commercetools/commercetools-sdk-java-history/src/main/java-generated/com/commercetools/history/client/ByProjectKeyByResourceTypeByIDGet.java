@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
+import com.commercetools.history.models.PlatformInitiatedChange;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -54,15 +56,16 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.history.models.RecordPagedQueryResponse.class),
+        return blockingWait(client.execute(request, com.commercetools.history.models.RecordPagedQueryResponse.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.history.models.RecordPagedQueryResponse.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.history.models.RecordPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {
@@ -115,6 +118,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     public List<String> getCustomerId() {
         return this.getQueryParam("customerId");
+    }
+
+    public List<String> getExcludePlatformInitiatedChanges() {
+        return this.getQueryParam("excludePlatformInitiatedChanges");
     }
 
     public List<String> getExpand() {
@@ -444,6 +451,43 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public ByProjectKeyByResourceTypeByIDGet addCustomerId(final List<String> customerId) {
         return copy().addQueryParams(
             customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set excludePlatformInitiatedChanges with the specificied value
+     */
+    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
+            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+        return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
+    }
+
+    /**
+     * add additional excludePlatformInitiatedChanges query parameter
+     */
+    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
+            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+        return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
+    }
+
+    /**
+     * set excludePlatformInitiatedChanges with the specificied values
+     */
+    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
+            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+        return copy().withoutQueryParam("excludePlatformInitiatedChanges")
+                .addQueryParams(excludePlatformInitiatedChanges.stream()
+                        .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional excludePlatformInitiatedChanges query parameters
+     */
+    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
+            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+        return copy().addQueryParams(excludePlatformInitiatedChanges.stream()
+                .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**

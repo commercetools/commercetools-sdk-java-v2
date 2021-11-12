@@ -57,7 +57,7 @@ public interface PriceDraft {
 
     @Valid
     @JsonProperty("discounted")
-    public DiscountedPrice getDiscounted();
+    public DiscountedPriceDraft getDiscounted();
 
     public void setValue(final Money value);
 
@@ -78,7 +78,7 @@ public interface PriceDraft {
 
     public void setTiers(final List<PriceTierDraft> tiers);
 
-    public void setDiscounted(final DiscountedPrice discounted);
+    public void setDiscounted(final DiscountedPriceDraft discounted);
 
     public static PriceDraft of() {
         return new PriceDraftImpl();

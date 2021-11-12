@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -30,7 +30,7 @@ public class ProductIntegrationTests {
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
+            Product queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withId(product.getId())
                     .get()
@@ -44,7 +44,7 @@ public class ProductIntegrationTests {
     @Test
     public void getByKey() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
+            Product queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withKey(product.getKey())
                     .get()
@@ -62,7 +62,7 @@ public class ProductIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
+            Product updatedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withId(product.getId())
                     .post(ProductUpdateBuilder.of().actions(updateActions).version(product.getVersion()).build())
@@ -82,7 +82,7 @@ public class ProductIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
+            Product updatedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withKey(product.getKey())
                     .post(ProductUpdateBuilder.of().actions(updateActions).version(product.getVersion()).build())
@@ -98,7 +98,7 @@ public class ProductIntegrationTests {
     @Test
     public void query() {
         ProductFixtures.withProduct(product -> {
-            ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .get()
                     .withWhere("id=" + "\"" + product.getId() + "\"")
@@ -126,7 +126,7 @@ public class ProductIntegrationTests {
                 imageFile = new File("src/integrationTest/resources/ct_logo_farbe.gif");
             }
 
-            final ByProjectKeyRequestBuilder projectRoot = CommercetoolsTestUtils.getProjectRoot();
+            final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
             final Product result = projectRoot.products()
                     .withId(product.getId())
                     .images()

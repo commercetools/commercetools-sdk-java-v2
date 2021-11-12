@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for cart discounts shipping target.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTargetShippingChangeValueImpl implements ChangeTargetShippingChangeValue {
+public class ChangeTargetShippingChangeValueImpl implements ChangeTargetShippingChangeValue {
 
     private String type;
 

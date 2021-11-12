@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The given value already exists for a field that is checked for unique values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
+public class DuplicateFieldErrorImpl implements DuplicateFieldError {
 
     private String code;
 

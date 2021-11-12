@@ -56,15 +56,18 @@ public class ByProjectKeyTaxCategoriesGet extends
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
         return blockingWait(
-            client.execute(request, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class),
+            client.execute(request, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class)
+                    .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

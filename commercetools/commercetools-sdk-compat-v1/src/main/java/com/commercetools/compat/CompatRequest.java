@@ -3,7 +3,9 @@ package com.commercetools.compat;
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.AbstractMap;
@@ -14,8 +16,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import io.sphere.sdk.client.SphereRequest;
-import io.sphere.sdk.http.HttpRequest;
-import io.sphere.sdk.json.SphereJsonUtils;
+import io.sphere.sdk.http.*;
 import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -68,10 +69,27 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
 
         final URI resolve = URI.create(httpRequest.getUrl());
         return new ApiHttpRequest(ApiHttpMethod.valueOf(httpRequest.getHttpMethod().name()), resolve,
-            new ApiHttpHeaders(headers),
-            Optional.ofNullable(httpRequest.getBody())
-                    .map(body -> SphereJsonUtils.toJsonString(body).getBytes(StandardCharsets.UTF_8))
-                    .orElse(null));
+            new ApiHttpHeaders(headers), Optional.ofNullable(httpRequest.getBody()).map(body -> {
+                if (body instanceof StringHttpRequestBody) {
+                    return ((StringHttpRequestBody) body).getString().getBytes(StandardCharsets.UTF_8);
+                }
+                else if (body instanceof FormUrlEncodedHttpRequestBody) {
+                    return urlEncodedOf((FormUrlEncodedHttpRequestBody) body).getBytes(StandardCharsets.UTF_8);
+                }
+                throw new HttpException("Cannot interpret request " + httpRequest);
+            }).orElse(null));
+    }
+
+    private static String urlEncodedOf(final FormUrlEncodedHttpRequestBody body) {
+        return body.getParameters().stream().map(entry -> {
+            try {
+                return entry.getName() + "=" + URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8.toString());
+            }
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            throw new HttpException("Cannot encode request body " + body);
+        }).collect(Collectors.joining("&"));
     }
 
     @Override

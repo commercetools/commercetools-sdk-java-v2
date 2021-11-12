@@ -14,10 +14,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a product discount by its key.</p>
+*  <p>References a product discount by key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductDiscountKeyReferenceImpl implements ProductDiscountKeyReference {
+public class ProductDiscountKeyReferenceImpl implements ProductDiscountKeyReference {
 
     private String key;
 

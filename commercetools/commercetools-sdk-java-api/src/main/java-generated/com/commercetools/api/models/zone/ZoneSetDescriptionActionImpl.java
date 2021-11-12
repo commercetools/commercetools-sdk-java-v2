@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction {
+public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction {
 
     private String action;
 
@@ -34,6 +34,9 @@ public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAct
         return this.action;
     }
 
+    /**
+    *  <p>Description of the Zone.</p>
+    */
     public String getDescription() {
         return this.description;
     }

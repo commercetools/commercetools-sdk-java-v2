@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderAddLineItemAction> {
+public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderAddLineItemAction> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;

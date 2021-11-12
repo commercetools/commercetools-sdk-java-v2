@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class DateSetFieldBuilder implements Builder<DateSetField> {
+public class DateSetFieldBuilder implements Builder<DateSetField> {
 
     private java.util.List<java.time.LocalDate> value;
 

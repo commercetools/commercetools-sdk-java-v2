@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Order fields that needs to be added or updated.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class OrderFieldImpl implements OrderField {
+public class OrderFieldImpl implements OrderField {
 
     private com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo;
 

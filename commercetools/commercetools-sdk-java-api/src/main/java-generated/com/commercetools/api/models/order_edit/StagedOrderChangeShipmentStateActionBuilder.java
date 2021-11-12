@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class StagedOrderChangeShipmentStateActionBuilder
-        implements Builder<StagedOrderChangeShipmentStateAction> {
+public class StagedOrderChangeShipmentStateActionBuilder implements Builder<StagedOrderChangeShipmentStateAction> {
 
     @Nullable
     private com.commercetools.api.models.order.ShipmentState shipmentState;

@@ -144,6 +144,16 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+    *  <p>Used for the internal platform only and registers the reservation of use of a discount code.
+    *  Its value is managed by the platform.
+    *  It can change at any time due to internal and external factors.
+    *  It should not be used in customer logic.</p>
+    */
+    @NotNull
+    @JsonProperty("applicationVersion")
+    public Long getApplicationVersion();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -191,6 +201,8 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    public void setApplicationVersion(final Long applicationVersion);
+
     public static DiscountCode of() {
         return new DiscountCodeImpl();
     }
@@ -216,6 +228,7 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
         instance.setGroups(template.getGroups());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
+        instance.setApplicationVersion(template.getApplicationVersion());
         return instance;
     }
 

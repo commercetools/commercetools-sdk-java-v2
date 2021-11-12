@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue {
+public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue {
 
     private String name;
 

@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscountChangeTargetAction> {
+public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscountChangeTargetAction> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 

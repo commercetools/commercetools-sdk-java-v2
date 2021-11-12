@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ShippingMethodImpl implements ShippingMethod {
+public class ShippingMethodImpl implements ShippingMethod {
 
     private String id;
 
@@ -31,6 +31,8 @@ public final class ShippingMethodImpl implements ShippingMethod {
     private String key;
 
     private String name;
+
+    private com.commercetools.api.models.common.LocalizedString localizedName;
 
     private String description;
 
@@ -53,6 +55,7 @@ public final class ShippingMethodImpl implements ShippingMethod {
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("key") final String key, @JsonProperty("name") final String name,
+            @JsonProperty("localizedName") final com.commercetools.api.models.common.LocalizedString localizedName,
             @JsonProperty("description") final String description,
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
@@ -67,6 +70,7 @@ public final class ShippingMethodImpl implements ShippingMethod {
         this.createdBy = createdBy;
         this.key = key;
         this.name = name;
+        this.localizedName = localizedName;
         this.description = description;
         this.localizedDescription = localizedDescription;
         this.taxCategory = taxCategory;
@@ -124,6 +128,10 @@ public final class ShippingMethodImpl implements ShippingMethod {
 
     public String getName() {
         return this.name;
+    }
+
+    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
+        return this.localizedName;
     }
 
     public String getDescription() {
@@ -192,6 +200,10 @@ public final class ShippingMethodImpl implements ShippingMethod {
         this.name = name;
     }
 
+    public void setLocalizedName(final com.commercetools.api.models.common.LocalizedString localizedName) {
+        this.localizedName = localizedName;
+    }
+
     public void setDescription(final String description) {
         this.description = description;
     }
@@ -243,6 +255,7 @@ public final class ShippingMethodImpl implements ShippingMethod {
                 .append(createdBy, that.createdBy)
                 .append(key, that.key)
                 .append(name, that.name)
+                .append(localizedName, that.localizedName)
                 .append(description, that.description)
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
@@ -263,6 +276,7 @@ public final class ShippingMethodImpl implements ShippingMethod {
                 .append(createdBy)
                 .append(key)
                 .append(name)
+                .append(localizedName)
                 .append(description)
                 .append(localizedDescription)
                 .append(taxCategory)

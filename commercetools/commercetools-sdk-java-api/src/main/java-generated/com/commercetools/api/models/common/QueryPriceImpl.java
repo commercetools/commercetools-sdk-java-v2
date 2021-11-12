@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class QueryPriceImpl implements QueryPrice {
+public class QueryPriceImpl implements QueryPrice {
 
     private String id;
 
@@ -30,7 +30,7 @@ public final class QueryPriceImpl implements QueryPrice {
 
     private java.time.ZonedDateTime validUntil;
 
-    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     private com.commercetools.api.models.type.CustomFields custom;
 
@@ -44,7 +44,7 @@ public final class QueryPriceImpl implements QueryPrice {
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
+            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
         this.id = id;
@@ -93,7 +93,7 @@ public final class QueryPriceImpl implements QueryPrice {
         return this.validUntil;
     }
 
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
@@ -134,7 +134,7 @@ public final class QueryPriceImpl implements QueryPrice {
         this.validUntil = validUntil;
     }
 
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
     }
 

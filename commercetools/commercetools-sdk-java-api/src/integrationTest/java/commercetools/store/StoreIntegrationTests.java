@@ -24,7 +24,7 @@ public class StoreIntegrationTests {
     @Test
     public void getById() {
         StoreFixtures.withStore(store -> {
-            Store queriedStore = CommercetoolsTestUtils.getProjectRoot()
+            Store queriedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withId(store.getId())
                     .get()
@@ -39,7 +39,7 @@ public class StoreIntegrationTests {
     @Test
     public void getByKey() {
         StoreFixtures.withStore(store -> {
-            Store queriedStore = CommercetoolsTestUtils.getProjectRoot()
+            Store queriedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withKey(store.getKey())
                     .get()
@@ -54,7 +54,7 @@ public class StoreIntegrationTests {
     @Test
     public void query() {
         StoreFixtures.withStore(store -> {
-            StorePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+            StorePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .get()
                     .withWhere("id=" + "\"" + store.getId() + "\"")
@@ -73,7 +73,7 @@ public class StoreIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(StoreSetNameActionBuilder.of().name(newName).build());
 
-            Store updatedStore = CommercetoolsTestUtils.getProjectRoot()
+            Store updatedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withId(store.getId())
                     .post(StoreUpdateBuilder.of().actions(updateActions).version(store.getVersion()).build())
@@ -93,7 +93,7 @@ public class StoreIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(StoreSetNameActionBuilder.of().name(newName).build());
 
-            Store updatedStore = CommercetoolsTestUtils.getProjectRoot()
+            Store updatedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withKey(store.getKey())
                     .post(StoreUpdateBuilder.of().actions(updateActions).version(store.getVersion()).build())
@@ -109,7 +109,7 @@ public class StoreIntegrationTests {
     @Test
     public void deleteByKey() {
         Store store = StoreFixtures.createStore();
-        Store deletedStore = CommercetoolsTestUtils.getProjectRoot()
+        Store deletedStore = CommercetoolsTestUtils.getProjectApiRoot()
                 .stores()
                 .withKey(store.getKey())
                 .delete()

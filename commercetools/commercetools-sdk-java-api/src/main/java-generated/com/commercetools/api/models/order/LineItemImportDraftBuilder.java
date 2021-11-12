@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> {
+public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> {
 
     @Nullable
     private String productId;
@@ -21,7 +21,7 @@ public final class LineItemImportDraftBuilder implements Builder<LineItemImportD
 
     private com.commercetools.api.models.common.PriceDraft price;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
@@ -80,7 +80,7 @@ public final class LineItemImportDraftBuilder implements Builder<LineItemImportD
         return this;
     }
 
-    public LineItemImportDraftBuilder quantity(final Double quantity) {
+    public LineItemImportDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -193,7 +193,7 @@ public final class LineItemImportDraftBuilder implements Builder<LineItemImportD
         return this.price;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

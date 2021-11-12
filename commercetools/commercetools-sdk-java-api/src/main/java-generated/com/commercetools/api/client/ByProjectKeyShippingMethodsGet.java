@@ -55,15 +55,19 @@ public class ByProjectKeyShippingMethodsGet extends
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request,
-            com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class), request, timeout);
+        return blockingWait(
+            client.execute(request, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class)
+                    .toCompletableFuture(),
+            request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class);
+        return client
+                .execute(this.createHttpRequest(),
+                    com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

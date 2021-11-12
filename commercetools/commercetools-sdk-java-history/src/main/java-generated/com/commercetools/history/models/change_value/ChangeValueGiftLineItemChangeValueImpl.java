@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for cart discounts gift line item value.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLineItemChangeValue {
+public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLineItemChangeValue {
 
     private String type;
 

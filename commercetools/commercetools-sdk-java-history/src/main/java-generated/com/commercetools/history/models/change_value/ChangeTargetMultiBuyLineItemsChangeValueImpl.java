@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Shape of the value for cart discounts multiBuyLineItems target.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ChangeTargetMultiBuyLineItemsChangeValueImpl implements ChangeTargetMultiBuyLineItemsChangeValue {
+public class ChangeTargetMultiBuyLineItemsChangeValueImpl implements ChangeTargetMultiBuyLineItemsChangeValue {
 
     private String type;
 

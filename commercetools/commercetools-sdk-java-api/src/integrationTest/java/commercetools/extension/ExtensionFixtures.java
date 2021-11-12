@@ -34,7 +34,7 @@ public class ExtensionFixtures {
                         .build()))
                 .build();
 
-        Extension extension = CommercetoolsTestUtils.getProjectRoot()
+        Extension extension = CommercetoolsTestUtils.getProjectApiRoot()
                 .extensions()
                 .post(extensionDraft)
                 .executeBlocking()
@@ -47,7 +47,7 @@ public class ExtensionFixtures {
     }
 
     public static Extension deleteExtension(final String id, final Long version) {
-        Extension extension = CommercetoolsTestUtils.getProjectRoot()
+        Extension extension = CommercetoolsTestUtils.getProjectApiRoot()
                 .extensions()
                 .withId(id)
                 .delete()

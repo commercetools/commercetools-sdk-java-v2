@@ -38,7 +38,7 @@ public class TypeFixtures {
                         .build()))
                 .build();
 
-        Type type = CommercetoolsTestUtils.getProjectRoot().types().post(typeDraft).executeBlocking().getBody();
+        Type type = CommercetoolsTestUtils.getProjectApiRoot().types().post(typeDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(type);
         Assert.assertEquals(type.getKey(), typeDraft.getKey());
@@ -47,7 +47,7 @@ public class TypeFixtures {
     }
 
     public static Type deleteType(final String id, final Long version) {
-        Type type = CommercetoolsTestUtils.getProjectRoot()
+        Type type = CommercetoolsTestUtils.getProjectApiRoot()
                 .types()
                 .withId(id)
                 .delete()

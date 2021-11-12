@@ -66,14 +66,16 @@ public class ByProjectKeyDiscountCodesByIDPost
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.discount_code.DiscountCode.class),
+        return blockingWait(client.execute(request, com.commercetools.api.models.discount_code.DiscountCode.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.discount_code.DiscountCode.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.discount_code.DiscountCode.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
+public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
 
     private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
 

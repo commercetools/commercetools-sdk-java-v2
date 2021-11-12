@@ -55,15 +55,16 @@ public class ByProjectKeyImportSinksByImportSinkKeyGet extends
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(
             final ApiHttpClient client, Duration timeout) {
         ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.importapi.models.importsinks.ImportSink.class),
+        return blockingWait(client.execute(request, com.commercetools.importapi.models.importsinks.ImportSink.class)
+                .toCompletableFuture(),
             request, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.importapi.models.importsinks.ImportSink.class);
+        return client.execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSink.class)
+                .toCompletableFuture();
     }
 
     public String getProjectKey() {

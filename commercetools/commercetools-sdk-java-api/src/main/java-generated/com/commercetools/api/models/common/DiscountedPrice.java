@@ -21,14 +21,14 @@ public interface DiscountedPrice {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
     @NotNull
     @Valid
     @JsonProperty("discount")
     public ProductDiscountReference getDiscount();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     public void setDiscount(final ProductDiscountReference discount);
 

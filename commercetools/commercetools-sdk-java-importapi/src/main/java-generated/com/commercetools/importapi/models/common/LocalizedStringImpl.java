@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  </code></pre>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocalizedStringImpl implements LocalizedString {
+public class LocalizedStringImpl implements LocalizedString {
 
     private Map<String, String> values;
 

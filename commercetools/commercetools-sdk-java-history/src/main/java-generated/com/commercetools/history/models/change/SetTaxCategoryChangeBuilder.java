@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange> {
+public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange> {
 
     private String change;
 

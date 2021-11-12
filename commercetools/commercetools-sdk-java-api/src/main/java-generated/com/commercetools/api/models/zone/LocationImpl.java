@@ -13,8 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>A geographical location representing a country and optionally a state within this country.  A location can only be assigned to one Zone.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class LocationImpl implements Location {
+public class LocationImpl implements Location {
 
     private String country;
 
@@ -30,12 +33,15 @@ public final class LocationImpl implements Location {
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country code of the geographic location.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
+    /**
+    *  <p>State within the country.</p>
+    */
     public String getState() {
         return this.state;
     }

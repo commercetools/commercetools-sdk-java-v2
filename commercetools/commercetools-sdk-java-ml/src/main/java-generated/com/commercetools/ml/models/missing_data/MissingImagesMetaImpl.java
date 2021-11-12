@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class MissingImagesMetaImpl implements MissingImagesMeta {
+public class MissingImagesMetaImpl implements MissingImagesMeta {
 
     private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
 

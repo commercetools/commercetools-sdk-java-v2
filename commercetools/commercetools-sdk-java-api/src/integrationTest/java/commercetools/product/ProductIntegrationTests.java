@@ -25,13 +25,14 @@ public class ProductIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        withTaxCategory(taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
-            Product product = createProduct(productType, category, taxCategory);
-            Assert.assertNotNull(product);
+        withTaxCategory(
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory);
+                Assert.assertNotNull(product);
 
-            Product deletedProduct = deleteProductById(product.getId(), product.getVersion());
-            Assert.assertNotNull(deletedProduct);
-        })));
+                Product deletedProduct = deleteProductById(product.getId(), product.getVersion());
+                Assert.assertNotNull(deletedProduct);
+            })));
     }
 
     @Test

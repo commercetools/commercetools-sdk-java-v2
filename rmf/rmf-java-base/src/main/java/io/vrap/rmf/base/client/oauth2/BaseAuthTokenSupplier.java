@@ -22,7 +22,7 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
     @Override
     public CompletableFuture<AuthenticationToken> getToken() {
         return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -> {
-            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUrl(),
+            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUri(),
                 response.getStatusCode()));
             if (throwable != null) {
                 logger.error(() -> response, throwable);

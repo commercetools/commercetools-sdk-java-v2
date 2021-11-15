@@ -32,7 +32,7 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
         logger.debug(() -> request);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
-            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUrl(),
+            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUri(),
                 response.getStatusCode()));
             if (throwable != null) {
                 logger.error(() -> response, throwable);

@@ -37,7 +37,11 @@ public class OAuthHandler extends AutoCloseableService {
     }
 
     public AuthenticationToken getToken() {
-        return ClientUtils.blockingWait(supplier.getToken(), waitTimeout);
+        final AuthenticationToken token = ClientUtils.blockingWait(supplier.getToken(), waitTimeout);
+        if (token.isExpired()) {
+            return refreshToken();
+        }
+        return token;
     }
 
     public AuthenticationToken refreshToken() {

@@ -19,7 +19,6 @@ public class OAuthHandlerTest {
         Assertions.assertThat(token.getAccessToken()).isEqualTo("123456");
         Assertions.assertThat(supplier.firstCall).isFalse();
 
-
         final AuthenticationToken token2 = handler.getToken();
         Assertions.assertThat(token2.getAccessToken()).isEqualTo("123456");
     }

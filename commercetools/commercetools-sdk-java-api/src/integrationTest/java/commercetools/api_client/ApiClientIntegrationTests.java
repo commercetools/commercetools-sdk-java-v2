@@ -1,6 +1,8 @@
 
 package commercetools.api_client;
 
+import static commercetools.api_client.ApiClientFixtures.*;
+
 import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -12,15 +14,15 @@ public class ApiClientIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        ApiClient apiClient = ApiClientFixtures.createApiClient();
-        ApiClient deletedApiClient = ApiClientFixtures.deleteApiClient(apiClient.getId());
+        ApiClient apiClient = createApiClient();
+        ApiClient deletedApiClient = deleteApiClient(apiClient.getId());
 
         Assert.assertEquals(apiClient.getId(), deletedApiClient.getId());
     }
 
     @Test
     public void getById() {
-        ApiClientFixtures.withApiClient(apiClient -> {
+        withApiClient(apiClient -> {
             ApiClient queriedApiClient = CommercetoolsTestUtils.getProjectApiRoot()
                     .apiClients()
                     .withId(apiClient.getId())
@@ -35,7 +37,7 @@ public class ApiClientIntegrationTests {
 
     @Test
     public void query() {
-        ApiClientFixtures.withApiClient(apiClient -> {
+        withApiClient(apiClient -> {
             ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .apiClients()
                     .get()

@@ -15,14 +15,22 @@ public class CustomerGroupFixtures {
 
     public static void withCustomerGroup(final Consumer<CustomerGroup> consumer) {
         CustomerGroup customerGroup = createCustomerGroup();
-        consumer.accept(customerGroup);
-        deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
+        try {
+            consumer.accept(customerGroup);
+        }
+        finally {
+            deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
+        }
     }
 
     public static void withUpdateableCustomerGroup(final UnaryOperator<CustomerGroup> operator) {
         CustomerGroup customerGroup = createCustomerGroup();
-        customerGroup = operator.apply(customerGroup);
-        deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
+        try {
+            customerGroup = operator.apply(customerGroup);
+        }
+        finally {
+            deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
+        }
     }
 
     public static CustomerGroup createCustomerGroup() {

@@ -16,14 +16,22 @@ public class CartDiscountFixtures {
 
     public static void withCartDiscount(final Consumer<CartDiscount> consumer) {
         CartDiscount cartDiscount = createCartDiscount();
-        consumer.accept(cartDiscount);
-        deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
+        try {
+            consumer.accept(cartDiscount);
+        }
+        finally {
+            deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
+        }
     }
 
     public static void withUpdateableCartDiscount(final UnaryOperator<CartDiscount> operator) {
         CartDiscount cartDiscount = createCartDiscount();
-        cartDiscount = operator.apply(cartDiscount);
-        deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
+        try {
+            cartDiscount = operator.apply(cartDiscount);
+        }
+        finally {
+            deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
+        }
     }
 
     public static CartDiscount createCartDiscount() {

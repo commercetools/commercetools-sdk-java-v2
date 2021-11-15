@@ -14,8 +14,12 @@ public class ApiClientFixtures {
 
     public static void withApiClient(final Consumer<ApiClient> consumer) {
         ApiClient apiClient = createApiClient();
-        consumer.accept(apiClient);
-        deleteApiClient(apiClient.getId());
+        try {
+            consumer.accept(apiClient);
+        }
+        finally {
+            deleteApiClient(apiClient.getId());
+        }
     }
 
     public static ApiClient createApiClient() {

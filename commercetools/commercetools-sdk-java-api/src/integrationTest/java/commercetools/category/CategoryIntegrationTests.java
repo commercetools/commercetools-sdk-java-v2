@@ -1,6 +1,8 @@
 
 package commercetools.category;
 
+import static commercetools.category.CategoryFixtures.*;
+
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -12,15 +14,15 @@ public class CategoryIntegrationTests {
 
     @Test
     public void createAndDelete() {
-        Category category = CategoryFixtures.createCategory();
+        Category category = createCategory();
         Assert.assertNotNull(category);
-        Category deletedCategory = CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
+        Category deletedCategory = deleteCategory(category.getId(), category.getVersion());
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
 
     @Test
     public void getById() {
-        CategoryFixtures.withCategory(category -> {
+        withCategory(category -> {
             Category queriedCategory = CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId(category.getId())
@@ -33,7 +35,7 @@ public class CategoryIntegrationTests {
 
     @Test
     public void getByKey() {
-        CategoryFixtures.withCategory(category -> {
+        withCategory(category -> {
             Category queriedCategory = CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withKey(category.getKey())
@@ -47,7 +49,7 @@ public class CategoryIntegrationTests {
 
     @Test
     public void deleteById() {
-        Category category = CategoryFixtures.createCategory();
+        Category category = createCategory();
         Category deletedCategory = CommercetoolsTestUtils.getProjectApiRoot()
                 .categories()
                 .withId(category.getId())
@@ -60,7 +62,7 @@ public class CategoryIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        Category category = CategoryFixtures.createCategory();
+        Category category = createCategory();
         Category deletedCategory = CommercetoolsTestUtils.getProjectApiRoot()
                 .categories()
                 .withKey(category.getKey())
@@ -73,7 +75,7 @@ public class CategoryIntegrationTests {
 
     @Test
     public void queryCategories() {
-        Category category = CategoryFixtures.createCategory();
+        Category category = createCategory();
         CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                 .categories()
                 .get()
@@ -82,12 +84,12 @@ public class CategoryIntegrationTests {
                 .getBody();
         Assert.assertEquals(response.getResults().size(), 1);
         Assert.assertEquals(response.getResults().get(0).getId(), category.getId());
-        CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
+        deleteCategory(category.getId(), category.getVersion());
     }
 
     @Test
     public void updateCategory() {
-        CategoryFixtures.withUpdateableCategory(category -> {
+        withUpdateableCategory(category -> {
             LocalizedString newName = LocalizedString.of();
             newName.setValue("key-Temp", "value-Temp");
 

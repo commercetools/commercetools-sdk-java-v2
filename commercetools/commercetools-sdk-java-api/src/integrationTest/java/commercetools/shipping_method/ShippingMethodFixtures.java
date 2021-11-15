@@ -21,20 +21,26 @@ import org.junit.Assert;
 public class ShippingMethodFixtures {
 
     public static void withShippingMethod(final Consumer<ShippingMethod> consumer) {
-        ShippingMethod shippingMethod = createShippingMethod();
-        consumer.accept(shippingMethod);
-        deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+        ZoneFixtures.withZone(zone -> {
+            TaxCategoryFixtures.withTaxCategory(taxCategory -> {
+                ShippingMethod shippingMethod = createShippingMethod(taxCategory, zone);
+                consumer.accept(shippingMethod);
+                deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+            });
+        });
     }
 
     public static void withUpdateableShippingMethod(final UnaryOperator<ShippingMethod> operator) {
-        ShippingMethod shippingMethod = createShippingMethod();
-        shippingMethod = operator.apply(shippingMethod);
-        deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+        ZoneFixtures.withZone(zone -> {
+            TaxCategoryFixtures.withTaxCategory(taxCategory -> {
+                ShippingMethod shippingMethod = createShippingMethod(taxCategory, zone);
+                shippingMethod = operator.apply(shippingMethod);
+                deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+            });
+        });
     }
 
-    public static ShippingMethod createShippingMethod() {
-        TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
-        Zone zone = ZoneFixtures.createZone();
+    public static ShippingMethod createShippingMethod(TaxCategory taxCategory, Zone zone) {
         HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraftBuilder.of()
                 .centAmount(100L)
                 .currencyCode("EUR")

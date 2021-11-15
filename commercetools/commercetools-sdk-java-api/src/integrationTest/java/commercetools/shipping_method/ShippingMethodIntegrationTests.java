@@ -1,6 +1,10 @@
 
 package commercetools.shipping_method;
 
+import static commercetools.shipping_method.ShippingMethodFixtures.*;
+import static commercetools.tax_category.TaxCategoryFixtures.*;
+import static commercetools.zone.ZoneFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,13 +18,15 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        ShippingMethod shippingMethod = ShippingMethodFixtures.createShippingMethod();
-        ShippingMethodFixtures.deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+        withZone(zone -> withTaxCategory(taxCategory -> {
+            ShippingMethod shippingMethod = createShippingMethod(taxCategory, zone);
+            deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion());
+        }));
     }
 
     @Test
     public void getById() {
-        ShippingMethodFixtures.withShippingMethod(shippingMethod -> {
+        withShippingMethod(shippingMethod -> {
             ShippingMethod queriedShippingMethod = CommercetoolsTestUtils.getProjectApiRoot()
                     .shippingMethods()
                     .withId(shippingMethod.getId())
@@ -35,7 +41,7 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void getByKey() {
-        ShippingMethodFixtures.withShippingMethod(shippingMethod -> {
+        withShippingMethod(shippingMethod -> {
             ShippingMethod queriedShippingMethod = CommercetoolsTestUtils.getProjectApiRoot()
                     .shippingMethods()
                     .withKey(shippingMethod.getKey())
@@ -50,7 +56,7 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void query() {
-        ShippingMethodFixtures.withShippingMethod(shippingMethod -> {
+        withShippingMethod(shippingMethod -> {
             ShippingMethodPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .shippingMethods()
                     .get()
@@ -65,7 +71,7 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void updateById() {
-        ShippingMethodFixtures.withUpdateableShippingMethod(shippingMethod -> {
+        withUpdateableShippingMethod(shippingMethod -> {
             List<ShippingMethodUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShippingMethodSetKeyActionBuilder.of().key(newKey).build());
@@ -89,7 +95,7 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ShippingMethodFixtures.withUpdateableShippingMethod(shippingMethod -> {
+        withUpdateableShippingMethod(shippingMethod -> {
             List<ShippingMethodUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShippingMethodSetKeyActionBuilder.of().key(newKey).build());
@@ -113,16 +119,19 @@ public class ShippingMethodIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        ShippingMethod shippingMethod = ShippingMethodFixtures.createShippingMethod();
-        ShippingMethod deletedShippingMethod = CommercetoolsTestUtils.getProjectApiRoot()
-                .shippingMethods()
-                .withKey(shippingMethod.getKey())
-                .delete()
-                .withVersion(shippingMethod.getVersion())
-                .executeBlocking()
-                .getBody();
+        withZone(zone -> withTaxCategory(taxCategory -> {
+            ShippingMethod shippingMethod = createShippingMethod(taxCategory, zone);
+            ShippingMethod deletedShippingMethod = CommercetoolsTestUtils.getProjectApiRoot()
+                    .shippingMethods()
+                    .withKey(shippingMethod.getKey())
+                    .delete()
+                    .withVersion(shippingMethod.getVersion())
+                    .executeBlocking()
+                    .getBody();
 
-        Assert.assertNotNull(deletedShippingMethod);
-        Assert.assertEquals(shippingMethod.getId(), deletedShippingMethod.getId());
+            Assert.assertNotNull(deletedShippingMethod);
+            Assert.assertEquals(shippingMethod.getId(), deletedShippingMethod.getId());
+        }));
+
     }
 }

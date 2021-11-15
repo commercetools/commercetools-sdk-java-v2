@@ -12,16 +12,34 @@ import org.junit.Assert;
 
 public class ProductTypeFixtures {
 
+    public static void withProductType(final ProductTypeDraft productTypeDraft, final Consumer<ProductType> consumer) {
+        ProductType productType = createProductType(productTypeDraft);
+        try {
+            consumer.accept(productType);
+        }
+        finally {
+            deleteProductType(productType.getId(), productType.getVersion());
+        }
+    }
+
     public static void withProductType(final Consumer<ProductType> consumer) {
         ProductType productType = createProductType();
-        consumer.accept(productType);
-        deleteProductType(productType.getId(), productType.getVersion());
+        try {
+            consumer.accept(productType);
+        }
+        finally {
+            deleteProductType(productType.getId(), productType.getVersion());
+        }
     }
 
     public static void withUpdateableProductType(final UnaryOperator<ProductType> operator) {
         ProductType productType = createProductType();
-        productType = operator.apply(productType);
-        deleteProductType(productType.getId(), productType.getVersion());
+        try {
+            productType = operator.apply(productType);
+        }
+        finally {
+            deleteProductType(productType.getId(), productType.getVersion());
+        }
     }
 
     public static ProductType createProductType() {
@@ -44,6 +62,10 @@ public class ProductTypeFixtures {
                 .attributes(Arrays.asList(attributeDefinitionDraft))
                 .build();
 
+        return createProductType(productTypeDraft);
+    }
+
+    public static ProductType createProductType(ProductTypeDraft productTypeDraft) {
         ProductType productType = CommercetoolsTestUtils.getProjectApiRoot()
                 .productTypes()
                 .post(productTypeDraft)

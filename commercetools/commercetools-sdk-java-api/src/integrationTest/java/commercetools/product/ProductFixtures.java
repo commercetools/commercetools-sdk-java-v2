@@ -1,6 +1,10 @@
 
 package commercetools.product;
 
+import static commercetools.category.CategoryFixtures.*;
+import static commercetools.product_type.ProductTypeFixtures.*;
+import static commercetools.tax_category.TaxCategoryFixtures.*;
+
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -10,21 +14,13 @@ import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryResourceIdentifierBuilder;
-import com.commercetools.api.models.channel.Channel;
-import com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder;
 import com.commercetools.api.models.common.*;
-import com.commercetools.api.models.customer_group.CustomerGroup;
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder;
 import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_discount.*;
 import com.commercetools.api.models.product_type.*;
 import com.commercetools.api.models.state.*;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
-import commercetools.category.CategoryFixtures;
-import commercetools.channel.ChannelFixtures;
-import commercetools.customer_group.CustomerGroupFixtures;
-import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -34,22 +30,33 @@ import org.junit.Assert;
 public class ProductFixtures {
 
     public static void withProduct(final Consumer<Product> consumer) {
-        Product product = createProduct();
-        consumer.accept(product);
-        deleteProductById(product.getId(), product.getVersion());
-
+        withTaxCategory(
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory);
+                try {
+                    consumer.accept(product);
+                }
+                finally {
+                    deleteProductById(product.getId(), product.getVersion());
+                }
+            })));
     }
 
     public static void withUpdateableProduct(final UnaryOperator<Product> operator) {
-        Product product = createProduct();
-        product = operator.apply(product);
-        deleteProductById(product.getId(), product.getVersion());
+        withTaxCategory(
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory);
+                try {
+                    product = operator.apply(product);
+                }
+                finally {
+                    deleteProductById(product.getId(), product.getVersion());
+                }
+            })));
     }
 
-    public static Product createProduct() {
-        String randomKey = CommercetoolsTestUtils.randomKey();
-
-        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
+    private static ProductTypeDraft createProductTypeDraft() {
+        return ProductTypeDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomString())
                 .description(CommercetoolsTestUtils.randomString())
@@ -104,63 +111,17 @@ public class ProductFixtures {
                                     .build())
                             .build())
                 .build();
+    }
 
-        ProductType productType = CommercetoolsTestUtils.getProjectApiRoot()
-                .productTypes()
-                .post(productTypeDraft)
-                .executeBlocking()
-                .getBody();
-
-        Category category = CategoryFixtures.createCategory();
+    public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory) {
+        String randomKey = CommercetoolsTestUtils.randomKey();
 
         Map<String, String> orderHint = new HashMap<>();
         orderHint.put(category.getId(), "0.5");
 
-        CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
-        Channel channel = ChannelFixtures.createChannel();
-
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectApiRoot()
-                .productDiscounts()
-                .get()
-                .withWhere("sortOrder=\"0.3\"")
-                .executeBlocking()
-                .getBody();
-
-        if (existing.getCount() != 0) {
-            String productDiscountId = existing.getResults().get(0).getId();
-            Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getProjectApiRoot()
-                    .productDiscounts()
-                    .withId(productDiscountId)
-                    .delete()
-                    .withVersion(productDiscountVersion)
-                    .executeBlocking();
-        }
-
-        ProductDiscountDraft productDiscountDraft = ProductDiscountDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomLocalizedString())
-                .key(CommercetoolsTestUtils.randomKey())
-                .sortOrder("0.3")
-                .predicate("product.key=\"" + randomKey + "\"")
-                .value(ProductDiscountValueExternalDraftBuilder.of().build())
-                .isActive(true)
-                .build();
-
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectApiRoot()
-                .productDiscounts()
-                .post(productDiscountDraft)
-                .executeBlocking()
-                .getBody();
-
         PriceDraft priceDraft = PriceDraftBuilder.of()
                 .value(CentPrecisionMoneyDraftBuilder.of().centAmount(100L).currencyCode("EUR").build())
                 .country("DE")
-                .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
-                .channel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
-                .discounted(DiscountedPriceDraftBuilder.of()
-                        .value(CentPrecisionMoneyDraftBuilder.of().centAmount(200L).currencyCode("EUR").build())
-                        .discount(ProductDiscountReferenceBuilder.of().id(productDiscount.getId()).build())
-                        .build())
                 .validFrom(ZonedDateTime.now())
                 .validUntil(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
                 .tiers(Arrays.asList(PriceTierDraftBuilder.of()
@@ -197,15 +158,6 @@ public class ProductFixtures {
                     AttributeBuilder.of().name("test-set-number").value(Collections.singletonList(11.0)).build())
                 .build();
 
-        TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
-
-        StateDraft stateDraft = StateDraftBuilder.of()
-                .type(StateTypeEnum.PRODUCT_STATE)
-                .key(CommercetoolsTestUtils.randomKey())
-                .build();
-
-        State state = CommercetoolsTestUtils.getProjectApiRoot().states().post(stateDraft).executeBlocking().getBody();
-
         ProductDraft productDraft = ProductDraftBuilder.of()
                 .key(randomKey)
                 .name(CommercetoolsTestUtils.randomLocalizedString())
@@ -219,7 +171,6 @@ public class ProductFixtures {
                 .metaKeywords(CommercetoolsTestUtils.randomLocalizedString())
                 .masterVariant(productVariantDraft)
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
-                .state(StateResourceIdentifierBuilder.of().id(state.getId()).build())
                 .publish(false)
                 .build();
 

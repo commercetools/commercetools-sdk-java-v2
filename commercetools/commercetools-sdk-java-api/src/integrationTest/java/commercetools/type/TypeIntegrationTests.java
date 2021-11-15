@@ -1,6 +1,8 @@
 
 package commercetools.type;
 
+import static commercetools.type.TypeFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,15 +16,15 @@ public class TypeIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Type type = TypeFixtures.createType();
-        Type deletedType = TypeFixtures.deleteType(type.getId(), type.getVersion());
+        Type type = createType();
+        Type deletedType = deleteType(type.getId(), type.getVersion());
 
         Assert.assertEquals(type.getId(), deletedType.getId());
     }
 
     @Test
     public void getById() {
-        TypeFixtures.withType(type -> {
+        withType(type -> {
             Type queriedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withId(type.getId())
@@ -37,7 +39,7 @@ public class TypeIntegrationTests {
 
     @Test
     public void getByKey() {
-        TypeFixtures.withType(type -> {
+        withType(type -> {
             Type queriedType = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .withKey(type.getKey())
@@ -52,7 +54,7 @@ public class TypeIntegrationTests {
 
     @Test
     public void query() {
-        TypeFixtures.withType(type -> {
+        withType(type -> {
             TypePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .types()
                     .get()
@@ -67,7 +69,7 @@ public class TypeIntegrationTests {
 
     @Test
     public void updateById() {
-        TypeFixtures.withUpdateableType(type -> {
+        withUpdateableType(type -> {
             List<TypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(TypeChangeKeyActionBuilder.of().key(newKey).build());
@@ -88,7 +90,7 @@ public class TypeIntegrationTests {
 
     @Test
     public void updateByKey() {
-        TypeFixtures.withUpdateableType(type -> {
+        withUpdateableType(type -> {
             List<TypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(TypeChangeKeyActionBuilder.of().key(newKey).build());
@@ -109,7 +111,7 @@ public class TypeIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        Type type = TypeFixtures.createType();
+        Type type = createType();
         Type deletedType = CommercetoolsTestUtils.getProjectApiRoot()
                 .types()
                 .withKey(type.getKey())

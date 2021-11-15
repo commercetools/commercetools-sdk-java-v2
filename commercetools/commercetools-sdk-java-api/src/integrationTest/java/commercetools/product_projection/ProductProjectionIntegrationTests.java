@@ -1,12 +1,13 @@
 
 package commercetools.product_projection;
 
+import static commercetools.product.ProductFixtures.*;
+
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionPagedQueryResponse;
 import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
 import com.commercetools.api.models.product.TermFacetResult;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
-import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
@@ -17,7 +18,7 @@ public class ProductProjectionIntegrationTests {
 
     @Test
     public void getById() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withId(product.getId())
@@ -32,7 +33,7 @@ public class ProductProjectionIntegrationTests {
 
     @Test
     public void getByKey() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withKey(product.getKey())
@@ -47,7 +48,7 @@ public class ProductProjectionIntegrationTests {
 
     @Test
     public void query() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductProjectionPagedQueryResponse productProjectionPagedQueryResponse = CommercetoolsTestUtils
                     .getProjectApiRoot()
                     .productProjections()
@@ -63,7 +64,7 @@ public class ProductProjectionIntegrationTests {
 
     @Test
     public void search() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductProjectionPagedSearchResponse searchResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .search()
@@ -80,7 +81,7 @@ public class ProductProjectionIntegrationTests {
 
     @Test
     public void attribute() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductProjection productProjection = CommercetoolsTestUtils.getProjectApiRoot()
                     .productProjections()
                     .withKey(product.getKey())

@@ -1,6 +1,8 @@
 
 package commercetools.customer;
 
+import static commercetools.customer_group.CustomerGroupFixtures.*;
+
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -13,8 +15,6 @@ import com.commercetools.api.models.customer_group.CustomerGroup;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder;
 import com.commercetools.api.models.store.Store;
 import com.commercetools.api.models.store.StoreResourceIdentifierBuilder;
-import commercetools.customer_group.CustomerGroupFixtures;
-import commercetools.store.StoreFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
@@ -24,19 +24,30 @@ public class CustomerFixtures {
     public static final String TEST_CUSTOMER_PASSWORD = "test-customer-password";
 
     public static void withCustomer(final Consumer<Customer> consumer) {
-        Customer customer = createCustomer();
-        consumer.accept(customer);
-        deleteCustomer(customer.getId(), customer.getVersion());
+        withCustomerGroup(customerGroup -> {
+            Customer customer = createCustomer(customerGroup);
+            try {
+                consumer.accept(customer);
+            }
+            finally {
+                deleteCustomer(customer.getId(), customer.getVersion());
+            }
+        });
     }
 
     public static void withUpdateableCustomer(final UnaryOperator<Customer> operator) {
-        Customer customer = createCustomer();
-        customer = operator.apply(customer);
-        deleteCustomer(customer.getId(), customer.getVersion());
+        withCustomerGroup(customerGroup -> {
+            Customer customer = createCustomer(customerGroup);
+            try {
+                customer = operator.apply(customer);
+            }
+            finally {
+                deleteCustomer(customer.getId(), customer.getVersion());
+            }
+        });
     }
 
-    public static Customer createCustomer() {
-        CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
+    public static Customer createCustomer(CustomerGroup customerGroup) {
         CustomerDraft customerDraft = CustomerDraftBuilder.of()
                 .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
                 .key(CommercetoolsTestUtils.randomKey())
@@ -58,10 +69,7 @@ public class CustomerFixtures {
         return customer;
     }
 
-    public static Customer createStoreCustomer() {
-
-        Store store = StoreFixtures.createStore();
-        CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
+    public static Customer createStoreCustomer(Store store, CustomerGroup customerGroup) {
         CustomerDraft customerDraft = CustomerDraftBuilder.of()
                 .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
                 .key(CommercetoolsTestUtils.randomKey())

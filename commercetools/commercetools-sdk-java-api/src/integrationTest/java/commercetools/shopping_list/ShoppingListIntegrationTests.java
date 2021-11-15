@@ -1,6 +1,9 @@
 
 package commercetools.shopping_list;
 
+import static commercetools.customer.CustomerFixtures.*;
+import static commercetools.shopping_list.ShoppingListFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,13 +17,15 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        ShoppingList shoppingList = ShoppingListFixtures.createShoppingList();
-        ShoppingListFixtures.deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
+        withCustomer(customer -> {
+            ShoppingList shoppingList = createShoppingList(customer);
+            deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
+        });
     }
 
     @Test
     public void getById() {
-        ShoppingListFixtures.withShoppingList(shoppingList -> {
+        withShoppingList(shoppingList -> {
             ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withId(shoppingList.getId())
@@ -35,7 +40,7 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void getByKey() {
-        ShoppingListFixtures.withShoppingList(shoppingList -> {
+        withShoppingList(shoppingList -> {
             ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .withKey(shoppingList.getKey())
@@ -50,7 +55,7 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void query() {
-        ShoppingListFixtures.withShoppingList(shoppingList -> {
+        withShoppingList(shoppingList -> {
             ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .shoppingLists()
                     .get()
@@ -65,7 +70,7 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ShoppingListFixtures.withUpdateableShoppingList(shoppingList -> {
+        withUpdateableShoppingList(shoppingList -> {
 
             List<ShoppingListUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
@@ -90,7 +95,7 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void updateById() {
-        ShoppingListFixtures.withUpdateableShoppingList(shoppingList -> {
+        withUpdateableShoppingList(shoppingList -> {
 
             List<ShoppingListUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
@@ -115,11 +120,12 @@ public class ShoppingListIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        ShoppingList shoppingList = ShoppingListFixtures.createShoppingList();
-        ShoppingList deletedShoppingList = ShoppingListFixtures.deleteShoppingList(shoppingList.getId(),
-            shoppingList.getVersion());
-        Assert.assertNotNull(deletedShoppingList);
-        Assert.assertEquals(shoppingList.getId(), deletedShoppingList.getId());
+        withCustomer(customer -> {
+            ShoppingList shoppingList = createShoppingList(customer);
+            ShoppingList deletedShoppingList = deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
+            Assert.assertNotNull(deletedShoppingList);
+            Assert.assertEquals(shoppingList.getId(), deletedShoppingList.getId());
+        });
     }
 
 }

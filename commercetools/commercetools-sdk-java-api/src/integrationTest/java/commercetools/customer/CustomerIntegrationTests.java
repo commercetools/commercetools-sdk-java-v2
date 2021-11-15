@@ -1,6 +1,9 @@
 
 package commercetools.customer;
 
+import static commercetools.customer.CustomerFixtures.*;
+import static commercetools.customer_group.CustomerGroupFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +17,16 @@ public class CustomerIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Customer customer = CustomerFixtures.createCustomer();
-        Customer deletedCustomer = CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());
-        Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+        withCustomerGroup(customerGroup -> {
+            Customer customer = createCustomer(customerGroup);
+            Customer deletedCustomer = deleteCustomer(customer.getId(), customer.getVersion());
+            Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+        });
     }
 
     @Test
     public void getById() {
-        CustomerFixtures.withCustomer(customer -> {
+        withCustomer(customer -> {
             Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withId(customer.getId())
@@ -36,7 +41,7 @@ public class CustomerIntegrationTests {
 
     @Test
     public void getByKey() {
-        CustomerFixtures.withCustomer(customer -> {
+        withCustomer(customer -> {
             Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .withKey(customer.getKey())
@@ -51,7 +56,7 @@ public class CustomerIntegrationTests {
 
     @Test
     public void query() {
-        CustomerFixtures.withCustomer(customer -> {
+        withCustomer(customer -> {
             CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .customers()
                     .get()
@@ -66,7 +71,7 @@ public class CustomerIntegrationTests {
 
     @Test
     public void updateById() {
-        CustomerFixtures.withUpdateableCustomer(customer -> {
+        withUpdateableCustomer(customer -> {
             List<CustomerUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
@@ -87,7 +92,7 @@ public class CustomerIntegrationTests {
 
     @Test
     public void updateByKey() {
-        CustomerFixtures.withUpdateableCustomer(customer -> {
+        withUpdateableCustomer(customer -> {
             List<CustomerUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
@@ -108,16 +113,18 @@ public class CustomerIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        Customer customer = CustomerFixtures.createCustomer();
-        Customer deletedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
-                .customers()
-                .withKey(customer.getKey())
-                .delete()
-                .withVersion(customer.getVersion())
-                .executeBlocking()
-                .getBody();
+        withCustomerGroup(customerGroup -> {
+            Customer customer = createCustomer(customerGroup);
+            Customer deletedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
+                    .customers()
+                    .withKey(customer.getKey())
+                    .delete()
+                    .withVersion(customer.getVersion())
+                    .executeBlocking()
+                    .getBody();
 
-        Assert.assertNotNull(deletedCustomer);
-        Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+            Assert.assertNotNull(deletedCustomer);
+            Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+        });
     }
 }

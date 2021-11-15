@@ -1,6 +1,8 @@
 
 package commercetools.discount_code;
 
+import static commercetools.cart_discount.CartDiscountFixtures.*;
+
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
@@ -13,7 +15,6 @@ import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
 import com.commercetools.api.models.discount_code.DiscountCode;
 import com.commercetools.api.models.discount_code.DiscountCodeDraft;
 import com.commercetools.api.models.discount_code.DiscountCodeDraftBuilder;
-import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
@@ -21,19 +22,30 @@ import org.junit.Assert;
 public class DiscountCodeFixtures {
 
     public static void withDiscountCode(final Consumer<DiscountCode> consumer) {
-        DiscountCode discountCode = createDiscountCode();
-        consumer.accept(discountCode);
-        deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+        withCartDiscount(cartDiscount -> {
+            DiscountCode discountCode = createDiscountCode(cartDiscount);
+            try {
+                consumer.accept(discountCode);
+            }
+            finally {
+                deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+            }
+        });
     }
 
     public static void withUpdateableDiscountCode(final UnaryOperator<DiscountCode> operator) {
-        DiscountCode discountCode = createDiscountCode();
-        discountCode = operator.apply(discountCode);
-        deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+        withCartDiscount(cartDiscount -> {
+            DiscountCode discountCode = createDiscountCode(cartDiscount);
+            try {
+                discountCode = operator.apply(discountCode);
+            }
+            finally {
+                deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+            }
+        });
     }
 
-    public static DiscountCode createDiscountCode() {
-        CartDiscount cartDiscount = CartDiscountFixtures.createCartDiscount();
+    public static DiscountCode createDiscountCode(CartDiscount cartDiscount) {
         CartDiscountResourceIdentifier cartDiscountReference = CartDiscountResourceIdentifierBuilder.of()
                 .id(cartDiscount.getId())
                 .build();
@@ -75,8 +87,7 @@ public class DiscountCodeFixtures {
                 .getBody();
 
         discountCode.getCartDiscounts().forEach(cartDiscountReference -> {
-            CartDiscountFixtures.deleteCartDiscount(cartDiscountReference.getId(),
-                cartDiscountReference.getObj().getVersion());
+            deleteCartDiscount(cartDiscountReference.getId(), cartDiscountReference.getObj().getVersion());
         });
 
         Assert.assertNotNull(discountCode);

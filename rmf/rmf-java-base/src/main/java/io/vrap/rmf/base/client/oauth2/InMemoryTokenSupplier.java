@@ -4,11 +4,12 @@ package io.vrap.rmf.base.client.oauth2;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.AutoCloseableService;
 import net.jodah.failsafe.Failsafe;
 import net.jodah.failsafe.FailsafeExecutor;
 import net.jodah.failsafe.Timeout;
+
+import io.vrap.rmf.base.client.AuthenticationToken;
+import io.vrap.rmf.base.client.AutoCloseableService;
 
 public class InMemoryTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
     private final TokenSupplier supplier;

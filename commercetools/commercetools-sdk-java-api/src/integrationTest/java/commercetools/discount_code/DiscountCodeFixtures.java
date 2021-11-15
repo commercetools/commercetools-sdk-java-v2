@@ -86,10 +86,6 @@ public class DiscountCodeFixtures {
                 .executeBlocking()
                 .getBody();
 
-        discountCode.getCartDiscounts().forEach(cartDiscountReference -> {
-            deleteCartDiscount(cartDiscountReference.getId(), cartDiscountReference.getObj().getVersion());
-        });
-
         Assert.assertNotNull(discountCode);
         Assert.assertEquals(discountCode.getId(), id);
 

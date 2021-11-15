@@ -55,7 +55,7 @@ public class ProductFixtures {
             })));
     }
 
-    private static ProductTypeDraft createProductTypeDraft() {
+    public static ProductTypeDraft createProductTypeDraft() {
         return ProductTypeDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomString())
@@ -253,8 +253,6 @@ public class ProductFixtures {
         catch (Exception e) {
         }
 
-        Assert.assertNotNull(product);
-        Assert.assertEquals(product.getId(), id);
         return product;
     }
 

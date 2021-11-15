@@ -45,11 +45,11 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     .ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
                         logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException");
                         logger.trace(event::getLastFailure);
-                        return new AuthException(400, "", null, "Project suspended", null, event.getLastFailure());
+                        return new AuthException(400, "", null, "Authentication failed", null, event.getLastFailure());
                     })
                     .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException);
 
-            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<ApiHttpResponse<byte[]>>();
+            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<>();
             circuitBreaker.handleIf((response, throwable) -> {
                 if (throwable.getCause() instanceof AuthException) {
                     return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;

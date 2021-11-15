@@ -27,8 +27,7 @@ public class InMemoryTokenSupplier extends AutoCloseableService implements Refre
         if (tokenFuture == null)
             synchronized (lock) {
                 if (tokenFuture == null) {
-                    tokenFuture = failsafeExecutor.getStageAsync(execution -> supplier.getToken())
-                            .thenCompose(CompletableFuture::completedFuture);
+                    failsafeExecutor.run(() -> tokenFuture = CompletableFuture.completedFuture(supplier.getToken().join()));
                 }
             }
         return tokenFuture;

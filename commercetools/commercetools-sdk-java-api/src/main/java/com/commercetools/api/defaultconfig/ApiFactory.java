@@ -15,6 +15,10 @@ import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.http.Middleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
+/**
+ * @deprecated use {@link ApiRootBuilder} instead
+ */
+@Deprecated
 public class ApiFactory {
 
     public static ByProjectKeyRequestBuilder createForProject(final String projectKey,

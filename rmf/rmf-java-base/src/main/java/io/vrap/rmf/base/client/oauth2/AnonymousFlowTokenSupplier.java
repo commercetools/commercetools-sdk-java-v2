@@ -8,48 +8,18 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
 
 import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.ClientUtils;
-import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-public class AnonymousFlowTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
-    private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
-
-    private final VrapHttpClient vrapHttpClient;
-    private final ApiHttpRequest apiHttpRequest;
-
+public class AnonymousFlowTokenSupplier extends BaseAuthTokenSupplier implements RefreshableTokenSupplier {
     private final RefreshFlowTokenSupplier refreshFlowTokenSupplier;
 
     public AnonymousFlowTokenSupplier(final String clientId, final String clientSecret, final String scope,
             final String tokenEndpoint, final RefreshFlowTokenSupplier refreshFlowTokenSupplier,
             final VrapHttpClient vrapHttpClient) {
-        this.vrapHttpClient = vrapHttpClient;
-        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint);
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint));
         this.refreshFlowTokenSupplier = refreshFlowTokenSupplier;
-    }
-
-    @Override
-    public CompletableFuture<AuthenticationToken> getToken() {
-        logger.debug(() -> apiHttpRequest);
-        return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -> {
-            if (throwable != null) {
-                logger.error(() -> response, throwable);
-            }
-            else {
-                logger.debug(() -> response);
-            }
-        }).thenApply(apiHttpResponse -> {
-            if (apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
-                throw new CompletionException(new Throwable(new String(apiHttpResponse.getBody())));
-            }
-            return apiHttpResponse;
-        })
-                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
-                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
     }
 
     @Override
@@ -76,11 +46,5 @@ public class AnonymousFlowTokenSupplier extends AutoCloseableService implements 
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
             body.getBytes(StandardCharsets.UTF_8));
-    }
-
-    @Override
-    protected void internalClose() {
-        if (vrapHttpClient instanceof AutoCloseable)
-            closeQuietly((AutoCloseable) vrapHttpClient);
     }
 }

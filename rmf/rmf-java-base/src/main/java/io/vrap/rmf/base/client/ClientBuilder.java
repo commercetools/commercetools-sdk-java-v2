@@ -206,7 +206,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     /**
-     * @deprecated use withClientCredentialsFlow instead
+     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String)} instead
      * @param credentials OAuth credentials
      * @param tokenEndpoint OAuth endpoint
      * @return client builder
@@ -217,7 +217,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     /**
-     * @deprecated use withClientCredentialsFlow instead
+     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)} instead
      * @param credentials OAuth credentials
      * @param tokenEndpoint OAuth endpoint
      * @param httpClient HTTP client to be used

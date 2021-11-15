@@ -10,22 +10,15 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-public class RefreshFlowTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
-    private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
-
-    private final VrapHttpClient vrapHttpClient;
-    private final ApiHttpRequest apiHttpRequest;
-
+public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements RefreshableTokenSupplier {
     private final TokenStorage tokenStorage;
 
     public RefreshFlowTokenSupplier(final String clientId, final String clientSecret, final String tokenEndpoint,
             final TokenStorage tokenStorage, final VrapHttpClient vrapHttpClient) {
-        this.vrapHttpClient = vrapHttpClient;
-        this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, tokenEndpoint);
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, tokenEndpoint));
         this.tokenStorage = tokenStorage;
     }
 
@@ -39,6 +32,8 @@ public class RefreshFlowTokenSupplier extends AutoCloseableService implements Re
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
         logger.debug(() -> request);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
+            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUrl(),
+                response.getStatusCode()));
             if (throwable != null) {
                 logger.error(() -> response, throwable);
             }
@@ -68,11 +63,5 @@ public class RefreshFlowTokenSupplier extends AutoCloseableService implements Re
             headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
             headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders, null);
-    }
-
-    @Override
-    protected void internalClose() {
-        if (vrapHttpClient instanceof AutoCloseable)
-            closeQuietly((AutoCloseable) vrapHttpClient);
     }
 }

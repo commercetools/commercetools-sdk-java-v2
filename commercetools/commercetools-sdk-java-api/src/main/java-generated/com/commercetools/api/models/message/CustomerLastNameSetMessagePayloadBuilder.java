@@ -3,25 +3,28 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerLastNameSetMessagePayloadBuilder implements Builder<CustomerLastNameSetMessagePayload> {
 
+    @Nullable
     private String lastName;
 
-    public CustomerLastNameSetMessagePayloadBuilder lastName(final String lastName) {
+    public CustomerLastNameSetMessagePayloadBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
+    @Nullable
     public String getLastName() {
         return this.lastName;
     }
 
     public CustomerLastNameSetMessagePayload build() {
-        Objects.requireNonNull(lastName, CustomerLastNameSetMessagePayload.class + ": lastName is missing");
         return new CustomerLastNameSetMessagePayloadImpl(lastName);
     }
 

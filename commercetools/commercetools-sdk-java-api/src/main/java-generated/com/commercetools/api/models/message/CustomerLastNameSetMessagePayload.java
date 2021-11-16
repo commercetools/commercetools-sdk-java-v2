@@ -5,8 +5,6 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -18,7 +16,6 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
 
     String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
-    @NotNull
     @JsonProperty("lastName")
     public String getLastName();
 

@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -11,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderStateTransitionMessagePayload> {
 
     private com.commercetools.api.models.state.StateReference state;
+
+    @Nullable
+    private com.commercetools.api.models.state.StateReference oldState;
 
     private Boolean force;
 
@@ -26,6 +31,18 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return this;
     }
 
+    public OrderStateTransitionMessagePayloadBuilder oldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public OrderStateTransitionMessagePayloadBuilder oldState(
+            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
+        this.oldState = oldState;
+        return this;
+    }
+
     public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;
         return this;
@@ -35,6 +52,11 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return this.state;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getOldState() {
+        return this.oldState;
+    }
+
     public Boolean getForce() {
         return this.force;
     }
@@ -42,14 +64,14 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     public OrderStateTransitionMessagePayload build() {
         Objects.requireNonNull(state, OrderStateTransitionMessagePayload.class + ": state is missing");
         Objects.requireNonNull(force, OrderStateTransitionMessagePayload.class + ": force is missing");
-        return new OrderStateTransitionMessagePayloadImpl(state, force);
+        return new OrderStateTransitionMessagePayloadImpl(state, oldState, force);
     }
 
     /**
      * builds OrderStateTransitionMessagePayload without checking for non null required values
      */
     public OrderStateTransitionMessagePayload buildUnchecked() {
-        return new OrderStateTransitionMessagePayloadImpl(state, force);
+        return new OrderStateTransitionMessagePayloadImpl(state, oldState, force);
     }
 
     public static OrderStateTransitionMessagePayloadBuilder of() {
@@ -59,6 +81,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     public static OrderStateTransitionMessagePayloadBuilder of(final OrderStateTransitionMessagePayload template) {
         OrderStateTransitionMessagePayloadBuilder builder = new OrderStateTransitionMessagePayloadBuilder();
         builder.state = template.getState();
+        builder.oldState = template.getOldState();
         builder.force = template.getForce();
         return builder;
     }

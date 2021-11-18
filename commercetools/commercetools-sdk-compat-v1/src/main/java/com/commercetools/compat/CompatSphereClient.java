@@ -4,7 +4,6 @@ package com.commercetools.compat;
 import java.net.URI;
 import java.util.concurrent.CompletionStage;
 
-import com.commercetools.api.client.ApiCorrelationIdProvider;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -27,7 +26,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         final URI resolve = URI.create(clientConfig.getApiUrl()).resolve("/" + clientConfig.getProjectKey() + "/");
         this.client = ApiRootBuilder.of()
                 .defaultClient(resolve)
-                .addCorrelationIdProvider(new ApiCorrelationIdProvider(clientConfig.getProjectKey()))
+                .addCorrelationIdProvider(() -> clientConfig.getCorrelationIdGenerator().get())
                 .withClientCredentialsFlow(ClientCredentials.of()
                         .withClientId(clientConfig.getClientId())
                         .withClientSecret(clientConfig.getClientSecret())

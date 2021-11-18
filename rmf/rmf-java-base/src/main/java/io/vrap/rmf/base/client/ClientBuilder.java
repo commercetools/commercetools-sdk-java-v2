@@ -369,8 +369,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
         if (correlationIdProvider != null) {
-            return addMiddleware((request, next) -> next.apply(
-                request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId())));
+            return addMiddleware((request, next) -> {
+                if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {
+                    return next.apply(request);
+                }
+                return next.apply(
+                    request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));
+            });
         }
         return this;
     }

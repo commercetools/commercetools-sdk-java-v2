@@ -48,48 +48,50 @@ public class TaxRateImpl implements TaxRate {
     }
 
     /**
-    *  <p>The ID is always set if the tax rate is part of a TaxCategory.
-    *  The external tax rates in a
-    *  Cart do not contain an <code>id</code>.</p>
+    *  <p>Present if the TaxRate is part of a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.
+    *  Absent for external TaxRates in <a href="ctp:api:type:LineItem">LineItem</a>, <a href="ctp:api:type:CustomLineItem">CustomLineItem</a>, and <a href="ctp:api:type:ShippingInfo">ShippingInfo</a>.</p>
     */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>Name of the TaxRate.</p>
+    */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Percentage in the range of [0..1].
-    *  The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+    *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
     */
     public Double getAmount() {
         return this.amount;
     }
 
+    /**
+    *  <p>If <code>true</code>, tax is included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> is present on <a href="ctp:api:type:LineItem">LineItems</a>. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+    */
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>The state in the country</p>
+    *  <p>State within the country, such as Texas in the United States.</p>
     */
     public String getState() {
         return this.state;
     }
 
     /**
-    *  <p>For countries (e.g.
-    *  the US) where the total tax is a combination of multiple taxes (e.g.
-    *  state and local taxes).</p>
+    *  <p>Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
     */
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;

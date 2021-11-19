@@ -19,6 +19,9 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
 
     String ADD_TAX_RATE = "addTaxRate";
 
+    /**
+    *  <p>Value to append to the <code>rates</code> array.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("taxRate")

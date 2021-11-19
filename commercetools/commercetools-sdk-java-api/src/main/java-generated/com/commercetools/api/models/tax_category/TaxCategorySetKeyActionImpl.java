@@ -35,7 +35,7 @@ public class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyAction {
     }
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     public String getKey() {
         return this.key;

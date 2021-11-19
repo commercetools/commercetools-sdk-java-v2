@@ -16,6 +16,10 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
 
     String SET_DESCRIPTION = "setDescription";
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     @JsonProperty("description")
     public String getDescription();
 

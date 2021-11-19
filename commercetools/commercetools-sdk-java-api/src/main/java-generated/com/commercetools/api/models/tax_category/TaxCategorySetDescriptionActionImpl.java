@@ -34,6 +34,9 @@ public class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescri
         return this.action;
     }
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     public String getDescription() {
         return this.description;
     }

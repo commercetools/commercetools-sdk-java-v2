@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>It is used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class SubRateImpl implements SubRate {
 
@@ -29,6 +32,9 @@ public class SubRateImpl implements SubRate {
     public SubRateImpl() {
     }
 
+    /**
+    *  <p>Name of the SubRate.</p>
+    */
     public String getName() {
         return this.name;
     }

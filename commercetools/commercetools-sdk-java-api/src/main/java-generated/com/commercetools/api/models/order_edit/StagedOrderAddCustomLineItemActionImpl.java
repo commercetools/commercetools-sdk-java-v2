@@ -73,6 +73,9 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         return this.slug;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    */
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }

@@ -34,6 +34,9 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
         return this.action;
     }
 
+    /**
+    *  <p>ID of the TaxRate to remove.</p>
+    */
     public String getTaxRateId() {
         return this.taxRateId;
     }

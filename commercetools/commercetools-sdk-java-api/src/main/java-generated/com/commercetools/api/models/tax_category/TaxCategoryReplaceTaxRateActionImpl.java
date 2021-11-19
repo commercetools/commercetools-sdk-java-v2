@@ -38,10 +38,16 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
         return this.action;
     }
 
+    /**
+    *  <p>ID of the TaxRate to replace.</p>
+    */
     public String getTaxRateId() {
         return this.taxRateId;
     }
 
+    /**
+    *  <p>New TaxRate to replace with.</p>
+    */
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }

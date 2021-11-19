@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TaxCategoryResourceIdentifierImpl implements TaxCategoryResourceIdentifier {
 
@@ -39,14 +42,14 @@ public class TaxCategoryResourceIdentifierImpl implements TaxCategoryResourceIde
     }
 
     /**
-    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Unique key of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getKey() {
         return this.key;

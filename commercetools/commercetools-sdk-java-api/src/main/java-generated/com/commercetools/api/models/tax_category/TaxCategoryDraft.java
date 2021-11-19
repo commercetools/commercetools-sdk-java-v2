@@ -17,16 +17,30 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryDraftImpl.class)
 public interface TaxCategoryDraft {
 
+    /**
+    *  <p>Name of the TaxCategory.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>Description of the TaxCategory.</p>
+    */
+
     @JsonProperty("description")
     public String getDescription();
 
+    /**
+    *  <p>Tax rates and subrates of states and countries.</p>
+    */
     @Valid
     @JsonProperty("rates")
     public List<TaxRateDraft> getRates();
+
+    /**
+    *  <p>User-defined unique identifier for the TaxCategory.</p>
+    */
 
     @JsonProperty("key")
     public String getKey();

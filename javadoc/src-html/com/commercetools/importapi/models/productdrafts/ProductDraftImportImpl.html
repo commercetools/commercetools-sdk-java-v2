@@ -230,133 +230,135 @@
 <span class="source-line-no">217</span><span id="line.217">    }</span>
 <span class="source-line-no">218</span><span id="line.218"></span>
 <span class="source-line-no">219</span><span id="line.219">    /**</span>
-<span class="source-line-no">220</span><span id="line.220">    *  &lt;p&gt;If there were updates, only the updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
-<span class="source-line-no">221</span><span id="line.221">    */</span>
-<span class="source-line-no">222</span><span id="line.222">    public Boolean getPublish() {</span>
-<span class="source-line-no">223</span><span id="line.223">        return this.publish;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    public void setKey(final String key) {</span>
-<span class="source-line-no">227</span><span id="line.227">        this.key = key;</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    public void setProductType(final com.commercetools.importapi.models.common.ProductTypeKeyReference productType) {</span>
-<span class="source-line-no">231</span><span id="line.231">        this.productType = productType;</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public void setName(final com.commercetools.importapi.models.common.LocalizedString name) {</span>
-<span class="source-line-no">235</span><span id="line.235">        this.name = name;</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    public void setSlug(final com.commercetools.importapi.models.common.LocalizedString slug) {</span>
-<span class="source-line-no">239</span><span id="line.239">        this.slug = slug;</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    public void setDescription(final com.commercetools.importapi.models.common.LocalizedString description) {</span>
-<span class="source-line-no">243</span><span id="line.243">        this.description = description;</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    public void setCategories(final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {</span>
-<span class="source-line-no">247</span><span id="line.247">        this.categories = new ArrayList&lt;&gt;(Arrays.asList(categories));</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    public void setCategories(</span>
-<span class="source-line-no">251</span><span id="line.251">            final java.util.List&lt;com.commercetools.importapi.models.common.CategoryKeyReference&gt; categories) {</span>
-<span class="source-line-no">252</span><span id="line.252">        this.categories = categories;</span>
-<span class="source-line-no">253</span><span id="line.253">    }</span>
-<span class="source-line-no">254</span><span id="line.254"></span>
-<span class="source-line-no">255</span><span id="line.255">    public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle) {</span>
-<span class="source-line-no">256</span><span id="line.256">        this.metaTitle = metaTitle;</span>
-<span class="source-line-no">257</span><span id="line.257">    }</span>
-<span class="source-line-no">258</span><span id="line.258"></span>
-<span class="source-line-no">259</span><span id="line.259">    public void setMetaDescription(final com.commercetools.importapi.models.common.LocalizedString metaDescription) {</span>
-<span class="source-line-no">260</span><span id="line.260">        this.metaDescription = metaDescription;</span>
-<span class="source-line-no">261</span><span id="line.261">    }</span>
-<span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">    public void setMetaKeywords(final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {</span>
-<span class="source-line-no">264</span><span id="line.264">        this.metaKeywords = metaKeywords;</span>
-<span class="source-line-no">265</span><span id="line.265">    }</span>
-<span class="source-line-no">266</span><span id="line.266"></span>
-<span class="source-line-no">267</span><span id="line.267">    public void setMasterVariant(</span>
-<span class="source-line-no">268</span><span id="line.268">            final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport masterVariant) {</span>
-<span class="source-line-no">269</span><span id="line.269">        this.masterVariant = masterVariant;</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">    public void setVariants(</span>
-<span class="source-line-no">273</span><span id="line.273">            final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport... variants) {</span>
-<span class="source-line-no">274</span><span id="line.274">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">    public void setVariants(</span>
-<span class="source-line-no">278</span><span id="line.278">            final java.util.List&lt;com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport&gt; variants) {</span>
-<span class="source-line-no">279</span><span id="line.279">        this.variants = variants;</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    public void setTaxCategory(final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {</span>
-<span class="source-line-no">283</span><span id="line.283">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">284</span><span id="line.284">    }</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">    public void setSearchKeywords(final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {</span>
-<span class="source-line-no">287</span><span id="line.287">        this.searchKeywords = searchKeywords;</span>
-<span class="source-line-no">288</span><span id="line.288">    }</span>
-<span class="source-line-no">289</span><span id="line.289"></span>
-<span class="source-line-no">290</span><span id="line.290">    public void setState(final com.commercetools.importapi.models.common.StateKeyReference state) {</span>
-<span class="source-line-no">291</span><span id="line.291">        this.state = state;</span>
-<span class="source-line-no">292</span><span id="line.292">    }</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">    public void setPublish(final Boolean publish) {</span>
-<span class="source-line-no">295</span><span id="line.295">        this.publish = publish;</span>
-<span class="source-line-no">296</span><span id="line.296">    }</span>
-<span class="source-line-no">297</span><span id="line.297"></span>
-<span class="source-line-no">298</span><span id="line.298">    @Override</span>
-<span class="source-line-no">299</span><span id="line.299">    public boolean equals(Object o) {</span>
-<span class="source-line-no">300</span><span id="line.300">        if (this == o)</span>
-<span class="source-line-no">301</span><span id="line.301">            return true;</span>
-<span class="source-line-no">302</span><span id="line.302"></span>
-<span class="source-line-no">303</span><span id="line.303">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">304</span><span id="line.304">            return false;</span>
-<span class="source-line-no">305</span><span id="line.305"></span>
-<span class="source-line-no">306</span><span id="line.306">        ProductDraftImportImpl that = (ProductDraftImportImpl) o;</span>
+<span class="source-line-no">220</span><span id="line.220">    *  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data.</span>
+<span class="source-line-no">221</span><span id="line.221">    *  If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.</span>
+<span class="source-line-no">222</span><span id="line.222">    *  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;</span>
+<span class="source-line-no">223</span><span id="line.223">    */</span>
+<span class="source-line-no">224</span><span id="line.224">    public Boolean getPublish() {</span>
+<span class="source-line-no">225</span><span id="line.225">        return this.publish;</span>
+<span class="source-line-no">226</span><span id="line.226">    }</span>
+<span class="source-line-no">227</span><span id="line.227"></span>
+<span class="source-line-no">228</span><span id="line.228">    public void setKey(final String key) {</span>
+<span class="source-line-no">229</span><span id="line.229">        this.key = key;</span>
+<span class="source-line-no">230</span><span id="line.230">    }</span>
+<span class="source-line-no">231</span><span id="line.231"></span>
+<span class="source-line-no">232</span><span id="line.232">    public void setProductType(final com.commercetools.importapi.models.common.ProductTypeKeyReference productType) {</span>
+<span class="source-line-no">233</span><span id="line.233">        this.productType = productType;</span>
+<span class="source-line-no">234</span><span id="line.234">    }</span>
+<span class="source-line-no">235</span><span id="line.235"></span>
+<span class="source-line-no">236</span><span id="line.236">    public void setName(final com.commercetools.importapi.models.common.LocalizedString name) {</span>
+<span class="source-line-no">237</span><span id="line.237">        this.name = name;</span>
+<span class="source-line-no">238</span><span id="line.238">    }</span>
+<span class="source-line-no">239</span><span id="line.239"></span>
+<span class="source-line-no">240</span><span id="line.240">    public void setSlug(final com.commercetools.importapi.models.common.LocalizedString slug) {</span>
+<span class="source-line-no">241</span><span id="line.241">        this.slug = slug;</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    public void setDescription(final com.commercetools.importapi.models.common.LocalizedString description) {</span>
+<span class="source-line-no">245</span><span id="line.245">        this.description = description;</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public void setCategories(final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {</span>
+<span class="source-line-no">249</span><span id="line.249">        this.categories = new ArrayList&lt;&gt;(Arrays.asList(categories));</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    public void setCategories(</span>
+<span class="source-line-no">253</span><span id="line.253">            final java.util.List&lt;com.commercetools.importapi.models.common.CategoryKeyReference&gt; categories) {</span>
+<span class="source-line-no">254</span><span id="line.254">        this.categories = categories;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle) {</span>
+<span class="source-line-no">258</span><span id="line.258">        this.metaTitle = metaTitle;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public void setMetaDescription(final com.commercetools.importapi.models.common.LocalizedString metaDescription) {</span>
+<span class="source-line-no">262</span><span id="line.262">        this.metaDescription = metaDescription;</span>
+<span class="source-line-no">263</span><span id="line.263">    }</span>
+<span class="source-line-no">264</span><span id="line.264"></span>
+<span class="source-line-no">265</span><span id="line.265">    public void setMetaKeywords(final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {</span>
+<span class="source-line-no">266</span><span id="line.266">        this.metaKeywords = metaKeywords;</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">    public void setMasterVariant(</span>
+<span class="source-line-no">270</span><span id="line.270">            final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport masterVariant) {</span>
+<span class="source-line-no">271</span><span id="line.271">        this.masterVariant = masterVariant;</span>
+<span class="source-line-no">272</span><span id="line.272">    }</span>
+<span class="source-line-no">273</span><span id="line.273"></span>
+<span class="source-line-no">274</span><span id="line.274">    public void setVariants(</span>
+<span class="source-line-no">275</span><span id="line.275">            final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport... variants) {</span>
+<span class="source-line-no">276</span><span id="line.276">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
+<span class="source-line-no">278</span><span id="line.278"></span>
+<span class="source-line-no">279</span><span id="line.279">    public void setVariants(</span>
+<span class="source-line-no">280</span><span id="line.280">            final java.util.List&lt;com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport&gt; variants) {</span>
+<span class="source-line-no">281</span><span id="line.281">        this.variants = variants;</span>
+<span class="source-line-no">282</span><span id="line.282">    }</span>
+<span class="source-line-no">283</span><span id="line.283"></span>
+<span class="source-line-no">284</span><span id="line.284">    public void setTaxCategory(final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {</span>
+<span class="source-line-no">285</span><span id="line.285">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">286</span><span id="line.286">    }</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">    public void setSearchKeywords(final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {</span>
+<span class="source-line-no">289</span><span id="line.289">        this.searchKeywords = searchKeywords;</span>
+<span class="source-line-no">290</span><span id="line.290">    }</span>
+<span class="source-line-no">291</span><span id="line.291"></span>
+<span class="source-line-no">292</span><span id="line.292">    public void setState(final com.commercetools.importapi.models.common.StateKeyReference state) {</span>
+<span class="source-line-no">293</span><span id="line.293">        this.state = state;</span>
+<span class="source-line-no">294</span><span id="line.294">    }</span>
+<span class="source-line-no">295</span><span id="line.295"></span>
+<span class="source-line-no">296</span><span id="line.296">    public void setPublish(final Boolean publish) {</span>
+<span class="source-line-no">297</span><span id="line.297">        this.publish = publish;</span>
+<span class="source-line-no">298</span><span id="line.298">    }</span>
+<span class="source-line-no">299</span><span id="line.299"></span>
+<span class="source-line-no">300</span><span id="line.300">    @Override</span>
+<span class="source-line-no">301</span><span id="line.301">    public boolean equals(Object o) {</span>
+<span class="source-line-no">302</span><span id="line.302">        if (this == o)</span>
+<span class="source-line-no">303</span><span id="line.303">            return true;</span>
+<span class="source-line-no">304</span><span id="line.304"></span>
+<span class="source-line-no">305</span><span id="line.305">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">306</span><span id="line.306">            return false;</span>
 <span class="source-line-no">307</span><span id="line.307"></span>
-<span class="source-line-no">308</span><span id="line.308">        return new EqualsBuilder().append(key, that.key)</span>
-<span class="source-line-no">309</span><span id="line.309">                .append(productType, that.productType)</span>
-<span class="source-line-no">310</span><span id="line.310">                .append(name, that.name)</span>
-<span class="source-line-no">311</span><span id="line.311">                .append(slug, that.slug)</span>
-<span class="source-line-no">312</span><span id="line.312">                .append(description, that.description)</span>
-<span class="source-line-no">313</span><span id="line.313">                .append(categories, that.categories)</span>
-<span class="source-line-no">314</span><span id="line.314">                .append(metaTitle, that.metaTitle)</span>
-<span class="source-line-no">315</span><span id="line.315">                .append(metaDescription, that.metaDescription)</span>
-<span class="source-line-no">316</span><span id="line.316">                .append(metaKeywords, that.metaKeywords)</span>
-<span class="source-line-no">317</span><span id="line.317">                .append(masterVariant, that.masterVariant)</span>
-<span class="source-line-no">318</span><span id="line.318">                .append(variants, that.variants)</span>
-<span class="source-line-no">319</span><span id="line.319">                .append(taxCategory, that.taxCategory)</span>
-<span class="source-line-no">320</span><span id="line.320">                .append(searchKeywords, that.searchKeywords)</span>
-<span class="source-line-no">321</span><span id="line.321">                .append(state, that.state)</span>
-<span class="source-line-no">322</span><span id="line.322">                .append(publish, that.publish)</span>
-<span class="source-line-no">323</span><span id="line.323">                .isEquals();</span>
-<span class="source-line-no">324</span><span id="line.324">    }</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    @Override</span>
-<span class="source-line-no">327</span><span id="line.327">    public int hashCode() {</span>
-<span class="source-line-no">328</span><span id="line.328">        return new HashCodeBuilder(17, 37).append(key)</span>
-<span class="source-line-no">329</span><span id="line.329">                .append(productType)</span>
-<span class="source-line-no">330</span><span id="line.330">                .append(name)</span>
-<span class="source-line-no">331</span><span id="line.331">                .append(slug)</span>
-<span class="source-line-no">332</span><span id="line.332">                .append(description)</span>
-<span class="source-line-no">333</span><span id="line.333">                .append(categories)</span>
-<span class="source-line-no">334</span><span id="line.334">                .append(metaTitle)</span>
-<span class="source-line-no">335</span><span id="line.335">                .append(metaDescription)</span>
-<span class="source-line-no">336</span><span id="line.336">                .append(metaKeywords)</span>
-<span class="source-line-no">337</span><span id="line.337">                .append(masterVariant)</span>
-<span class="source-line-no">338</span><span id="line.338">                .append(variants)</span>
-<span class="source-line-no">339</span><span id="line.339">                .append(taxCategory)</span>
-<span class="source-line-no">340</span><span id="line.340">                .append(searchKeywords)</span>
-<span class="source-line-no">341</span><span id="line.341">                .append(state)</span>
-<span class="source-line-no">342</span><span id="line.342">                .append(publish)</span>
-<span class="source-line-no">343</span><span id="line.343">                .toHashCode();</span>
-<span class="source-line-no">344</span><span id="line.344">    }</span>
-<span class="source-line-no">345</span><span id="line.345"></span>
-<span class="source-line-no">346</span><span id="line.346">}</span>
+<span class="source-line-no">308</span><span id="line.308">        ProductDraftImportImpl that = (ProductDraftImportImpl) o;</span>
+<span class="source-line-no">309</span><span id="line.309"></span>
+<span class="source-line-no">310</span><span id="line.310">        return new EqualsBuilder().append(key, that.key)</span>
+<span class="source-line-no">311</span><span id="line.311">                .append(productType, that.productType)</span>
+<span class="source-line-no">312</span><span id="line.312">                .append(name, that.name)</span>
+<span class="source-line-no">313</span><span id="line.313">                .append(slug, that.slug)</span>
+<span class="source-line-no">314</span><span id="line.314">                .append(description, that.description)</span>
+<span class="source-line-no">315</span><span id="line.315">                .append(categories, that.categories)</span>
+<span class="source-line-no">316</span><span id="line.316">                .append(metaTitle, that.metaTitle)</span>
+<span class="source-line-no">317</span><span id="line.317">                .append(metaDescription, that.metaDescription)</span>
+<span class="source-line-no">318</span><span id="line.318">                .append(metaKeywords, that.metaKeywords)</span>
+<span class="source-line-no">319</span><span id="line.319">                .append(masterVariant, that.masterVariant)</span>
+<span class="source-line-no">320</span><span id="line.320">                .append(variants, that.variants)</span>
+<span class="source-line-no">321</span><span id="line.321">                .append(taxCategory, that.taxCategory)</span>
+<span class="source-line-no">322</span><span id="line.322">                .append(searchKeywords, that.searchKeywords)</span>
+<span class="source-line-no">323</span><span id="line.323">                .append(state, that.state)</span>
+<span class="source-line-no">324</span><span id="line.324">                .append(publish, that.publish)</span>
+<span class="source-line-no">325</span><span id="line.325">                .isEquals();</span>
+<span class="source-line-no">326</span><span id="line.326">    }</span>
+<span class="source-line-no">327</span><span id="line.327"></span>
+<span class="source-line-no">328</span><span id="line.328">    @Override</span>
+<span class="source-line-no">329</span><span id="line.329">    public int hashCode() {</span>
+<span class="source-line-no">330</span><span id="line.330">        return new HashCodeBuilder(17, 37).append(key)</span>
+<span class="source-line-no">331</span><span id="line.331">                .append(productType)</span>
+<span class="source-line-no">332</span><span id="line.332">                .append(name)</span>
+<span class="source-line-no">333</span><span id="line.333">                .append(slug)</span>
+<span class="source-line-no">334</span><span id="line.334">                .append(description)</span>
+<span class="source-line-no">335</span><span id="line.335">                .append(categories)</span>
+<span class="source-line-no">336</span><span id="line.336">                .append(metaTitle)</span>
+<span class="source-line-no">337</span><span id="line.337">                .append(metaDescription)</span>
+<span class="source-line-no">338</span><span id="line.338">                .append(metaKeywords)</span>
+<span class="source-line-no">339</span><span id="line.339">                .append(masterVariant)</span>
+<span class="source-line-no">340</span><span id="line.340">                .append(variants)</span>
+<span class="source-line-no">341</span><span id="line.341">                .append(taxCategory)</span>
+<span class="source-line-no">342</span><span id="line.342">                .append(searchKeywords)</span>
+<span class="source-line-no">343</span><span id="line.343">                .append(state)</span>
+<span class="source-line-no">344</span><span id="line.344">                .append(publish)</span>
+<span class="source-line-no">345</span><span id="line.345">                .toHashCode();</span>
+<span class="source-line-no">346</span><span id="line.346">    }</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">}</span>
 
 
 

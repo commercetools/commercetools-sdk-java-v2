@@ -73,27 +73,34 @@
 <span class="source-line-no">060</span><span id="line.60">        return this;</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public InternalLogger warn(final Supplier&lt;Object&gt; message) {</span>
-<span class="source-line-no">064</span><span id="line.64">        if (underlyingLogger.isWarnEnabled()) {</span>
-<span class="source-line-no">065</span><span id="line.65">            underlyingLogger.warn(message.get().toString());</span>
+<span class="source-line-no">063</span><span id="line.63">    public InternalLogger trace(final Supplier&lt;Object&gt; message, final Throwable throwable) {</span>
+<span class="source-line-no">064</span><span id="line.64">        if (underlyingLogger.isTraceEnabled()) {</span>
+<span class="source-line-no">065</span><span id="line.65">            underlyingLogger.trace(message.get().toString(), throwable);</span>
 <span class="source-line-no">066</span><span id="line.66">        }</span>
 <span class="source-line-no">067</span><span id="line.67">        return this;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public InternalLogger error(final Supplier&lt;Object&gt; message) {</span>
-<span class="source-line-no">071</span><span id="line.71">        if (underlyingLogger.isErrorEnabled()) {</span>
-<span class="source-line-no">072</span><span id="line.72">            underlyingLogger.error(message.get().toString());</span>
+<span class="source-line-no">070</span><span id="line.70">    public InternalLogger warn(final Supplier&lt;Object&gt; message) {</span>
+<span class="source-line-no">071</span><span id="line.71">        if (underlyingLogger.isWarnEnabled()) {</span>
+<span class="source-line-no">072</span><span id="line.72">            underlyingLogger.warn(message.get().toString());</span>
 <span class="source-line-no">073</span><span id="line.73">        }</span>
 <span class="source-line-no">074</span><span id="line.74">        return this;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public InternalLogger error(final Supplier&lt;Object&gt; message, final Throwable throwable) {</span>
+<span class="source-line-no">077</span><span id="line.77">    public InternalLogger error(final Supplier&lt;Object&gt; message) {</span>
 <span class="source-line-no">078</span><span id="line.78">        if (underlyingLogger.isErrorEnabled()) {</span>
-<span class="source-line-no">079</span><span id="line.79">            underlyingLogger.error(message.get().toString(), throwable);</span>
+<span class="source-line-no">079</span><span id="line.79">            underlyingLogger.error(message.get().toString());</span>
 <span class="source-line-no">080</span><span id="line.80">        }</span>
 <span class="source-line-no">081</span><span id="line.81">        return this;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83">}</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public InternalLogger error(final Supplier&lt;Object&gt; message, final Throwable throwable) {</span>
+<span class="source-line-no">085</span><span id="line.85">        if (underlyingLogger.isErrorEnabled()) {</span>
+<span class="source-line-no">086</span><span id="line.86">            underlyingLogger.error(message.get().toString(), throwable);</span>
+<span class="source-line-no">087</span><span id="line.87">        }</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90">}</span>
 
 
 

@@ -159,7 +159,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPublish()">getPublish</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</div>
+<div class="block">If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSearchKeywords()">getSearchKeywords</a></span>()</code></div>
@@ -436,8 +436,10 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.204">getPublish</a></span>()</div>
-<div class="block"><p>If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.206">getPublish</a></span>()</div>
+<div class="block"><p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.
+  If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.
+  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#getPublish()">getPublish</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -447,7 +449,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.208">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.210">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -457,7 +459,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setName(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.212">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.214">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setName(com.commercetools.importapi.models.common.LocalizedString)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -467,7 +469,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setProductType(com.commercetools.importapi.models.common.ProductTypeKeyReference)">
 <h3>setProductType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.216">setProductType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.218">setProductType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setProductType(com.commercetools.importapi.models.common.ProductTypeKeyReference)">setProductType</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -477,7 +479,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setSlug(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.220">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.222">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setSlug(com.commercetools.importapi.models.common.LocalizedString)">setSlug</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -487,7 +489,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.224">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.226">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setDescription(com.commercetools.importapi.models.common.LocalizedString)">setDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -497,7 +499,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setCategories(com.commercetools.importapi.models.common.CategoryKeyReference...)">
 <h3>setCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.228">setCategories</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.230">setCategories</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setCategories(com.commercetools.importapi.models.common.CategoryKeyReference...)">setCategories</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -507,7 +509,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setCategories(java.util.List)">
 <h3>setCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.232">setCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.234">setCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setCategories(java.util.List)">setCategories</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -517,7 +519,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setMetaTitle(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.237">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.239">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setMetaTitle(com.commercetools.importapi.models.common.LocalizedString)">setMetaTitle</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -527,7 +529,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setMetaDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.241">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.243">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setMetaDescription(com.commercetools.importapi.models.common.LocalizedString)">setMetaDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -537,7 +539,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.245">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.247">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString)">setMetaKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -547,7 +549,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.249">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.251">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)">setTaxCategory</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -557,7 +559,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setSearchKeywords(com.commercetools.importapi.models.products.SearchKeywords)">
 <h3>setSearchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.253">setSearchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.255">setSearchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setSearchKeywords(com.commercetools.importapi.models.products.SearchKeywords)">setSearchKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -567,7 +569,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setState(com.commercetools.importapi.models.common.StateKeyReference)">
 <h3>setState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.257">setState</a></span>&#8203;<span class="parameters">(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.259">setState</a></span>&#8203;<span class="parameters">(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setState(com.commercetools.importapi.models.common.StateKeyReference)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -577,7 +579,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="setPublish(java.lang.Boolean)">
 <h3>setPublish</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.261">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.263">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductImport.html#setPublish(java.lang.Boolean)">setPublish</a></code>&nbsp;in interface&nbsp;<code><a href="ProductImport.html" title="interface in com.commercetools.importapi.models.products">ProductImport</a></code></dd>
@@ -587,7 +589,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.265">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.267">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -597,7 +599,7 @@ implements <a href="ProductImport.html" title="interface in com.commercetools.im
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.291">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/ProductImportImpl.html#line.293">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

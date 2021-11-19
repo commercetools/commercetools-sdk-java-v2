@@ -160,73 +160,75 @@
 <span class="source-line-no">147</span><span id="line.147">    public StateKeyReference getState();</span>
 <span class="source-line-no">148</span><span id="line.148"></span>
 <span class="source-line-no">149</span><span id="line.149">    /**</span>
-<span class="source-line-no">150</span><span id="line.150">    *  &lt;p&gt;If there were updates, only the updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
-<span class="source-line-no">151</span><span id="line.151">    */</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    @JsonProperty("publish")</span>
-<span class="source-line-no">154</span><span id="line.154">    public Boolean getPublish();</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">150</span><span id="line.150">    *  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data.</span>
+<span class="source-line-no">151</span><span id="line.151">    *  If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.</span>
+<span class="source-line-no">152</span><span id="line.152">    *  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;</span>
+<span class="source-line-no">153</span><span id="line.153">    */</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    @JsonProperty("publish")</span>
+<span class="source-line-no">156</span><span id="line.156">    public Boolean getPublish();</span>
 <span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public void setProductType(final ProductTypeKeyReference productType);</span>
+<span class="source-line-no">158</span><span id="line.158">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setSlug(final LocalizedString slug);</span>
+<span class="source-line-no">160</span><span id="line.160">    public void setProductType(final ProductTypeKeyReference productType);</span>
 <span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">162</span><span id="line.162">    public void setSlug(final LocalizedString slug);</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    @JsonIgnore</span>
-<span class="source-line-no">165</span><span id="line.165">    public void setCategories(final CategoryKeyReference... categories);</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setCategories(final List&lt;CategoryKeyReference&gt; categories);</span>
+<span class="source-line-no">164</span><span id="line.164">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    @JsonIgnore</span>
+<span class="source-line-no">167</span><span id="line.167">    public void setCategories(final CategoryKeyReference... categories);</span>
 <span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public void setMetaTitle(final LocalizedString metaTitle);</span>
+<span class="source-line-no">169</span><span id="line.169">    public void setCategories(final List&lt;CategoryKeyReference&gt; categories);</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public void setMetaDescription(final LocalizedString metaDescription);</span>
+<span class="source-line-no">171</span><span id="line.171">    public void setMetaTitle(final LocalizedString metaTitle);</span>
 <span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
+<span class="source-line-no">173</span><span id="line.173">    public void setMetaDescription(final LocalizedString metaDescription);</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
+<span class="source-line-no">175</span><span id="line.175">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
 <span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public void setSearchKeywords(final SearchKeywords searchKeywords);</span>
+<span class="source-line-no">177</span><span id="line.177">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
 <span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public void setState(final StateKeyReference state);</span>
+<span class="source-line-no">179</span><span id="line.179">    public void setSearchKeywords(final SearchKeywords searchKeywords);</span>
 <span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setPublish(final Boolean publish);</span>
+<span class="source-line-no">181</span><span id="line.181">    public void setState(final StateKeyReference state);</span>
 <span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public static ProductImport of() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return new ProductImportImpl();</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public static ProductImport of(final ProductImport template) {</span>
-<span class="source-line-no">188</span><span id="line.188">        ProductImportImpl instance = new ProductImportImpl();</span>
-<span class="source-line-no">189</span><span id="line.189">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">190</span><span id="line.190">        instance.setName(template.getName());</span>
-<span class="source-line-no">191</span><span id="line.191">        instance.setProductType(template.getProductType());</span>
-<span class="source-line-no">192</span><span id="line.192">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">193</span><span id="line.193">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">194</span><span id="line.194">        instance.setCategories(template.getCategories());</span>
-<span class="source-line-no">195</span><span id="line.195">        instance.setMetaTitle(template.getMetaTitle());</span>
-<span class="source-line-no">196</span><span id="line.196">        instance.setMetaDescription(template.getMetaDescription());</span>
-<span class="source-line-no">197</span><span id="line.197">        instance.setMetaKeywords(template.getMetaKeywords());</span>
-<span class="source-line-no">198</span><span id="line.198">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">199</span><span id="line.199">        instance.setSearchKeywords(template.getSearchKeywords());</span>
-<span class="source-line-no">200</span><span id="line.200">        instance.setState(template.getState());</span>
-<span class="source-line-no">201</span><span id="line.201">        instance.setPublish(template.getPublish());</span>
-<span class="source-line-no">202</span><span id="line.202">        return instance;</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public static ProductImportBuilder builder() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return ProductImportBuilder.of();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public static ProductImportBuilder builder(final ProductImport template) {</span>
-<span class="source-line-no">210</span><span id="line.210">        return ProductImportBuilder.of(template);</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    default &lt;T&gt; T withProductImport(Function&lt;ProductImport, T&gt; helper) {</span>
-<span class="source-line-no">214</span><span id="line.214">        return helper.apply(this);</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216">}</span>
+<span class="source-line-no">183</span><span id="line.183">    public void setPublish(final Boolean publish);</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public static ProductImport of() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return new ProductImportImpl();</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public static ProductImport of(final ProductImport template) {</span>
+<span class="source-line-no">190</span><span id="line.190">        ProductImportImpl instance = new ProductImportImpl();</span>
+<span class="source-line-no">191</span><span id="line.191">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">192</span><span id="line.192">        instance.setName(template.getName());</span>
+<span class="source-line-no">193</span><span id="line.193">        instance.setProductType(template.getProductType());</span>
+<span class="source-line-no">194</span><span id="line.194">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">195</span><span id="line.195">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">196</span><span id="line.196">        instance.setCategories(template.getCategories());</span>
+<span class="source-line-no">197</span><span id="line.197">        instance.setMetaTitle(template.getMetaTitle());</span>
+<span class="source-line-no">198</span><span id="line.198">        instance.setMetaDescription(template.getMetaDescription());</span>
+<span class="source-line-no">199</span><span id="line.199">        instance.setMetaKeywords(template.getMetaKeywords());</span>
+<span class="source-line-no">200</span><span id="line.200">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">201</span><span id="line.201">        instance.setSearchKeywords(template.getSearchKeywords());</span>
+<span class="source-line-no">202</span><span id="line.202">        instance.setState(template.getState());</span>
+<span class="source-line-no">203</span><span id="line.203">        instance.setPublish(template.getPublish());</span>
+<span class="source-line-no">204</span><span id="line.204">        return instance;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    public static ProductImportBuilder builder() {</span>
+<span class="source-line-no">208</span><span id="line.208">        return ProductImportBuilder.of();</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    public static ProductImportBuilder builder(final ProductImport template) {</span>
+<span class="source-line-no">212</span><span id="line.212">        return ProductImportBuilder.of(template);</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    default &lt;T&gt; T withProductImport(Function&lt;ProductImport, T&gt; helper) {</span>
+<span class="source-line-no">216</span><span id="line.216">        return helper.apply(this);</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218">}</span>
 
 
 

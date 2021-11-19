@@ -52,41 +52,44 @@
 <span class="source-line-no">039</span><span id="line.39">        return this.typeId;</span>
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public String getId() {</span>
-<span class="source-line-no">043</span><span id="line.43">        return this.id;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public com.commercetools.api.models.product.Product getObj() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return this.obj;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public void setId(final String id) {</span>
-<span class="source-line-no">051</span><span id="line.51">        this.id = id;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public void setObj(final com.commercetools.api.models.product.Product obj) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.obj = obj;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    @Override</span>
-<span class="source-line-no">059</span><span id="line.59">    public boolean equals(Object o) {</span>
-<span class="source-line-no">060</span><span id="line.60">        if (this == o)</span>
-<span class="source-line-no">061</span><span id="line.61">            return true;</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">064</span><span id="line.64">            return false;</span>
+<span class="source-line-no">042</span><span id="line.42">    /**</span>
+<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;Unique ID of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">    */</span>
+<span class="source-line-no">045</span><span id="line.45">    public String getId() {</span>
+<span class="source-line-no">046</span><span id="line.46">        return this.id;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public com.commercetools.api.models.product.Product getObj() {</span>
+<span class="source-line-no">050</span><span id="line.50">        return this.obj;</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public void setId(final String id) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.id = id;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public void setObj(final com.commercetools.api.models.product.Product obj) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.obj = obj;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    @Override</span>
+<span class="source-line-no">062</span><span id="line.62">    public boolean equals(Object o) {</span>
+<span class="source-line-no">063</span><span id="line.63">        if (this == o)</span>
+<span class="source-line-no">064</span><span id="line.64">            return true;</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">        ProductReferenceImpl that = (ProductReferenceImpl) o;</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">066</span><span id="line.66">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">067</span><span id="line.67">            return false;</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">        ProductReferenceImpl that = (ProductReferenceImpl) o;</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    @Override</span>
-<span class="source-line-no">072</span><span id="line.72">    public int hashCode() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return new HashCodeBuilder(17, 37).append(typeId).append(id).append(obj).toHashCode();</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">}</span>
+<span class="source-line-no">071</span><span id="line.71">        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    @Override</span>
+<span class="source-line-no">075</span><span id="line.75">    public int hashCode() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return new HashCodeBuilder(17, 37).append(typeId).append(id).append(obj).toHashCode();</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">}</span>
 
 
 

@@ -96,9 +96,14 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.OAuthHandler)">of</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oAuthHandler)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.OAuthHandler,java.lang.Integer)">of</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRetries)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.OAuthHandler,int)">of</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
+ int&nbsp;maxRetries)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">of</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
+ int&nbsp;maxRetries,
+ boolean&nbsp;useCircuitBreaker)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 </div>
 </div>
 <div class="inherited-list">
@@ -122,10 +127,18 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 </section>
 </li>
 <li>
-<section class="detail" id="of(io.vrap.rmf.base.client.http.OAuthHandler,java.lang.Integer)">
+<section class="detail" id="of(io.vrap.rmf.base.client.http.OAuthHandler,int)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddleware.html#line.13">of</a></span>&#8203;<span class="parameters">(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRetries)</span></div>
+ int&nbsp;maxRetries)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddleware.html#line.17">of</a></span>&#8203;<span class="parameters">(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
+ int&nbsp;maxRetries,
+ boolean&nbsp;useCircuitBreaker)</span></div>
 </section>
 </li>
 </ul>

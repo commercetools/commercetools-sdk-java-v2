@@ -1,6 +1,8 @@
 
 package commercetools.custom_object;
 
+import static commercetools.custom_object.CustomObjectFixtures.*;
+
 import java.util.Map;
 
 import com.commercetools.api.models.custom_object.CustomObject;
@@ -19,16 +21,16 @@ public class CustomObjectIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        CustomObject customObject = CustomObjectFixtures.createCustomObject();
-        CustomObject deletedCustomObject = CustomObjectFixtures.deleteCustomObject(customObject.getContainer(),
-            customObject.getKey(), customObject.getVersion());
+        CustomObject customObject = createCustomObject();
+        CustomObject deletedCustomObject = deleteCustomObject(customObject.getContainer(), customObject.getKey(),
+            customObject.getVersion());
 
         Assert.assertEquals(customObject.getId(), deletedCustomObject.getId());
     }
 
     @Test
     public void getByContainerKey() {
-        CustomObjectFixtures.withCustomObject(customObject -> {
+        withCustomObject(customObject -> {
             CustomObject queriedCustomObject = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .withContainerAndKey(customObject.getContainer(), customObject.getKey())
@@ -43,7 +45,7 @@ public class CustomObjectIntegrationTests {
 
     @Test
     public void update() {
-        CustomObjectFixtures.withUpdateableCustomObject(customObject -> {
+        withUpdateableCustomObject(customObject -> {
             CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                     .key(customObject.getKey())
                     .container(customObject.getContainer())
@@ -65,7 +67,7 @@ public class CustomObjectIntegrationTests {
 
     @Test
     public void updateWithJsonNode() {
-        CustomObjectFixtures.withUpdateableCustomObject(customObject -> {
+        withUpdateableCustomObject(customObject -> {
             CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                     .key(customObject.getKey())
                     .container(customObject.getContainer())
@@ -87,7 +89,7 @@ public class CustomObjectIntegrationTests {
 
     @Test
     public void query() {
-        CustomObjectFixtures.withCustomObject(customObject -> {
+        withCustomObject(customObject -> {
             CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .get()

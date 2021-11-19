@@ -1,6 +1,8 @@
 
 package commercetools.review;
 
+import static commercetools.review.ReviewFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +44,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void getById() {
-        ReviewFixtures.withReview(review -> {
+        withReview(review -> {
             Review queriedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withId(review.getId())
@@ -56,7 +58,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void getByKey() {
-        ReviewFixtures.withReview(review -> {
+        withReview(review -> {
             Review queriedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withKey(review.getKey())
@@ -70,7 +72,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void query() {
-        ReviewFixtures.withReview(review -> {
+        withReview(review -> {
             ReviewPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .get()
@@ -84,7 +86,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void updateById() {
-        ReviewFixtures.withUpdateableReview(review -> {
+        withUpdateableReview(review -> {
             List<ReviewUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());
@@ -105,7 +107,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ReviewFixtures.withUpdateableReview(review -> {
+        withUpdateableReview(review -> {
             List<ReviewUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());

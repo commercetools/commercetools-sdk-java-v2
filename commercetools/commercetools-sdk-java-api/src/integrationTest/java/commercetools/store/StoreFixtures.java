@@ -15,14 +15,22 @@ public class StoreFixtures {
 
     public static void withStore(final Consumer<Store> consumer) {
         Store store = createStore();
-        consumer.accept(store);
-        deleteStore(store.getId(), store.getVersion());
+        try {
+            consumer.accept(store);
+        }
+        finally {
+            deleteStore(store.getId(), store.getVersion());
+        }
     }
 
     public static void withUpdateableStore(final UnaryOperator<Store> operator) {
         Store store = createStore();
-        store = operator.apply(store);
-        deleteStore(store.getId(), store.getVersion());
+        try {
+            store = operator.apply(store);
+        }
+        finally {
+            deleteStore(store.getId(), store.getVersion());
+        }
     }
 
     public static Store createStore() {

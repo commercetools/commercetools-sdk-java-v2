@@ -14,14 +14,22 @@ public class SubscriptionFixtures {
 
     public static void withSubscription(final Consumer<Subscription> consumer) {
         Subscription subscription = createSubscription();
-        consumer.accept(subscription);
-        deleteSubscription(subscription.getId(), subscription.getVersion());
+        try {
+            consumer.accept(subscription);
+        }
+        finally {
+            deleteSubscription(subscription.getId(), subscription.getVersion());
+        }
     }
 
     public static void withUpdateableSubscription(final UnaryOperator<Subscription> operator) {
         Subscription subscription = createSubscription();
-        subscription = operator.apply(subscription);
-        deleteSubscription(subscription.getId(), subscription.getVersion());
+        try {
+            subscription = operator.apply(subscription);
+        }
+        finally {
+            deleteSubscription(subscription.getId(), subscription.getVersion());
+        }
     }
 
     public static Subscription createSubscription() {

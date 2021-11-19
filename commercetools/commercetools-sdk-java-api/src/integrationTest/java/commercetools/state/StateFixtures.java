@@ -12,16 +12,34 @@ import org.junit.Assert;
 
 public class StateFixtures {
 
+    public static void withState(final StateDraft stateDraft, final Consumer<State> consumer) {
+        State state = createState(stateDraft);
+        try {
+            consumer.accept(state);
+        }
+        finally {
+            deleteState(state.getId(), state.getVersion());
+        }
+    }
+
     public static void withState(final Consumer<State> consumer) {
         State state = createState();
-        consumer.accept(state);
-        deleteState(state.getId(), state.getVersion());
+        try {
+            consumer.accept(state);
+        }
+        finally {
+            deleteState(state.getId(), state.getVersion());
+        }
     }
 
     public static void withUpdateableState(final UnaryOperator<State> operator) {
         State state = createState();
-        state = operator.apply(state);
-        deleteState(state.getId(), state.getVersion());
+        try {
+            state = operator.apply(state);
+        }
+        finally {
+            deleteState(state.getId(), state.getVersion());
+        }
     }
 
     public static State createState() {
@@ -30,6 +48,11 @@ public class StateFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .roles(Arrays.asList(StateRoleEnum.RETURN))
                 .build();
+
+        return createState(stateDraft);
+    }
+
+    public static State createState(StateDraft stateDraft) {
 
         State state = CommercetoolsTestUtils.getProjectApiRoot().states().post(stateDraft).executeBlocking().getBody();
 

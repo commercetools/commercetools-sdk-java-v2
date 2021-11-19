@@ -1,6 +1,8 @@
 
 package commercetools.product_discount;
 
+import static commercetools.product_discount.ProductDiscountFixtures.*;
+
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -51,7 +53,7 @@ public class ProductDiscountIntegrationTests {
 
     @Test
     public void getById() {
-        ProductDiscountFixtures.withProductDiscount(productDiscount -> {
+        withProductDiscount(productDiscount -> {
             ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withId(productDiscount.getId())
@@ -66,7 +68,7 @@ public class ProductDiscountIntegrationTests {
 
     @Test
     public void getByKey() {
-        ProductDiscountFixtures.withProductDiscount(productDiscount -> {
+        withProductDiscount(productDiscount -> {
             ProductDiscount queriedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .withKey(productDiscount.getKey())
@@ -81,7 +83,7 @@ public class ProductDiscountIntegrationTests {
 
     @Test
     public void query() {
-        ProductDiscountFixtures.withProductDiscount(productDiscount -> {
+        withProductDiscount(productDiscount -> {
             ProductDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .productDiscounts()
                     .get()
@@ -96,7 +98,7 @@ public class ProductDiscountIntegrationTests {
 
     @Test
     public void updateById() {
-        ProductDiscountFixtures.withUpdateableProductDiscount(productDiscount -> {
+        withUpdateableProductDiscount(productDiscount -> {
             List<ProductDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductDiscountSetKeyActionBuilder.of().key(newKey).build());
@@ -118,7 +120,7 @@ public class ProductDiscountIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ProductDiscountFixtures.withUpdateableProductDiscount(productDiscount -> {
+        withUpdateableProductDiscount(productDiscount -> {
             List<ProductDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductDiscountSetKeyActionBuilder.of().key(newKey).build());

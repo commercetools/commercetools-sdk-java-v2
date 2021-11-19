@@ -15,14 +15,22 @@ public class ZoneFixtures {
 
     public static void withZone(final Consumer<Zone> consumer) {
         Zone zone = createZone();
-        consumer.accept(zone);
-        deleteZone(zone.getId(), zone.getVersion());
+        try {
+            consumer.accept(zone);
+        }
+        finally {
+            deleteZone(zone.getId(), zone.getVersion());
+        }
     }
 
     public static void withUpdateableZone(final UnaryOperator<Zone> operator) {
         Zone zone = createZone();
-        zone = operator.apply(zone);
-        deleteZone(zone.getId(), zone.getVersion());
+        try {
+            zone = operator.apply(zone);
+        }
+        finally {
+            deleteZone(zone.getId(), zone.getVersion());
+        }
     }
 
     public static Zone createZone() {

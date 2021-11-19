@@ -1,6 +1,8 @@
 
 package commercetools.store;
 
+import static commercetools.store.StoreFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,15 +17,15 @@ public class StoreIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Store store = StoreFixtures.createStore();
-        Store deletedStore = StoreFixtures.deleteStore(store.getId(), store.getVersion());
+        Store store = createStore();
+        Store deletedStore = deleteStore(store.getId(), store.getVersion());
 
         Assert.assertEquals(store.getId(), deletedStore.getId());
     }
 
     @Test
     public void getById() {
-        StoreFixtures.withStore(store -> {
+        withStore(store -> {
             Store queriedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withId(store.getId())
@@ -38,7 +40,7 @@ public class StoreIntegrationTests {
 
     @Test
     public void getByKey() {
-        StoreFixtures.withStore(store -> {
+        withStore(store -> {
             Store queriedStore = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .withKey(store.getKey())
@@ -53,7 +55,7 @@ public class StoreIntegrationTests {
 
     @Test
     public void query() {
-        StoreFixtures.withStore(store -> {
+        withStore(store -> {
             StorePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .stores()
                     .get()
@@ -68,7 +70,7 @@ public class StoreIntegrationTests {
 
     @Test
     public void updateById() {
-        StoreFixtures.withUpdateableStore(store -> {
+        withUpdateableStore(store -> {
             List<StoreUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(StoreSetNameActionBuilder.of().name(newName).build());
@@ -88,7 +90,7 @@ public class StoreIntegrationTests {
 
     @Test
     public void updateByKey() {
-        StoreFixtures.withUpdateableStore(store -> {
+        withUpdateableStore(store -> {
             List<StoreUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(StoreSetNameActionBuilder.of().name(newName).build());
@@ -108,7 +110,7 @@ public class StoreIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        Store store = StoreFixtures.createStore();
+        Store store = createStore();
         Store deletedStore = CommercetoolsTestUtils.getProjectApiRoot()
                 .stores()
                 .withKey(store.getKey())

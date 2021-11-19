@@ -20,17 +20,36 @@ import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
+import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManager;
+import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
+import org.apache.hc.client5.http.ssl.ClientTlsStrategyBuilder;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.Header;
 import org.apache.hc.core5.http.HttpHeaders;
 import org.apache.hc.core5.http.nio.AsyncRequestProducer;
+import org.apache.hc.core5.http.nio.ssl.TlsStrategy;
 import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
+import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
+import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
 public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     private final CloseableHttpAsyncClient apacheHttpClient;
 
-    private final Supplier<HttpAsyncClientBuilder> clientBuilder = HttpAsyncClientBuilder::create;
+    private final Supplier<HttpAsyncClientBuilder> clientBuilder = CtApacheHttpClient::createClientBuilder;
+
+    private static HttpAsyncClientBuilder createClientBuilder() {
+        final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create()
+                .useSystemProperties()
+                .setTlsDetailsFactory(
+                    sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
+                .build();
+        final PoolingAsyncClientConnectionManager cm = PoolingAsyncClientConnectionManagerBuilder.create()
+                .setTlsStrategy(tlsStrategy)
+                .build();
+
+        return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
+    }
 
     public CtApacheHttpClient() {
         apacheHttpClient = clientBuilder.get().build();

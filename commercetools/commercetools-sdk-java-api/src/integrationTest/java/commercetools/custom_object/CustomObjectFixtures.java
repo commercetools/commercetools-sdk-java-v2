@@ -16,14 +16,22 @@ public class CustomObjectFixtures {
 
     public static void withCustomObject(final Consumer<CustomObject> consumer) {
         CustomObject customObject = createCustomObject();
-        consumer.accept(customObject);
-        deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
+        try {
+            consumer.accept(customObject);
+        }
+        finally {
+            deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
+        }
     }
 
     public static void withUpdateableCustomObject(final UnaryOperator<CustomObject> operator) {
         CustomObject customObject = createCustomObject();
-        customObject = operator.apply(customObject);
-        deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
+        try {
+            customObject = operator.apply(customObject);
+        }
+        finally {
+            deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
+        }
     }
 
     public static CustomObject createCustomObject() {

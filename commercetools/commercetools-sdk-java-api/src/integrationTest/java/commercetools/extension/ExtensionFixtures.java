@@ -14,14 +14,22 @@ public class ExtensionFixtures {
 
     public static void withExtension(final Consumer<Extension> consumer) {
         Extension extension = createExtension();
-        consumer.accept(extension);
-        deleteExtension(extension.getId(), extension.getVersion());
+        try {
+            consumer.accept(extension);
+        }
+        finally {
+            deleteExtension(extension.getId(), extension.getVersion());
+        }
     }
 
     public static void withUpdateableExtension(final UnaryOperator<Extension> operator) {
         Extension extension = createExtension();
-        extension = operator.apply(extension);
-        deleteExtension(extension.getId(), extension.getVersion());
+        try {
+            extension = operator.apply(extension);
+        }
+        finally {
+            deleteExtension(extension.getId(), extension.getVersion());
+        }
     }
 
     public static Extension createExtension() {

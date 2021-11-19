@@ -10,6 +10,9 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
+/**
+ * @deprecated use {@link ClientBuilder} instead
+ */
 @Deprecated
 public class ClientFactory {
 

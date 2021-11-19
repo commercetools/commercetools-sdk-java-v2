@@ -1,6 +1,8 @@
 
 package commercetools.tax_category;
 
+import static commercetools.tax_category.TaxCategoryFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +52,7 @@ public class TaxCategoryIntegrationTests {
 
     @Test
     public void getById() {
-        TaxCategoryFixtures.withTaxCategory(taxCategory -> {
+        withTaxCategory(taxCategory -> {
             TaxCategory queriedTaxCategory = CommercetoolsTestUtils.getProjectApiRoot()
                     .taxCategories()
                     .withId(taxCategory.getId())
@@ -65,7 +67,7 @@ public class TaxCategoryIntegrationTests {
 
     @Test
     public void getByKey() {
-        TaxCategoryFixtures.withTaxCategory(taxCategory -> {
+        withTaxCategory(taxCategory -> {
             TaxCategory queriedTaxCategory = CommercetoolsTestUtils.getProjectApiRoot()
                     .taxCategories()
                     .withKey(taxCategory.getKey())
@@ -80,7 +82,7 @@ public class TaxCategoryIntegrationTests {
 
     @Test
     public void query() {
-        TaxCategoryFixtures.withTaxCategory(taxCategory -> {
+        withTaxCategory(taxCategory -> {
             TaxCategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .taxCategories()
                     .get()
@@ -95,7 +97,7 @@ public class TaxCategoryIntegrationTests {
 
     @Test
     public void updateById() {
-        TaxCategoryFixtures.withUpdateableTaxCategory(taxCategory -> {
+        withUpdateableTaxCategory(taxCategory -> {
 
             List<TaxCategoryUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
@@ -118,7 +120,7 @@ public class TaxCategoryIntegrationTests {
 
     @Test
     public void updateByIKey() {
-        TaxCategoryFixtures.withUpdateableTaxCategory(taxCategory -> {
+        withUpdateableTaxCategory(taxCategory -> {
 
             List<TaxCategoryUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();

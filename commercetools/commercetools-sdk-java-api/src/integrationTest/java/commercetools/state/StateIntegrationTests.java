@@ -1,6 +1,8 @@
 
 package commercetools.state;
 
+import static commercetools.state.StateFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +16,14 @@ public class StateIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        State state = StateFixtures.createState();
-        State deletedState = StateFixtures.deleteState(state.getId(), state.getVersion());
+        State state = createState();
+        State deletedState = deleteState(state.getId(), state.getVersion());
         Assert.assertEquals(deletedState.getId(), state.getId());
     }
 
     @Test
     public void getById() {
-        StateFixtures.withState(state -> {
+        withState(state -> {
             State queriedState = CommercetoolsTestUtils.getProjectApiRoot()
                     .states()
                     .withId(state.getId())
@@ -36,7 +38,7 @@ public class StateIntegrationTests {
 
     @Test
     public void query() {
-        StateFixtures.withState(state -> {
+        withState(state -> {
             StatePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .states()
                     .get()
@@ -51,7 +53,7 @@ public class StateIntegrationTests {
 
     @Test
     public void update() {
-        StateFixtures.withUpdateableState(state -> {
+        withUpdateableState(state -> {
             List<StateUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(StateChangeKeyActionBuilder.of().key(newKey).build());

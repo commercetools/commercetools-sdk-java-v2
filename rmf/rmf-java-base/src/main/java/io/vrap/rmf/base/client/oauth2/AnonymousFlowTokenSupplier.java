@@ -5,18 +5,29 @@ import static io.vrap.rmf.base.client.ApiHttpHeaders.headerEntry;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Base64;
+import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.ClientUtils;
 
-/**
- * Token supplier using anonymous flow
- */
-public class AnonymousSessionTokenSupplier extends BaseAuthTokenSupplier implements TokenSupplier {
+public class AnonymousFlowTokenSupplier extends BaseAuthTokenSupplier implements RefreshableTokenSupplier {
+    private final RefreshFlowTokenSupplier refreshFlowTokenSupplier;
 
-    public AnonymousSessionTokenSupplier(final String clientId, final String clientSecret, final String scope,
-            final String tokenEndpoint, final VrapHttpClient vrapHttpClient) {
+    public AnonymousFlowTokenSupplier(final String clientId, final String clientSecret, final String scope,
+            final String tokenEndpoint, final RefreshFlowTokenSupplier refreshFlowTokenSupplier,
+            final VrapHttpClient vrapHttpClient) {
         super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint));
+        this.refreshFlowTokenSupplier = refreshFlowTokenSupplier;
+    }
+
+    @Override
+    public CompletableFuture<AuthenticationToken> refreshToken() {
+        return refreshFlowTokenSupplier.refreshToken().exceptionally(throwable -> {
+            logger.error(() -> throwable);
+            return ClientUtils.blockingWait(getToken(), Duration.ofSeconds(5));
+        });
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,

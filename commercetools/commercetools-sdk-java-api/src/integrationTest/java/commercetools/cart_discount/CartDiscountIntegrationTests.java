@@ -1,6 +1,8 @@
 
 package commercetools.cart_discount;
 
+import static commercetools.cart_discount.CartDiscountFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -57,7 +59,7 @@ public class CartDiscountIntegrationTests {
 
     @Test
     public void getById() {
-        CartDiscountFixtures.withCartDiscount(cartDiscount -> {
+        withCartDiscount(cartDiscount -> {
             CartDiscount queriedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .cartDiscounts()
                     .withId(cartDiscount.getId())
@@ -72,7 +74,7 @@ public class CartDiscountIntegrationTests {
 
     @Test
     public void getByKey() {
-        CartDiscountFixtures.withCartDiscount(cartDiscount -> {
+        withCartDiscount(cartDiscount -> {
             CartDiscount queriedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                     .cartDiscounts()
                     .withKey(cartDiscount.getKey())
@@ -87,7 +89,7 @@ public class CartDiscountIntegrationTests {
 
     @Test
     public void query() {
-        CartDiscountFixtures.withCartDiscount(cartDiscount -> {
+        withCartDiscount(cartDiscount -> {
             CartDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .cartDiscounts()
                     .get()
@@ -102,7 +104,7 @@ public class CartDiscountIntegrationTests {
 
     @Test
     public void updateById() {
-        CartDiscountFixtures.withUpdateableCartDiscount(cartDiscount -> {
+        withUpdateableCartDiscount(cartDiscount -> {
             List<CartDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CartDiscountSetKeyActionBuilder.of().key(newKey).build());
@@ -125,7 +127,7 @@ public class CartDiscountIntegrationTests {
 
     @Test
     public void updateByKey() {
-        CartDiscountFixtures.withUpdateableCartDiscount(cartDiscount -> {
+        withUpdateableCartDiscount(cartDiscount -> {
             List<CartDiscountUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CartDiscountSetKeyActionBuilder.of().key(newKey).build());

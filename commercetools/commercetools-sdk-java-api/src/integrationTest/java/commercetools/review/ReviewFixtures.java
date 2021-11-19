@@ -1,19 +1,19 @@
 
 package commercetools.review;
 
+import static commercetools.customer.CustomerFixtures.*;
+import static commercetools.state.StateFixtures.*;
+
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
-import com.commercetools.api.models.channel.Channel;
 import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewDraft;
 import com.commercetools.api.models.review.ReviewDraftBuilder;
 import com.commercetools.api.models.state.*;
-import commercetools.channel.ChannelFixtures;
-import commercetools.customer.CustomerFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
@@ -21,28 +21,34 @@ import org.junit.Assert;
 public class ReviewFixtures {
 
     public static void withReview(final Consumer<Review> consumer) {
-        Review review = createReview();
-        consumer.accept(review);
-        delete(review.getId(), review.getVersion());
+        withState(
+            StateDraftBuilder.of().type(StateTypeEnum.REVIEW_STATE).key(CommercetoolsTestUtils.randomKey()).build(),
+            state -> withCustomer(customer -> {
+                Review review = createReview(customer, state);
+                try {
+                    consumer.accept(review);
+                }
+                finally {
+                    deleteReview(review.getId(), review.getVersion());
+                }
+            }));
     }
 
     public static void withUpdateableReview(final UnaryOperator<Review> operator) {
-        Review review = createReview();
-        review = operator.apply(review);
-        delete(review.getId(), review.getVersion());
+        withState(
+            StateDraftBuilder.of().type(StateTypeEnum.REVIEW_STATE).key(CommercetoolsTestUtils.randomKey()).build(),
+            state -> withCustomer(customer -> {
+                Review review = createReview(customer, state);
+                try {
+                    review = operator.apply(review);
+                }
+                finally {
+                    deleteReview(review.getId(), review.getVersion());
+                }
+            }));
     }
 
-    public static Review createReview() {
-
-        Channel channel = ChannelFixtures.createChannel();
-        Customer customer = CustomerFixtures.createCustomer();
-
-        StateDraft stateDraft = StateDraftBuilder.of()
-                .type(StateTypeEnum.REVIEW_STATE)
-                .key(CommercetoolsTestUtils.randomKey())
-                .build();
-
-        State state = CommercetoolsTestUtils.getProjectApiRoot().states().post(stateDraft).executeBlocking().getBody();
+    public static Review createReview(Customer customer, State state) {
 
         ReviewDraft reviewDraft = ReviewDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
@@ -70,7 +76,7 @@ public class ReviewFixtures {
         return review;
     }
 
-    public static Review delete(final String id, final Long version) {
+    public static Review deleteReview(final String id, final Long version) {
         Review deletedReview = CommercetoolsTestUtils.getProjectApiRoot()
                 .reviews()
                 .withId(id)

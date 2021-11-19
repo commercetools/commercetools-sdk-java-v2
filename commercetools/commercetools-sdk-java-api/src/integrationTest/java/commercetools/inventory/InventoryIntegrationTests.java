@@ -1,6 +1,8 @@
 
 package commercetools.inventory;
 
+import static commercetools.inventory.InventoryEntryFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +44,7 @@ public class InventoryIntegrationTests {
 
     @Test
     public void getById() {
-        InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
+        withInventoryEntry(inventoryEntry -> {
             InventoryEntry queriedInventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .withId(inventoryEntry.getId())
@@ -56,7 +58,7 @@ public class InventoryIntegrationTests {
 
     @Test
     public void query() {
-        InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
+        withInventoryEntry(inventoryEntry -> {
             InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .get()
@@ -70,7 +72,7 @@ public class InventoryIntegrationTests {
 
     @Test
     public void update() {
-        InventoryEntryFixtures.withUpdatableInventoryEntry(inventoryEntry -> {
+        withUpdatableInventoryEntry(inventoryEntry -> {
             List<InventoryEntryUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(InventoryEntrySetRestockableInDaysActionBuilder.of().restockableInDays(10L).build());
 

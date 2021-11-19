@@ -1,7 +1,7 @@
 
 package commercetools.me;
 
-import static commercetools.cart.CartsFixtures.deleteCart;
+import static commercetools.cart.CartsFixtures.*;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -18,16 +18,24 @@ public class MyCartsFixtures {
         MyCartDraft myCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
         Cart myCart = createMeCart(myCartDraft);
-        consumer.accept(myCart);
-        deleteCart(myCart.getId(), myCart.getVersion());
+        try {
+            consumer.accept(myCart);
+        }
+        finally {
+            deleteCart(myCart.getId(), myCart.getVersion());
+        }
     }
 
     public static void withUpdateableMeCart(final UnaryOperator<Cart> operator) {
         MyCartDraft myCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
         Cart myCart = createMeCart(myCartDraft);
-        myCart = operator.apply(myCart);
-        deleteCart(myCart.getId(), myCart.getVersion());
+        try {
+            myCart = operator.apply(myCart);
+        }
+        finally {
+            deleteCart(myCart.getId(), myCart.getVersion());
+        }
     }
 
     public static Cart createMeCart(final MyCartDraft myCartDraft) {

@@ -1,13 +1,14 @@
 
 package commercetools.cart;
 
+import static commercetools.customer.CustomerFixtures.*;
+
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.api.models.cart.CartDraftBuilder;
-import commercetools.customer.CustomerFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
@@ -32,12 +33,16 @@ public class CartsFixtures {
         CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").country("DE").build();
 
         Cart cart = createCart(cartDraft);
-        consumer.accept(cart);
-        deleteCart(cart.getId(), cart.getVersion());
+        try {
+            consumer.accept(cart);
+        }
+        finally {
+            deleteCart(cart.getId(), cart.getVersion());
+        }
     }
 
     public static void withCartWithCustomer(final Consumer<Cart> consumer) {
-        CustomerFixtures.withCustomer(customer -> {
+        withCustomer(customer -> {
             CartDraft cartDraft = CartDraftBuilder.of()
                     .currency("EUR")
                     .country("DE")
@@ -45,8 +50,12 @@ public class CartsFixtures {
                     .build();
 
             Cart cart = createCart(cartDraft);
-            consumer.accept(cart);
-            deleteCart(cart.getId(), cart.getVersion());
+            try {
+                consumer.accept(cart);
+            }
+            finally {
+                deleteCart(cart.getId(), cart.getVersion());
+            }
         });
     }
 
@@ -54,8 +63,12 @@ public class CartsFixtures {
         CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").country("DE").build();
 
         Cart cart = createCart(cartDraft);
-        cart = operator.apply(cart);
-        deleteCart(cart.getId(), cart.getVersion());
+        try {
+            cart = operator.apply(cart);
+        }
+        finally {
+            deleteCart(cart.getId(), cart.getVersion());
+        }
     }
 
     public static Cart createCart(final CartDraft cartDraft) {

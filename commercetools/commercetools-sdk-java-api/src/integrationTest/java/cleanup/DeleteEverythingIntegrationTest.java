@@ -1,7 +1,28 @@
 
 package cleanup;
 
+import static commercetools.cart.CartsFixtures.*;
+import static commercetools.cart_discount.CartDiscountFixtures.*;
+import static commercetools.category.CategoryFixtures.*;
+import static commercetools.channel.ChannelFixtures.*;
+import static commercetools.custom_object.CustomObjectFixtures.*;
+import static commercetools.customer.CustomerFixtures.*;
+import static commercetools.customer_group.CustomerGroupFixtures.*;
+import static commercetools.discount_code.DiscountCodeFixtures.*;
+import static commercetools.extension.ExtensionFixtures.*;
+import static commercetools.inventory.InventoryEntryFixtures.*;
+import static commercetools.order.OrdersFixtures.*;
+import static commercetools.product_discount.ProductDiscountFixtures.*;
+import static commercetools.product_type.ProductTypeFixtures.*;
+import static commercetools.review.ReviewFixtures.*;
+import static commercetools.shipping_method.ShippingMethodFixtures.*;
+import static commercetools.shopping_list.ShoppingListFixtures.*;
+import static commercetools.state.StateFixtures.*;
+import static commercetools.store.StoreFixtures.*;
+import static commercetools.tax_category.TaxCategoryFixtures.*;
+import static commercetools.type.TypeFixtures.*;
 import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
+import static commercetools.zone.ZoneFixtures.*;
 
 import java.time.Duration;
 import java.util.function.Consumer;
@@ -12,29 +33,8 @@ import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.ResourcePagedQueryResponse;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.state.*;
-import commercetools.cart.CartsFixtures;
-import commercetools.cart_discount.CartDiscountFixtures;
-import commercetools.category.CategoryFixtures;
-import commercetools.channel.ChannelFixtures;
-import commercetools.custom_object.CustomObjectFixtures;
-import commercetools.customer.CustomerFixtures;
-import commercetools.customer_group.CustomerGroupFixtures;
-import commercetools.discount_code.DiscountCodeFixtures;
-import commercetools.extension.ExtensionFixtures;
-import commercetools.inventory.InventoryEntryFixtures;
-import commercetools.order.OrdersFixtures;
 import commercetools.product.ProductFixtures;
-import commercetools.product_discount.ProductDiscountFixtures;
-import commercetools.product_type.ProductTypeFixtures;
-import commercetools.review.ReviewFixtures;
-import commercetools.shipping_method.ShippingMethodFixtures;
-import commercetools.shopping_list.ShoppingListFixtures;
-import commercetools.state.StateFixtures;
-import commercetools.store.StoreFixtures;
-import commercetools.tax_category.TaxCategoryFixtures;
-import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
-import commercetools.zone.ZoneFixtures;
 
 import io.vrap.rmf.base.client.error.NotFoundException;
 
@@ -92,12 +92,12 @@ public class DeleteEverythingIntegrationTest {
 
     private void deleteAllZones() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().zones().get(),
-            (zone) -> ZoneFixtures.deleteZone(zone.getId(), zone.getVersion()));
+            (zone) -> deleteZone(zone.getId(), zone.getVersion()));
     }
 
     private void deleteAllOrderEdits() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().orders().edits().get(),
-            (orderEdit) -> OrdersFixtures.deleteOrderEdit(orderEdit.getId(), orderEdit.getVersion()));
+            (orderEdit) -> deleteOrderEdit(orderEdit.getId(), orderEdit.getVersion()));
     }
 
     private void deleteAllOrders() {
@@ -106,7 +106,7 @@ public class DeleteEverythingIntegrationTest {
                 .isZero());
 
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().orders().get(),
-            (order) -> OrdersFixtures.deleteOrder(order.getId(), order.getVersion()));
+            (order) -> deleteOrder(order.getId(), order.getVersion()));
     }
 
     private void deleteAllCarts() {
@@ -115,17 +115,17 @@ public class DeleteEverythingIntegrationTest {
                     CommercetoolsTestUtils.getProjectApiRoot().orders().get().executeBlocking().getBody().getCount())
                 .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().carts().get(),
-            (cart) -> CartsFixtures.deleteCart(cart.getId(), cart.getVersion()));
+            (cart) -> deleteCart(cart.getId(), cart.getVersion()));
     }
 
     private void deleteAllTypes() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().types().get(),
-            (type) -> TypeFixtures.deleteType(type.getId(), type.getVersion()));
+            (type) -> deleteType(type.getId(), type.getVersion()));
     }
 
     private void deleteAllStores() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().stores().get(),
-            (store) -> StoreFixtures.deleteStore(store.getId(), store.getVersion()));
+            (store) -> deleteStore(store.getId(), store.getVersion()));
     }
 
     private void deleteAllStates() {
@@ -145,23 +145,22 @@ public class DeleteEverythingIntegrationTest {
         }, 100).toCompletableFuture().join();
 
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().states().get().withWhere("builtIn = false"),
-            (state) -> StateFixtures.deleteState(state.getId(), state.getVersion()));
+            (state) -> deleteState(state.getId(), state.getVersion()));
     }
 
     private void deleteAllShoppingLists() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().shoppingLists().get(),
-            (shoppingList) -> ShoppingListFixtures.deleteShoppingList(shoppingList.getId(), shoppingList.getVersion()));
+            (shoppingList) -> deleteShoppingList(shoppingList.getId(), shoppingList.getVersion()));
     }
 
     private void deleteAllShippingMethods() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().shippingMethods().get(),
-            (shippingMethod) -> ShippingMethodFixtures.deleteShippingMethod(shippingMethod.getId(),
-                shippingMethod.getVersion()));
+            (shippingMethod) -> deleteShippingMethod(shippingMethod.getId(), shippingMethod.getVersion()));
     }
 
     private void deleteAllExtensions() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().extensions().get(),
-            (extension) -> ExtensionFixtures.deleteExtension(extension.getId(), extension.getVersion()));
+            (extension) -> deleteExtension(extension.getId(), extension.getVersion()));
     }
 
     private void deleteAllCustomerGroups() {
@@ -170,24 +169,23 @@ public class DeleteEverythingIntegrationTest {
                     CommercetoolsTestUtils.getProjectApiRoot().customers().get().executeBlocking().getBody().getCount())
                 .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().customerGroups().get(),
-            (customerGroup) -> CustomerGroupFixtures.deleteCustomerGroup(customerGroup.getId(),
-                customerGroup.getVersion()));
+            (customerGroup) -> deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion()));
     }
 
     private void deleteAllCustomers() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().customers().get(),
-            (customer) -> CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion()));
+            (customer) -> deleteCustomer(customer.getId(), customer.getVersion()));
     }
 
     private void deleteAllCustomObjects() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().customObjects().get(),
-            (customObject) -> CustomObjectFixtures.deleteCustomObject(customObject.getContainer(),
-                customObject.getKey(), customObject.getVersion()));
+            (customObject) -> deleteCustomObject(customObject.getContainer(), customObject.getKey(),
+                customObject.getVersion()));
     }
 
     private void deleteAllChannels() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().channels().get(),
-            (channel) -> ChannelFixtures.deleteChannel(channel.getId(), channel.getVersion()));
+            (channel) -> deleteChannel(channel.getId(), channel.getVersion()));
     }
 
     private void deleteAllCategories() {
@@ -197,7 +195,7 @@ public class DeleteEverythingIntegrationTest {
             response = CommercetoolsTestUtils.getProjectApiRoot().categories().get().executeBlocking().getBody();
             response.getResults().forEach(category -> {
                 try {
-                    CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
+                    deleteCategory(category.getId(), category.getVersion());
                 }
                 catch (NotFoundException ignored) {
                 }
@@ -211,12 +209,12 @@ public class DeleteEverythingIntegrationTest {
                 .isZero());
 
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().cartDiscounts().get(),
-            (cartDiscount) -> CartDiscountFixtures.deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion()));
+            (cartDiscount) -> deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion()));
     }
 
     private void deleteAllInventories() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().inventory().get(),
-            (inventoryEntry) -> InventoryEntryFixtures.delete(inventoryEntry.getId()));
+            (inventoryEntry) -> delete(inventoryEntry.getId()));
     }
 
     private void deleteAllProducts() {
@@ -229,27 +227,26 @@ public class DeleteEverythingIntegrationTest {
                     CommercetoolsTestUtils.getProjectApiRoot().products().get().executeBlocking().getBody().getCount())
                 .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().productDiscounts().get(),
-            (productDiscount) -> ProductDiscountFixtures.deleteProductDiscount(productDiscount.getId(),
-                productDiscount.getVersion()));
+            (productDiscount) -> deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion()));
     }
 
     private void deleteAllProductTypes() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().productTypes().get(),
-            (productType) -> ProductTypeFixtures.deleteProductType(productType.getId(), productType.getVersion()));
+            (productType) -> deleteProductType(productType.getId(), productType.getVersion()));
     }
 
     private void deleteAllReviews() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().reviews().get(),
-            (review) -> ReviewFixtures.delete(review.getId(), review.getVersion()));
+            (review) -> deleteReview(review.getId(), review.getVersion()));
     }
 
     private void deleteAllTaxCategories() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().taxCategories().get(),
-            (taxCategory) -> TaxCategoryFixtures.deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion()));
+            (taxCategory) -> deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion()));
     }
 
     private void deleteAllDiscountCodes() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().discountCodes().get(),
-            (discountCode) -> DiscountCodeFixtures.deleteDiscountCode(discountCode.getId(), discountCode.getVersion()));
+            (discountCode) -> deleteDiscountCode(discountCode.getId(), discountCode.getVersion()));
     }
 }

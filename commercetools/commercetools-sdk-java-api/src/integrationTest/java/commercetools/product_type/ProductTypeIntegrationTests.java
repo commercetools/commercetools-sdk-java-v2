@@ -1,6 +1,8 @@
 
 package commercetools.product_type;
 
+import static commercetools.product_type.ProductTypeFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,16 +16,15 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        ProductType productType = ProductTypeFixtures.createProductType();
-        ProductType deleteProductType = ProductTypeFixtures.deleteProductType(productType.getId(),
-            productType.getVersion());
+        ProductType productType = createProductType();
+        ProductType deleteProductType = deleteProductType(productType.getId(), productType.getVersion());
 
         Assert.assertEquals(productType.getId(), deleteProductType.getId());
     }
 
     @Test
     public void getById() {
-        ProductTypeFixtures.withProductType(productType -> {
+        withProductType(productType -> {
             ProductType queriedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withId(productType.getId())
@@ -38,7 +39,7 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void getByKey() {
-        ProductTypeFixtures.withProductType(productType -> {
+        withProductType(productType -> {
             ProductType queriedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .withKey(productType.getKey())
@@ -53,7 +54,7 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void query() {
-        ProductTypeFixtures.withProductType(productType -> {
+        withProductType(productType -> {
             ProductTypePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .productTypes()
                     .get()
@@ -68,7 +69,7 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void updateById() {
-        ProductTypeFixtures.withUpdateableProductType(productType -> {
+        withUpdateableProductType(productType -> {
             List<ProductTypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductTypeSetKeyActionBuilder.of().key(newKey).build());
@@ -89,7 +90,7 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ProductTypeFixtures.withUpdateableProductType(productType -> {
+        withUpdateableProductType(productType -> {
             List<ProductTypeUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ProductTypeSetKeyActionBuilder.of().key(newKey).build());
@@ -110,7 +111,7 @@ public class ProductTypeIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        ProductType productType = ProductTypeFixtures.createProductType();
+        ProductType productType = createProductType();
         ProductType deletedProductType = CommercetoolsTestUtils.getProjectApiRoot()
                 .productTypes()
                 .withKey(productType.getKey())

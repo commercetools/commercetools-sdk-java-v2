@@ -18,14 +18,22 @@ public class ChannelFixtures {
 
     public static void withChannel(final Consumer<Channel> consumer) {
         Channel channel = createChannel();
-        consumer.accept(channel);
-        deleteChannel(channel.getId(), channel.getVersion());
+        try {
+            consumer.accept(channel);
+        }
+        finally {
+            deleteChannel(channel.getId(), channel.getVersion());
+        }
     }
 
     public static void withUpdateableChannel(final UnaryOperator<Channel> operator) {
         Channel channel = createChannel();
-        channel = operator.apply(channel);
-        deleteChannel(channel.getId(), channel.getVersion());
+        try {
+            channel = operator.apply(channel);
+        }
+        finally {
+            deleteChannel(channel.getId(), channel.getVersion());
+        }
     }
 
     public static Channel createChannel() {

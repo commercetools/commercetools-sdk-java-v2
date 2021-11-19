@@ -1,6 +1,11 @@
 
 package commercetools.product;
 
+import static commercetools.category.CategoryFixtures.*;
+import static commercetools.product.ProductFixtures.*;
+import static commercetools.product_type.ProductTypeFixtures.*;
+import static commercetools.tax_category.TaxCategoryFixtures.*;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,16 +25,19 @@ public class ProductIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Product product = ProductFixtures.createProduct();
-        Assert.assertNotNull(product);
+        withTaxCategory(
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory);
+                Assert.assertNotNull(product);
 
-        Product deletedProduct = ProductFixtures.deleteProductById(product.getId(), product.getVersion());
-        Assert.assertNotNull(deletedProduct);
+                Product deletedProduct = deleteProductById(product.getId(), product.getVersion());
+                Assert.assertNotNull(deletedProduct);
+            })));
     }
 
     @Test
     public void getById() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             Product queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withId(product.getId())
@@ -43,7 +51,7 @@ public class ProductIntegrationTests {
 
     @Test
     public void getByKey() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             Product queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .withKey(product.getKey())
@@ -57,7 +65,7 @@ public class ProductIntegrationTests {
 
     @Test
     public void updateById() {
-        ProductFixtures.withUpdateableProduct(product -> {
+        withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
@@ -77,7 +85,7 @@ public class ProductIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ProductFixtures.withUpdateableProduct(product -> {
+        withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
@@ -97,7 +105,7 @@ public class ProductIntegrationTests {
 
     @Test
     public void query() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .products()
                     .get()
@@ -111,7 +119,7 @@ public class ProductIntegrationTests {
 
     @Test
     public void upload() {
-        ProductFixtures.withProduct(product -> {
+        withProduct(product -> {
             File imageFile;
             try {
                 imageFile = File.createTempFile("ct_logo_farbe", ".gif");

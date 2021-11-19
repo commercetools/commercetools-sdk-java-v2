@@ -1,6 +1,8 @@
 
 package commercetools.inventory;
 
+import static commercetools.channel.ChannelFixtures.*;
+
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.function.Consumer;
@@ -11,7 +13,6 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder;
 import com.commercetools.api.models.inventory.InventoryEntry;
 import com.commercetools.api.models.inventory.InventoryEntryDraft;
 import com.commercetools.api.models.inventory.InventoryEntryDraftBuilder;
-import commercetools.channel.ChannelFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
@@ -19,20 +20,30 @@ import org.junit.Assert;
 public class InventoryEntryFixtures {
 
     public static void withInventoryEntry(final Consumer<InventoryEntry> consumer) {
-        InventoryEntry inventoryEntry = create();
-        consumer.accept(inventoryEntry);
-        delete(inventoryEntry.getId());
+        withChannel(channel -> {
+            InventoryEntry inventoryEntry = create(channel);
+            try {
+                consumer.accept(inventoryEntry);
+            }
+            finally {
+                delete(inventoryEntry.getId());
+            }
+        });
     }
 
     public static void withUpdatableInventoryEntry(final UnaryOperator<InventoryEntry> operator) {
-        InventoryEntry inventoryEntry = create();
-        inventoryEntry = operator.apply(inventoryEntry);
-        delete(inventoryEntry.getId());
+        withChannel(channel -> {
+            InventoryEntry inventoryEntry = create(channel);
+            try {
+                inventoryEntry = operator.apply(inventoryEntry);
+            }
+            finally {
+                delete(inventoryEntry.getId());
+            }
+        });
     }
 
-    public static InventoryEntry create() {
-        Channel channel = ChannelFixtures.createChannel();
-
+    public static InventoryEntry create(Channel channel) {
         InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraftBuilder.of()
                 .sku(CommercetoolsTestUtils.randomString())
                 .quantityOnStock(10L)

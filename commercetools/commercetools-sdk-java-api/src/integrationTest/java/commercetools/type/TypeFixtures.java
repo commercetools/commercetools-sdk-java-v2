@@ -14,14 +14,22 @@ public class TypeFixtures {
 
     public static void withType(final Consumer<Type> consumer) {
         Type type = createType();
-        consumer.accept(type);
-        deleteType(type.getId(), type.getVersion());
+        try {
+            consumer.accept(type);
+        }
+        finally {
+            deleteType(type.getId(), type.getVersion());
+        }
     }
 
     public static void withUpdateableType(final UnaryOperator<Type> operator) {
         Type type = createType();
-        type = operator.apply(type);
-        deleteType(type.getId(), type.getVersion());
+        try {
+            type = operator.apply(type);
+        }
+        finally {
+            deleteType(type.getId(), type.getVersion());
+        }
     }
 
     public static Type createType() {

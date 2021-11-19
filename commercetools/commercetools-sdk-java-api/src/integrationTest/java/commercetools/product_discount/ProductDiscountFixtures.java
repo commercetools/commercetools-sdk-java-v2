@@ -15,14 +15,22 @@ public class ProductDiscountFixtures {
 
     public static void withProductDiscount(final Consumer<ProductDiscount> consumer) {
         ProductDiscount productDiscount = createProductDiscount();
-        consumer.accept(productDiscount);
-        deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion());
+        try {
+            consumer.accept(productDiscount);
+        }
+        finally {
+            deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion());
+        }
     }
 
     public static void withUpdateableProductDiscount(final UnaryOperator<ProductDiscount> operator) {
         ProductDiscount productDiscount = createProductDiscount();
-        productDiscount = operator.apply(productDiscount);
-        deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion());
+        try {
+            productDiscount = operator.apply(productDiscount);
+        }
+        finally {
+            deleteProductDiscount(productDiscount.getId(), productDiscount.getVersion());
+        }
     }
 
     public static ProductDiscount createProductDiscount() {

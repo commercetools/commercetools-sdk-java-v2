@@ -14,14 +14,22 @@ public class TaxCategoryFixtures {
 
     public static void withTaxCategory(Consumer<TaxCategory> consumer) {
         TaxCategory taxCategory = createTaxCategory();
-        consumer.accept(taxCategory);
-        deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion());
+        try {
+            consumer.accept(taxCategory);
+        }
+        finally {
+            deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion());
+        }
     }
 
     public static void withUpdateableTaxCategory(UnaryOperator<TaxCategory> operator) {
         TaxCategory taxCategory = createTaxCategory();
-        taxCategory = operator.apply(taxCategory);
-        deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion());
+        try {
+            taxCategory = operator.apply(taxCategory);
+        }
+        finally {
+            deleteTaxCategory(taxCategory.getId(), taxCategory.getVersion());
+        }
     }
 
     public static TaxCategory createTaxCategory() {

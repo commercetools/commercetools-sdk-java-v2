@@ -22,7 +22,7 @@ public class AuthenticationToken {
     private String scope;
 
     @JsonProperty("refresh_token")
-    private String refresherToken;
+    private String refreshToken;
 
     @JsonIgnore
     private ZonedDateTime expiresInZonedDateTime;
@@ -65,12 +65,22 @@ public class AuthenticationToken {
         this.scope = scope;
     }
 
+    @Deprecated
     public String getRefresherToken() {
-        return refresherToken;
+        return refreshToken;
     }
 
-    public void setRefresherToken(final String refresherToken) {
-        this.refresherToken = refresherToken;
+    @Deprecated
+    public void setRefresherToken(final String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
+
+    public String getRefreshToken() {
+        return refreshToken;
+    }
+
+    public void setRefreshToken(final String refreshToken) {
+        this.refreshToken = refreshToken;
     }
 
     public ZonedDateTime getExpiresInZonedDateTime() {

@@ -1,6 +1,9 @@
 
 package commercetools.discount_code;
 
+import static commercetools.cart_discount.CartDiscountFixtures.*;
+import static commercetools.discount_code.DiscountCodeFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,13 +17,15 @@ public class DiscountCodeIntegrationTests {
 
     @Test
     public void createAndDelete() {
-        DiscountCode discountCode = DiscountCodeFixtures.createDiscountCode();
-        DiscountCodeFixtures.deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+        withCartDiscount(cartDiscount -> {
+            DiscountCode discountCode = createDiscountCode(cartDiscount);
+            deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+        });
     }
 
     @Test
     public void getById() {
-        DiscountCodeFixtures.withDiscountCode(discountCode -> {
+        withDiscountCode(discountCode -> {
             DiscountCode queriedDiscountCode = CommercetoolsTestUtils.getProjectApiRoot()
                     .discountCodes()
                     .withId(discountCode.getId())
@@ -35,7 +40,7 @@ public class DiscountCodeIntegrationTests {
 
     @Test
     public void query() {
-        DiscountCodeFixtures.withDiscountCode(discountCode -> {
+        withDiscountCode(discountCode -> {
             DiscountCodePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .discountCodes()
                     .get()
@@ -50,7 +55,7 @@ public class DiscountCodeIntegrationTests {
 
     @Test
     public void updateById() {
-        DiscountCodeFixtures.withUpdateableDiscountCode(discountCode -> {
+        withUpdateableDiscountCode(discountCode -> {
             List<DiscountCodeUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(DiscountCodeSetMaxApplicationsActionBuilder.of().maxApplications(10L).build());
             DiscountCode updatedDiscountCode = CommercetoolsTestUtils.getProjectApiRoot()
@@ -69,5 +74,4 @@ public class DiscountCodeIntegrationTests {
             return updatedDiscountCode;
         });
     }
-
 }

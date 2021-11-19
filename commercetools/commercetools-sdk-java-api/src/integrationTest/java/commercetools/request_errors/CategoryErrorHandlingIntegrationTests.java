@@ -1,8 +1,9 @@
 
 package commercetools.request_errors;
 
+import static commercetools.category.CategoryFixtures.*;
+
 import com.commercetools.api.models.error.ErrorResponse;
-import commercetools.category.CategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.error.BadRequestException;
@@ -15,7 +16,7 @@ public class CategoryErrorHandlingIntegrationTests {
 
     @Test(expected = RuntimeException.class)
     public void getByNonExistingIdBlocking() {
-        CategoryFixtures.withCategory(category -> {
+        withCategory(category -> {
             CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId("non-existing")
@@ -27,7 +28,7 @@ public class CategoryErrorHandlingIntegrationTests {
 
     @Test
     public void getByNonExistingIdNonBlocking() {
-        CategoryFixtures.withCategory(category -> {
+        withCategory(category -> {
             CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId("non-existing")
@@ -45,7 +46,7 @@ public class CategoryErrorHandlingIntegrationTests {
 
     @Test
     public void deleteWithoutVersionNonBlocking() {
-        CategoryFixtures.withUpdateableCategory(category -> {
+        withUpdateableCategory(category -> {
             CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId(category.getId())
@@ -65,7 +66,7 @@ public class CategoryErrorHandlingIntegrationTests {
 
     @Test
     public void deleteWithoutVersionBlocking() {
-        CategoryFixtures.withUpdateableCategory(category -> {
+        withUpdateableCategory(category -> {
             try {
                 CommercetoolsTestUtils.getProjectApiRoot()
                         .categories()

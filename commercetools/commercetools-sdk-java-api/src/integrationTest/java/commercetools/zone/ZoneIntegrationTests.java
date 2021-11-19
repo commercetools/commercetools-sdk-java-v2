@@ -1,6 +1,8 @@
 
 package commercetools.zone;
 
+import static commercetools.zone.ZoneFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +16,8 @@ public class ZoneIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Zone zone = ZoneFixtures.createZone();
-        Zone deletedZone = ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
+        Zone zone = createZone();
+        Zone deletedZone = deleteZone(zone.getId(), zone.getVersion());
 
         Assert.assertNotNull(deletedZone);
         Assert.assertEquals(zone.getId(), deletedZone.getId());
@@ -23,7 +25,7 @@ public class ZoneIntegrationTests {
 
     @Test
     public void getById() {
-        ZoneFixtures.withZone(zone -> {
+        withZone(zone -> {
             Zone queriedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withId(zone.getId())
@@ -38,7 +40,7 @@ public class ZoneIntegrationTests {
 
     @Test
     public void getByKey() {
-        ZoneFixtures.withZone(zone -> {
+        withZone(zone -> {
             Zone queriedZone = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .withKey(zone.getKey())
@@ -53,7 +55,7 @@ public class ZoneIntegrationTests {
 
     @Test
     public void query() {
-        ZoneFixtures.withZone(zone -> {
+        withZone(zone -> {
             ZonePagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .zones()
                     .get()
@@ -68,7 +70,7 @@ public class ZoneIntegrationTests {
 
     @Test
     public void updateById() {
-        ZoneFixtures.withUpdateableZone(zone -> {
+        withUpdateableZone(zone -> {
             List<ZoneUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
@@ -89,7 +91,7 @@ public class ZoneIntegrationTests {
 
     @Test
     public void updateByKey() {
-        ZoneFixtures.withUpdateableZone(zone -> {
+        withUpdateableZone(zone -> {
             List<ZoneUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
@@ -110,8 +112,8 @@ public class ZoneIntegrationTests {
 
     @Test
     public void deleteByKey() {
-        Zone zone = ZoneFixtures.createZone();
-        Zone deletedZone = ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
+        Zone zone = createZone();
+        Zone deletedZone = deleteZone(zone.getId(), zone.getVersion());
 
         Assert.assertNotNull(deletedZone);
         Assert.assertEquals(zone.getId(), deletedZone.getId());

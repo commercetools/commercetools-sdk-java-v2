@@ -1,6 +1,8 @@
 
 package commercetools.channel;
 
+import static commercetools.channel.ChannelFixtures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,15 +16,15 @@ public class ChannelIntegrationTests {
 
     @Test
     public void createAndDeleteById() {
-        Channel channel = ChannelFixtures.createChannel();
-        Channel deletedChannel = ChannelFixtures.deleteChannel(channel.getId(), channel.getVersion());
+        Channel channel = createChannel();
+        Channel deletedChannel = deleteChannel(channel.getId(), channel.getVersion());
 
         Assert.assertEquals(channel.getId(), deletedChannel.getId());
     }
 
     @Test
     public void getById() {
-        ChannelFixtures.withChannel(channel -> {
+        withChannel(channel -> {
             Channel queriedChannel = CommercetoolsTestUtils.getProjectApiRoot()
                     .channels()
                     .withId(channel.getId())
@@ -37,7 +39,7 @@ public class ChannelIntegrationTests {
 
     @Test
     public void query() {
-        ChannelFixtures.withChannel(channel -> {
+        withChannel(channel -> {
             ChannelPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .channels()
                     .get()
@@ -52,7 +54,7 @@ public class ChannelIntegrationTests {
 
     @Test
     public void update() {
-        ChannelFixtures.withUpdateableChannel(channel -> {
+        withUpdateableChannel(channel -> {
             List<ChannelUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(ChannelSetGeoLocationActionBuilder.of().build());
 

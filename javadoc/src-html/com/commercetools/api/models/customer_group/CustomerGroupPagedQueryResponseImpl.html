@@ -32,9 +32,9 @@
 <span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">020</span><span id="line.20">public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQueryResponse {</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private Long offset;</span>
+<span class="source-line-no">022</span><span id="line.22">    private Long limit;</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private Long limit;</span>
+<span class="source-line-no">024</span><span id="line.24">    private Long offset;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    private Long count;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
@@ -43,12 +43,12 @@
 <span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.api.models.customer_group.CustomerGroup&gt; results;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    @JsonCreator</span>
-<span class="source-line-no">033</span><span id="line.33">    CustomerGroupPagedQueryResponseImpl(@JsonProperty("offset") final Long offset,</span>
-<span class="source-line-no">034</span><span id="line.34">            @JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,</span>
+<span class="source-line-no">033</span><span id="line.33">    CustomerGroupPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,</span>
+<span class="source-line-no">034</span><span id="line.34">            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,</span>
 <span class="source-line-no">035</span><span id="line.35">            @JsonProperty("total") final Long total,</span>
 <span class="source-line-no">036</span><span id="line.36">            @JsonProperty("results") final java.util.List&lt;com.commercetools.api.models.customer_group.CustomerGroup&gt; results) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.offset = offset;</span>
-<span class="source-line-no">038</span><span id="line.38">        this.limit = limit;</span>
+<span class="source-line-no">037</span><span id="line.37">        this.limit = limit;</span>
+<span class="source-line-no">038</span><span id="line.38">        this.offset = offset;</span>
 <span class="source-line-no">039</span><span id="line.39">        this.count = count;</span>
 <span class="source-line-no">040</span><span id="line.40">        this.total = total;</span>
 <span class="source-line-no">041</span><span id="line.41">        this.results = results;</span>
@@ -58,18 +58,18 @@
 <span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Offset supplied by the client or server default.</span>
-<span class="source-line-no">049</span><span id="line.49">    *  It is the number of elements skipped, not a page number.&lt;/p&gt;</span>
-<span class="source-line-no">050</span><span id="line.50">    */</span>
-<span class="source-line-no">051</span><span id="line.51">    public Long getOffset() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return this.offset;</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;Number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">    */</span>
+<span class="source-line-no">050</span><span id="line.50">    public Long getLimit() {</span>
+<span class="source-line-no">051</span><span id="line.51">        return this.limit;</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Offset supplied by the client or server default.</span>
+<span class="source-line-no">056</span><span id="line.56">    *  It is the number of elements skipped, not a page number.&lt;/p&gt;</span>
 <span class="source-line-no">057</span><span id="line.57">    */</span>
-<span class="source-line-no">058</span><span id="line.58">    public Long getLimit() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return this.limit;</span>
+<span class="source-line-no">058</span><span id="line.58">    public Long getOffset() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return this.offset;</span>
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    /**</span>
@@ -81,28 +81,28 @@
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    /**</span>
 <span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;Total number of results matching the query.</span>
-<span class="source-line-no">071</span><span id="line.71">    *  This number is an estimation that is not &lt;a href="/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.</span>
+<span class="source-line-no">071</span><span id="line.71">    *  This number is an estimation that is not &lt;a href="/../api/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.</span>
 <span class="source-line-no">072</span><span id="line.72">    *  This field is returned by default.</span>
 <span class="source-line-no">073</span><span id="line.73">    *  For improved performance, calculating this field can be deactivated by using the query parameter &lt;code&gt;withTotal=false&lt;/code&gt;.</span>
-<span class="source-line-no">074</span><span id="line.74">    *  When the results are filtered with a &lt;a href="/predicates/query"&gt;Query Predicate&lt;/a&gt;, &lt;code&gt;total&lt;/code&gt; is subject to a &lt;a href="/contract#queries"&gt;limit&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">    *  When the results are filtered with a &lt;a href="/../api/predicates/query"&gt;Query Predicate&lt;/a&gt;, &lt;code&gt;total&lt;/code&gt; is subject to a &lt;a href="/../api/limits#queries"&gt;limit&lt;/a&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">075</span><span id="line.75">    */</span>
 <span class="source-line-no">076</span><span id="line.76">    public Long getTotal() {</span>
 <span class="source-line-no">077</span><span id="line.77">        return this.total;</span>
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;Array of &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroups&lt;/a&gt; matching the query.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;&lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroups&lt;/a&gt; matching the query.&lt;/p&gt;</span>
 <span class="source-line-no">082</span><span id="line.82">    */</span>
 <span class="source-line-no">083</span><span id="line.83">    public java.util.List&lt;com.commercetools.api.models.customer_group.CustomerGroup&gt; getResults() {</span>
 <span class="source-line-no">084</span><span id="line.84">        return this.results;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setOffset(final Long offset) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.offset = offset;</span>
+<span class="source-line-no">087</span><span id="line.87">    public void setLimit(final Long limit) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.limit = limit;</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setLimit(final Long limit) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.limit = limit;</span>
+<span class="source-line-no">091</span><span id="line.91">    public void setOffset(final Long offset) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.offset = offset;</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
 <span class="source-line-no">095</span><span id="line.95">    public void setCount(final Long count) {</span>
@@ -131,8 +131,8 @@
 <span class="source-line-no">118</span><span id="line.118"></span>
 <span class="source-line-no">119</span><span id="line.119">        CustomerGroupPagedQueryResponseImpl that = (CustomerGroupPagedQueryResponseImpl) o;</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">        return new EqualsBuilder().append(offset, that.offset)</span>
-<span class="source-line-no">122</span><span id="line.122">                .append(limit, that.limit)</span>
+<span class="source-line-no">121</span><span id="line.121">        return new EqualsBuilder().append(limit, that.limit)</span>
+<span class="source-line-no">122</span><span id="line.122">                .append(offset, that.offset)</span>
 <span class="source-line-no">123</span><span id="line.123">                .append(count, that.count)</span>
 <span class="source-line-no">124</span><span id="line.124">                .append(total, that.total)</span>
 <span class="source-line-no">125</span><span id="line.125">                .append(results, that.results)</span>
@@ -141,8 +141,8 @@
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    @Override</span>
 <span class="source-line-no">130</span><span id="line.130">    public int hashCode() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return new HashCodeBuilder(17, 37).append(offset)</span>
-<span class="source-line-no">132</span><span id="line.132">                .append(limit)</span>
+<span class="source-line-no">131</span><span id="line.131">        return new HashCodeBuilder(17, 37).append(limit)</span>
+<span class="source-line-no">132</span><span id="line.132">                .append(offset)</span>
 <span class="source-line-no">133</span><span id="line.133">                .append(count)</span>
 <span class="source-line-no">134</span><span id="line.134">                .append(total)</span>
 <span class="source-line-no">135</span><span id="line.135">                .append(results)</span>

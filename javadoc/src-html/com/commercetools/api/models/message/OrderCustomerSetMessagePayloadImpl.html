@@ -64,65 +64,71 @@
 <span class="source-line-no">051</span><span id="line.51">        return this.customer;</span>
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.customerGroup;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return this.oldCustomer;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.oldCustomerGroup;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setCustomer(final com.commercetools.api.models.customer.CustomerReference customer) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.customer = customer;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setCustomerGroup(</span>
-<span class="source-line-no">071</span><span id="line.71">            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public void setOldCustomer(final com.commercetools.api.models.customer.CustomerReference oldCustomer) {</span>
-<span class="source-line-no">076</span><span id="line.76">        this.oldCustomer = oldCustomer;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public void setOldCustomerGroup(</span>
-<span class="source-line-no">080</span><span id="line.80">            final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.oldCustomerGroup = oldCustomerGroup;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    @Override</span>
-<span class="source-line-no">085</span><span id="line.85">    public boolean equals(Object o) {</span>
-<span class="source-line-no">086</span><span id="line.86">        if (this == o)</span>
-<span class="source-line-no">087</span><span id="line.87">            return true;</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">090</span><span id="line.90">            return false;</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">        OrderCustomerSetMessagePayloadImpl that = (OrderCustomerSetMessagePayloadImpl) o;</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">        return new EqualsBuilder().append(type, that.type)</span>
-<span class="source-line-no">095</span><span id="line.95">                .append(customer, that.customer)</span>
-<span class="source-line-no">096</span><span id="line.96">                .append(customerGroup, that.customerGroup)</span>
-<span class="source-line-no">097</span><span id="line.97">                .append(oldCustomer, that.oldCustomer)</span>
-<span class="source-line-no">098</span><span id="line.98">                .append(oldCustomerGroup, that.oldCustomerGroup)</span>
-<span class="source-line-no">099</span><span id="line.99">                .isEquals();</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    @Override</span>
-<span class="source-line-no">103</span><span id="line.103">    public int hashCode() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return new HashCodeBuilder(17, 37).append(type)</span>
-<span class="source-line-no">105</span><span id="line.105">                .append(customer)</span>
-<span class="source-line-no">106</span><span id="line.106">                .append(customerGroup)</span>
-<span class="source-line-no">107</span><span id="line.107">                .append(oldCustomer)</span>
-<span class="source-line-no">108</span><span id="line.108">                .append(oldCustomerGroup)</span>
-<span class="source-line-no">109</span><span id="line.109">                .toHashCode();</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">}</span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;&lt;a href="/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroup&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">057</span><span id="line.57">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return this.customerGroup;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return this.oldCustomer;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">    *  &lt;p&gt;&lt;a href="/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroup&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    */</span>
+<span class="source-line-no">068</span><span id="line.68">    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {</span>
+<span class="source-line-no">069</span><span id="line.69">        return this.oldCustomerGroup;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setCustomer(final com.commercetools.api.models.customer.CustomerReference customer) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.customer = customer;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setCustomerGroup(</span>
+<span class="source-line-no">077</span><span id="line.77">            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setOldCustomer(final com.commercetools.api.models.customer.CustomerReference oldCustomer) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.oldCustomer = oldCustomer;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setOldCustomerGroup(</span>
+<span class="source-line-no">086</span><span id="line.86">            final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.oldCustomerGroup = oldCustomerGroup;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    @Override</span>
+<span class="source-line-no">091</span><span id="line.91">    public boolean equals(Object o) {</span>
+<span class="source-line-no">092</span><span id="line.92">        if (this == o)</span>
+<span class="source-line-no">093</span><span id="line.93">            return true;</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">096</span><span id="line.96">            return false;</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">        OrderCustomerSetMessagePayloadImpl that = (OrderCustomerSetMessagePayloadImpl) o;</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">        return new EqualsBuilder().append(type, that.type)</span>
+<span class="source-line-no">101</span><span id="line.101">                .append(customer, that.customer)</span>
+<span class="source-line-no">102</span><span id="line.102">                .append(customerGroup, that.customerGroup)</span>
+<span class="source-line-no">103</span><span id="line.103">                .append(oldCustomer, that.oldCustomer)</span>
+<span class="source-line-no">104</span><span id="line.104">                .append(oldCustomerGroup, that.oldCustomerGroup)</span>
+<span class="source-line-no">105</span><span id="line.105">                .isEquals();</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    @Override</span>
+<span class="source-line-no">109</span><span id="line.109">    public int hashCode() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return new HashCodeBuilder(17, 37).append(type)</span>
+<span class="source-line-no">111</span><span id="line.111">                .append(customer)</span>
+<span class="source-line-no">112</span><span id="line.112">                .append(customerGroup)</span>
+<span class="source-line-no">113</span><span id="line.113">                .append(oldCustomer)</span>
+<span class="source-line-no">114</span><span id="line.114">                .append(oldCustomerGroup)</span>
+<span class="source-line-no">115</span><span id="line.115">                .toHashCode();</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">}</span>
 
 
 

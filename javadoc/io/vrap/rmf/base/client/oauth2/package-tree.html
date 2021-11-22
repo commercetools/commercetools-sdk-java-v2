@@ -64,13 +64,21 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">io.vrap.rmf.base.client.<a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client"><span class="type-name-link">AutoCloseableService</span></a> (implements java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>)
 <ul>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="BaseAuthTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">BaseAuthTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>)
+<ul>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="AnonymousFlowTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">AnonymousFlowTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a>)</li>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="AnonymousSessionTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">AnonymousSessionTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>)</li>
-<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="ClientCredentialsTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">ClientCredentialsTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>)</li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="ClientCredentialsTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">ClientCredentialsTokenSupplier</span></a></li>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="GlobalCustomerPasswordTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">GlobalCustomerPasswordTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>)</li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="RefreshFlowTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">RefreshFlowTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a>)</li>
+</ul>
+</li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="InMemoryTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">InMemoryTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a>)</li>
 </ul>
 </li>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="ClientCredentialsBuilder.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">ClientCredentialsBuilder</span></a></li>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="ClientCredentialsImpl.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">ClientCredentialsImpl</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>)</li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="InMemoryTokenStorage.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">InMemoryTokenStorage</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>)</li>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="StaticTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">StaticTokenSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>)</li>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Throwable</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
@@ -93,6 +101,7 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="TokenStorageSupplier.html" title="class in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">TokenStorageSupplier</span></a> (implements io.vrap.rmf.base.client.oauth2.<a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a>)</li>
 </ul>
 </li>
 </ul>
@@ -101,7 +110,12 @@ loadScripts(document, 'script');</script>
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
 <li class="circle">io.vrap.rmf.base.client.oauth2.<a href="ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">ClientCredentials</span></a></li>
-<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">TokenSupplier</span></a></li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">TokenStorage</span></a></li>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">TokenSupplier</span></a>
+<ul>
+<li class="circle">io.vrap.rmf.base.client.oauth2.<a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2"><span class="type-name-link">RefreshableTokenSupplier</span></a></li>
+</ul>
+</li>
 </ul>
 </section>
 </main>

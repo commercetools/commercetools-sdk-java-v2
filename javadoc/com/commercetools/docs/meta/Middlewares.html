@@ -104,6 +104,9 @@ loadScripts(document, 'script');</script>
     <a href="../../../../io/vrap/rmf/base/client/http/OAuthHandler.html" title="class in io.vrap.rmf.base.client.http"><code>OAuthHandler</code></a> is called.</p>
 
     <div id="io-vrap-rmf-base-client-http-OAuthMiddlewareImpl-invoke-io-vrap-rmf-base-client-ApiHttpRequest--java-util-function-Function-%s" class=code-example><pre><code class='java'>return failsafeExecutor.getStageAsync(() -&gt; {
+    if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {
+        return next.apply(request);
+    }
     AuthenticationToken token = authHandler.getToken();
     return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));
 });

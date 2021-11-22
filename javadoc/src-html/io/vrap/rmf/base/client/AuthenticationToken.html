@@ -35,7 +35,7 @@
 <span class="source-line-no">022</span><span id="line.22">    private String scope;</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    @JsonProperty("refresh_token")</span>
-<span class="source-line-no">025</span><span id="line.25">    private String refresherToken;</span>
+<span class="source-line-no">025</span><span id="line.25">    private String refreshToken;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    @JsonIgnore</span>
 <span class="source-line-no">028</span><span id="line.28">    private ZonedDateTime expiresInZonedDateTime;</span>
@@ -78,22 +78,32 @@
 <span class="source-line-no">065</span><span id="line.65">        this.scope = scope;</span>
 <span class="source-line-no">066</span><span id="line.66">    }</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public String getRefresherToken() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return refresherToken;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setRefresherToken(final String refresherToken) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.refresherToken = refresherToken;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public ZonedDateTime getExpiresInZonedDateTime() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return expiresInZonedDateTime;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public boolean isExpired() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return expiresInZonedDateTime != null &amp;&amp; expiresInZonedDateTime.isBefore(ZonedDateTime.now());</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83">}</span>
+<span class="source-line-no">068</span><span id="line.68">    @Deprecated</span>
+<span class="source-line-no">069</span><span id="line.69">    public String getRefresherToken() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return refreshToken;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    @Deprecated</span>
+<span class="source-line-no">074</span><span id="line.74">    public void setRefresherToken(final String refreshToken) {</span>
+<span class="source-line-no">075</span><span id="line.75">        this.refreshToken = refreshToken;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public String getRefreshToken() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return refreshToken;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public void setRefreshToken(final String refreshToken) {</span>
+<span class="source-line-no">083</span><span id="line.83">        this.refreshToken = refreshToken;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public ZonedDateTime getExpiresInZonedDateTime() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return expiresInZonedDateTime;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public boolean isExpired() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return expiresInZonedDateTime != null &amp;&amp; expiresInZonedDateTime.isBefore(ZonedDateTime.now());</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93">}</span>
 
 
 

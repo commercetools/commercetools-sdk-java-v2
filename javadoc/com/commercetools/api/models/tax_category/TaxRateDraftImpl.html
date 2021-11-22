@@ -119,28 +119,32 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAmount()">getAmount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Percentage in the range of [0..1].</div>
+<div class="block">Tax rate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCountry()">getCountry</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
+<div class="block">Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getIncludedInPrice()">getIncludedInPrice</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Set to <code>true</code>, if tax should be included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> should be present on <a href="ctp:api:type:LineItem">Line Items</a>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the TaxRate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The state in the country</div>
+<div class="block">State within the country, such as Texas in the United States.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSubRates()">getSubRates</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">For countries (e.g.</div>
+<div class="block">Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -203,7 +207,8 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.47">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.50">getName</a></span>()</div>
+<div class="block"><p>Name of the TaxRate.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -213,11 +218,10 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getAmount()">
 <h3>getAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.57">getAmount</a></span>()</div>
-<div class="block"><p>Percentage in the range of [0..1].
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.59">getAmount</a></span>()</div>
+<div class="block"><p>Tax rate.
   Must be supplied if no <code>subRates</code> are specified.
-  If <code>subRates</code> are specified
-  then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p></div>
+  If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getAmount()">getAmount</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -227,7 +231,8 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getIncludedInPrice()">
 <h3>getIncludedInPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.61">getIncludedInPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.66">getIncludedInPrice</a></span>()</div>
+<div class="block"><p>Set to <code>true</code>, if tax should be included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> should be present on <a href="ctp:api:type:LineItem">Line Items</a>. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getIncludedInPrice()">getIncludedInPrice</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -237,8 +242,8 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.68">getCountry</a></span>()</div>
-<div class="block"><p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.73">getCountry</a></span>()</div>
+<div class="block"><p>Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getCountry()">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -248,8 +253,8 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.75">getState</a></span>()</div>
-<div class="block"><p>The state in the country</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.80">getState</a></span>()</div>
+<div class="block"><p>State within the country, such as Texas in the United States.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -259,10 +264,8 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="getSubRates()">
 <h3>getSubRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.84">getSubRates</a></span>()</div>
-<div class="block"><p>For countries (e.g.
-  the US) where the total tax is a combination of multiple taxes (e.g.
-  state and local taxes).</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.87">getSubRates</a></span>()</div>
+<div class="block"><p>Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#getSubRates()">getSubRates</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -272,7 +275,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.88">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.91">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setName(java.lang.String)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -282,7 +285,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setAmount(java.lang.Double)">
 <h3>setAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.92">setAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.95">setAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setAmount(java.lang.Double)">setAmount</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -292,7 +295,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setIncludedInPrice(java.lang.Boolean)">
 <h3>setIncludedInPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.96">setIncludedInPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.99">setIncludedInPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setIncludedInPrice(java.lang.Boolean)">setIncludedInPrice</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -302,7 +305,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.100">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.103">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setCountry(java.lang.String)">setCountry</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -312,7 +315,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setState(java.lang.String)">
 <h3>setState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.104">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.107">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setState(java.lang.String)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -322,7 +325,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setSubRates(com.commercetools.api.models.tax_category.SubRate...)">
 <h3>setSubRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.108">setSubRates</a></span>&#8203;<span class="parameters">(<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.111">setSubRates</a></span>&#8203;<span class="parameters">(<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setSubRates(com.commercetools.api.models.tax_category.SubRate...)">setSubRates</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -332,7 +335,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setSubRates(java.util.List)">
 <h3>setSubRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.112">setSubRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.115">setSubRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxRateDraft.html#setSubRates(java.util.List)">setSubRates</a></code>&nbsp;in interface&nbsp;<code><a href="TaxRateDraft.html" title="interface in com.commercetools.api.models.tax_category">TaxRateDraft</a></code></dd>
@@ -342,7 +345,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.116">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.119">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -352,7 +355,7 @@ implements <a href="TaxRateDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.135">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxRateDraftImpl.html#line.138">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

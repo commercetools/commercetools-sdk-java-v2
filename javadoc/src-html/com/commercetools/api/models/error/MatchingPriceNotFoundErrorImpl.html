@@ -89,78 +89,81 @@
 <span class="source-line-no">076</span><span id="line.76">        return this.country;</span>
 <span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.customerGroup;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.channel;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setMessage(final String message) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.message = message;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setProductId(final String productId) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.productId = productId;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setVariantId(final Integer variantId) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.variantId = variantId;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setCurrency(final String currency) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.currency = currency;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public void setCountry(final String country) {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.country = country;</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public void setCustomerGroup(</span>
-<span class="source-line-no">108</span><span id="line.108">            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
-<span class="source-line-no">109</span><span id="line.109">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.channel = channel;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    @Override</span>
-<span class="source-line-no">117</span><span id="line.117">    public boolean equals(Object o) {</span>
-<span class="source-line-no">118</span><span id="line.118">        if (this == o)</span>
-<span class="source-line-no">119</span><span id="line.119">            return true;</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">122</span><span id="line.122">            return false;</span>
+<span class="source-line-no">079</span><span id="line.79">    /**</span>
+<span class="source-line-no">080</span><span id="line.80">    *  &lt;p&gt;&lt;a href="/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroup&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">    */</span>
+<span class="source-line-no">082</span><span id="line.82">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.customerGroup;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.channel;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setMessage(final String message) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.message = message;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public void setProductId(final String productId) {</span>
+<span class="source-line-no">095</span><span id="line.95">        this.productId = productId;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public void setVariantId(final Integer variantId) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.variantId = variantId;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public void setCurrency(final String currency) {</span>
+<span class="source-line-no">103</span><span id="line.103">        this.currency = currency;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public void setCountry(final String country) {</span>
+<span class="source-line-no">107</span><span id="line.107">        this.country = country;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public void setCustomerGroup(</span>
+<span class="source-line-no">111</span><span id="line.111">            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.channel = channel;</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    @Override</span>
+<span class="source-line-no">120</span><span id="line.120">    public boolean equals(Object o) {</span>
+<span class="source-line-no">121</span><span id="line.121">        if (this == o)</span>
+<span class="source-line-no">122</span><span id="line.122">            return true;</span>
 <span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">        MatchingPriceNotFoundErrorImpl that = (MatchingPriceNotFoundErrorImpl) o;</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">        return new EqualsBuilder().append(code, that.code)</span>
-<span class="source-line-no">127</span><span id="line.127">                .append(message, that.message)</span>
-<span class="source-line-no">128</span><span id="line.128">                .append(productId, that.productId)</span>
-<span class="source-line-no">129</span><span id="line.129">                .append(variantId, that.variantId)</span>
-<span class="source-line-no">130</span><span id="line.130">                .append(currency, that.currency)</span>
-<span class="source-line-no">131</span><span id="line.131">                .append(country, that.country)</span>
-<span class="source-line-no">132</span><span id="line.132">                .append(customerGroup, that.customerGroup)</span>
-<span class="source-line-no">133</span><span id="line.133">                .append(channel, that.channel)</span>
-<span class="source-line-no">134</span><span id="line.134">                .isEquals();</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    @Override</span>
-<span class="source-line-no">138</span><span id="line.138">    public int hashCode() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return new HashCodeBuilder(17, 37).append(code)</span>
-<span class="source-line-no">140</span><span id="line.140">                .append(message)</span>
-<span class="source-line-no">141</span><span id="line.141">                .append(productId)</span>
-<span class="source-line-no">142</span><span id="line.142">                .append(variantId)</span>
-<span class="source-line-no">143</span><span id="line.143">                .append(currency)</span>
-<span class="source-line-no">144</span><span id="line.144">                .append(country)</span>
-<span class="source-line-no">145</span><span id="line.145">                .append(customerGroup)</span>
-<span class="source-line-no">146</span><span id="line.146">                .append(channel)</span>
-<span class="source-line-no">147</span><span id="line.147">                .toHashCode();</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">}</span>
+<span class="source-line-no">124</span><span id="line.124">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">125</span><span id="line.125">            return false;</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">        MatchingPriceNotFoundErrorImpl that = (MatchingPriceNotFoundErrorImpl) o;</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">        return new EqualsBuilder().append(code, that.code)</span>
+<span class="source-line-no">130</span><span id="line.130">                .append(message, that.message)</span>
+<span class="source-line-no">131</span><span id="line.131">                .append(productId, that.productId)</span>
+<span class="source-line-no">132</span><span id="line.132">                .append(variantId, that.variantId)</span>
+<span class="source-line-no">133</span><span id="line.133">                .append(currency, that.currency)</span>
+<span class="source-line-no">134</span><span id="line.134">                .append(country, that.country)</span>
+<span class="source-line-no">135</span><span id="line.135">                .append(customerGroup, that.customerGroup)</span>
+<span class="source-line-no">136</span><span id="line.136">                .append(channel, that.channel)</span>
+<span class="source-line-no">137</span><span id="line.137">                .isEquals();</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    @Override</span>
+<span class="source-line-no">141</span><span id="line.141">    public int hashCode() {</span>
+<span class="source-line-no">142</span><span id="line.142">        return new HashCodeBuilder(17, 37).append(code)</span>
+<span class="source-line-no">143</span><span id="line.143">                .append(message)</span>
+<span class="source-line-no">144</span><span id="line.144">                .append(productId)</span>
+<span class="source-line-no">145</span><span id="line.145">                .append(variantId)</span>
+<span class="source-line-no">146</span><span id="line.146">                .append(currency)</span>
+<span class="source-line-no">147</span><span id="line.147">                .append(country)</span>
+<span class="source-line-no">148</span><span id="line.148">                .append(customerGroup)</span>
+<span class="source-line-no">149</span><span id="line.149">                .append(channel)</span>
+<span class="source-line-no">150</span><span id="line.150">                .toHashCode();</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">}</span>
 
 
 

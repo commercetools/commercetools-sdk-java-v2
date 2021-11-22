@@ -67,60 +67,63 @@
 <span class="source-line-no">054</span><span id="line.54">        return this.shippingRate;</span>
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return this.taxCategory;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.externalTaxRate;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setShippingMethodName(final String shippingMethodName) {</span>
-<span class="source-line-no">066</span><span id="line.66">        this.shippingMethodName = shippingMethodName;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.shippingRate = shippingRate;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setTaxCategory(</span>
-<span class="source-line-no">074</span><span id="line.74">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
-<span class="source-line-no">075</span><span id="line.75">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.externalTaxRate = externalTaxRate;</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @Override</span>
-<span class="source-line-no">083</span><span id="line.83">    public boolean equals(Object o) {</span>
-<span class="source-line-no">084</span><span id="line.84">        if (this == o)</span>
-<span class="source-line-no">085</span><span id="line.85">            return true;</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">088</span><span id="line.88">            return false;</span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:TaxCategory"&gt;TaxCategory&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">    */</span>
+<span class="source-line-no">060</span><span id="line.60">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return this.taxCategory;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.externalTaxRate;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setShippingMethodName(final String shippingMethodName) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.shippingMethodName = shippingMethodName;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.shippingRate = shippingRate;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setTaxCategory(</span>
+<span class="source-line-no">077</span><span id="line.77">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.externalTaxRate = externalTaxRate;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    @Override</span>
+<span class="source-line-no">086</span><span id="line.86">    public boolean equals(Object o) {</span>
+<span class="source-line-no">087</span><span id="line.87">        if (this == o)</span>
+<span class="source-line-no">088</span><span id="line.88">            return true;</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        CartSetCustomShippingMethodActionImpl that = (CartSetCustomShippingMethodActionImpl) o;</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">093</span><span id="line.93">                .append(shippingMethodName, that.shippingMethodName)</span>
-<span class="source-line-no">094</span><span id="line.94">                .append(shippingRate, that.shippingRate)</span>
-<span class="source-line-no">095</span><span id="line.95">                .append(taxCategory, that.taxCategory)</span>
-<span class="source-line-no">096</span><span id="line.96">                .append(externalTaxRate, that.externalTaxRate)</span>
-<span class="source-line-no">097</span><span id="line.97">                .isEquals();</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Override</span>
-<span class="source-line-no">101</span><span id="line.101">    public int hashCode() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">103</span><span id="line.103">                .append(shippingMethodName)</span>
-<span class="source-line-no">104</span><span id="line.104">                .append(shippingRate)</span>
-<span class="source-line-no">105</span><span id="line.105">                .append(taxCategory)</span>
-<span class="source-line-no">106</span><span id="line.106">                .append(externalTaxRate)</span>
-<span class="source-line-no">107</span><span id="line.107">                .toHashCode();</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">}</span>
+<span class="source-line-no">090</span><span id="line.90">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">091</span><span id="line.91">            return false;</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">        CartSetCustomShippingMethodActionImpl that = (CartSetCustomShippingMethodActionImpl) o;</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">096</span><span id="line.96">                .append(shippingMethodName, that.shippingMethodName)</span>
+<span class="source-line-no">097</span><span id="line.97">                .append(shippingRate, that.shippingRate)</span>
+<span class="source-line-no">098</span><span id="line.98">                .append(taxCategory, that.taxCategory)</span>
+<span class="source-line-no">099</span><span id="line.99">                .append(externalTaxRate, that.externalTaxRate)</span>
+<span class="source-line-no">100</span><span id="line.100">                .isEquals();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    @Override</span>
+<span class="source-line-no">104</span><span id="line.104">    public int hashCode() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">106</span><span id="line.106">                .append(shippingMethodName)</span>
+<span class="source-line-no">107</span><span id="line.107">                .append(shippingRate)</span>
+<span class="source-line-no">108</span><span id="line.108">                .append(taxCategory)</span>
+<span class="source-line-no">109</span><span id="line.109">                .append(externalTaxRate)</span>
+<span class="source-line-no">110</span><span id="line.110">                .toHashCode();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">}</span>
 
 
 

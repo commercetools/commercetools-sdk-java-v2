@@ -55,60 +55,63 @@
 <span class="source-line-no">042</span><span id="line.42">    @JsonProperty("slug")</span>
 <span class="source-line-no">043</span><span id="line.43">    public String getSlug();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("taxCategory")</span>
-<span class="source-line-no">047</span><span id="line.47">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Valid</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("custom")</span>
-<span class="source-line-no">051</span><span id="line.51">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("externalTaxRate")</span>
-<span class="source-line-no">055</span><span id="line.55">    public ExternalTaxRateDraft getExternalTaxRate();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setMoney(final Money money);</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setQuantity(final Double quantity);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setSlug(final String slug);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public static StagedOrderAddCustomLineItemAction of() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return new StagedOrderAddCustomLineItemActionImpl();</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public static StagedOrderAddCustomLineItemAction of(final StagedOrderAddCustomLineItemAction template) {</span>
-<span class="source-line-no">076</span><span id="line.76">        StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();</span>
-<span class="source-line-no">077</span><span id="line.77">        instance.setMoney(template.getMoney());</span>
-<span class="source-line-no">078</span><span id="line.78">        instance.setName(template.getName());</span>
-<span class="source-line-no">079</span><span id="line.79">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
-<span class="source-line-no">084</span><span id="line.84">        return instance;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static StagedOrderAddCustomLineItemActionBuilder builder() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return StagedOrderAddCustomLineItemActionBuilder.of();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static StagedOrderAddCustomLineItemActionBuilder builder(final StagedOrderAddCustomLineItemAction template) {</span>
-<span class="source-line-no">092</span><span id="line.92">        return StagedOrderAddCustomLineItemActionBuilder.of(template);</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    default &lt;T&gt; T withStagedOrderAddCustomLineItemAction(Function&lt;StagedOrderAddCustomLineItemAction, T&gt; helper) {</span>
-<span class="source-line-no">096</span><span id="line.96">        return helper.apply(this);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98">}</span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:TaxCategory"&gt;TaxCategory&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("taxCategory")</span>
+<span class="source-line-no">050</span><span id="line.50">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("custom")</span>
+<span class="source-line-no">054</span><span id="line.54">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @Valid</span>
+<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("externalTaxRate")</span>
+<span class="source-line-no">058</span><span id="line.58">    public ExternalTaxRateDraft getExternalTaxRate();</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public void setMoney(final Money money);</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setQuantity(final Double quantity);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public void setSlug(final String slug);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public static StagedOrderAddCustomLineItemAction of() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return new StagedOrderAddCustomLineItemActionImpl();</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public static StagedOrderAddCustomLineItemAction of(final StagedOrderAddCustomLineItemAction template) {</span>
+<span class="source-line-no">079</span><span id="line.79">        StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setMoney(template.getMoney());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setName(template.getName());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">083</span><span id="line.83">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">084</span><span id="line.84">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">085</span><span id="line.85">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">086</span><span id="line.86">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
+<span class="source-line-no">087</span><span id="line.87">        return instance;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static StagedOrderAddCustomLineItemActionBuilder builder() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return StagedOrderAddCustomLineItemActionBuilder.of();</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public static StagedOrderAddCustomLineItemActionBuilder builder(final StagedOrderAddCustomLineItemAction template) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return StagedOrderAddCustomLineItemActionBuilder.of(template);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    default &lt;T&gt; T withStagedOrderAddCustomLineItemAction(Function&lt;StagedOrderAddCustomLineItemAction, T&gt; helper) {</span>
+<span class="source-line-no">099</span><span id="line.99">        return helper.apply(this);</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101">}</span>
 
 
 

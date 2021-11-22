@@ -79,8 +79,12 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.18">ApiFactory</a></span>
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.21">ApiFactory</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig"><code>ApiRootBuilder</code></a> instead</div>
+</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -93,7 +97,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E()">ApiFactory</a></span>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </section>
 </li>
@@ -102,182 +108,236 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,io.vrap.rmf.base.client.ServiceRegionConfig)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,io.vrap.rmf.base.client.ServiceRegionConfig)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="../../../../io/vrap/rmf/base/client/ServiceRegionConfig.html" title="interface in io.vrap.rmf.base.client">ServiceRegionConfig</a>&nbsp;serviceRegion)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">create</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(java.util.function.Supplier)">create</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">createForProject</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#create(java.util.function.Supplier)">create</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">createForProject</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">createForProject</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">createForProject</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,java.util.function.Supplier)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createForProject(java.lang.String,java.util.function.Supplier)">createForProject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">defaultClient</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </div>
 </div>
@@ -298,7 +358,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ApiFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.18">ApiFactory</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.22">ApiFactory</a></span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 </ul>
@@ -312,224 +373,248 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.20">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.24">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createForProject(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.29">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.33">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.40">createForProject</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.44">createForProject</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createForProject(io.vrap.rmf.base.client.VrapHttpClient,java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.51">createForProject</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.55">createForProject</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createForProject(java.lang.String,java.util.function.Supplier)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.62">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.66">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.67">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.71">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials,io.vrap.rmf.base.client.ServiceRegionConfig)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.71">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.75">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="../../../../io/vrap/rmf/base/client/ServiceRegionConfig.html" title="interface in io.vrap.rmf.base.client">ServiceRegionConfig</a>&nbsp;serviceRegion)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.75">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.79">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.80">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.84">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.88">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.92">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.96">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.100">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.106">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.110">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.111">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.115">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.119">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.123">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.127">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.131">create</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(java.util.function.Supplier)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.137">create</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.141">create</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;&nbsp;clientSupplier)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.141">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.145">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.145">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.149">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.150">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.154">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.158">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.162">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.166">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.170">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.171">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.175">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.179">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.183">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.187">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.191">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.VrapHttpClient,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.197">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.201">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
@@ -537,24 +622,26 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.208">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.212">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(java.util.function.Supplier,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.util.function.Supplier,java.util.List,io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.219">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiFactory.html#line.223">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;&nbsp;httpClientSupplier,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
@@ -562,6 +649,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 </ul>

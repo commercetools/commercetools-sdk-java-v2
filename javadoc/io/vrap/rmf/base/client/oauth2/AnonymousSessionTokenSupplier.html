@@ -76,7 +76,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.AutoCloseableService</a>
+<div class="inheritance"><a href="BaseAuthTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2">io.vrap.rmf.base.client.oauth2.BaseAuthTokenSupplier</a>
 <div class="inheritance">io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier</div>
+</div>
 </div>
 </div>
 <section class="description">
@@ -85,8 +87,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/AnonymousSessionTokenSupplier.html#line.20">AnonymousSessionTokenSupplier</a></span>
-<span class="extends-implements">extends <a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/AnonymousSessionTokenSupplier.html#line.15">AnonymousSessionTokenSupplier</a></span>
+<span class="extends-implements">extends <a href="BaseAuthTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2">BaseAuthTokenSupplier</a>
 implements <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></span></div>
 <div class="block">Token supplier using anonymous flow</div>
 </section>
@@ -129,24 +131,27 @@ implements <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.cli
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getToken()">getToken</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.oauth2.BaseAuthTokenSupplier">Methods inherited from class&nbsp;io.vrap.rmf.base.client.oauth2.<a href="BaseAuthTokenSupplier.html" title="class in io.vrap.rmf.base.client.oauth2">BaseAuthTokenSupplier</a></h3>
+<code><a href="BaseAuthTokenSupplier.html#getToken()">getToken</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.AutoCloseableService">Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a></h3>
 <code><a href="../AutoCloseableService.html#close()">close</a>, <a href="../AutoCloseableService.html#closeQuietly(java.lang.AutoCloseable)">closeQuietly</a>, <a href="../AutoCloseableService.html#equals(java.lang.Object)">equals</a>, <a href="../AutoCloseableService.html#hashCode()">hashCode</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.oauth2.TokenSupplier">Methods inherited from interface&nbsp;io.vrap.rmf.base.client.oauth2.<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></h3>
+<code><a href="TokenSupplier.html#getToken()">getToken</a></code></div>
 </section>
 </li>
 </ul>
@@ -161,7 +166,7 @@ implements <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>AnonymousSessionTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/AnonymousSessionTokenSupplier.html#line.26">AnonymousSessionTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/AnonymousSessionTokenSupplier.html#line.17">AnonymousSessionTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientSecret,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scope,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
@@ -176,16 +181,6 @@ implements <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.cli
 <section class="method-details" id="method.detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="getToken()">
-<h3>getToken</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/AnonymousSessionTokenSupplier.html#line.32">getToken</a></span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="TokenSupplier.html#getToken()">getToken</a></code>&nbsp;in interface&nbsp;<code><a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></code></dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>

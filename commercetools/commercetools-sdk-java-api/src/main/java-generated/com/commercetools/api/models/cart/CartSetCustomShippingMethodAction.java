@@ -30,6 +30,9 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();

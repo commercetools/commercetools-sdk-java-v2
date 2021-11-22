@@ -37,18 +37,30 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft {
     public TaxCategoryDraftImpl() {
     }
 
+    /**
+    *  <p>Name of the TaxCategory.</p>
+    */
     public String getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the TaxCategory.</p>
+    */
     public String getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>Tax rates and subrates of states and countries.</p>
+    */
     public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates() {
         return this.rates;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the TaxCategory.</p>
+    */
     public String getKey() {
         return this.key;
     }

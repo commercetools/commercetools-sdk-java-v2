@@ -19,10 +19,16 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
 
     String REPLACE_TAX_RATE = "replaceTaxRate";
 
+    /**
+    *  <p>ID of the TaxRate to replace.</p>
+    */
     @NotNull
     @JsonProperty("taxRateId")
     public String getTaxRateId();
 
+    /**
+    *  <p>New TaxRate to replace with.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("taxRate")

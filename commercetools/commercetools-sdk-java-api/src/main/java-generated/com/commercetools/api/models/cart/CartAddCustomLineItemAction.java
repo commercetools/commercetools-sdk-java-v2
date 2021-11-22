@@ -41,6 +41,9 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
     @JsonProperty("slug")
     public String getSlug();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();

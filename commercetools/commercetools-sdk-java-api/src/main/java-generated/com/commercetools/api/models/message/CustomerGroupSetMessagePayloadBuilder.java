@@ -4,12 +4,15 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGroupSetMessagePayload> {
 
+    @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -21,17 +24,17 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
+    @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     public CustomerGroupSetMessagePayload build() {
-        Objects.requireNonNull(customerGroup, CustomerGroupSetMessagePayload.class + ": customerGroup is missing");
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);
     }
 

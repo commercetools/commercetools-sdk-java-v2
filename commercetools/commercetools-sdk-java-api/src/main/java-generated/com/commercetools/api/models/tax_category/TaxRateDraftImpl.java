@@ -44,42 +44,45 @@ public class TaxRateDraftImpl implements TaxRateDraft {
     public TaxRateDraftImpl() {
     }
 
+    /**
+    *  <p>Name of the TaxRate.</p>
+    */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Percentage in the range of [0..1].
+    *  <p>Tax rate.
     *  Must be supplied if no <code>subRates</code> are specified.
-    *  If <code>subRates</code> are specified
-    *  then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+    *  If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
     */
     public Double getAmount() {
         return this.amount;
     }
 
+    /**
+    *  <p>Set to <code>true</code>, if tax should be included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> should be present on <a href="ctp:api:type:LineItem">Line Items</a>. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+    */
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>The state in the country</p>
+    *  <p>State within the country, such as Texas in the United States.</p>
     */
     public String getState() {
         return this.state;
     }
 
     /**
-    *  <p>For countries (e.g.
-    *  the US) where the total tax is a combination of multiple taxes (e.g.
-    *  state and local taxes).</p>
+    *  <p>Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
     */
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;

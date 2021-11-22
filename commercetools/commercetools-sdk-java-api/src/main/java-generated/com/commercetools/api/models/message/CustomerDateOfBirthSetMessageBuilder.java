@@ -35,6 +35,7 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private java.time.LocalDate dateOfBirth;
 
     public CustomerDateOfBirthSetMessageBuilder id(final String id) {
@@ -110,7 +111,7 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
         return this;
     }
 
-    public CustomerDateOfBirthSetMessageBuilder dateOfBirth(final java.time.LocalDate dateOfBirth) {
+    public CustomerDateOfBirthSetMessageBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
@@ -158,6 +159,7 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
@@ -170,7 +172,6 @@ public class CustomerDateOfBirthSetMessageBuilder implements Builder<CustomerDat
         Objects.requireNonNull(sequenceNumber, CustomerDateOfBirthSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, CustomerDateOfBirthSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerDateOfBirthSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(dateOfBirth, CustomerDateOfBirthSetMessage.class + ": dateOfBirth is missing");
         return new CustomerDateOfBirthSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, dateOfBirth);
     }

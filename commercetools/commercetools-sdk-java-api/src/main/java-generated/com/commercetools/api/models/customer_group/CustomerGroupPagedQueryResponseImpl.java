@@ -19,9 +19,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQueryResponse {
 
-    private Long offset;
-
     private Long limit;
+
+    private Long offset;
 
     private Long count;
 
@@ -30,18 +30,25 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results;
 
     @JsonCreator
-    CustomerGroupPagedQueryResponseImpl(@JsonProperty("offset") final Long offset,
-            @JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
+    CustomerGroupPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
+            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total,
             @JsonProperty("results") final java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results) {
-        this.offset = offset;
         this.limit = limit;
+        this.offset = offset;
         this.count = count;
         this.total = total;
         this.results = results;
     }
 
     public CustomerGroupPagedQueryResponseImpl() {
+    }
+
+    /**
+    *  <p>Number of results requested in the query request.</p>
+    */
+    public Long getLimit() {
+        return this.limit;
     }
 
     /**
@@ -53,13 +60,6 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     }
 
     /**
-    *  <p>Number of results requested in the query request.</p>
-    */
-    public Long getLimit() {
-        return this.limit;
-    }
-
-    /**
     *  <p>Actual number of results returned.</p>
     */
     public Long getCount() {
@@ -68,28 +68,28 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
     /**
     *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
+    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
     *  This field is returned by default.
     *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/contract#queries">limit</a>.</p>
+    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Array of <a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
+    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroups</a> matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> getResults() {
         return this.results;
     }
 
-    public void setOffset(final Long offset) {
-        this.offset = offset;
-    }
-
     public void setLimit(final Long limit) {
         this.limit = limit;
+    }
+
+    public void setOffset(final Long offset) {
+        this.offset = offset;
     }
 
     public void setCount(final Long count) {
@@ -118,8 +118,8 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
         CustomerGroupPagedQueryResponseImpl that = (CustomerGroupPagedQueryResponseImpl) o;
 
-        return new EqualsBuilder().append(offset, that.offset)
-                .append(limit, that.limit)
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
                 .append(count, that.count)
                 .append(total, that.total)
                 .append(results, that.results)
@@ -128,8 +128,8 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(offset)
-                .append(limit)
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
                 .append(count)
                 .append(total)
                 .append(results)

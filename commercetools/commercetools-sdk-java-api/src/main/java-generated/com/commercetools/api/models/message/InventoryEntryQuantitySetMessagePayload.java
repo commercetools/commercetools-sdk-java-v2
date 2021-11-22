@@ -5,8 +5,10 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -34,6 +36,10 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
+
     public void setOldQuantityOnStock(final Long oldQuantityOnStock);
 
     public void setNewQuantityOnStock(final Long newQuantityOnStock);
@@ -41,6 +47,8 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
     public void setOldAvailableQuantity(final Long oldAvailableQuantity);
 
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
+
+    public void setSupplyChannel(final ChannelReference supplyChannel);
 
     public static InventoryEntryQuantitySetMessagePayload of() {
         return new InventoryEntryQuantitySetMessagePayloadImpl();
@@ -52,6 +60,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
         instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 

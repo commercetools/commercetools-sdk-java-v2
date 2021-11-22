@@ -37,6 +37,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
 
     private String sku;
 
+    @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     public InventoryEntryDeletedMessageBuilder id(final String id) {
@@ -124,7 +125,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     public InventoryEntryDeletedMessageBuilder supplyChannel(
-            final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
@@ -176,6 +177,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
         return this.sku;
     }
 
+    @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
@@ -189,7 +191,6 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
         Objects.requireNonNull(resource, InventoryEntryDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, InventoryEntryDeletedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(sku, InventoryEntryDeletedMessage.class + ": sku is missing");
-        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessage.class + ": supplyChannel is missing");
         return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
     }

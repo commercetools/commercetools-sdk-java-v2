@@ -57,55 +57,64 @@ public class CustomerGroupImpl implements CustomerGroup {
     }
 
     /**
-    *  <p>Unique ID of the customer group.</p>
+    *  <p>Unique ID of the Customer Group.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the customer group.</p>
+    *  <p>Current version of the Customer Group.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Date and time (UTC) the Customer Group was initially created.</p>
+    */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+    *  <p>Date and time (UTC) the Customer Group was last updated.</p>
+    */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier for the customer group.</p>
+    *  <p>User-defined unique identifier for the Customer Group.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Unique within the project.</p>
+    *  <p>Unique name of the Customer Group.</p>
     */
     public String getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Custom Fields for the Customer Group.</p>
+    */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

@@ -4,6 +4,8 @@ package com.commercetools.history.models.change_value;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,6 +16,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     private Integer variantId;
 
+    @Nullable
     private com.commercetools.history.models.common.Reference supplyChannel;
 
     private com.commercetools.history.models.common.Reference distributionChannel;
@@ -42,7 +45,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
-            final com.commercetools.history.models.common.Reference supplyChannel) {
+            @Nullable final com.commercetools.history.models.common.Reference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
@@ -67,6 +70,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return this.variantId;
     }
 
+    @Nullable
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
         return this.supplyChannel;
     }
@@ -78,7 +82,6 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     public ChangeValueGiftLineItemChangeValue build() {
         Objects.requireNonNull(product, ChangeValueGiftLineItemChangeValue.class + ": product is missing");
         Objects.requireNonNull(variantId, ChangeValueGiftLineItemChangeValue.class + ": variantId is missing");
-        Objects.requireNonNull(supplyChannel, ChangeValueGiftLineItemChangeValue.class + ": supplyChannel is missing");
         Objects.requireNonNull(distributionChannel,
             ChangeValueGiftLineItemChangeValue.class + ": distributionChannel is missing");
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);

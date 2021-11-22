@@ -22,50 +22,63 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxCategory extends BaseResource, com.commercetools.api.models.DomainResource<TaxCategory> {
 
     /**
-    *  <p>The unique ID of the category.</p>
+    *  <p>Unique ID of the TaxCategory.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the category.</p>
+    *  <p>Current version of the TaxCategory.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+    *  <p>Name of the TaxCategory.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
+
+    /**
+    *  <p>Description of the TaxCategory.</p>
+    */
 
     @JsonProperty("description")
     public String getDescription();
 
     /**
-    *  <p>The tax rates have unique IDs in the rates list</p>
+    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
     */
     @NotNull
     @Valid
@@ -73,7 +86,7 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
     public List<TaxRate> getRates();
 
     /**
-    *  <p>User-specific unique identifier for the category.</p>
+    *  <p>User-defined unique identifier for the TaxCategory.</p>
     */
 
     @JsonProperty("key")

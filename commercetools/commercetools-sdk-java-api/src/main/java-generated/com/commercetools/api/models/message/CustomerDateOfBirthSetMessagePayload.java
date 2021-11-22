@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,7 +17,6 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
-    @NotNull
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 

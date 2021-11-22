@@ -14,17 +14,22 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.tax_category.TaxCategory> results;
 
     public TaxCategoryPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public TaxCategoryPagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
 
     public TaxCategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public TaxCategoryPagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -75,6 +75,10 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -84,27 +88,23 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.tax_category.TaxCategory> getResults() {
         return this.results;
     }
 
     public TaxCategoryPagedQueryResponse build() {
         Objects.requireNonNull(limit, TaxCategoryPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, TaxCategoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, TaxCategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, TaxCategoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, TaxCategoryPagedQueryResponse.class + ": results is missing");
-        return new TaxCategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new TaxCategoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds TaxCategoryPagedQueryResponse without checking for non null required values
      */
     public TaxCategoryPagedQueryResponse buildUnchecked() {
-        return new TaxCategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new TaxCategoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static TaxCategoryPagedQueryResponseBuilder of() {
@@ -114,9 +114,9 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
     public static TaxCategoryPagedQueryResponseBuilder of(final TaxCategoryPagedQueryResponse template) {
         TaxCategoryPagedQueryResponseBuilder builder = new TaxCategoryPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

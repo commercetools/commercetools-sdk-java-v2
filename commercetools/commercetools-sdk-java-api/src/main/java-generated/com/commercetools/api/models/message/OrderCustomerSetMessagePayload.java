@@ -24,6 +24,9 @@ public interface OrderCustomerSetMessagePayload extends MessagePayload {
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
@@ -32,6 +35,9 @@ public interface OrderCustomerSetMessagePayload extends MessagePayload {
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();

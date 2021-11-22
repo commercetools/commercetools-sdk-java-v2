@@ -20,13 +20,17 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private com.commercetools.api.models.state.StateReference oldState;
+
     private Boolean force;
 
     @JsonCreator
     OrderStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("oldState") final com.commercetools.api.models.state.StateReference oldState,
             @JsonProperty("force") final Boolean force) {
         this.state = state;
+        this.oldState = oldState;
         this.force = force;
         this.type = ORDER_STATE_TRANSITION;
     }
@@ -43,12 +47,20 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
         return this.state;
     }
 
+    public com.commercetools.api.models.state.StateReference getOldState() {
+        return this.oldState;
+    }
+
     public Boolean getForce() {
         return this.force;
     }
 
     public void setState(final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
+    }
+
+    public void setOldState(final com.commercetools.api.models.state.StateReference oldState) {
+        this.oldState = oldState;
     }
 
     public void setForce(final Boolean force) {
@@ -67,13 +79,14 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
 
         return new EqualsBuilder().append(type, that.type)
                 .append(state, that.state)
+                .append(oldState, that.oldState)
                 .append(force, that.force)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(state).append(force).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(state).append(oldState).append(force).toHashCode();
     }
 
 }

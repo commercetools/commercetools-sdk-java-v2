@@ -35,6 +35,7 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     public CustomerGroupSetMessageBuilder id(final String id) {
@@ -119,7 +120,7 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
     }
 
     public CustomerGroupSetMessageBuilder customerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
@@ -167,6 +168,7 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
@@ -179,7 +181,6 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
         Objects.requireNonNull(sequenceNumber, CustomerGroupSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, CustomerGroupSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerGroupSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(customerGroup, CustomerGroupSetMessage.class + ": customerGroup is missing");
         return new CustomerGroupSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customerGroup);
     }

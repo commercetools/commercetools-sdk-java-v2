@@ -51,6 +51,9 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
         return this.customer;
     }
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
@@ -59,6 +62,9 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
         return this.oldCustomer;
     }
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
         return this.oldCustomerGroup;
     }

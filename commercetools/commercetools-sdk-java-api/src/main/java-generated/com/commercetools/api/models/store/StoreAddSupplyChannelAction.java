@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -20,7 +19,6 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
 
     String ADD_SUPPLY_CHANNEL = "addSupplyChannel";
 
-    @NotNull
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();

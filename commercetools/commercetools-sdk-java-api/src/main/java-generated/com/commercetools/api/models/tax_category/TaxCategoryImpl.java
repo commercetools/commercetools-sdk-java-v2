@@ -61,58 +61,70 @@ public class TaxCategoryImpl implements TaxCategory {
     }
 
     /**
-    *  <p>The unique ID of the category.</p>
+    *  <p>Unique ID of the TaxCategory.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the category.</p>
+    *  <p>Current version of the TaxCategory.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+    */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+    *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+    */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+    *  <p>Name of the TaxCategory.</p>
+    */
     public String getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the TaxCategory.</p>
+    */
     public String getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>The tax rates have unique IDs in the rates list</p>
+    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
     */
     public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates() {
         return this.rates;
     }
 
     /**
-    *  <p>User-specific unique identifier for the category.</p>
+    *  <p>User-defined unique identifier for the TaxCategory.</p>
     */
     public String getKey() {
         return this.key;

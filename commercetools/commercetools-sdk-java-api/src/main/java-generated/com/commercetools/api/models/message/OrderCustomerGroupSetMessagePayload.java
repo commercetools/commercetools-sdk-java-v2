@@ -19,10 +19,16 @@ public interface OrderCustomerGroupSetMessagePayload extends MessagePayload {
 
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
+    /**
+    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    */
     @Valid
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();

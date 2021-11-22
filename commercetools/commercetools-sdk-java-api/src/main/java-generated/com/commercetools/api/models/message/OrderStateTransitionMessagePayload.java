@@ -25,11 +25,17 @@ public interface OrderStateTransitionMessagePayload extends MessagePayload {
     @JsonProperty("state")
     public StateReference getState();
 
+    @Valid
+    @JsonProperty("oldState")
+    public StateReference getOldState();
+
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();
 
     public void setState(final StateReference state);
+
+    public void setOldState(final StateReference oldState);
 
     public void setForce(final Boolean force);
 
@@ -40,6 +46,7 @@ public interface OrderStateTransitionMessagePayload extends MessagePayload {
     public static OrderStateTransitionMessagePayload of(final OrderStateTransitionMessagePayload template) {
         OrderStateTransitionMessagePayloadImpl instance = new OrderStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
+        instance.setOldState(template.getOldState());
         instance.setForce(template.getForce());
         return instance;
     }

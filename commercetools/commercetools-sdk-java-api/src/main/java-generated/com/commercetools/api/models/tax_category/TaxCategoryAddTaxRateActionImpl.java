@@ -35,6 +35,9 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
         return this.action;
     }
 
+    /**
+    *  <p>Value to append to the <code>rates</code> array.</p>
+    */
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }

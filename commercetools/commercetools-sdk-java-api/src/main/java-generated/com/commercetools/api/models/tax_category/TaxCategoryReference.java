@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -13,17 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference {
 
     String TAX_CATEGORY = "tax-category";
 
+    /**
+    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for TaxCategory.</p>
+    */
     @Valid
     @JsonProperty("obj")
     public TaxCategory getObj();
 
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
     public void setObj(final TaxCategory obj);
+
+    public void setId(final String id);
 
     public static TaxCategoryReference of() {
         return new TaxCategoryReferenceImpl();

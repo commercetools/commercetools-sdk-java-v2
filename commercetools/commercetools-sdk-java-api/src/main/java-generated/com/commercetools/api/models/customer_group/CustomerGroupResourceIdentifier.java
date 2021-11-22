@@ -11,11 +11,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupResourceIdentifierImpl.class)
 public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
 
     String CUSTOMER_GROUP = "customer-group";
+
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+    *  <p>Unique key of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    public void setId(final String id);
+
+    public void setKey(final String key);
 
     public static CustomerGroupResourceIdentifier of() {
         return new CustomerGroupResourceIdentifierImpl();

@@ -26,15 +26,19 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
 
     private Long newAvailableQuantity;
 
+    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
+
     @JsonCreator
     InventoryEntryQuantitySetMessagePayloadImpl(@JsonProperty("oldQuantityOnStock") final Long oldQuantityOnStock,
             @JsonProperty("newQuantityOnStock") final Long newQuantityOnStock,
             @JsonProperty("oldAvailableQuantity") final Long oldAvailableQuantity,
-            @JsonProperty("newAvailableQuantity") final Long newAvailableQuantity) {
+            @JsonProperty("newAvailableQuantity") final Long newAvailableQuantity,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.oldQuantityOnStock = oldQuantityOnStock;
         this.newQuantityOnStock = newQuantityOnStock;
         this.oldAvailableQuantity = oldAvailableQuantity;
         this.newAvailableQuantity = newAvailableQuantity;
+        this.supplyChannel = supplyChannel;
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
 
@@ -62,6 +66,10 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
         return this.newAvailableQuantity;
     }
 
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
     public void setOldQuantityOnStock(final Long oldQuantityOnStock) {
         this.oldQuantityOnStock = oldQuantityOnStock;
     }
@@ -76,6 +84,10 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
 
     public void setNewAvailableQuantity(final Long newAvailableQuantity) {
         this.newAvailableQuantity = newAvailableQuantity;
+    }
+
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+        this.supplyChannel = supplyChannel;
     }
 
     @Override
@@ -93,6 +105,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(newQuantityOnStock, that.newQuantityOnStock)
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -103,6 +116,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(newQuantityOnStock)
                 .append(oldAvailableQuantity)
                 .append(newAvailableQuantity)
+                .append(supplyChannel)
                 .toHashCode();
     }
 

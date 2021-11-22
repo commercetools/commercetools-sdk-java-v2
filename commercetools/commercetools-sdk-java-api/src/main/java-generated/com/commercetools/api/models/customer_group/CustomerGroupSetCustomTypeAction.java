@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This action sets or removes the custom type for an existing customer group.
+*  <p>This action sets or removes the custom type for an existing Customer Group.
 *  If present, this action overwrites any existing <a href="/../api/projects/custom-fields#custom">custom</a> type and fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

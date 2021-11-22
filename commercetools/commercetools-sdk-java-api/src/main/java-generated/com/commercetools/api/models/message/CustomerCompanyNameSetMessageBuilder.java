@@ -35,6 +35,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private String companyName;
 
     public CustomerCompanyNameSetMessageBuilder id(final String id) {
@@ -110,7 +111,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this;
     }
 
-    public CustomerCompanyNameSetMessageBuilder companyName(final String companyName) {
+    public CustomerCompanyNameSetMessageBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;
         return this;
     }
@@ -158,6 +159,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public String getCompanyName() {
         return this.companyName;
     }
@@ -170,7 +172,6 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         Objects.requireNonNull(sequenceNumber, CustomerCompanyNameSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, CustomerCompanyNameSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerCompanyNameSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(companyName, CustomerCompanyNameSetMessage.class + ": companyName is missing");
         return new CustomerCompanyNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, companyName);
     }

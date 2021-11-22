@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -12,6 +14,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     private String sku;
 
+    @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
@@ -26,7 +29,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
-            final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
@@ -35,13 +38,13 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
         return this.sku;
     }
 
+    @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     public InventoryEntryDeletedMessagePayload build() {
         Objects.requireNonNull(sku, InventoryEntryDeletedMessagePayload.class + ": sku is missing");
-        Objects.requireNonNull(supplyChannel, InventoryEntryDeletedMessagePayload.class + ": supplyChannel is missing");
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
     }
 

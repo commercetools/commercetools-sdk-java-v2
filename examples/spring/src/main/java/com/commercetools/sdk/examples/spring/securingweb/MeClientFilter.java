@@ -6,7 +6,6 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

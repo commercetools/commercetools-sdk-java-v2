@@ -6,8 +6,12 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -65,11 +69,19 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
         return next.apply(request).whenComplete((response, throwable) -> {
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
-                if (throwable.getCause() instanceof ApiHttpException) {
-                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
+                Throwable cause = throwable.getCause();
+                if (cause instanceof ApiHttpException) {
+                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause)
                             .getResponse();
-                    responseLogger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
-                        errorResponse.getStatusCode()));
+                    final Supplier<Object> logMessage = () -> String.format("%s %s %s",
+                            request.getMethod().name(), request.getUrl(), errorResponse.getStatusCode());
+                    if (cause instanceof NotFoundException) {
+                        responseLogger.info(logMessage);
+                    } else if (cause instanceof ApiClientException) {
+                        responseLogger.warn(logMessage);
+                    } else {
+                        responseLogger.error(logMessage);
+                    }
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {

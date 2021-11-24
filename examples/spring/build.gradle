@@ -10,13 +10,24 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
+    mavenLocal()
 	mavenCentral()
 }
 
+ext {
+    versions = [
+        commercetools: "7.3.0-SNAPSHOT"
+    ]
+}
+
 dependencies {
+    implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-apachehttp-client:${versions.commercetools}"
+    implementation 'javax.inject:javax.inject:1'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.session:spring-session-core'
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>Cart: <span th:text="${#lists.size(cart.lineItems)}"> 0 </span></p>
+<p>Products</p>
+<p th:if="${products.empty}">No products found</p>
+<p th:each="product : ${products}">
+    <span th:text="${product.name.values.en}"> Name </span>
+</p>
+</body>
+</html>

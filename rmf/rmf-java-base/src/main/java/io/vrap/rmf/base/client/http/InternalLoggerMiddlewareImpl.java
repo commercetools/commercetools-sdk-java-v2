@@ -10,7 +10,6 @@ import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.ApiClientException;
-import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -71,15 +70,16 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             if (throwable != null) {
                 Throwable cause = throwable.getCause();
                 if (cause instanceof ApiHttpException) {
-                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause)
-                            .getResponse();
-                    final Supplier<Object> logMessage = () -> String.format("%s %s %s",
-                            request.getMethod().name(), request.getUrl(), errorResponse.getStatusCode());
+                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
+                    final Supplier<Object> logMessage = () -> String.format("%s %s %s", request.getMethod().name(),
+                        request.getUrl(), errorResponse.getStatusCode());
                     if (cause instanceof NotFoundException) {
                         responseLogger.info(logMessage);
-                    } else if (cause instanceof ApiClientException) {
+                    }
+                    else if (cause instanceof ApiClientException) {
                         responseLogger.warn(logMessage);
-                    } else {
+                    }
+                    else {
                         responseLogger.error(logMessage);
                     }
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()

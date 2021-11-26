@@ -1,4 +1,4 @@
-package com.commercetools.sdk.examples.spring.securingweb;
+package com.commercetools.sdk.examples.spring.config;
 
 import io.vrap.rmf.base.client.error.NotFoundException;
 import org.springframework.context.ApplicationContext;
@@ -16,8 +16,6 @@ import org.thymeleaf.spring5.SpringWebFluxTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.reactive.ThymeleafReactiveViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
-
-import java.util.Set;
 
 @Configuration
 @ComponentScan

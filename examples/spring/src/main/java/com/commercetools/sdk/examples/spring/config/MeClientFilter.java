@@ -1,4 +1,4 @@
-package com.commercetools.sdk.examples.spring.securingweb;
+package com.commercetools.sdk.examples.spring.config;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -76,8 +76,8 @@ public class MeClientFilter implements WebFilter {
         public AuthenticationToken getToken() {
             WebSession s = session.block(Duration.ofMillis(500));
             assert s != null;
-            final String accessToken = s.getAttribute("ctp.access.token");
-            final String refreshToken = s.getAttribute("ctp.refresh.token");
+            final String accessToken = s.getAttribute(SessionConfig.SESSION_ACCESS_TOKEN);
+            final String refreshToken = s.getAttribute(SessionConfig.SESSION_REFRESH_TOKEN);
             if (accessToken == null) {
                 return null;
             }
@@ -91,8 +91,8 @@ public class MeClientFilter implements WebFilter {
         public void setToken(AuthenticationToken token) {
             WebSession s = session.block(Duration.ofMillis(500));
             assert s != null;
-            s.getAttributes().put("ctp.access.token", token.getAccessToken());
-            s.getAttributes().put("ctp.refresh.token", token.getRefreshToken());
+            s.getAttributes().put(SessionConfig.SESSION_ACCESS_TOKEN, token.getAccessToken());
+            s.getAttributes().put(SessionConfig.SESSION_REFRESH_TOKEN, token.getRefreshToken());
             s.save();
         }
     }

@@ -1,4 +1,4 @@
-package com.commercetools.sdk.examples.spring.securingweb;
+package com.commercetools.sdk.examples.spring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +14,9 @@ import java.util.concurrent.ConcurrentHashMap;
 @EnableSpringWebSession
 @Configuration
 public class SessionConfig {
+    public static final String SESSION_ACCESS_TOKEN = "ctp.token.access";
+    public static final String SESSION_REFRESH_TOKEN = "ctp.token.refresh";
+
     @Bean
     public ReactiveSessionRepository<MapSession> reactiveSessionRepository() {
         return new ReactiveMapSessionRepository(new ConcurrentHashMap<>());

@@ -2,7 +2,8 @@
 package io.vrap.rmf.base.client.http;
 
 import java.time.Duration;
-import java.util.concurrent.CompletableFuture;
+import java.util.Optional;
+import java.util.concurrent.*;
 import java.util.function.Function;
 
 import net.jodah.failsafe.*;
@@ -12,20 +13,33 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+import net.jodah.failsafe.util.concurrent.Scheduler;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
  */
-class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
+public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
     private final OAuthHandler authHandler;
     private static final InternalLogger logger = InternalLogger.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public OAuthMiddlewareImpl(final OAuthHandler oAuthHandler) {
-        this(oAuthHandler, 1, false);
+        this(Scheduler.DEFAULT, oAuthHandler, 1, false);
     }
 
     public OAuthMiddlewareImpl(final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        this(Scheduler.DEFAULT, oauthHandler, maxRetries, useCircuitBreaker);
+    }
+
+    public OAuthMiddlewareImpl(final ScheduledExecutorService executorService, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        this(Scheduler.of(executorService), oauthHandler, maxRetries, useCircuitBreaker);
+    }
+
+    public OAuthMiddlewareImpl(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+        this(Scheduler.of(executor), oauthHandler, maxRetries, useCircuitBreaker);
+    }
+
+    public OAuthMiddlewareImpl(final Scheduler scheduler, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
         this.authHandler = oauthHandler;
 
         RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()
@@ -64,10 +78,10 @@ class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     .onOpen(() -> logger.debug(() -> "The authentication circuit breaker was opened"))
                     .onHalfOpen(() -> logger.debug(() -> "The authentication circuit breaker was half-opened"))
                     .onFailure(event -> logger.trace(() -> "Authentication failed", event.getFailure()));
-            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker);
+            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker).with(scheduler);
         }
         else {
-            this.failsafeExecutor = Failsafe.with(retry);
+            this.failsafeExecutor = Failsafe.with(retry).with(scheduler);
         }
     }
 

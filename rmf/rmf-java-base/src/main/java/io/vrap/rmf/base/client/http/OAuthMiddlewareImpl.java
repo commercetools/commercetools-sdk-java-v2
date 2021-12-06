@@ -2,18 +2,17 @@
 package io.vrap.rmf.base.client.http;
 
 import java.time.Duration;
-import java.util.Optional;
 import java.util.concurrent.*;
 import java.util.function.Function;
 
 import net.jodah.failsafe.*;
 import net.jodah.failsafe.event.ExecutionAttemptedEvent;
+import net.jodah.failsafe.util.concurrent.Scheduler;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
-import net.jodah.failsafe.util.concurrent.Scheduler;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
@@ -31,15 +30,18 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
         this(Scheduler.DEFAULT, oauthHandler, maxRetries, useCircuitBreaker);
     }
 
-    public OAuthMiddlewareImpl(final ScheduledExecutorService executorService, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+    public OAuthMiddlewareImpl(final ScheduledExecutorService executorService, final OAuthHandler oauthHandler,
+            final int maxRetries, final boolean useCircuitBreaker) {
         this(Scheduler.of(executorService), oauthHandler, maxRetries, useCircuitBreaker);
     }
 
-    public OAuthMiddlewareImpl(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+    public OAuthMiddlewareImpl(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries,
+            final boolean useCircuitBreaker) {
         this(Scheduler.of(executor), oauthHandler, maxRetries, useCircuitBreaker);
     }
 
-    public OAuthMiddlewareImpl(final Scheduler scheduler, final OAuthHandler oauthHandler, final int maxRetries, final boolean useCircuitBreaker) {
+    public OAuthMiddlewareImpl(final Scheduler scheduler, final OAuthHandler oauthHandler, final int maxRetries,
+            final boolean useCircuitBreaker) {
         this.authHandler = oauthHandler;
 
         RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()

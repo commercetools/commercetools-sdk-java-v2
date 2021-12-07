@@ -1,6 +1,9 @@
 
 package io.vrap.rmf.base.client.oauth2;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
@@ -47,6 +50,15 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
         })
                 .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
                         .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
+    }
+
+    static String urlEncode(String value) {
+        try {
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
+        }
+        catch (UnsupportedEncodingException e) {
+            throw new IllegalArgumentException(e.getMessage(), e);
+        }
     }
 
     @Override

@@ -10,11 +10,14 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AutoCloseableService;
+import io.vrap.rmf.base.client.VrapHttpClient;
 
 /**
  * The HandlerStack is used to execute the middlewares in order and transfer the request using the specified {@link HttpHandler}
  */
-public class HandlerStack extends AutoCloseableService {
+public class HandlerStack extends AutoCloseableService implements VrapHttpClient {
+    public String CLOSED_MESSAGE = "Handler is already closed.";
+
     private final HttpHandler handler;
 
     private final List<Middleware> middlewares;
@@ -65,6 +68,12 @@ public class HandlerStack extends AutoCloseableService {
         }
 
         return cached;
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
+        rejectExecutionIfClosed(CLOSED_MESSAGE);
+        return invoke(request);
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request) {

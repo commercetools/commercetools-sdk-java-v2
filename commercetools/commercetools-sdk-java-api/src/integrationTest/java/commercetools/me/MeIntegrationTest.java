@@ -1,6 +1,8 @@
 
 package commercetools.me;
 
+import java.time.Duration;
+
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
@@ -17,13 +19,10 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
-
 import io.vrap.rmf.base.client.utils.ClientUtils;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
-
-import java.time.Duration;
-import java.util.concurrent.ExecutionException;
 
 public class MeIntegrationTest {
 
@@ -68,14 +67,10 @@ public class MeIntegrationTest {
                     .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                     .build();
             GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(
-                    credentials.getClientId(),
-                    credentials.getClientSecret(),
-                    customer.getEmail(),
-                    CustomerFixtures.TEST_CUSTOMER_PASSWORD,
-                    null,
-                    ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
-                    HttpClientSupplier.of().get()
-            );
+                credentials.getClientId(), credentials.getClientSecret(), customer.getEmail(),
+                CustomerFixtures.TEST_CUSTOMER_PASSWORD, null,
+                ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
+                HttpClientSupplier.of().get());
             final AuthenticationToken token = ClientUtils.blockingWait(supplier.getToken(), Duration.ofSeconds(10));
 
             Assertions.assertThat(token.getScope()).contains("customer_id:" + customer.getId());

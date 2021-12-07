@@ -22,7 +22,8 @@ public class ClientCredentialsTokenSupplier extends BaseAuthTokenSupplier {
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
 
-        final ApiHttpHeaders headers = new ApiHttpHeaders().withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
+        final ApiHttpHeaders headers = new ApiHttpHeaders()
+                .withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
                 .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         String body = "";

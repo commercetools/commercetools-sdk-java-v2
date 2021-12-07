@@ -28,7 +28,8 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
         if (token.getRefreshToken() == null) {
             throw new AuthException(400, "No refresh_token given", null);
         }
-        final String body = String.format("grant_type=refresh_token&refresh_token=%s", urlEncode(token.getRefreshToken()));
+        final String body = String.format("grant_type=refresh_token&refresh_token=%s",
+            urlEncode(token.getRefreshToken()));
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
         logger.debug(() -> request);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {

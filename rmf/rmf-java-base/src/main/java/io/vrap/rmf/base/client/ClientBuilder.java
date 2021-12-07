@@ -298,14 +298,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() ->
-                createInMemoryTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
-        return withTokenSupplier(() ->
-            createInMemoryTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
     }
 
     public ClientBuilder withStaticTokenFlow(final AuthenticationToken token) {
@@ -318,14 +318,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() ->
-                createInMemoryTokenSupplier(createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
-        return withTokenSupplier(() ->
-            createInMemoryTokenSupplier(createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
     }
 
     private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,
@@ -336,13 +336,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage) {
-        return withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage, oauthHandlerSupplier());
+        return withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage,
+            oauthHandlerSupplier());
     }
 
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage, Supplier<HandlerStack> httpClientSupplier) {
         return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-                refreshTokenEndpoint, storage, httpClientSupplier.get()));
+            refreshTokenEndpoint, storage, httpClientSupplier.get()));
     }
 
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
@@ -381,8 +382,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint, Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-                createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClientSupplier.get())));
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,

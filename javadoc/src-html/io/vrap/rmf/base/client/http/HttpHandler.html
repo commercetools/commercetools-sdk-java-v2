@@ -21,7 +21,7 @@
 <span class="source-line-no">008</span><span id="line.8">/**</span>
 <span class="source-line-no">009</span><span id="line.9"> * Handler to execute the given request using a HTTP client</span>
 <span class="source-line-no">010</span><span id="line.10"> */</span>
-<span class="source-line-no">011</span><span id="line.11">public class HttpHandler extends AutoCloseableService {</span>
+<span class="source-line-no">011</span><span id="line.11">public class HttpHandler extends AutoCloseableService implements VrapHttpClient {</span>
 <span class="source-line-no">012</span><span id="line.12">    private final VrapHttpClient httpClient;</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
 <span class="source-line-no">014</span><span id="line.14">    public HttpHandler(final VrapHttpClient httpClient) {</span>

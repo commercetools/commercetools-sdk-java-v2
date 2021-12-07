@@ -82,11 +82,12 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
+<dd><code><a href="../VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/HttpHandler.html#line.11">HttpHandler</a></span>
-<span class="extends-implements">extends <a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a></span></div>
+<span class="extends-implements">extends <a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a>
+implements <a href="../VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span></div>
 <div class="block">Handler to execute the given request using a HTTP client</div>
 </section>
 <section class="summary">
@@ -171,6 +172,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest)">
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/HttpHandler.html#line.22">execute</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;apiHttpRequest)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../VrapHttpClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>

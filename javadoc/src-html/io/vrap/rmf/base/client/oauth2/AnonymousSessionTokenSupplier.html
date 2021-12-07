@@ -37,14 +37,14 @@
 <span class="source-line-no">024</span><span id="line.24">        String auth = Base64.getEncoder()</span>
 <span class="source-line-no">025</span><span id="line.25">                .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));</span>
 <span class="source-line-no">026</span><span id="line.26">        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(</span>
-<span class="source-line-no">027</span><span id="line.27">            headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),</span>
+<span class="source-line-no">027</span><span id="line.27">            headerEntry(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth)),</span>
 <span class="source-line-no">028</span><span id="line.28">            headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));</span>
 <span class="source-line-no">029</span><span id="line.29">        final String body;</span>
 <span class="source-line-no">030</span><span id="line.30">        if (scope == null || scope.isEmpty()) {</span>
 <span class="source-line-no">031</span><span id="line.31">            body = "grant_type=client_credentials";</span>
 <span class="source-line-no">032</span><span id="line.32">        }</span>
 <span class="source-line-no">033</span><span id="line.33">        else {</span>
-<span class="source-line-no">034</span><span id="line.34">            body = "grant_type=client_credentials&amp;scope=" + scope;</span>
+<span class="source-line-no">034</span><span id="line.34">            body = String.format("grant_type=client_credentials&amp;scope=%s", urlEncode(scope));</span>
 <span class="source-line-no">035</span><span id="line.35">        }</span>
 <span class="source-line-no">036</span><span id="line.36">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,</span>
 <span class="source-line-no">037</span><span id="line.37">            body.getBytes(StandardCharsets.UTF_8));</span>

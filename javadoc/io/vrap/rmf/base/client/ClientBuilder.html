@@ -166,27 +166,39 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <div class="block">Creates a default client builder</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.HandlerStack)">of</a></span>&#8203;(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ApiHttpClient)">of</a></span>&#8203;(<a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;httpClient)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Creates a client builder with a specifig <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a></div>
+<div class="block">Creates a client builder with a specific or preconfigured <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ApiHttpClient</code></a> instance.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.VrapHttpClient)">of</a></span>&#8203;(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.HandlerStack)">of</a></span>&#8203;(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Creates a client builder with a specifig <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a></div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.VrapHttpClient)">of</a></span>&#8203;(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">Creates a client builder with a specific or preconfigured <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> instance.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage)">withAnonymousRefreshFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage)">withAnonymousRefreshFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,io.vrap.rmf.base.client.VrapHttpClient)">withAnonymousRefreshFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,io.vrap.rmf.base.client.VrapHttpClient)">withAnonymousRefreshFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,java.util.function.Supplier)">withAnonymousRefreshFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
+ <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">withAnonymousSessionFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
@@ -198,42 +210,52 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withApiBaseUrl(java.lang.String)">withApiBaseUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">withAnonymousSessionFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withApiBaseUrl(java.net.URI)">withApiBaseUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withApiBaseUrl(java.lang.String)">withApiBaseUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAuthCircuitBreaker()">withAuthCircuitBreaker</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withApiBaseUrl(java.net.URI)">withApiBaseUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAuthRetries(int)">withAuthRetries</a></span>&#8203;(int&nbsp;authRetries)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAuthCircuitBreaker()">withAuthCircuitBreaker</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">withClientCredentials</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withAuthRetries(int)">withAuthRetries</a></span>&#8203;(int&nbsp;authRetries)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">withClientCredentials</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)"><code>withClientCredentialsFlow(ClientCredentials, String)</code></a> instead</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withClientCredentials</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withClientCredentials</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)"><code>withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)</code></a> instead</div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
@@ -245,26 +267,38 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware()">withErrorMiddleware</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI,java.util.function.Supplier)">withClientCredentialsFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware)">withErrorMiddleware</a></span>&#8203;(<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware()">withErrorMiddleware</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware(java.util.function.Supplier)">withErrorMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&gt;&nbsp;errorMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware)">withErrorMiddleware</a></span>&#8203;(<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String)">withGlobalCustomerPasswordFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrorMiddleware(java.util.function.Supplier)">withErrorMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&gt;&nbsp;errorMiddleware)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String)">withGlobalCustomerPasswordFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withGlobalCustomerPasswordFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">withGlobalCustomerPasswordFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,java.util.function.Supplier)">withGlobalCustomerPasswordFlow</a></span>&#8203;(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withHandlerStack(io.vrap.rmf.base.client.http.HandlerStack)">withHandlerStack</a></span>&#8203;(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
@@ -301,38 +335,44 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <div class="block">sets the middlewares to be configured for the client.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">withOAuthMiddleware</a></span>&#8203;(<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthHttpClient(io.vrap.rmf.base.client.VrapHttpClient)">withOAuthHttpClient</a></span>&#8203;(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(java.util.function.Supplier)">withOAuthMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">withOAuthMiddleware</a></span>&#8203;(<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withoutAuthCircuitBreaker()">withoutAuthCircuitBreaker</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(java.util.function.Supplier)">withOAuthMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withoutAuthCircuitBreaker()">withoutAuthCircuitBreaker</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryMiddleware)">withRetryMiddleware</a></span>&#8203;(<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(java.util.function.Supplier)">withRetryMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryMiddleware)">withRetryMiddleware</a></span>&#8203;(<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">withSerializer</a></span>&#8203;(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(java.util.function.Supplier)">withRetryMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(java.util.function.Supplier)">withSerializer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">withSerializer</a></span>&#8203;(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">withStaticTokenFlow</a></span>&#8203;(<a href="AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(java.util.function.Supplier)">withSerializer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">withTokenSupplier</a></span>&#8203;(<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">withStaticTokenFlow</a></span>&#8203;(<a href="AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">withTokenSupplier</a></span>&#8203;(<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(java.util.function.Supplier)">withTokenSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withUserAgentSupplier(java.util.function.Supplier)">withUserAgentSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</code></div>
@@ -375,7 +415,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.48">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.50">of</a></span>()</div>
 <div class="block"><p>Creates a default client builder</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -386,8 +426,22 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 <div class="block"><p>Creates a client builder with a specific or preconfigured <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> instance. Uses defaults for
+ the <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a></p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>httpClient</code> - the HTTP client to be used</dd>
+<dt>Returns:</dt>
+<dd>ClientBuilder instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="block"><p>Creates a client builder with a specific or preconfigured <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ApiHttpClient</code></a> instance. Uses defaults for
  the <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -400,7 +454,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.HandlerStack)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.79">of</a></span>&#8203;<span class="parameters">(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
 <div class="block"><p>Creates a client builder with a specifig <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -413,61 +467,67 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withoutAuthCircuitBreaker()">
 <h3>withoutAuthCircuitBreaker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.116">withoutAuthCircuitBreaker</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.154">withoutAuthCircuitBreaker</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAuthCircuitBreaker()">
 <h3>withAuthCircuitBreaker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.121">withAuthCircuitBreaker</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.159">withAuthCircuitBreaker</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAuthRetries(int)">
 <h3>withAuthRetries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.126">withAuthRetries</a></span>&#8203;<span class="parameters">(int&nbsp;authRetries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.164">withAuthRetries</a></span>&#8203;<span class="parameters">(int&nbsp;authRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHandlerStack(io.vrap.rmf.base.client.http.HandlerStack)">
 <h3>withHandlerStack</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.131">withHandlerStack</a></span>&#8203;<span class="parameters">(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.169">withHandlerStack</a></span>&#8203;<span class="parameters">(<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpClient(io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withHttpClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.136">withHttpClient</a></span>&#8203;<span class="parameters">(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.174">withHttpClient</a></span>&#8203;<span class="parameters">(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withOAuthHttpClient(io.vrap.rmf.base.client.VrapHttpClient)">
+<h3>withOAuthHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.179">withOAuthHttpClient</a></span>&#8203;<span class="parameters">(<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">
 <h3>withSerializer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.141">withSerializer</a></span>&#8203;<span class="parameters">(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.184">withSerializer</a></span>&#8203;<span class="parameters">(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSerializer(java.util.function.Supplier)">
 <h3>withSerializer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.146">withSerializer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.189">withSerializer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(io.vrap.rmf.base.client.error.HttpExceptionFactory)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.151">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.194">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;factory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(java.util.function.Function)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.156">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>,&#8203;<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.199">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>,&#8203;<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(java.util.function.Supplier)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.166">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.209">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
 <div class="block">configures the Factory for HTTP exception in case.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -479,7 +539,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="defaultClient(java.net.URI)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.185">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.228">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
 <div class="block"><p>Configures a client with the default middlewares and the given baseUrl</p>
  <p>The following middlewares and services are configured:
  <ul>
@@ -501,13 +561,13 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="defaultClient(java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.193">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.236">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.197">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.240">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl,
  <a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 </section>
@@ -515,7 +575,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,io.vrap.rmf.base.client.ServiceRegionConfig)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.202">defaultClient</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.245">defaultClient</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="ServiceRegionConfig.html" title="interface in io.vrap.rmf.base.client">ServiceRegionConfig</a>&nbsp;serviceRegionConfig)</span></div>
 </section>
 </li>
@@ -523,7 +583,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <section class="detail" id="withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>withClientCredentials</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.214">withClientCredentials</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.257">withClientCredentials</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)"><code>withClientCredentialsFlow(ClientCredentials, String)</code></a> instead</div>
@@ -541,7 +601,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <section class="detail" id="withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withClientCredentials</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.226">withClientCredentials</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.269">withClientCredentials</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
@@ -560,14 +620,22 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.232">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.275">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI,java.util.function.Supplier)">
+<h3>withClientCredentialsFlow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.279">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.236">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.284">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -575,14 +643,22 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.247">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.295">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">
+<h3>withClientCredentialsFlow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.299">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.252">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.305">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -590,20 +666,28 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">
 <h3>withStaticTokenFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.258">withStaticTokenFlow</a></span>&#8203;<span class="parameters">(<a href="AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.311">withStaticTokenFlow</a></span>&#8203;<span class="parameters">(<a href="AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>withAnonymousSessionFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.262">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.315">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">
+<h3>withAnonymousSessionFlow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.319">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withAnonymousSessionFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.267">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.325">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -611,16 +695,26 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.279">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.337">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage)</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,java.util.function.Supplier)">
+<h3>withAnonymousRefreshFlow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.343">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
+ <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.285">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.349">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
@@ -630,16 +724,26 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String)">
 <h3>withGlobalCustomerPasswordFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.314">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.378">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,java.util.function.Supplier)">
+<h3>withGlobalCustomerPasswordFlow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.383">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClientSupplier)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withGlobalCustomerPasswordFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.320">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.390">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
@@ -649,111 +753,117 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="addAcceptGZipMiddleware()">
 <h3>addAcceptGZipMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.332">addAcceptGZipMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.402">addAcceptGZipMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorMiddleware(java.util.function.Supplier)">
 <h3>withErrorMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.336">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&gt;&nbsp;errorMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.406">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&gt;&nbsp;errorMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorMiddleware()">
 <h3>withErrorMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.341">withErrorMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.411">withErrorMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware)">
 <h3>withErrorMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.345">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.415">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(java.util.function.Supplier)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.349">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.419">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&gt;&nbsp;retryMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(io.vrap.rmf.base.client.http.RetryMiddleware)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.354">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.424">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a>&nbsp;retryMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(int)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.358">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.428">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(int,java.util.List)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.362">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.432">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOAuthMiddleware(java.util.function.Supplier)">
 <h3>withOAuthMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.366">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.436">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">
 <h3>withOAuthMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.371">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.441">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withTokenSupplier(java.util.function.Supplier)">
+<h3>withTokenSupplier</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.445">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">
 <h3>withTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.375">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.452">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)">
 <h3>withInternalLoggerMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.380">withInternalLoggerMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.456">withInternalLoggerMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory)">
 <h3>withInternalLoggerFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.385">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.461">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withApiBaseUrl(java.lang.String)">
 <h3>withApiBaseUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.389">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.465">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withApiBaseUrl(java.net.URI)">
 <h3>withApiBaseUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.393">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.469">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withUserAgentSupplier(java.util.function.Supplier)">
 <h3>withUserAgentSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.398">withUserAgentSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.474">withUserAgentSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addCorrelationIdProvider(io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>addCorrelationIdProvider</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.407">addCorrelationIdProvider</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.483">addCorrelationIdProvider</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMiddlewares(java.util.List)">
 <h3>withMiddlewares</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.425">withMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.501">withMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
 <div class="block">sets the middlewares to be configured for the client.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -766,7 +876,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">
 <h3>withMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.435">withMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.511">withMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</span></div>
 <div class="block">sets the middlewares to be configured for the client.</div>
 <dl class="notes">
@@ -780,7 +890,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="addMiddlewares(java.util.List)">
 <h3>addMiddlewares</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.448">addMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.524">addMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
 <div class="block">adds the middlewares to be configured for the client.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -793,7 +903,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="addMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">
 <h3>addMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.458">addMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.534">addMiddleware</a></span>&#8203;<span class="parameters">(<a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</span></div>
 <div class="block">adds the middlewares to be configured for the client.</div>
 <dl class="notes">
@@ -807,7 +917,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.466">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.542">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;</code></dd>
@@ -817,7 +927,7 @@ implements <a href="Builder.html" title="interface in io.vrap.rmf.base.client">B
 <li>
 <section class="detail" id="buildDefaultUserAgent()">
 <h3>buildDefaultUserAgent</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.471">buildDefaultUserAgent</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ClientBuilder.html#line.547">buildDefaultUserAgent</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -14,60 +14,72 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package io.vrap.rmf.base.client.oauth2;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import java.util.concurrent.CompletableFuture;</span>
-<span class="source-line-no">005</span><span id="line.5">import java.util.concurrent.CompletionException;</span>
-<span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.http.InternalLogger;</span>
-<span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.utils.Utils;</span>
-<span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">public abstract class BaseAuthTokenSupplier extends AutoCloseableService implements TokenSupplier {</span>
-<span class="source-line-no">013</span><span id="line.13">    protected final VrapHttpClient vrapHttpClient;</span>
-<span class="source-line-no">014</span><span id="line.14">    protected final ApiHttpRequest apiHttpRequest;</span>
-<span class="source-line-no">015</span><span id="line.15">    protected final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest) {</span>
-<span class="source-line-no">018</span><span id="line.18">        this.vrapHttpClient = vrapHttpClient;</span>
-<span class="source-line-no">019</span><span id="line.19">        this.apiHttpRequest = apiHttpRequest;</span>
-<span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    @Override</span>
-<span class="source-line-no">023</span><span id="line.23">    public CompletableFuture&lt;AuthenticationToken&gt; getToken() {</span>
-<span class="source-line-no">024</span><span id="line.24">        return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25">            logger.info(() -&gt; String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUri(),</span>
-<span class="source-line-no">026</span><span id="line.26">                response.getStatusCode()));</span>
-<span class="source-line-no">027</span><span id="line.27">            if (throwable != null) {</span>
-<span class="source-line-no">028</span><span id="line.28">                logger.error(() -&gt; response, throwable);</span>
-<span class="source-line-no">029</span><span id="line.29">            }</span>
-<span class="source-line-no">030</span><span id="line.30">            else {</span>
-<span class="source-line-no">031</span><span id="line.31">                logger.debug(() -&gt; response);</span>
+<span class="source-line-no">004</span><span id="line.4">import java.io.UnsupportedEncodingException;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.net.URLEncoder;</span>
+<span class="source-line-no">006</span><span id="line.6">import java.nio.charset.StandardCharsets;</span>
+<span class="source-line-no">007</span><span id="line.7">import java.util.concurrent.CompletableFuture;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.CompletionException;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.http.InternalLogger;</span>
+<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.utils.Utils;</span>
+<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">public abstract class BaseAuthTokenSupplier extends AutoCloseableService implements TokenSupplier {</span>
+<span class="source-line-no">016</span><span id="line.16">    protected final VrapHttpClient vrapHttpClient;</span>
+<span class="source-line-no">017</span><span id="line.17">    protected final ApiHttpRequest apiHttpRequest;</span>
+<span class="source-line-no">018</span><span id="line.18">    protected final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest) {</span>
+<span class="source-line-no">021</span><span id="line.21">        this.vrapHttpClient = vrapHttpClient;</span>
+<span class="source-line-no">022</span><span id="line.22">        this.apiHttpRequest = apiHttpRequest;</span>
+<span class="source-line-no">023</span><span id="line.23">    }</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @Override</span>
+<span class="source-line-no">026</span><span id="line.26">    public CompletableFuture&lt;AuthenticationToken&gt; getToken() {</span>
+<span class="source-line-no">027</span><span id="line.27">        return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -&gt; {</span>
+<span class="source-line-no">028</span><span id="line.28">            logger.info(() -&gt; String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUri(),</span>
+<span class="source-line-no">029</span><span id="line.29">                response.getStatusCode()));</span>
+<span class="source-line-no">030</span><span id="line.30">            if (throwable != null) {</span>
+<span class="source-line-no">031</span><span id="line.31">                logger.error(() -&gt; response, throwable);</span>
 <span class="source-line-no">032</span><span id="line.32">            }</span>
-<span class="source-line-no">033</span><span id="line.33">        }).thenApply(apiHttpResponse -&gt; {</span>
-<span class="source-line-no">034</span><span id="line.34">            if (apiHttpResponse.getStatusCode() &lt; 200 || apiHttpResponse.getStatusCode() &gt; 299) {</span>
-<span class="source-line-no">035</span><span id="line.35">                if (apiHttpResponse.getStatusCode() == 405) {</span>
-<span class="source-line-no">036</span><span id="line.36">                    throw new CompletionException(new AuthException(apiHttpResponse.getStatusCode(),</span>
-<span class="source-line-no">037</span><span id="line.37">                        new String(apiHttpResponse.getBody()), apiHttpRequest.getHeaders(),</span>
-<span class="source-line-no">038</span><span id="line.38">                        apiHttpResponse.getMessage()</span>
-<span class="source-line-no">039</span><span id="line.39">                                + " : auth token URI may be incorrect e.g. https://auth.europe-west1.gcp.commercetools.com/oauth/token",</span>
-<span class="source-line-no">040</span><span id="line.40">                        apiHttpResponse));</span>
-<span class="source-line-no">041</span><span id="line.41">                }</span>
-<span class="source-line-no">042</span><span id="line.42">                throw new CompletionException(</span>
-<span class="source-line-no">043</span><span id="line.43">                    new AuthException(apiHttpResponse.getStatusCode(), new String(apiHttpResponse.getBody()),</span>
-<span class="source-line-no">044</span><span id="line.44">                        apiHttpRequest.getHeaders(), apiHttpResponse.getMessage(), apiHttpResponse));</span>
-<span class="source-line-no">045</span><span id="line.45">            }</span>
-<span class="source-line-no">046</span><span id="line.46">            return apiHttpResponse;</span>
-<span class="source-line-no">047</span><span id="line.47">        })</span>
-<span class="source-line-no">048</span><span id="line.48">                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse&lt;byte[]&gt; response) -&gt; JsonUtils</span>
-<span class="source-line-no">049</span><span id="line.49">                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @Override</span>
-<span class="source-line-no">053</span><span id="line.53">    protected void internalClose() {</span>
-<span class="source-line-no">054</span><span id="line.54">        if (vrapHttpClient instanceof AutoCloseable)</span>
-<span class="source-line-no">055</span><span id="line.55">            closeQuietly((AutoCloseable) vrapHttpClient);</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57">}</span>
+<span class="source-line-no">033</span><span id="line.33">            else {</span>
+<span class="source-line-no">034</span><span id="line.34">                logger.debug(() -&gt; response);</span>
+<span class="source-line-no">035</span><span id="line.35">            }</span>
+<span class="source-line-no">036</span><span id="line.36">        }).thenApply(apiHttpResponse -&gt; {</span>
+<span class="source-line-no">037</span><span id="line.37">            if (apiHttpResponse.getStatusCode() &lt; 200 || apiHttpResponse.getStatusCode() &gt; 299) {</span>
+<span class="source-line-no">038</span><span id="line.38">                if (apiHttpResponse.getStatusCode() == 405) {</span>
+<span class="source-line-no">039</span><span id="line.39">                    throw new CompletionException(new AuthException(apiHttpResponse.getStatusCode(),</span>
+<span class="source-line-no">040</span><span id="line.40">                        new String(apiHttpResponse.getBody()), apiHttpRequest.getHeaders(),</span>
+<span class="source-line-no">041</span><span id="line.41">                        apiHttpResponse.getMessage()</span>
+<span class="source-line-no">042</span><span id="line.42">                                + " : auth token URI may be incorrect e.g. https://auth.europe-west1.gcp.commercetools.com/oauth/token",</span>
+<span class="source-line-no">043</span><span id="line.43">                        apiHttpResponse));</span>
+<span class="source-line-no">044</span><span id="line.44">                }</span>
+<span class="source-line-no">045</span><span id="line.45">                throw new CompletionException(</span>
+<span class="source-line-no">046</span><span id="line.46">                    new AuthException(apiHttpResponse.getStatusCode(), new String(apiHttpResponse.getBody()),</span>
+<span class="source-line-no">047</span><span id="line.47">                        apiHttpRequest.getHeaders(), apiHttpResponse.getMessage(), apiHttpResponse));</span>
+<span class="source-line-no">048</span><span id="line.48">            }</span>
+<span class="source-line-no">049</span><span id="line.49">            return apiHttpResponse;</span>
+<span class="source-line-no">050</span><span id="line.50">        })</span>
+<span class="source-line-no">051</span><span id="line.51">                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse&lt;byte[]&gt; response) -&gt; JsonUtils</span>
+<span class="source-line-no">052</span><span id="line.52">                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    static String urlEncode(String value) {</span>
+<span class="source-line-no">056</span><span id="line.56">        try {</span>
+<span class="source-line-no">057</span><span id="line.57">            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());</span>
+<span class="source-line-no">058</span><span id="line.58">        }</span>
+<span class="source-line-no">059</span><span id="line.59">        catch (UnsupportedEncodingException e) {</span>
+<span class="source-line-no">060</span><span id="line.60">            throw new IllegalArgumentException(e.getMessage(), e);</span>
+<span class="source-line-no">061</span><span id="line.61">        }</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @Override</span>
+<span class="source-line-no">065</span><span id="line.65">    protected void internalClose() {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (vrapHttpClient instanceof AutoCloseable)</span>
+<span class="source-line-no">067</span><span id="line.67">            closeQuietly((AutoCloseable) vrapHttpClient);</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69">}</span>
 
 
 

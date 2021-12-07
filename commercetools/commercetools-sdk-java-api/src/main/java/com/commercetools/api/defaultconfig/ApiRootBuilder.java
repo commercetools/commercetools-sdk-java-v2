@@ -57,53 +57,43 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder withAuthCircuitBreaker() {
-        builder.withAuthCircuitBreaker();
-        return this;
+        return with(ClientBuilder::withAuthCircuitBreaker);
     }
 
     public ApiRootBuilder withoutAuthCircuitBreaker() {
-        builder.withoutAuthCircuitBreaker();
-        return this;
+        return with(ClientBuilder::withoutAuthCircuitBreaker);
     }
 
     public ApiRootBuilder withAuthRetries(final int authRetries) {
-        builder.withAuthRetries(authRetries);
-        return this;
+        return with(clientBuilder -> clientBuilder.withAuthRetries(authRetries));
     }
 
     public ApiRootBuilder withHandlerStack(final HandlerStack stack) {
-        builder.withHandlerStack(stack);
-        return this;
+        return with(clientBuilder -> clientBuilder.withHandlerStack(stack));
     }
 
     public ApiRootBuilder withHttpClient(final VrapHttpClient httpClient) {
-        builder.withHttpClient(httpClient);
-        return this;
+        return with(clientBuilder -> clientBuilder.withHttpClient(httpClient));
     }
 
     public ApiRootBuilder withSerializer(final ResponseSerializer serializer) {
-        builder.withSerializer(serializer);
-        return this;
+        return with(clientBuilder -> clientBuilder.withSerializer(serializer));
     }
 
     public ApiRootBuilder withSerializer(final Supplier<ResponseSerializer> serializer) {
-        builder.withSerializer(serializer);
-        return this;
+        return with(clientBuilder -> clientBuilder.withSerializer(serializer));
     }
 
     public ApiRootBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {
-        builder.withHttpExceptionFactory(factory);
-        return this;
+        return with(clientBuilder -> clientBuilder.withHttpExceptionFactory(factory));
     }
 
     public ApiRootBuilder withHttpExceptionFactory(final Function<ResponseSerializer, HttpExceptionFactory> factory) {
-        builder.withHttpExceptionFactory(factory);
-        return this;
+        return with(clientBuilder -> clientBuilder.withHttpExceptionFactory(factory));
     }
 
     public ApiRootBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
-        builder.withHttpExceptionFactory(factory);
-        return this;
+        return with(clientBuilder -> clientBuilder.withHttpExceptionFactory(factory));
     }
 
     public ApiRootBuilder defaultClient(final ClientCredentials credentials) {
@@ -130,75 +120,54 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder defaultClient(final URI apiEndpoint) {
-        builder.defaultClient(apiEndpoint).withInternalLoggerFactory(ApiInternalLoggerFactory::get);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.defaultClient(apiEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final Supplier<HandlerStack> httpClient) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
             final Supplier<HandlerStack> httpClient) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
             final VrapHttpClient httpClient) {
-        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withStaticTokenFlow(final AuthenticationToken token) {
-        builder.withStaticTokenFlow(token);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withStaticTokenFlow(token));
     }
 
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint) {
-        builder.withAnonymousSessionFlow(credentials, tokenEndpoint);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousSessionFlow(credentials, tokenEndpoint));
     }
 
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final Supplier<HandlerStack> httpClient) {
-        builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
-        builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials,
@@ -219,170 +188,122 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage) {
-        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage));
     }
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage, final Supplier<HandlerStack> httpClient) {
-        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClient));
     }
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient) {
-        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClient));
     }
 
     public ApiRootBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint) {
-        builder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint);
-
-        return this;
+        return with(
+            clientBuilder -> clientBuilder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint));
     }
 
     public ApiRootBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint, final Supplier<HandlerStack> httpClient) {
-        builder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withGlobalCustomerPasswordFlow(credentials, email, password,
+            tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
-        builder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, httpClient);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withGlobalCustomerPasswordFlow(credentials, email, password,
+            tokenEndpoint, httpClient));
     }
 
     public ApiRootBuilder addAcceptGZipMiddleware() {
-        builder.addAcceptGZipMiddleware();
-
-        return this;
+        return with(ClientBuilder::addAcceptGZipMiddleware);
     }
 
     public ApiRootBuilder withErrorMiddleware() {
-        builder.withErrorMiddleware();
-
-        return this;
+        return with(ClientBuilder::withErrorMiddleware);
     }
 
     public ApiRootBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
-        builder.withErrorMiddleware(errorMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withErrorMiddleware(errorMiddleware));
     }
 
     public ApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
-        builder.withRetryMiddleware(retryMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
     public ApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
-        builder.withRetryMiddleware(retryMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
     public ApiRootBuilder withRetryMiddleware(final int maxRetries) {
-        builder.withRetryMiddleware(maxRetries);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries));
     }
 
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        builder.withRetryMiddleware(maxRetries, statusCodes);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {
-        builder.withOAuthMiddleware(oAuthMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withOAuthMiddleware(oAuthMiddleware));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final OAuthMiddleware oAuthMiddleware) {
-        builder.withOAuthMiddleware(oAuthMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withOAuthMiddleware(oAuthMiddleware));
     }
 
     public ApiRootBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {
-        builder.withTokenSupplier(tokenSupplier);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withTokenSupplier(tokenSupplier));
     }
 
     public ApiRootBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
-        builder.withTokenSupplier(tokenSupplier);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withTokenSupplier(tokenSupplier));
     }
 
     public ApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {
-        builder.withInternalLoggerMiddleware(internalLoggerMiddleware);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withInternalLoggerMiddleware(internalLoggerMiddleware));
     }
 
     public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {
-        builder.withInternalLoggerFactory(internalLoggerFactory);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory));
     }
 
     public ApiRootBuilder withApiBaseUrl(String apiBaseUrl) {
-        builder.withApiBaseUrl(apiBaseUrl);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withApiBaseUrl(apiBaseUrl));
     }
 
     public ApiRootBuilder withApiBaseUrl(final URI apiBaseUrl) {
-        builder.withApiBaseUrl(apiBaseUrl);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withApiBaseUrl(apiBaseUrl));
     }
 
     public ApiRootBuilder withUserAgentSupplier(final Supplier<String> userAgentSupplier) {
-        builder.withUserAgentSupplier(userAgentSupplier);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withUserAgentSupplier(userAgentSupplier));
     }
 
     public ApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
-        builder.addCorrelationIdProvider(correlationIdProvider);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.addCorrelationIdProvider(correlationIdProvider));
     }
 
     public ApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {
-        builder.withMiddleware(middleware, middlewares);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withMiddleware(middleware, middlewares));
     }
 
     public ApiRootBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {
-        builder.addMiddleware(middleware, middlewares);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.addMiddleware(middleware, middlewares));
     }
 
     public ApiRootBuilder withMiddlewares(final List<Middleware> middlewares) {
-        builder.withMiddlewares(middlewares);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.withMiddlewares(middlewares));
     }
 
     public ApiRootBuilder addMiddlewares(final List<Middleware> middlewares) {
-        builder.addMiddlewares(middlewares);
-
-        return this;
+        return with(clientBuilder -> clientBuilder.addMiddlewares(middlewares));
     }
 
     public ApiRootBuilder with(UnaryOperator<ClientBuilder> builderUnaryOperator) {

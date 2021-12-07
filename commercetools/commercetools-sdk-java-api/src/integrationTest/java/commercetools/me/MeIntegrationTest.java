@@ -7,15 +7,23 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
+import commercetools.customer.CustomerFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.AuthenticationToken;
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
 
+import io.vrap.rmf.base.client.utils.ClientUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
+
+import java.time.Duration;
+import java.util.concurrent.ExecutionException;
 
 public class MeIntegrationTest {
 
@@ -50,5 +58,27 @@ public class MeIntegrationTest {
 
         Assertions.assertThat(activeCart).isInstanceOf(Cart.class);
         Assertions.assertThat(activeCart.getId()).isEqualTo(cart.getId());
+    }
+
+    @Test
+    public void testMeLogin() {
+        CustomerFixtures.withCustomer(customer -> {
+            final ClientCredentials credentials = ClientCredentials.of()
+                    .withClientId(CommercetoolsTestUtils.getClientId())
+                    .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                    .build();
+            GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(
+                    credentials.getClientId(),
+                    credentials.getClientSecret(),
+                    customer.getEmail(),
+                    CustomerFixtures.TEST_CUSTOMER_PASSWORD,
+                    null,
+                    ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
+                    HttpClientSupplier.of().get()
+            );
+            final AuthenticationToken token = ClientUtils.blockingWait(supplier.getToken(), Duration.ofSeconds(10));
+
+            Assertions.assertThat(token.getScope()).contains("customer_id:" + customer.getId());
+        });
     }
 }

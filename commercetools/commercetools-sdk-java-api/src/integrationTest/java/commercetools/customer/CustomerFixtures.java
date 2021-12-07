@@ -21,7 +21,7 @@ import org.junit.Assert;
 
 public class CustomerFixtures {
 
-    public static final String TEST_CUSTOMER_PASSWORD = "test-customer-password";
+    public static final String TEST_CUSTOMER_PASSWORD = "test-custo@%$#!mer-password";
 
     public static void withCustomer(final Consumer<Customer> consumer) {
         withCustomerGroup(customerGroup -> {

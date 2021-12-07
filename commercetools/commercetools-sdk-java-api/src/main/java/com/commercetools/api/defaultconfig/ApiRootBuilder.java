@@ -38,6 +38,10 @@ public class ApiRootBuilder {
         return new ApiRootBuilder(ClientBuilder.of());
     }
 
+    public static ApiRootBuilder of(final ApiHttpClient httpClient) {
+        return new ApiRootBuilder(ClientBuilder.of(httpClient));
+    }
+
     public static ApiRootBuilder of(final VrapHttpClient httpClient) {
         return new ApiRootBuilder(ClientBuilder.of(httpClient));
     }
@@ -138,6 +142,13 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final Supplier<HandlerStack> httpClient) {
+        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
+
+        return this;
+    }
+
+    public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
         builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
 
@@ -146,6 +157,13 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {
         builder.withClientCredentialsFlow(credentials, tokenEndpoint);
+
+        return this;
+    }
+
+    public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
+            final Supplier<HandlerStack> httpClient) {
+        builder.withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
 
         return this;
     }
@@ -170,6 +188,13 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final Supplier<HandlerStack> httpClient) {
+        builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             final VrapHttpClient httpClient) {
         builder.withAnonymousSessionFlow(credentials, tokenEndpoint, httpClient);
 
@@ -180,25 +205,28 @@ public class ApiRootBuilder {
             final ServiceRegion serviceRegion, final TokenStorage storage) {
         withApiBaseUrl(serviceRegion.getApiUrl());
         Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);
-        builder.withAnonymousRefreshFlow(credentials, serviceRegion.getAnonymousFlowTokenURL(projectKey),
+        return withAnonymousRefreshFlow(credentials, serviceRegion.getAnonymousFlowTokenURL(projectKey),
             serviceRegion.getOAuthTokenUrl(), storage);
-
-        return this;
     }
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials,
             final ServiceRegion serviceRegion, final String projectKey, final TokenStorage storage) {
         withApiBaseUrl(serviceRegion.getApiUrl());
         withProjectKey(projectKey);
-        builder.withAnonymousRefreshFlow(credentials, serviceRegion.getAnonymousFlowTokenURL(projectKey),
+        return withAnonymousRefreshFlow(credentials, serviceRegion.getAnonymousFlowTokenURL(projectKey),
             serviceRegion.getOAuthTokenUrl(), storage);
-
-        return this;
     }
 
     public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage) {
         builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage);
+
+        return this;
+    }
+
+    public ApiRootBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, final Supplier<HandlerStack> httpClient) {
+        builder.withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage, httpClient);
 
         return this;
     }
@@ -213,6 +241,13 @@ public class ApiRootBuilder {
     public ApiRootBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint) {
         builder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint);
+
+        return this;
+    }
+
+    public ApiRootBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint, final Supplier<HandlerStack> httpClient) {
+        builder.withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, httpClient);
 
         return this;
     }
@@ -279,6 +314,12 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {
+        builder.withTokenSupplier(tokenSupplier);
+
+        return this;
+    }
+
+    public ApiRootBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
         builder.withTokenSupplier(tokenSupplier);
 
         return this;

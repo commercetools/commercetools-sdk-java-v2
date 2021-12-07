@@ -236,6 +236,12 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    public MLApiRootBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
+        builder.withTokenSupplier(tokenSupplier);
+
+        return this;
+    }
+
     public MLApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {
         builder.withInternalLoggerMiddleware(internalLoggerMiddleware);
 

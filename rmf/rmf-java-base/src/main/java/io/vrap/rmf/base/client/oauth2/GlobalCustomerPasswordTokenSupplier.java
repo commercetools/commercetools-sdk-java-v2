@@ -25,12 +25,12 @@ public class GlobalCustomerPasswordTokenSupplier extends BaseAuthTokenSupplier i
 
         final String body;
         if (scope == null || scope.isEmpty()) {
-            body = "grant_type=password&username=" + email + "&password=" + password;
+            body = String.format("grant_type=password&username=%s&password=%s", urlEncode(email), urlEncode(password));
         }
         else {
-            body = "grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope;
+            body = String.format("grant_type=password&username=%s&password=%s&scope=%s", urlEncode(email), urlEncode(password), urlEncode(scope));
         }
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", "Basic " + auth)
+        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", String.format("Basic %s", auth))
                 .withHeader("Content-Type", "application/x-www-form-urlencoded");
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
             body.getBytes(StandardCharsets.UTF_8));

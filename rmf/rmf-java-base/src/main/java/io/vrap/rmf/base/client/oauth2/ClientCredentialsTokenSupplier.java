@@ -1,9 +1,7 @@
 
 package io.vrap.rmf.base.client.oauth2;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
@@ -24,7 +22,7 @@ public class ClientCredentialsTokenSupplier extends BaseAuthTokenSupplier {
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
 
-        final ApiHttpHeaders headers = new ApiHttpHeaders().withHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth)
+        final ApiHttpHeaders headers = new ApiHttpHeaders().withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
                 .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         String body = "";
@@ -33,13 +31,7 @@ public class ClientCredentialsTokenSupplier extends BaseAuthTokenSupplier {
 
         }
         else {
-            try {
-                body = "grant_type=client_credentials&scope="
-                        + URLEncoder.encode(scope, StandardCharsets.UTF_8.toString());
-            }
-            catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
+            body = String.format("grant_type=client_credentials&scope=%s", urlEncode(scope));
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), headers,
             body.getBytes(StandardCharsets.UTF_8));

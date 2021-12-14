@@ -82,7 +82,7 @@ tasks.register("writeVersionToReadme") {
 ext {
     versions = [
             slf4j: "1.7.32",
-            logback: "1.2.5",
+            logback: "1.2.8",
             findbugs: "3.0.2",
             jackson: "2.12.4",
             junit: "4.13.2",

@@ -32,6 +32,8 @@ dependencies {
 
 import java.text.SimpleDateFormat
 
+apply plugin: 'versioning'
+
 def globalVersion = new Version(version)
 
 class Version {

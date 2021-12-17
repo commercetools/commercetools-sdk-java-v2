@@ -81,6 +81,22 @@ tasks.register("writeVersionToReadme") {
     }
 }
 
+tasks.register("writeVersionToExamples") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/spring/build.gradle')
+            }
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/maven-okhttp3/pom.xml')
+                include(name: 'examples/maven-okhttp4/pom.xml')
+            }
+        }
+    }
+}
+
 ext {
     versions = [
             slf4j: "1.7.32",

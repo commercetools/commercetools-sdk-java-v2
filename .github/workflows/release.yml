@@ -68,6 +68,8 @@ jobs:
         env:
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
 
+      - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToExamples
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "TASK: Updating version in README"

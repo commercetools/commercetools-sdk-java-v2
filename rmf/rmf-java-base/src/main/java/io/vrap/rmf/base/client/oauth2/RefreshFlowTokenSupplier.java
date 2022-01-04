@@ -28,7 +28,8 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
         if (token.getRefreshToken() == null) {
             throw new AuthException(400, "No refresh_token given", null);
         }
-        final String body = "grant_type=refresh_token&refresh_token=" + token.getRefreshToken();
+        final String body = String.format("grant_type=refresh_token&refresh_token=%s",
+            urlEncode(token.getRefreshToken()));
         final ApiHttpRequest request = apiHttpRequest.withBody(body);
         logger.debug(() -> request);
         return vrapHttpClient.execute(request).whenComplete((response, throwable) -> {
@@ -60,7 +61,7 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
-            headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
+            headerEntry(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth)),
             headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders, null);
     }

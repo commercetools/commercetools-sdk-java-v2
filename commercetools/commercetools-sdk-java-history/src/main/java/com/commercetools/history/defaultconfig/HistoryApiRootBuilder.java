@@ -240,6 +240,12 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
+    public HistoryApiRootBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
+        builder.withTokenSupplier(tokenSupplier);
+
+        return this;
+    }
+
     public HistoryApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {
         builder.withInternalLoggerMiddleware(internalLoggerMiddleware);
 

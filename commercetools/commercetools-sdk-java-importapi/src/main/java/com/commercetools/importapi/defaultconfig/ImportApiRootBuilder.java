@@ -240,6 +240,12 @@ public class ImportApiRootBuilder {
         return this;
     }
 
+    public ImportApiRootBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
+        builder.withTokenSupplier(tokenSupplier);
+
+        return this;
+    }
+
     public ImportApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {
         builder.withInternalLoggerMiddleware(internalLoggerMiddleware);
 

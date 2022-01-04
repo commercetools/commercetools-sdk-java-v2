@@ -33,11 +33,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryMiddleware> retryMiddleware;
+    private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
     private List<Middleware> middlewares = new ArrayList<>();
     private Supplier<HandlerStack> stack;
     private VrapHttpClient httpClient;
+    private VrapHttpClient oauthHttpClient;
     private Supplier<ResponseSerializer> serializer;
     private Supplier<HttpExceptionFactory> httpExceptionFactory;
 
@@ -56,6 +58,16 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public static ClientBuilder of(final VrapHttpClient httpClient) {
+        return new ClientBuilder(httpClient);
+    }
+
+    /**
+     * <p>Creates a client builder with a specific or preconfigured {@link ApiHttpClient} instance. Uses defaults for
+     * the {@link HandlerStack}</p>
+     * @param httpClient the HTTP client to be used
+     * @return ClientBuilder instance
+     */
+    public static ClientBuilder of(final ApiHttpClient httpClient) {
         return new ClientBuilder(httpClient);
     }
 
@@ -79,6 +91,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder() {
         this.httpClient = HttpClientSupplier.of().get();
+        this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
         ResponseSerializer serializer = ResponseSerializer.of();
         this.serializer = () -> serializer;
@@ -87,8 +100,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.authRetries = 1;
     }
 
+    private ClientBuilder(final ApiHttpClient httpClient) {
+        this.httpClient = httpClient;
+        this.oauthHttpClient = HttpClientSupplier.of().get();
+        this.stack = stackSupplier();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.authRetries = 1;
+    }
+
     private ClientBuilder(final VrapHttpClient httpClient) {
         this.httpClient = httpClient;
+        this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
         ResponseSerializer serializer = ResponseSerializer.of();
         this.serializer = () -> serializer;
@@ -108,8 +132,22 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(correlationIdMiddleware).map(m -> middlewareStack.add(m.get()));
             middlewareStack.addAll(middlewares);
             return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
+        };
+    }
+
+    /**
+     * Ensures the order of default middlewares to create a {@link HandlerStack}
+     * @return HandlerStack supplier method
+     */
+    private Supplier<HandlerStack> oauthHandlerSupplier() {
+        return () -> {
+            final List<Middleware> middlewareStack = new ArrayList<>();
+            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
+            Optional.ofNullable(correlationIdMiddleware).map(m -> middlewareStack.add(m.get()));
+            return HandlerStack.create(HttpHandler.create(requireNonNull(oauthHttpClient)), middlewareStack);
         };
     }
 
@@ -135,6 +173,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withHttpClient(final VrapHttpClient httpClient) {
         this.httpClient = httpClient;
+        return this;
+    }
+
+    public ClientBuilder withOAuthHttpClient(final VrapHttpClient httpClient) {
+        this.oauthHttpClient = httpClient;
         return this;
     }
 
@@ -234,6 +277,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
+            Supplier<HandlerStack> httpClientSupplier) {
+        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClientSupplier);
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
             VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);
     }
@@ -245,14 +293,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {
-        return withTokenSupplier(createInMemoryTokenSupplier(
-            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, requireNonNull(httpClient))));
+        return withClientCredentialsFlow(credentials, tokenEndpoint, oauthHandlerSupplier());
+    }
+
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
-        return withTokenSupplier(
-            createInMemoryTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
     }
 
     public ClientBuilder withStaticTokenFlow(final AuthenticationToken token) {
@@ -260,14 +313,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint) {
-        return withTokenSupplier(createInMemoryTokenSupplier(
-            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, requireNonNull(httpClient))));
+        return withAnonymousSessionFlow(credentials, tokenEndpoint, oauthHandlerSupplier());
+    }
+
+    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
             VrapHttpClient httpClient) {
-        return withTokenSupplier(
-            createInMemoryTokenSupplier(createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
     }
 
     private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,
@@ -278,13 +336,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage) {
-        return withTokenSupplier(createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-            refreshTokenEndpoint, storage, requireNonNull(httpClient)));
+        return withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage,
+            oauthHandlerSupplier());
+    }
+
+    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClientSupplier.get()));
     }
 
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
             final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {
-        return withTokenSupplier(createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+        return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
             refreshTokenEndpoint, storage, httpClient));
     }
 
@@ -313,13 +377,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint) {
-        return withTokenSupplier(createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials,
-            email, password, tokenEndpoint, requireNonNull(httpClient))));
+        return withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, oauthHandlerSupplier());
+    }
+
+    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint, Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClientSupplier.get())));
     }
 
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
             final String password, final String tokenEndpoint, VrapHttpClient httpClient) {
-        return withTokenSupplier(createInMemoryTokenSupplier(
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
             createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient)));
     }
 
@@ -372,9 +442,15 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return withOAuthMiddleware(() -> oAuthMiddleware);
     }
 
+    public ClientBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
+        return withOAuthMiddleware(() -> {
+            final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier.get());
+            return OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker);
+        });
+    }
+
     public ClientBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {
-        final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
-        return withOAuthMiddleware(() -> OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));
+        return withTokenSupplier(() -> tokenSupplier);
     }
 
     public ClientBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {
@@ -406,13 +482,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
         if (correlationIdProvider != null) {
-            return addMiddleware((request, next) -> {
+            correlationIdMiddleware = () -> (request, next) -> {
                 if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {
                     return next.apply(request);
                 }
                 return next.apply(
                     request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));
-            });
+            };
         }
         return this;
     }

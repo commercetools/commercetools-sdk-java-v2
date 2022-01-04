@@ -24,14 +24,14 @@ public class AnonymousSessionTokenSupplier extends BaseAuthTokenSupplier impleme
         String auth = Base64.getEncoder()
                 .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
-            headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
+            headerEntry(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth)),
             headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded"));
         final String body;
         if (scope == null || scope.isEmpty()) {
             body = "grant_type=client_credentials";
         }
         else {
-            body = "grant_type=client_credentials&scope=" + scope;
+            body = String.format("grant_type=client_credentials&scope=%s", urlEncode(scope));
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
             body.getBytes(StandardCharsets.UTF_8));

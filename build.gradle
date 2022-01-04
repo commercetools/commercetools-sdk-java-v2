@@ -32,6 +32,8 @@ dependencies {
 
 import java.text.SimpleDateFormat
 
+apply plugin: 'versioning'
+
 def globalVersion = new Version(version)
 
 class Version {
@@ -75,6 +77,22 @@ tasks.register("writeVersionToReadme") {
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
             fileset(dir: projectDir, includes: 'README.md')
+        }
+    }
+}
+
+tasks.register("writeVersionToExamples") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/spring/build.gradle')
+            }
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/maven-okhttp3/pom.xml')
+                include(name: 'examples/maven-okhttp4/pom.xml')
+            }
         }
     }
 }
@@ -179,6 +197,8 @@ subprojects { project ->
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
+    apply plugin: 'srcinfo'
+
     group='com.commercetools.sdk'
 
     version = globalVersion
@@ -259,6 +279,13 @@ subprojects { project ->
     ext {
         buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
         buildInfoPackage = "io.vrap.rmf.base.client"
+    }
+
+    srcInfo {
+        includePackages = [
+            "example",
+            "commercetools"
+        ]
     }
 
     if (project.file("build.gradle").exists() && !excludeProjects.contains(project.name)) {

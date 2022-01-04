@@ -1,0 +1,12 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version "1.5.21"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.github.javaparser:javaparser-symbol-solver-core:3.20.2"
+    implementation "com.google.code.gson:gson:2.8.8"
+}

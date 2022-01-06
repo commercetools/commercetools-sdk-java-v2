@@ -11,6 +11,7 @@ import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -34,6 +35,13 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
@@ -46,6 +54,8 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
     public void setParcels(final List<ParcelDraft> parcels);
 
+    public void setCustom(final CustomFields custom);
+
     public static StagedOrderAddDeliveryAction of() {
         return new StagedOrderAddDeliveryActionImpl();
     }
@@ -55,6 +65,7 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

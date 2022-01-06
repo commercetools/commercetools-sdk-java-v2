@@ -20,6 +20,8 @@ public class LineItemImpl implements LineItem {
 
     private String productId;
 
+    private String productKey;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private com.commercetools.api.models.common.LocalizedString productSlug;
@@ -60,6 +62,7 @@ public class LineItemImpl implements LineItem {
 
     @JsonCreator
     LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId,
+            @JsonProperty("productKey") final String productKey,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
@@ -81,6 +84,7 @@ public class LineItemImpl implements LineItem {
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
         this.productId = productId;
+        this.productKey = productKey;
         this.name = name;
         this.productSlug = productSlug;
         this.productType = productType;
@@ -114,6 +118,14 @@ public class LineItemImpl implements LineItem {
 
     public String getProductId() {
         return this.productId;
+    }
+
+    /**
+    *  <p>User-defined unique identifier for the <a href="ctp:api:type:Product">Product</a>.
+    *  Only present on Line Items in a <a href="ctp:api:type:Cart">Cart</a> when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On <a href="/ctp:api:type:Order">Order</a> resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+    */
+    public String getProductKey() {
+        return this.productKey;
     }
 
     /**
@@ -255,6 +267,10 @@ public class LineItemImpl implements LineItem {
         this.productId = productId;
     }
 
+    public void setProductKey(final String productKey) {
+        this.productKey = productKey;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -354,6 +370,7 @@ public class LineItemImpl implements LineItem {
 
         return new EqualsBuilder().append(id, that.id)
                 .append(productId, that.productId)
+                .append(productKey, that.productKey)
                 .append(name, that.name)
                 .append(productSlug, that.productSlug)
                 .append(productType, that.productType)
@@ -380,6 +397,7 @@ public class LineItemImpl implements LineItem {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
                 .append(productId)
+                .append(productKey)
                 .append(name)
                 .append(productSlug)
                 .append(productType)

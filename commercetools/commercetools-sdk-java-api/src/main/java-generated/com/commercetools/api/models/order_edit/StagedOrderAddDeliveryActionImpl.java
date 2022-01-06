@@ -24,14 +24,18 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
 
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     StagedOrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
-            @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels) {
+            @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.items = items;
         this.address = address;
         this.parcels = parcels;
+        this.custom = custom;
         this.action = ADD_DELIVERY;
     }
 
@@ -55,6 +59,13 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
         return this.parcels;
     }
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
     }
@@ -75,6 +86,10 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
         this.parcels = parcels;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -89,12 +104,18 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
                 .append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(items).append(address).append(parcels).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(items)
+                .append(address)
+                .append(parcels)
+                .append(custom)
+                .toHashCode();
     }
 
 }

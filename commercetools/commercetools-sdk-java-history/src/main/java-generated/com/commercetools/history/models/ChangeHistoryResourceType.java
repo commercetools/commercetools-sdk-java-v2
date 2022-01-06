@@ -30,6 +30,8 @@ public interface ChangeHistoryResourceType {
 
     ChangeHistoryResourceType INVENTORY_ENTRY = ChangeHistoryResourceTypeEnum.INVENTORY_ENTRY;
 
+    ChangeHistoryResourceType KEY_VALUE_DOCUMENT = ChangeHistoryResourceTypeEnum.KEY_VALUE_DOCUMENT;
+
     ChangeHistoryResourceType ORDER = ChangeHistoryResourceTypeEnum.ORDER;
 
     ChangeHistoryResourceType PAYMENT = ChangeHistoryResourceTypeEnum.PAYMENT;
@@ -68,6 +70,8 @@ public interface ChangeHistoryResourceType {
         DISCOUNT_CODE("discount-code"),
 
         INVENTORY_ENTRY("inventory-entry"),
+
+        KEY_VALUE_DOCUMENT("key-value-document"),
 
         ORDER("order"),
 

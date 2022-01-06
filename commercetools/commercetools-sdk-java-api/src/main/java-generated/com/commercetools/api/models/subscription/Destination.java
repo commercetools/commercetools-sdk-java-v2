@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventBridgeDestinationImpl.class, name = EventBridgeDestination.EVENT_BRIDGE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.IronMqDestinationImpl.class, name = IronMqDestination.IRON_MQ),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),

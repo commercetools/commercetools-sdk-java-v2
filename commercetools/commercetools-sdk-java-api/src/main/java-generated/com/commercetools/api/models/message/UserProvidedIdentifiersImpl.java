@@ -28,17 +28,21 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
+
     @JsonCreator
     UserProvidedIdentifiersImpl(@JsonProperty("key") final String key,
             @JsonProperty("externalId") final String externalId, @JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("sku") final String sku,
-            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
+            @JsonProperty("containerAndKey") final com.commercetools.api.models.message.ContainerAndKey containerAndKey) {
         this.key = key;
         this.externalId = externalId;
         this.orderNumber = orderNumber;
         this.customerNumber = customerNumber;
         this.sku = sku;
         this.slug = slug;
+        this.containerAndKey = containerAndKey;
     }
 
     public UserProvidedIdentifiersImpl() {
@@ -68,6 +72,13 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
         return this.slug;
     }
 
+    /**
+    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+    */
+    public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {
+        return this.containerAndKey;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -92,6 +103,10 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
         this.slug = slug;
     }
 
+    public void setContainerAndKey(final com.commercetools.api.models.message.ContainerAndKey containerAndKey) {
+        this.containerAndKey = containerAndKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -108,6 +123,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
                 .append(customerNumber, that.customerNumber)
                 .append(sku, that.sku)
                 .append(slug, that.slug)
+                .append(containerAndKey, that.containerAndKey)
                 .isEquals();
     }
 
@@ -119,6 +135,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
                 .append(customerNumber)
                 .append(sku)
                 .append(slug)
+                .append(containerAndKey)
                 .toHashCode();
     }
 

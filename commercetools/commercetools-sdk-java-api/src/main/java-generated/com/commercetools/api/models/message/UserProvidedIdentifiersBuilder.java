@@ -30,6 +30,9 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    @Nullable
+    private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
+
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -67,6 +70,18 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this;
     }
 
+    public UserProvidedIdentifiersBuilder containerAndKey(
+            Function<com.commercetools.api.models.message.ContainerAndKeyBuilder, com.commercetools.api.models.message.ContainerAndKeyBuilder> builder) {
+        this.containerAndKey = builder.apply(com.commercetools.api.models.message.ContainerAndKeyBuilder.of()).build();
+        return this;
+    }
+
+    public UserProvidedIdentifiersBuilder containerAndKey(
+            @Nullable final com.commercetools.api.models.message.ContainerAndKey containerAndKey) {
+        this.containerAndKey = containerAndKey;
+        return this;
+    }
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -97,15 +112,22 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this.slug;
     }
 
+    @Nullable
+    public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {
+        return this.containerAndKey;
+    }
+
     public UserProvidedIdentifiers build() {
-        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
+        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug,
+            containerAndKey);
     }
 
     /**
      * builds UserProvidedIdentifiers without checking for non null required values
      */
     public UserProvidedIdentifiers buildUnchecked() {
-        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug);
+        return new UserProvidedIdentifiersImpl(key, externalId, orderNumber, customerNumber, sku, slug,
+            containerAndKey);
     }
 
     public static UserProvidedIdentifiersBuilder of() {
@@ -120,6 +142,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         builder.customerNumber = template.getCustomerNumber();
         builder.sku = template.getSku();
         builder.slug = template.getSlug();
+        builder.containerAndKey = template.getContainerAndKey();
         return builder;
     }
 

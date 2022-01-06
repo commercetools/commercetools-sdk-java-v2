@@ -40,7 +40,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft {
 
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     CartDiscountDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -54,7 +54,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
         this.key = key;
         this.description = description;
@@ -149,7 +149,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft {
         return this.stackingMode;
     }
 
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -201,7 +201,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft {
         this.stackingMode = stackingMode;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

@@ -16,11 +16,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SearchIndexingConfigurationImpl.class)
 public interface SearchIndexingConfiguration {
 
+    /**
+    *  <p>Configuration for endpoints serving indexed <a href="ctp:api:type:Product">Product</a> information.</p>
+    */
     @Valid
     @JsonProperty("products")
     public SearchIndexingConfigurationValues getProducts();
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/order-search">Order Search</a> feature.</p>
+    */
+    @Valid
+    @JsonProperty("orders")
+    public SearchIndexingConfigurationValues getOrders();
+
     public void setProducts(final SearchIndexingConfigurationValues products);
+
+    public void setOrders(final SearchIndexingConfigurationValues orders);
 
     public static SearchIndexingConfiguration of() {
         return new SearchIndexingConfigurationImpl();
@@ -29,6 +41,7 @@ public interface SearchIndexingConfiguration {
     public static SearchIndexingConfiguration of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
         instance.setProducts(template.getProducts());
+        instance.setOrders(template.getOrders());
         return instance;
     }
 

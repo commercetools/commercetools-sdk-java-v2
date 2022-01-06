@@ -40,6 +40,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryAddressActionImpl.class, name = OrderSetDeliveryAddressAction.SET_DELIVERY_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldActionImpl.class, name = OrderSetDeliveryAddressCustomFieldAction.SET_DELIVERY_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeActionImpl.class, name = OrderSetDeliveryAddressCustomTypeAction.SET_DELIVERY_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryCustomFieldActionImpl.class, name = OrderSetDeliveryCustomFieldAction.SET_DELIVERY_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryCustomTypeActionImpl.class, name = OrderSetDeliveryCustomTypeAction.SET_DELIVERY_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetDeliveryItemsActionImpl.class, name = OrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionImpl.class, name = OrderSetItemShippingAddressCustomFieldAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeActionImpl.class, name = OrderSetItemShippingAddressCustomTypeAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE),

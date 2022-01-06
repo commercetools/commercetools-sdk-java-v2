@@ -35,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemCustomTypeActionImpl.class, name = MyCartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelActionImpl.class, name = MyCartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemShippingDetailsActionImpl.class, name = MyCartSetLineItemShippingDetailsAction.SET_LINE_ITEM_SHIPPING_DETAILS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemSupplyChannelActionImpl.class, name = MyCartSetLineItemSupplyChannelAction.SET_LINE_ITEM_SUPPLY_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLocaleActionImpl.class, name = MyCartSetLocaleAction.SET_LOCALE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetShippingAddressActionImpl.class, name = MyCartSetShippingAddressAction.SET_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetShippingMethodActionImpl.class, name = MyCartSetShippingMethodAction.SET_SHIPPING_METHOD),

@@ -18,8 +18,6 @@ import io.sphere.sdk.queries.PagedQueryResult;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import javax.money.CurrencyUnit;
-
 public class CompatSphereClientTest {
     @Test
     public void sphereCompatClient() throws ExecutionException, InterruptedException {
@@ -46,10 +44,12 @@ public class CompatSphereClientTest {
     @Test
     public void sphereCompatClientCart() throws ExecutionException, InterruptedException {
         SphereClientConfig clientConfig = SphereClientConfig.of(CommercetoolsTestUtils.getProjectKey(),
-                CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
+            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
         SphereClient client = CompatSphereClient.of(clientConfig);
 
-        Cart result = client.execute(CartCreateCommand.of(CartDraft.of(DefaultCurrencyUnits.EUR))).toCompletableFuture().get();
+        Cart result = client.execute(CartCreateCommand.of(CartDraft.of(DefaultCurrencyUnits.EUR)))
+                .toCompletableFuture()
+                .get();
 
         Assertions.assertThat(result).isInstanceOf(Cart.class);
         Assertions.assertThat(result.getTotalPrice().getNumber().intValueExact()).isEqualTo(0);

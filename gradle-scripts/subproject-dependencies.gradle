@@ -1,0 +1,12 @@
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
+    testImplementation 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.8'
+    testImplementation "org.assertj:assertj-core:${versions.assertJ}"
+    testImplementation "org.awaitility:awaitility:${versions.awaitility}"
+    testImplementation "ch.qos.logback:logback-classic:${versions.logback}"
+    testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+    testImplementation "com.google.code.gson:gson:${versions.gson}"
+    testImplementation 'org.mockito:mockito-inline:4.1.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.1.0'
+    testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
+}

@@ -1,0 +1,26 @@
+tasks.register("writeVersionToReadme") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
+    }
+}
+
+tasks.register("writeVersionToExamples") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/spring/build.gradle')
+            }
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/maven-okhttp3/pom.xml')
+                include(name: 'examples/maven-okhttp4/pom.xml')
+            }
+        }
+    }
+}

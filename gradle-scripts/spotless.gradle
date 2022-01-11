@@ -1,0 +1,16 @@
+allprojects {
+    apply plugin: 'com.diffplug.spotless'
+
+    spotless {
+        def importOrderConfigFile = rootProject.file("src/eclipse/eclipse.importorder")
+        def javaFormatterConfigFile = rootProject.file("src/eclipse/eclipse-formatter-settings.xml")
+
+        java {
+            importOrderFile(importOrderConfigFile)
+            eclipse().configFile(javaFormatterConfigFile)
+            removeUnusedImports()
+            trimTrailingWhitespace()
+            endWithNewline()
+        }
+    }
+}

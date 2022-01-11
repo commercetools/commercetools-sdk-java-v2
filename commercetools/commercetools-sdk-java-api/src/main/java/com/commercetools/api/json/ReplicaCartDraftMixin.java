@@ -2,9 +2,7 @@
 package com.commercetools.api.json;
 
 import com.commercetools.api.models.cart.CartReference;
-import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.order.OrderReference;
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 

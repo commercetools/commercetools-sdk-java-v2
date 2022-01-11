@@ -176,39 +176,25 @@ public class ExamplesTest {
 
     public void simpleSort() {
         ProjectApiRoot apiRoot = createProjectClient();
-        apiRoot.products()
-                .get()
-                .withSort("masterData.current.name.en asc");
+        apiRoot.products().get().withSort("masterData.current.name.en asc");
     }
 
     public void multiSort() {
         ProjectApiRoot apiRoot = createProjectClient();
-        apiRoot.products()
-                .get()
-                .withSort("masterData.current.name.en asc")
-                .addSort("id asc");
+        apiRoot.products().get().withSort("masterData.current.name.en asc").addSort("id asc");
     }
-
 
     public void limitPagination() {
         ProjectApiRoot apiRoot = createProjectClient();
-        apiRoot.products()
-                .get()
-                .withLimit(4);
+        apiRoot.products().get().withLimit(4);
 
-        apiRoot.products()
-                .get()
-                .withLimit(4)
-                .withOffset(4);
+        apiRoot.products().get().withLimit(4).withOffset(4);
     }
 
     public void limitOffsetPagination() {
         ProjectApiRoot apiRoot = createProjectClient();
 
-        apiRoot.products()
-                .get()
-                .withLimit(4)
-                .withOffset(4);
+        apiRoot.products().get().withLimit(4).withOffset(4);
     }
 
     public void queryPredicateVariableArray() {

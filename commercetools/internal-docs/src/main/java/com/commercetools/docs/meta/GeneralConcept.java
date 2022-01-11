@@ -1,3 +1,4 @@
+
 package com.commercetools.docs.meta;
 
 import io.vrap.rmf.base.client.ApiMethod;

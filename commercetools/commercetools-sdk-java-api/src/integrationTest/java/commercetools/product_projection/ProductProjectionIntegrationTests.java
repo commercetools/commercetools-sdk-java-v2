@@ -11,7 +11,6 @@ import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ProductProjectionIntegrationTests {
@@ -27,7 +26,7 @@ public class ProductProjectionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertEquals(productProjection.getId(), product.getId());
+            Assertions.assertThat(productProjection.getId()).isEqualTo(product.getId());
         });
     }
 
@@ -42,7 +41,7 @@ public class ProductProjectionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertEquals(productProjection.getKey(), product.getKey());
+            Assertions.assertThat(productProjection.getKey()).isEqualTo(product.getKey());
         });
     }
 
@@ -58,7 +57,8 @@ public class ProductProjectionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertEquals(productProjectionPagedQueryResponse.getResults().get(0).getId(), product.getId());
+            Assertions.assertThat(productProjectionPagedQueryResponse.getResults().get(0).getId())
+                    .isEqualTo(product.getId());
         });
     }
 

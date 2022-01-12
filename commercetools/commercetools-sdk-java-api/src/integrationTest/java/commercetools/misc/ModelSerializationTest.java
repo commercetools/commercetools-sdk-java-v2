@@ -75,7 +75,7 @@ public class ModelSerializationTest {
         final URL url = Thread.currentThread()
                 .getContextClassLoader()
                 .getResource("json_examples/category-draft-example.json");
-        JSONAssertions.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
+        JSONAssert.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
             JsonUtils.toJsonString(categoryDraft), true);
     }
 
@@ -150,7 +150,7 @@ public class ModelSerializationTest {
         }
         catch (IOException e) {
             e.printStackTrace();
-            Assert.fail(e.getMessage());
+            Assertions.fail(e.getMessage());
         }
     }
 

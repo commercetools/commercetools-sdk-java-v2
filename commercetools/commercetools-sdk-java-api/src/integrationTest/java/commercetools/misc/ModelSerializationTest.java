@@ -20,7 +20,7 @@ import com.google.gson.JsonParser;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.json.JSONException;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -75,7 +75,7 @@ public class ModelSerializationTest {
         final URL url = Thread.currentThread()
                 .getContextClassLoader()
                 .getResource("json_examples/category-draft-example.json");
-        JSONAssert.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
+        JSONAssertions.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
             JsonUtils.toJsonString(categoryDraft), true);
     }
 
@@ -145,7 +145,7 @@ public class ModelSerializationTest {
                     .getResource("json_examples/category-example.json");
             String categoryExampleJsonString = new String(Files.readAllBytes(Paths.get(url.getPath())));
             Category exampleCategory = JsonUtils.fromJsonString(categoryExampleJsonString, Category.class);
-            Assert.assertEquals(JsonParser.parseString(JsonUtils.toJsonString(exampleCategory)),
+            Assertions.assertEquals(JsonParser.parseString(JsonUtils.toJsonString(exampleCategory)),
                 JsonParser.parseString(JsonUtils.toJsonString(category)));
         }
         catch (IOException e) {

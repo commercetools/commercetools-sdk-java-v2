@@ -8,7 +8,7 @@ import com.commercetools.api.models.api_client.ApiClientDraft;
 import com.commercetools.api.models.api_client.ApiClientDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ApiClientFixtures {
 
@@ -34,7 +34,7 @@ public class ApiClientFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(apiClient);
+        Assertions.assertNotNull(apiClient);
 
         return apiClient;
     }
@@ -47,8 +47,8 @@ public class ApiClientFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(apiClient);
-        Assert.assertNotNull(apiClient.getId(), id);
+        Assertions.assertNotNull(apiClient);
+        Assertions.assertNotNull(apiClient.getId(), id);
 
         return apiClient;
     }

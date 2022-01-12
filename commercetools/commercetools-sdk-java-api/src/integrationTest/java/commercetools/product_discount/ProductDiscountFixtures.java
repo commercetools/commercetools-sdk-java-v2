@@ -9,7 +9,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.product_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ProductDiscountFixtures {
 
@@ -71,8 +71,8 @@ public class ProductDiscountFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(productDiscount);
-        Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
+        Assertions.assertNotNull(productDiscount);
+        Assertions.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
 
         return productDiscount;
     }
@@ -86,8 +86,8 @@ public class ProductDiscountFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedProductDiscount);
-        Assert.assertEquals(deletedProductDiscount.getId(), id);
+        Assertions.assertNotNull(deletedProductDiscount);
+        Assertions.assertEquals(deletedProductDiscount.getId(), id);
 
         return deletedProductDiscount;
     }

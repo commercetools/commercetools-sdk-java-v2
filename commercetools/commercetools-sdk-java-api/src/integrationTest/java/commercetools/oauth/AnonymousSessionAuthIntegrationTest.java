@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -26,8 +26,8 @@ public class AnonymousSessionAuthIntegrationTest {
 
         try {
             String accessToken = anonymousSessionTokenSupplier.getToken().get().getAccessToken();
-            Assert.assertNotNull(accessToken);
-            Assert.assertFalse(accessToken.isEmpty());
+            Assertions.assertNotNull(accessToken);
+            Assertions.assertFalse(accessToken.isEmpty());
         }
         catch (Exception e) {
             Assert.fail("Failed to obtain anonymous session token");

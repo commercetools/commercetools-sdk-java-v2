@@ -14,7 +14,7 @@ import commercetools.utils.ValueObject;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CustomObjectIntegrationTests {
@@ -25,7 +25,7 @@ public class CustomObjectIntegrationTests {
         CustomObject deletedCustomObject = deleteCustomObject(customObject.getContainer(), customObject.getKey(),
             customObject.getVersion());
 
-        Assert.assertEquals(customObject.getId(), deletedCustomObject.getId());
+        Assertions.assertEquals(customObject.getId(), deletedCustomObject.getId());
     }
 
     @Test
@@ -38,8 +38,8 @@ public class CustomObjectIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedCustomObject);
-            Assert.assertEquals(customObject.getId(), queriedCustomObject.getId());
+            Assertions.assertNotNull(queriedCustomObject);
+            Assertions.assertEquals(customObject.getId(), queriedCustomObject.getId());
         });
     }
 
@@ -58,8 +58,8 @@ public class CustomObjectIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomObject);
-            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
+            Assertions.assertNotNull(updatedCustomObject);
+            Assertions.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
 
             return updatedCustomObject;
         });
@@ -80,8 +80,8 @@ public class CustomObjectIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomObject);
-            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
+            Assertions.assertNotNull(updatedCustomObject);
+            Assertions.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
 
             return updatedCustomObject;
         });
@@ -97,8 +97,8 @@ public class CustomObjectIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), customObject.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), customObject.getId());
         });
     }
 }

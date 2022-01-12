@@ -9,7 +9,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -37,7 +37,7 @@ public class CategoryErrorHandlingIntegrationTests {
                 .exceptionally(throwable -> {
                     if (throwable.getCause() instanceof NotFoundException) {
                         NotFoundException apiHttpException = (NotFoundException) throwable.getCause();
-                        Assert.assertEquals(apiHttpException.getStatusCode(), 404);
+                        Assertions.assertEquals(apiHttpException.getStatusCode(), 404);
                     }
                     return null;
                 });
@@ -55,7 +55,7 @@ public class CategoryErrorHandlingIntegrationTests {
                         if (throwable.getCause() instanceof BadRequestException) {
                             BadRequestException apiHttpException = (BadRequestException) throwable.getCause();
                             ErrorResponse errorResponse = apiHttpException.getBodyAs(ErrorResponse.class);
-                            Assert.assertEquals(errorResponse.getStatusCode(), Integer.valueOf(400));
+                            Assertions.assertEquals(errorResponse.getStatusCode(), Integer.valueOf(400));
                         }
                         return null;
                     });
@@ -75,7 +75,7 @@ public class CategoryErrorHandlingIntegrationTests {
             }
             catch (BadRequestException exception) {
                 ErrorResponse errorResponse = exception.getBodyAs(ErrorResponse.class);
-                Assert.assertEquals(errorResponse.getStatusCode(), Integer.valueOf(400));
+                Assertions.assertEquals(errorResponse.getStatusCode(), Integer.valueOf(400));
             }
             return category;
         });

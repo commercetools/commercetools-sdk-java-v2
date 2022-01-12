@@ -10,7 +10,7 @@ import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.utils.ValueObject;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class CustomObjectFixtures {
 
@@ -47,7 +47,7 @@ public class CustomObjectFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(customObject);
+        Assertions.assertNotNull(customObject);
 
         return customObject;
     }
@@ -61,7 +61,7 @@ public class CustomObjectFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(customObject);
+        Assertions.assertNotNull(customObject);
         return customObject;
     }
 }

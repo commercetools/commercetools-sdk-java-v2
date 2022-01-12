@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.state.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class StateFixtures {
 
@@ -56,8 +56,8 @@ public class StateFixtures {
 
         State state = CommercetoolsTestUtils.getProjectApiRoot().states().post(stateDraft).executeBlocking().getBody();
 
-        Assert.assertNotNull(state);
-        Assert.assertEquals(stateDraft.getKey(), state.getKey());
+        Assertions.assertNotNull(state);
+        Assertions.assertEquals(stateDraft.getKey(), state.getKey());
 
         return state;
     }
@@ -71,8 +71,8 @@ public class StateFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(state);
-        Assert.assertEquals(state.getId(), id);
+        Assertions.assertNotNull(state);
+        Assertions.assertEquals(state.getId(), id);
 
         return state;
     }

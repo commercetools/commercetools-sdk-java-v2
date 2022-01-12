@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.product_type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ProductTypeFixtures {
 
@@ -72,9 +72,9 @@ public class ProductTypeFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(productType);
-        Assert.assertEquals(productType.getName(), productTypeDraft.getName());
-        Assert.assertEquals(productType.getDescription(), productTypeDraft.getDescription());
+        Assertions.assertNotNull(productType);
+        Assertions.assertEquals(productType.getName(), productTypeDraft.getName());
+        Assertions.assertEquals(productType.getDescription(), productTypeDraft.getDescription());
 
         return productType;
     }
@@ -88,8 +88,8 @@ public class ProductTypeFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedProductType);
-        Assert.assertEquals(deletedProductType.getId(), id);
+        Assertions.assertNotNull(deletedProductType);
+        Assertions.assertEquals(deletedProductType.getId(), id);
         return deletedProductType;
     }
 

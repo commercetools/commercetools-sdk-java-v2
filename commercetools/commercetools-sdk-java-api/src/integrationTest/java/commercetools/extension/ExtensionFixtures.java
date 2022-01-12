@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.extension.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ExtensionFixtures {
 
@@ -48,8 +48,8 @@ public class ExtensionFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(extension);
-        Assert.assertEquals(extension.getKey(), extensionDraft.getKey());
+        Assertions.assertNotNull(extension);
+        Assertions.assertEquals(extension.getKey(), extensionDraft.getKey());
 
         return extension;
     }
@@ -63,8 +63,8 @@ public class ExtensionFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(extension);
-        Assert.assertEquals(extension.getId(), id);
+        Assertions.assertNotNull(extension);
+        Assertions.assertEquals(extension.getId(), id);
 
         return extension;
     }

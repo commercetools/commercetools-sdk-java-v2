@@ -16,7 +16,7 @@ import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.zone.ZoneFixtures;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ShippingMethodFixtures {
 
@@ -65,8 +65,8 @@ public class ShippingMethodFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(shippingMethod);
-        Assert.assertEquals(shippingMethodDraft.getKey(), shippingMethod.getKey());
+        Assertions.assertNotNull(shippingMethod);
+        Assertions.assertEquals(shippingMethodDraft.getKey(), shippingMethod.getKey());
 
         return shippingMethod;
     }
@@ -80,8 +80,8 @@ public class ShippingMethodFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(shippingMethod);
-        Assert.assertEquals(shippingMethod.getId(), id);
+        Assertions.assertNotNull(shippingMethod);
+        Assertions.assertEquals(shippingMethod.getId(), id);
 
         return shippingMethod;
     }

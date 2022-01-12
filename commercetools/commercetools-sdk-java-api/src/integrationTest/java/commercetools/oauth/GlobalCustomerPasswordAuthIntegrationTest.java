@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -49,11 +48,11 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
 
         try {
             String token = globalCustomerPasswordTokenSupplier.getToken().get().getAccessToken();
-            Assert.assertNotNull(token);
-            Assert.assertFalse(token.isEmpty());
+            Assertions.assertNotNull(token);
+            Assertions.assertFalse(token.isEmpty());
         }
         catch (Exception e) {
-            Assert.fail("Obtaining token failed");
+            Assertions.fail("Obtaining token failed");
         }
         finally {
             CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());

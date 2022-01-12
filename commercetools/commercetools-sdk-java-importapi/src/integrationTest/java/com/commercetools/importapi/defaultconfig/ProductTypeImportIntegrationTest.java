@@ -77,8 +77,8 @@ public class ProductTypeImportIntegrationTest {
         //                .executeBlocking()
         //                .getBody();
         //
-        //        Assert.assertNotNull(deletedImportSink);
-        //        Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());
+        //        Assertions.assertNotNull(deletedImportSink);
+        //        Assertions.assertEquals(importSink.getKey(), deletedImportSink.getKey());
     }
 
 }

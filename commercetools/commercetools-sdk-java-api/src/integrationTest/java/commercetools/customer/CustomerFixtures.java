@@ -17,7 +17,7 @@ import com.commercetools.api.models.store.Store;
 import com.commercetools.api.models.store.StoreResourceIdentifierBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class CustomerFixtures {
 
@@ -63,8 +63,8 @@ public class CustomerFixtures {
                 .getBody()
                 .getCustomer();
 
-        Assert.assertNotNull(customer);
-        Assert.assertEquals(customer.getKey(), customerDraft.getKey());
+        Assertions.assertNotNull(customer);
+        Assertions.assertEquals(customer.getKey(), customerDraft.getKey());
 
         return customer;
     }
@@ -86,8 +86,8 @@ public class CustomerFixtures {
                 .getBody()
                 .getCustomer();
 
-        Assert.assertNotNull(customer);
-        Assert.assertEquals(customer.getKey(), customerDraft.getKey());
+        Assertions.assertNotNull(customer);
+        Assertions.assertEquals(customer.getKey(), customerDraft.getKey());
 
         return customer;
     }
@@ -101,8 +101,8 @@ public class CustomerFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(customer);
-        Assert.assertEquals(customer.getId(), id);
+        Assertions.assertNotNull(customer);
+        Assertions.assertEquals(customer.getId(), id);
 
         return customer;
     }

@@ -12,7 +12,7 @@ import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.commercetools.api.models.common.GeoJsonPointBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ChannelFixtures {
 
@@ -49,8 +49,8 @@ public class ChannelFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(channel);
-        Assert.assertEquals(channelDraft.getKey(), channel.getKey());
+        Assertions.assertNotNull(channel);
+        Assertions.assertEquals(channelDraft.getKey(), channel.getKey());
 
         return channel;
     }
@@ -64,8 +64,8 @@ public class ChannelFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(channel);
-        Assert.assertEquals(channel.getId(), id);
+        Assertions.assertNotNull(channel);
+        Assertions.assertEquals(channel.getId(), id);
 
         return channel;
     }

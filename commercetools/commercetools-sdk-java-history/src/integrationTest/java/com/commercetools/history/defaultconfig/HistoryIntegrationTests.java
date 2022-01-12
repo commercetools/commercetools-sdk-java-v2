@@ -5,7 +5,7 @@ import com.commercetools.history.models.RecordPagedQueryResponse;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class HistoryIntegrationTests {
@@ -16,6 +16,6 @@ public class HistoryIntegrationTests {
                 .get()
                 .executeBlocking();
 
-        Assert.assertNotNull(response.getBody());
+        Assertions.assertNotNull(response.getBody());
     }
 }

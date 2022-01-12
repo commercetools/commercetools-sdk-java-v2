@@ -15,7 +15,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MyCartsIntegrationTests {
@@ -42,7 +42,7 @@ public class MyCartsIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(myCart);
+        Assertions.assertNotNull(myCart);
 
         Cart myCartGet = apiAnonymousRoot.withProjectKey(getProjectKey())
                 .me()
@@ -51,7 +51,7 @@ public class MyCartsIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(myCartGet);
+        Assertions.assertNotNull(myCartGet);
 
         apiAnonymousRoot.withProjectKey(getProjectKey())
                 .me()

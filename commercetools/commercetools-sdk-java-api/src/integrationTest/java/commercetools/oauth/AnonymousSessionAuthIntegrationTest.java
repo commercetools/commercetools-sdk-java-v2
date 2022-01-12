@@ -38,9 +38,9 @@ public class AnonymousSessionAuthIntegrationTest {
     public void throwExceptionWrongCredentials() {
         Assertions.assertThrows(ExecutionException.class, () -> {
             AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
-                    "wrong-client-id", getClientSecret(), "",
-                    "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
-                    vrapHttpClient);
+                "wrong-client-id", getClientSecret(), "",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
+                vrapHttpClient);
 
             anonymousSessionTokenSupplier.getToken().get();
         });

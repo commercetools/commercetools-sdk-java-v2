@@ -64,9 +64,9 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
     public void throwExceptionWrongCredentials() {
         Assertions.assertThrows(ExecutionException.class, () -> {
             GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
-                    getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
-                    "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
-                    vrapHttpClient);
+                getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
+                vrapHttpClient);
 
             globalCustomerPasswordTokenSupplier.getToken().get();
         });

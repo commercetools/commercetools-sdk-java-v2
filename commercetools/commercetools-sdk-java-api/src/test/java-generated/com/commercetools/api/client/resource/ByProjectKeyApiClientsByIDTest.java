@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Assert;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
@@ -36,8 +35,8 @@ public class ByProjectKeyApiClientsByIDTest {
     @TestTemplate
     @UseDataProvider("requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
-        Assert.assertEquals(uri, request.getUri().toString());
+        Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
+        Assertions.assertThat(uri).isEqualTo(request.getUri().toString());
     }
 
     @TestTemplate

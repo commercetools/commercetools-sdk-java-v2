@@ -30,7 +30,7 @@ public class AttributeAccessor {
     public static LocalDate asDate(final Attribute attribute) {
         Object value = attribute.getValue();
         if (value instanceof LocalDate) {
-            return (LocalDate)value;
+            return (LocalDate) value;
         }
         return LocalDate.parse((String) value, DateTimeFormatter.ISO_LOCAL_DATE);
     }
@@ -38,89 +38,83 @@ public class AttributeAccessor {
     public static LocalTime asTime(final Attribute attribute) {
         Object value = attribute.getValue();
         if (value instanceof LocalTime) {
-            return (LocalTime)value;
+            return (LocalTime) value;
         }
-        return LocalTime.parse((String)value, DateTimeFormatter.ISO_LOCAL_TIME);
+        return LocalTime.parse((String) value, DateTimeFormatter.ISO_LOCAL_TIME);
     }
 
     public static ZonedDateTime asDateTime(final Attribute attribute) {
         Object value = attribute.getValue();
         if (value instanceof ZonedDateTime) {
-            return (ZonedDateTime)value;
+            return (ZonedDateTime) value;
         }
-        return ZonedDateTime.parse((String)value, DateTimeFormatter.ISO_ZONED_DATE_TIME);
+        return ZonedDateTime.parse((String) value, DateTimeFormatter.ISO_ZONED_DATE_TIME);
     }
 
     @SuppressWarnings("unchecked")
     public static List<LocalDate> asSetDate(final Attribute attribute) {
-        return ((List<Object>) attribute.getValue()).stream()
-                .map(value -> {
-                    if (value instanceof LocalDate) {
-                        return (LocalDate)value;
-                    }
-                    return LocalDate.parse((String)value, DateTimeFormatter.ISO_LOCAL_DATE);
-                })
-                .collect(Collectors.toList());
+        return ((List<Object>) attribute.getValue()).stream().map(value -> {
+            if (value instanceof LocalDate) {
+                return (LocalDate) value;
+            }
+            return LocalDate.parse((String) value, DateTimeFormatter.ISO_LOCAL_DATE);
+        }).collect(Collectors.toList());
     }
 
     @SuppressWarnings("unchecked")
     public static List<LocalTime> asSetTime(final Attribute attribute) {
-        return ((List<Object>) attribute.getValue()).stream()
-                .map(value -> {
-                    if (value instanceof LocalTime) {
-                        return (LocalTime)value;
-                    }
-                    return LocalTime.parse((String)value, DateTimeFormatter.ISO_LOCAL_TIME);
-                })
-                .collect(Collectors.toList());
+        return ((List<Object>) attribute.getValue()).stream().map(value -> {
+            if (value instanceof LocalTime) {
+                return (LocalTime) value;
+            }
+            return LocalTime.parse((String) value, DateTimeFormatter.ISO_LOCAL_TIME);
+        }).collect(Collectors.toList());
     }
 
     @SuppressWarnings("unchecked")
     public static List<ZonedDateTime> asSetDateTime(final Attribute attribute) {
-        return ((List<Object>) attribute.getValue()).stream()
-                .map(value -> {
-                    if (value instanceof ZonedDateTime) {
-                        return (ZonedDateTime)value;
-                    }
-                    return ZonedDateTime.parse((String)value, DateTimeFormatter.ISO_ZONED_DATE_TIME);
-                })
-                .collect(Collectors.toList());
+        return ((List<Object>) attribute.getValue()).stream().map(value -> {
+            if (value instanceof ZonedDateTime) {
+                return (ZonedDateTime) value;
+            }
+            return ZonedDateTime.parse((String) value, DateTimeFormatter.ISO_ZONED_DATE_TIME);
+        }).collect(Collectors.toList());
     }
 
     public static String asString(final Attribute attribute) {
-        return (String)attribute.getValue();
+        return (String) attribute.getValue();
     }
 
     public static Boolean asBoolean(final Attribute attribute) {
-        return (Boolean)attribute.getValue();
+        return (Boolean) attribute.getValue();
     }
 
     public static Double asDouble(final Attribute attribute) {
-        return (Double)attribute.getValue();
+        return (Double) attribute.getValue();
     }
 
     public static LocalizedString asLocalizedString(final Attribute attribute) {
-        return (LocalizedString)attribute.getValue();
+        return (LocalizedString) attribute.getValue();
     }
 
     public static AttributePlainEnumValue asEnum(final Attribute attribute) {
-        return (AttributePlainEnumValue)attribute.getValue();
+        return (AttributePlainEnumValue) attribute.getValue();
     }
 
     public static AttributeLocalizedEnumValue asLocalizedEnum(final Attribute attribute) {
-        return (AttributeLocalizedEnumValue)attribute.getValue();
+        return (AttributeLocalizedEnumValue) attribute.getValue();
     }
 
     public static Long asLong(final Attribute attribute) {
-        return (Long)attribute.getValue();
+        return (Long) attribute.getValue();
     }
 
     public static Reference asReference(final Attribute attribute) {
-        return (Reference)attribute.getValue();
+        return (Reference) attribute.getValue();
     }
 
     public static TypedMoney asMoney(final Attribute attribute) {
-        return (TypedMoney)attribute.getValue();
+        return (TypedMoney) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")

@@ -18,8 +18,8 @@ public class ClientCredentialsTokenSupplierIntegrationTests {
     public void throwExceptionWrongCredentials() throws Exception {
         Assertions.assertThrows(ExecutionException.class, () -> {
             ClientCredentialsTokenSupplier clientCredentialsTokenSupplier = new ClientCredentialsTokenSupplier(
-                    "wrong-client-id", "wrong-client-secret", "", "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    vrapHttpClient);
+                "wrong-client-id", "wrong-client-secret", "",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/token", vrapHttpClient);
 
             clientCredentialsTokenSupplier.getToken().get();
         });

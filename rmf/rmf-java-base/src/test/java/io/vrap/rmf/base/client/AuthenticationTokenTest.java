@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AuthenticationTokenTest {
     @Test

@@ -10,7 +10,7 @@ import com.commercetools.api.models.tax_category.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TaxCategoryIntegrationTests {
 

@@ -9,7 +9,7 @@ import io.sphere.sdk.projects.Project;
 import io.sphere.sdk.projects.queries.ProjectGet;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CompatSphereClientUsageTest {
     @Test

@@ -11,7 +11,7 @@ import com.commercetools.api.models.discount_code.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DiscountCodeIntegrationTests {
 

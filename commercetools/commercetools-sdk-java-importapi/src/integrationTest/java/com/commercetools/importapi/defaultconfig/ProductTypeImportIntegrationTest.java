@@ -20,7 +20,7 @@ import com.commercetools.importapi.models.importrequests.ProductTypeImportReques
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ProductTypeImportIntegrationTest {
 

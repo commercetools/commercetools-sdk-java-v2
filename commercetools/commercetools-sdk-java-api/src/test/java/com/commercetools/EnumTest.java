@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.json.JSONException;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.*;
 
 public class EnumTest {

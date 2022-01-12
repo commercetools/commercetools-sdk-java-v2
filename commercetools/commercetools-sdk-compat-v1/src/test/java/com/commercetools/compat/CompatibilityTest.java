@@ -12,7 +12,7 @@ import io.sphere.sdk.projects.queries.ProjectGet;
 import io.vrap.rmf.base.client.*;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 public class CompatibilityTest {

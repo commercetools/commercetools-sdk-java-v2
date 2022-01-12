@@ -7,7 +7,7 @@ import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ImportSinkIntegrationTests {
 

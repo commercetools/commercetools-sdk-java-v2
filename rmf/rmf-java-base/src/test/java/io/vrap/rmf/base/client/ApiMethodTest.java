@@ -7,7 +7,7 @@ import java.util.concurrent.CompletableFuture;
 
 import org.assertj.core.util.Lists;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ApiMethodTest {
     static class TestApiMethod extends ApiMethod<TestApiMethod, Object> {

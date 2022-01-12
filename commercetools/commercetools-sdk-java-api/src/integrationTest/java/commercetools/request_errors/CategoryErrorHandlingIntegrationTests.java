@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CategoryErrorHandlingIntegrationTests {
 

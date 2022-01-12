@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ClientCredentialsTokenSupplierIntegrationTests {
 

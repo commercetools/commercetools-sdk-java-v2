@@ -15,7 +15,7 @@ import com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MLAPITest extends TestBase {
 

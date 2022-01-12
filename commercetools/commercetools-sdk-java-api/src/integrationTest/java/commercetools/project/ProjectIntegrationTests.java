@@ -12,7 +12,7 @@ import com.commercetools.api.models.project.ProjectUpdateBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ProjectIntegrationTests {
 

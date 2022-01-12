@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ExamplesTest {
 

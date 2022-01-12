@@ -1,6 +1,7 @@
 
 package com.commercetools.docs.meta;
 
+import com.fasterxml.jackson.annotation.JacksonAnnotation;
 import io.vrap.rmf.base.client.ApiMethod;
 
 /**
@@ -30,6 +31,16 @@ import io.vrap.rmf.base.client.ApiMethod;
  * The {@link ApiMethod#execute()} and {@link ApiMethod#executeBlocking()} can be used to directly execute the request
  * using the configured ApiHttpClient. {@link ApiMethod#send()} and {@link ApiMethod#sendBlocking()} will execute the
  * request and return the response as byte array instead of mapping it.
+ *
+ * <h3>Models</h3>
+ *
+ * Each domain model is defined as an interface. The interface describes the getters and setters. All {@link JacksonAnnotation annotations}
+ * necessary for serializing or deserializing are defined at the interface. For each interface exists an implementation
+ * class with the suffix <i>Impl</i> and a builder class with the suffix <i>Builder</i>. The interface has factory methods
+ * for both.
+ *
+ * Additionally there is a <i>withModelName</i> method. This allows to execute a function which takes the model instance
+ * itself and maps it to a new type e.g. like type safe accessing of attribute values.
  */
 public class GeneralConcept {
 }

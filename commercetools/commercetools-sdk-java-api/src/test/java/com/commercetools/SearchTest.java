@@ -82,10 +82,10 @@ public class SearchTest {
         Assertions.assertThat(1).isEqualTo(method.getFormParams().size());
         Assertions.assertThat(1).isEqualTo(newMethod.getFormParams().size());
         Assertions.assertThat("bar").isEqualTo(method.getFormParam("foo").stream().findFirst().get());
-        Assertions.assertThat("barz").isEqualTo(newMethod.getFormParam("foo").stream().findFirst().get());
+        Assertions.assertThat("barz").isEqualTo(newMethod.getFormParam("fooz").stream().findFirst().get());
         Assertions.assertThat(method).isNotEqualTo(newMethod);
         Assertions.assertThat("foo=bar").isEqualTo(String.join("&", method.getFormParamUriStrings()));
-        Assertions.assertThat("foo=barz").isEqualTo(String.join("&", newMethod.getFormParamUriStrings()));
+        Assertions.assertThat("fooz=barz").isEqualTo(String.join("&", newMethod.getFormParamUriStrings()));
     }
 
     @Test
@@ -99,7 +99,7 @@ public class SearchTest {
         Assertions.assertThat(2).isEqualTo(newMethod.getFormParams().size());
         Assertions.assertThat("bar").isEqualTo(method.getFormParam("foo").stream().findFirst().get());
         Assertions.assertThat("bar").isEqualTo(newMethod.getFormParam("foo").stream().findFirst().get());
-        Assertions.assertThat("barz").isEqualTo(newMethod.getFormParam("foo").stream().findFirst().get());
+        Assertions.assertThat("barz").isEqualTo(newMethod.getFormParam("fooz").stream().findFirst().get());
         Assertions.assertThat(method).isNotEqualTo(newMethod);
         Assertions.assertThat("foo=bar").isEqualTo(String.join("&", method.getFormParamUriStrings()));
         Assertions.assertThat("foo=bar&fooz=barz").isEqualTo(String.join("&", newMethod.getFormParamUriStrings()));

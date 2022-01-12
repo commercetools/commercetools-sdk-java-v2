@@ -41,6 +41,10 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public LocalizedString getCustomLineItem();
 
     @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+
+    @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
@@ -53,6 +57,8 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public void setName(final String name);
 
     public void setCustomLineItem(final LocalizedString customLineItem);
+
+    public void setCustomLineItemId(final String customLineItemId);
 
     public void setNextValue(final Object nextValue);
 
@@ -67,6 +73,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         instance.setChange(template.getChange());
         instance.setName(template.getName());
         instance.setCustomLineItem(template.getCustomLineItem());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

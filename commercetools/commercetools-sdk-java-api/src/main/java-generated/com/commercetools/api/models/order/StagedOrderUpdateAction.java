@@ -52,6 +52,8 @@ import com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction;
@@ -137,6 +139,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressActionImpl.class, name = StagedOrderSetDeliveryAddressAction.SET_DELIVERY_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldActionImpl.class, name = StagedOrderSetDeliveryAddressCustomFieldAction.SET_DELIVERY_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeActionImpl.class, name = StagedOrderSetDeliveryAddressCustomTypeAction.SET_DELIVERY_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldActionImpl.class, name = StagedOrderSetDeliveryCustomFieldAction.SET_DELIVERY_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeActionImpl.class, name = StagedOrderSetDeliveryCustomTypeAction.SET_DELIVERY_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsActionImpl.class, name = StagedOrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionImpl.class, name = StagedOrderSetItemShippingAddressCustomFieldAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeActionImpl.class, name = StagedOrderSetItemShippingAddressCustomTypeAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE),

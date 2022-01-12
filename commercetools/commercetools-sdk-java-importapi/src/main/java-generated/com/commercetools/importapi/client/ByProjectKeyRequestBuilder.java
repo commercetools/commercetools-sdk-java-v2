@@ -72,8 +72,4 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyCustomersRequestBuilder customers() {
         return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
     }
-
-    public ByProjectKeyInventoriesRequestBuilder inventories() {
-        return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
-    }
 }

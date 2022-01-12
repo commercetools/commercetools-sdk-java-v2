@@ -36,6 +36,13 @@ public interface UserProvidedIdentifiers {
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+    */
+    @Valid
+    @JsonProperty("containerAndKey")
+    public ContainerAndKey getContainerAndKey();
+
     public void setKey(final String key);
 
     public void setExternalId(final String externalId);
@@ -47,6 +54,8 @@ public interface UserProvidedIdentifiers {
     public void setSku(final String sku);
 
     public void setSlug(final LocalizedString slug);
+
+    public void setContainerAndKey(final ContainerAndKey containerAndKey);
 
     public static UserProvidedIdentifiers of() {
         return new UserProvidedIdentifiersImpl();
@@ -60,6 +69,7 @@ public interface UserProvidedIdentifiers {
         instance.setCustomerNumber(template.getCustomerNumber());
         instance.setSku(template.getSku());
         instance.setSlug(template.getSlug());
+        instance.setContainerAndKey(template.getContainerAndKey());
         return instance;
     }
 

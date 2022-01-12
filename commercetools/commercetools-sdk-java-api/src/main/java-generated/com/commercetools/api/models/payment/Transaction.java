@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -60,6 +61,13 @@ public interface Transaction {
     @JsonProperty("state")
     public TransactionState getState();
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     public void setId(final String id);
 
     public void setTimestamp(final ZonedDateTime timestamp);
@@ -71,6 +79,8 @@ public interface Transaction {
     public void setInteractionId(final String interactionId);
 
     public void setState(final TransactionState state);
+
+    public void setCustom(final CustomFields custom);
 
     public static Transaction of() {
         return new TransactionImpl();
@@ -84,6 +94,7 @@ public interface Transaction {
         instance.setAmount(template.getAmount());
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

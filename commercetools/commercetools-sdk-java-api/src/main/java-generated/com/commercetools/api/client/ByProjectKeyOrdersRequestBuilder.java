@@ -38,4 +38,8 @@ public class ByProjectKeyOrdersRequestBuilder {
     public ByProjectKeyOrdersByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyOrdersByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyOrdersSearchRequestBuilder search() {
+        return new ByProjectKeyOrdersSearchRequestBuilder(apiHttpClient, projectKey);
+    }
 }

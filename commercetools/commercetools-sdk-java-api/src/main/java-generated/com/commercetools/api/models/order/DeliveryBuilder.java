@@ -23,6 +23,9 @@ public class DeliveryBuilder implements Builder<Delivery> {
     @Nullable
     private com.commercetools.api.models.common.Address address;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     public DeliveryBuilder id(final String id) {
         this.id = id;
         return this;
@@ -96,6 +99,17 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    public DeliveryBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public DeliveryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -117,19 +131,24 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this.address;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public Delivery build() {
         Objects.requireNonNull(id, Delivery.class + ": id is missing");
         Objects.requireNonNull(createdAt, Delivery.class + ": createdAt is missing");
         Objects.requireNonNull(items, Delivery.class + ": items is missing");
         Objects.requireNonNull(parcels, Delivery.class + ": parcels is missing");
-        return new DeliveryImpl(id, createdAt, items, parcels, address);
+        return new DeliveryImpl(id, createdAt, items, parcels, address, custom);
     }
 
     /**
      * builds Delivery without checking for non null required values
      */
     public Delivery buildUnchecked() {
-        return new DeliveryImpl(id, createdAt, items, parcels, address);
+        return new DeliveryImpl(id, createdAt, items, parcels, address, custom);
     }
 
     public static DeliveryBuilder of() {
@@ -143,6 +162,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
         builder.items = template.getItems();
         builder.parcels = template.getParcels();
         builder.address = template.getAddress();
+        builder.custom = template.getCustom();
         return builder;
     }
 

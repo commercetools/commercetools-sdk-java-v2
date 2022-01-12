@@ -54,13 +54,13 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     @Nullable
-    private Long defaultShippingAddress;
+    private Integer defaultShippingAddress;
 
     @Nullable
     private java.util.List<Integer> shippingAddresses;
 
     @Nullable
-    private Long defaultBillingAddress;
+    private Integer defaultBillingAddress;
 
     @Nullable
     private java.util.List<Integer> billingAddresses;
@@ -191,7 +191,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
+    public CustomerDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
@@ -206,7 +206,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
+    public CustomerDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
     }
@@ -369,7 +369,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     @Nullable
-    public Long getDefaultShippingAddress() {
+    public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
@@ -379,7 +379,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     @Nullable
-    public Long getDefaultBillingAddress() {
+    public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 

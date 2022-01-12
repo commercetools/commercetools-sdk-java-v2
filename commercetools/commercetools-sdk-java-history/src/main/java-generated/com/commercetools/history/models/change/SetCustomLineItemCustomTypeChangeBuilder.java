@@ -14,6 +14,8 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
 
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
+    private String customLineItemId;
+
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     private com.commercetools.history.models.common.CustomFields previousValue;
@@ -33,6 +35,11 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     public SetCustomLineItemCustomTypeChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
+        return this;
+    }
+
+    public SetCustomLineItemCustomTypeChangeBuilder customLineItemId(final String customLineItemId) {
+        this.customLineItemId = customLineItemId;
         return this;
     }
 
@@ -68,6 +75,10 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
         return this.customLineItem;
     }
 
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
+    }
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
@@ -79,16 +90,20 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     public SetCustomLineItemCustomTypeChange build() {
         Objects.requireNonNull(change, SetCustomLineItemCustomTypeChange.class + ": change is missing");
         Objects.requireNonNull(customLineItem, SetCustomLineItemCustomTypeChange.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItemId,
+            SetCustomLineItemCustomTypeChange.class + ": customLineItemId is missing");
         Objects.requireNonNull(nextValue, SetCustomLineItemCustomTypeChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetCustomLineItemCustomTypeChange.class + ": previousValue is missing");
-        return new SetCustomLineItemCustomTypeChangeImpl(change, customLineItem, nextValue, previousValue);
+        return new SetCustomLineItemCustomTypeChangeImpl(change, customLineItem, customLineItemId, nextValue,
+            previousValue);
     }
 
     /**
      * builds SetCustomLineItemCustomTypeChange without checking for non null required values
      */
     public SetCustomLineItemCustomTypeChange buildUnchecked() {
-        return new SetCustomLineItemCustomTypeChangeImpl(change, customLineItem, nextValue, previousValue);
+        return new SetCustomLineItemCustomTypeChangeImpl(change, customLineItem, customLineItemId, nextValue,
+            previousValue);
     }
 
     public static SetCustomLineItemCustomTypeChangeBuilder of() {
@@ -99,6 +114,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
         SetCustomLineItemCustomTypeChangeBuilder builder = new SetCustomLineItemCustomTypeChangeBuilder();
         builder.change = template.getChange();
         builder.customLineItem = template.getCustomLineItem();
+        builder.customLineItemId = template.getCustomLineItemId();
         builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
         return builder;

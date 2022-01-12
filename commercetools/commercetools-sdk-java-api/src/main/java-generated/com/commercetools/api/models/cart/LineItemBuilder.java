@@ -16,6 +16,9 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     private String productId;
 
+    @Nullable
+    private String productKey;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
@@ -70,6 +73,11 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     public LineItemBuilder productId(final String productId) {
         this.productId = productId;
+        return this;
+    }
+
+    public LineItemBuilder productKey(@Nullable final String productKey) {
+        this.productKey = productKey;
         return this;
     }
 
@@ -275,6 +283,11 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this.productId;
     }
 
+    @Nullable
+    public String getProductKey() {
+        return this.productKey;
+    }
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -373,18 +386,18 @@ public class LineItemBuilder implements Builder<LineItem> {
         Objects.requireNonNull(discountedPricePerQuantity, LineItem.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(priceMode, LineItem.class + ": priceMode is missing");
         Objects.requireNonNull(lineItemMode, LineItem.class + ": lineItemMode is missing");
-        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
-            quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
-            priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+        return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
+            totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
+            discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
     }
 
     /**
      * builds LineItem without checking for non null required values
      */
     public LineItem buildUnchecked() {
-        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice,
-            quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity,
-            priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+        return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
+            totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
+            discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
     }
 
     public static LineItemBuilder of() {
@@ -395,6 +408,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         LineItemBuilder builder = new LineItemBuilder();
         builder.id = template.getId();
         builder.productId = template.getProductId();
+        builder.productKey = template.getProductKey();
         builder.name = template.getName();
         builder.productSlug = template.getProductSlug();
         builder.productType = template.getProductType();

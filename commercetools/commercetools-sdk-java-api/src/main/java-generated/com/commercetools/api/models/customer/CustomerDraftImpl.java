@@ -45,11 +45,11 @@ public class CustomerDraftImpl implements CustomerDraft {
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
-    private Long defaultShippingAddress;
+    private Integer defaultShippingAddress;
 
     private java.util.List<Integer> shippingAddresses;
 
-    private Long defaultBillingAddress;
+    private Integer defaultBillingAddress;
 
     private java.util.List<Integer> billingAddresses;
 
@@ -80,9 +80,9 @@ public class CustomerDraftImpl implements CustomerDraft {
             @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,
             @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
-            @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,
+            @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
-            @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,
+            @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("externalId") final String externalId,
@@ -206,7 +206,7 @@ public class CustomerDraftImpl implements CustomerDraft {
     *  <p>The index of the address in the addresses array.
     *  The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
-    public Long getDefaultShippingAddress() {
+    public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
@@ -222,7 +222,7 @@ public class CustomerDraftImpl implements CustomerDraft {
     *  <p>The index of the address in the addresses array.
     *  The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
-    public Long getDefaultBillingAddress() {
+    public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
@@ -343,7 +343,7 @@ public class CustomerDraftImpl implements CustomerDraft {
         this.addresses = addresses;
     }
 
-    public void setDefaultShippingAddress(final Long defaultShippingAddress) {
+    public void setDefaultShippingAddress(final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
     }
 
@@ -355,7 +355,7 @@ public class CustomerDraftImpl implements CustomerDraft {
         this.shippingAddresses = shippingAddresses;
     }
 
-    public void setDefaultBillingAddress(final Long defaultBillingAddress) {
+    public void setDefaultBillingAddress(final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
     }
 

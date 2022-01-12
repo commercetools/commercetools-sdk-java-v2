@@ -61,6 +61,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionImpl.class, name = CartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemPriceActionImpl.class, name = CartSetLineItemPriceAction.SET_LINE_ITEM_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionImpl.class, name = CartSetLineItemShippingDetailsAction.SET_LINE_ITEM_SHIPPING_DETAILS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemSupplyChannelActionImpl.class, name = CartSetLineItemSupplyChannelAction.SET_LINE_ITEM_SUPPLY_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemTaxAmountActionImpl.class, name = CartSetLineItemTaxAmountAction.SET_LINE_ITEM_TAX_AMOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemTaxRateActionImpl.class, name = CartSetLineItemTaxRateAction.SET_LINE_ITEM_TAX_RATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemTotalPriceActionImpl.class, name = CartSetLineItemTotalPriceAction.SET_LINE_ITEM_TOTAL_PRICE),

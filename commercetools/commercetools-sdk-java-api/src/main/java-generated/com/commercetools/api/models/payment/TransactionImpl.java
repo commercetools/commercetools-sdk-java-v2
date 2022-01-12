@@ -28,19 +28,23 @@ public class TransactionImpl implements Transaction {
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     TransactionImpl(@JsonProperty("id") final String id,
             @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
             @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
             @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount,
             @JsonProperty("interactionId") final String interactionId,
-            @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
+            @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.timestamp = timestamp;
         this.type = type;
         this.amount = amount;
         this.interactionId = interactionId;
         this.state = state;
+        this.custom = custom;
     }
 
     public TransactionImpl() {
@@ -86,6 +90,13 @@ public class TransactionImpl implements Transaction {
         return this.state;
     }
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -110,6 +121,10 @@ public class TransactionImpl implements Transaction {
         this.state = state;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -126,6 +141,7 @@ public class TransactionImpl implements Transaction {
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -137,6 +153,7 @@ public class TransactionImpl implements Transaction {
                 .append(amount)
                 .append(interactionId)
                 .append(state)
+                .append(custom)
                 .toHashCode();
     }
 

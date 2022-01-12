@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -98,7 +98,7 @@ public interface CartDiscountDraft {
 
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     public void setName(final LocalizedString name);
 
@@ -124,7 +124,7 @@ public interface CartDiscountDraft {
 
     public void setStackingMode(final StackingMode stackingMode);
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static CartDiscountDraft of() {
         return new CartDiscountDraftImpl();

@@ -22,6 +22,8 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
+    private String customLineItemId;
+
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     private com.commercetools.history.models.common.CustomFields previousValue;
@@ -29,10 +31,12 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     @JsonCreator
     SetCustomLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
+            @JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue) {
         this.change = change;
         this.customLineItem = customLineItem;
+        this.customLineItemId = customLineItemId;
         this.nextValue = nextValue;
         this.previousValue = previousValue;
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE;
@@ -57,6 +61,10 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
         return this.customLineItem;
     }
 
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
+    }
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
@@ -71,6 +79,10 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
     public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId) {
+        this.customLineItemId = customLineItemId;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
@@ -94,6 +106,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(customLineItem, that.customLineItem)
+                .append(customLineItemId, that.customLineItemId)
                 .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
                 .isEquals();
@@ -104,6 +117,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
                 .append(customLineItem)
+                .append(customLineItemId)
                 .append(nextValue)
                 .append(previousValue)
                 .toHashCode();

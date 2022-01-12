@@ -39,6 +39,14 @@ public interface LineItem {
     public String getProductId();
 
     /**
+    *  <p>User-defined unique identifier for the <a href="ctp:api:type:Product">Product</a>.
+    *  Only present on Line Items in a <a href="ctp:api:type:Cart">Cart</a> when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On <a href="/ctp:api:type:Order">Order</a> resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+    */
+
+    @JsonProperty("productKey")
+    public String getProductKey();
+
+    /**
     *  <p>The product name.</p>
     */
     @NotNull
@@ -180,6 +188,8 @@ public interface LineItem {
 
     public void setProductId(final String productId);
 
+    public void setProductKey(final String productKey);
+
     public void setName(final LocalizedString name);
 
     public void setProductSlug(final LocalizedString productSlug);
@@ -233,6 +243,7 @@ public interface LineItem {
         LineItemImpl instance = new LineItemImpl();
         instance.setId(template.getId());
         instance.setProductId(template.getProductId());
+        instance.setProductKey(template.getProductKey());
         instance.setName(template.getName());
         instance.setProductSlug(template.getProductSlug());
         instance.setProductType(template.getProductType());

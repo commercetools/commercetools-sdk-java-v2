@@ -34,6 +34,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionImpl.class, name = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = PaymentSetStatusInterfaceCodeAction.SET_STATUS_INTERFACE_CODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionImpl.class, name = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionImpl.class, name = PaymentSetTransactionCustomFieldAction.SET_TRANSACTION_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl.class, name = PaymentSetTransactionCustomTypeAction.SET_TRANSACTION_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentTransitionStateActionImpl.class, name = PaymentTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentUpdateActionImpl.class, visible = true)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

@@ -21,6 +21,9 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     public StagedOrderAddDeliveryActionBuilder items(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
@@ -89,6 +92,18 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    public StagedOrderAddDeliveryActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderAddDeliveryActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
@@ -104,15 +119,20 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         return this.parcels;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public StagedOrderAddDeliveryAction build() {
-        return new StagedOrderAddDeliveryActionImpl(items, address, parcels);
+        return new StagedOrderAddDeliveryActionImpl(items, address, parcels, custom);
     }
 
     /**
      * builds StagedOrderAddDeliveryAction without checking for non null required values
      */
     public StagedOrderAddDeliveryAction buildUnchecked() {
-        return new StagedOrderAddDeliveryActionImpl(items, address, parcels);
+        return new StagedOrderAddDeliveryActionImpl(items, address, parcels, custom);
     }
 
     public static StagedOrderAddDeliveryActionBuilder of() {
@@ -124,6 +144,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
         builder.items = template.getItems();
         builder.address = template.getAddress();
         builder.parcels = template.getParcels();
+        builder.custom = template.getCustom();
         return builder;
     }
 

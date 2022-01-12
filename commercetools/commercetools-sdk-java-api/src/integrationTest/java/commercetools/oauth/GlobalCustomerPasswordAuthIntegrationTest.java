@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class GlobalCustomerPasswordAuthIntegrationTest {
@@ -59,13 +60,15 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
         }
     }
 
-    @Test(expected = ExecutionException.class)
-    public void throwExceptionWrongCredentials() throws Exception {
-        GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
-            getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
-            vrapHttpClient);
+    @Test
+    public void throwExceptionWrongCredentials() {
+        Assertions.assertThrows(ExecutionException.class, () -> {
+            GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
+                    getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
+                    vrapHttpClient);
 
-        globalCustomerPasswordTokenSupplier.getToken().get();
+            globalCustomerPasswordTokenSupplier.getToken().get();
+        });
     }
 }

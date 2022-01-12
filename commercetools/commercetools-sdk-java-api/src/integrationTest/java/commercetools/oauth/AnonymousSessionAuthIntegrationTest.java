@@ -10,6 +10,7 @@ import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AnonymousSessionAuthIntegrationTest {
@@ -33,14 +34,16 @@ public class AnonymousSessionAuthIntegrationTest {
         }
     }
 
-    @Test(expected = ExecutionException.class)
-    public void throwExceptionWrongCredentials() throws Exception {
-        AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
-            "wrong-client-id", getClientSecret(), "",
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
-            vrapHttpClient);
+    @Test
+    public void throwExceptionWrongCredentials() {
+        Assertions.assertThrows(ExecutionException.class, () -> {
+            AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
+                    "wrong-client-id", getClientSecret(), "",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
+                    vrapHttpClient);
 
-        anonymousSessionTokenSupplier.getToken().get();
+            anonymousSessionTokenSupplier.getToken().get();
+        });
     }
 
 }

@@ -10,13 +10,14 @@ import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CategoryErrorHandlingIntegrationTests {
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void getByNonExistingIdBlocking() {
-        withCategory(category -> {
+        Assertions.assertThrows(RuntimeException.class, () -> {
             CommercetoolsTestUtils.getProjectApiRoot()
                     .categories()
                     .withId("non-existing")
@@ -28,20 +29,18 @@ public class CategoryErrorHandlingIntegrationTests {
 
     @Test
     public void getByNonExistingIdNonBlocking() {
-        withCategory(category -> {
-            CommercetoolsTestUtils.getProjectApiRoot()
-                    .categories()
-                    .withId("non-existing")
-                    .get()
-                    .execute()
-                    .exceptionally(throwable -> {
-                        if (throwable.getCause() instanceof NotFoundException) {
-                            NotFoundException apiHttpException = (NotFoundException) throwable.getCause();
-                            Assert.assertEquals(apiHttpException.getStatusCode(), 404);
-                        }
-                        return null;
-                    });
-        });
+        CommercetoolsTestUtils.getProjectApiRoot()
+                .categories()
+                .withId("non-existing")
+                .get()
+                .execute()
+                .exceptionally(throwable -> {
+                    if (throwable.getCause() instanceof NotFoundException) {
+                        NotFoundException apiHttpException = (NotFoundException) throwable.getCause();
+                        Assert.assertEquals(apiHttpException.getStatusCode(), 404);
+                    }
+                    return null;
+                });
     }
 
     @Test

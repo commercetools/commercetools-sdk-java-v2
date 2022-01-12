@@ -83,8 +83,8 @@ group='com.commercetools.sdk'
 subprojects { project ->
 
     apply from: "$rootDir/gradle-scripts/subproject-plugins.gradle"
-    apply from: "$rootDir/gradle-scripts/subproject-config.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-dependencies.gradle"
+    apply from: "$rootDir/gradle-scripts/subproject-config.gradle"
 
     group='com.commercetools.sdk'
 

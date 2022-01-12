@@ -20,12 +20,12 @@ import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class MiddlewareTest {
 
-    @Ignore
+    @Disabled
     @Test
     public void execute() {
         String projectKey = CommercetoolsTestUtils.getProjectKey();

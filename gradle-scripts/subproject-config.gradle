@@ -1,7 +1,9 @@
-configurations {
-    integrationTestImplementation.extendsFrom(testImplementation)
-    integrationTestApi.extendsFrom(testApi)
-    integrationTestRuntimeOnly.extendsFrom(testRuntimeOnly)
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
 }
 
 sourceSets {
@@ -13,8 +15,10 @@ sourceSets {
     }
 }
 
-test {
-    useJUnitPlatform()
+configurations {
+    integrationTestImplementation.extendsFrom(testImplementation)
+    integrationTestApi.extendsFrom(testApi)
+    integrationTestRuntimeOnly.extendsFrom(testRuntimeOnly)
 }
 
 javadoc {

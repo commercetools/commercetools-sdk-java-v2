@@ -1,13 +1,13 @@
 
 package com.commercetools.api.models.custom_object;
 
+import java.time.ZonedDateTime;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import java.time.ZonedDateTime;
 
 public class GenericCustomObjectImpl<TValue> implements GenericCustomObject<TValue> {
 

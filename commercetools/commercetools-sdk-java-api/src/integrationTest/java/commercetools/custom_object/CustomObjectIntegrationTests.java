@@ -84,7 +84,10 @@ public class CustomObjectIntegrationTests {
                     .getBody();
 
             Assertions.assertNotNull(updatedCustomObject);
-            Assertions.assertEquals(updatedCustomObject.withCustomObject(customObject1 -> (Map<String, Object>)customObject1.getValue()).get("value"), "foo");
+            Assertions.assertEquals(
+                updatedCustomObject.withCustomObject(customObject1 -> (Map<String, Object>) customObject1.getValue())
+                        .get("value"),
+                "foo");
 
             return updatedCustomObject;
         });
@@ -104,7 +107,8 @@ public class CustomObjectIntegrationTests {
             GenericCustomObject<Foo> typeRefCustomObject = CommercetoolsTestUtils.getProjectApiRoot()
                     .customObjects()
                     .post(customObjectDraft)
-                    .executeBlocking(new TypeReference<GenericCustomObject<Foo>>() {})
+                    .executeBlocking(new TypeReference<GenericCustomObject<Foo>>() {
+                    })
                     .getBody();
 
             Assertions.assertNotNull(typeRefCustomObject);
@@ -113,8 +117,10 @@ public class CustomObjectIntegrationTests {
             Assertions.assertEquals(typeRefCustomObject.getValue().getBars().get(1).getName(), "Winchester");
             Assertions.assertEquals(typeRefCustomObject.getValue().getBars().get(1).getNumber(), 2);
 
-            JavaType javaType = TypeFactory.defaultInstance().constructParametricType(GenericCustomObject.class, Foo.class);
-            GenericCustomObject<Foo> javaTypeCustomObject = (GenericCustomObject<Foo>) CommercetoolsTestUtils.getProjectApiRoot()
+            JavaType javaType = TypeFactory.defaultInstance()
+                    .constructParametricType(GenericCustomObject.class, Foo.class);
+            GenericCustomObject<Foo> javaTypeCustomObject = (GenericCustomObject<Foo>) CommercetoolsTestUtils
+                    .getProjectApiRoot()
                     .customObjects()
                     .post(customObjectDraft)
                     .executeBlocking(javaType)

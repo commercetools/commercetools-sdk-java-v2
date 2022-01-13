@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
+
 import io.sphere.sdk.client.SphereRequest;
 import io.vrap.rmf.base.client.*;
 

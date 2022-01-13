@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
+
 import io.vrap.rmf.base.client.http.HandlerStack;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -51,7 +52,8 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     }
 
     @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, final TypeReference<O> outputType) {
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
+            final TypeReference<O> outputType) {
         return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
     }
 

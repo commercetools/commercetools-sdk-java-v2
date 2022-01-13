@@ -1,19 +1,21 @@
 
 package com.commercetools.api.models.custom_object;
 
+import java.time.ZonedDateTime;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.time.ZonedDateTime;
-import java.util.function.Function;
-
 @JsonDeserialize(as = GenericCustomObjectImpl.class)
-public interface GenericCustomObject<TValue> extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>> {
+public interface GenericCustomObject<TValue>
+        extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>> {
 
     @NotNull
     @JsonProperty("id")

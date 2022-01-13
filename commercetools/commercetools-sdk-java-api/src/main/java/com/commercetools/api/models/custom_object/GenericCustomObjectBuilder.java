@@ -1,12 +1,12 @@
 
 package com.commercetools.api.models.custom_object;
 
-import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Builder;
 
 public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustomObject<TValue>> {
 
@@ -68,7 +68,8 @@ public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustom
         return this;
     }
 
-    public GenericCustomObjectBuilder<TValue> createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+    public GenericCustomObjectBuilder<TValue> createdBy(
+            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
@@ -134,16 +135,16 @@ public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustom
         Objects.requireNonNull(container, CustomObject.class + ": container is missing");
         Objects.requireNonNull(key, CustomObject.class + ": key is missing");
         Objects.requireNonNull(value, CustomObject.class + ": value is missing");
-        return new GenericCustomObjectImpl<>(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
-            value);
+        return new GenericCustomObjectImpl<>(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            container, key, value);
     }
 
     /**
      * builds CustomObject without checking for non null required values
      */
     public GenericCustomObject<TValue> buildUnchecked() {
-        return new GenericCustomObjectImpl<>(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
-            value);
+        return new GenericCustomObjectImpl<>(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            container, key, value);
     }
 
     public static <T> GenericCustomObjectBuilder<T> of(T value) {

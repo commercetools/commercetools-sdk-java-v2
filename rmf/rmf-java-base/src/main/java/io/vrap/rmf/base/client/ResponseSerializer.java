@@ -13,7 +13,9 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
  */
 public interface ResponseSerializer {
     <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final Class<O> outputType);
+
     <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final JavaType outputType);
+
     <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final TypeReference<O> outputType);
 
     byte[] toJsonByteArray(final Object value) throws JsonProcessingException;

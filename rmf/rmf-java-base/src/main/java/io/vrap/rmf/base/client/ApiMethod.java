@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -268,28 +269,27 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         return execute(apiHttpClient(), returnType);
     }
 
-    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(
-            final ApiHttpClient client, final Class<TReturn> returnType) {
-        return client.execute(this.createHttpRequest(), returnType)
-                .toCompletableFuture();
+    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
+            final Class<TReturn> returnType) {
+        return client.execute(this.createHttpRequest(), returnType).toCompletableFuture();
     }
 
-    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final TypeReference<TReturn> returnTypeReference) {
+    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(
+            final TypeReference<TReturn> returnTypeReference) {
         return execute(apiHttpClient(), returnTypeReference);
     }
 
-    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(
-            final ApiHttpClient client, final TypeReference<TReturn> returnTypeReference) {
-        return client.execute(this.createHttpRequest(), returnTypeReference)
-                .toCompletableFuture();
+    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
+            final TypeReference<TReturn> returnTypeReference) {
+        return client.execute(this.createHttpRequest(), returnTypeReference).toCompletableFuture();
     }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final JavaType returnJavaType) {
         return execute(apiHttpClient(), returnJavaType);
     }
 
-    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(
-            final ApiHttpClient client, final JavaType returnJavaType) {
+    public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
+            final JavaType returnJavaType) {
         return client.execute(this.createHttpRequest(), returnJavaType);
     }
 
@@ -319,32 +319,30 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         return executeBlocking(apiHttpClient(), timeout, clazz);
     }
 
-    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(
-            final ApiHttpClient client, final Duration timeout, final Class<TReturn> clazz) {
+    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
+            final Class<TReturn> clazz) {
         final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-                client.execute(request, clazz).toCompletableFuture(),
-                request, timeout);
+        return blockingWait(client.execute(request, clazz).toCompletableFuture(), request, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final TypeReference<TReturn> typeReference) {
         return executeBlocking(apiHttpClient(), Duration.ofSeconds(120), typeReference);
     };
 
-    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final TypeReference<TReturn> typeReference) {
+    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client,
+            final TypeReference<TReturn> typeReference) {
         return executeBlocking(client, Duration.ofSeconds(120), typeReference);
     };
 
-    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout, final TypeReference<TReturn> typeReference) {
+    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout,
+            final TypeReference<TReturn> typeReference) {
         return executeBlocking(apiHttpClient(), timeout, typeReference);
     }
 
-    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(
-            final ApiHttpClient client, final Duration timeout, TypeReference<TReturn> typeReference) {
+    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
+            TypeReference<TReturn> typeReference) {
         final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-                client.execute(request, typeReference).toCompletableFuture(),
-                request, timeout);
+        return blockingWait(client.execute(request, typeReference).toCompletableFuture(), request, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final JavaType javaType) {
@@ -359,12 +357,10 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         return executeBlocking(apiHttpClient(), timeout, javaType);
     }
 
-    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(
-            final ApiHttpClient client, final Duration timeout, JavaType javaType) {
+    public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
+            JavaType javaType) {
         final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-                client.execute(request, javaType),
-                request, timeout);
+        return blockingWait(client.execute(request, javaType), request, timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> send() {

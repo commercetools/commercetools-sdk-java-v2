@@ -45,7 +45,8 @@ class ResponseSerializerImpl implements ResponseSerializer {
         }
     }
 
-    public <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final TypeReference<O> outputType) {
+    public <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response,
+            final TypeReference<O> outputType) {
         try {
             if (response.getBody() == null) {
                 return (ApiHttpResponse<O>) response;

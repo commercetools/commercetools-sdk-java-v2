@@ -81,7 +81,10 @@ public class CustomObjectIntegrationTests {
                     .getBody();
 
             Assertions.assertNotNull(updatedCustomObject);
-            Assertions.assertEquals(updatedCustomObject.withCustomObject(customObject1 -> (Map<String, Object>)customObject1.getValue()).get("value"), "foo");
+            Assertions.assertEquals(
+                updatedCustomObject.withCustomObject(customObject1 -> (Map<String, Object>) customObject1.getValue())
+                        .get("value"),
+                "foo");
 
             return updatedCustomObject;
         });

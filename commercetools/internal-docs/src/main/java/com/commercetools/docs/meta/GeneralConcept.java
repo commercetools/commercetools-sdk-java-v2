@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 import com.fasterxml.jackson.annotation.JacksonAnnotation;
+
 import io.vrap.rmf.base.client.ApiMethod;
 
 /**

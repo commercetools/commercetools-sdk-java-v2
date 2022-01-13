@@ -4,6 +4,9 @@ package io.vrap.rmf.base.client;
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+
 import io.vrap.rmf.base.client.http.HandlerStack;
 
 /**
@@ -13,6 +16,11 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
     public String CLOSED_MESSAGE = "Client is already closed.";
 
     public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, final Class<O> outputType);
+
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
+            final TypeReference<O> outputType);
+
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, final JavaType outputType);
 
     public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method);
 

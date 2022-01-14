@@ -18,14 +18,17 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
 
     private String action;
 
+    private String transactionId;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
-    PaymentSetTransactionCustomTypeActionImpl(
+    PaymentSetTransactionCustomTypeActionImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.transactionId = transactionId;
         this.type = type;
         this.fields = fields;
         this.action = SET_TRANSACTION_CUSTOM_TYPE;
@@ -37,6 +40,10 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
 
     public String getAction() {
         return this.action;
+    }
+
+    public String getTransactionId() {
+        return this.transactionId;
     }
 
     /**
@@ -52,6 +59,10 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
+    }
+
+    public void setTransactionId(final String transactionId) {
+        this.transactionId = transactionId;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -73,6 +84,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
         PaymentSetTransactionCustomTypeActionImpl that = (PaymentSetTransactionCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(transactionId, that.transactionId)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -80,7 +92,11 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(transactionId)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

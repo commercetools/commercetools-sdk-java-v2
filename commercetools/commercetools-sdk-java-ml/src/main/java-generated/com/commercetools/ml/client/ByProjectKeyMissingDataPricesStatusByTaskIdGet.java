@@ -1,8 +1,6 @@
 
 package com.commercetools.ml.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -48,21 +46,14 @@ public class ByProjectKeyMissingDataPricesStatusByTaskIdGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingPricesTaskStatus> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-            client.execute(request, com.commercetools.ml.models.missing_data.MissingPricesTaskStatus.class)
-                    .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.ml.models.missing_data.MissingPricesTaskStatus.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingPricesTaskStatus>> execute(
             final ApiHttpClient client) {
-        return client
-                .execute(this.createHttpRequest(),
-                    com.commercetools.ml.models.missing_data.MissingPricesTaskStatus.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.ml.models.missing_data.MissingPricesTaskStatus.class);
     }
 
     public String getProjectKey() {

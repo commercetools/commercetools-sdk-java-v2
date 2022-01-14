@@ -1,8 +1,6 @@
 
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -52,26 +50,18 @@ public class ByProjectKeyCartsGet
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.cart.CartPagedQueryResponse.class)
-                .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.cart.CartPagedQueryResponse.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.CartPagedQueryResponse.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.api.models.cart.CartPagedQueryResponse.class);
     }
 
     public String getProjectKey() {
         return this.projectKey;
-    }
-
-    public List<String> getCustomerId() {
-        return this.getQueryParam("customerId");
     }
 
     public List<String> getExpand() {
@@ -100,38 +90,6 @@ public class ByProjectKeyCartsGet
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
-    }
-
-    /**
-     * set customerId with the specificied value
-     */
-    public ByProjectKeyCartsGet withCustomerId(final String customerId) {
-        return copy().withQueryParam("customerId", customerId);
-    }
-
-    /**
-     * add additional customerId query parameter
-     */
-    public ByProjectKeyCartsGet addCustomerId(final String customerId) {
-        return copy().addQueryParam("customerId", customerId);
-    }
-
-    /**
-     * set customerId with the specificied values
-     */
-    public ByProjectKeyCartsGet withCustomerId(final List<String> customerId) {
-        return copy().withoutQueryParam("customerId")
-                .addQueryParams(customerId.stream()
-                        .map(s -> new ParamEntry<>("customerId", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional customerId query parameters
-     */
-    public ByProjectKeyCartsGet addCustomerId(final List<String> customerId) {
-        return copy().addQueryParams(
-            customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
     }
 
     /**

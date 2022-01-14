@@ -69,14 +69,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .get()
-                                .withCustomerId("customerId")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/carts?customerId=customerId", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .carts()
-                                .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/in-store/key=test_storeKey/carts?expand=expand", },
@@ -151,11 +143,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .carts()
-                        .get()
-                        .withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()

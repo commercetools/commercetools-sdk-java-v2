@@ -68,6 +68,8 @@ import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceA
 import com.commercetools.api.models.order_edit.StagedOrderSetLocaleAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataAction;
@@ -155,6 +157,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLocaleActionImpl.class, name = StagedOrderSetLocaleAction.SET_LOCALE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberActionImpl.class, name = StagedOrderSetOrderNumberAction.SET_ORDER_NUMBER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxActionImpl.class, name = StagedOrderSetOrderTotalTaxAction.SET_ORDER_TOTAL_TAX),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldActionImpl.class, name = StagedOrderSetParcelCustomFieldAction.SET_PARCEL_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeActionImpl.class, name = StagedOrderSetParcelCustomTypeAction.SET_PARCEL_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsActionImpl.class, name = StagedOrderSetParcelItemsAction.SET_PARCEL_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsActionImpl.class, name = StagedOrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataActionImpl.class, name = StagedOrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA),

@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,6 +42,13 @@ public interface Parcel {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     public void setId(final String id);
 
     public void setCreatedAt(final ZonedDateTime createdAt);
@@ -54,6 +62,8 @@ public interface Parcel {
 
     public void setItems(final List<DeliveryItem> items);
 
+    public void setCustom(final CustomFields custom);
+
     public static Parcel of() {
         return new ParcelImpl();
     }
@@ -65,6 +75,7 @@ public interface Parcel {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

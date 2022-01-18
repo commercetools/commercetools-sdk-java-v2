@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -31,6 +32,13 @@ public interface ParcelDraft {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
     public void setMeasurements(final ParcelMeasurements measurements);
 
     public void setTrackingData(final TrackingData trackingData);
@@ -39,6 +47,8 @@ public interface ParcelDraft {
     public void setItems(final DeliveryItem... items);
 
     public void setItems(final List<DeliveryItem> items);
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static ParcelDraft of() {
         return new ParcelDraftImpl();
@@ -49,6 +59,7 @@ public interface ParcelDraft {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

@@ -1,8 +1,6 @@
 
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -53,21 +51,15 @@ public class ByProjectKeyProductDiscountsGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client
-                .execute(request, com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class)
-                .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout,
+            com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return client
-                .execute(this.createHttpRequest(),
-                    com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class);
     }
 
     public String getProjectKey() {

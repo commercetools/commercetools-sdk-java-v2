@@ -63,17 +63,9 @@ public class ByProjectKeyCartsTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .carts()
-                        .get()
-                        .withCustomerId("customerId")
-                        .createHttpRequest(), "get", "/test_projectKey/carts?customerId=customerId", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .carts()
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/carts?expand=expand", },
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").carts().get().withExpand("expand").createHttpRequest(), "get",
+                "/test_projectKey/carts?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/carts?sort=sort", },
@@ -107,7 +99,6 @@ public class ByProjectKeyCartsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(7), },

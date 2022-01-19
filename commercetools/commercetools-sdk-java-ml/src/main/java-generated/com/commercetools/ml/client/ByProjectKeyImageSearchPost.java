@@ -1,8 +1,6 @@
 
 package com.commercetools.ml.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.net.URLConnection;
 import java.nio.file.Files;
@@ -68,19 +66,14 @@ public class ByProjectKeyImageSearchPost
 
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.ml.models.image_search.ImageSearchResponse.class)
-                .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.ml.models.image_search.ImageSearchResponse.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse>> execute(
             final ApiHttpClient client) {
-        return client
-                .execute(this.createHttpRequest(), com.commercetools.ml.models.image_search.ImageSearchResponse.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.ml.models.image_search.ImageSearchResponse.class);
     }
 
     public String getProjectKey() {

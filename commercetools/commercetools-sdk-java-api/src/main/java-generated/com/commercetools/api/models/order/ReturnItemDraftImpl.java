@@ -26,17 +26,21 @@ public class ReturnItemDraftImpl implements ReturnItemDraft {
 
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("comment") final String comment,
-            @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+            @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.quantity = quantity;
         this.lineItemId = lineItemId;
         this.customLineItemId = customLineItemId;
         this.comment = comment;
         this.shipmentState = shipmentState;
+        this.custom = custom;
     }
 
     public ReturnItemDraftImpl() {
@@ -62,6 +66,13 @@ public class ReturnItemDraftImpl implements ReturnItemDraft {
         return this.shipmentState;
     }
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -82,6 +93,10 @@ public class ReturnItemDraftImpl implements ReturnItemDraft {
         this.shipmentState = shipmentState;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -97,6 +112,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft {
                 .append(customLineItemId, that.customLineItemId)
                 .append(comment, that.comment)
                 .append(shipmentState, that.shipmentState)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -107,6 +123,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft {
                 .append(customLineItemId)
                 .append(comment)
                 .append(shipmentState)
+                .append(custom)
                 .toHashCode();
     }
 

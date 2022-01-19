@@ -18,13 +18,16 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
 
     private String action;
 
+    private String transactionId;
+
     private String name;
 
     private java.lang.Object value;
 
     @JsonCreator
-    PaymentSetTransactionCustomFieldActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+    PaymentSetTransactionCustomFieldActionImpl(@JsonProperty("transactionId") final String transactionId,
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+        this.transactionId = transactionId;
         this.name = name;
         this.value = value;
         this.action = SET_TRANSACTION_CUSTOM_FIELD;
@@ -38,12 +41,20 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
         return this.action;
     }
 
+    public String getTransactionId() {
+        return this.transactionId;
+    }
+
     public String getName() {
         return this.name;
     }
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    public void setTransactionId(final String transactionId) {
+        this.transactionId = transactionId;
     }
 
     public void setName(final String name) {
@@ -65,6 +76,7 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
         PaymentSetTransactionCustomFieldActionImpl that = (PaymentSetTransactionCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(transactionId, that.transactionId)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -72,7 +84,7 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(transactionId).append(name).append(value).toHashCode();
     }
 
 }

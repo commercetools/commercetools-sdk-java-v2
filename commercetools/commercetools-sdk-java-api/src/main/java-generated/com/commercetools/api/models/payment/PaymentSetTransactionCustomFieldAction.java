@@ -19,11 +19,17 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
     String SET_TRANSACTION_CUSTOM_FIELD = "setTransactionCustomField";
 
     @NotNull
+    @JsonProperty("transactionId")
+    public String getTransactionId();
+
+    @NotNull
     @JsonProperty("name")
     public String getName();
 
     @JsonProperty("value")
     public Object getValue();
+
+    public void setTransactionId(final String transactionId);
 
     public void setName(final String name);
 
@@ -35,6 +41,7 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
 
     public static PaymentSetTransactionCustomFieldAction of(final PaymentSetTransactionCustomFieldAction template) {
         PaymentSetTransactionCustomFieldActionImpl instance = new PaymentSetTransactionCustomFieldActionImpl();
+        instance.setTransactionId(template.getTransactionId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

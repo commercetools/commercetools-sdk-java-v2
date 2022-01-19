@@ -1,8 +1,6 @@
 
 package com.commercetools.ml.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -48,21 +46,15 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(
-            client.execute(request, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class)
-                    .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout,
+            com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus>> execute(
             final ApiHttpClient client) {
-        return client
-                .execute(this.createHttpRequest(),
-                    com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class);
     }
 
     public String getProjectKey() {

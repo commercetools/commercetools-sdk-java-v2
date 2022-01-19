@@ -28,6 +28,8 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     private java.time.ZonedDateTime lastModifiedAt;
 
     private java.time.ZonedDateTime createdAt;
@@ -39,6 +41,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
             @JsonProperty("comment") final String comment,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("customLineItemId") final String customLineItemId) {
@@ -47,6 +50,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
         this.comment = comment;
         this.shipmentState = shipmentState;
         this.paymentState = paymentState;
+        this.custom = custom;
         this.lastModifiedAt = lastModifiedAt;
         this.createdAt = createdAt;
         this.customLineItemId = customLineItemId;
@@ -81,6 +85,13 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
         return this.paymentState;
     }
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
@@ -113,6 +124,10 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
         this.paymentState = paymentState;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
     }
@@ -141,6 +156,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
                 .append(comment, that.comment)
                 .append(shipmentState, that.shipmentState)
                 .append(paymentState, that.paymentState)
+                .append(custom, that.custom)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(createdAt, that.createdAt)
                 .append(customLineItemId, that.customLineItemId)
@@ -155,6 +171,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
                 .append(comment)
                 .append(shipmentState)
                 .append(paymentState)
+                .append(custom)
                 .append(lastModifiedAt)
                 .append(createdAt)
                 .append(customLineItemId)

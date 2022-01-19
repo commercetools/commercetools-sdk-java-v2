@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -19,6 +20,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateAction {
 
     String SET_TRANSACTION_CUSTOM_TYPE = "setTransactionCustomType";
+
+    @NotNull
+    @JsonProperty("transactionId")
+    public String getTransactionId();
 
     /**
     *  <p>If set, the custom type is set to this new value.
@@ -35,6 +40,8 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    public void setTransactionId(final String transactionId);
+
     public void setType(final TypeResourceIdentifier type);
 
     public void setFields(final FieldContainer fields);
@@ -45,6 +52,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
 
     public static PaymentSetTransactionCustomTypeAction of(final PaymentSetTransactionCustomTypeAction template) {
         PaymentSetTransactionCustomTypeActionImpl instance = new PaymentSetTransactionCustomTypeActionImpl();
+        instance.setTransactionId(template.getTransactionId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;

@@ -22,14 +22,18 @@ public class ParcelDraftImpl implements ParcelDraft {
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     @JsonCreator
     ParcelDraftImpl(
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
     }
 
     public ParcelDraftImpl() {
@@ -50,6 +54,13 @@ public class ParcelDraftImpl implements ParcelDraft {
         return this.items;
     }
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
     }
@@ -66,6 +77,10 @@ public class ParcelDraftImpl implements ParcelDraft {
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -79,12 +94,17 @@ public class ParcelDraftImpl implements ParcelDraft {
         return new EqualsBuilder().append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(measurements).append(trackingData).append(items).toHashCode();
+        return new HashCodeBuilder(17, 37).append(measurements)
+                .append(trackingData)
+                .append(items)
+                .append(custom)
+                .toHashCode();
     }
 
 }

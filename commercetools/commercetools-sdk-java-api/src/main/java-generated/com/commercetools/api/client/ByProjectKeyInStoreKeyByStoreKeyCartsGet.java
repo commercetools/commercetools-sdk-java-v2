@@ -1,8 +1,6 @@
 
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -20,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Queries carts in a specific Store. The {storeKey} path parameter maps to a Store's key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsGet, java.lang.Object>
+public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends
+        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsGet, com.commercetools.api.models.cart.CartPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyCartsGet>,
@@ -57,14 +55,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, java.lang.Object.class).toCompletableFuture(), request, timeout);
+    public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.cart.CartPagedQueryResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), java.lang.Object.class).toCompletableFuture();
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.api.models.cart.CartPagedQueryResponse.class);
     }
 
     public String getProjectKey() {
@@ -73,10 +72,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
 
     public String getStoreKey() {
         return this.storeKey;
-    }
-
-    public List<String> getCustomerId() {
-        return this.getQueryParam("customerId");
     }
 
     public List<String> getExpand() {
@@ -109,38 +104,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
-    }
-
-    /**
-     * set customerId with the specificied value
-     */
-    public ByProjectKeyInStoreKeyByStoreKeyCartsGet withCustomerId(final String customerId) {
-        return copy().withQueryParam("customerId", customerId);
-    }
-
-    /**
-     * add additional customerId query parameter
-     */
-    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addCustomerId(final String customerId) {
-        return copy().addQueryParam("customerId", customerId);
-    }
-
-    /**
-     * set customerId with the specificied values
-     */
-    public ByProjectKeyInStoreKeyByStoreKeyCartsGet withCustomerId(final List<String> customerId) {
-        return copy().withoutQueryParam("customerId")
-                .addQueryParams(customerId.stream()
-                        .map(s -> new ParamEntry<>("customerId", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional customerId query parameters
-     */
-    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addCustomerId(final List<String> customerId) {
-        return copy().addQueryParams(
-            customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
     }
 
     /**

@@ -6,8 +6,10 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -43,6 +45,13 @@ public interface ReturnItem {
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
@@ -60,6 +69,8 @@ public interface ReturnItem {
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
     public void setPaymentState(final ReturnPaymentState paymentState);
+
+    public void setCustom(final CustomFields custom);
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 

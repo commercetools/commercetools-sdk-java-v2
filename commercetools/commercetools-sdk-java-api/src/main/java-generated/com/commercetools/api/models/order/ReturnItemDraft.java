@@ -5,8 +5,10 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -33,6 +35,13 @@ public interface ReturnItemDraft {
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     public void setQuantity(final Long quantity);
 
     public void setLineItemId(final String lineItemId);
@@ -42,6 +51,8 @@ public interface ReturnItemDraft {
     public void setComment(final String comment);
 
     public void setShipmentState(final ReturnShipmentState shipmentState);
+
+    public void setCustom(final CustomFields custom);
 
     public static ReturnItemDraft of() {
         return new ReturnItemDraftImpl();
@@ -54,6 +65,7 @@ public interface ReturnItemDraft {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

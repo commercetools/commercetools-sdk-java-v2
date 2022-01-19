@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -23,6 +24,9 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private String comment;
 
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
 
     public ReturnItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -50,6 +54,17 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this;
     }
 
+    public ReturnItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
     public Long getQuantity() {
         return this.quantity;
     }
@@ -73,17 +88,22 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this.shipmentState;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public ReturnItemDraft build() {
         Objects.requireNonNull(quantity, ReturnItemDraft.class + ": quantity is missing");
         Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
-        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
+        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
     }
 
     /**
      * builds ReturnItemDraft without checking for non null required values
      */
     public ReturnItemDraft buildUnchecked() {
-        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
+        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
     }
 
     public static ReturnItemDraftBuilder of() {
@@ -97,6 +117,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         builder.customLineItemId = template.getCustomLineItemId();
         builder.comment = template.getComment();
         builder.shipmentState = template.getShipmentState();
+        builder.custom = template.getCustom();
         return builder;
     }
 

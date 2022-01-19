@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -21,6 +22,9 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
 
     private java.time.ZonedDateTime lastModifiedAt;
 
@@ -52,6 +56,17 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     public LineItemReturnItemBuilder paymentState(
             final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
+        return this;
+    }
+
+    public LineItemReturnItemBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemReturnItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -91,6 +106,11 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         return this.paymentState;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
@@ -111,16 +131,16 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         Objects.requireNonNull(lastModifiedAt, LineItemReturnItem.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(createdAt, LineItemReturnItem.class + ": createdAt is missing");
         Objects.requireNonNull(lineItemId, LineItemReturnItem.class + ": lineItemId is missing");
-        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
-            lineItemId);
+        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, custom, lastModifiedAt,
+            createdAt, lineItemId);
     }
 
     /**
      * builds LineItemReturnItem without checking for non null required values
      */
     public LineItemReturnItem buildUnchecked() {
-        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
-            lineItemId);
+        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, custom, lastModifiedAt,
+            createdAt, lineItemId);
     }
 
     public static LineItemReturnItemBuilder of() {
@@ -134,6 +154,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         builder.comment = template.getComment();
         builder.shipmentState = template.getShipmentState();
         builder.paymentState = template.getPaymentState();
+        builder.custom = template.getCustom();
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.createdAt = template.getCreatedAt();
         builder.lineItemId = template.getLineItemId();

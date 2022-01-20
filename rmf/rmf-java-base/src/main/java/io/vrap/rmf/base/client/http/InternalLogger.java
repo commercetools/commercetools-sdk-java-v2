@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.event.Level;
 
 /**
  * Unified logger instance to perform logging only for configured logging levels.
@@ -53,6 +54,13 @@ public class InternalLogger {
         return this;
     }
 
+    public InternalLogger info(final Supplier<Object> message, final Throwable throwable) {
+        if (underlyingLogger.isInfoEnabled()) {
+            underlyingLogger.info(message.get().toString(), throwable);
+        }
+        return this;
+    }
+
     public InternalLogger trace(final Supplier<Object> message) {
         if (isTraceEnabled()) {
             underlyingLogger.trace(message.get().toString());
@@ -74,6 +82,13 @@ public class InternalLogger {
         return this;
     }
 
+    public InternalLogger warn(final Supplier<Object> message, final Throwable throwable) {
+        if (underlyingLogger.isWarnEnabled()) {
+            underlyingLogger.warn(message.get().toString(), throwable);
+        }
+        return this;
+    }
+
     public InternalLogger error(final Supplier<Object> message) {
         if (underlyingLogger.isErrorEnabled()) {
             underlyingLogger.error(message.get().toString());
@@ -84,6 +99,38 @@ public class InternalLogger {
     public InternalLogger error(final Supplier<Object> message, final Throwable throwable) {
         if (underlyingLogger.isErrorEnabled()) {
             underlyingLogger.error(message.get().toString(), throwable);
+        }
+        return this;
+    }
+
+    public InternalLogger log(final Level level, final Supplier<Object> message) {
+        switch (level) {
+            case INFO:
+                return info(message);
+            case ERROR:
+                return error(message);
+            case WARN:
+                return warn(message);
+            case DEBUG:
+                return debug(message);
+            case TRACE:
+                return trace(message);
+        }
+        return this;
+    }
+
+    public InternalLogger log(final Level level, final Supplier<Object> message, final Throwable throwable) {
+        switch (level) {
+            case INFO:
+                return info(message, throwable);
+            case ERROR:
+                return error(message, throwable);
+            case WARN:
+                return warn(message, throwable);
+            case DEBUG:
+                return debug(message, throwable);
+            case TRACE:
+                return trace(message, throwable);
         }
         return this;
     }

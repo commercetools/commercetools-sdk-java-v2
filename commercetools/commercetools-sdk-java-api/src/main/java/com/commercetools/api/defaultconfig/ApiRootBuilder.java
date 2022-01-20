@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+import org.slf4j.event.Level;
 
 /**
  * Builder to create a {@link ApiRoot} or a project scoped {@link ProjectApiRoot}
@@ -272,6 +273,10 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {
         return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory));
+    }
+
+    public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent, final Level deprecationLogEvent) {
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent));
     }
 
     public ApiRootBuilder withApiBaseUrl(String apiBaseUrl) {

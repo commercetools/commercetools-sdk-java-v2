@@ -17,8 +17,10 @@ package com.commercetools.docs.meta;
  *
  * <h3>Info</h3>
  *
- * Any response by the API will be logged with the requests HTTP method name, URI and response status code.
+ * By default any response by the API will be logged with the requests HTTP method name, URI and response status code.
  * In case a deprecation header was submitted in the response an info entry with the deprecation notice will be logged.
+ *
+ * The used log level for these events can be configured while instantiating the InternalLoggerMiddleware.
  *
  * <h3>Debug</h3>
  *

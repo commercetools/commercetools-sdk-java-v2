@@ -43,8 +43,6 @@ jobs:
       - name: License check
         run: ./gradlew checkLicense
 
-      - run: cat licenses/dependencies-without-allowed-license.json
-
       - uses: stefanzweifel/git-auto-commit-action@v4
         if: github.event_name == 'push'
         with:

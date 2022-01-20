@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+
 import org.slf4j.event.Level;
 
 public class MLApiRootBuilder {
@@ -255,7 +256,8 @@ public class MLApiRootBuilder {
         return this;
     }
 
-    public MLApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent, final Level deprecationLogEvent) {
+    public MLApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent) {
         builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent);
 
         return this;

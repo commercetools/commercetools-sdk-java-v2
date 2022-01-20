@@ -83,7 +83,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
-                        notices.forEach(message -> logger.log(deprecationLogEvent, () -> "Deprecation notice: " + message));
+                        notices.forEach(
+                            message -> logger.log(deprecationLogEvent, () -> "Deprecation notice: " + message));
                     }
                     responseLogger.debug(() -> errorResponse, throwable);
                     responseLogger.trace(() -> errorResponse.getStatusCode() + "\n"
@@ -96,8 +97,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 }
             }
             else {
-                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
-                    response.getStatusCode()));
+                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s", request.getMethod().name(),
+                    request.getUrl(), response.getStatusCode()));
                 final List<Map.Entry<String, String>> notices = response.getHeaders()
                         .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                 if (notices != null) {

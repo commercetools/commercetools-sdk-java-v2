@@ -12,7 +12,8 @@ public interface InternalLoggerMiddleware extends Middleware {
         return new InternalLoggerMiddlewareImpl(internalLoggerFactory);
     }
 
-    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent, final Level deprecationLogEvent) {
+    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent,
+            final Level deprecationLogEvent) {
         return new InternalLoggerMiddlewareImpl(internalLoggerFactory, responseLogEvent, deprecationLogEvent);
     }
 }

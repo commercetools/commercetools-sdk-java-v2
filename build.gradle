@@ -124,6 +124,10 @@ licenseReport {
     filters = [new LicenseBundleNormalizer(bundlePath: "$projectDir/license-normalizer-bundle.json")]
 }
 
+generateLicenseReport {
+    outputs.upToDateWhen { false }
+}
+
 def excludeProjects = [
         'internal-docs'
 ]
@@ -153,6 +157,10 @@ subprojects { project ->
         }
 
         checkLicense.dependsOn(':generateLicenseReport')
+        generateLicenseReport {
+            outputs.upToDateWhen { false }
+        }
+
     }
 
     task allDeps(type: DependencyReportTask) {}

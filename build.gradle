@@ -123,6 +123,7 @@ licenseReport {
     renderers = [new JsonReportRenderer("index.json", true)]
     filters = [new LicenseBundleNormalizer(bundlePath: "$projectDir/license-normalizer-bundle.json")]
 }
+
 def excludeProjects = [
         'internal-docs'
 ]
@@ -132,7 +133,7 @@ subprojects { project ->
         licenseReport {
             // Set output directory for the report data.
             // Defaults to ${project.buildDir}/reports/dependency-license.
-            outputDir = "$rootDir/licenses"
+            outputDir = "$rootDir/licenses/${project.name}"
             projects = [project]
             // Adjust the configurations to fetch dependencies, e.g. for Android projects. Default is 'runtimeClasspath'
             configurations = ['runtimeClasspath']
@@ -147,9 +148,12 @@ subprojects { project ->
             // Accepts File, URL or String path to local or remote file
             allowedLicensesFile = new File("$rootDir/allowed-licenses.json")
 
-            renderers = [new JsonReportRenderer("${project.name}.json", true)]
+            renderers = [new JsonReportRenderer()]
             filters = [new LicenseBundleNormalizer(bundlePath: "$rootDir/license-normalizer-bundle.json")]
         }
+
+        checkLicense.dependsOn(':generateLicenseReport')
     }
+
     task allDeps(type: DependencyReportTask) {}
 }

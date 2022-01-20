@@ -14,10 +14,7 @@ dependencies {
     api commons.lang3
 
     api project(':commercetools:commercetools-sdk-java-api')
-    api("com.commercetools.sdk.jvm.core:commercetools-java-client-core") {
-        version ctpJvmSdkVersion
-        exclude group: 'javax.annotation', module: 'javax.annotation-api'
-    }
+    api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version ctpJvmSdkVersion
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version ctpJvmSdkVersion

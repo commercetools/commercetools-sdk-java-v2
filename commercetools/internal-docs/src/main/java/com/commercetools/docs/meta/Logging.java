@@ -6,6 +6,32 @@ package com.commercetools.docs.meta;
  *
  * <p>Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.</p>
  *
+ * <h2 id=log-information>Log Information</h2>
+ *
+ * The default logger middleware logs following information per level:
+ *
+ * <h3>Error</h3>
+ *
+ * In case of an {@link io.vrap.rmf.base.client.ApiHttpException} the requests HTTP method name, URI and response status code
+ * will be logged. For any other exception happening the cause and the exception will be logged.
+ *
+ * <h3>Info</h3>
+ *
+ * By default any response by the API will be logged with the requests HTTP method name, URI and response status code.
+ * In case a deprecation header was submitted in the response an info entry with the deprecation notice will be logged.
+ *
+ * The used log level for these events can be configured while instantiating the InternalLoggerMiddleware.
+ *
+ * <h3>Debug</h3>
+ *
+ * The request and the response object will be logged as a string representation including headers and body. Sensitive
+ * data like auth token and passwords will be redacted.
+ *
+ * <h3>Trace</h3>
+ *
+ * The request and response will be logged with a pretty printed output.  Sensitive data like auth token and passwords
+ * will be redacted.
+ *
  * <h2 id=logger-hierarchy>Logger hierarchy</h2>
  *
  * <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>

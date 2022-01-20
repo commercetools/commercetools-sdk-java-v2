@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -18,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>The request body to <a href="#import-productdrafts">import ProductDrafts</a>. Contains data for <a href="/../api/projects/products#productdraft">Products</a> to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ProductDraftImportRequestImpl implements ProductDraftImportRequest {
+public class ProductDraftImportRequestImpl implements ProductDraftImportRequest, ModelBase {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 

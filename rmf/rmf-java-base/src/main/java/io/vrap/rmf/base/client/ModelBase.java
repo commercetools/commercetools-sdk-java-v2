@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.builder.RecursiveToStringStyle;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 public interface ModelBase {
 
@@ -30,5 +31,9 @@ public interface ModelBase {
 
     default public String reflectionString() {
         return ReflectionToStringBuilder.reflectionToString(this, new FilteredRecursiveToStringStyle());
+    }
+
+    default public String reflectionString(ToStringStyle toStringStyle) {
+        return ReflectionToStringBuilder.reflectionToString(this, toStringStyle);
     }
 }

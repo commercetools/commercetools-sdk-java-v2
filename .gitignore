@@ -13,3 +13,9 @@ bin
 .idea
 cache/
 /taglets.jar
+!/licences
+/licenses/*
+!/licenses/index.json
+!/licenses/**/index.json
+dependencies-without-allowed-license.json
+project-licenses-for-check-license-task.json

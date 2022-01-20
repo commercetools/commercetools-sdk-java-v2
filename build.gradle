@@ -120,7 +120,7 @@ licenseReport {
     // Accepts File, URL or String path to local or remote file
     allowedLicensesFile = new File("$projectDir/allowed-licenses.json")
 
-    renderers = [new JsonReportRenderer("index.json", true)]
+    renderers = [new JsonReportRenderer("index.json", false)]
     filters = [new LicenseBundleNormalizer(bundlePath: "$projectDir/license-normalizer-bundle.json")]
 }
 
@@ -148,7 +148,7 @@ subprojects { project ->
             // Accepts File, URL or String path to local or remote file
             allowedLicensesFile = new File("$rootDir/allowed-licenses.json")
 
-            renderers = [new JsonReportRenderer()]
+            renderers = [new JsonReportRenderer("index.json", false)]
             filters = [new LicenseBundleNormalizer(bundlePath: "$rootDir/license-normalizer-bundle.json")]
         }
 

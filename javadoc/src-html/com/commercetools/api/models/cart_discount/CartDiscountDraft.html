@@ -23,7 +23,7 @@
 <span class="source-line-no">010</span><span id="line.10">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.LocalizedString;</span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.type.CustomFields;</span>
+<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
@@ -111,7 +111,7 @@
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    @Valid</span>
 <span class="source-line-no">100</span><span id="line.100">    @JsonProperty("custom")</span>
-<span class="source-line-no">101</span><span id="line.101">    public CustomFields getCustom();</span>
+<span class="source-line-no">101</span><span id="line.101">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
@@ -137,7 +137,7 @@
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    public void setStackingMode(final StackingMode stackingMode);</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">127</span><span id="line.127">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    public static CartDiscountDraft of() {</span>
 <span class="source-line-no">130</span><span id="line.130">        return new CartDiscountDraftImpl();</span>

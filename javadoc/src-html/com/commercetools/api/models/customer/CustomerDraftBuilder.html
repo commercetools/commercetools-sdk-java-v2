@@ -67,13 +67,13 @@
 <span class="source-line-no">054</span><span id="line.54">    private java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses;</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    @Nullable</span>
-<span class="source-line-no">057</span><span id="line.57">    private Long defaultShippingAddress;</span>
+<span class="source-line-no">057</span><span id="line.57">    private Integer defaultShippingAddress;</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    @Nullable</span>
 <span class="source-line-no">060</span><span id="line.60">    private java.util.List&lt;Integer&gt; shippingAddresses;</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    @Nullable</span>
-<span class="source-line-no">063</span><span id="line.63">    private Long defaultBillingAddress;</span>
+<span class="source-line-no">063</span><span id="line.63">    private Integer defaultBillingAddress;</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    @Nullable</span>
 <span class="source-line-no">066</span><span id="line.66">    private java.util.List&lt;Integer&gt; billingAddresses;</span>
@@ -204,7 +204,7 @@
 <span class="source-line-no">191</span><span id="line.191">        return this;</span>
 <span class="source-line-no">192</span><span id="line.192">    }</span>
 <span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public CustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {</span>
+<span class="source-line-no">194</span><span id="line.194">    public CustomerDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {</span>
 <span class="source-line-no">195</span><span id="line.195">        this.defaultShippingAddress = defaultShippingAddress;</span>
 <span class="source-line-no">196</span><span id="line.196">        return this;</span>
 <span class="source-line-no">197</span><span id="line.197">    }</span>
@@ -219,7 +219,7 @@
 <span class="source-line-no">206</span><span id="line.206">        return this;</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public CustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {</span>
+<span class="source-line-no">209</span><span id="line.209">    public CustomerDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {</span>
 <span class="source-line-no">210</span><span id="line.210">        this.defaultBillingAddress = defaultBillingAddress;</span>
 <span class="source-line-no">211</span><span id="line.211">        return this;</span>
 <span class="source-line-no">212</span><span id="line.212">    }</span>
@@ -382,7 +382,7 @@
 <span class="source-line-no">369</span><span id="line.369">    }</span>
 <span class="source-line-no">370</span><span id="line.370"></span>
 <span class="source-line-no">371</span><span id="line.371">    @Nullable</span>
-<span class="source-line-no">372</span><span id="line.372">    public Long getDefaultShippingAddress() {</span>
+<span class="source-line-no">372</span><span id="line.372">    public Integer getDefaultShippingAddress() {</span>
 <span class="source-line-no">373</span><span id="line.373">        return this.defaultShippingAddress;</span>
 <span class="source-line-no">374</span><span id="line.374">    }</span>
 <span class="source-line-no">375</span><span id="line.375"></span>
@@ -392,7 +392,7 @@
 <span class="source-line-no">379</span><span id="line.379">    }</span>
 <span class="source-line-no">380</span><span id="line.380"></span>
 <span class="source-line-no">381</span><span id="line.381">    @Nullable</span>
-<span class="source-line-no">382</span><span id="line.382">    public Long getDefaultBillingAddress() {</span>
+<span class="source-line-no">382</span><span id="line.382">    public Integer getDefaultBillingAddress() {</span>
 <span class="source-line-no">383</span><span id="line.383">        return this.defaultBillingAddress;</span>
 <span class="source-line-no">384</span><span id="line.384">    }</span>
 <span class="source-line-no">385</span><span id="line.385"></span>

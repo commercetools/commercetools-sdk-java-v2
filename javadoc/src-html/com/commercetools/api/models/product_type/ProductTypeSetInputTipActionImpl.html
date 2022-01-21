@@ -21,74 +21,75 @@
 <span class="source-line-no">008</span><span id="line.8">import com.fasterxml.jackson.annotation.JsonProperty;</span>
 <span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipAction {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    private String action;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    private String attributeName;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    private com.commercetools.api.models.common.LocalizedString inputTip;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    @JsonCreator</span>
-<span class="source-line-no">026</span><span id="line.26">    ProductTypeSetInputTipActionImpl(@JsonProperty("attributeName") final String attributeName,</span>
-<span class="source-line-no">027</span><span id="line.27">            @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {</span>
-<span class="source-line-no">028</span><span id="line.28">        this.attributeName = attributeName;</span>
-<span class="source-line-no">029</span><span id="line.29">        this.inputTip = inputTip;</span>
-<span class="source-line-no">030</span><span id="line.30">        this.action = SET_INPUT_TIP;</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public ProductTypeSetInputTipActionImpl() {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.action = SET_INPUT_TIP;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public String getAction() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return this.action;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public String getAttributeName() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return this.attributeName;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public com.commercetools.api.models.common.LocalizedString getInputTip() {</span>
-<span class="source-line-no">046</span><span id="line.46">        return this.inputTip;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public void setAttributeName(final String attributeName) {</span>
-<span class="source-line-no">050</span><span id="line.50">        this.attributeName = attributeName;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public void setInputTip(final com.commercetools.api.models.common.LocalizedString inputTip) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.inputTip = inputTip;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    @Override</span>
-<span class="source-line-no">058</span><span id="line.58">    public boolean equals(Object o) {</span>
-<span class="source-line-no">059</span><span id="line.59">        if (this == o)</span>
-<span class="source-line-no">060</span><span id="line.60">            return true;</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">063</span><span id="line.63">            return false;</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">        ProductTypeSetInputTipActionImpl that = (ProductTypeSetInputTipActionImpl) o;</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">068</span><span id="line.68">                .append(attributeName, that.attributeName)</span>
-<span class="source-line-no">069</span><span id="line.69">                .append(inputTip, that.inputTip)</span>
-<span class="source-line-no">070</span><span id="line.70">                .isEquals();</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    @Override</span>
-<span class="source-line-no">074</span><span id="line.74">    public int hashCode() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(inputTip).toHashCode();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">}</span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.ModelBase;</span>
+<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18">public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipAction, ModelBase {</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    private String action;</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    private String attributeName;</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private com.commercetools.api.models.common.LocalizedString inputTip;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonCreator</span>
+<span class="source-line-no">027</span><span id="line.27">    ProductTypeSetInputTipActionImpl(@JsonProperty("attributeName") final String attributeName,</span>
+<span class="source-line-no">028</span><span id="line.28">            @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {</span>
+<span class="source-line-no">029</span><span id="line.29">        this.attributeName = attributeName;</span>
+<span class="source-line-no">030</span><span id="line.30">        this.inputTip = inputTip;</span>
+<span class="source-line-no">031</span><span id="line.31">        this.action = SET_INPUT_TIP;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public ProductTypeSetInputTipActionImpl() {</span>
+<span class="source-line-no">035</span><span id="line.35">        this.action = SET_INPUT_TIP;</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public String getAction() {</span>
+<span class="source-line-no">039</span><span id="line.39">        return this.action;</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public String getAttributeName() {</span>
+<span class="source-line-no">043</span><span id="line.43">        return this.attributeName;</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    public com.commercetools.api.models.common.LocalizedString getInputTip() {</span>
+<span class="source-line-no">047</span><span id="line.47">        return this.inputTip;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public void setAttributeName(final String attributeName) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.attributeName = attributeName;</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public void setInputTip(final com.commercetools.api.models.common.LocalizedString inputTip) {</span>
+<span class="source-line-no">055</span><span id="line.55">        this.inputTip = inputTip;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    @Override</span>
+<span class="source-line-no">059</span><span id="line.59">    public boolean equals(Object o) {</span>
+<span class="source-line-no">060</span><span id="line.60">        if (this == o)</span>
+<span class="source-line-no">061</span><span id="line.61">            return true;</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">064</span><span id="line.64">            return false;</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">        ProductTypeSetInputTipActionImpl that = (ProductTypeSetInputTipActionImpl) o;</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">069</span><span id="line.69">                .append(attributeName, that.attributeName)</span>
+<span class="source-line-no">070</span><span id="line.70">                .append(inputTip, that.inputTip)</span>
+<span class="source-line-no">071</span><span id="line.71">                .isEquals();</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    @Override</span>
+<span class="source-line-no">075</span><span id="line.75">    public int hashCode() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(inputTip).toHashCode();</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">}</span>
 
 
 

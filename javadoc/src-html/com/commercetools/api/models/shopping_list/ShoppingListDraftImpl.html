@@ -21,220 +21,221 @@
 <span class="source-line-no">008</span><span id="line.8">import com.fasterxml.jackson.annotation.JsonProperty;</span>
 <span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">public class ShoppingListDraftImpl implements ShoppingListDraft {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    private Long deleteDaysAfterLastModification;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.common.LocalizedString description;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private String key;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems;</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.api.models.common.LocalizedString name;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private com.commercetools.api.models.common.LocalizedString slug;</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    private java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems;</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    private String anonymousId;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    private com.commercetools.api.models.store.StoreResourceIdentifier store;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonCreator</span>
-<span class="source-line-no">042</span><span id="line.42">    ShoppingListDraftImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
-<span class="source-line-no">043</span><span id="line.43">            @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,</span>
-<span class="source-line-no">044</span><span id="line.44">            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,</span>
-<span class="source-line-no">045</span><span id="line.45">            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,</span>
-<span class="source-line-no">046</span><span id="line.46">            @JsonProperty("key") final String key,</span>
-<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("lineItems") final java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems,</span>
-<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,</span>
-<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,</span>
-<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("textLineItems") final java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems,</span>
-<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("anonymousId") final String anonymousId,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.custom = custom;</span>
-<span class="source-line-no">054</span><span id="line.54">        this.customer = customer;</span>
-<span class="source-line-no">055</span><span id="line.55">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
-<span class="source-line-no">056</span><span id="line.56">        this.description = description;</span>
-<span class="source-line-no">057</span><span id="line.57">        this.key = key;</span>
-<span class="source-line-no">058</span><span id="line.58">        this.lineItems = lineItems;</span>
-<span class="source-line-no">059</span><span id="line.59">        this.name = name;</span>
-<span class="source-line-no">060</span><span id="line.60">        this.slug = slug;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.textLineItems = textLineItems;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.anonymousId = anonymousId;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.store = store;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public ShoppingListDraftImpl() {</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">    */</span>
-<span class="source-line-no">072</span><span id="line.72">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return this.custom;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.customer;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
-<span class="source-line-no">083</span><span id="line.83">    public Long getDeleteDaysAfterLastModification() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.deleteDaysAfterLastModification;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return this.description;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;User-specific unique identifier for the shopping list.&lt;/p&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">    */</span>
-<span class="source-line-no">094</span><span id="line.94">    public String getKey() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.key;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; getLineItems() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.lineItems;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return this.name;</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">    *  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related shopping list.</span>
-<span class="source-line-no">108</span><span id="line.108">    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.</span>
-<span class="source-line-no">109</span><span id="line.109">    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">    */</span>
-<span class="source-line-no">111</span><span id="line.111">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return this.slug;</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; getTextLineItems() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return this.textLineItems;</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">    *  &lt;p&gt;Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
-<span class="source-line-no">121</span><span id="line.121">    */</span>
-<span class="source-line-no">122</span><span id="line.122">    public String getAnonymousId() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return this.anonymousId;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {</span>
-<span class="source-line-no">127</span><span id="line.127">        return this.store;</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">131</span><span id="line.131">        this.custom = custom;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {</span>
-<span class="source-line-no">135</span><span id="line.135">        this.customer = customer;</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {</span>
-<span class="source-line-no">139</span><span id="line.139">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
-<span class="source-line-no">143</span><span id="line.143">        this.description = description;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public void setKey(final String key) {</span>
-<span class="source-line-no">147</span><span id="line.147">        this.key = key;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public void setLineItems(final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft... lineItems) {</span>
-<span class="source-line-no">151</span><span id="line.151">        this.lineItems = new ArrayList&lt;&gt;(Arrays.asList(lineItems));</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public void setLineItems(</span>
-<span class="source-line-no">155</span><span id="line.155">            final java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems) {</span>
-<span class="source-line-no">156</span><span id="line.156">        this.lineItems = lineItems;</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">160</span><span id="line.160">        this.name = name;</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
-<span class="source-line-no">164</span><span id="line.164">        this.slug = slug;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setTextLineItems(final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {</span>
-<span class="source-line-no">168</span><span id="line.168">        this.textLineItems = new ArrayList&lt;&gt;(Arrays.asList(textLineItems));</span>
-<span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public void setTextLineItems(</span>
-<span class="source-line-no">172</span><span id="line.172">            final java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.textLineItems = textLineItems;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setAnonymousId(final String anonymousId) {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.anonymousId = anonymousId;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.store = store;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    @Override</span>
-<span class="source-line-no">185</span><span id="line.185">    public boolean equals(Object o) {</span>
-<span class="source-line-no">186</span><span id="line.186">        if (this == o)</span>
-<span class="source-line-no">187</span><span id="line.187">            return true;</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">190</span><span id="line.190">            return false;</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">        ShoppingListDraftImpl that = (ShoppingListDraftImpl) o;</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">        return new EqualsBuilder().append(custom, that.custom)</span>
-<span class="source-line-no">195</span><span id="line.195">                .append(customer, that.customer)</span>
-<span class="source-line-no">196</span><span id="line.196">                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)</span>
-<span class="source-line-no">197</span><span id="line.197">                .append(description, that.description)</span>
-<span class="source-line-no">198</span><span id="line.198">                .append(key, that.key)</span>
-<span class="source-line-no">199</span><span id="line.199">                .append(lineItems, that.lineItems)</span>
-<span class="source-line-no">200</span><span id="line.200">                .append(name, that.name)</span>
-<span class="source-line-no">201</span><span id="line.201">                .append(slug, that.slug)</span>
-<span class="source-line-no">202</span><span id="line.202">                .append(textLineItems, that.textLineItems)</span>
-<span class="source-line-no">203</span><span id="line.203">                .append(anonymousId, that.anonymousId)</span>
-<span class="source-line-no">204</span><span id="line.204">                .append(store, that.store)</span>
-<span class="source-line-no">205</span><span id="line.205">                .isEquals();</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    @Override</span>
-<span class="source-line-no">209</span><span id="line.209">    public int hashCode() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return new HashCodeBuilder(17, 37).append(custom)</span>
-<span class="source-line-no">211</span><span id="line.211">                .append(customer)</span>
-<span class="source-line-no">212</span><span id="line.212">                .append(deleteDaysAfterLastModification)</span>
-<span class="source-line-no">213</span><span id="line.213">                .append(description)</span>
-<span class="source-line-no">214</span><span id="line.214">                .append(key)</span>
-<span class="source-line-no">215</span><span id="line.215">                .append(lineItems)</span>
-<span class="source-line-no">216</span><span id="line.216">                .append(name)</span>
-<span class="source-line-no">217</span><span id="line.217">                .append(slug)</span>
-<span class="source-line-no">218</span><span id="line.218">                .append(textLineItems)</span>
-<span class="source-line-no">219</span><span id="line.219">                .append(anonymousId)</span>
-<span class="source-line-no">220</span><span id="line.220">                .append(store)</span>
-<span class="source-line-no">221</span><span id="line.221">                .toHashCode();</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">}</span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.ModelBase;</span>
+<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18">public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private Long deleteDaysAfterLastModification;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.common.LocalizedString description;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private String key;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.common.LocalizedString name;</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    private com.commercetools.api.models.common.LocalizedString slug;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    private java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems;</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    private String anonymousId;</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.store.StoreResourceIdentifier store;</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonCreator</span>
+<span class="source-line-no">043</span><span id="line.43">    ShoppingListDraftImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
+<span class="source-line-no">044</span><span id="line.44">            @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,</span>
+<span class="source-line-no">045</span><span id="line.45">            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,</span>
+<span class="source-line-no">046</span><span id="line.46">            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,</span>
+<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("key") final String key,</span>
+<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("lineItems") final java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems,</span>
+<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,</span>
+<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,</span>
+<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("textLineItems") final java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("anonymousId") final String anonymousId,</span>
+<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.custom = custom;</span>
+<span class="source-line-no">055</span><span id="line.55">        this.customer = customer;</span>
+<span class="source-line-no">056</span><span id="line.56">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
+<span class="source-line-no">057</span><span id="line.57">        this.description = description;</span>
+<span class="source-line-no">058</span><span id="line.58">        this.key = key;</span>
+<span class="source-line-no">059</span><span id="line.59">        this.lineItems = lineItems;</span>
+<span class="source-line-no">060</span><span id="line.60">        this.name = name;</span>
+<span class="source-line-no">061</span><span id="line.61">        this.slug = slug;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.textLineItems = textLineItems;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.store = store;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public ShoppingListDraftImpl() {</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">    */</span>
+<span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.custom;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return this.customer;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">    *  &lt;p&gt;The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">    */</span>
+<span class="source-line-no">084</span><span id="line.84">    public Long getDeleteDaysAfterLastModification() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return this.deleteDaysAfterLastModification;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">089</span><span id="line.89">        return this.description;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">    *  &lt;p&gt;User-specific unique identifier for the shopping list.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">    */</span>
+<span class="source-line-no">095</span><span id="line.95">    public String getKey() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.key;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; getLineItems() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return this.lineItems;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return this.name;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    /**</span>
+<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related shopping list.</span>
+<span class="source-line-no">109</span><span id="line.109">    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.</span>
+<span class="source-line-no">110</span><span id="line.110">    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.&lt;/p&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">    */</span>
+<span class="source-line-no">112</span><span id="line.112">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return this.slug;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; getTextLineItems() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return this.textLineItems;</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    /**</span>
+<span class="source-line-no">121</span><span id="line.121">    *  &lt;p&gt;Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
+<span class="source-line-no">122</span><span id="line.122">    */</span>
+<span class="source-line-no">123</span><span id="line.123">    public String getAnonymousId() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return this.anonymousId;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return this.store;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">132</span><span id="line.132">        this.custom = custom;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {</span>
+<span class="source-line-no">136</span><span id="line.136">        this.customer = customer;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {</span>
+<span class="source-line-no">140</span><span id="line.140">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
+<span class="source-line-no">144</span><span id="line.144">        this.description = description;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public void setKey(final String key) {</span>
+<span class="source-line-no">148</span><span id="line.148">        this.key = key;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public void setLineItems(final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft... lineItems) {</span>
+<span class="source-line-no">152</span><span id="line.152">        this.lineItems = new ArrayList&lt;&gt;(Arrays.asList(lineItems));</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public void setLineItems(</span>
+<span class="source-line-no">156</span><span id="line.156">            final java.util.List&lt;com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft&gt; lineItems) {</span>
+<span class="source-line-no">157</span><span id="line.157">        this.lineItems = lineItems;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">161</span><span id="line.161">        this.name = name;</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
+<span class="source-line-no">165</span><span id="line.165">        this.slug = slug;</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    public void setTextLineItems(final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {</span>
+<span class="source-line-no">169</span><span id="line.169">        this.textLineItems = new ArrayList&lt;&gt;(Arrays.asList(textLineItems));</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public void setTextLineItems(</span>
+<span class="source-line-no">173</span><span id="line.173">            final java.util.List&lt;com.commercetools.api.models.shopping_list.TextLineItemDraft&gt; textLineItems) {</span>
+<span class="source-line-no">174</span><span id="line.174">        this.textLineItems = textLineItems;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public void setAnonymousId(final String anonymousId) {</span>
+<span class="source-line-no">178</span><span id="line.178">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
+<span class="source-line-no">182</span><span id="line.182">        this.store = store;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    @Override</span>
+<span class="source-line-no">186</span><span id="line.186">    public boolean equals(Object o) {</span>
+<span class="source-line-no">187</span><span id="line.187">        if (this == o)</span>
+<span class="source-line-no">188</span><span id="line.188">            return true;</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">191</span><span id="line.191">            return false;</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">        ShoppingListDraftImpl that = (ShoppingListDraftImpl) o;</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">        return new EqualsBuilder().append(custom, that.custom)</span>
+<span class="source-line-no">196</span><span id="line.196">                .append(customer, that.customer)</span>
+<span class="source-line-no">197</span><span id="line.197">                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)</span>
+<span class="source-line-no">198</span><span id="line.198">                .append(description, that.description)</span>
+<span class="source-line-no">199</span><span id="line.199">                .append(key, that.key)</span>
+<span class="source-line-no">200</span><span id="line.200">                .append(lineItems, that.lineItems)</span>
+<span class="source-line-no">201</span><span id="line.201">                .append(name, that.name)</span>
+<span class="source-line-no">202</span><span id="line.202">                .append(slug, that.slug)</span>
+<span class="source-line-no">203</span><span id="line.203">                .append(textLineItems, that.textLineItems)</span>
+<span class="source-line-no">204</span><span id="line.204">                .append(anonymousId, that.anonymousId)</span>
+<span class="source-line-no">205</span><span id="line.205">                .append(store, that.store)</span>
+<span class="source-line-no">206</span><span id="line.206">                .isEquals();</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    @Override</span>
+<span class="source-line-no">210</span><span id="line.210">    public int hashCode() {</span>
+<span class="source-line-no">211</span><span id="line.211">        return new HashCodeBuilder(17, 37).append(custom)</span>
+<span class="source-line-no">212</span><span id="line.212">                .append(customer)</span>
+<span class="source-line-no">213</span><span id="line.213">                .append(deleteDaysAfterLastModification)</span>
+<span class="source-line-no">214</span><span id="line.214">                .append(description)</span>
+<span class="source-line-no">215</span><span id="line.215">                .append(key)</span>
+<span class="source-line-no">216</span><span id="line.216">                .append(lineItems)</span>
+<span class="source-line-no">217</span><span id="line.217">                .append(name)</span>
+<span class="source-line-no">218</span><span id="line.218">                .append(slug)</span>
+<span class="source-line-no">219</span><span id="line.219">                .append(textLineItems)</span>
+<span class="source-line-no">220</span><span id="line.220">                .append(anonymousId)</span>
+<span class="source-line-no">221</span><span id="line.221">                .append(store)</span>
+<span class="source-line-no">222</span><span id="line.222">                .toHashCode();</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">}</span>
 
 
 

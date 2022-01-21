@@ -14,134 +14,125 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.importapi.client;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;</span>
-<span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">import java.net.URI;</span>
-<span class="source-line-no">007</span><span id="line.7">import java.time.Duration;</span>
-<span class="source-line-no">008</span><span id="line.8">import java.util.ArrayList;</span>
-<span class="source-line-no">009</span><span id="line.9">import java.util.List;</span>
-<span class="source-line-no">010</span><span id="line.10">import java.util.concurrent.CompletableFuture;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">016</span><span id="line.16">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19">*  &lt;p&gt;Creates a request for creating new Prices or updating existing ones.&lt;/p&gt;</span>
-<span class="source-line-no">020</span><span id="line.20">*/</span>
-<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">022</span><span id="line.22">public class ByProjectKeyPricesImportContainersByImportContainerKeyPost extends</span>
-<span class="source-line-no">023</span><span id="line.23">        ApiMethod&lt;ByProjectKeyPricesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse&gt;</span>
-<span class="source-line-no">024</span><span id="line.24">        implements</span>
-<span class="source-line-no">025</span><span id="line.25">        com.commercetools.importapi.client.Secured_by_manage_productsTrait&lt;ByProjectKeyPricesImportContainersByImportContainerKeyPost&gt; {</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private String projectKey;</span>
-<span class="source-line-no">028</span><span id="line.28">    private String importContainerKey;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.net.URI;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.time.Duration;</span>
+<span class="source-line-no">006</span><span id="line.6">import java.util.ArrayList;</span>
+<span class="source-line-no">007</span><span id="line.7">import java.util.List;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.CompletableFuture;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">012</span><span id="line.12"></span>
+<span class="source-line-no">013</span><span id="line.13">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;Creates a request for creating new Prices or updating existing ones.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18">*/</span>
+<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">020</span><span id="line.20">public class ByProjectKeyPricesImportContainersByImportContainerKeyPost extends</span>
+<span class="source-line-no">021</span><span id="line.21">        ApiMethod&lt;ByProjectKeyPricesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse&gt;</span>
+<span class="source-line-no">022</span><span id="line.22">        implements</span>
+<span class="source-line-no">023</span><span id="line.23">        com.commercetools.importapi.client.Secured_by_manage_productsTrait&lt;ByProjectKeyPricesImportContainersByImportContainerKeyPost&gt; {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private String projectKey;</span>
+<span class="source-line-no">026</span><span id="line.26">    private String importContainerKey;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public ByProjectKeyPricesImportContainersByImportContainerKeyPost(final ApiHttpClient apiHttpClient,</span>
-<span class="source-line-no">033</span><span id="line.33">            String projectKey, String importContainerKey,</span>
-<span class="source-line-no">034</span><span id="line.34">            com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest) {</span>
-<span class="source-line-no">035</span><span id="line.35">        super(apiHttpClient);</span>
-<span class="source-line-no">036</span><span id="line.36">        this.projectKey = projectKey;</span>
-<span class="source-line-no">037</span><span id="line.37">        this.importContainerKey = importContainerKey;</span>
-<span class="source-line-no">038</span><span id="line.38">        this.priceImportRequest = priceImportRequest;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public ByProjectKeyPricesImportContainersByImportContainerKeyPost(</span>
-<span class="source-line-no">042</span><span id="line.42">            ByProjectKeyPricesImportContainersByImportContainerKeyPost t) {</span>
-<span class="source-line-no">043</span><span id="line.43">        super(t);</span>
-<span class="source-line-no">044</span><span id="line.44">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">045</span><span id="line.45">        this.importContainerKey = t.importContainerKey;</span>
-<span class="source-line-no">046</span><span id="line.46">        this.priceImportRequest = t.priceImportRequest;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Override</span>
-<span class="source-line-no">050</span><span id="line.50">    public ApiHttpRequest createHttpRequest() {</span>
-<span class="source-line-no">051</span><span id="line.51">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">052</span><span id="line.52">        String httpRequestPath = String.format("/%s/prices/import-containers/%s", this.projectKey,</span>
-<span class="source-line-no">053</span><span id="line.53">            this.importContainerKey);</span>
-<span class="source-line-no">054</span><span id="line.54">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">055</span><span id="line.55">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">056</span><span id="line.56">        }</span>
-<span class="source-line-no">057</span><span id="line.57">        try {</span>
-<span class="source-line-no">058</span><span id="line.58">            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest);</span>
-<span class="source-line-no">059</span><span id="line.59">            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);</span>
-<span class="source-line-no">060</span><span id="line.60">        }</span>
-<span class="source-line-no">061</span><span id="line.61">        catch (Exception e) {</span>
-<span class="source-line-no">062</span><span id="line.62">            e.printStackTrace();</span>
-<span class="source-line-no">063</span><span id="line.63">        }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    @Override</span>
-<span class="source-line-no">069</span><span id="line.69">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importrequests.ImportResponse&gt; executeBlocking(</span>
-<span class="source-line-no">070</span><span id="line.70">            final ApiHttpClient client, Duration timeout) {</span>
-<span class="source-line-no">071</span><span id="line.71">        ApiHttpRequest request = this.createHttpRequest();</span>
-<span class="source-line-no">072</span><span id="line.72">        return blockingWait(</span>
-<span class="source-line-no">073</span><span id="line.73">            client.execute(request, com.commercetools.importapi.models.importrequests.ImportResponse.class)</span>
-<span class="source-line-no">074</span><span id="line.74">                    .toCompletableFuture(),</span>
-<span class="source-line-no">075</span><span id="line.75">            request, timeout);</span>
+<span class="source-line-no">030</span><span id="line.30">    public ByProjectKeyPricesImportContainersByImportContainerKeyPost(final ApiHttpClient apiHttpClient,</span>
+<span class="source-line-no">031</span><span id="line.31">            String projectKey, String importContainerKey,</span>
+<span class="source-line-no">032</span><span id="line.32">            com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest) {</span>
+<span class="source-line-no">033</span><span id="line.33">        super(apiHttpClient);</span>
+<span class="source-line-no">034</span><span id="line.34">        this.projectKey = projectKey;</span>
+<span class="source-line-no">035</span><span id="line.35">        this.importContainerKey = importContainerKey;</span>
+<span class="source-line-no">036</span><span id="line.36">        this.priceImportRequest = priceImportRequest;</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public ByProjectKeyPricesImportContainersByImportContainerKeyPost(</span>
+<span class="source-line-no">040</span><span id="line.40">            ByProjectKeyPricesImportContainersByImportContainerKeyPost t) {</span>
+<span class="source-line-no">041</span><span id="line.41">        super(t);</span>
+<span class="source-line-no">042</span><span id="line.42">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">043</span><span id="line.43">        this.importContainerKey = t.importContainerKey;</span>
+<span class="source-line-no">044</span><span id="line.44">        this.priceImportRequest = t.priceImportRequest;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @Override</span>
+<span class="source-line-no">048</span><span id="line.48">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">049</span><span id="line.49">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">050</span><span id="line.50">        String httpRequestPath = String.format("/%s/prices/import-containers/%s", this.projectKey,</span>
+<span class="source-line-no">051</span><span id="line.51">            this.importContainerKey);</span>
+<span class="source-line-no">052</span><span id="line.52">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">053</span><span id="line.53">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">054</span><span id="line.54">        }</span>
+<span class="source-line-no">055</span><span id="line.55">        try {</span>
+<span class="source-line-no">056</span><span id="line.56">            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest);</span>
+<span class="source-line-no">057</span><span id="line.57">            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);</span>
+<span class="source-line-no">058</span><span id="line.58">        }</span>
+<span class="source-line-no">059</span><span id="line.59">        catch (Exception e) {</span>
+<span class="source-line-no">060</span><span id="line.60">            e.printStackTrace();</span>
+<span class="source-line-no">061</span><span id="line.61">        }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);</span>
+<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    @Override</span>
+<span class="source-line-no">067</span><span id="line.67">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importrequests.ImportResponse&gt; executeBlocking(</span>
+<span class="source-line-no">068</span><span id="line.68">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">069</span><span id="line.69">        return executeBlocking(client, timeout, com.commercetools.importapi.models.importrequests.ImportResponse.class);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @Override</span>
+<span class="source-line-no">073</span><span id="line.73">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importrequests.ImportResponse&gt;&gt; execute(</span>
+<span class="source-line-no">074</span><span id="line.74">            final ApiHttpClient client) {</span>
+<span class="source-line-no">075</span><span id="line.75">        return execute(client, com.commercetools.importapi.models.importrequests.ImportResponse.class);</span>
 <span class="source-line-no">076</span><span id="line.76">    }</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    @Override</span>
-<span class="source-line-no">079</span><span id="line.79">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importrequests.ImportResponse&gt;&gt; execute(</span>
-<span class="source-line-no">080</span><span id="line.80">            final ApiHttpClient client) {</span>
-<span class="source-line-no">081</span><span id="line.81">        return client</span>
-<span class="source-line-no">082</span><span id="line.82">                .execute(this.createHttpRequest(),</span>
-<span class="source-line-no">083</span><span id="line.83">                    com.commercetools.importapi.models.importrequests.ImportResponse.class)</span>
-<span class="source-line-no">084</span><span id="line.84">                .toCompletableFuture();</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public String getProjectKey() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return this.projectKey;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public String getImportContainerKey() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return this.importContainerKey;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.projectKey = projectKey;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">078</span><span id="line.78">    public String getProjectKey() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.projectKey;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public String getImportContainerKey() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.importContainerKey;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.projectKey = projectKey;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setImportContainerKey(final String importContainerKey) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.importContainerKey = importContainerKey;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @Override</span>
+<span class="source-line-no">095</span><span id="line.95">    public boolean equals(Object o) {</span>
+<span class="source-line-no">096</span><span id="line.96">        if (this == o)</span>
+<span class="source-line-no">097</span><span id="line.97">            return true;</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setImportContainerKey(final String importContainerKey) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.importContainerKey = importContainerKey;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    @Override</span>
-<span class="source-line-no">104</span><span id="line.104">    public boolean equals(Object o) {</span>
-<span class="source-line-no">105</span><span id="line.105">        if (this == o)</span>
-<span class="source-line-no">106</span><span id="line.106">            return true;</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">109</span><span id="line.109">            return false;</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">        ByProjectKeyPricesImportContainersByImportContainerKeyPost that = (ByProjectKeyPricesImportContainersByImportContainerKeyPost) o;</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">114</span><span id="line.114">                .append(importContainerKey, that.importContainerKey)</span>
-<span class="source-line-no">115</span><span id="line.115">                .append(priceImportRequest, that.priceImportRequest)</span>
-<span class="source-line-no">116</span><span id="line.116">                .isEquals();</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    @Override</span>
-<span class="source-line-no">120</span><span id="line.120">    public int hashCode() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return new HashCodeBuilder(17, 37).append(projectKey)</span>
-<span class="source-line-no">122</span><span id="line.122">                .append(importContainerKey)</span>
-<span class="source-line-no">123</span><span id="line.123">                .append(priceImportRequest)</span>
-<span class="source-line-no">124</span><span id="line.124">                .toHashCode();</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    @Override</span>
-<span class="source-line-no">128</span><span id="line.128">    protected ByProjectKeyPricesImportContainersByImportContainerKeyPost copy() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return new ByProjectKeyPricesImportContainersByImportContainerKeyPost(this);</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131">}</span>
+<span class="source-line-no">099</span><span id="line.99">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">100</span><span id="line.100">            return false;</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">        ByProjectKeyPricesImportContainersByImportContainerKeyPost that = (ByProjectKeyPricesImportContainersByImportContainerKeyPost) o;</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">105</span><span id="line.105">                .append(importContainerKey, that.importContainerKey)</span>
+<span class="source-line-no">106</span><span id="line.106">                .append(priceImportRequest, that.priceImportRequest)</span>
+<span class="source-line-no">107</span><span id="line.107">                .isEquals();</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @Override</span>
+<span class="source-line-no">111</span><span id="line.111">    public int hashCode() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return new HashCodeBuilder(17, 37).append(projectKey)</span>
+<span class="source-line-no">113</span><span id="line.113">                .append(importContainerKey)</span>
+<span class="source-line-no">114</span><span id="line.114">                .append(priceImportRequest)</span>
+<span class="source-line-no">115</span><span id="line.115">                .toHashCode();</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    @Override</span>
+<span class="source-line-no">119</span><span id="line.119">    protected ByProjectKeyPricesImportContainersByImportContainerKeyPost copy() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return new ByProjectKeyPricesImportContainersByImportContainerKeyPost(this);</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122">}</span>
 
 
 

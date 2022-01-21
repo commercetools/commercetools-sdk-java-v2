@@ -14,337 +14,328 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.importapi.client;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;</span>
-<span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">import java.net.URI;</span>
-<span class="source-line-no">007</span><span id="line.7">import java.time.Duration;</span>
-<span class="source-line-no">008</span><span id="line.8">import java.util.ArrayList;</span>
-<span class="source-line-no">009</span><span id="line.9">import java.util.List;</span>
-<span class="source-line-no">010</span><span id="line.10">import java.util.concurrent.CompletableFuture;</span>
-<span class="source-line-no">011</span><span id="line.11">import java.util.stream.Collectors;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.net.URI;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.time.Duration;</span>
+<span class="source-line-no">006</span><span id="line.6">import java.util.ArrayList;</span>
+<span class="source-line-no">007</span><span id="line.7">import java.util.List;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.CompletableFuture;</span>
+<span class="source-line-no">009</span><span id="line.9">import java.util.stream.Collectors;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.importapi.models.common.ProcessingState;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.importapi.models.common.ProcessingState;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">019</span><span id="line.19">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">/**</span>
-<span class="source-line-no">022</span><span id="line.22">*  &lt;p&gt;Retrieves all price import operations of an import sink key.&lt;/p&gt;</span>
-<span class="source-line-no">023</span><span id="line.23">*/</span>
-<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">025</span><span id="line.25">public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet extends</span>
-<span class="source-line-no">026</span><span id="line.26">        ApiMethod&lt;ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt;</span>
-<span class="source-line-no">027</span><span id="line.27">        implements</span>
-<span class="source-line-no">028</span><span id="line.28">        com.commercetools.importapi.client.Secured_by_view_productsTrait&lt;ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet&gt; {</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private String projectKey;</span>
-<span class="source-line-no">031</span><span id="line.31">    private String importSinkKey;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(final ApiHttpClient apiHttpClient,</span>
-<span class="source-line-no">034</span><span id="line.34">            String projectKey, String importSinkKey) {</span>
-<span class="source-line-no">035</span><span id="line.35">        super(apiHttpClient);</span>
-<span class="source-line-no">036</span><span id="line.36">        this.projectKey = projectKey;</span>
-<span class="source-line-no">037</span><span id="line.37">        this.importSinkKey = importSinkKey;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(</span>
-<span class="source-line-no">041</span><span id="line.41">            ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet t) {</span>
-<span class="source-line-no">042</span><span id="line.42">        super(t);</span>
-<span class="source-line-no">043</span><span id="line.43">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">044</span><span id="line.44">        this.importSinkKey = t.importSinkKey;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    @Override</span>
-<span class="source-line-no">048</span><span id="line.48">    public ApiHttpRequest createHttpRequest() {</span>
-<span class="source-line-no">049</span><span id="line.49">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">050</span><span id="line.50">        String httpRequestPath = String.format("/%s/prices/importSinkKey=%s/import-operations", this.projectKey,</span>
-<span class="source-line-no">051</span><span id="line.51">            this.importSinkKey);</span>
-<span class="source-line-no">052</span><span id="line.52">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">053</span><span id="line.53">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">054</span><span id="line.54">        }</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    @Override</span>
-<span class="source-line-no">060</span><span id="line.60">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt; executeBlocking(</span>
-<span class="source-line-no">061</span><span id="line.61">            final ApiHttpClient client, Duration timeout) {</span>
-<span class="source-line-no">062</span><span id="line.62">        ApiHttpRequest request = this.createHttpRequest();</span>
-<span class="source-line-no">063</span><span id="line.63">        return blockingWait(client</span>
-<span class="source-line-no">064</span><span id="line.64">                .execute(request,</span>
-<span class="source-line-no">065</span><span id="line.65">                    com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class)</span>
-<span class="source-line-no">066</span><span id="line.66">                .toCompletableFuture(),</span>
-<span class="source-line-no">067</span><span id="line.67">            request, timeout);</span>
+<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">017</span><span id="line.17">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">/**</span>
+<span class="source-line-no">020</span><span id="line.20">*  &lt;p&gt;Retrieves all price import operations of an import sink key.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21">*/</span>
+<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">023</span><span id="line.23">public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet extends</span>
+<span class="source-line-no">024</span><span id="line.24">        ApiMethod&lt;ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt;</span>
+<span class="source-line-no">025</span><span id="line.25">        implements</span>
+<span class="source-line-no">026</span><span id="line.26">        com.commercetools.importapi.client.Secured_by_view_productsTrait&lt;ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet&gt; {</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private String projectKey;</span>
+<span class="source-line-no">029</span><span id="line.29">    private String importSinkKey;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(final ApiHttpClient apiHttpClient,</span>
+<span class="source-line-no">032</span><span id="line.32">            String projectKey, String importSinkKey) {</span>
+<span class="source-line-no">033</span><span id="line.33">        super(apiHttpClient);</span>
+<span class="source-line-no">034</span><span id="line.34">        this.projectKey = projectKey;</span>
+<span class="source-line-no">035</span><span id="line.35">        this.importSinkKey = importSinkKey;</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(</span>
+<span class="source-line-no">039</span><span id="line.39">            ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet t) {</span>
+<span class="source-line-no">040</span><span id="line.40">        super(t);</span>
+<span class="source-line-no">041</span><span id="line.41">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">042</span><span id="line.42">        this.importSinkKey = t.importSinkKey;</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Override</span>
+<span class="source-line-no">046</span><span id="line.46">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">047</span><span id="line.47">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">048</span><span id="line.48">        String httpRequestPath = String.format("/%s/prices/importSinkKey=%s/import-operations", this.projectKey,</span>
+<span class="source-line-no">049</span><span id="line.49">            this.importSinkKey);</span>
+<span class="source-line-no">050</span><span id="line.50">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">051</span><span id="line.51">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">052</span><span id="line.52">        }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @Override</span>
+<span class="source-line-no">058</span><span id="line.58">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt; executeBlocking(</span>
+<span class="source-line-no">059</span><span id="line.59">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">060</span><span id="line.60">        return executeBlocking(client, timeout,</span>
+<span class="source-line-no">061</span><span id="line.61">            com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @Override</span>
+<span class="source-line-no">065</span><span id="line.65">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt;&gt; execute(</span>
+<span class="source-line-no">066</span><span id="line.66">            final ApiHttpClient client) {</span>
+<span class="source-line-no">067</span><span id="line.67">        return execute(client, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @Override</span>
-<span class="source-line-no">071</span><span id="line.71">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse&gt;&gt; execute(</span>
-<span class="source-line-no">072</span><span id="line.72">            final ApiHttpClient client) {</span>
-<span class="source-line-no">073</span><span id="line.73">        return client</span>
-<span class="source-line-no">074</span><span id="line.74">                .execute(this.createHttpRequest(),</span>
-<span class="source-line-no">075</span><span id="line.75">                    com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class)</span>
-<span class="source-line-no">076</span><span id="line.76">                .toCompletableFuture();</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public String getProjectKey() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.projectKey;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public String getImportSinkKey() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.importSinkKey;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public List&lt;String&gt; getLimit() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return this.getQueryParam("limit");</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public List&lt;String&gt; getOffset() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return this.getQueryParam("offset");</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public List&lt;String&gt; getSort() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.getQueryParam("sort");</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public List&lt;String&gt; getResourceKey() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.getQueryParam("resourceKey");</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public List&lt;String&gt; getState() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return this.getQueryParam("state");</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public List&lt;String&gt; getDebug() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return this.getQueryParam("debug");</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">112</span><span id="line.112">        this.projectKey = projectKey;</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public void setImportSinkKey(final String importSinkKey) {</span>
-<span class="source-line-no">116</span><span id="line.116">        this.importSinkKey = importSinkKey;</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     * set limit with the specificied value</span>
-<span class="source-line-no">121</span><span id="line.121">     */</span>
-<span class="source-line-no">122</span><span id="line.122">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {</span>
-<span class="source-line-no">123</span><span id="line.123">        return copy().withQueryParam("limit", limit);</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    /**</span>
-<span class="source-line-no">127</span><span id="line.127">     * add additional limit query parameter</span>
-<span class="source-line-no">128</span><span id="line.128">     */</span>
-<span class="source-line-no">129</span><span id="line.129">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final double limit) {</span>
-<span class="source-line-no">130</span><span id="line.130">        return copy().addQueryParam("limit", limit);</span>
+<span class="source-line-no">070</span><span id="line.70">    public String getProjectKey() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return this.projectKey;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public String getImportSinkKey() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return this.importSinkKey;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public List&lt;String&gt; getLimit() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.getQueryParam("limit");</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public List&lt;String&gt; getOffset() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.getQueryParam("offset");</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public List&lt;String&gt; getSort() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.getQueryParam("sort");</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public List&lt;String&gt; getResourceKey() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return this.getQueryParam("resourceKey");</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public List&lt;String&gt; getState() {</span>
+<span class="source-line-no">095</span><span id="line.95">        return this.getQueryParam("state");</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public List&lt;String&gt; getDebug() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return this.getQueryParam("debug");</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">103</span><span id="line.103">        this.projectKey = projectKey;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public void setImportSinkKey(final String importSinkKey) {</span>
+<span class="source-line-no">107</span><span id="line.107">        this.importSinkKey = importSinkKey;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     * set limit with the specificied value</span>
+<span class="source-line-no">112</span><span id="line.112">     */</span>
+<span class="source-line-no">113</span><span id="line.113">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {</span>
+<span class="source-line-no">114</span><span id="line.114">        return copy().withQueryParam("limit", limit);</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     * add additional limit query parameter</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final double limit) {</span>
+<span class="source-line-no">121</span><span id="line.121">        return copy().addQueryParam("limit", limit);</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     * set limit with the specificied values</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final List&lt;Double&gt; limit) {</span>
+<span class="source-line-no">128</span><span id="line.128">        return copy().withoutQueryParam("limit")</span>
+<span class="source-line-no">129</span><span id="line.129">                .addQueryParams(</span>
+<span class="source-line-no">130</span><span id="line.130">                    limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">131</span><span id="line.131">    }</span>
 <span class="source-line-no">132</span><span id="line.132"></span>
 <span class="source-line-no">133</span><span id="line.133">    /**</span>
-<span class="source-line-no">134</span><span id="line.134">     * set limit with the specificied values</span>
+<span class="source-line-no">134</span><span id="line.134">     * add additional limit query parameters</span>
 <span class="source-line-no">135</span><span id="line.135">     */</span>
-<span class="source-line-no">136</span><span id="line.136">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final List&lt;Double&gt; limit) {</span>
-<span class="source-line-no">137</span><span id="line.137">        return copy().withoutQueryParam("limit")</span>
-<span class="source-line-no">138</span><span id="line.138">                .addQueryParams(</span>
-<span class="source-line-no">139</span><span id="line.139">                    limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    /**</span>
-<span class="source-line-no">143</span><span id="line.143">     * add additional limit query parameters</span>
-<span class="source-line-no">144</span><span id="line.144">     */</span>
-<span class="source-line-no">145</span><span id="line.145">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final List&lt;Double&gt; limit) {</span>
-<span class="source-line-no">146</span><span id="line.146">        return copy().addQueryParams(</span>
-<span class="source-line-no">147</span><span id="line.147">            limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">     * set offset with the specificied value</span>
-<span class="source-line-no">152</span><span id="line.152">     */</span>
-<span class="source-line-no">153</span><span id="line.153">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {</span>
-<span class="source-line-no">154</span><span id="line.154">        return copy().withQueryParam("offset", offset);</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">     * add additional offset query parameter</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final double offset) {</span>
-<span class="source-line-no">161</span><span id="line.161">        return copy().addQueryParam("offset", offset);</span>
+<span class="source-line-no">136</span><span id="line.136">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final List&lt;Double&gt; limit) {</span>
+<span class="source-line-no">137</span><span id="line.137">        return copy().addQueryParams(</span>
+<span class="source-line-no">138</span><span id="line.138">            limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     * set offset with the specificied value</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {</span>
+<span class="source-line-no">145</span><span id="line.145">        return copy().withQueryParam("offset", offset);</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    /**</span>
+<span class="source-line-no">149</span><span id="line.149">     * add additional offset query parameter</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final double offset) {</span>
+<span class="source-line-no">152</span><span id="line.152">        return copy().addQueryParam("offset", offset);</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     * set offset with the specificied values</span>
+<span class="source-line-no">157</span><span id="line.157">     */</span>
+<span class="source-line-no">158</span><span id="line.158">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final List&lt;Double&gt; offset) {</span>
+<span class="source-line-no">159</span><span id="line.159">        return copy().withoutQueryParam("offset")</span>
+<span class="source-line-no">160</span><span id="line.160">                .addQueryParams(</span>
+<span class="source-line-no">161</span><span id="line.161">                    offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">162</span><span id="line.162">    }</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
 <span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     * set offset with the specificied values</span>
+<span class="source-line-no">165</span><span id="line.165">     * add additional offset query parameters</span>
 <span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final List&lt;Double&gt; offset) {</span>
-<span class="source-line-no">168</span><span id="line.168">        return copy().withoutQueryParam("offset")</span>
-<span class="source-line-no">169</span><span id="line.169">                .addQueryParams(</span>
-<span class="source-line-no">170</span><span id="line.170">                    offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    /**</span>
-<span class="source-line-no">174</span><span id="line.174">     * add additional offset query parameters</span>
-<span class="source-line-no">175</span><span id="line.175">     */</span>
-<span class="source-line-no">176</span><span id="line.176">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final List&lt;Double&gt; offset) {</span>
-<span class="source-line-no">177</span><span id="line.177">        return copy().addQueryParams(</span>
-<span class="source-line-no">178</span><span id="line.178">            offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    /**</span>
-<span class="source-line-no">182</span><span id="line.182">     * set sort with the specificied value</span>
-<span class="source-line-no">183</span><span id="line.183">     */</span>
-<span class="source-line-no">184</span><span id="line.184">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort) {</span>
-<span class="source-line-no">185</span><span id="line.185">        return copy().withQueryParam("sort", sort);</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    /**</span>
-<span class="source-line-no">189</span><span id="line.189">     * add additional sort query parameter</span>
-<span class="source-line-no">190</span><span id="line.190">     */</span>
-<span class="source-line-no">191</span><span id="line.191">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort) {</span>
-<span class="source-line-no">192</span><span id="line.192">        return copy().addQueryParam("sort", sort);</span>
+<span class="source-line-no">167</span><span id="line.167">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final List&lt;Double&gt; offset) {</span>
+<span class="source-line-no">168</span><span id="line.168">        return copy().addQueryParams(</span>
+<span class="source-line-no">169</span><span id="line.169">            offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    /**</span>
+<span class="source-line-no">173</span><span id="line.173">     * set sort with the specificied value</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort) {</span>
+<span class="source-line-no">176</span><span id="line.176">        return copy().withQueryParam("sort", sort);</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    /**</span>
+<span class="source-line-no">180</span><span id="line.180">     * add additional sort query parameter</span>
+<span class="source-line-no">181</span><span id="line.181">     */</span>
+<span class="source-line-no">182</span><span id="line.182">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort) {</span>
+<span class="source-line-no">183</span><span id="line.183">        return copy().addQueryParam("sort", sort);</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    /**</span>
+<span class="source-line-no">187</span><span id="line.187">     * set sort with the specificied values</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
+<span class="source-line-no">189</span><span id="line.189">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final List&lt;String&gt; sort) {</span>
+<span class="source-line-no">190</span><span id="line.190">        return copy().withoutQueryParam("sort")</span>
+<span class="source-line-no">191</span><span id="line.191">                .addQueryParams(</span>
+<span class="source-line-no">192</span><span id="line.192">                    sort.stream().map(s -&gt; new ParamEntry&lt;&gt;("sort", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">193</span><span id="line.193">    }</span>
 <span class="source-line-no">194</span><span id="line.194"></span>
 <span class="source-line-no">195</span><span id="line.195">    /**</span>
-<span class="source-line-no">196</span><span id="line.196">     * set sort with the specificied values</span>
+<span class="source-line-no">196</span><span id="line.196">     * add additional sort query parameters</span>
 <span class="source-line-no">197</span><span id="line.197">     */</span>
-<span class="source-line-no">198</span><span id="line.198">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final List&lt;String&gt; sort) {</span>
-<span class="source-line-no">199</span><span id="line.199">        return copy().withoutQueryParam("sort")</span>
-<span class="source-line-no">200</span><span id="line.200">                .addQueryParams(</span>
-<span class="source-line-no">201</span><span id="line.201">                    sort.stream().map(s -&gt; new ParamEntry&lt;&gt;("sort", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    /**</span>
-<span class="source-line-no">205</span><span id="line.205">     * add additional sort query parameters</span>
-<span class="source-line-no">206</span><span id="line.206">     */</span>
-<span class="source-line-no">207</span><span id="line.207">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final List&lt;String&gt; sort) {</span>
-<span class="source-line-no">208</span><span id="line.208">        return copy().addQueryParams(</span>
-<span class="source-line-no">209</span><span id="line.209">            sort.stream().map(s -&gt; new ParamEntry&lt;&gt;("sort", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    /**</span>
-<span class="source-line-no">213</span><span id="line.213">     * set resourceKey with the specificied value</span>
-<span class="source-line-no">214</span><span id="line.214">     */</span>
-<span class="source-line-no">215</span><span id="line.215">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey) {</span>
-<span class="source-line-no">216</span><span id="line.216">        return copy().withQueryParam("resourceKey", resourceKey);</span>
-<span class="source-line-no">217</span><span id="line.217">    }</span>
-<span class="source-line-no">218</span><span id="line.218"></span>
-<span class="source-line-no">219</span><span id="line.219">    /**</span>
-<span class="source-line-no">220</span><span id="line.220">     * add additional resourceKey query parameter</span>
-<span class="source-line-no">221</span><span id="line.221">     */</span>
-<span class="source-line-no">222</span><span id="line.222">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey) {</span>
-<span class="source-line-no">223</span><span id="line.223">        return copy().addQueryParam("resourceKey", resourceKey);</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    /**</span>
-<span class="source-line-no">227</span><span id="line.227">     * set resourceKey with the specificied values</span>
-<span class="source-line-no">228</span><span id="line.228">     */</span>
-<span class="source-line-no">229</span><span id="line.229">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(</span>
-<span class="source-line-no">230</span><span id="line.230">            final List&lt;String&gt; resourceKey) {</span>
-<span class="source-line-no">231</span><span id="line.231">        return copy().withoutQueryParam("resourceKey")</span>
-<span class="source-line-no">232</span><span id="line.232">                .addQueryParams(resourceKey.stream()</span>
-<span class="source-line-no">233</span><span id="line.233">                        .map(s -&gt; new ParamEntry&lt;&gt;("resourceKey", s.toString()))</span>
-<span class="source-line-no">234</span><span id="line.234">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">198</span><span id="line.198">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final List&lt;String&gt; sort) {</span>
+<span class="source-line-no">199</span><span id="line.199">        return copy().addQueryParams(</span>
+<span class="source-line-no">200</span><span id="line.200">            sort.stream().map(s -&gt; new ParamEntry&lt;&gt;("sort", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    /**</span>
+<span class="source-line-no">204</span><span id="line.204">     * set resourceKey with the specificied value</span>
+<span class="source-line-no">205</span><span id="line.205">     */</span>
+<span class="source-line-no">206</span><span id="line.206">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey) {</span>
+<span class="source-line-no">207</span><span id="line.207">        return copy().withQueryParam("resourceKey", resourceKey);</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    /**</span>
+<span class="source-line-no">211</span><span id="line.211">     * add additional resourceKey query parameter</span>
+<span class="source-line-no">212</span><span id="line.212">     */</span>
+<span class="source-line-no">213</span><span id="line.213">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey) {</span>
+<span class="source-line-no">214</span><span id="line.214">        return copy().addQueryParam("resourceKey", resourceKey);</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    /**</span>
+<span class="source-line-no">218</span><span id="line.218">     * set resourceKey with the specificied values</span>
+<span class="source-line-no">219</span><span id="line.219">     */</span>
+<span class="source-line-no">220</span><span id="line.220">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(</span>
+<span class="source-line-no">221</span><span id="line.221">            final List&lt;String&gt; resourceKey) {</span>
+<span class="source-line-no">222</span><span id="line.222">        return copy().withoutQueryParam("resourceKey")</span>
+<span class="source-line-no">223</span><span id="line.223">                .addQueryParams(resourceKey.stream()</span>
+<span class="source-line-no">224</span><span id="line.224">                        .map(s -&gt; new ParamEntry&lt;&gt;("resourceKey", s.toString()))</span>
+<span class="source-line-no">225</span><span id="line.225">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">226</span><span id="line.226">    }</span>
+<span class="source-line-no">227</span><span id="line.227"></span>
+<span class="source-line-no">228</span><span id="line.228">    /**</span>
+<span class="source-line-no">229</span><span id="line.229">     * add additional resourceKey query parameters</span>
+<span class="source-line-no">230</span><span id="line.230">     */</span>
+<span class="source-line-no">231</span><span id="line.231">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(</span>
+<span class="source-line-no">232</span><span id="line.232">            final List&lt;String&gt; resourceKey) {</span>
+<span class="source-line-no">233</span><span id="line.233">        return copy().addQueryParams(</span>
+<span class="source-line-no">234</span><span id="line.234">            resourceKey.stream().map(s -&gt; new ParamEntry&lt;&gt;("resourceKey", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">235</span><span id="line.235">    }</span>
 <span class="source-line-no">236</span><span id="line.236"></span>
 <span class="source-line-no">237</span><span id="line.237">    /**</span>
-<span class="source-line-no">238</span><span id="line.238">     * add additional resourceKey query parameters</span>
+<span class="source-line-no">238</span><span id="line.238">     * set state with the specificied value</span>
 <span class="source-line-no">239</span><span id="line.239">     */</span>
-<span class="source-line-no">240</span><span id="line.240">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(</span>
-<span class="source-line-no">241</span><span id="line.241">            final List&lt;String&gt; resourceKey) {</span>
-<span class="source-line-no">242</span><span id="line.242">        return copy().addQueryParams(</span>
-<span class="source-line-no">243</span><span id="line.243">            resourceKey.stream().map(s -&gt; new ParamEntry&lt;&gt;("resourceKey", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">     * set state with the specificied value</span>
-<span class="source-line-no">248</span><span id="line.248">     */</span>
-<span class="source-line-no">249</span><span id="line.249">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state) {</span>
-<span class="source-line-no">250</span><span id="line.250">        return copy().withQueryParam("state", state);</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    /**</span>
-<span class="source-line-no">254</span><span id="line.254">     * add additional state query parameter</span>
-<span class="source-line-no">255</span><span id="line.255">     */</span>
-<span class="source-line-no">256</span><span id="line.256">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state) {</span>
-<span class="source-line-no">257</span><span id="line.257">        return copy().addQueryParam("state", state);</span>
-<span class="source-line-no">258</span><span id="line.258">    }</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    /**</span>
-<span class="source-line-no">261</span><span id="line.261">     * set state with the specificied values</span>
-<span class="source-line-no">262</span><span id="line.262">     */</span>
-<span class="source-line-no">263</span><span id="line.263">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withState(</span>
-<span class="source-line-no">264</span><span id="line.264">            final List&lt;ProcessingState&gt; state) {</span>
-<span class="source-line-no">265</span><span id="line.265">        return copy().withoutQueryParam("state")</span>
-<span class="source-line-no">266</span><span id="line.266">                .addQueryParams(</span>
-<span class="source-line-no">267</span><span id="line.267">                    state.stream().map(s -&gt; new ParamEntry&lt;&gt;("state", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">240</span><span id="line.240">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state) {</span>
+<span class="source-line-no">241</span><span id="line.241">        return copy().withQueryParam("state", state);</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    /**</span>
+<span class="source-line-no">245</span><span id="line.245">     * add additional state query parameter</span>
+<span class="source-line-no">246</span><span id="line.246">     */</span>
+<span class="source-line-no">247</span><span id="line.247">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state) {</span>
+<span class="source-line-no">248</span><span id="line.248">        return copy().addQueryParam("state", state);</span>
+<span class="source-line-no">249</span><span id="line.249">    }</span>
+<span class="source-line-no">250</span><span id="line.250"></span>
+<span class="source-line-no">251</span><span id="line.251">    /**</span>
+<span class="source-line-no">252</span><span id="line.252">     * set state with the specificied values</span>
+<span class="source-line-no">253</span><span id="line.253">     */</span>
+<span class="source-line-no">254</span><span id="line.254">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withState(</span>
+<span class="source-line-no">255</span><span id="line.255">            final List&lt;ProcessingState&gt; state) {</span>
+<span class="source-line-no">256</span><span id="line.256">        return copy().withoutQueryParam("state")</span>
+<span class="source-line-no">257</span><span id="line.257">                .addQueryParams(</span>
+<span class="source-line-no">258</span><span id="line.258">                    state.stream().map(s -&gt; new ParamEntry&lt;&gt;("state", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    /**</span>
+<span class="source-line-no">262</span><span id="line.262">     * add additional state query parameters</span>
+<span class="source-line-no">263</span><span id="line.263">     */</span>
+<span class="source-line-no">264</span><span id="line.264">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addState(</span>
+<span class="source-line-no">265</span><span id="line.265">            final List&lt;ProcessingState&gt; state) {</span>
+<span class="source-line-no">266</span><span id="line.266">        return copy().addQueryParams(</span>
+<span class="source-line-no">267</span><span id="line.267">            state.stream().map(s -&gt; new ParamEntry&lt;&gt;("state", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">268</span><span id="line.268">    }</span>
 <span class="source-line-no">269</span><span id="line.269"></span>
 <span class="source-line-no">270</span><span id="line.270">    /**</span>
-<span class="source-line-no">271</span><span id="line.271">     * add additional state query parameters</span>
+<span class="source-line-no">271</span><span id="line.271">     * set debug with the specificied value</span>
 <span class="source-line-no">272</span><span id="line.272">     */</span>
-<span class="source-line-no">273</span><span id="line.273">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addState(</span>
-<span class="source-line-no">274</span><span id="line.274">            final List&lt;ProcessingState&gt; state) {</span>
-<span class="source-line-no">275</span><span id="line.275">        return copy().addQueryParams(</span>
-<span class="source-line-no">276</span><span id="line.276">            state.stream().map(s -&gt; new ParamEntry&lt;&gt;("state", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">277</span><span id="line.277">    }</span>
-<span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">    /**</span>
-<span class="source-line-no">280</span><span id="line.280">     * set debug with the specificied value</span>
-<span class="source-line-no">281</span><span id="line.281">     */</span>
-<span class="source-line-no">282</span><span id="line.282">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {</span>
-<span class="source-line-no">283</span><span id="line.283">        return copy().withQueryParam("debug", debug);</span>
-<span class="source-line-no">284</span><span id="line.284">    }</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">    /**</span>
-<span class="source-line-no">287</span><span id="line.287">     * add additional debug query parameter</span>
-<span class="source-line-no">288</span><span id="line.288">     */</span>
-<span class="source-line-no">289</span><span id="line.289">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {</span>
-<span class="source-line-no">290</span><span id="line.290">        return copy().addQueryParam("debug", debug);</span>
+<span class="source-line-no">273</span><span id="line.273">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {</span>
+<span class="source-line-no">274</span><span id="line.274">        return copy().withQueryParam("debug", debug);</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    /**</span>
+<span class="source-line-no">278</span><span id="line.278">     * add additional debug query parameter</span>
+<span class="source-line-no">279</span><span id="line.279">     */</span>
+<span class="source-line-no">280</span><span id="line.280">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {</span>
+<span class="source-line-no">281</span><span id="line.281">        return copy().addQueryParam("debug", debug);</span>
+<span class="source-line-no">282</span><span id="line.282">    }</span>
+<span class="source-line-no">283</span><span id="line.283"></span>
+<span class="source-line-no">284</span><span id="line.284">    /**</span>
+<span class="source-line-no">285</span><span id="line.285">     * set debug with the specificied values</span>
+<span class="source-line-no">286</span><span id="line.286">     */</span>
+<span class="source-line-no">287</span><span id="line.287">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final List&lt;Boolean&gt; debug) {</span>
+<span class="source-line-no">288</span><span id="line.288">        return copy().withoutQueryParam("debug")</span>
+<span class="source-line-no">289</span><span id="line.289">                .addQueryParams(</span>
+<span class="source-line-no">290</span><span id="line.290">                    debug.stream().map(s -&gt; new ParamEntry&lt;&gt;("debug", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">291</span><span id="line.291">    }</span>
 <span class="source-line-no">292</span><span id="line.292"></span>
 <span class="source-line-no">293</span><span id="line.293">    /**</span>
-<span class="source-line-no">294</span><span id="line.294">     * set debug with the specificied values</span>
+<span class="source-line-no">294</span><span id="line.294">     * add additional debug query parameters</span>
 <span class="source-line-no">295</span><span id="line.295">     */</span>
-<span class="source-line-no">296</span><span id="line.296">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final List&lt;Boolean&gt; debug) {</span>
-<span class="source-line-no">297</span><span id="line.297">        return copy().withoutQueryParam("debug")</span>
-<span class="source-line-no">298</span><span id="line.298">                .addQueryParams(</span>
-<span class="source-line-no">299</span><span id="line.299">                    debug.stream().map(s -&gt; new ParamEntry&lt;&gt;("debug", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">300</span><span id="line.300">    }</span>
-<span class="source-line-no">301</span><span id="line.301"></span>
-<span class="source-line-no">302</span><span id="line.302">    /**</span>
-<span class="source-line-no">303</span><span id="line.303">     * add additional debug query parameters</span>
-<span class="source-line-no">304</span><span id="line.304">     */</span>
-<span class="source-line-no">305</span><span id="line.305">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final List&lt;Boolean&gt; debug) {</span>
-<span class="source-line-no">306</span><span id="line.306">        return copy().addQueryParams(</span>
-<span class="source-line-no">307</span><span id="line.307">            debug.stream().map(s -&gt; new ParamEntry&lt;&gt;("debug", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">308</span><span id="line.308">    }</span>
-<span class="source-line-no">309</span><span id="line.309"></span>
-<span class="source-line-no">310</span><span id="line.310">    @Override</span>
-<span class="source-line-no">311</span><span id="line.311">    public boolean equals(Object o) {</span>
-<span class="source-line-no">312</span><span id="line.312">        if (this == o)</span>
-<span class="source-line-no">313</span><span id="line.313">            return true;</span>
-<span class="source-line-no">314</span><span id="line.314"></span>
-<span class="source-line-no">315</span><span id="line.315">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">316</span><span id="line.316">            return false;</span>
-<span class="source-line-no">317</span><span id="line.317"></span>
-<span class="source-line-no">318</span><span id="line.318">        ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet that = (ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet) o;</span>
-<span class="source-line-no">319</span><span id="line.319"></span>
-<span class="source-line-no">320</span><span id="line.320">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">321</span><span id="line.321">                .append(importSinkKey, that.importSinkKey)</span>
-<span class="source-line-no">322</span><span id="line.322">                .isEquals();</span>
-<span class="source-line-no">323</span><span id="line.323">    }</span>
-<span class="source-line-no">324</span><span id="line.324"></span>
-<span class="source-line-no">325</span><span id="line.325">    @Override</span>
-<span class="source-line-no">326</span><span id="line.326">    public int hashCode() {</span>
-<span class="source-line-no">327</span><span id="line.327">        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();</span>
-<span class="source-line-no">328</span><span id="line.328">    }</span>
-<span class="source-line-no">329</span><span id="line.329"></span>
-<span class="source-line-no">330</span><span id="line.330">    @Override</span>
-<span class="source-line-no">331</span><span id="line.331">    protected ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet copy() {</span>
-<span class="source-line-no">332</span><span id="line.332">        return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(this);</span>
-<span class="source-line-no">333</span><span id="line.333">    }</span>
-<span class="source-line-no">334</span><span id="line.334">}</span>
+<span class="source-line-no">296</span><span id="line.296">    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final List&lt;Boolean&gt; debug) {</span>
+<span class="source-line-no">297</span><span id="line.297">        return copy().addQueryParams(</span>
+<span class="source-line-no">298</span><span id="line.298">            debug.stream().map(s -&gt; new ParamEntry&lt;&gt;("debug", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">299</span><span id="line.299">    }</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">    @Override</span>
+<span class="source-line-no">302</span><span id="line.302">    public boolean equals(Object o) {</span>
+<span class="source-line-no">303</span><span id="line.303">        if (this == o)</span>
+<span class="source-line-no">304</span><span id="line.304">            return true;</span>
+<span class="source-line-no">305</span><span id="line.305"></span>
+<span class="source-line-no">306</span><span id="line.306">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">307</span><span id="line.307">            return false;</span>
+<span class="source-line-no">308</span><span id="line.308"></span>
+<span class="source-line-no">309</span><span id="line.309">        ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet that = (ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet) o;</span>
+<span class="source-line-no">310</span><span id="line.310"></span>
+<span class="source-line-no">311</span><span id="line.311">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">312</span><span id="line.312">                .append(importSinkKey, that.importSinkKey)</span>
+<span class="source-line-no">313</span><span id="line.313">                .isEquals();</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    @Override</span>
+<span class="source-line-no">317</span><span id="line.317">    public int hashCode() {</span>
+<span class="source-line-no">318</span><span id="line.318">        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();</span>
+<span class="source-line-no">319</span><span id="line.319">    }</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">    @Override</span>
+<span class="source-line-no">322</span><span id="line.322">    protected ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet copy() {</span>
+<span class="source-line-no">323</span><span id="line.323">        return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet(this);</span>
+<span class="source-line-no">324</span><span id="line.324">    }</span>
+<span class="source-line-no">325</span><span id="line.325">}</span>
 
 
 

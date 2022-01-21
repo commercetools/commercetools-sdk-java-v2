@@ -14,552 +14,546 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.history.client;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;</span>
-<span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">import java.net.URI;</span>
-<span class="source-line-no">007</span><span id="line.7">import java.time.Duration;</span>
-<span class="source-line-no">008</span><span id="line.8">import java.util.ArrayList;</span>
-<span class="source-line-no">009</span><span id="line.9">import java.util.List;</span>
-<span class="source-line-no">010</span><span id="line.10">import java.util.concurrent.CompletableFuture;</span>
-<span class="source-line-no">011</span><span id="line.11">import java.util.stream.Collectors;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.net.URI;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.time.Duration;</span>
+<span class="source-line-no">006</span><span id="line.6">import java.util.ArrayList;</span>
+<span class="source-line-no">007</span><span id="line.7">import java.util.List;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.CompletableFuture;</span>
+<span class="source-line-no">009</span><span id="line.9">import java.util.stream.Collectors;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.history.models.PlatformInitiatedChange;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.history.models.PlatformInitiatedChange;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">019</span><span id="line.19">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">022</span><span id="line.22">public class ByProjectKeyByResourceTypeByIDGet extends</span>
-<span class="source-line-no">023</span><span id="line.23">        ApiMethod&lt;ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.RecordPagedQueryResponse&gt; {</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private String projectKey;</span>
-<span class="source-line-no">026</span><span id="line.26">    private String resourceType;</span>
-<span class="source-line-no">027</span><span id="line.27">    private String ID;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public ByProjectKeyByResourceTypeByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String resourceType,</span>
-<span class="source-line-no">030</span><span id="line.30">            String ID) {</span>
-<span class="source-line-no">031</span><span id="line.31">        super(apiHttpClient);</span>
-<span class="source-line-no">032</span><span id="line.32">        this.projectKey = projectKey;</span>
-<span class="source-line-no">033</span><span id="line.33">        this.resourceType = resourceType;</span>
-<span class="source-line-no">034</span><span id="line.34">        this.ID = ID;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public ByProjectKeyByResourceTypeByIDGet(ByProjectKeyByResourceTypeByIDGet t) {</span>
-<span class="source-line-no">038</span><span id="line.38">        super(t);</span>
-<span class="source-line-no">039</span><span id="line.39">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">040</span><span id="line.40">        this.resourceType = t.resourceType;</span>
-<span class="source-line-no">041</span><span id="line.41">        this.ID = t.ID;</span>
-<span class="source-line-no">042</span><span id="line.42">    }</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @Override</span>
-<span class="source-line-no">045</span><span id="line.45">    public ApiHttpRequest createHttpRequest() {</span>
-<span class="source-line-no">046</span><span id="line.46">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">047</span><span id="line.47">        String httpRequestPath = String.format("/%s/%s/%s", this.projectKey, this.resourceType, this.ID);</span>
-<span class="source-line-no">048</span><span id="line.48">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">049</span><span id="line.49">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">050</span><span id="line.50">        }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @Override</span>
-<span class="source-line-no">056</span><span id="line.56">    public ApiHttpResponse&lt;com.commercetools.history.models.RecordPagedQueryResponse&gt; executeBlocking(</span>
-<span class="source-line-no">057</span><span id="line.57">            final ApiHttpClient client, Duration timeout) {</span>
-<span class="source-line-no">058</span><span id="line.58">        ApiHttpRequest request = this.createHttpRequest();</span>
-<span class="source-line-no">059</span><span id="line.59">        return blockingWait(client.execute(request, com.commercetools.history.models.RecordPagedQueryResponse.class)</span>
-<span class="source-line-no">060</span><span id="line.60">                .toCompletableFuture(),</span>
-<span class="source-line-no">061</span><span id="line.61">            request, timeout);</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    @Override</span>
-<span class="source-line-no">065</span><span id="line.65">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.history.models.RecordPagedQueryResponse&gt;&gt; execute(</span>
-<span class="source-line-no">066</span><span id="line.66">            final ApiHttpClient client) {</span>
-<span class="source-line-no">067</span><span id="line.67">        return client.execute(this.createHttpRequest(), com.commercetools.history.models.RecordPagedQueryResponse.class)</span>
-<span class="source-line-no">068</span><span id="line.68">                .toCompletableFuture();</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public String getProjectKey() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.projectKey;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public String getResourceType() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.resourceType;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public String getID() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.ID;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public List&lt;String&gt; getDateFrom() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.getQueryParam("date.from");</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public List&lt;String&gt; getDateTo() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return this.getQueryParam("date.to");</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public List&lt;String&gt; getLimit() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return this.getQueryParam("limit");</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public List&lt;String&gt; getOffset() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.getQueryParam("offset");</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public List&lt;String&gt; getUserId() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.getQueryParam("userId");</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public List&lt;String&gt; getType() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return this.getQueryParam("type");</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public List&lt;String&gt; getClientId() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return this.getQueryParam("clientId");</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public List&lt;String&gt; getSource() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return this.getQueryParam("source");</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public List&lt;String&gt; getChanges() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return this.getQueryParam("changes");</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public List&lt;String&gt; getCustomerId() {</span>
-<span class="source-line-no">120</span><span id="line.120">        return this.getQueryParam("customerId");</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public List&lt;String&gt; getExcludePlatformInitiatedChanges() {</span>
-<span class="source-line-no">124</span><span id="line.124">        return this.getQueryParam("excludePlatformInitiatedChanges");</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public List&lt;String&gt; getExpand() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return this.getQueryParam("expand");</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.projectKey = projectKey;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public void setResourceType(final String resourceType) {</span>
-<span class="source-line-no">136</span><span id="line.136">        this.resourceType = resourceType;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public void setID(final String ID) {</span>
-<span class="source-line-no">140</span><span id="line.140">        this.ID = ID;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     * set dateFrom with the specificied value</span>
-<span class="source-line-no">145</span><span id="line.145">     */</span>
-<span class="source-line-no">146</span><span id="line.146">    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final Object dateFrom) {</span>
-<span class="source-line-no">147</span><span id="line.147">        return copy().withQueryParam("date.from", dateFrom);</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">     * add additional dateFrom query parameter</span>
-<span class="source-line-no">152</span><span id="line.152">     */</span>
-<span class="source-line-no">153</span><span id="line.153">    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final Object dateFrom) {</span>
-<span class="source-line-no">154</span><span id="line.154">        return copy().addQueryParam("date.from", dateFrom);</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">     * set dateFrom with the specificied values</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final List&lt;Object&gt; dateFrom) {</span>
-<span class="source-line-no">161</span><span id="line.161">        return copy().withoutQueryParam("date.from")</span>
-<span class="source-line-no">162</span><span id="line.162">                .addQueryParams(dateFrom.stream()</span>
-<span class="source-line-no">163</span><span id="line.163">                        .map(s -&gt; new ParamEntry&lt;&gt;("date.from", s.toString()))</span>
-<span class="source-line-no">164</span><span id="line.164">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    /**</span>
-<span class="source-line-no">168</span><span id="line.168">     * add additional dateFrom query parameters</span>
-<span class="source-line-no">169</span><span id="line.169">     */</span>
-<span class="source-line-no">170</span><span id="line.170">    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final List&lt;Object&gt; dateFrom) {</span>
-<span class="source-line-no">171</span><span id="line.171">        return copy().addQueryParams(</span>
-<span class="source-line-no">172</span><span id="line.172">            dateFrom.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.from", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    /**</span>
-<span class="source-line-no">176</span><span id="line.176">     * set dateTo with the specificied value</span>
-<span class="source-line-no">177</span><span id="line.177">     */</span>
-<span class="source-line-no">178</span><span id="line.178">    public ByProjectKeyByResourceTypeByIDGet withDateTo(final Object dateTo) {</span>
-<span class="source-line-no">179</span><span id="line.179">        return copy().withQueryParam("date.to", dateTo);</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    /**</span>
-<span class="source-line-no">183</span><span id="line.183">     * add additional dateTo query parameter</span>
-<span class="source-line-no">184</span><span id="line.184">     */</span>
-<span class="source-line-no">185</span><span id="line.185">    public ByProjectKeyByResourceTypeByIDGet addDateTo(final Object dateTo) {</span>
-<span class="source-line-no">186</span><span id="line.186">        return copy().addQueryParam("date.to", dateTo);</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    /**</span>
-<span class="source-line-no">190</span><span id="line.190">     * set dateTo with the specificied values</span>
-<span class="source-line-no">191</span><span id="line.191">     */</span>
-<span class="source-line-no">192</span><span id="line.192">    public ByProjectKeyByResourceTypeByIDGet withDateTo(final List&lt;Object&gt; dateTo) {</span>
-<span class="source-line-no">193</span><span id="line.193">        return copy().withoutQueryParam("date.to")</span>
-<span class="source-line-no">194</span><span id="line.194">                .addQueryParams(</span>
-<span class="source-line-no">195</span><span id="line.195">                    dateTo.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.to", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    /**</span>
-<span class="source-line-no">199</span><span id="line.199">     * add additional dateTo query parameters</span>
-<span class="source-line-no">200</span><span id="line.200">     */</span>
-<span class="source-line-no">201</span><span id="line.201">    public ByProjectKeyByResourceTypeByIDGet addDateTo(final List&lt;Object&gt; dateTo) {</span>
-<span class="source-line-no">202</span><span id="line.202">        return copy().addQueryParams(</span>
-<span class="source-line-no">203</span><span id="line.203">            dateTo.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.to", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">     * set limit with the specificied value</span>
-<span class="source-line-no">208</span><span id="line.208">     */</span>
-<span class="source-line-no">209</span><span id="line.209">    public ByProjectKeyByResourceTypeByIDGet withLimit(final int limit) {</span>
-<span class="source-line-no">210</span><span id="line.210">        return copy().withQueryParam("limit", limit);</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    /**</span>
-<span class="source-line-no">214</span><span id="line.214">     * add additional limit query parameter</span>
-<span class="source-line-no">215</span><span id="line.215">     */</span>
-<span class="source-line-no">216</span><span id="line.216">    public ByProjectKeyByResourceTypeByIDGet addLimit(final int limit) {</span>
-<span class="source-line-no">217</span><span id="line.217">        return copy().addQueryParam("limit", limit);</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    /**</span>
-<span class="source-line-no">221</span><span id="line.221">     * set limit with the specificied values</span>
-<span class="source-line-no">222</span><span id="line.222">     */</span>
-<span class="source-line-no">223</span><span id="line.223">    public ByProjectKeyByResourceTypeByIDGet withLimit(final List&lt;Integer&gt; limit) {</span>
-<span class="source-line-no">224</span><span id="line.224">        return copy().withoutQueryParam("limit")</span>
-<span class="source-line-no">225</span><span id="line.225">                .addQueryParams(</span>
-<span class="source-line-no">226</span><span id="line.226">                    limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">227</span><span id="line.227">    }</span>
-<span class="source-line-no">228</span><span id="line.228"></span>
-<span class="source-line-no">229</span><span id="line.229">    /**</span>
-<span class="source-line-no">230</span><span id="line.230">     * add additional limit query parameters</span>
-<span class="source-line-no">231</span><span id="line.231">     */</span>
-<span class="source-line-no">232</span><span id="line.232">    public ByProjectKeyByResourceTypeByIDGet addLimit(final List&lt;Integer&gt; limit) {</span>
-<span class="source-line-no">233</span><span id="line.233">        return copy().addQueryParams(</span>
-<span class="source-line-no">234</span><span id="line.234">            limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    /**</span>
-<span class="source-line-no">238</span><span id="line.238">     * set offset with the specificied value</span>
-<span class="source-line-no">239</span><span id="line.239">     */</span>
-<span class="source-line-no">240</span><span id="line.240">    public ByProjectKeyByResourceTypeByIDGet withOffset(final int offset) {</span>
-<span class="source-line-no">241</span><span id="line.241">        return copy().withQueryParam("offset", offset);</span>
-<span class="source-line-no">242</span><span id="line.242">    }</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">    /**</span>
-<span class="source-line-no">245</span><span id="line.245">     * add additional offset query parameter</span>
-<span class="source-line-no">246</span><span id="line.246">     */</span>
-<span class="source-line-no">247</span><span id="line.247">    public ByProjectKeyByResourceTypeByIDGet addOffset(final int offset) {</span>
-<span class="source-line-no">248</span><span id="line.248">        return copy().addQueryParam("offset", offset);</span>
-<span class="source-line-no">249</span><span id="line.249">    }</span>
-<span class="source-line-no">250</span><span id="line.250"></span>
-<span class="source-line-no">251</span><span id="line.251">    /**</span>
-<span class="source-line-no">252</span><span id="line.252">     * set offset with the specificied values</span>
-<span class="source-line-no">253</span><span id="line.253">     */</span>
-<span class="source-line-no">254</span><span id="line.254">    public ByProjectKeyByResourceTypeByIDGet withOffset(final List&lt;Integer&gt; offset) {</span>
-<span class="source-line-no">255</span><span id="line.255">        return copy().withoutQueryParam("offset")</span>
-<span class="source-line-no">256</span><span id="line.256">                .addQueryParams(</span>
-<span class="source-line-no">257</span><span id="line.257">                    offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">258</span><span id="line.258">    }</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    /**</span>
-<span class="source-line-no">261</span><span id="line.261">     * add additional offset query parameters</span>
-<span class="source-line-no">262</span><span id="line.262">     */</span>
-<span class="source-line-no">263</span><span id="line.263">    public ByProjectKeyByResourceTypeByIDGet addOffset(final List&lt;Integer&gt; offset) {</span>
-<span class="source-line-no">264</span><span id="line.264">        return copy().addQueryParams(</span>
-<span class="source-line-no">265</span><span id="line.265">            offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">266</span><span id="line.266">    }</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    /**</span>
-<span class="source-line-no">269</span><span id="line.269">     * set userId with the specificied value</span>
-<span class="source-line-no">270</span><span id="line.270">     */</span>
-<span class="source-line-no">271</span><span id="line.271">    public ByProjectKeyByResourceTypeByIDGet withUserId(final String userId) {</span>
-<span class="source-line-no">272</span><span id="line.272">        return copy().withQueryParam("userId", userId);</span>
-<span class="source-line-no">273</span><span id="line.273">    }</span>
-<span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    /**</span>
-<span class="source-line-no">276</span><span id="line.276">     * add additional userId query parameter</span>
-<span class="source-line-no">277</span><span id="line.277">     */</span>
-<span class="source-line-no">278</span><span id="line.278">    public ByProjectKeyByResourceTypeByIDGet addUserId(final String userId) {</span>
-<span class="source-line-no">279</span><span id="line.279">        return copy().addQueryParam("userId", userId);</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    /**</span>
-<span class="source-line-no">283</span><span id="line.283">     * set userId with the specificied values</span>
-<span class="source-line-no">284</span><span id="line.284">     */</span>
-<span class="source-line-no">285</span><span id="line.285">    public ByProjectKeyByResourceTypeByIDGet withUserId(final List&lt;String&gt; userId) {</span>
-<span class="source-line-no">286</span><span id="line.286">        return copy().withoutQueryParam("userId")</span>
-<span class="source-line-no">287</span><span id="line.287">                .addQueryParams(</span>
-<span class="source-line-no">288</span><span id="line.288">                    userId.stream().map(s -&gt; new ParamEntry&lt;&gt;("userId", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">289</span><span id="line.289">    }</span>
-<span class="source-line-no">290</span><span id="line.290"></span>
-<span class="source-line-no">291</span><span id="line.291">    /**</span>
-<span class="source-line-no">292</span><span id="line.292">     * add additional userId query parameters</span>
-<span class="source-line-no">293</span><span id="line.293">     */</span>
-<span class="source-line-no">294</span><span id="line.294">    public ByProjectKeyByResourceTypeByIDGet addUserId(final List&lt;String&gt; userId) {</span>
-<span class="source-line-no">295</span><span id="line.295">        return copy().addQueryParams(</span>
-<span class="source-line-no">296</span><span id="line.296">            userId.stream().map(s -&gt; new ParamEntry&lt;&gt;("userId", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">297</span><span id="line.297">    }</span>
-<span class="source-line-no">298</span><span id="line.298"></span>
-<span class="source-line-no">299</span><span id="line.299">    /**</span>
-<span class="source-line-no">300</span><span id="line.300">     * set type with the specificied value</span>
-<span class="source-line-no">301</span><span id="line.301">     */</span>
-<span class="source-line-no">302</span><span id="line.302">    public ByProjectKeyByResourceTypeByIDGet withType(final String type) {</span>
-<span class="source-line-no">303</span><span id="line.303">        return copy().withQueryParam("type", type);</span>
-<span class="source-line-no">304</span><span id="line.304">    }</span>
-<span class="source-line-no">305</span><span id="line.305"></span>
-<span class="source-line-no">306</span><span id="line.306">    /**</span>
-<span class="source-line-no">307</span><span id="line.307">     * add additional type query parameter</span>
-<span class="source-line-no">308</span><span id="line.308">     */</span>
-<span class="source-line-no">309</span><span id="line.309">    public ByProjectKeyByResourceTypeByIDGet addType(final String type) {</span>
-<span class="source-line-no">310</span><span id="line.310">        return copy().addQueryParam("type", type);</span>
-<span class="source-line-no">311</span><span id="line.311">    }</span>
-<span class="source-line-no">312</span><span id="line.312"></span>
-<span class="source-line-no">313</span><span id="line.313">    /**</span>
-<span class="source-line-no">314</span><span id="line.314">     * set type with the specificied values</span>
-<span class="source-line-no">315</span><span id="line.315">     */</span>
-<span class="source-line-no">316</span><span id="line.316">    public ByProjectKeyByResourceTypeByIDGet withType(final List&lt;String&gt; type) {</span>
-<span class="source-line-no">317</span><span id="line.317">        return copy().withoutQueryParam("type")</span>
-<span class="source-line-no">318</span><span id="line.318">                .addQueryParams(</span>
-<span class="source-line-no">319</span><span id="line.319">                    type.stream().map(s -&gt; new ParamEntry&lt;&gt;("type", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">320</span><span id="line.320">    }</span>
-<span class="source-line-no">321</span><span id="line.321"></span>
-<span class="source-line-no">322</span><span id="line.322">    /**</span>
-<span class="source-line-no">323</span><span id="line.323">     * add additional type query parameters</span>
-<span class="source-line-no">324</span><span id="line.324">     */</span>
-<span class="source-line-no">325</span><span id="line.325">    public ByProjectKeyByResourceTypeByIDGet addType(final List&lt;String&gt; type) {</span>
-<span class="source-line-no">326</span><span id="line.326">        return copy().addQueryParams(</span>
-<span class="source-line-no">327</span><span id="line.327">            type.stream().map(s -&gt; new ParamEntry&lt;&gt;("type", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">328</span><span id="line.328">    }</span>
-<span class="source-line-no">329</span><span id="line.329"></span>
-<span class="source-line-no">330</span><span id="line.330">    /**</span>
-<span class="source-line-no">331</span><span id="line.331">     * set clientId with the specificied value</span>
-<span class="source-line-no">332</span><span id="line.332">     */</span>
-<span class="source-line-no">333</span><span id="line.333">    public ByProjectKeyByResourceTypeByIDGet withClientId(final String clientId) {</span>
-<span class="source-line-no">334</span><span id="line.334">        return copy().withQueryParam("clientId", clientId);</span>
-<span class="source-line-no">335</span><span id="line.335">    }</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    /**</span>
-<span class="source-line-no">338</span><span id="line.338">     * add additional clientId query parameter</span>
-<span class="source-line-no">339</span><span id="line.339">     */</span>
-<span class="source-line-no">340</span><span id="line.340">    public ByProjectKeyByResourceTypeByIDGet addClientId(final String clientId) {</span>
-<span class="source-line-no">341</span><span id="line.341">        return copy().addQueryParam("clientId", clientId);</span>
-<span class="source-line-no">342</span><span id="line.342">    }</span>
-<span class="source-line-no">343</span><span id="line.343"></span>
-<span class="source-line-no">344</span><span id="line.344">    /**</span>
-<span class="source-line-no">345</span><span id="line.345">     * set clientId with the specificied values</span>
-<span class="source-line-no">346</span><span id="line.346">     */</span>
-<span class="source-line-no">347</span><span id="line.347">    public ByProjectKeyByResourceTypeByIDGet withClientId(final List&lt;String&gt; clientId) {</span>
-<span class="source-line-no">348</span><span id="line.348">        return copy().withoutQueryParam("clientId")</span>
-<span class="source-line-no">349</span><span id="line.349">                .addQueryParams(clientId.stream()</span>
-<span class="source-line-no">350</span><span id="line.350">                        .map(s -&gt; new ParamEntry&lt;&gt;("clientId", s.toString()))</span>
-<span class="source-line-no">351</span><span id="line.351">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">352</span><span id="line.352">    }</span>
-<span class="source-line-no">353</span><span id="line.353"></span>
-<span class="source-line-no">354</span><span id="line.354">    /**</span>
-<span class="source-line-no">355</span><span id="line.355">     * add additional clientId query parameters</span>
-<span class="source-line-no">356</span><span id="line.356">     */</span>
-<span class="source-line-no">357</span><span id="line.357">    public ByProjectKeyByResourceTypeByIDGet addClientId(final List&lt;String&gt; clientId) {</span>
-<span class="source-line-no">358</span><span id="line.358">        return copy().addQueryParams(</span>
-<span class="source-line-no">359</span><span id="line.359">            clientId.stream().map(s -&gt; new ParamEntry&lt;&gt;("clientId", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">360</span><span id="line.360">    }</span>
-<span class="source-line-no">361</span><span id="line.361"></span>
-<span class="source-line-no">362</span><span id="line.362">    /**</span>
-<span class="source-line-no">363</span><span id="line.363">     * set source with the specificied value</span>
-<span class="source-line-no">364</span><span id="line.364">     */</span>
-<span class="source-line-no">365</span><span id="line.365">    public ByProjectKeyByResourceTypeByIDGet withSource(final String source) {</span>
-<span class="source-line-no">366</span><span id="line.366">        return copy().withQueryParam("source", source);</span>
-<span class="source-line-no">367</span><span id="line.367">    }</span>
-<span class="source-line-no">368</span><span id="line.368"></span>
-<span class="source-line-no">369</span><span id="line.369">    /**</span>
-<span class="source-line-no">370</span><span id="line.370">     * add additional source query parameter</span>
-<span class="source-line-no">371</span><span id="line.371">     */</span>
-<span class="source-line-no">372</span><span id="line.372">    public ByProjectKeyByResourceTypeByIDGet addSource(final String source) {</span>
-<span class="source-line-no">373</span><span id="line.373">        return copy().addQueryParam("source", source);</span>
-<span class="source-line-no">374</span><span id="line.374">    }</span>
-<span class="source-line-no">375</span><span id="line.375"></span>
-<span class="source-line-no">376</span><span id="line.376">    /**</span>
-<span class="source-line-no">377</span><span id="line.377">     * set source with the specificied values</span>
-<span class="source-line-no">378</span><span id="line.378">     */</span>
-<span class="source-line-no">379</span><span id="line.379">    public ByProjectKeyByResourceTypeByIDGet withSource(final List&lt;String&gt; source) {</span>
-<span class="source-line-no">380</span><span id="line.380">        return copy().withoutQueryParam("source")</span>
-<span class="source-line-no">381</span><span id="line.381">                .addQueryParams(</span>
-<span class="source-line-no">382</span><span id="line.382">                    source.stream().map(s -&gt; new ParamEntry&lt;&gt;("source", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">383</span><span id="line.383">    }</span>
-<span class="source-line-no">384</span><span id="line.384"></span>
-<span class="source-line-no">385</span><span id="line.385">    /**</span>
-<span class="source-line-no">386</span><span id="line.386">     * add additional source query parameters</span>
-<span class="source-line-no">387</span><span id="line.387">     */</span>
-<span class="source-line-no">388</span><span id="line.388">    public ByProjectKeyByResourceTypeByIDGet addSource(final List&lt;String&gt; source) {</span>
-<span class="source-line-no">389</span><span id="line.389">        return copy().addQueryParams(</span>
-<span class="source-line-no">390</span><span id="line.390">            source.stream().map(s -&gt; new ParamEntry&lt;&gt;("source", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">391</span><span id="line.391">    }</span>
-<span class="source-line-no">392</span><span id="line.392"></span>
-<span class="source-line-no">393</span><span id="line.393">    /**</span>
-<span class="source-line-no">394</span><span id="line.394">     * set changes with the specificied value</span>
-<span class="source-line-no">395</span><span id="line.395">     */</span>
-<span class="source-line-no">396</span><span id="line.396">    public ByProjectKeyByResourceTypeByIDGet withChanges(final String changes) {</span>
-<span class="source-line-no">397</span><span id="line.397">        return copy().withQueryParam("changes", changes);</span>
-<span class="source-line-no">398</span><span id="line.398">    }</span>
-<span class="source-line-no">399</span><span id="line.399"></span>
-<span class="source-line-no">400</span><span id="line.400">    /**</span>
-<span class="source-line-no">401</span><span id="line.401">     * add additional changes query parameter</span>
-<span class="source-line-no">402</span><span id="line.402">     */</span>
-<span class="source-line-no">403</span><span id="line.403">    public ByProjectKeyByResourceTypeByIDGet addChanges(final String changes) {</span>
-<span class="source-line-no">404</span><span id="line.404">        return copy().addQueryParam("changes", changes);</span>
-<span class="source-line-no">405</span><span id="line.405">    }</span>
-<span class="source-line-no">406</span><span id="line.406"></span>
-<span class="source-line-no">407</span><span id="line.407">    /**</span>
-<span class="source-line-no">408</span><span id="line.408">     * set changes with the specificied values</span>
-<span class="source-line-no">409</span><span id="line.409">     */</span>
-<span class="source-line-no">410</span><span id="line.410">    public ByProjectKeyByResourceTypeByIDGet withChanges(final List&lt;String&gt; changes) {</span>
-<span class="source-line-no">411</span><span id="line.411">        return copy().withoutQueryParam("changes")</span>
-<span class="source-line-no">412</span><span id="line.412">                .addQueryParams(</span>
-<span class="source-line-no">413</span><span id="line.413">                    changes.stream().map(s -&gt; new ParamEntry&lt;&gt;("changes", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">414</span><span id="line.414">    }</span>
-<span class="source-line-no">415</span><span id="line.415"></span>
-<span class="source-line-no">416</span><span id="line.416">    /**</span>
-<span class="source-line-no">417</span><span id="line.417">     * add additional changes query parameters</span>
-<span class="source-line-no">418</span><span id="line.418">     */</span>
-<span class="source-line-no">419</span><span id="line.419">    public ByProjectKeyByResourceTypeByIDGet addChanges(final List&lt;String&gt; changes) {</span>
-<span class="source-line-no">420</span><span id="line.420">        return copy().addQueryParams(</span>
-<span class="source-line-no">421</span><span id="line.421">            changes.stream().map(s -&gt; new ParamEntry&lt;&gt;("changes", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">422</span><span id="line.422">    }</span>
-<span class="source-line-no">423</span><span id="line.423"></span>
-<span class="source-line-no">424</span><span id="line.424">    /**</span>
-<span class="source-line-no">425</span><span id="line.425">     * set customerId with the specificied value</span>
-<span class="source-line-no">426</span><span id="line.426">     */</span>
-<span class="source-line-no">427</span><span id="line.427">    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final String customerId) {</span>
-<span class="source-line-no">428</span><span id="line.428">        return copy().withQueryParam("customerId", customerId);</span>
-<span class="source-line-no">429</span><span id="line.429">    }</span>
-<span class="source-line-no">430</span><span id="line.430"></span>
-<span class="source-line-no">431</span><span id="line.431">    /**</span>
-<span class="source-line-no">432</span><span id="line.432">     * add additional customerId query parameter</span>
-<span class="source-line-no">433</span><span id="line.433">     */</span>
-<span class="source-line-no">434</span><span id="line.434">    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final String customerId) {</span>
-<span class="source-line-no">435</span><span id="line.435">        return copy().addQueryParam("customerId", customerId);</span>
-<span class="source-line-no">436</span><span id="line.436">    }</span>
-<span class="source-line-no">437</span><span id="line.437"></span>
-<span class="source-line-no">438</span><span id="line.438">    /**</span>
-<span class="source-line-no">439</span><span id="line.439">     * set customerId with the specificied values</span>
-<span class="source-line-no">440</span><span id="line.440">     */</span>
-<span class="source-line-no">441</span><span id="line.441">    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final List&lt;String&gt; customerId) {</span>
-<span class="source-line-no">442</span><span id="line.442">        return copy().withoutQueryParam("customerId")</span>
-<span class="source-line-no">443</span><span id="line.443">                .addQueryParams(customerId.stream()</span>
-<span class="source-line-no">444</span><span id="line.444">                        .map(s -&gt; new ParamEntry&lt;&gt;("customerId", s.toString()))</span>
-<span class="source-line-no">445</span><span id="line.445">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">446</span><span id="line.446">    }</span>
-<span class="source-line-no">447</span><span id="line.447"></span>
-<span class="source-line-no">448</span><span id="line.448">    /**</span>
-<span class="source-line-no">449</span><span id="line.449">     * add additional customerId query parameters</span>
-<span class="source-line-no">450</span><span id="line.450">     */</span>
-<span class="source-line-no">451</span><span id="line.451">    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final List&lt;String&gt; customerId) {</span>
-<span class="source-line-no">452</span><span id="line.452">        return copy().addQueryParams(</span>
-<span class="source-line-no">453</span><span id="line.453">            customerId.stream().map(s -&gt; new ParamEntry&lt;&gt;("customerId", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">454</span><span id="line.454">    }</span>
-<span class="source-line-no">455</span><span id="line.455"></span>
-<span class="source-line-no">456</span><span id="line.456">    /**</span>
-<span class="source-line-no">457</span><span id="line.457">     * set excludePlatformInitiatedChanges with the specificied value</span>
-<span class="source-line-no">458</span><span id="line.458">     */</span>
-<span class="source-line-no">459</span><span id="line.459">    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(</span>
-<span class="source-line-no">460</span><span id="line.460">            final PlatformInitiatedChange excludePlatformInitiatedChanges) {</span>
-<span class="source-line-no">461</span><span id="line.461">        return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);</span>
-<span class="source-line-no">462</span><span id="line.462">    }</span>
-<span class="source-line-no">463</span><span id="line.463"></span>
-<span class="source-line-no">464</span><span id="line.464">    /**</span>
-<span class="source-line-no">465</span><span id="line.465">     * add additional excludePlatformInitiatedChanges query parameter</span>
-<span class="source-line-no">466</span><span id="line.466">     */</span>
-<span class="source-line-no">467</span><span id="line.467">    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(</span>
-<span class="source-line-no">468</span><span id="line.468">            final PlatformInitiatedChange excludePlatformInitiatedChanges) {</span>
-<span class="source-line-no">469</span><span id="line.469">        return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);</span>
-<span class="source-line-no">470</span><span id="line.470">    }</span>
-<span class="source-line-no">471</span><span id="line.471"></span>
-<span class="source-line-no">472</span><span id="line.472">    /**</span>
-<span class="source-line-no">473</span><span id="line.473">     * set excludePlatformInitiatedChanges with the specificied values</span>
-<span class="source-line-no">474</span><span id="line.474">     */</span>
-<span class="source-line-no">475</span><span id="line.475">    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(</span>
-<span class="source-line-no">476</span><span id="line.476">            final List&lt;PlatformInitiatedChange&gt; excludePlatformInitiatedChanges) {</span>
-<span class="source-line-no">477</span><span id="line.477">        return copy().withoutQueryParam("excludePlatformInitiatedChanges")</span>
-<span class="source-line-no">478</span><span id="line.478">                .addQueryParams(excludePlatformInitiatedChanges.stream()</span>
-<span class="source-line-no">479</span><span id="line.479">                        .map(s -&gt; new ParamEntry&lt;&gt;("excludePlatformInitiatedChanges", s.toString()))</span>
-<span class="source-line-no">480</span><span id="line.480">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">481</span><span id="line.481">    }</span>
-<span class="source-line-no">482</span><span id="line.482"></span>
-<span class="source-line-no">483</span><span id="line.483">    /**</span>
-<span class="source-line-no">484</span><span id="line.484">     * add additional excludePlatformInitiatedChanges query parameters</span>
-<span class="source-line-no">485</span><span id="line.485">     */</span>
-<span class="source-line-no">486</span><span id="line.486">    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(</span>
-<span class="source-line-no">487</span><span id="line.487">            final List&lt;PlatformInitiatedChange&gt; excludePlatformInitiatedChanges) {</span>
-<span class="source-line-no">488</span><span id="line.488">        return copy().addQueryParams(excludePlatformInitiatedChanges.stream()</span>
-<span class="source-line-no">489</span><span id="line.489">                .map(s -&gt; new ParamEntry&lt;&gt;("excludePlatformInitiatedChanges", s.toString()))</span>
-<span class="source-line-no">490</span><span id="line.490">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">491</span><span id="line.491">    }</span>
-<span class="source-line-no">492</span><span id="line.492"></span>
-<span class="source-line-no">493</span><span id="line.493">    /**</span>
-<span class="source-line-no">494</span><span id="line.494">     * set expand with the specificied value</span>
-<span class="source-line-no">495</span><span id="line.495">     */</span>
-<span class="source-line-no">496</span><span id="line.496">    public ByProjectKeyByResourceTypeByIDGet withExpand(final boolean expand) {</span>
-<span class="source-line-no">497</span><span id="line.497">        return copy().withQueryParam("expand", expand);</span>
-<span class="source-line-no">498</span><span id="line.498">    }</span>
-<span class="source-line-no">499</span><span id="line.499"></span>
-<span class="source-line-no">500</span><span id="line.500">    /**</span>
-<span class="source-line-no">501</span><span id="line.501">     * add additional expand query parameter</span>
-<span class="source-line-no">502</span><span id="line.502">     */</span>
-<span class="source-line-no">503</span><span id="line.503">    public ByProjectKeyByResourceTypeByIDGet addExpand(final boolean expand) {</span>
-<span class="source-line-no">504</span><span id="line.504">        return copy().addQueryParam("expand", expand);</span>
-<span class="source-line-no">505</span><span id="line.505">    }</span>
-<span class="source-line-no">506</span><span id="line.506"></span>
-<span class="source-line-no">507</span><span id="line.507">    /**</span>
-<span class="source-line-no">508</span><span id="line.508">     * set expand with the specificied values</span>
-<span class="source-line-no">509</span><span id="line.509">     */</span>
-<span class="source-line-no">510</span><span id="line.510">    public ByProjectKeyByResourceTypeByIDGet withExpand(final List&lt;Boolean&gt; expand) {</span>
-<span class="source-line-no">511</span><span id="line.511">        return copy().withoutQueryParam("expand")</span>
-<span class="source-line-no">512</span><span id="line.512">                .addQueryParams(</span>
-<span class="source-line-no">513</span><span id="line.513">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">514</span><span id="line.514">    }</span>
-<span class="source-line-no">515</span><span id="line.515"></span>
-<span class="source-line-no">516</span><span id="line.516">    /**</span>
-<span class="source-line-no">517</span><span id="line.517">     * add additional expand query parameters</span>
-<span class="source-line-no">518</span><span id="line.518">     */</span>
-<span class="source-line-no">519</span><span id="line.519">    public ByProjectKeyByResourceTypeByIDGet addExpand(final List&lt;Boolean&gt; expand) {</span>
-<span class="source-line-no">520</span><span id="line.520">        return copy().addQueryParams(</span>
-<span class="source-line-no">521</span><span id="line.521">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">522</span><span id="line.522">    }</span>
-<span class="source-line-no">523</span><span id="line.523"></span>
-<span class="source-line-no">524</span><span id="line.524">    @Override</span>
-<span class="source-line-no">525</span><span id="line.525">    public boolean equals(Object o) {</span>
-<span class="source-line-no">526</span><span id="line.526">        if (this == o)</span>
-<span class="source-line-no">527</span><span id="line.527">            return true;</span>
-<span class="source-line-no">528</span><span id="line.528"></span>
-<span class="source-line-no">529</span><span id="line.529">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">530</span><span id="line.530">            return false;</span>
-<span class="source-line-no">531</span><span id="line.531"></span>
-<span class="source-line-no">532</span><span id="line.532">        ByProjectKeyByResourceTypeByIDGet that = (ByProjectKeyByResourceTypeByIDGet) o;</span>
+<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">017</span><span id="line.17">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">020</span><span id="line.20">public class ByProjectKeyByResourceTypeByIDGet extends</span>
+<span class="source-line-no">021</span><span id="line.21">        ApiMethod&lt;ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.RecordPagedQueryResponse&gt; {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private String projectKey;</span>
+<span class="source-line-no">024</span><span id="line.24">    private String resourceType;</span>
+<span class="source-line-no">025</span><span id="line.25">    private String ID;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    public ByProjectKeyByResourceTypeByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String resourceType,</span>
+<span class="source-line-no">028</span><span id="line.28">            String ID) {</span>
+<span class="source-line-no">029</span><span id="line.29">        super(apiHttpClient);</span>
+<span class="source-line-no">030</span><span id="line.30">        this.projectKey = projectKey;</span>
+<span class="source-line-no">031</span><span id="line.31">        this.resourceType = resourceType;</span>
+<span class="source-line-no">032</span><span id="line.32">        this.ID = ID;</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public ByProjectKeyByResourceTypeByIDGet(ByProjectKeyByResourceTypeByIDGet t) {</span>
+<span class="source-line-no">036</span><span id="line.36">        super(t);</span>
+<span class="source-line-no">037</span><span id="line.37">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">038</span><span id="line.38">        this.resourceType = t.resourceType;</span>
+<span class="source-line-no">039</span><span id="line.39">        this.ID = t.ID;</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @Override</span>
+<span class="source-line-no">043</span><span id="line.43">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">044</span><span id="line.44">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">045</span><span id="line.45">        String httpRequestPath = String.format("/%s/%s/%s", this.projectKey, this.resourceType, this.ID);</span>
+<span class="source-line-no">046</span><span id="line.46">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">047</span><span id="line.47">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">048</span><span id="line.48">        }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @Override</span>
+<span class="source-line-no">054</span><span id="line.54">    public ApiHttpResponse&lt;com.commercetools.history.models.RecordPagedQueryResponse&gt; executeBlocking(</span>
+<span class="source-line-no">055</span><span id="line.55">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">056</span><span id="line.56">        return executeBlocking(client, timeout, com.commercetools.history.models.RecordPagedQueryResponse.class);</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    @Override</span>
+<span class="source-line-no">060</span><span id="line.60">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.history.models.RecordPagedQueryResponse&gt;&gt; execute(</span>
+<span class="source-line-no">061</span><span id="line.61">            final ApiHttpClient client) {</span>
+<span class="source-line-no">062</span><span id="line.62">        return execute(client, com.commercetools.history.models.RecordPagedQueryResponse.class);</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public String getProjectKey() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return this.projectKey;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public String getResourceType() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return this.resourceType;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public String getID() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.ID;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public List&lt;String&gt; getDateFrom() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return this.getQueryParam("date.from");</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public List&lt;String&gt; getDateTo() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.getQueryParam("date.to");</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public List&lt;String&gt; getLimit() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return this.getQueryParam("limit");</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public List&lt;String&gt; getOffset() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.getQueryParam("offset");</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public List&lt;String&gt; getUserId() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.getQueryParam("userId");</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public List&lt;String&gt; getType() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.getQueryParam("type");</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public List&lt;String&gt; getClientId() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.getQueryParam("clientId");</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public List&lt;String&gt; getSource() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.getQueryParam("source");</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public List&lt;String&gt; getChanges() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return this.getQueryParam("changes");</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public List&lt;String&gt; getCustomerId() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.getQueryParam("customerId");</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public List&lt;String&gt; getExcludePlatformInitiatedChanges() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return this.getQueryParam("excludePlatformInitiatedChanges");</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public List&lt;String&gt; getExpand() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return this.getQueryParam("expand");</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">126</span><span id="line.126">        this.projectKey = projectKey;</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public void setResourceType(final String resourceType) {</span>
+<span class="source-line-no">130</span><span id="line.130">        this.resourceType = resourceType;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public void setID(final String ID) {</span>
+<span class="source-line-no">134</span><span id="line.134">        this.ID = ID;</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     * set dateFrom with the specificied value</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140">    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final Object dateFrom) {</span>
+<span class="source-line-no">141</span><span id="line.141">        return copy().withQueryParam("date.from", dateFrom);</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     * add additional dateFrom query parameter</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147">    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final Object dateFrom) {</span>
+<span class="source-line-no">148</span><span id="line.148">        return copy().addQueryParam("date.from", dateFrom);</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    /**</span>
+<span class="source-line-no">152</span><span id="line.152">     * set dateFrom with the specificied values</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
+<span class="source-line-no">154</span><span id="line.154">    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final List&lt;Object&gt; dateFrom) {</span>
+<span class="source-line-no">155</span><span id="line.155">        return copy().withoutQueryParam("date.from")</span>
+<span class="source-line-no">156</span><span id="line.156">                .addQueryParams(dateFrom.stream()</span>
+<span class="source-line-no">157</span><span id="line.157">                        .map(s -&gt; new ParamEntry&lt;&gt;("date.from", s.toString()))</span>
+<span class="source-line-no">158</span><span id="line.158">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     * add additional dateFrom query parameters</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164">    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final List&lt;Object&gt; dateFrom) {</span>
+<span class="source-line-no">165</span><span id="line.165">        return copy().addQueryParams(</span>
+<span class="source-line-no">166</span><span id="line.166">            dateFrom.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.from", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    /**</span>
+<span class="source-line-no">170</span><span id="line.170">     * set dateTo with the specificied value</span>
+<span class="source-line-no">171</span><span id="line.171">     */</span>
+<span class="source-line-no">172</span><span id="line.172">    public ByProjectKeyByResourceTypeByIDGet withDateTo(final Object dateTo) {</span>
+<span class="source-line-no">173</span><span id="line.173">        return copy().withQueryParam("date.to", dateTo);</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    /**</span>
+<span class="source-line-no">177</span><span id="line.177">     * add additional dateTo query parameter</span>
+<span class="source-line-no">178</span><span id="line.178">     */</span>
+<span class="source-line-no">179</span><span id="line.179">    public ByProjectKeyByResourceTypeByIDGet addDateTo(final Object dateTo) {</span>
+<span class="source-line-no">180</span><span id="line.180">        return copy().addQueryParam("date.to", dateTo);</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    /**</span>
+<span class="source-line-no">184</span><span id="line.184">     * set dateTo with the specificied values</span>
+<span class="source-line-no">185</span><span id="line.185">     */</span>
+<span class="source-line-no">186</span><span id="line.186">    public ByProjectKeyByResourceTypeByIDGet withDateTo(final List&lt;Object&gt; dateTo) {</span>
+<span class="source-line-no">187</span><span id="line.187">        return copy().withoutQueryParam("date.to")</span>
+<span class="source-line-no">188</span><span id="line.188">                .addQueryParams(</span>
+<span class="source-line-no">189</span><span id="line.189">                    dateTo.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.to", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">190</span><span id="line.190">    }</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    /**</span>
+<span class="source-line-no">193</span><span id="line.193">     * add additional dateTo query parameters</span>
+<span class="source-line-no">194</span><span id="line.194">     */</span>
+<span class="source-line-no">195</span><span id="line.195">    public ByProjectKeyByResourceTypeByIDGet addDateTo(final List&lt;Object&gt; dateTo) {</span>
+<span class="source-line-no">196</span><span id="line.196">        return copy().addQueryParams(</span>
+<span class="source-line-no">197</span><span id="line.197">            dateTo.stream().map(s -&gt; new ParamEntry&lt;&gt;("date.to", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    /**</span>
+<span class="source-line-no">201</span><span id="line.201">     * set limit with the specificied value</span>
+<span class="source-line-no">202</span><span id="line.202">     */</span>
+<span class="source-line-no">203</span><span id="line.203">    public ByProjectKeyByResourceTypeByIDGet withLimit(final int limit) {</span>
+<span class="source-line-no">204</span><span id="line.204">        return copy().withQueryParam("limit", limit);</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    /**</span>
+<span class="source-line-no">208</span><span id="line.208">     * add additional limit query parameter</span>
+<span class="source-line-no">209</span><span id="line.209">     */</span>
+<span class="source-line-no">210</span><span id="line.210">    public ByProjectKeyByResourceTypeByIDGet addLimit(final int limit) {</span>
+<span class="source-line-no">211</span><span id="line.211">        return copy().addQueryParam("limit", limit);</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    /**</span>
+<span class="source-line-no">215</span><span id="line.215">     * set limit with the specificied values</span>
+<span class="source-line-no">216</span><span id="line.216">     */</span>
+<span class="source-line-no">217</span><span id="line.217">    public ByProjectKeyByResourceTypeByIDGet withLimit(final List&lt;Integer&gt; limit) {</span>
+<span class="source-line-no">218</span><span id="line.218">        return copy().withoutQueryParam("limit")</span>
+<span class="source-line-no">219</span><span id="line.219">                .addQueryParams(</span>
+<span class="source-line-no">220</span><span id="line.220">                    limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    /**</span>
+<span class="source-line-no">224</span><span id="line.224">     * add additional limit query parameters</span>
+<span class="source-line-no">225</span><span id="line.225">     */</span>
+<span class="source-line-no">226</span><span id="line.226">    public ByProjectKeyByResourceTypeByIDGet addLimit(final List&lt;Integer&gt; limit) {</span>
+<span class="source-line-no">227</span><span id="line.227">        return copy().addQueryParams(</span>
+<span class="source-line-no">228</span><span id="line.228">            limit.stream().map(s -&gt; new ParamEntry&lt;&gt;("limit", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    /**</span>
+<span class="source-line-no">232</span><span id="line.232">     * set offset with the specificied value</span>
+<span class="source-line-no">233</span><span id="line.233">     */</span>
+<span class="source-line-no">234</span><span id="line.234">    public ByProjectKeyByResourceTypeByIDGet withOffset(final int offset) {</span>
+<span class="source-line-no">235</span><span id="line.235">        return copy().withQueryParam("offset", offset);</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    /**</span>
+<span class="source-line-no">239</span><span id="line.239">     * add additional offset query parameter</span>
+<span class="source-line-no">240</span><span id="line.240">     */</span>
+<span class="source-line-no">241</span><span id="line.241">    public ByProjectKeyByResourceTypeByIDGet addOffset(final int offset) {</span>
+<span class="source-line-no">242</span><span id="line.242">        return copy().addQueryParam("offset", offset);</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    /**</span>
+<span class="source-line-no">246</span><span id="line.246">     * set offset with the specificied values</span>
+<span class="source-line-no">247</span><span id="line.247">     */</span>
+<span class="source-line-no">248</span><span id="line.248">    public ByProjectKeyByResourceTypeByIDGet withOffset(final List&lt;Integer&gt; offset) {</span>
+<span class="source-line-no">249</span><span id="line.249">        return copy().withoutQueryParam("offset")</span>
+<span class="source-line-no">250</span><span id="line.250">                .addQueryParams(</span>
+<span class="source-line-no">251</span><span id="line.251">                    offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">252</span><span id="line.252">    }</span>
+<span class="source-line-no">253</span><span id="line.253"></span>
+<span class="source-line-no">254</span><span id="line.254">    /**</span>
+<span class="source-line-no">255</span><span id="line.255">     * add additional offset query parameters</span>
+<span class="source-line-no">256</span><span id="line.256">     */</span>
+<span class="source-line-no">257</span><span id="line.257">    public ByProjectKeyByResourceTypeByIDGet addOffset(final List&lt;Integer&gt; offset) {</span>
+<span class="source-line-no">258</span><span id="line.258">        return copy().addQueryParams(</span>
+<span class="source-line-no">259</span><span id="line.259">            offset.stream().map(s -&gt; new ParamEntry&lt;&gt;("offset", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">260</span><span id="line.260">    }</span>
+<span class="source-line-no">261</span><span id="line.261"></span>
+<span class="source-line-no">262</span><span id="line.262">    /**</span>
+<span class="source-line-no">263</span><span id="line.263">     * set userId with the specificied value</span>
+<span class="source-line-no">264</span><span id="line.264">     */</span>
+<span class="source-line-no">265</span><span id="line.265">    public ByProjectKeyByResourceTypeByIDGet withUserId(final String userId) {</span>
+<span class="source-line-no">266</span><span id="line.266">        return copy().withQueryParam("userId", userId);</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">    /**</span>
+<span class="source-line-no">270</span><span id="line.270">     * add additional userId query parameter</span>
+<span class="source-line-no">271</span><span id="line.271">     */</span>
+<span class="source-line-no">272</span><span id="line.272">    public ByProjectKeyByResourceTypeByIDGet addUserId(final String userId) {</span>
+<span class="source-line-no">273</span><span id="line.273">        return copy().addQueryParam("userId", userId);</span>
+<span class="source-line-no">274</span><span id="line.274">    }</span>
+<span class="source-line-no">275</span><span id="line.275"></span>
+<span class="source-line-no">276</span><span id="line.276">    /**</span>
+<span class="source-line-no">277</span><span id="line.277">     * set userId with the specificied values</span>
+<span class="source-line-no">278</span><span id="line.278">     */</span>
+<span class="source-line-no">279</span><span id="line.279">    public ByProjectKeyByResourceTypeByIDGet withUserId(final List&lt;String&gt; userId) {</span>
+<span class="source-line-no">280</span><span id="line.280">        return copy().withoutQueryParam("userId")</span>
+<span class="source-line-no">281</span><span id="line.281">                .addQueryParams(</span>
+<span class="source-line-no">282</span><span id="line.282">                    userId.stream().map(s -&gt; new ParamEntry&lt;&gt;("userId", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">283</span><span id="line.283">    }</span>
+<span class="source-line-no">284</span><span id="line.284"></span>
+<span class="source-line-no">285</span><span id="line.285">    /**</span>
+<span class="source-line-no">286</span><span id="line.286">     * add additional userId query parameters</span>
+<span class="source-line-no">287</span><span id="line.287">     */</span>
+<span class="source-line-no">288</span><span id="line.288">    public ByProjectKeyByResourceTypeByIDGet addUserId(final List&lt;String&gt; userId) {</span>
+<span class="source-line-no">289</span><span id="line.289">        return copy().addQueryParams(</span>
+<span class="source-line-no">290</span><span id="line.290">            userId.stream().map(s -&gt; new ParamEntry&lt;&gt;("userId", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">291</span><span id="line.291">    }</span>
+<span class="source-line-no">292</span><span id="line.292"></span>
+<span class="source-line-no">293</span><span id="line.293">    /**</span>
+<span class="source-line-no">294</span><span id="line.294">     * set type with the specificied value</span>
+<span class="source-line-no">295</span><span id="line.295">     */</span>
+<span class="source-line-no">296</span><span id="line.296">    public ByProjectKeyByResourceTypeByIDGet withType(final String type) {</span>
+<span class="source-line-no">297</span><span id="line.297">        return copy().withQueryParam("type", type);</span>
+<span class="source-line-no">298</span><span id="line.298">    }</span>
+<span class="source-line-no">299</span><span id="line.299"></span>
+<span class="source-line-no">300</span><span id="line.300">    /**</span>
+<span class="source-line-no">301</span><span id="line.301">     * add additional type query parameter</span>
+<span class="source-line-no">302</span><span id="line.302">     */</span>
+<span class="source-line-no">303</span><span id="line.303">    public ByProjectKeyByResourceTypeByIDGet addType(final String type) {</span>
+<span class="source-line-no">304</span><span id="line.304">        return copy().addQueryParam("type", type);</span>
+<span class="source-line-no">305</span><span id="line.305">    }</span>
+<span class="source-line-no">306</span><span id="line.306"></span>
+<span class="source-line-no">307</span><span id="line.307">    /**</span>
+<span class="source-line-no">308</span><span id="line.308">     * set type with the specificied values</span>
+<span class="source-line-no">309</span><span id="line.309">     */</span>
+<span class="source-line-no">310</span><span id="line.310">    public ByProjectKeyByResourceTypeByIDGet withType(final List&lt;String&gt; type) {</span>
+<span class="source-line-no">311</span><span id="line.311">        return copy().withoutQueryParam("type")</span>
+<span class="source-line-no">312</span><span id="line.312">                .addQueryParams(</span>
+<span class="source-line-no">313</span><span id="line.313">                    type.stream().map(s -&gt; new ParamEntry&lt;&gt;("type", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    /**</span>
+<span class="source-line-no">317</span><span id="line.317">     * add additional type query parameters</span>
+<span class="source-line-no">318</span><span id="line.318">     */</span>
+<span class="source-line-no">319</span><span id="line.319">    public ByProjectKeyByResourceTypeByIDGet addType(final List&lt;String&gt; type) {</span>
+<span class="source-line-no">320</span><span id="line.320">        return copy().addQueryParams(</span>
+<span class="source-line-no">321</span><span id="line.321">            type.stream().map(s -&gt; new ParamEntry&lt;&gt;("type", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">322</span><span id="line.322">    }</span>
+<span class="source-line-no">323</span><span id="line.323"></span>
+<span class="source-line-no">324</span><span id="line.324">    /**</span>
+<span class="source-line-no">325</span><span id="line.325">     * set clientId with the specificied value</span>
+<span class="source-line-no">326</span><span id="line.326">     */</span>
+<span class="source-line-no">327</span><span id="line.327">    public ByProjectKeyByResourceTypeByIDGet withClientId(final String clientId) {</span>
+<span class="source-line-no">328</span><span id="line.328">        return copy().withQueryParam("clientId", clientId);</span>
+<span class="source-line-no">329</span><span id="line.329">    }</span>
+<span class="source-line-no">330</span><span id="line.330"></span>
+<span class="source-line-no">331</span><span id="line.331">    /**</span>
+<span class="source-line-no">332</span><span id="line.332">     * add additional clientId query parameter</span>
+<span class="source-line-no">333</span><span id="line.333">     */</span>
+<span class="source-line-no">334</span><span id="line.334">    public ByProjectKeyByResourceTypeByIDGet addClientId(final String clientId) {</span>
+<span class="source-line-no">335</span><span id="line.335">        return copy().addQueryParam("clientId", clientId);</span>
+<span class="source-line-no">336</span><span id="line.336">    }</span>
+<span class="source-line-no">337</span><span id="line.337"></span>
+<span class="source-line-no">338</span><span id="line.338">    /**</span>
+<span class="source-line-no">339</span><span id="line.339">     * set clientId with the specificied values</span>
+<span class="source-line-no">340</span><span id="line.340">     */</span>
+<span class="source-line-no">341</span><span id="line.341">    public ByProjectKeyByResourceTypeByIDGet withClientId(final List&lt;String&gt; clientId) {</span>
+<span class="source-line-no">342</span><span id="line.342">        return copy().withoutQueryParam("clientId")</span>
+<span class="source-line-no">343</span><span id="line.343">                .addQueryParams(clientId.stream()</span>
+<span class="source-line-no">344</span><span id="line.344">                        .map(s -&gt; new ParamEntry&lt;&gt;("clientId", s.toString()))</span>
+<span class="source-line-no">345</span><span id="line.345">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">346</span><span id="line.346">    }</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">    /**</span>
+<span class="source-line-no">349</span><span id="line.349">     * add additional clientId query parameters</span>
+<span class="source-line-no">350</span><span id="line.350">     */</span>
+<span class="source-line-no">351</span><span id="line.351">    public ByProjectKeyByResourceTypeByIDGet addClientId(final List&lt;String&gt; clientId) {</span>
+<span class="source-line-no">352</span><span id="line.352">        return copy().addQueryParams(</span>
+<span class="source-line-no">353</span><span id="line.353">            clientId.stream().map(s -&gt; new ParamEntry&lt;&gt;("clientId", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">354</span><span id="line.354">    }</span>
+<span class="source-line-no">355</span><span id="line.355"></span>
+<span class="source-line-no">356</span><span id="line.356">    /**</span>
+<span class="source-line-no">357</span><span id="line.357">     * set source with the specificied value</span>
+<span class="source-line-no">358</span><span id="line.358">     */</span>
+<span class="source-line-no">359</span><span id="line.359">    public ByProjectKeyByResourceTypeByIDGet withSource(final String source) {</span>
+<span class="source-line-no">360</span><span id="line.360">        return copy().withQueryParam("source", source);</span>
+<span class="source-line-no">361</span><span id="line.361">    }</span>
+<span class="source-line-no">362</span><span id="line.362"></span>
+<span class="source-line-no">363</span><span id="line.363">    /**</span>
+<span class="source-line-no">364</span><span id="line.364">     * add additional source query parameter</span>
+<span class="source-line-no">365</span><span id="line.365">     */</span>
+<span class="source-line-no">366</span><span id="line.366">    public ByProjectKeyByResourceTypeByIDGet addSource(final String source) {</span>
+<span class="source-line-no">367</span><span id="line.367">        return copy().addQueryParam("source", source);</span>
+<span class="source-line-no">368</span><span id="line.368">    }</span>
+<span class="source-line-no">369</span><span id="line.369"></span>
+<span class="source-line-no">370</span><span id="line.370">    /**</span>
+<span class="source-line-no">371</span><span id="line.371">     * set source with the specificied values</span>
+<span class="source-line-no">372</span><span id="line.372">     */</span>
+<span class="source-line-no">373</span><span id="line.373">    public ByProjectKeyByResourceTypeByIDGet withSource(final List&lt;String&gt; source) {</span>
+<span class="source-line-no">374</span><span id="line.374">        return copy().withoutQueryParam("source")</span>
+<span class="source-line-no">375</span><span id="line.375">                .addQueryParams(</span>
+<span class="source-line-no">376</span><span id="line.376">                    source.stream().map(s -&gt; new ParamEntry&lt;&gt;("source", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">377</span><span id="line.377">    }</span>
+<span class="source-line-no">378</span><span id="line.378"></span>
+<span class="source-line-no">379</span><span id="line.379">    /**</span>
+<span class="source-line-no">380</span><span id="line.380">     * add additional source query parameters</span>
+<span class="source-line-no">381</span><span id="line.381">     */</span>
+<span class="source-line-no">382</span><span id="line.382">    public ByProjectKeyByResourceTypeByIDGet addSource(final List&lt;String&gt; source) {</span>
+<span class="source-line-no">383</span><span id="line.383">        return copy().addQueryParams(</span>
+<span class="source-line-no">384</span><span id="line.384">            source.stream().map(s -&gt; new ParamEntry&lt;&gt;("source", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">385</span><span id="line.385">    }</span>
+<span class="source-line-no">386</span><span id="line.386"></span>
+<span class="source-line-no">387</span><span id="line.387">    /**</span>
+<span class="source-line-no">388</span><span id="line.388">     * set changes with the specificied value</span>
+<span class="source-line-no">389</span><span id="line.389">     */</span>
+<span class="source-line-no">390</span><span id="line.390">    public ByProjectKeyByResourceTypeByIDGet withChanges(final String changes) {</span>
+<span class="source-line-no">391</span><span id="line.391">        return copy().withQueryParam("changes", changes);</span>
+<span class="source-line-no">392</span><span id="line.392">    }</span>
+<span class="source-line-no">393</span><span id="line.393"></span>
+<span class="source-line-no">394</span><span id="line.394">    /**</span>
+<span class="source-line-no">395</span><span id="line.395">     * add additional changes query parameter</span>
+<span class="source-line-no">396</span><span id="line.396">     */</span>
+<span class="source-line-no">397</span><span id="line.397">    public ByProjectKeyByResourceTypeByIDGet addChanges(final String changes) {</span>
+<span class="source-line-no">398</span><span id="line.398">        return copy().addQueryParam("changes", changes);</span>
+<span class="source-line-no">399</span><span id="line.399">    }</span>
+<span class="source-line-no">400</span><span id="line.400"></span>
+<span class="source-line-no">401</span><span id="line.401">    /**</span>
+<span class="source-line-no">402</span><span id="line.402">     * set changes with the specificied values</span>
+<span class="source-line-no">403</span><span id="line.403">     */</span>
+<span class="source-line-no">404</span><span id="line.404">    public ByProjectKeyByResourceTypeByIDGet withChanges(final List&lt;String&gt; changes) {</span>
+<span class="source-line-no">405</span><span id="line.405">        return copy().withoutQueryParam("changes")</span>
+<span class="source-line-no">406</span><span id="line.406">                .addQueryParams(</span>
+<span class="source-line-no">407</span><span id="line.407">                    changes.stream().map(s -&gt; new ParamEntry&lt;&gt;("changes", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">408</span><span id="line.408">    }</span>
+<span class="source-line-no">409</span><span id="line.409"></span>
+<span class="source-line-no">410</span><span id="line.410">    /**</span>
+<span class="source-line-no">411</span><span id="line.411">     * add additional changes query parameters</span>
+<span class="source-line-no">412</span><span id="line.412">     */</span>
+<span class="source-line-no">413</span><span id="line.413">    public ByProjectKeyByResourceTypeByIDGet addChanges(final List&lt;String&gt; changes) {</span>
+<span class="source-line-no">414</span><span id="line.414">        return copy().addQueryParams(</span>
+<span class="source-line-no">415</span><span id="line.415">            changes.stream().map(s -&gt; new ParamEntry&lt;&gt;("changes", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">416</span><span id="line.416">    }</span>
+<span class="source-line-no">417</span><span id="line.417"></span>
+<span class="source-line-no">418</span><span id="line.418">    /**</span>
+<span class="source-line-no">419</span><span id="line.419">     * set customerId with the specificied value</span>
+<span class="source-line-no">420</span><span id="line.420">     */</span>
+<span class="source-line-no">421</span><span id="line.421">    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final String customerId) {</span>
+<span class="source-line-no">422</span><span id="line.422">        return copy().withQueryParam("customerId", customerId);</span>
+<span class="source-line-no">423</span><span id="line.423">    }</span>
+<span class="source-line-no">424</span><span id="line.424"></span>
+<span class="source-line-no">425</span><span id="line.425">    /**</span>
+<span class="source-line-no">426</span><span id="line.426">     * add additional customerId query parameter</span>
+<span class="source-line-no">427</span><span id="line.427">     */</span>
+<span class="source-line-no">428</span><span id="line.428">    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final String customerId) {</span>
+<span class="source-line-no">429</span><span id="line.429">        return copy().addQueryParam("customerId", customerId);</span>
+<span class="source-line-no">430</span><span id="line.430">    }</span>
+<span class="source-line-no">431</span><span id="line.431"></span>
+<span class="source-line-no">432</span><span id="line.432">    /**</span>
+<span class="source-line-no">433</span><span id="line.433">     * set customerId with the specificied values</span>
+<span class="source-line-no">434</span><span id="line.434">     */</span>
+<span class="source-line-no">435</span><span id="line.435">    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final List&lt;String&gt; customerId) {</span>
+<span class="source-line-no">436</span><span id="line.436">        return copy().withoutQueryParam("customerId")</span>
+<span class="source-line-no">437</span><span id="line.437">                .addQueryParams(customerId.stream()</span>
+<span class="source-line-no">438</span><span id="line.438">                        .map(s -&gt; new ParamEntry&lt;&gt;("customerId", s.toString()))</span>
+<span class="source-line-no">439</span><span id="line.439">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">440</span><span id="line.440">    }</span>
+<span class="source-line-no">441</span><span id="line.441"></span>
+<span class="source-line-no">442</span><span id="line.442">    /**</span>
+<span class="source-line-no">443</span><span id="line.443">     * add additional customerId query parameters</span>
+<span class="source-line-no">444</span><span id="line.444">     */</span>
+<span class="source-line-no">445</span><span id="line.445">    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final List&lt;String&gt; customerId) {</span>
+<span class="source-line-no">446</span><span id="line.446">        return copy().addQueryParams(</span>
+<span class="source-line-no">447</span><span id="line.447">            customerId.stream().map(s -&gt; new ParamEntry&lt;&gt;("customerId", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">448</span><span id="line.448">    }</span>
+<span class="source-line-no">449</span><span id="line.449"></span>
+<span class="source-line-no">450</span><span id="line.450">    /**</span>
+<span class="source-line-no">451</span><span id="line.451">     * set excludePlatformInitiatedChanges with the specificied value</span>
+<span class="source-line-no">452</span><span id="line.452">     */</span>
+<span class="source-line-no">453</span><span id="line.453">    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(</span>
+<span class="source-line-no">454</span><span id="line.454">            final PlatformInitiatedChange excludePlatformInitiatedChanges) {</span>
+<span class="source-line-no">455</span><span id="line.455">        return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);</span>
+<span class="source-line-no">456</span><span id="line.456">    }</span>
+<span class="source-line-no">457</span><span id="line.457"></span>
+<span class="source-line-no">458</span><span id="line.458">    /**</span>
+<span class="source-line-no">459</span><span id="line.459">     * add additional excludePlatformInitiatedChanges query parameter</span>
+<span class="source-line-no">460</span><span id="line.460">     */</span>
+<span class="source-line-no">461</span><span id="line.461">    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(</span>
+<span class="source-line-no">462</span><span id="line.462">            final PlatformInitiatedChange excludePlatformInitiatedChanges) {</span>
+<span class="source-line-no">463</span><span id="line.463">        return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);</span>
+<span class="source-line-no">464</span><span id="line.464">    }</span>
+<span class="source-line-no">465</span><span id="line.465"></span>
+<span class="source-line-no">466</span><span id="line.466">    /**</span>
+<span class="source-line-no">467</span><span id="line.467">     * set excludePlatformInitiatedChanges with the specificied values</span>
+<span class="source-line-no">468</span><span id="line.468">     */</span>
+<span class="source-line-no">469</span><span id="line.469">    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(</span>
+<span class="source-line-no">470</span><span id="line.470">            final List&lt;PlatformInitiatedChange&gt; excludePlatformInitiatedChanges) {</span>
+<span class="source-line-no">471</span><span id="line.471">        return copy().withoutQueryParam("excludePlatformInitiatedChanges")</span>
+<span class="source-line-no">472</span><span id="line.472">                .addQueryParams(excludePlatformInitiatedChanges.stream()</span>
+<span class="source-line-no">473</span><span id="line.473">                        .map(s -&gt; new ParamEntry&lt;&gt;("excludePlatformInitiatedChanges", s.toString()))</span>
+<span class="source-line-no">474</span><span id="line.474">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">475</span><span id="line.475">    }</span>
+<span class="source-line-no">476</span><span id="line.476"></span>
+<span class="source-line-no">477</span><span id="line.477">    /**</span>
+<span class="source-line-no">478</span><span id="line.478">     * add additional excludePlatformInitiatedChanges query parameters</span>
+<span class="source-line-no">479</span><span id="line.479">     */</span>
+<span class="source-line-no">480</span><span id="line.480">    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(</span>
+<span class="source-line-no">481</span><span id="line.481">            final List&lt;PlatformInitiatedChange&gt; excludePlatformInitiatedChanges) {</span>
+<span class="source-line-no">482</span><span id="line.482">        return copy().addQueryParams(excludePlatformInitiatedChanges.stream()</span>
+<span class="source-line-no">483</span><span id="line.483">                .map(s -&gt; new ParamEntry&lt;&gt;("excludePlatformInitiatedChanges", s.toString()))</span>
+<span class="source-line-no">484</span><span id="line.484">                .collect(Collectors.toList()));</span>
+<span class="source-line-no">485</span><span id="line.485">    }</span>
+<span class="source-line-no">486</span><span id="line.486"></span>
+<span class="source-line-no">487</span><span id="line.487">    /**</span>
+<span class="source-line-no">488</span><span id="line.488">     * set expand with the specificied value</span>
+<span class="source-line-no">489</span><span id="line.489">     */</span>
+<span class="source-line-no">490</span><span id="line.490">    public ByProjectKeyByResourceTypeByIDGet withExpand(final boolean expand) {</span>
+<span class="source-line-no">491</span><span id="line.491">        return copy().withQueryParam("expand", expand);</span>
+<span class="source-line-no">492</span><span id="line.492">    }</span>
+<span class="source-line-no">493</span><span id="line.493"></span>
+<span class="source-line-no">494</span><span id="line.494">    /**</span>
+<span class="source-line-no">495</span><span id="line.495">     * add additional expand query parameter</span>
+<span class="source-line-no">496</span><span id="line.496">     */</span>
+<span class="source-line-no">497</span><span id="line.497">    public ByProjectKeyByResourceTypeByIDGet addExpand(final boolean expand) {</span>
+<span class="source-line-no">498</span><span id="line.498">        return copy().addQueryParam("expand", expand);</span>
+<span class="source-line-no">499</span><span id="line.499">    }</span>
+<span class="source-line-no">500</span><span id="line.500"></span>
+<span class="source-line-no">501</span><span id="line.501">    /**</span>
+<span class="source-line-no">502</span><span id="line.502">     * set expand with the specificied values</span>
+<span class="source-line-no">503</span><span id="line.503">     */</span>
+<span class="source-line-no">504</span><span id="line.504">    public ByProjectKeyByResourceTypeByIDGet withExpand(final List&lt;Boolean&gt; expand) {</span>
+<span class="source-line-no">505</span><span id="line.505">        return copy().withoutQueryParam("expand")</span>
+<span class="source-line-no">506</span><span id="line.506">                .addQueryParams(</span>
+<span class="source-line-no">507</span><span id="line.507">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">508</span><span id="line.508">    }</span>
+<span class="source-line-no">509</span><span id="line.509"></span>
+<span class="source-line-no">510</span><span id="line.510">    /**</span>
+<span class="source-line-no">511</span><span id="line.511">     * add additional expand query parameters</span>
+<span class="source-line-no">512</span><span id="line.512">     */</span>
+<span class="source-line-no">513</span><span id="line.513">    public ByProjectKeyByResourceTypeByIDGet addExpand(final List&lt;Boolean&gt; expand) {</span>
+<span class="source-line-no">514</span><span id="line.514">        return copy().addQueryParams(</span>
+<span class="source-line-no">515</span><span id="line.515">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">516</span><span id="line.516">    }</span>
+<span class="source-line-no">517</span><span id="line.517"></span>
+<span class="source-line-no">518</span><span id="line.518">    @Override</span>
+<span class="source-line-no">519</span><span id="line.519">    public boolean equals(Object o) {</span>
+<span class="source-line-no">520</span><span id="line.520">        if (this == o)</span>
+<span class="source-line-no">521</span><span id="line.521">            return true;</span>
+<span class="source-line-no">522</span><span id="line.522"></span>
+<span class="source-line-no">523</span><span id="line.523">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">524</span><span id="line.524">            return false;</span>
+<span class="source-line-no">525</span><span id="line.525"></span>
+<span class="source-line-no">526</span><span id="line.526">        ByProjectKeyByResourceTypeByIDGet that = (ByProjectKeyByResourceTypeByIDGet) o;</span>
+<span class="source-line-no">527</span><span id="line.527"></span>
+<span class="source-line-no">528</span><span id="line.528">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">529</span><span id="line.529">                .append(resourceType, that.resourceType)</span>
+<span class="source-line-no">530</span><span id="line.530">                .append(ID, that.ID)</span>
+<span class="source-line-no">531</span><span id="line.531">                .isEquals();</span>
+<span class="source-line-no">532</span><span id="line.532">    }</span>
 <span class="source-line-no">533</span><span id="line.533"></span>
-<span class="source-line-no">534</span><span id="line.534">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">535</span><span id="line.535">                .append(resourceType, that.resourceType)</span>
-<span class="source-line-no">536</span><span id="line.536">                .append(ID, that.ID)</span>
-<span class="source-line-no">537</span><span id="line.537">                .isEquals();</span>
-<span class="source-line-no">538</span><span id="line.538">    }</span>
-<span class="source-line-no">539</span><span id="line.539"></span>
-<span class="source-line-no">540</span><span id="line.540">    @Override</span>
-<span class="source-line-no">541</span><span id="line.541">    public int hashCode() {</span>
-<span class="source-line-no">542</span><span id="line.542">        return new HashCodeBuilder(17, 37).append(projectKey).append(resourceType).append(ID).toHashCode();</span>
-<span class="source-line-no">543</span><span id="line.543">    }</span>
-<span class="source-line-no">544</span><span id="line.544"></span>
-<span class="source-line-no">545</span><span id="line.545">    @Override</span>
-<span class="source-line-no">546</span><span id="line.546">    protected ByProjectKeyByResourceTypeByIDGet copy() {</span>
-<span class="source-line-no">547</span><span id="line.547">        return new ByProjectKeyByResourceTypeByIDGet(this);</span>
-<span class="source-line-no">548</span><span id="line.548">    }</span>
-<span class="source-line-no">549</span><span id="line.549">}</span>
+<span class="source-line-no">534</span><span id="line.534">    @Override</span>
+<span class="source-line-no">535</span><span id="line.535">    public int hashCode() {</span>
+<span class="source-line-no">536</span><span id="line.536">        return new HashCodeBuilder(17, 37).append(projectKey).append(resourceType).append(ID).toHashCode();</span>
+<span class="source-line-no">537</span><span id="line.537">    }</span>
+<span class="source-line-no">538</span><span id="line.538"></span>
+<span class="source-line-no">539</span><span id="line.539">    @Override</span>
+<span class="source-line-no">540</span><span id="line.540">    protected ByProjectKeyByResourceTypeByIDGet copy() {</span>
+<span class="source-line-no">541</span><span id="line.541">        return new ByProjectKeyByResourceTypeByIDGet(this);</span>
+<span class="source-line-no">542</span><span id="line.542">    }</span>
+<span class="source-line-no">543</span><span id="line.543">}</span>
 
 
 

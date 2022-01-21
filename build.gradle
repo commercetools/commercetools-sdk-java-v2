@@ -72,9 +72,7 @@ allprojects {
 
 apply from: "$rootDir/gradle-scripts/repositories.gradle"
 apply from: "$rootDir/gradle-scripts/extensions.gradle"
-apply from: "$rootDir/gradle-scripts/alljavadoc.gradle"
 apply from: "$rootDir/gradle-scripts/jacoco.gradle"
-apply from: "$rootDir/gradle-scripts/global-tasks.gradle"
 apply from: "$rootDir/gradle-scripts/spotless.gradle"
 
 group='com.commercetools.sdk'
@@ -164,4 +162,96 @@ subprojects { project ->
     }
 
     task allDeps(type: DependencyReportTask) {}
+}
+
+def documentationProjects= [
+        ":commercetools:commercetools-http-client",
+        ":commercetools:commercetools-sdk-java-api",
+        ":commercetools:commercetools-sdk-java-importapi",
+        ":commercetools:commercetools-sdk-java-ml",
+        ":commercetools:commercetools-sdk-compat-v1",
+        ":commercetools:commercetools-sdk-java-history",
+        ":rmf:rmf-java-base",
+        ":commercetools:commercetools-apachehttp-client",
+        ":commercetools:commercetools-okhttp-client3",
+        ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:internal-docs",
+        ":rmf:okhttp-client"
+]
+
+task alljavadoc(type: Javadoc) {
+    source documentationProjects.collect { project(it).sourceSets.main.allJava }
+    classpath = files(documentationProjects.collect { project(it).sourceSets.test.compileClasspath })
+    destinationDir = file("${buildDir}/docs/javadoc")
+    excludes = [
+            '**/*Test.java',
+            '**/test/*.java'
+    ]
+    options {
+        setMemberLevel JavadocMemberLevel.PUBLIC
+        setAuthor false
+        noTimestamp = true
+
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
+        overview = "src/main/javadoc/overview.html"
+        bottom = """
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            <span id="custom-javascripts"></span>
+            <script src="{@docRoot}/resources/javascripts/main.js"></script>
+            <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
+        """
+        taglets = ['com.commercetools.build.taglets.CodeTaglet', 'com.commercetools.build.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
+        tagletPath = configurations.taglet.files as List
+        addBooleanOption('-allow-script-in-comments', true)
+        addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
+        addBooleanOption('linksource', true)
+        groups = [
+                "API": ["com.commercetools.api.*"],
+                "History": ["com.commercetools.history.*"],
+                "Import": ["com.commercetools.importapi.*"],
+                "ML": ["com.commercetools.ml.*"],
+                "Base Packages": ["io.vrap.rmf.base.*"],
+                "HTTP Clients": [
+                        "com.commercetools.http.*",
+                        "io.vrap.rmf.okhttp.*"
+                ]
+        ]
+        addStringOption('source', '8')
+    }
+
+    doLast {
+        copy{
+            from "src/main/javadoc/resources"
+            into "${buildDir}/docs/javadoc/resources"
+        }
+    }
+}
+
+tasks.register("writeVersionToReadme") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
+    }
+}
+
+tasks.register("writeVersionToExamples") {
+    doLast {
+        ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/spring/build.gradle')
+            }
+        }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir) {
+                include(name: 'examples/maven-okhttp3/pom.xml')
+                include(name: 'examples/maven-okhttp4/pom.xml')
+            }
+        }
+    }
 }

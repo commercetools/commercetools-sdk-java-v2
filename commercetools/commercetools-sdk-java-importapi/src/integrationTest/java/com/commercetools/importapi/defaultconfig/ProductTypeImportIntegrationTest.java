@@ -20,7 +20,7 @@ import com.commercetools.importapi.models.importrequests.ProductTypeImportReques
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ProductTypeImportIntegrationTest {
 
@@ -77,8 +77,8 @@ public class ProductTypeImportIntegrationTest {
         //                .executeBlocking()
         //                .getBody();
         //
-        //        Assert.assertNotNull(deletedImportSink);
-        //        Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());
+        //        Assertions.assertNotNull(deletedImportSink);
+        //        Assertions.assertEquals(importSink.getKey(), deletedImportSink.getKey());
     }
 
 }

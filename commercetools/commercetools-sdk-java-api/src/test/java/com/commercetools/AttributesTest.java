@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AttributesTest {
 
@@ -224,6 +224,86 @@ public class AttributesTest {
                 .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
         assertThat(attributes.get("set-reference").getValue()).asList().first().isInstanceOf(ProductReference.class);
         assertThat(attributes.get("set-money").getValue()).asList().first().isInstanceOf(TypedMoney.class);
+        assertThat(attributes.get("set-nested").getValue()).asList()
+                .first()
+                .asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+    }
+
+    @Test
+    public void attributesTyped() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        Map<String, Attribute> attributes = variant.withProductVariant(AttributeAccessor::asMap);
+        assertThat(attributes.get("text").withAttribute(AttributeAccessor::asString))
+                .isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
+        assertThat(attributes.get("ltext").withAttribute(AttributeAccessor::asLocalizedString)).isInstanceOfSatisfying(
+            LocalizedString.class, localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));
+        assertThat(attributes.get("enum").withAttribute(AttributeAccessor::asEnum)).isInstanceOfSatisfying(
+            AttributePlainEnumValue.class, enumValue -> assertThat(enumValue.getLabel()).isEqualTo("foo"));
+        assertThat(attributes.get("lenum").withAttribute(AttributeAccessor::asLocalizedEnum)).isInstanceOfSatisfying(
+            AttributeLocalizedEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
+        assertThat(attributes.get("date").withAttribute(AttributeAccessor::asDate))
+                .isInstanceOfSatisfying(LocalDate.class, localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(attributes.get("time").withAttribute(AttributeAccessor::asTime))
+                .isInstanceOfSatisfying(LocalTime.class, localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(attributes.get("datetime").withAttribute(AttributeAccessor::asDateTime)).isInstanceOfSatisfying(
+            ZonedDateTime.class, dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(attributes.get("boolean").withAttribute(AttributeAccessor::asBoolean))
+                .isInstanceOfSatisfying(Boolean.class, aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(attributes.get("integer").withAttribute(AttributeAccessor::asLong))
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
+        assertThat(attributes.get("double").withAttribute(AttributeAccessor::asDouble))
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.get("reference").withAttribute(AttributeAccessor::asReference)).isInstanceOfSatisfying(
+            ProductReference.class, reference -> assertThat(reference.getId()).isEqualTo("12345"));
+        assertThat(attributes.get("money").withAttribute(AttributeAccessor::asMoney))
+                .isInstanceOfSatisfying(TypedMoney.class, money -> assertThat(money.getCentAmount()).isEqualTo(100));
+        assertThat(attributes.get("nested").getValue()).asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("set-text").withAttribute(AttributeAccessor::asSetString)).asList()
+                .first()
+                .isInstanceOf(String.class);
+        assertThat(attributes.get("set-ltext").withAttribute(AttributeAccessor::asSetLocalizedString)).asList()
+                .first()
+                .isInstanceOf(LocalizedString.class);
+        assertThat(attributes.get("set-enum").withAttribute(AttributeAccessor::asSetEnum)).asList()
+                .first()
+                .isInstanceOf(AttributePlainEnumValue.class);
+        assertThat(attributes.get("set-lenum").withAttribute(AttributeAccessor::asSetLocalizedEnum)).asList()
+                .first()
+                .isInstanceOf(AttributeLocalizedEnumValue.class);
+        assertThat(attributes.get("set-date").withAttribute(AttributeAccessor::asSetDate)).asList()
+                .first()
+                .isInstanceOf(LocalDate.class);
+        assertThat(attributes.get("set-time").withAttribute(AttributeAccessor::asSetTime)).asList()
+                .first()
+                .isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSetDateTime)).asList()
+                .first()
+                .isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("set-boolean").withAttribute(AttributeAccessor::asSetBoolean)).asList()
+                .first()
+                .isInstanceOf(Boolean.class);
+        assertThat(attributes.get("set-integer").withAttribute(AttributeAccessor::asSetLong)).asList()
+                .first()
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
+        assertThat(attributes.get("set-double").withAttribute(AttributeAccessor::asSetDouble)).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.get("set-reference").withAttribute(AttributeAccessor::asSetReference)).asList()
+                .first()
+                .isInstanceOf(ProductReference.class);
+        assertThat(attributes.get("set-money").withAttribute(AttributeAccessor::asSetMoney)).asList()
+                .first()
+                .isInstanceOf(TypedMoney.class);
         assertThat(attributes.get("set-nested").getValue()).asList()
                 .first()
                 .asList()

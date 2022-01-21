@@ -5,7 +5,7 @@ import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class OrdersFixtures {
     public static Order deleteOrder(final String id, final Long version) {
@@ -17,8 +17,8 @@ public class OrdersFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(order);
-        Assert.assertEquals(order.getId(), id);
+        Assertions.assertNotNull(order);
+        Assertions.assertEquals(order.getId(), id);
 
         return order;
     }
@@ -33,8 +33,8 @@ public class OrdersFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(orderEdit);
-        Assert.assertEquals(orderEdit.getId(), id);
+        Assertions.assertNotNull(orderEdit);
+        Assertions.assertEquals(orderEdit.getId(), id);
 
         return orderEdit;
     }

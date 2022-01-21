@@ -10,12 +10,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class UploadImageTest extends TestBase {
 
-    @Ignore
+    @Disabled
     @Test
     public void uploadImageTest() throws JsonProcessingException {
 

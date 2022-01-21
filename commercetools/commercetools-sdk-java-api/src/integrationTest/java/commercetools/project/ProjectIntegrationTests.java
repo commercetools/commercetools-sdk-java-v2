@@ -11,8 +11,8 @@ import com.commercetools.api.models.project.ProjectUpdateAction;
 import com.commercetools.api.models.project.ProjectUpdateBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ProjectIntegrationTests {
 
@@ -20,8 +20,8 @@ public class ProjectIntegrationTests {
     public void byKeyGet() throws Exception {
         String projectKey = CommercetoolsTestUtils.getProjectKey();
         Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();
-        Assert.assertNotNull(project);
-        Assert.assertEquals(projectKey, project.getKey());
+        Assertions.assertNotNull(project);
+        Assertions.assertEquals(projectKey, project.getKey());
     }
 
     @Test
@@ -34,6 +34,6 @@ public class ProjectIntegrationTests {
                 .post(ProjectUpdateBuilder.of().actions(updateActions).version(project.getVersion()).build())
                 .executeBlocking()
                 .getBody();
-        Assert.assertNotNull(updatedProject);
+        Assertions.assertNotNull(updatedProject);
     }
 }

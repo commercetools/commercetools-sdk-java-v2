@@ -1,0 +1,38 @@
+ext {
+    versions = [
+            slf4j: "1.7.32",
+            logback: "1.2.8",
+            findbugs: "3.0.2",
+            jackson: "2.12.4",
+            junit: "5.8.2",
+            validation: "2.0.1.Final",
+            jsonassert: "1.5.0",
+            mockito: "4.2.0",
+            assertJ: "3.20.2",
+            gson: "2.8.8",
+            awaitility: "4.1.0",
+            failsafe: "2.4.3",
+            ctpJvmSdk: {
+                strictly '[1.62.0,)'
+                prefer '2.0.0'
+            }
+    ]
+
+    commons = [
+            lang3: 'org.apache.commons:commons-lang3:3.12.0',
+            io: {
+                strictly '[2.8.0,)'
+                prefer '2.11.0'
+            }
+
+    ]
+
+    scmProjectName = rootProject.name
+    scmRepo = 'github.com'
+    scmProjectPath = "commercetools/commercetools-sdk-java-v2.git"  // github relative path with .git extension
+    scmProjectUrl = "https://$scmRepo/$scmProjectPath"      // just as web-page
+    scmHttpsUrl = "https://$scmRepo/$scmProjectPath"        // common VCS read access
+    scmSshUrl = "git@$scmRepo:$scmProjectPath"              // developers VCS read-write repo
+    SNAPSHOT_SUFFIX = "-SNAPSHOT"
+    versionWIP = "development$SNAPSHOT_SUFFIX"
+}

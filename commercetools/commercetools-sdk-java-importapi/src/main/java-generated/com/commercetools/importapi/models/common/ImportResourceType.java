@@ -63,8 +63,6 @@ public interface ImportResourceType {
     */
     ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
 
-    ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
-
     enum ImportResourceTypeEnum implements ImportResourceType {
         CATEGORY("category"),
 
@@ -84,9 +82,7 @@ public interface ImportResourceType {
 
         PRODUCT_VARIANT_PATCH("product-variant-patch"),
 
-        CUSTOMER("customer"),
-
-        INVENTORY("inventory");
+        CUSTOMER("customer");
         private final String jsonName;
 
         private ImportResourceTypeEnum(final String jsonName) {

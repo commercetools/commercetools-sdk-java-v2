@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.subscription.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class SubscriptionFixtures {
 
@@ -46,7 +46,7 @@ public class SubscriptionFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(subscription);
+        Assertions.assertNotNull(subscription);
 
         return subscription;
     }
@@ -60,7 +60,7 @@ public class SubscriptionFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(subscription);
+        Assertions.assertNotNull(subscription);
 
         return subscription;
     }

@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.state.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class StateIntegrationTests {
 
@@ -18,7 +18,7 @@ public class StateIntegrationTests {
     public void createAndDeleteById() {
         State state = createState();
         State deletedState = deleteState(state.getId(), state.getVersion());
-        Assert.assertEquals(deletedState.getId(), state.getId());
+        Assertions.assertEquals(deletedState.getId(), state.getId());
     }
 
     @Test
@@ -31,8 +31,8 @@ public class StateIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedState);
-            Assert.assertEquals(state.getId(), queriedState.getId());
+            Assertions.assertNotNull(queriedState);
+            Assertions.assertEquals(state.getId(), queriedState.getId());
         });
     }
 
@@ -46,8 +46,8 @@ public class StateIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), state.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), state.getId());
         });
     }
 
@@ -64,8 +64,8 @@ public class StateIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedState);
-            Assert.assertEquals(updatedState.getKey(), newKey);
+            Assertions.assertNotNull(updatedState);
+            Assertions.assertEquals(updatedState.getKey(), newKey);
             return updatedState;
         });
     }

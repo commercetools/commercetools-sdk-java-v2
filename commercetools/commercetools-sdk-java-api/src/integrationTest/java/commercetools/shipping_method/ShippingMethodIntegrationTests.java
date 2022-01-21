@@ -11,8 +11,8 @@ import java.util.List;
 import com.commercetools.api.models.shipping_method.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ShippingMethodIntegrationTests {
 
@@ -34,8 +34,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedShippingMethod);
-            Assert.assertEquals(queriedShippingMethod.getId(), shippingMethod.getId());
+            Assertions.assertNotNull(queriedShippingMethod);
+            Assertions.assertEquals(queriedShippingMethod.getId(), shippingMethod.getId());
         });
     }
 
@@ -49,8 +49,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedShippingMethod);
-            Assert.assertEquals(queriedShippingMethod.getId(), shippingMethod.getId());
+            Assertions.assertNotNull(queriedShippingMethod);
+            Assertions.assertEquals(queriedShippingMethod.getId(), shippingMethod.getId());
         });
     }
 
@@ -64,8 +64,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), shippingMethod.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), shippingMethod.getId());
         });
     }
 
@@ -86,8 +86,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedShippingMethod);
-            Assert.assertEquals(updatedShippingMethod.getKey(), newKey);
+            Assertions.assertNotNull(updatedShippingMethod);
+            Assertions.assertEquals(updatedShippingMethod.getKey(), newKey);
 
             return updatedShippingMethod;
         });
@@ -110,8 +110,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedShippingMethod);
-            Assert.assertEquals(updatedShippingMethod.getKey(), newKey);
+            Assertions.assertNotNull(updatedShippingMethod);
+            Assertions.assertEquals(updatedShippingMethod.getKey(), newKey);
 
             return updatedShippingMethod;
         });
@@ -129,8 +129,8 @@ public class ShippingMethodIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(deletedShippingMethod);
-            Assert.assertEquals(shippingMethod.getId(), deletedShippingMethod.getId());
+            Assertions.assertNotNull(deletedShippingMethod);
+            Assertions.assertEquals(shippingMethod.getId(), deletedShippingMethod.getId());
         }));
 
     }

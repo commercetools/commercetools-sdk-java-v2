@@ -10,8 +10,8 @@ import java.util.List;
 import com.commercetools.api.models.customer.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CustomerIntegrationTests {
 
@@ -20,7 +20,7 @@ public class CustomerIntegrationTests {
         withCustomerGroup(customerGroup -> {
             Customer customer = createCustomer(customerGroup);
             Customer deletedCustomer = deleteCustomer(customer.getId(), customer.getVersion());
-            Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+            Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
         });
     }
 
@@ -34,8 +34,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedCustomer);
-            Assert.assertEquals(queriedCustomer.getId(), customer.getId());
+            Assertions.assertNotNull(queriedCustomer);
+            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
         });
     }
 
@@ -49,8 +49,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedCustomer);
-            Assert.assertEquals(queriedCustomer.getId(), customer.getId());
+            Assertions.assertNotNull(queriedCustomer);
+            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
         });
     }
 
@@ -64,8 +64,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), customer.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), customer.getId());
         });
     }
 
@@ -83,8 +83,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomer);
-            Assert.assertEquals(updatedCustomer.getKey(), newKey);
+            Assertions.assertNotNull(updatedCustomer);
+            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
 
             return updatedCustomer;
         });
@@ -104,8 +104,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomer);
-            Assert.assertEquals(updatedCustomer.getKey(), newKey);
+            Assertions.assertNotNull(updatedCustomer);
+            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
 
             return updatedCustomer;
         });
@@ -123,8 +123,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(deletedCustomer);
-            Assert.assertEquals(customer.getId(), deletedCustomer.getId());
+            Assertions.assertNotNull(deletedCustomer);
+            Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
         });
     }
 }

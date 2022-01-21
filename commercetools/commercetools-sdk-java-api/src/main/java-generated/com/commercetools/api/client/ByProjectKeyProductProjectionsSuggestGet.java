@@ -1,8 +1,6 @@
 
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -48,14 +46,13 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, java.lang.Object.class).toCompletableFuture(), request, timeout);
+    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, java.lang.Object.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), java.lang.Object.class).toCompletableFuture();
+        return execute(client, java.lang.Object.class);
     }
 
     public String getProjectKey() {

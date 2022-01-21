@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class GlobalCustomerPasswordAuthIntegrationTest {
 
@@ -48,24 +48,26 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
 
         try {
             String token = globalCustomerPasswordTokenSupplier.getToken().get().getAccessToken();
-            Assert.assertNotNull(token);
-            Assert.assertFalse(token.isEmpty());
+            Assertions.assertNotNull(token);
+            Assertions.assertFalse(token.isEmpty());
         }
         catch (Exception e) {
-            Assert.fail("Obtaining token failed");
+            Assertions.fail("Obtaining token failed");
         }
         finally {
             CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());
         }
     }
 
-    @Test(expected = ExecutionException.class)
-    public void throwExceptionWrongCredentials() throws Exception {
-        GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
-            getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
-            vrapHttpClient);
+    @Test
+    public void throwExceptionWrongCredentials() {
+        Assertions.assertThrows(ExecutionException.class, () -> {
+            GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
+                getClientId(), getClientSecret(), "wront-email@test.com", "wrong-password", "",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
+                vrapHttpClient);
 
-        globalCustomerPasswordTokenSupplier.getToken().get();
+            globalCustomerPasswordTokenSupplier.getToken().get();
+        });
     }
 }

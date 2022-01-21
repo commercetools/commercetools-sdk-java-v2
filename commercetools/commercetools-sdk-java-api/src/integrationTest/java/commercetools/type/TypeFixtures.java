@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class TypeFixtures {
 
@@ -48,8 +48,8 @@ public class TypeFixtures {
 
         Type type = CommercetoolsTestUtils.getProjectApiRoot().types().post(typeDraft).executeBlocking().getBody();
 
-        Assert.assertNotNull(type);
-        Assert.assertEquals(type.getKey(), typeDraft.getKey());
+        Assertions.assertNotNull(type);
+        Assertions.assertEquals(type.getKey(), typeDraft.getKey());
 
         return type;
     }
@@ -63,8 +63,8 @@ public class TypeFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(type);
-        Assert.assertEquals(type.getId(), id);
+        Assertions.assertNotNull(type);
+        Assertions.assertEquals(type.getId(), id);
 
         return type;
     }

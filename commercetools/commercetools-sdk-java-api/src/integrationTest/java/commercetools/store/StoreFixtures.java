@@ -9,7 +9,7 @@ import com.commercetools.api.models.store.StoreDraft;
 import com.commercetools.api.models.store.StoreDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class StoreFixtures {
 
@@ -38,8 +38,8 @@ public class StoreFixtures {
 
         Store store = CommercetoolsTestUtils.getProjectApiRoot().stores().post(storeDraft).executeBlocking().getBody();
 
-        Assert.assertNotNull(store);
-        Assert.assertEquals(storeDraft.getKey(), store.getKey());
+        Assertions.assertNotNull(store);
+        Assertions.assertEquals(storeDraft.getKey(), store.getKey());
 
         return store;
     }
@@ -53,8 +53,8 @@ public class StoreFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(store);
-        Assert.assertEquals(store.getId(), id);
+        Assertions.assertNotNull(store);
+        Assertions.assertEquals(store.getId(), id);
 
         return store;
     }

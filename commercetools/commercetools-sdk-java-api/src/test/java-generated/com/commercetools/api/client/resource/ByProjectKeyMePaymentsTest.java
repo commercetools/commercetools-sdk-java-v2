@@ -4,10 +4,11 @@ package com.commercetools.api.client.resource;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
-
 import com.commercetools.api.client.ApiRoot;
+import com.tngtech.junit.dataprovider.DataProvider;
+import com.tngtech.junit.dataprovider.DataProviderExtension;
+import com.tngtech.junit.dataprovider.UseDataProvider;
+import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -18,28 +19,28 @@ import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@RunWith(JUnitParamsRunner.class)
+@ExtendWith(UseDataProviderExtension.class)
+@ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyMePaymentsTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
-    private final ApiRoot apiRoot = ApiRoot.of();
+    private final static ApiRoot apiRoot = ApiRoot.of();
     private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
-    @Test
-    @Parameters(method = "requestWithMethodParameters")
+    @TestTemplate
+    @UseDataProvider("requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
-        Assert.assertEquals(uri, request.getUri().toString());
+        Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
+        Assertions.assertThat(uri).isEqualTo(request.getUri().toString());
     }
 
-    @Test
-    @Parameters(method = "executeMethodParameters")
+    @TestTemplate
+    @UseDataProvider("executeMethodParameters")
     public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -49,8 +50,8 @@ public class ByProjectKeyMePaymentsTest {
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
-    @Test
-    @Parameters(method = "executeMethodParameters")
+    @TestTemplate
+    @UseDataProvider("executeMethodParameters")
     public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -60,8 +61,9 @@ public class ByProjectKeyMePaymentsTest {
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
-    private Object[] requestWithMethodParameters() {
-        return new Object[] {
+    @DataProvider
+    public static Object[][] requestWithMethodParameters() {
+        return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
@@ -116,8 +118,9 @@ public class ByProjectKeyMePaymentsTest {
                         "post", "/test_projectKey/me/payments", } };
     }
 
-    private Object[] executeMethodParameters() {
-        return new Object[] {
+    @DataProvider
+    public static Object[][] executeMethodParameters() {
+        return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withLimit(7), },

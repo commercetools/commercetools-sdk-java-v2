@@ -18,8 +18,8 @@ import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.apache.commons.io.IOUtils;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ProductIntegrationTests {
 
@@ -28,10 +28,10 @@ public class ProductIntegrationTests {
         withTaxCategory(
             taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
                 Product product = createProduct(productType, category, taxCategory);
-                Assert.assertNotNull(product);
+                Assertions.assertNotNull(product);
 
                 Product deletedProduct = deleteProductById(product.getId(), product.getVersion());
-                Assert.assertNotNull(deletedProduct);
+                Assertions.assertNotNull(deletedProduct);
             })));
     }
 
@@ -44,8 +44,8 @@ public class ProductIntegrationTests {
                     .get()
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(queriedProduct);
-            Assert.assertEquals(product.getId(), queriedProduct.getId());
+            Assertions.assertNotNull(queriedProduct);
+            Assertions.assertEquals(product.getId(), queriedProduct.getId());
         });
     }
 
@@ -58,8 +58,8 @@ public class ProductIntegrationTests {
                     .get()
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(queriedProduct);
-            Assert.assertEquals(product.getKey(), queriedProduct.getKey());
+            Assertions.assertNotNull(queriedProduct);
+            Assertions.assertEquals(product.getKey(), queriedProduct.getKey());
         });
     }
 
@@ -77,7 +77,7 @@ public class ProductIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedProduct);
+            Assertions.assertNotNull(updatedProduct);
 
             return updatedProduct;
         });
@@ -97,7 +97,7 @@ public class ProductIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedProduct);
+            Assertions.assertNotNull(updatedProduct);
 
             return updatedProduct;
         });
@@ -112,8 +112,8 @@ public class ProductIntegrationTests {
                     .withWhere("id=" + "\"" + product.getId() + "\"")
                     .executeBlocking()
                     .getBody();
-            Assert.assertEquals(response.getResults().size(), 1);
-            Assert.assertEquals(response.getResults().get(0).getId(), product.getId());
+            Assertions.assertEquals(response.getResults().size(), 1);
+            Assertions.assertEquals(response.getResults().get(0).getId(), product.getId());
         });
     }
 
@@ -144,7 +144,7 @@ public class ProductIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertSame(1, result.getMasterData().getStaged().getMasterVariant().getImages().size()
+            Assertions.assertSame(1, result.getMasterData().getStaged().getMasterVariant().getImages().size()
                     - product.getMasterData().getStaged().getMasterVariant().getImages().size());
         });
     }

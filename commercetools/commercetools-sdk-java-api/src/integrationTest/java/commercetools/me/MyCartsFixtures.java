@@ -11,7 +11,7 @@ import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class MyCartsFixtures {
     public static void withMeCart(final Consumer<Cart> consumer) {
@@ -46,8 +46,8 @@ public class MyCartsFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(myCart);
-        Assert.assertEquals(myCart.getCountry(), myCartDraft.getCountry());
+        Assertions.assertNotNull(myCart);
+        Assertions.assertEquals(myCart.getCountry(), myCartDraft.getCountry());
 
         return myCart;
     }

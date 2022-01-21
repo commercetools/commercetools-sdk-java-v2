@@ -39,7 +39,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project

@@ -101,7 +101,7 @@ public interface CustomerDraft {
     */
 
     @JsonProperty("defaultShippingAddress")
-    public Long getDefaultShippingAddress();
+    public Integer getDefaultShippingAddress();
 
     /**
     *  <p>The indices of the shipping addresses in the addresses array.
@@ -117,7 +117,7 @@ public interface CustomerDraft {
     */
 
     @JsonProperty("defaultBillingAddress")
-    public Long getDefaultBillingAddress();
+    public Integer getDefaultBillingAddress();
 
     /**
     *  <p>The indices of the billing addresses in the addresses array.
@@ -204,14 +204,14 @@ public interface CustomerDraft {
 
     public void setAddresses(final List<BaseAddress> addresses);
 
-    public void setDefaultShippingAddress(final Long defaultShippingAddress);
+    public void setDefaultShippingAddress(final Integer defaultShippingAddress);
 
     @JsonIgnore
     public void setShippingAddresses(final Integer... shippingAddresses);
 
     public void setShippingAddresses(final List<Integer> shippingAddresses);
 
-    public void setDefaultBillingAddress(final Long defaultBillingAddress);
+    public void setDefaultBillingAddress(final Integer defaultBillingAddress);
 
     @JsonIgnore
     public void setBillingAddresses(final Integer... billingAddresses);

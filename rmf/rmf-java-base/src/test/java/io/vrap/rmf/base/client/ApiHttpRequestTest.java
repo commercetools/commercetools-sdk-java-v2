@@ -4,8 +4,8 @@ package io.vrap.rmf.base.client;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ApiHttpRequestTest {
 
@@ -15,9 +15,9 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withMethod(ApiHttpMethod.GET);
 
-        Assert.assertEquals(ApiHttpMethod.POST, request.getMethod());
-        Assert.assertEquals(ApiHttpMethod.GET, newRequest.getMethod());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals(ApiHttpMethod.POST, request.getMethod());
+        Assertions.assertEquals(ApiHttpMethod.GET, newRequest.getMethod());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -26,9 +26,9 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withUri("/bar");
 
-        Assert.assertEquals("/foo", request.getUri().toString());
-        Assert.assertEquals("/bar", newRequest.getUri().toString());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals("/foo", request.getUri().toString());
+        Assertions.assertEquals("/bar", newRequest.getUri().toString());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -37,9 +37,9 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withUri(URI.create("/bar"));
 
-        Assert.assertEquals("/foo", request.getUri().toString());
-        Assert.assertEquals("/bar", newRequest.getUri().toString());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals("/foo", request.getUri().toString());
+        Assertions.assertEquals("/bar", newRequest.getUri().toString());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -50,9 +50,9 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withBody("bar");
 
-        Assert.assertEquals("foo", request.getSecuredBody());
-        Assert.assertEquals("bar", newRequest.getSecuredBody());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals("foo", request.getSecuredBody());
+        Assertions.assertEquals("bar", newRequest.getSecuredBody());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -61,12 +61,12 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.addHeader("foo", "bar");
 
-        Assert.assertEquals(1, request.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("foo", request.getHeaders().getFirst("foo"));
-        Assert.assertEquals(2, newRequest.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("foo", newRequest.getHeaders().getHeaders("foo").get(0).getValue());
-        Assert.assertEquals("bar", newRequest.getHeaders().getHeaders("foo").get(1).getValue());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals(1, request.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("foo", request.getHeaders().getFirst("foo"));
+        Assertions.assertEquals(2, newRequest.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("foo", newRequest.getHeaders().getHeaders("foo").get(0).getValue());
+        Assertions.assertEquals("bar", newRequest.getHeaders().getHeaders("foo").get(1).getValue());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -75,11 +75,11 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withHeader("foo", "bar");
 
-        Assert.assertEquals(1, request.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("foo", request.getHeaders().getFirst("foo"));
-        Assert.assertEquals(1, newRequest.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("bar", newRequest.getHeaders().getFirst("foo"));
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals(1, request.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("foo", request.getHeaders().getFirst("foo"));
+        Assertions.assertEquals(1, newRequest.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("bar", newRequest.getHeaders().getFirst("foo"));
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -88,11 +88,11 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withoutHeader("foo");
 
-        Assert.assertEquals(1, request.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("foo", request.getHeaders().getFirst("foo"));
-        Assert.assertEquals(0, newRequest.getHeaders().getHeaders("foo").size());
-        Assert.assertNull(newRequest.getHeaders().getFirst("foo"));
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals(1, request.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("foo", request.getHeaders().getFirst("foo"));
+        Assertions.assertEquals(0, newRequest.getHeaders().getHeaders("foo").size());
+        Assertions.assertNull(newRequest.getHeaders().getFirst("foo"));
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -101,11 +101,11 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.withHeaders(new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "bar")));
 
-        Assert.assertEquals(1, request.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("foo", request.getHeaders().getFirst("foo"));
-        Assert.assertEquals(1, newRequest.getHeaders().getHeaders("foo").size());
-        Assert.assertEquals("bar", newRequest.getHeaders().getFirst("foo"));
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals(1, request.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("foo", request.getHeaders().getFirst("foo"));
+        Assertions.assertEquals(1, newRequest.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals("bar", newRequest.getHeaders().getFirst("foo"));
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     @Test
@@ -114,9 +114,9 @@ public class ApiHttpRequestTest {
 
         ApiHttpRequest newRequest = request.resolve(URI.create("https://example.com/"));
 
-        Assert.assertEquals("/test", request.getUri().toString());
-        Assert.assertEquals("https://example.com/test", newRequest.getUri().toString());
-        Assert.assertNotEquals(request, newRequest);
+        Assertions.assertEquals("/test", request.getUri().toString());
+        Assertions.assertEquals("https://example.com/test", newRequest.getUri().toString());
+        Assertions.assertNotEquals(request, newRequest);
     }
 
     public void testImmutableGetHeaders() {
@@ -125,6 +125,6 @@ public class ApiHttpRequestTest {
 
         request.getHeaders().addHeader("foo", "bar");
 
-        Assert.assertEquals(1, request.getHeaders().getHeaders("foo").size());
+        Assertions.assertEquals(1, request.getHeaders().getHeaders("foo").size());
     }
 }

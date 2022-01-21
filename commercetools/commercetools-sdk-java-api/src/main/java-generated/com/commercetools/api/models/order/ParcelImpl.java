@@ -8,13 +8,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ParcelImpl implements Parcel {
+public class ParcelImpl implements Parcel, ModelBase {
 
     private String id;
 
@@ -26,16 +27,20 @@ public class ParcelImpl implements Parcel {
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.createdAt = createdAt;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
     }
 
     public ParcelImpl() {
@@ -64,6 +69,13 @@ public class ParcelImpl implements Parcel {
         return this.items;
     }
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -88,6 +100,10 @@ public class ParcelImpl implements Parcel {
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -103,6 +119,7 @@ public class ParcelImpl implements Parcel {
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -113,6 +130,7 @@ public class ParcelImpl implements Parcel {
                 .append(measurements)
                 .append(trackingData)
                 .append(items)
+                .append(custom)
                 .toHashCode();
     }
 

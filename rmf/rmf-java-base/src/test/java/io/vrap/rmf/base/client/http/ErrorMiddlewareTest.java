@@ -7,18 +7,20 @@ import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import com.tngtech.java.junit.dataprovider.DataProvider;
-import com.tngtech.java.junit.dataprovider.DataProviderRunner;
-import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import com.tngtech.junit.dataprovider.DataProvider;
+import com.tngtech.junit.dataprovider.DataProviderExtension;
+import com.tngtech.junit.dataprovider.UseDataProvider;
+import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.*;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-@RunWith(DataProviderRunner.class)
+@ExtendWith(DataProviderExtension.class)
+@ExtendWith(UseDataProviderExtension.class)
 public class ErrorMiddlewareTest {
 
     @DataProvider
@@ -31,7 +33,7 @@ public class ErrorMiddlewareTest {
                 { 599, ApiServerException.class }, };
     }
 
-    @Test
+    @TestTemplate
     @UseDataProvider("exceptions")
     public void testError(int statusCode, Class<ApiHttpException> exceptionClass) {
         ErrorMiddleware middleware = ErrorMiddleware.of(HttpExceptionFactory.of(ResponseSerializer.of()));

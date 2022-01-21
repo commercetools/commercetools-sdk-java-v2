@@ -17,7 +17,7 @@ import com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder;
 import com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ShoppingListFixtures {
 
@@ -67,8 +67,8 @@ public class ShoppingListFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(shoppingList);
-        Assert.assertEquals(shoppingListDraft.getKey(), shoppingList.getKey());
+        Assertions.assertNotNull(shoppingList);
+        Assertions.assertEquals(shoppingListDraft.getKey(), shoppingList.getKey());
 
         return shoppingList;
     }
@@ -82,8 +82,8 @@ public class ShoppingListFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(shoppingList);
-        Assert.assertEquals(shoppingList.getId(), id);
+        Assertions.assertNotNull(shoppingList);
+        Assertions.assertEquals(shoppingList.getId(), id);
 
         return shoppingList;
     }

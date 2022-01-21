@@ -8,13 +8,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class MyTransactionDraftImpl implements MyTransactionDraft {
+public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
 
     private java.time.ZonedDateTime timestamp;
 
@@ -24,15 +25,19 @@ public class MyTransactionDraftImpl implements MyTransactionDraft {
 
     private String interactionId;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     MyTransactionDraftImpl(@JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
             @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount,
-            @JsonProperty("interactionId") final String interactionId) {
+            @JsonProperty("interactionId") final String interactionId,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.timestamp = timestamp;
         this.type = type;
         this.amount = amount;
         this.interactionId = interactionId;
+        this.custom = custom;
     }
 
     public MyTransactionDraftImpl() {
@@ -68,6 +73,13 @@ public class MyTransactionDraftImpl implements MyTransactionDraft {
         return this.interactionId;
     }
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setTimestamp(final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
     }
@@ -84,6 +96,10 @@ public class MyTransactionDraftImpl implements MyTransactionDraft {
         this.interactionId = interactionId;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -98,6 +114,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft {
                 .append(type, that.type)
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -107,6 +124,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft {
                 .append(type)
                 .append(amount)
                 .append(interactionId)
+                .append(custom)
                 .toHashCode();
     }
 

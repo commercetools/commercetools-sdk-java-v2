@@ -1,8 +1,6 @@
 
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -61,18 +59,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
-        ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, com.commercetools.api.models.shopping_list.ShoppingList.class)
-                .toCompletableFuture(),
-            request, timeout);
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> execute(
             final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.ShoppingList.class)
-                .toCompletableFuture();
+        return execute(client, com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
     public String getProjectKey() {

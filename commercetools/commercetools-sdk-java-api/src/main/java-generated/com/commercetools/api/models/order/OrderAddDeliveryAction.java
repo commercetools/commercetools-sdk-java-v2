@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -31,6 +32,13 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
@@ -43,6 +51,8 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
 
     public void setParcels(final List<ParcelDraft> parcels);
 
+    public void setCustom(final CustomFields custom);
+
     public static OrderAddDeliveryAction of() {
         return new OrderAddDeliveryActionImpl();
     }
@@ -52,6 +62,7 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

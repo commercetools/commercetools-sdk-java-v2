@@ -10,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ClientCredentialsTokenSupplierTest {
     @Test

@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.review.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ReviewIntegrationTests {
 
@@ -27,8 +27,8 @@ public class ReviewIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(review);
-        Assert.assertEquals(reviewDraft.getKey(), review.getKey());
+        Assertions.assertNotNull(review);
+        Assertions.assertEquals(reviewDraft.getKey(), review.getKey());
 
         Review deletedReview = CommercetoolsTestUtils.getProjectApiRoot()
                 .reviews()
@@ -38,8 +38,8 @@ public class ReviewIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedReview);
-        Assert.assertEquals(deletedReview.getId(), review.getId());
+        Assertions.assertNotNull(deletedReview);
+        Assertions.assertEquals(deletedReview.getId(), review.getId());
     }
 
     @Test
@@ -51,8 +51,8 @@ public class ReviewIntegrationTests {
                     .get()
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(queriedReview);
-            Assert.assertEquals(queriedReview.getId(), review.getId());
+            Assertions.assertNotNull(queriedReview);
+            Assertions.assertEquals(queriedReview.getId(), review.getId());
         });
     }
 
@@ -65,8 +65,8 @@ public class ReviewIntegrationTests {
                     .get()
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(queriedReview);
-            Assert.assertEquals(queriedReview.getKey(), review.getKey());
+            Assertions.assertNotNull(queriedReview);
+            Assertions.assertEquals(queriedReview.getKey(), review.getKey());
         });
     }
 
@@ -79,8 +79,8 @@ public class ReviewIntegrationTests {
                     .withWhere("id=" + "\"" + review.getId() + "\"")
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), review.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), review.getId());
         });
     }
 
@@ -98,8 +98,8 @@ public class ReviewIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedReview);
-            Assert.assertEquals(updatedReview.getKey(), newKey);
+            Assertions.assertNotNull(updatedReview);
+            Assertions.assertEquals(updatedReview.getKey(), newKey);
 
             return updatedReview;
         });
@@ -119,8 +119,8 @@ public class ReviewIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedReview);
-            Assert.assertEquals(updatedReview.getKey(), newKey);
+            Assertions.assertNotNull(updatedReview);
+            Assertions.assertEquals(updatedReview.getKey(), newKey);
 
             return updatedReview;
         });

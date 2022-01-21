@@ -9,7 +9,7 @@ import com.commercetools.api.models.message.OrderCreatedMessagePayload;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MessagePayloadTest {
 

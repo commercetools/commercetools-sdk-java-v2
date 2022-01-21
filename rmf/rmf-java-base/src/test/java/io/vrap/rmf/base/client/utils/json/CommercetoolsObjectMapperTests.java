@@ -6,8 +6,8 @@ import java.time.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CommercetoolsObjectMapperTests {
 
@@ -26,48 +26,48 @@ public class CommercetoolsObjectMapperTests {
     public void serializeZonedDateTime() throws JsonProcessingException {
         ZonedDateTime zonedDateTime = ZonedDateTime.of(TEST_LOCAL_DATE, TEST_LOCAL_TIME, zoneId);
         String serializedZonedDateTime = JsonUtils.toJsonString(zonedDateTime);
-        Assert.assertEquals(serializedZonedDateTime, "\"2010-11-12T09:11:12.000Z\"");
+        Assertions.assertEquals(serializedZonedDateTime, "\"2010-11-12T09:11:12.000Z\"");
     }
 
     @Test
     public void serializeLocalDate() throws JsonProcessingException {
         String serializedLocalDate = JsonUtils.toJsonString(TEST_LOCAL_DATE);
-        Assert.assertEquals(serializedLocalDate, "\"2010-11-12\"");
+        Assertions.assertEquals(serializedLocalDate, "\"2010-11-12\"");
     }
 
     @Test
     public void serializeLocalTime() throws JsonProcessingException {
         String serializedLocalTime = JsonUtils.toJsonString(TEST_LOCAL_TIME);
-        Assert.assertEquals(serializedLocalTime, "\"10:11:12\"");
+        Assertions.assertEquals(serializedLocalTime, "\"10:11:12\"");
     }
 
     @Test
     public void deserializeZonedDateTime() throws IOException {
         String zonedDateTimeSerialized = "\"2010-11-12T09:11:12.000Z\"";
         ZonedDateTime zonedDateTime = JsonUtils.fromJsonString(zonedDateTimeSerialized, ZonedDateTime.class);
-        Assert.assertEquals(zonedDateTime.getYear(), TEST_YEAR);
-        Assert.assertEquals(zonedDateTime.getMonth(), Month.of(TEST_MONTH));
-        Assert.assertEquals(zonedDateTime.getDayOfMonth(), TEST_DAY);
-        Assert.assertEquals(zonedDateTime.getHour(), TEST_HOUR_UTC);
-        Assert.assertEquals(zonedDateTime.getMinute(), TEST_MINUTE);
-        Assert.assertEquals(zonedDateTime.getSecond(), TEST_SECOND);
+        Assertions.assertEquals(zonedDateTime.getYear(), TEST_YEAR);
+        Assertions.assertEquals(zonedDateTime.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(zonedDateTime.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(zonedDateTime.getHour(), TEST_HOUR_UTC);
+        Assertions.assertEquals(zonedDateTime.getMinute(), TEST_MINUTE);
+        Assertions.assertEquals(zonedDateTime.getSecond(), TEST_SECOND);
     }
 
     @Test
     public void deserializeLocalDate() throws IOException {
         String localDateSerialized = "\"2010-11-12\"";
         LocalDate localDate = JsonUtils.fromJsonString(localDateSerialized, LocalDate.class);
-        Assert.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
-        Assert.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
-        Assert.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
     }
 
     @Test
     public void deserializeLocalTime() throws IOException {
         String localTimeSerialized = "\"10:11:12\"";
         LocalTime localTime = JsonUtils.fromJsonString(localTimeSerialized, LocalTime.class);
-        Assert.assertEquals(localTime.getHour(), TEST_HOUR_OFFSET);
-        Assert.assertEquals(localTime.getMinute(), TEST_MINUTE);
-        Assert.assertEquals(localTime.getSecond(), TEST_SECOND);
+        Assertions.assertEquals(localTime.getHour(), TEST_HOUR_OFFSET);
+        Assertions.assertEquals(localTime.getMinute(), TEST_MINUTE);
+        Assertions.assertEquals(localTime.getSecond(), TEST_SECOND);
     }
 }

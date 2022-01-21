@@ -7,8 +7,8 @@ import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ApiClientIntegrationTests {
 
@@ -17,7 +17,7 @@ public class ApiClientIntegrationTests {
         ApiClient apiClient = createApiClient();
         ApiClient deletedApiClient = deleteApiClient(apiClient.getId());
 
-        Assert.assertEquals(apiClient.getId(), deletedApiClient.getId());
+        Assertions.assertEquals(apiClient.getId(), deletedApiClient.getId());
     }
 
     @Test
@@ -30,8 +30,8 @@ public class ApiClientIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedApiClient);
-            Assert.assertEquals(queriedApiClient.getId(), apiClient.getId());
+            Assertions.assertNotNull(queriedApiClient);
+            Assertions.assertEquals(queriedApiClient.getId(), apiClient.getId());
         });
     }
 
@@ -45,8 +45,8 @@ public class ApiClientIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), apiClient.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), apiClient.getId());
         });
     }
 }

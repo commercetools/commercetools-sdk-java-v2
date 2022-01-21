@@ -10,7 +10,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class HttpExceptionFactoryTest {
 

@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ExamplesTest {
 
@@ -172,6 +172,29 @@ public class ExamplesTest {
                 .addWhere("lastName = :lastName")
                 .withPredicateVar("firstName", "John")
                 .withPredicateVar("lastName", "Doe");
+    }
+
+    public void simpleSort() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.products().get().withSort("masterData.current.name.en asc");
+    }
+
+    public void multiSort() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.products().get().withSort("masterData.current.name.en asc").addSort("id asc");
+    }
+
+    public void limitPagination() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.products().get().withLimit(4);
+
+        apiRoot.products().get().withLimit(4).withOffset(4);
+    }
+
+    public void limitOffsetPagination() {
+        ProjectApiRoot apiRoot = createProjectClient();
+
+        apiRoot.products().get().withLimit(4).withOffset(4);
     }
 
     public void queryPredicateVariableArray() {

@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.extension.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ExtensionIntegrationTests {
 
@@ -19,7 +19,7 @@ public class ExtensionIntegrationTests {
         Extension extension = createExtension();
         Extension deletedExtension = deleteExtension(extension.getId(), extension.getVersion());
 
-        Assert.assertEquals(extension.getId(), deletedExtension.getId());
+        Assertions.assertEquals(extension.getId(), deletedExtension.getId());
     }
 
     @Test
@@ -32,8 +32,8 @@ public class ExtensionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedExtension);
-            Assert.assertEquals(queriedExtension.getId(), extension.getId());
+            Assertions.assertNotNull(queriedExtension);
+            Assertions.assertEquals(queriedExtension.getId(), extension.getId());
         });
     }
 
@@ -47,8 +47,8 @@ public class ExtensionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedExtension);
-            Assert.assertEquals(queriedExtension.getId(), extension.getId());
+            Assertions.assertNotNull(queriedExtension);
+            Assertions.assertEquals(queriedExtension.getId(), extension.getId());
         });
     }
 
@@ -62,8 +62,8 @@ public class ExtensionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), extension.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), extension.getId());
         });
     }
 
@@ -80,8 +80,8 @@ public class ExtensionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedExtension);
-            Assert.assertEquals(updatedExtension.getKey(), newKey);
+            Assertions.assertNotNull(updatedExtension);
+            Assertions.assertEquals(updatedExtension.getKey(), newKey);
 
             return updatedExtension;
         });
@@ -100,8 +100,8 @@ public class ExtensionIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedExtension);
-            Assert.assertEquals(updatedExtension.getKey(), newKey);
+            Assertions.assertNotNull(updatedExtension);
+            Assertions.assertEquals(updatedExtension.getKey(), newKey);
 
             return updatedExtension;
         });
@@ -118,8 +118,8 @@ public class ExtensionIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedExtension);
-        Assert.assertEquals(extension.getId(), deletedExtension.getId());
+        Assertions.assertNotNull(deletedExtension);
+        Assertions.assertEquals(extension.getId(), deletedExtension.getId());
     }
 
 }

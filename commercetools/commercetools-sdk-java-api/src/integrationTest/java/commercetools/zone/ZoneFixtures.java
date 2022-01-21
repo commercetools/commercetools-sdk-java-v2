@@ -9,7 +9,7 @@ import com.commercetools.api.models.zone.ZoneDraft;
 import com.commercetools.api.models.zone.ZoneDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ZoneFixtures {
 
@@ -42,8 +42,8 @@ public class ZoneFixtures {
 
         Zone zone = CommercetoolsTestUtils.getProjectApiRoot().zones().post(zoneDraft).executeBlocking().getBody();
 
-        Assert.assertNotNull(zone);
-        Assert.assertEquals(zoneDraft.getKey(), zone.getKey());
+        Assertions.assertNotNull(zone);
+        Assertions.assertEquals(zoneDraft.getKey(), zone.getKey());
 
         return zone;
     }
@@ -57,8 +57,8 @@ public class ZoneFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(zone);
-        Assert.assertEquals(zone.getId(), id);
+        Assertions.assertNotNull(zone);
+        Assertions.assertEquals(zone.getId(), id);
 
         return zone;
     }

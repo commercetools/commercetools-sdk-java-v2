@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.customer_group.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CustomerGroupIntegrationTests {
 
@@ -19,9 +19,9 @@ public class CustomerGroupIntegrationTests {
         CustomerGroup customerGroup = createCustomerGroup();
         CustomerGroup deletedCustomerGroup = deleteCustomerGroup(customerGroup.getId(), customerGroup.getVersion());
 
-        Assert.assertNotNull(customerGroup);
-        Assert.assertNotNull(deletedCustomerGroup);
-        Assert.assertEquals(customerGroup.getId(), deletedCustomerGroup.getId());
+        Assertions.assertNotNull(customerGroup);
+        Assertions.assertNotNull(deletedCustomerGroup);
+        Assertions.assertEquals(customerGroup.getId(), deletedCustomerGroup.getId());
     }
 
     @Test
@@ -34,8 +34,8 @@ public class CustomerGroupIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedCustomerGroup);
-            Assert.assertEquals(customerGroup.getId(), queriedCustomerGroup.getId());
+            Assertions.assertNotNull(queriedCustomerGroup);
+            Assertions.assertEquals(customerGroup.getId(), queriedCustomerGroup.getId());
         });
     }
 
@@ -49,8 +49,8 @@ public class CustomerGroupIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedCustomerGroup);
-            Assert.assertEquals(customerGroup.getId(), queriedCustomerGroup.getId());
+            Assertions.assertNotNull(queriedCustomerGroup);
+            Assertions.assertEquals(customerGroup.getId(), queriedCustomerGroup.getId());
         });
     }
 
@@ -64,8 +64,8 @@ public class CustomerGroupIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), customerGroup.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), customerGroup.getId());
         });
     }
 
@@ -85,8 +85,8 @@ public class CustomerGroupIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomerGroup);
-            Assert.assertEquals(updatedCustomerGroup.getKey(), newKey);
+            Assertions.assertNotNull(updatedCustomerGroup);
+            Assertions.assertEquals(updatedCustomerGroup.getKey(), newKey);
 
             return updatedCustomerGroup;
         });
@@ -108,8 +108,8 @@ public class CustomerGroupIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedCustomerGroup);
-            Assert.assertEquals(updatedCustomerGroup.getKey(), newKey);
+            Assertions.assertNotNull(updatedCustomerGroup);
+            Assertions.assertEquals(updatedCustomerGroup.getKey(), newKey);
 
             return updatedCustomerGroup;
         });
@@ -126,8 +126,8 @@ public class CustomerGroupIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedCustomerGroup);
-        Assert.assertEquals(customerGroup.getId(), deletedCustomerGroup.getId());
+        Assertions.assertNotNull(deletedCustomerGroup);
+        Assertions.assertEquals(customerGroup.getId(), deletedCustomerGroup.getId());
     }
 
 }

@@ -11,8 +11,8 @@ import java.util.List;
 import com.commercetools.api.models.product_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ProductDiscountIntegrationTests {
 
@@ -36,8 +36,8 @@ public class ProductDiscountIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(productDiscount);
-        Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
+        Assertions.assertNotNull(productDiscount);
+        Assertions.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
 
         ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .productDiscounts()
@@ -47,8 +47,8 @@ public class ProductDiscountIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedProductDiscount);
-        Assert.assertEquals(productDiscount.getId(), deletedProductDiscount.getId());
+        Assertions.assertNotNull(deletedProductDiscount);
+        Assertions.assertEquals(productDiscount.getId(), deletedProductDiscount.getId());
     }
 
     @Test
@@ -61,8 +61,8 @@ public class ProductDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedProductDiscount);
-            Assert.assertEquals(queriedProductDiscount.getId(), productDiscount.getId());
+            Assertions.assertNotNull(queriedProductDiscount);
+            Assertions.assertEquals(queriedProductDiscount.getId(), productDiscount.getId());
         });
     }
 
@@ -76,8 +76,8 @@ public class ProductDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedProductDiscount);
-            Assert.assertEquals(queriedProductDiscount.getKey(), productDiscount.getKey());
+            Assertions.assertNotNull(queriedProductDiscount);
+            Assertions.assertEquals(queriedProductDiscount.getKey(), productDiscount.getKey());
         });
     }
 
@@ -91,8 +91,8 @@ public class ProductDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), productDiscount.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), productDiscount.getId());
         });
     }
 
@@ -112,8 +112,8 @@ public class ProductDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedProductDiscount);
-            Assert.assertEquals(updatedProductDiscount.getKey(), newKey);
+            Assertions.assertNotNull(updatedProductDiscount);
+            Assertions.assertEquals(updatedProductDiscount.getKey(), newKey);
             return updatedProductDiscount;
         });
     }
@@ -134,8 +134,8 @@ public class ProductDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedProductDiscount);
-            Assert.assertEquals(updatedProductDiscount.getKey(), newKey);
+            Assertions.assertNotNull(updatedProductDiscount);
+            Assertions.assertEquals(updatedProductDiscount.getKey(), newKey);
             return updatedProductDiscount;
         });
     }

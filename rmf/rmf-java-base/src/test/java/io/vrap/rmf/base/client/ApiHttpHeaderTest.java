@@ -4,8 +4,8 @@ package io.vrap.rmf.base.client;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ApiHttpHeaderTest {
 
@@ -15,10 +15,10 @@ public class ApiHttpHeaderTest {
 
         ApiHttpHeaders newHeaders = headers.withHeader("foo", "bar");
 
-        Assert.assertEquals(1, newHeaders.getHeaders().size());
-        Assert.assertEquals(0, headers.getHeaders().size());
-        Assert.assertEquals("bar", newHeaders.getFirst("foo"));
-        Assert.assertNotEquals(headers, newHeaders);
+        Assertions.assertEquals(1, newHeaders.getHeaders().size());
+        Assertions.assertEquals(0, headers.getHeaders().size());
+        Assertions.assertEquals("bar", newHeaders.getFirst("foo"));
+        Assertions.assertNotEquals(headers, newHeaders);
     }
 
     @Test
@@ -27,10 +27,10 @@ public class ApiHttpHeaderTest {
 
         ApiHttpHeaders newHeaders = headers.withoutHeader("foo");
 
-        Assert.assertEquals(0, newHeaders.getHeaders().size());
-        Assert.assertEquals(1, headers.getHeaders().size());
-        Assert.assertEquals("bar", headers.getFirst("foo"));
-        Assert.assertNotEquals(headers, newHeaders);
+        Assertions.assertEquals(0, newHeaders.getHeaders().size());
+        Assertions.assertEquals(1, headers.getHeaders().size());
+        Assertions.assertEquals("bar", headers.getFirst("foo"));
+        Assertions.assertNotEquals(headers, newHeaders);
     }
 
     @Test
@@ -39,11 +39,11 @@ public class ApiHttpHeaderTest {
 
         ApiHttpHeaders newHeaders = headers.addHeader("bar", "bar");
 
-        Assert.assertEquals(2, newHeaders.getHeaders().size());
-        Assert.assertEquals(1, headers.getHeaders().size());
-        Assert.assertNull(headers.getFirst("bar"));
-        Assert.assertEquals("bar", newHeaders.getFirst("bar"));
-        Assert.assertNotEquals(headers, newHeaders);
+        Assertions.assertEquals(2, newHeaders.getHeaders().size());
+        Assertions.assertEquals(1, headers.getHeaders().size());
+        Assertions.assertNull(headers.getFirst("bar"));
+        Assertions.assertEquals("bar", newHeaders.getFirst("bar"));
+        Assertions.assertNotEquals(headers, newHeaders);
     }
 
     @Test
@@ -52,15 +52,15 @@ public class ApiHttpHeaderTest {
 
         ApiHttpHeaders newHeaders = headers.withHeaders(ApiHttpHeaders.headerEntry("bar", "bar"));
 
-        Assert.assertEquals(1, newHeaders.getHeaders().size());
-        Assert.assertEquals(1, headers.getHeaders().size());
+        Assertions.assertEquals(1, newHeaders.getHeaders().size());
+        Assertions.assertEquals(1, headers.getHeaders().size());
 
-        Assert.assertNull(headers.getFirst("bar"));
-        Assert.assertNull(newHeaders.getFirst("foo"));
+        Assertions.assertNull(headers.getFirst("bar"));
+        Assertions.assertNull(newHeaders.getFirst("foo"));
 
-        Assert.assertEquals("foo", headers.getFirst("foo"));
-        Assert.assertEquals("bar", newHeaders.getFirst("bar"));
-        Assert.assertNotEquals(headers, newHeaders);
+        Assertions.assertEquals("foo", headers.getFirst("foo"));
+        Assertions.assertEquals("bar", newHeaders.getFirst("bar"));
+        Assertions.assertNotEquals(headers, newHeaders);
     }
 
     @Test
@@ -70,11 +70,11 @@ public class ApiHttpHeaderTest {
         final List<Map.Entry<String, String>> headers1 = headers.getHeaders();
         headers1.add(ApiHttpHeaders.headerEntry("bar", "bar"));
 
-        Assert.assertEquals(1, headers.getHeaders().size());
+        Assertions.assertEquals(1, headers.getHeaders().size());
 
-        Assert.assertNull(headers.getFirst("bar"));
-        Assert.assertEquals("foo", headers.getFirst("foo"));
-        Assert.assertNotEquals(headers.getHeaders(), headers1);
+        Assertions.assertNull(headers.getFirst("bar"));
+        Assertions.assertEquals("foo", headers.getFirst("foo"));
+        Assertions.assertNotEquals(headers.getHeaders(), headers1);
     }
 
     @Test
@@ -84,10 +84,10 @@ public class ApiHttpHeaderTest {
         final List<Map.Entry<String, String>> headers1 = headers.getHeaders("foo");
         headers1.add(ApiHttpHeaders.headerEntry("bar", "bar"));
 
-        Assert.assertEquals(1, headers.getHeaders().size());
+        Assertions.assertEquals(1, headers.getHeaders().size());
 
-        Assert.assertNull(headers.getFirst("bar"));
-        Assert.assertEquals("foo", headers.getFirst("foo"));
-        Assert.assertNotEquals(headers.getHeaders(), headers1);
+        Assertions.assertNull(headers.getFirst("bar"));
+        Assertions.assertEquals("foo", headers.getFirst("foo"));
+        Assertions.assertNotEquals(headers.getHeaders(), headers1);
     }
 }

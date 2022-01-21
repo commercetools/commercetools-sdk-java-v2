@@ -35,6 +35,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
+        instance.setCustom(template.getCustom());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setCustomLineItemId(template.getCustomLineItemId());

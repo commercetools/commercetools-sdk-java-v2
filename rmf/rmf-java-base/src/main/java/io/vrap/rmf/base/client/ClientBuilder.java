@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
 
 import org.apache.commons.lang3.SystemUtils;
+import org.slf4j.event.Level;
 
 /**
     <p>The ClientBuilder is used to configure and create an {@link ApiHttpClient}. As the ApiHttpClient uses a {@link HandlerStack stack}
@@ -460,6 +461,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {
         return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory));
+    }
+
+    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent) {
+        return withInternalLoggerMiddleware(
+            InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent, deprecationLogEvent));
     }
 
     public ClientBuilder withApiBaseUrl(String apiBaseUrl) {

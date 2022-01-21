@@ -1,0 +1,78 @@
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    integrationTest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+        java {
+        }
+    }
+}
+
+configurations {
+    integrationTestImplementation.extendsFrom(testImplementation)
+    integrationTestApi.extendsFrom(testApi)
+    integrationTestRuntimeOnly.extendsFrom(testRuntimeOnly)
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compileClasspath
+
+    options {
+        setMemberLevel JavadocMemberLevel.PUBLIC
+        setAuthor false
+        noTimestamp = true
+
+        links "https://docs.oracle.com/javase/8/docs/api/"
+        addStringOption('Xdoclint:none', '-quiet')
+        addStringOption('source', '8')
+    }
+}
+
+ext {
+    buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
+    buildInfoPackage = "io.vrap.rmf.base.client"
+}
+
+srcInfo {
+    includePackages = [
+            "example",
+            "commercetools"
+    ]
+}
+
+task integrationTest(type: Test) {
+    description = "Runs integration tests."
+    group = "verification"
+
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    shouldRunAfter(test)
+
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+
+        info {
+            events "failed"
+            exceptionFormat "full"
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allJava
+}
+
+task javadocJar(type: Jar) {
+    archiveClassifier = 'javadoc'
+    from javadoc.destinationDir
+}

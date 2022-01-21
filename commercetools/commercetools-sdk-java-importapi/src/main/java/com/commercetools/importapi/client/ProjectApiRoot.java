@@ -79,10 +79,6 @@ public class ProjectApiRoot implements Closeable {
         return with().customers();
     }
 
-    public ByProjectKeyInventoriesRequestBuilder inventories() {
-        return with().inventories();
-    }
-
     @Override
     public void close() {
         if (apiHttpClient == null) {

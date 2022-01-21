@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TypeIntegrationTests {
 
@@ -19,7 +19,7 @@ public class TypeIntegrationTests {
         Type type = createType();
         Type deletedType = deleteType(type.getId(), type.getVersion());
 
-        Assert.assertEquals(type.getId(), deletedType.getId());
+        Assertions.assertEquals(type.getId(), deletedType.getId());
     }
 
     @Test
@@ -32,8 +32,8 @@ public class TypeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedType);
-            Assert.assertEquals(type.getId(), queriedType.getId());
+            Assertions.assertNotNull(queriedType);
+            Assertions.assertEquals(type.getId(), queriedType.getId());
         });
     }
 
@@ -47,8 +47,8 @@ public class TypeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedType);
-            Assert.assertEquals(type.getId(), queriedType.getId());
+            Assertions.assertNotNull(queriedType);
+            Assertions.assertEquals(type.getId(), queriedType.getId());
         });
     }
 
@@ -62,8 +62,8 @@ public class TypeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), type.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), type.getId());
         });
     }
 
@@ -81,8 +81,8 @@ public class TypeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedType);
-            Assert.assertEquals(updatedType.getKey(), newKey);
+            Assertions.assertNotNull(updatedType);
+            Assertions.assertEquals(updatedType.getKey(), newKey);
 
             return updatedType;
         });
@@ -102,8 +102,8 @@ public class TypeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedType);
-            Assert.assertEquals(updatedType.getKey(), newKey);
+            Assertions.assertNotNull(updatedType);
+            Assertions.assertEquals(updatedType.getKey(), newKey);
 
             return updatedType;
         });
@@ -120,8 +120,8 @@ public class TypeIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedType);
-        Assert.assertEquals(type.getId(), deletedType.getId());
+        Assertions.assertNotNull(deletedType);
+        Assertions.assertEquals(type.getId(), deletedType.getId());
     }
 
 }

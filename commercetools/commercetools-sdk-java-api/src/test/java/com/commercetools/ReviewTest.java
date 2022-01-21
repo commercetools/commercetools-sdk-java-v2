@@ -12,7 +12,7 @@ import com.commercetools.api.models.review.Review;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ReviewTest {
 

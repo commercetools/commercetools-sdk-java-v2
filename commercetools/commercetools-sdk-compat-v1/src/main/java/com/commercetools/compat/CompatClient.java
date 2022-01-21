@@ -4,6 +4,9 @@ package com.commercetools.compat;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+
 import io.sphere.sdk.client.SphereRequest;
 import io.vrap.rmf.base.client.*;
 
@@ -39,6 +42,16 @@ public class CompatClient implements ApiHttpClient {
 
     @Override
     public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, Class<O> outputType) {
+        return client.execute(request, outputType);
+    }
+
+    @Override
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, TypeReference<O> outputType) {
+        return client.execute(request, outputType);
+    }
+
+    @Override
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, JavaType outputType) {
         return client.execute(request, outputType);
     }
 

@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.tax_category.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class TaxCategoryFixtures {
 
@@ -54,9 +54,9 @@ public class TaxCategoryFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(taxCategory);
-        Assert.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
-        Assert.assertEquals(taxCategoryDraft.getKey(), taxCategory.getKey());
+        Assertions.assertNotNull(taxCategory);
+        Assertions.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
+        Assertions.assertEquals(taxCategoryDraft.getKey(), taxCategory.getKey());
 
         return taxCategory;
     }
@@ -70,8 +70,8 @@ public class TaxCategoryFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedTaxCategory);
-        Assert.assertEquals(deletedTaxCategory.getId(), id);
+        Assertions.assertNotNull(deletedTaxCategory);
+        Assertions.assertEquals(deletedTaxCategory.getId(), id);
 
         return deletedTaxCategory;
     }

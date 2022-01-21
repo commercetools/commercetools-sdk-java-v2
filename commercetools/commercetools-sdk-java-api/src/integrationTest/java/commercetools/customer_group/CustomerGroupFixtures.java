@@ -9,7 +9,7 @@ import com.commercetools.api.models.customer_group.CustomerGroupDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class CustomerGroupFixtures {
 
@@ -45,8 +45,8 @@ public class CustomerGroupFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(customerGroup);
-        Assert.assertEquals(customerGroup.getKey(), customerGroupDraft.getKey());
+        Assertions.assertNotNull(customerGroup);
+        Assertions.assertEquals(customerGroup.getKey(), customerGroupDraft.getKey());
 
         return customerGroup;
     }
@@ -60,8 +60,8 @@ public class CustomerGroupFixtures {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(customerGroup);
-        Assert.assertEquals(customerGroup.getId(), id);
+        Assertions.assertNotNull(customerGroup);
+        Assertions.assertEquals(customerGroup.getId(), id);
 
         return customerGroup;
     }

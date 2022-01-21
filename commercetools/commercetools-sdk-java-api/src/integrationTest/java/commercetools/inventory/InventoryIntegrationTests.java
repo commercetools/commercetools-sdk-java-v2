@@ -9,8 +9,8 @@ import java.util.List;
 import com.commercetools.api.models.inventory.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class InventoryIntegrationTests {
 
@@ -27,9 +27,9 @@ public class InventoryIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(inventoryEntry);
-        Assert.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
-        Assert.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
+        Assertions.assertNotNull(inventoryEntry);
+        Assertions.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
+        Assertions.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
 
         InventoryEntry deletedInventoryEntry = CommercetoolsTestUtils.getProjectApiRoot()
                 .inventory()
@@ -38,8 +38,8 @@ public class InventoryIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedInventoryEntry);
-        Assert.assertEquals(inventoryEntry.getId(), deletedInventoryEntry.getId());
+        Assertions.assertNotNull(deletedInventoryEntry);
+        Assertions.assertEquals(inventoryEntry.getId(), deletedInventoryEntry.getId());
     }
 
     @Test
@@ -51,8 +51,8 @@ public class InventoryIntegrationTests {
                     .get()
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(queriedInventoryEntry);
-            Assert.assertEquals(inventoryEntry.getId(), queriedInventoryEntry.getId());
+            Assertions.assertNotNull(queriedInventoryEntry);
+            Assertions.assertEquals(inventoryEntry.getId(), queriedInventoryEntry.getId());
         });
     }
 
@@ -65,8 +65,8 @@ public class InventoryIntegrationTests {
                     .withWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
                     .executeBlocking()
                     .getBody();
-            Assert.assertNotNull(inventoryPagedQueryResponse);
-            Assert.assertEquals(inventoryPagedQueryResponse.getResults().get(0).getId(), inventoryEntry.getId());
+            Assertions.assertNotNull(inventoryPagedQueryResponse);
+            Assertions.assertEquals(inventoryPagedQueryResponse.getResults().get(0).getId(), inventoryEntry.getId());
         });
     }
 
@@ -86,8 +86,8 @@ public class InventoryIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedInventoryEntry);
-            Assert.assertEquals(updatedInventoryEntry.getRestockableInDays(), Long.valueOf(10));
+            Assertions.assertNotNull(updatedInventoryEntry);
+            Assertions.assertEquals(updatedInventoryEntry.getRestockableInDays(), Long.valueOf(10));
 
             return updatedInventoryEntry;
         });

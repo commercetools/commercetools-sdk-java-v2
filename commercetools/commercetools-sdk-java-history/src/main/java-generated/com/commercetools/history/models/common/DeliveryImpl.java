@@ -8,13 +8,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class DeliveryImpl implements Delivery {
+public class DeliveryImpl implements Delivery, ModelBase {
 
     private String id;
 
@@ -26,16 +27,20 @@ public class DeliveryImpl implements Delivery {
 
     private com.commercetools.history.models.common.Address address;
 
+    private com.commercetools.history.models.common.CustomFields custom;
+
     @JsonCreator
     DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt,
             @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items,
             @JsonProperty("parcels") final java.util.List<com.commercetools.history.models.common.Parcel> parcels,
-            @JsonProperty("address") final com.commercetools.history.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.history.models.common.Address address,
+            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom) {
         this.id = id;
         this.createdAt = createdAt;
         this.items = items;
         this.parcels = parcels;
         this.address = address;
+        this.custom = custom;
     }
 
     public DeliveryImpl() {
@@ -59,6 +64,13 @@ public class DeliveryImpl implements Delivery {
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
+    }
+
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
     }
 
     public void setId(final String id) {
@@ -89,6 +101,10 @@ public class DeliveryImpl implements Delivery {
         this.address = address;
     }
 
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -104,6 +120,7 @@ public class DeliveryImpl implements Delivery {
                 .append(items, that.items)
                 .append(parcels, that.parcels)
                 .append(address, that.address)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -114,6 +131,7 @@ public class DeliveryImpl implements Delivery {
                 .append(items)
                 .append(parcels)
                 .append(address)
+                .append(custom)
                 .toHashCode();
     }
 

@@ -95,7 +95,7 @@ public class ApiHttpResponse<U> extends Base {
             return Optional.of(body).map(b -> tryToFilter(new String((byte[]) b, StandardCharsets.UTF_8)));
         }
         else {
-            return Optional.ofNullable(body.toString());
+            return Optional.ofNullable(body).map(Object::toString);
         }
     }
 

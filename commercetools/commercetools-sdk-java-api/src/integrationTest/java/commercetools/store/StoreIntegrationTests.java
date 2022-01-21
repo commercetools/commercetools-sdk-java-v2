@@ -10,8 +10,8 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class StoreIntegrationTests {
 
@@ -20,7 +20,7 @@ public class StoreIntegrationTests {
         Store store = createStore();
         Store deletedStore = deleteStore(store.getId(), store.getVersion());
 
-        Assert.assertEquals(store.getId(), deletedStore.getId());
+        Assertions.assertEquals(store.getId(), deletedStore.getId());
     }
 
     @Test
@@ -33,8 +33,8 @@ public class StoreIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedStore);
-            Assert.assertEquals(queriedStore.getId(), store.getId());
+            Assertions.assertNotNull(queriedStore);
+            Assertions.assertEquals(queriedStore.getId(), store.getId());
         });
     }
 
@@ -48,8 +48,8 @@ public class StoreIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedStore);
-            Assert.assertEquals(queriedStore.getId(), store.getId());
+            Assertions.assertNotNull(queriedStore);
+            Assertions.assertEquals(queriedStore.getId(), store.getId());
         });
     }
 
@@ -63,8 +63,8 @@ public class StoreIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), store.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), store.getId());
         });
     }
 
@@ -82,7 +82,7 @@ public class StoreIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedStore);
+            Assertions.assertNotNull(updatedStore);
 
             return updatedStore;
         });
@@ -102,7 +102,7 @@ public class StoreIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedStore);
+            Assertions.assertNotNull(updatedStore);
 
             return updatedStore;
         });
@@ -119,8 +119,8 @@ public class StoreIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(deletedStore);
-        Assert.assertEquals(store.getId(), deletedStore.getId());
+        Assertions.assertNotNull(deletedStore);
+        Assertions.assertEquals(store.getId(), deletedStore.getId());
     }
 
 }

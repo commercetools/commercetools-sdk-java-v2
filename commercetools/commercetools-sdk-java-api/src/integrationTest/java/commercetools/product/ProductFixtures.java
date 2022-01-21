@@ -25,7 +25,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class ProductFixtures {
 
@@ -179,8 +179,8 @@ public class ProductFixtures {
                 .post(productDraft)
                 .executeBlocking()
                 .getBody();
-        Assert.assertNotNull(product);
-        Assert.assertEquals(product.getKey(), productDraft.getKey());
+        Assertions.assertNotNull(product);
+        Assertions.assertEquals(product.getKey(), productDraft.getKey());
 
         return product;
     }
@@ -214,8 +214,8 @@ public class ProductFixtures {
         catch (Exception ignored) {
         }
 
-        Assert.assertNotNull(rProduct);
-        Assert.assertEquals(rProduct.getId(), product.getId());
+        Assertions.assertNotNull(rProduct);
+        Assertions.assertEquals(rProduct.getId(), product.getId());
         return rProduct;
     }
 
@@ -264,8 +264,8 @@ public class ProductFixtures {
                 .withVersion(version)
                 .executeBlocking()
                 .getBody();
-        Assert.assertNotNull(product);
-        Assert.assertEquals(product.getKey(), key);
+        Assertions.assertNotNull(product);
+        Assertions.assertEquals(product.getKey(), key);
         return product;
     }
 

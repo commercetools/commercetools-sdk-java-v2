@@ -10,8 +10,8 @@ import java.util.List;
 import com.commercetools.api.models.discount_code.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class DiscountCodeIntegrationTests {
 
@@ -33,8 +33,8 @@ public class DiscountCodeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(queriedDiscountCode);
-            Assert.assertEquals(queriedDiscountCode.getId(), discountCode.getId());
+            Assertions.assertNotNull(queriedDiscountCode);
+            Assertions.assertEquals(queriedDiscountCode.getId(), discountCode.getId());
         });
     }
 
@@ -48,8 +48,8 @@ public class DiscountCodeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(response);
-            Assert.assertEquals(response.getResults().get(0).getId(), discountCode.getId());
+            Assertions.assertNotNull(response);
+            Assertions.assertEquals(response.getResults().get(0).getId(), discountCode.getId());
         });
     }
 
@@ -68,8 +68,8 @@ public class DiscountCodeIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assert.assertNotNull(updatedDiscountCode);
-            Assert.assertEquals(updatedDiscountCode.getMaxApplications(), Long.valueOf(10));
+            Assertions.assertNotNull(updatedDiscountCode);
+            Assertions.assertEquals(updatedDiscountCode.getMaxApplications(), Long.valueOf(10));
 
             return updatedDiscountCode;
         });

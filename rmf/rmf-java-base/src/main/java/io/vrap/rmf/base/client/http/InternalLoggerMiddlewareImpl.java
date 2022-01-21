@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.event.Level;
 
 /**
  * Default implementation for the {@link InternalLoggerMiddleware}
@@ -23,9 +24,18 @@ import org.slf4j.LoggerFactory;
 class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private static final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddlewareImpl.class);
     private final InternalLoggerFactory factory;
+    private final Level deprecationLogEvent;
+    private final Level responseLogEvent;
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
+        this(factory, Level.INFO, Level.INFO);
+    }
+
+    public InternalLoggerMiddlewareImpl(InternalLoggerFactory factory, Level responseLogEvent,
+            Level deprecationLogEvent) {
         this.factory = factory;
+        this.responseLogEvent = responseLogEvent;
+        this.deprecationLogEvent = deprecationLogEvent;
     }
 
     @Override
@@ -85,7 +95,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
-                        notices.forEach(message -> logger.info(() -> "Deprecation notice: " + message));
+                        notices.forEach(
+                            message -> logger.log(deprecationLogEvent, () -> "Deprecation notice: " + message));
                     }
                     responseLogger.debug(() -> errorResponse, throwable);
                     responseLogger.trace(() -> errorResponse.getStatusCode() + "\n"
@@ -98,12 +109,12 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 }
             }
             else {
-                responseLogger.info(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
-                    response.getStatusCode()));
+                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s", request.getMethod().name(),
+                    request.getUrl(), response.getStatusCode()));
                 final List<Map.Entry<String, String>> notices = response.getHeaders()
                         .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                 if (notices != null) {
-                    notices.forEach(message -> logger.info(() -> "Deprecation notice: " + message));
+                    notices.forEach(message -> logger.log(deprecationLogEvent, () -> "Deprecation notice: " + message));
                 }
 
                 responseLogger.debug(() -> response);

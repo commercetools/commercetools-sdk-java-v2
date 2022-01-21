@@ -6,8 +6,8 @@ import com.commercetools.importapi.models.importcontainers.ImportContainer;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ImportSinkIntegrationTests {
 
@@ -24,7 +24,7 @@ public class ImportSinkIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assert.assertNotNull(importSink);
+        Assertions.assertNotNull(importSink);
 
         //        ImportApiTestUtils.assertEventually(() -> {
         //            ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
@@ -33,8 +33,8 @@ public class ImportSinkIntegrationTests {
         //                    .delete()
         //                    .executeBlocking()
         //                    .getBody();
-        //            Assert.assertNotNull(deletedImportSink);
-        //            Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());
+        //            Assertions.assertNotNull(deletedImportSink);
+        //            Assertions.assertEquals(importSink.getKey(), deletedImportSink.getKey());
         //        });
     }
 

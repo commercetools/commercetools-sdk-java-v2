@@ -7,12 +7,12 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class UserAgentHeaderTest {
 
-    @Ignore
+    @Disabled
     @Test
     public void execute() {
         ByProjectKeyCategoriesGet request = CommercetoolsTestUtils.getProjectApiRoot().categories().get();

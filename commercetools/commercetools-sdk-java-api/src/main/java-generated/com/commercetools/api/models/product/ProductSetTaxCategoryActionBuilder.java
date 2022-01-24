@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,14 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+
+    public ProductSetTaxCategoryActionBuilder taxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

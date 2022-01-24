@@ -149,6 +149,12 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    public ReviewBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ReviewBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;

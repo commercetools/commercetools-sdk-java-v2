@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -16,6 +17,12 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
 
     @Nullable
     private Boolean force;
+
+    public ProductTransitionStateActionBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
 
     public ProductTransitionStateActionBuilder state(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {

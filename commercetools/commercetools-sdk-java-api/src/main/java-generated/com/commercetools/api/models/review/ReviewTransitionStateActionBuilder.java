@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,12 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
 
     @Nullable
     private Boolean force;
+
+    public ReviewTransitionStateActionBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
 
     public ReviewTransitionStateActionBuilder state(
             final com.commercetools.api.models.state.StateResourceIdentifier state) {

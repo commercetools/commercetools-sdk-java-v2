@@ -136,6 +136,13 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     public ShippingMethodBuilder taxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingMethodBuilder taxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;

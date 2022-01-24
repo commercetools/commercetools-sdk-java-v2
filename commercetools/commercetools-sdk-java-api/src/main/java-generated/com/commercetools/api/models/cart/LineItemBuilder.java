@@ -105,6 +105,13 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     public LineItemBuilder productType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public LineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
         return this;
@@ -196,8 +203,21 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     public LineItemBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public LineItemBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    public LineItemBuilder distributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
+                .build();
         return this;
     }
 

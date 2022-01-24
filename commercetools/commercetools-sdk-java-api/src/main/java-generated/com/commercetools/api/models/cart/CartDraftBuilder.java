@@ -107,6 +107,14 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     public CartDraftBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CartDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
@@ -114,6 +122,12 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
+        return this;
+    }
+
+    public CartDraftBuilder store(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
         return this;
     }
 
@@ -228,6 +242,14 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraftBuilder billingAddress(
             @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
+        return this;
+    }
+
+    public CartDraftBuilder shippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 

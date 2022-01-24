@@ -233,6 +233,12 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this;
     }
 
+    public ShoppingListBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -30,6 +31,12 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+
+    public CategorySetAssetCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
 

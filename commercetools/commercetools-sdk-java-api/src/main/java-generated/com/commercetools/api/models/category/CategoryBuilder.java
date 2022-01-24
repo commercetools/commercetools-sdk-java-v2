@@ -165,6 +165,12 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    public CategoryBuilder parent(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
+        return this;
+    }
+
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
         this.parent = parent;
         return this;

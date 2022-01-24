@@ -191,6 +191,12 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    public StagedOrderBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
     public StagedOrderBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
@@ -322,6 +328,12 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     public StagedOrderBuilder orderState(final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
+        return this;
+    }
+
+    public StagedOrderBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

@@ -191,6 +191,12 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    public OrderBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
@@ -319,6 +325,12 @@ public class OrderBuilder implements Builder<Order> {
 
     public OrderBuilder orderState(final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
+        return this;
+    }
+
+    public OrderBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

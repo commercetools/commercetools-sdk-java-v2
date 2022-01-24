@@ -36,6 +36,9 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();

@@ -21,13 +21,13 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
 
     private String lineItemId;
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @JsonCreator
     MyCartSetLineItemSupplyChannelActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.lineItemId = lineItemId;
-        this.distributionChannel = distributionChannel;
+        this.supplyChannel = supplyChannel;
         this.action = SET_LINE_ITEM_SUPPLY_CHANNEL;
     }
 
@@ -43,17 +43,19 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
         return this.lineItemId;
     }
 
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
     }
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
     }
 
-    public void setDistributionChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
     }
 
     @Override
@@ -68,13 +70,13 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
-                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(distributionChannel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(supplyChannel).toHashCode();
     }
 
 }

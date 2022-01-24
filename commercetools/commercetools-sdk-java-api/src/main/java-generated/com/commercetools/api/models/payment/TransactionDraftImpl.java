@@ -27,7 +27,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
 
     private com.commercetools.api.models.payment.TransactionState state;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     TransactionDraftImpl(@JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
@@ -35,7 +35,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount,
             @JsonProperty("interactionId") final String interactionId,
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.timestamp = timestamp;
         this.type = type;
         this.amount = amount;
@@ -84,7 +84,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     /**
     *  <p>Custom Fields for the Transaction.</p>
     */
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -108,7 +108,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
         this.state = state;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

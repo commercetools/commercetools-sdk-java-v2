@@ -36,6 +36,9 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
         return this.action;
     }
 
+    /**
+    *  <p>Value to remove from the array.</p>
+    */
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

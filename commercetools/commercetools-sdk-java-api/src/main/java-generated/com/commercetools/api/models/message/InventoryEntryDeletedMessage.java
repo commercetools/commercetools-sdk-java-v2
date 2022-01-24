@@ -24,6 +24,9 @@ public interface InventoryEntryDeletedMessage extends Message {
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();

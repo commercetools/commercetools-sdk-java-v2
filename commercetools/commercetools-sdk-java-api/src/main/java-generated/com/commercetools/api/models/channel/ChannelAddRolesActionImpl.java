@@ -36,6 +36,9 @@ public class ChannelAddRolesActionImpl implements ChannelAddRolesAction, ModelBa
         return this.action;
     }
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

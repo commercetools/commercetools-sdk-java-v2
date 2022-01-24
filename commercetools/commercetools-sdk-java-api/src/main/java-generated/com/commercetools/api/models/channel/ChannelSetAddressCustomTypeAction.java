@@ -20,10 +20,17 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
 
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
+    /**
+    *  <p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed from the address.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
+    *  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

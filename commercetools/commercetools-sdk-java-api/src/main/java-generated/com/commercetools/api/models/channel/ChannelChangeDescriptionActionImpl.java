@@ -36,6 +36,9 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }

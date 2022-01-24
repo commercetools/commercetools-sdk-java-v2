@@ -40,10 +40,17 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
         return this.action;
     }
 
+    /**
+    *  <p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed from the address.</p>
+    */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
+    /**
+    *  <p>Valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
+    *  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p>
+    */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

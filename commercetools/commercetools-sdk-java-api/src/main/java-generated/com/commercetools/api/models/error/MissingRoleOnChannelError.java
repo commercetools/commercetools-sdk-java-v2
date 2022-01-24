@@ -21,10 +21,16 @@ public interface MissingRoleOnChannelError extends ErrorObject {
 
     String MISSING_ROLE_ON_CHANNEL = "MissingRoleOnChannel";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
+    /**
+    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+    */
     @NotNull
     @JsonProperty("missingRole")
     public ChannelRoleEnum getMissingRole();

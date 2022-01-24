@@ -18,6 +18,9 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
 
     String SET_ROLES = "setRoles";
 
+    /**
+    *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+    */
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();

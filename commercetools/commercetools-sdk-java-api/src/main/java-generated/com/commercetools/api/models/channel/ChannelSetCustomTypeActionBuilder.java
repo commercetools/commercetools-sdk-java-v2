@@ -19,12 +19,6 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     public ChannelSetCustomTypeActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
-        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
-        return this;
-    }
-
-    public ChannelSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;

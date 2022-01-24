@@ -51,36 +51,54 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     public ChannelDraftImpl() {
     }
 
+    /**
+    *  <p>User-defined unique identifier for the Channel.</p>
+    */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>If not specified, then channel will get InventorySupply role by default</p>
+    *  <p>Roles of the Channel.
+    *  Each channel must have at least one role.
+    *  If not specified, then <code>InventorySupply</code> is assigned by default.</p>
     */
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
 
+    /**
+    *  <p>Name of the Channel.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the Channel.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>Address where the Channel is located.</p>
+    */
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
     /**
-    *  <p>The custom fields.</p>
+    *  <p>Custom fields defined for the Channel.</p>
     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+    *  <p>GeoJSON geometry object encoding the geo location of the Channel.
+    *  Currently, only the <a href="/../api/types#point">Point</a> type is supported.</p>
+    */
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
         return this.geoLocation;
     }

@@ -1,7 +1,7 @@
 plugins {
-	id 'org.springframework.boot' version '2.6.0'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.6.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
     id "com.diffplug.spotless" version "5.17.0"
 }
 
@@ -11,12 +11,12 @@ sourceCompatibility = '11'
 
 repositories {
     mavenLocal()
-	mavenCentral()
+    mavenCentral()
 }
 
 ext {
     versions = [
-        commercetools: "7.3.0-SNAPSHOT"
+        commercetools: "7.4.0-SNAPSHOT"
     ]
 }
 
@@ -24,15 +24,15 @@ dependencies {
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-apachehttp-client:${versions.commercetools}"
     implementation 'javax.inject:javax.inject:1'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-//	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.springframework.session:spring-session-core'
+    implementation 'org.springframework.session:spring-session-core'
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {

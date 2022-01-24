@@ -1,4 +1,4 @@
-package com.commercetools.sdk.examples.spring.servingwebcontent;
+package com.commercetools.sdk.examples.spring.web;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.cart.Cart;

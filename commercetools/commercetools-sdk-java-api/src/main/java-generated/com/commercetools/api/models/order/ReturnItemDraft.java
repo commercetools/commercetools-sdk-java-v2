@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,7 +40,7 @@ public interface ReturnItemDraft {
     */
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     public void setQuantity(final Long quantity);
 
@@ -52,7 +52,7 @@ public interface ReturnItemDraft {
 
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static ReturnItemDraft of() {
         return new ReturnItemDraftImpl();

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates a cart in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store's key.
+*  <p>Creates a cart in the store specified by {storeKey}.
 *  When using this endpoint the cart's store field is always set to the store specified in the path parameter.
 *  Creating a cart can fail with an InvalidOperation if the referenced shipping method
 *  in the CartDraft has a predicate which does not match the cart.</p>

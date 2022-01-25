@@ -40,6 +40,9 @@ public class StoreBuilder implements Builder<Store> {
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     public StoreBuilder id(final String id) {
@@ -171,6 +174,36 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    public StoreBuilder productSelections(
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+        return this;
+    }
+
+    public StoreBuilder withProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.productSelections = new ArrayList<>();
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreBuilder plusProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        if (this.productSelections == null) {
+            this.productSelections = new ArrayList<>();
+        }
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreBuilder productSelections(
+            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
+        this.productSelections = productSelections;
+        return this;
+    }
+
     public StoreBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
@@ -232,6 +265,11 @@ public class StoreBuilder implements Builder<Store> {
     }
 
     @Nullable
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+        return this.productSelections;
+    }
+
+    @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -244,7 +282,7 @@ public class StoreBuilder implements Builder<Store> {
         Objects.requireNonNull(key, Store.class + ": key is missing");
         Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
-            distributionChannels, supplyChannels, custom);
+            distributionChannels, supplyChannels, productSelections, custom);
     }
 
     /**
@@ -252,7 +290,7 @@ public class StoreBuilder implements Builder<Store> {
      */
     public Store buildUnchecked() {
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
-            distributionChannels, supplyChannels, custom);
+            distributionChannels, supplyChannels, productSelections, custom);
     }
 
     public static StoreBuilder of() {
@@ -272,6 +310,7 @@ public class StoreBuilder implements Builder<Store> {
         builder.languages = template.getLanguages();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
+        builder.productSelections = template.getProductSelections();
         builder.custom = template.getCustom();
         return builder;
     }

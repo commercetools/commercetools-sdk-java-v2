@@ -27,7 +27,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
@@ -35,7 +35,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
             @JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("comment") final String comment,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.quantity = quantity;
         this.lineItemId = lineItemId;
         this.customLineItemId = customLineItemId;
@@ -70,7 +70,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     /**
     *  <p>Custom Fields of this return item.</p>
     */
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -94,7 +94,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
         this.shipmentState = shipmentState;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

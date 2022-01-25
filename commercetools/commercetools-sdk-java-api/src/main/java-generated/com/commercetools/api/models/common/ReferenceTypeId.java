@@ -46,6 +46,8 @@ public interface ReferenceTypeId {
 
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
 
+    ReferenceTypeId PRODUCT_SELECTION = ReferenceTypeIdEnum.PRODUCT_SELECTION;
+
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
 
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
@@ -100,6 +102,8 @@ public interface ReferenceTypeId {
         PRODUCT("product"),
 
         PRODUCT_DISCOUNT("product-discount"),
+
+        PRODUCT_SELECTION("product-selection"),
 
         PRODUCT_TYPE("product-type"),
 

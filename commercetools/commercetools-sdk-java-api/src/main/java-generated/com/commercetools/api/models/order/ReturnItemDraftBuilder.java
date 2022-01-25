@@ -26,7 +26,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public ReturnItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -55,12 +55,12 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     public ReturnItemDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -89,7 +89,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

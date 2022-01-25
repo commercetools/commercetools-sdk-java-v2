@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartAddPaymentActionBuilder implements Builder<CartAddPaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+
+    public CartAddPaymentActionBuilder payment(
+            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public CartAddPaymentActionBuilder payment(
             final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {

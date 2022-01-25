@@ -26,7 +26,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     private com.commercetools.api.models.payment.TransactionState state;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
@@ -60,12 +60,12 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     public TransactionDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -94,7 +94,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

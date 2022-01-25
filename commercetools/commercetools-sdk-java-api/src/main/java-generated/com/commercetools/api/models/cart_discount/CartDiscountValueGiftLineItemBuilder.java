@@ -40,8 +40,21 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public CartDiscountValueGiftLineItemBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    public CartDiscountValueGiftLineItemBuilder distributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
+                .build();
         return this;
     }
 

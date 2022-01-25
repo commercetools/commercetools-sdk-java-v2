@@ -2,6 +2,7 @@
 package com.commercetools.api.models.payment;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -27,6 +28,12 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     public PaymentStatusBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
+        return this;
+    }
+
+    public PaymentStatusBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
 

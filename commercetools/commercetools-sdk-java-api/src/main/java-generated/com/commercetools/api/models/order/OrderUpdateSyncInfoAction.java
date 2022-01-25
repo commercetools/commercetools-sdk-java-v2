@@ -21,6 +21,9 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("channel")

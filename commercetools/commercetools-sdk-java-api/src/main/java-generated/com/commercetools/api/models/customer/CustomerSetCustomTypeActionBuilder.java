@@ -19,6 +19,12 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
     private com.commercetools.api.models.type.FieldContainer fields;
 
     public CustomerSetCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public CustomerSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;

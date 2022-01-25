@@ -231,6 +231,14 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     public ProductDraftBuilder taxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProductDraftBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
@@ -245,6 +253,12 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraftBuilder searchKeywords(
             @Nullable final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
+        return this;
+    }
+
+    public ProductDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 

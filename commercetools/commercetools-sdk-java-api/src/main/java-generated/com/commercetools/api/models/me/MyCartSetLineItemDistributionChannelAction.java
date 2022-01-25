@@ -24,6 +24,9 @@ public interface MyCartSetLineItemDistributionChannelAction extends MyCartUpdate
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();

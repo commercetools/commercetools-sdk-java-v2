@@ -83,6 +83,12 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     public OrderFromCartDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public OrderFromCartDraftBuilder state(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;

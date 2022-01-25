@@ -47,10 +47,16 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
         return this.message;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+    */
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
         return this.missingRole;
     }

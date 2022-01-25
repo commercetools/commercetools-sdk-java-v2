@@ -67,6 +67,9 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
         return this.newAvailableQuantity;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }

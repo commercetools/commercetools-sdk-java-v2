@@ -129,6 +129,14 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     public MyCartDraftBuilder shippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public MyCartDraftBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;

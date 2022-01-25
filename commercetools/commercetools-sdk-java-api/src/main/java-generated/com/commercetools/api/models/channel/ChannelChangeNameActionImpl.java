@@ -35,6 +35,9 @@ public class ChannelChangeNameActionImpl implements ChannelChangeNameAction, Mod
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }

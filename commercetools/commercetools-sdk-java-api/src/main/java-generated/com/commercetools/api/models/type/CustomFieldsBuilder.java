@@ -14,6 +14,12 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    public CustomFieldsBuilder type(
+            Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReferenceBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeReferenceBuilder.of()).build();
+        return this;
+    }
+
     public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
         return this;

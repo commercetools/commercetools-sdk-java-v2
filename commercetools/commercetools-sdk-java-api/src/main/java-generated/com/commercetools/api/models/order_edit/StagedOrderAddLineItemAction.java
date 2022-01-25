@@ -30,6 +30,9 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
@@ -53,6 +56,9 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();

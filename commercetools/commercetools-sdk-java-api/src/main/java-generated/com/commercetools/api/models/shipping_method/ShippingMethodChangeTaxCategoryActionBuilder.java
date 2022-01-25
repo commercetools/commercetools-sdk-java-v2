@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<ShippingMethodChangeTaxCategoryAction> {
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+
+    public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

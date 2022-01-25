@@ -18,6 +18,9 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     String ADD_ROLES = "addRoles";
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();

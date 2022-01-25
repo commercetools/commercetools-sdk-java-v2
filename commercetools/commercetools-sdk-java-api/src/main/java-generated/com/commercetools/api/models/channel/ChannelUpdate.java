@@ -17,10 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelUpdateImpl.class)
 public interface ChannelUpdate extends com.commercetools.api.models.ResourceUpdate<ChannelUpdate, ChannelUpdateAction> {
 
+    /**
+    *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> error will be returned.</p>
+    */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Update actions to be performed on the Channel.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("actions")

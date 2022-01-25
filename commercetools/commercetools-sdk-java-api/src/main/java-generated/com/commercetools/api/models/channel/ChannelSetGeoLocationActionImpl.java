@@ -36,6 +36,9 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
         return this.action;
     }
 
+    /**
+    *  <p>Value to set.</p>
+    */
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
         return this.geoLocation;
     }

@@ -24,13 +24,16 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
-    @JsonProperty("distributionChannel")
-    public ChannelResourceIdentifier getDistributionChannel();
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
 
     public void setLineItemId(final String lineItemId);
 
-    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     public static MyCartSetLineItemSupplyChannelAction of() {
         return new MyCartSetLineItemSupplyChannelActionImpl();
@@ -39,7 +42,7 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
     public static MyCartSetLineItemSupplyChannelAction of(final MyCartSetLineItemSupplyChannelAction template) {
         MyCartSetLineItemSupplyChannelActionImpl instance = new MyCartSetLineItemSupplyChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 

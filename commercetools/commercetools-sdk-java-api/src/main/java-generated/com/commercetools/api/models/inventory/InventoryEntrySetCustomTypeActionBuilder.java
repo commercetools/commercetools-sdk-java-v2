@@ -19,6 +19,12 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     private com.commercetools.api.models.type.FieldContainer fields;
 
     public InventoryEntrySetCustomTypeActionBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public InventoryEntrySetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;

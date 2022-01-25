@@ -44,6 +44,9 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
         return this.lineItemId;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }

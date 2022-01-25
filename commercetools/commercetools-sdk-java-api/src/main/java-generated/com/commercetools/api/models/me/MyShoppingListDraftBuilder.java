@@ -134,6 +134,12 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     public MyShoppingListDraftBuilder store(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder store(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
         return this;

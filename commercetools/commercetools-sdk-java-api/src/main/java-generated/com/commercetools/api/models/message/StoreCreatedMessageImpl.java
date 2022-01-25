@@ -47,6 +47,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
@@ -63,6 +65,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
             @JsonProperty("languages") final java.util.List<String> languages,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
+            @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
@@ -78,6 +81,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.languages = languages;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
+        this.productSelections = productSelections;
         this.custom = custom;
         this.type = STORE_CREATED;
     }
@@ -150,6 +154,10 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
+    }
+
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+        return this.productSelections;
     }
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -228,6 +236,16 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.supplyChannels = supplyChannels;
     }
 
+    public void setProductSelections(
+            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+    }
+
+    public void setProductSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
+        this.productSelections = productSelections;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -257,6 +275,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(languages, that.languages)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -278,6 +297,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(languages)
                 .append(distributionChannels)
                 .append(supplyChannels)
+                .append(productSelections)
                 .append(custom)
                 .toHashCode();
     }

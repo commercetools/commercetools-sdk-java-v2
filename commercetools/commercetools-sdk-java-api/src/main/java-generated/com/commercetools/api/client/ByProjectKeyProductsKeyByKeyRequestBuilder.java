@@ -34,4 +34,7 @@ public class ByProjectKeyProductsKeyByKeyRequestBuilder {
         return new ByProjectKeyProductsKeyByKeyDelete(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyProductsKeyByKeyProductSelectionsRequestBuilder productSelections() {
+        return new ByProjectKeyProductsKeyByKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey, key);
+    }
 }

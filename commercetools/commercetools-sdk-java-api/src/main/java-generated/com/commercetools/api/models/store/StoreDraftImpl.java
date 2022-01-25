@@ -27,6 +27,8 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
@@ -35,12 +37,14 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
             @JsonProperty("languages") final java.util.List<String> languages,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels,
+            @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.name = name;
         this.languages = languages;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
+        this.productSelections = productSelections;
         this.custom = custom;
     }
 
@@ -79,6 +83,15 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     */
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
         return this.supplyChannels;
+    }
+
+    /**
+    *  <p>Set of ResourceIdentifiers of Product Selections along with settings.
+    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
+    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
+        return this.productSelections;
     }
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -121,6 +134,16 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.supplyChannels = supplyChannels;
     }
 
+    public void setProductSelections(
+            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+    }
+
+    public void setProductSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
+        this.productSelections = productSelections;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -140,6 +163,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append(languages, that.languages)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -151,6 +175,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append(languages)
                 .append(distributionChannels)
                 .append(supplyChannels)
+                .append(productSelections)
                 .append(custom)
                 .toHashCode();
     }

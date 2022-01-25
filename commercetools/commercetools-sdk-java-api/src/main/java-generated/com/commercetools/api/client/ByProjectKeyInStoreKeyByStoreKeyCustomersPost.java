@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates a customer in a specific Store. The {storeKey} path parameter maps to a Store's key.
+*  <p>Creates a customer in a specific Store.
 *  When using this endpoint, if omitted,
 *  the customer's stores field is set to the store specified in the path parameter.
 *  If an anonymous cart is passed in as when using this method,

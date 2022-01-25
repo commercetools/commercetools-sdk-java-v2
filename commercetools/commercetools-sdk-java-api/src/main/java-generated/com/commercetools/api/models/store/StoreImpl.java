@@ -39,6 +39,8 @@ public class StoreImpl implements Store, ModelBase {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
@@ -52,6 +54,7 @@ public class StoreImpl implements Store, ModelBase {
             @JsonProperty("languages") final java.util.List<String> languages,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
+            @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
@@ -64,6 +67,7 @@ public class StoreImpl implements Store, ModelBase {
         this.languages = languages;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
+        this.productSelections = productSelections;
         this.custom = custom;
     }
 
@@ -134,6 +138,15 @@ public class StoreImpl implements Store, ModelBase {
         return this.supplyChannels;
     }
 
+    /**
+    *  <p>Set of References to Product Selections along with settings.
+    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
+    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+        return this.productSelections;
+    }
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -197,6 +210,16 @@ public class StoreImpl implements Store, ModelBase {
         this.supplyChannels = supplyChannels;
     }
 
+    public void setProductSelections(
+            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+    }
+
+    public void setProductSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
+        this.productSelections = productSelections;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -222,6 +245,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(languages, that.languages)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -239,6 +263,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(languages)
                 .append(distributionChannels)
                 .append(supplyChannels)
+                .append(productSelections)
                 .append(custom)
                 .toHashCode();
     }

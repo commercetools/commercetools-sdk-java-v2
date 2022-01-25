@@ -15,9 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Returns an order by its order number from a specific Store.
-*  The {storeKey} path parameter maps to a Store's key.
-*  If the order exists in the commercetools project but does not have the store field,
+*  <p>Returns an order by its order number from a specific Store.</p>
+*  <p>If the order exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.
 *  In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+,
 *  it should be provided in URL-encoded format.</p>

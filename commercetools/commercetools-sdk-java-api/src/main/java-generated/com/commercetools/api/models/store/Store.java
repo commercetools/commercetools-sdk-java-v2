@@ -88,6 +88,15 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     @JsonProperty("supplyChannels")
     public List<ChannelReference> getSupplyChannels();
 
+    /**
+    *  <p>Set of References to Product Selections along with settings.
+    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
+    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+    @Valid
+    @JsonProperty("productSelections")
+    public List<ProductSelectionSetting> getProductSelections();
+
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
@@ -123,6 +132,11 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
 
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
 
+    @JsonIgnore
+    public void setProductSelections(final ProductSelectionSetting... productSelections);
+
+    public void setProductSelections(final List<ProductSelectionSetting> productSelections);
+
     public void setCustom(final CustomFields custom);
 
     public static Store of() {
@@ -142,6 +156,7 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         instance.setLanguages(template.getLanguages());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
+        instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
         return instance;
     }

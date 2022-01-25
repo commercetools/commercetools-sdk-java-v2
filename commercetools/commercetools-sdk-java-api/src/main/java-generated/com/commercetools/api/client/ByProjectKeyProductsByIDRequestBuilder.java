@@ -37,4 +37,8 @@ public class ByProjectKeyProductsByIDRequestBuilder {
     public ByProjectKeyProductsByIDImagesRequestBuilder images() {
         return new ByProjectKeyProductsByIDImagesRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyProductsByIDProductSelectionsRequestBuilder productSelections() {
+        return new ByProjectKeyProductsByIDProductSelectionsRequestBuilder(apiHttpClient, projectKey, ID);
+    }
 }

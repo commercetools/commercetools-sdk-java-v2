@@ -21,7 +21,7 @@
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.type.CustomFields;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line.40">    */</span>
 <span class="source-line-no">041</span><span id="line.41">    @Valid</span>
 <span class="source-line-no">042</span><span id="line.42">    @JsonProperty("custom")</span>
-<span class="source-line-no">043</span><span id="line.43">    public CustomFields getCustom();</span>
+<span class="source-line-no">043</span><span id="line.43">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    public void setQuantity(final Long quantity);</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
@@ -65,7 +65,7 @@
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    public void setShipmentState(final ReturnShipmentState shipmentState);</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">055</span><span id="line.55">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    public static ReturnItemDraft of() {</span>
 <span class="source-line-no">058</span><span id="line.58">        return new ReturnItemDraftImpl();</span>

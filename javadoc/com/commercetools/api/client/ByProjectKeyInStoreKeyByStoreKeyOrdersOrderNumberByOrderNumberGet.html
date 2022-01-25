@@ -85,12 +85,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;</code>, <code><a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;</code>, <code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.25">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.24">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>,&#8203;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;</span></div>
-<div class="block"><p>Returns an order by its order number from a specific Store.
-  The {storeKey} path parameter maps to a Store's key.
-  If the order exists in the commercetools project but does not have the store field,
+<div class="block"><p>Returns an order by its order number from a specific Store.</p>
+  <p>If the order exists in the commercetools project but does not have the store field,
   or the store field references a different store, this method returns a ResourceNotFound error.
   In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+,
   it should be provided in URL-encoded format.</p></div>
@@ -230,7 +229,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,java.lang.String,java.lang.String)">
 <h3>ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.37">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.36">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
@@ -239,7 +238,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.api.client.ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet)">
 <h3>ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.45">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.44">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -253,7 +252,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="createHttpRequest()">
 <h3>createHttpRequest</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.53">createHttpRequest</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.52">createHttpRequest</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest()">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>,&#8203;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</code></dd>
@@ -263,7 +262,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.65">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.64">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -276,7 +275,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.71">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.70">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&gt;</code></dd>
@@ -288,25 +287,25 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.77">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.76">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStoreKey()">
 <h3>getStoreKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.81">getStoreKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.80">getStoreKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderNumber()">
 <h3>getOrderNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.85">getOrderNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.84">getOrderNumber</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExpand()">
 <h3>getExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.89">getExpand</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.88">getExpand</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExpandableTrait.html#getExpand()">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a>&gt;</code></dd>
@@ -316,25 +315,25 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.93">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.92">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStoreKey(java.lang.String)">
 <h3>setStoreKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.97">setStoreKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.96">setStoreKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOrderNumber(java.lang.String)">
 <h3>setOrderNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.101">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.100">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(java.lang.String)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.108">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.107">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expand)</span></div>
 <div class="block">set expand with the specificied value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -345,7 +344,7 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="addExpand(java.lang.String)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.115">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.114">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -356,27 +355,27 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="withExpand(java.util.List)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.122">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.121">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expand)</span></div>
 <div class="block">set expand with the specificied values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.List)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.131">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.130">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.136">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.135">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.152">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html#line.151">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

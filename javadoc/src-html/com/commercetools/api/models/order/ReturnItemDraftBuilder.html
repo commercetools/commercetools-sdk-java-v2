@@ -39,7 +39,7 @@
 <span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.order.ReturnShipmentState shipmentState;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
 <span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
-<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    public ReturnItemDraftBuilder quantity(final Long quantity) {</span>
 <span class="source-line-no">032</span><span id="line.32">        this.quantity = quantity;</span>
@@ -68,12 +68,12 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    public ReturnItemDraftBuilder custom(</span>
-<span class="source-line-no">058</span><span id="line.58">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">058</span><span id="line.58">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
 <span class="source-line-no">060</span><span id="line.60">        return this;</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">063</span><span id="line.63">    public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
 <span class="source-line-no">064</span><span id="line.64">        this.custom = custom;</span>
 <span class="source-line-no">065</span><span id="line.65">        return this;</span>
 <span class="source-line-no">066</span><span id="line.66">    }</span>
@@ -102,7 +102,7 @@
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
 <span class="source-line-no">091</span><span id="line.91">    @Nullable</span>
-<span class="source-line-no">092</span><span id="line.92">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">092</span><span id="line.92">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">093</span><span id="line.93">        return this.custom;</span>
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>

@@ -31,72 +31,74 @@
 <span class="source-line-no">018</span><span id="line.18">import com.commercetools.api.models.payment.PaymentResourceIdentifier;</span>
 <span class="source-line-no">019</span><span id="line.19">import com.commercetools.api.models.product.ProductResourceIdentifier;</span>
 <span class="source-line-no">020</span><span id="line.20">import com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier;</span>
-<span class="source-line-no">021</span><span id="line.21">import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;</span>
-<span class="source-line-no">022</span><span id="line.22">import com.commercetools.api.models.review.ReviewResourceIdentifier;</span>
-<span class="source-line-no">023</span><span id="line.23">import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;</span>
-<span class="source-line-no">024</span><span id="line.24">import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;</span>
-<span class="source-line-no">025</span><span id="line.25">import com.commercetools.api.models.state.StateResourceIdentifier;</span>
-<span class="source-line-no">026</span><span id="line.26">import com.commercetools.api.models.store.StoreResourceIdentifier;</span>
-<span class="source-line-no">027</span><span id="line.27">import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;</span>
-<span class="source-line-no">028</span><span id="line.28">import com.commercetools.api.models.type.TypeResourceIdentifier;</span>
-<span class="source-line-no">029</span><span id="line.29">import com.commercetools.api.models.zone.ZoneResourceIdentifier;</span>
-<span class="source-line-no">030</span><span id="line.30">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">031</span><span id="line.31">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">@JsonSubTypes({</span>
-<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),</span>
-<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),</span>
-<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = CategoryResourceIdentifier.CATEGORY),</span>
-<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelResourceIdentifierImpl.class, name = ChannelResourceIdentifier.CHANNEL),</span>
-<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl.class, name = CustomerGroupResourceIdentifier.CUSTOMER_GROUP),</span>
-<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerResourceIdentifierImpl.class, name = CustomerResourceIdentifier.CUSTOMER),</span>
-<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierImpl.class, name = DiscountCodeResourceIdentifier.DISCOUNT_CODE),</span>
-<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierImpl.class, name = InventoryEntryResourceIdentifier.INVENTORY_ENTRY),</span>
-<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditResourceIdentifierImpl.class, name = OrderEditResourceIdentifier.ORDER_EDIT),</span>
-<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderResourceIdentifierImpl.class, name = OrderResourceIdentifier.ORDER),</span>
-<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentResourceIdentifierImpl.class, name = PaymentResourceIdentifier.PAYMENT),</span>
-<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),</span>
-<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),</span>
-<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),</span>
-<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),</span>
-<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),</span>
-<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),</span>
-<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),</span>
-<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),</span>
-<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl.class, name = TaxCategoryResourceIdentifier.TAX_CATEGORY),</span>
-<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeResourceIdentifierImpl.class, name = TypeResourceIdentifier.TYPE),</span>
-<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneResourceIdentifierImpl.class, name = ZoneResourceIdentifier.ZONE) })</span>
-<span class="source-line-no">058</span><span id="line.58">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ResourceIdentifierImpl.class, visible = true)</span>
-<span class="source-line-no">059</span><span id="line.59">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">060</span><span id="line.60">public interface ResourceIdentifier {</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("typeId")</span>
-<span class="source-line-no">063</span><span id="line.63">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">    *  &lt;p&gt;Unique ID of the referenced resource. Either &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;key&lt;/code&gt; is required.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">    */</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("id")</span>
-<span class="source-line-no">070</span><span id="line.70">    public String getId();</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">    *  &lt;p&gt;Unique key of the referenced resource. Either &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;key&lt;/code&gt; is required.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">    */</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("key")</span>
-<span class="source-line-no">077</span><span id="line.77">    public String getKey();</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public void setId(final String id);</span>
+<span class="source-line-no">021</span><span id="line.21">import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;</span>
+<span class="source-line-no">022</span><span id="line.22">import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;</span>
+<span class="source-line-no">023</span><span id="line.23">import com.commercetools.api.models.review.ReviewResourceIdentifier;</span>
+<span class="source-line-no">024</span><span id="line.24">import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;</span>
+<span class="source-line-no">025</span><span id="line.25">import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;</span>
+<span class="source-line-no">026</span><span id="line.26">import com.commercetools.api.models.state.StateResourceIdentifier;</span>
+<span class="source-line-no">027</span><span id="line.27">import com.commercetools.api.models.store.StoreResourceIdentifier;</span>
+<span class="source-line-no">028</span><span id="line.28">import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;</span>
+<span class="source-line-no">029</span><span id="line.29">import com.commercetools.api.models.type.TypeResourceIdentifier;</span>
+<span class="source-line-no">030</span><span id="line.30">import com.commercetools.api.models.zone.ZoneResourceIdentifier;</span>
+<span class="source-line-no">031</span><span id="line.31">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">032</span><span id="line.32">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">@JsonSubTypes({</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = CategoryResourceIdentifier.CATEGORY),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelResourceIdentifierImpl.class, name = ChannelResourceIdentifier.CHANNEL),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl.class, name = CustomerGroupResourceIdentifier.CUSTOMER_GROUP),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerResourceIdentifierImpl.class, name = CustomerResourceIdentifier.CUSTOMER),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierImpl.class, name = DiscountCodeResourceIdentifier.DISCOUNT_CODE),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierImpl.class, name = InventoryEntryResourceIdentifier.INVENTORY_ENTRY),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditResourceIdentifierImpl.class, name = OrderEditResourceIdentifier.ORDER_EDIT),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderResourceIdentifierImpl.class, name = OrderResourceIdentifier.ORDER),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentResourceIdentifierImpl.class, name = PaymentResourceIdentifier.PAYMENT),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),</span>
+<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierImpl.class, name = ProductSelectionResourceIdentifier.PRODUCT_SELECTION),</span>
+<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),</span>
+<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),</span>
+<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),</span>
+<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),</span>
+<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),</span>
+<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),</span>
+<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl.class, name = TaxCategoryResourceIdentifier.TAX_CATEGORY),</span>
+<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeResourceIdentifierImpl.class, name = TypeResourceIdentifier.TYPE),</span>
+<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneResourceIdentifierImpl.class, name = ZoneResourceIdentifier.ZONE) })</span>
+<span class="source-line-no">060</span><span id="line.60">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ResourceIdentifierImpl.class, visible = true)</span>
+<span class="source-line-no">061</span><span id="line.61">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">062</span><span id="line.62">public interface ResourceIdentifier {</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("typeId")</span>
+<span class="source-line-no">065</span><span id="line.65">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">    *  &lt;p&gt;Unique ID of the referenced resource. Either &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;key&lt;/code&gt; is required.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">    */</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("id")</span>
+<span class="source-line-no">072</span><span id="line.72">    public String getId();</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">    *  &lt;p&gt;Unique key of the referenced resource. Either &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;key&lt;/code&gt; is required.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">    */</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("key")</span>
+<span class="source-line-no">079</span><span id="line.79">    public String getKey();</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setKey(final String key);</span>
+<span class="source-line-no">081</span><span id="line.81">    public void setId(final String id);</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    default &lt;T&gt; T withResourceIdentifier(Function&lt;ResourceIdentifier, T&gt; helper) {</span>
-<span class="source-line-no">084</span><span id="line.84">        return helper.apply(this);</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86">}</span>
+<span class="source-line-no">083</span><span id="line.83">    public void setKey(final String key);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    default &lt;T&gt; T withResourceIdentifier(Function&lt;ResourceIdentifier, T&gt; helper) {</span>
+<span class="source-line-no">086</span><span id="line.86">        return helper.apply(this);</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88">}</span>
 
 
 

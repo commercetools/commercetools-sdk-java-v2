@@ -34,65 +34,67 @@
 <span class="source-line-no">021</span><span id="line.21">import com.commercetools.api.models.payment.PaymentReference;</span>
 <span class="source-line-no">022</span><span id="line.22">import com.commercetools.api.models.product.ProductReference;</span>
 <span class="source-line-no">023</span><span id="line.23">import com.commercetools.api.models.product_discount.ProductDiscountReference;</span>
-<span class="source-line-no">024</span><span id="line.24">import com.commercetools.api.models.product_type.ProductTypeReference;</span>
-<span class="source-line-no">025</span><span id="line.25">import com.commercetools.api.models.review.ReviewReference;</span>
-<span class="source-line-no">026</span><span id="line.26">import com.commercetools.api.models.shipping_method.ShippingMethodReference;</span>
-<span class="source-line-no">027</span><span id="line.27">import com.commercetools.api.models.shopping_list.ShoppingListReference;</span>
-<span class="source-line-no">028</span><span id="line.28">import com.commercetools.api.models.state.StateReference;</span>
-<span class="source-line-no">029</span><span id="line.29">import com.commercetools.api.models.store.StoreReference;</span>
-<span class="source-line-no">030</span><span id="line.30">import com.commercetools.api.models.tax_category.TaxCategoryReference;</span>
-<span class="source-line-no">031</span><span id="line.31">import com.commercetools.api.models.type.TypeReference;</span>
-<span class="source-line-no">032</span><span id="line.32">import com.commercetools.api.models.zone.ZoneReference;</span>
-<span class="source-line-no">033</span><span id="line.33">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">034</span><span id="line.34">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">@JsonSubTypes({</span>
-<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = CartDiscountReference.CART_DISCOUNT),</span>
-<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartReferenceImpl.class, name = CartReference.CART),</span>
-<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),</span>
-<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelReferenceImpl.class, name = ChannelReference.CHANNEL),</span>
-<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.custom_object.CustomObjectReferenceImpl.class, name = CustomObjectReference.KEY_VALUE_DOCUMENT),</span>
-<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl.class, name = CustomerGroupReference.CUSTOMER_GROUP),</span>
-<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerReferenceImpl.class, name = CustomerReference.CUSTOMER),</span>
-<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeReferenceImpl.class, name = DiscountCodeReference.DISCOUNT_CODE),</span>
-<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryReferenceImpl.class, name = InventoryEntryReference.INVENTORY_ENTRY),</span>
-<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditReferenceImpl.class, name = OrderEditReference.ORDER_EDIT),</span>
-<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderReferenceImpl.class, name = OrderReference.ORDER),</span>
-<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentReferenceImpl.class, name = PaymentReference.PAYMENT),</span>
-<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl.class, name = ProductDiscountReference.PRODUCT_DISCOUNT),</span>
-<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = ProductReference.PRODUCT),</span>
-<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE),</span>
-<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = ReviewReference.REVIEW),</span>
-<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = ShippingMethodReference.SHIPPING_METHOD),</span>
-<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListReferenceImpl.class, name = ShoppingListReference.SHOPPING_LIST),</span>
-<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateReferenceImpl.class, name = StateReference.STATE),</span>
-<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreReferenceImpl.class, name = StoreReference.STORE),</span>
-<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl.class, name = TaxCategoryReference.TAX_CATEGORY),</span>
-<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeReferenceImpl.class, name = TypeReference.TYPE),</span>
-<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneReferenceImpl.class, name = ZoneReference.ZONE) })</span>
-<span class="source-line-no">062</span><span id="line.62">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)</span>
-<span class="source-line-no">063</span><span id="line.63">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">064</span><span id="line.64">public interface Reference {</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    @NotNull</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("typeId")</span>
-<span class="source-line-no">068</span><span id="line.68">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;Unique ID of the referenced resource.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    */</span>
-<span class="source-line-no">073</span><span id="line.73">    @NotNull</span>
-<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("id")</span>
-<span class="source-line-no">075</span><span id="line.75">    public String getId();</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setId(final String id);</span>
+<span class="source-line-no">024</span><span id="line.24">import com.commercetools.api.models.product_selection.ProductSelectionReference;</span>
+<span class="source-line-no">025</span><span id="line.25">import com.commercetools.api.models.product_type.ProductTypeReference;</span>
+<span class="source-line-no">026</span><span id="line.26">import com.commercetools.api.models.review.ReviewReference;</span>
+<span class="source-line-no">027</span><span id="line.27">import com.commercetools.api.models.shipping_method.ShippingMethodReference;</span>
+<span class="source-line-no">028</span><span id="line.28">import com.commercetools.api.models.shopping_list.ShoppingListReference;</span>
+<span class="source-line-no">029</span><span id="line.29">import com.commercetools.api.models.state.StateReference;</span>
+<span class="source-line-no">030</span><span id="line.30">import com.commercetools.api.models.store.StoreReference;</span>
+<span class="source-line-no">031</span><span id="line.31">import com.commercetools.api.models.tax_category.TaxCategoryReference;</span>
+<span class="source-line-no">032</span><span id="line.32">import com.commercetools.api.models.type.TypeReference;</span>
+<span class="source-line-no">033</span><span id="line.33">import com.commercetools.api.models.zone.ZoneReference;</span>
+<span class="source-line-no">034</span><span id="line.34">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">035</span><span id="line.35">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">@JsonSubTypes({</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = CartDiscountReference.CART_DISCOUNT),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartReferenceImpl.class, name = CartReference.CART),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelReferenceImpl.class, name = ChannelReference.CHANNEL),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.custom_object.CustomObjectReferenceImpl.class, name = CustomObjectReference.KEY_VALUE_DOCUMENT),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl.class, name = CustomerGroupReference.CUSTOMER_GROUP),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerReferenceImpl.class, name = CustomerReference.CUSTOMER),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeReferenceImpl.class, name = DiscountCodeReference.DISCOUNT_CODE),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryReferenceImpl.class, name = InventoryEntryReference.INVENTORY_ENTRY),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditReferenceImpl.class, name = OrderEditReference.ORDER_EDIT),</span>
+<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderReferenceImpl.class, name = OrderReference.ORDER),</span>
+<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentReferenceImpl.class, name = PaymentReference.PAYMENT),</span>
+<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl.class, name = ProductDiscountReference.PRODUCT_DISCOUNT),</span>
+<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = ProductReference.PRODUCT),</span>
+<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionReferenceImpl.class, name = ProductSelectionReference.PRODUCT_SELECTION),</span>
+<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE),</span>
+<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = ReviewReference.REVIEW),</span>
+<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = ShippingMethodReference.SHIPPING_METHOD),</span>
+<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListReferenceImpl.class, name = ShoppingListReference.SHOPPING_LIST),</span>
+<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateReferenceImpl.class, name = StateReference.STATE),</span>
+<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreReferenceImpl.class, name = StoreReference.STORE),</span>
+<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl.class, name = TaxCategoryReference.TAX_CATEGORY),</span>
+<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeReferenceImpl.class, name = TypeReference.TYPE),</span>
+<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneReferenceImpl.class, name = ZoneReference.ZONE) })</span>
+<span class="source-line-no">064</span><span id="line.64">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)</span>
+<span class="source-line-no">065</span><span id="line.65">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">066</span><span id="line.66">public interface Reference {</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    @NotNull</span>
+<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("typeId")</span>
+<span class="source-line-no">070</span><span id="line.70">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">    *  &lt;p&gt;Unique ID of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">    */</span>
+<span class="source-line-no">075</span><span id="line.75">    @NotNull</span>
+<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("id")</span>
+<span class="source-line-no">077</span><span id="line.77">    public String getId();</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
-<span class="source-line-no">080</span><span id="line.80">        return helper.apply(this);</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82">}</span>
+<span class="source-line-no">079</span><span id="line.79">    public void setId(final String id);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
+<span class="source-line-no">082</span><span id="line.82">        return helper.apply(this);</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84">}</span>
 
 
 

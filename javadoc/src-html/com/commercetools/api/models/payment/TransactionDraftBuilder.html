@@ -39,7 +39,7 @@
 <span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.payment.TransactionState state;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
 <span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
-<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {</span>
 <span class="source-line-no">032</span><span id="line.32">        this.timestamp = timestamp;</span>
@@ -73,12 +73,12 @@
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    public TransactionDraftBuilder custom(</span>
-<span class="source-line-no">063</span><span id="line.63">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">063</span><span id="line.63">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">064</span><span id="line.64">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
 <span class="source-line-no">065</span><span id="line.65">        return this;</span>
 <span class="source-line-no">066</span><span id="line.66">    }</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">068</span><span id="line.68">    public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
 <span class="source-line-no">069</span><span id="line.69">        this.custom = custom;</span>
 <span class="source-line-no">070</span><span id="line.70">        return this;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
@@ -107,7 +107,7 @@
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    @Nullable</span>
-<span class="source-line-no">097</span><span id="line.97">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">097</span><span id="line.97">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">098</span><span id="line.98">        return this.custom;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>

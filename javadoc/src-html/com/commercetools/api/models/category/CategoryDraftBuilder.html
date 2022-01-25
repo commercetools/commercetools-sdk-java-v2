@@ -94,195 +94,202 @@
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    public CategoryDraftBuilder parent(</span>
-<span class="source-line-no">084</span><span id="line.84">            @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {</span>
-<span class="source-line-no">085</span><span id="line.85">        this.parent = parent;</span>
-<span class="source-line-no">086</span><span id="line.86">        return this;</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {</span>
-<span class="source-line-no">090</span><span id="line.90">        this.orderHint = orderHint;</span>
-<span class="source-line-no">091</span><span id="line.91">        return this;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public CategoryDraftBuilder externalId(@Nullable final String externalId) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.externalId = externalId;</span>
-<span class="source-line-no">096</span><span id="line.96">        return this;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public CategoryDraftBuilder metaTitle(</span>
-<span class="source-line-no">100</span><span id="line.100">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">102</span><span id="line.102">        return this;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public CategoryDraftBuilder metaTitle(</span>
-<span class="source-line-no">106</span><span id="line.106">            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
-<span class="source-line-no">107</span><span id="line.107">        this.metaTitle = metaTitle;</span>
-<span class="source-line-no">108</span><span id="line.108">        return this;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public CategoryDraftBuilder metaDescription(</span>
-<span class="source-line-no">112</span><span id="line.112">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public CategoryDraftBuilder metaDescription(</span>
-<span class="source-line-no">118</span><span id="line.118">            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
-<span class="source-line-no">119</span><span id="line.119">        this.metaDescription = metaDescription;</span>
-<span class="source-line-no">120</span><span id="line.120">        return this;</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public CategoryDraftBuilder metaKeywords(</span>
-<span class="source-line-no">124</span><span id="line.124">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">125</span><span id="line.125">        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">126</span><span id="line.126">        return this;</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public CategoryDraftBuilder metaKeywords(</span>
-<span class="source-line-no">130</span><span id="line.130">            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
-<span class="source-line-no">131</span><span id="line.131">        this.metaKeywords = metaKeywords;</span>
-<span class="source-line-no">132</span><span id="line.132">        return this;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public CategoryDraftBuilder custom(</span>
-<span class="source-line-no">136</span><span id="line.136">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">137</span><span id="line.137">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">138</span><span id="line.138">        return this;</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">142</span><span id="line.142">        this.custom = custom;</span>
-<span class="source-line-no">143</span><span id="line.143">        return this;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {</span>
-<span class="source-line-no">147</span><span id="line.147">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
-<span class="source-line-no">148</span><span id="line.148">        return this;</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    public CategoryDraftBuilder withAssets(</span>
-<span class="source-line-no">152</span><span id="line.152">            Function&lt;com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">153</span><span id="line.153">        this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">154</span><span id="line.154">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
+<span class="source-line-no">084</span><span id="line.84">            Function&lt;com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">085</span><span id="line.85">        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">086</span><span id="line.86">                .build();</span>
+<span class="source-line-no">087</span><span id="line.87">        return this;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public CategoryDraftBuilder parent(</span>
+<span class="source-line-no">091</span><span id="line.91">            @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.parent = parent;</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.orderHint = orderHint;</span>
+<span class="source-line-no">098</span><span id="line.98">        return this;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public CategoryDraftBuilder externalId(@Nullable final String externalId) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.externalId = externalId;</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public CategoryDraftBuilder metaTitle(</span>
+<span class="source-line-no">107</span><span id="line.107">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">109</span><span id="line.109">        return this;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public CategoryDraftBuilder metaTitle(</span>
+<span class="source-line-no">113</span><span id="line.113">            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
+<span class="source-line-no">114</span><span id="line.114">        this.metaTitle = metaTitle;</span>
+<span class="source-line-no">115</span><span id="line.115">        return this;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public CategoryDraftBuilder metaDescription(</span>
+<span class="source-line-no">119</span><span id="line.119">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">120</span><span id="line.120">        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public CategoryDraftBuilder metaDescription(</span>
+<span class="source-line-no">125</span><span id="line.125">            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
+<span class="source-line-no">126</span><span id="line.126">        this.metaDescription = metaDescription;</span>
+<span class="source-line-no">127</span><span id="line.127">        return this;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public CategoryDraftBuilder metaKeywords(</span>
+<span class="source-line-no">131</span><span id="line.131">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">132</span><span id="line.132">        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">133</span><span id="line.133">        return this;</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public CategoryDraftBuilder metaKeywords(</span>
+<span class="source-line-no">137</span><span id="line.137">            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
+<span class="source-line-no">138</span><span id="line.138">        this.metaKeywords = metaKeywords;</span>
+<span class="source-line-no">139</span><span id="line.139">        return this;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public CategoryDraftBuilder custom(</span>
+<span class="source-line-no">143</span><span id="line.143">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">144</span><span id="line.144">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">145</span><span id="line.145">        return this;</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">149</span><span id="line.149">        this.custom = custom;</span>
+<span class="source-line-no">150</span><span id="line.150">        return this;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
 <span class="source-line-no">155</span><span id="line.155">        return this;</span>
 <span class="source-line-no">156</span><span id="line.156">    }</span>
 <span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public CategoryDraftBuilder plusAssets(</span>
+<span class="source-line-no">158</span><span id="line.158">    public CategoryDraftBuilder withAssets(</span>
 <span class="source-line-no">159</span><span id="line.159">            Function&lt;com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">160</span><span id="line.160">        if (this.assets == null) {</span>
-<span class="source-line-no">161</span><span id="line.161">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">162</span><span id="line.162">        }</span>
-<span class="source-line-no">163</span><span id="line.163">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public CategoryDraftBuilder assets(</span>
-<span class="source-line-no">168</span><span id="line.168">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; assets) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.assets = assets;</span>
-<span class="source-line-no">170</span><span id="line.170">        return this;</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public CategoryDraftBuilder key(@Nullable final String key) {</span>
-<span class="source-line-no">174</span><span id="line.174">        this.key = key;</span>
-<span class="source-line-no">175</span><span id="line.175">        return this;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">179</span><span id="line.179">        return this.name;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
-<span class="source-line-no">183</span><span id="line.183">        return this.slug;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    @Nullable</span>
-<span class="source-line-no">187</span><span id="line.187">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">188</span><span id="line.188">        return this.description;</span>
-<span class="source-line-no">189</span><span id="line.189">    }</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    @Nullable</span>
-<span class="source-line-no">192</span><span id="line.192">    public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return this.parent;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    @Nullable</span>
-<span class="source-line-no">197</span><span id="line.197">    public String getOrderHint() {</span>
-<span class="source-line-no">198</span><span id="line.198">        return this.orderHint;</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    @Nullable</span>
-<span class="source-line-no">202</span><span id="line.202">    public String getExternalId() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return this.externalId;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    @Nullable</span>
-<span class="source-line-no">207</span><span id="line.207">    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {</span>
-<span class="source-line-no">208</span><span id="line.208">        return this.metaTitle;</span>
-<span class="source-line-no">209</span><span id="line.209">    }</span>
-<span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    @Nullable</span>
-<span class="source-line-no">212</span><span id="line.212">    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {</span>
-<span class="source-line-no">213</span><span id="line.213">        return this.metaDescription;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    @Nullable</span>
-<span class="source-line-no">217</span><span id="line.217">    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {</span>
-<span class="source-line-no">218</span><span id="line.218">        return this.metaKeywords;</span>
-<span class="source-line-no">219</span><span id="line.219">    }</span>
-<span class="source-line-no">220</span><span id="line.220"></span>
-<span class="source-line-no">221</span><span id="line.221">    @Nullable</span>
-<span class="source-line-no">222</span><span id="line.222">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">223</span><span id="line.223">        return this.custom;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    @Nullable</span>
-<span class="source-line-no">227</span><span id="line.227">    public java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; getAssets() {</span>
-<span class="source-line-no">228</span><span id="line.228">        return this.assets;</span>
-<span class="source-line-no">229</span><span id="line.229">    }</span>
-<span class="source-line-no">230</span><span id="line.230"></span>
-<span class="source-line-no">231</span><span id="line.231">    @Nullable</span>
-<span class="source-line-no">232</span><span id="line.232">    public String getKey() {</span>
-<span class="source-line-no">233</span><span id="line.233">        return this.key;</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    public CategoryDraft build() {</span>
-<span class="source-line-no">237</span><span id="line.237">        Objects.requireNonNull(name, CategoryDraft.class + ": name is missing");</span>
-<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(slug, CategoryDraft.class + ": slug is missing");</span>
-<span class="source-line-no">239</span><span id="line.239">        return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,</span>
-<span class="source-line-no">240</span><span id="line.240">            metaKeywords, custom, assets, key);</span>
+<span class="source-line-no">160</span><span id="line.160">        this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">161</span><span id="line.161">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
+<span class="source-line-no">162</span><span id="line.162">        return this;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public CategoryDraftBuilder plusAssets(</span>
+<span class="source-line-no">166</span><span id="line.166">            Function&lt;com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">167</span><span id="line.167">        if (this.assets == null) {</span>
+<span class="source-line-no">168</span><span id="line.168">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">169</span><span id="line.169">        }</span>
+<span class="source-line-no">170</span><span id="line.170">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
+<span class="source-line-no">171</span><span id="line.171">        return this;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public CategoryDraftBuilder assets(</span>
+<span class="source-line-no">175</span><span id="line.175">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; assets) {</span>
+<span class="source-line-no">176</span><span id="line.176">        this.assets = assets;</span>
+<span class="source-line-no">177</span><span id="line.177">        return this;</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    public CategoryDraftBuilder key(@Nullable final String key) {</span>
+<span class="source-line-no">181</span><span id="line.181">        this.key = key;</span>
+<span class="source-line-no">182</span><span id="line.182">        return this;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return this.name;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return this.slug;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    @Nullable</span>
+<span class="source-line-no">194</span><span id="line.194">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">195</span><span id="line.195">        return this.description;</span>
+<span class="source-line-no">196</span><span id="line.196">    }</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    @Nullable</span>
+<span class="source-line-no">199</span><span id="line.199">    public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {</span>
+<span class="source-line-no">200</span><span id="line.200">        return this.parent;</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    @Nullable</span>
+<span class="source-line-no">204</span><span id="line.204">    public String getOrderHint() {</span>
+<span class="source-line-no">205</span><span id="line.205">        return this.orderHint;</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    @Nullable</span>
+<span class="source-line-no">209</span><span id="line.209">    public String getExternalId() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return this.externalId;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    @Nullable</span>
+<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return this.metaTitle;</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    @Nullable</span>
+<span class="source-line-no">219</span><span id="line.219">    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {</span>
+<span class="source-line-no">220</span><span id="line.220">        return this.metaDescription;</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    @Nullable</span>
+<span class="source-line-no">224</span><span id="line.224">    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {</span>
+<span class="source-line-no">225</span><span id="line.225">        return this.metaKeywords;</span>
+<span class="source-line-no">226</span><span id="line.226">    }</span>
+<span class="source-line-no">227</span><span id="line.227"></span>
+<span class="source-line-no">228</span><span id="line.228">    @Nullable</span>
+<span class="source-line-no">229</span><span id="line.229">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">230</span><span id="line.230">        return this.custom;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    @Nullable</span>
+<span class="source-line-no">234</span><span id="line.234">    public java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; getAssets() {</span>
+<span class="source-line-no">235</span><span id="line.235">        return this.assets;</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    @Nullable</span>
+<span class="source-line-no">239</span><span id="line.239">    public String getKey() {</span>
+<span class="source-line-no">240</span><span id="line.240">        return this.key;</span>
 <span class="source-line-no">241</span><span id="line.241">    }</span>
 <span class="source-line-no">242</span><span id="line.242"></span>
-<span class="source-line-no">243</span><span id="line.243">    /**</span>
-<span class="source-line-no">244</span><span id="line.244">     * builds CategoryDraft without checking for non null required values</span>
-<span class="source-line-no">245</span><span id="line.245">     */</span>
-<span class="source-line-no">246</span><span id="line.246">    public CategoryDraft buildUnchecked() {</span>
-<span class="source-line-no">247</span><span id="line.247">        return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,</span>
-<span class="source-line-no">248</span><span id="line.248">            metaKeywords, custom, assets, key);</span>
-<span class="source-line-no">249</span><span id="line.249">    }</span>
-<span class="source-line-no">250</span><span id="line.250"></span>
-<span class="source-line-no">251</span><span id="line.251">    public static CategoryDraftBuilder of() {</span>
-<span class="source-line-no">252</span><span id="line.252">        return new CategoryDraftBuilder();</span>
-<span class="source-line-no">253</span><span id="line.253">    }</span>
-<span class="source-line-no">254</span><span id="line.254"></span>
-<span class="source-line-no">255</span><span id="line.255">    public static CategoryDraftBuilder of(final CategoryDraft template) {</span>
-<span class="source-line-no">256</span><span id="line.256">        CategoryDraftBuilder builder = new CategoryDraftBuilder();</span>
-<span class="source-line-no">257</span><span id="line.257">        builder.name = template.getName();</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.slug = template.getSlug();</span>
-<span class="source-line-no">259</span><span id="line.259">        builder.description = template.getDescription();</span>
-<span class="source-line-no">260</span><span id="line.260">        builder.parent = template.getParent();</span>
-<span class="source-line-no">261</span><span id="line.261">        builder.orderHint = template.getOrderHint();</span>
-<span class="source-line-no">262</span><span id="line.262">        builder.externalId = template.getExternalId();</span>
-<span class="source-line-no">263</span><span id="line.263">        builder.metaTitle = template.getMetaTitle();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.metaDescription = template.getMetaDescription();</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.metaKeywords = template.getMetaKeywords();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">267</span><span id="line.267">        builder.assets = template.getAssets();</span>
-<span class="source-line-no">268</span><span id="line.268">        builder.key = template.getKey();</span>
-<span class="source-line-no">269</span><span id="line.269">        return builder;</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">}</span>
+<span class="source-line-no">243</span><span id="line.243">    public CategoryDraft build() {</span>
+<span class="source-line-no">244</span><span id="line.244">        Objects.requireNonNull(name, CategoryDraft.class + ": name is missing");</span>
+<span class="source-line-no">245</span><span id="line.245">        Objects.requireNonNull(slug, CategoryDraft.class + ": slug is missing");</span>
+<span class="source-line-no">246</span><span id="line.246">        return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,</span>
+<span class="source-line-no">247</span><span id="line.247">            metaKeywords, custom, assets, key);</span>
+<span class="source-line-no">248</span><span id="line.248">    }</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">    /**</span>
+<span class="source-line-no">251</span><span id="line.251">     * builds CategoryDraft without checking for non null required values</span>
+<span class="source-line-no">252</span><span id="line.252">     */</span>
+<span class="source-line-no">253</span><span id="line.253">    public CategoryDraft buildUnchecked() {</span>
+<span class="source-line-no">254</span><span id="line.254">        return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,</span>
+<span class="source-line-no">255</span><span id="line.255">            metaKeywords, custom, assets, key);</span>
+<span class="source-line-no">256</span><span id="line.256">    }</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">    public static CategoryDraftBuilder of() {</span>
+<span class="source-line-no">259</span><span id="line.259">        return new CategoryDraftBuilder();</span>
+<span class="source-line-no">260</span><span id="line.260">    }</span>
+<span class="source-line-no">261</span><span id="line.261"></span>
+<span class="source-line-no">262</span><span id="line.262">    public static CategoryDraftBuilder of(final CategoryDraft template) {</span>
+<span class="source-line-no">263</span><span id="line.263">        CategoryDraftBuilder builder = new CategoryDraftBuilder();</span>
+<span class="source-line-no">264</span><span id="line.264">        builder.name = template.getName();</span>
+<span class="source-line-no">265</span><span id="line.265">        builder.slug = template.getSlug();</span>
+<span class="source-line-no">266</span><span id="line.266">        builder.description = template.getDescription();</span>
+<span class="source-line-no">267</span><span id="line.267">        builder.parent = template.getParent();</span>
+<span class="source-line-no">268</span><span id="line.268">        builder.orderHint = template.getOrderHint();</span>
+<span class="source-line-no">269</span><span id="line.269">        builder.externalId = template.getExternalId();</span>
+<span class="source-line-no">270</span><span id="line.270">        builder.metaTitle = template.getMetaTitle();</span>
+<span class="source-line-no">271</span><span id="line.271">        builder.metaDescription = template.getMetaDescription();</span>
+<span class="source-line-no">272</span><span id="line.272">        builder.metaKeywords = template.getMetaKeywords();</span>
+<span class="source-line-no">273</span><span id="line.273">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">274</span><span id="line.274">        builder.assets = template.getAssets();</span>
+<span class="source-line-no">275</span><span id="line.275">        builder.key = template.getKey();</span>
+<span class="source-line-no">276</span><span id="line.276">        return builder;</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
+<span class="source-line-no">278</span><span id="line.278"></span>
+<span class="source-line-no">279</span><span id="line.279">}</span>
 
 
 

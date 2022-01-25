@@ -34,85 +34,103 @@
 <span class="source-line-no">021</span><span id="line.21">@JsonDeserialize(as = ChannelDraftImpl.class)</span>
 <span class="source-line-no">022</span><span id="line.22">public interface ChannelDraft {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
-<span class="source-line-no">025</span><span id="line.25">    @JsonProperty("key")</span>
-<span class="source-line-no">026</span><span id="line.26">    public String getKey();</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    /**</span>
-<span class="source-line-no">029</span><span id="line.29">    *  &lt;p&gt;If not specified, then channel will get InventorySupply role by default&lt;/p&gt;</span>
-<span class="source-line-no">030</span><span id="line.30">    */</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("roles")</span>
-<span class="source-line-no">033</span><span id="line.33">    public List&lt;ChannelRoleEnum&gt; getRoles();</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @Valid</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("name")</span>
-<span class="source-line-no">037</span><span id="line.37">    public LocalizedString getName();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @Valid</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("description")</span>
-<span class="source-line-no">041</span><span id="line.41">    public LocalizedString getDescription();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">024</span><span id="line.24">    /**</span>
+<span class="source-line-no">025</span><span id="line.25">    *  &lt;p&gt;User-defined unique identifier for the Channel.&lt;/p&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">    */</span>
+<span class="source-line-no">027</span><span id="line.27">    @NotNull</span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("key")</span>
+<span class="source-line-no">029</span><span id="line.29">    public String getKey();</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    /**</span>
+<span class="source-line-no">032</span><span id="line.32">    *  &lt;p&gt;Roles of the Channel.</span>
+<span class="source-line-no">033</span><span id="line.33">    *  Each channel must have at least one role.</span>
+<span class="source-line-no">034</span><span id="line.34">    *  If not specified, then &lt;code&gt;InventorySupply&lt;/code&gt; is assigned by default.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">    */</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("roles")</span>
+<span class="source-line-no">038</span><span id="line.38">    public List&lt;ChannelRoleEnum&gt; getRoles();</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">    *  &lt;p&gt;Name of the Channel.&lt;/p&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">    */</span>
 <span class="source-line-no">043</span><span id="line.43">    @Valid</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("address")</span>
-<span class="source-line-no">045</span><span id="line.45">    public BaseAddress getAddress();</span>
+<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("name")</span>
+<span class="source-line-no">045</span><span id="line.45">    public LocalizedString getName();</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Description of the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">049</span><span id="line.49">    */</span>
 <span class="source-line-no">050</span><span id="line.50">    @Valid</span>
-<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("custom")</span>
-<span class="source-line-no">052</span><span id="line.52">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("description")</span>
+<span class="source-line-no">052</span><span id="line.52">    public LocalizedString getDescription();</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("geoLocation")</span>
-<span class="source-line-no">056</span><span id="line.56">    public GeoJson getGeoLocation();</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setKey(final String key);</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @JsonIgnore</span>
-<span class="source-line-no">061</span><span id="line.61">    public void setRoles(final ChannelRoleEnum... roles);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setRoles(final List&lt;ChannelRoleEnum&gt; roles);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public void setDescription(final LocalizedString description);</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setAddress(final BaseAddress address);</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setGeoLocation(final GeoJson geoLocation);</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public static ChannelDraft of() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return new ChannelDraftImpl();</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public static ChannelDraft of(final ChannelDraft template) {</span>
-<span class="source-line-no">080</span><span id="line.80">        ChannelDraftImpl instance = new ChannelDraftImpl();</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setRoles(template.getRoles());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setName(template.getName());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setAddress(template.getAddress());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setGeoLocation(template.getGeoLocation());</span>
-<span class="source-line-no">088</span><span id="line.88">        return instance;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Address where the Channel is located.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">057</span><span id="line.57">    @Valid</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("address")</span>
+<span class="source-line-no">059</span><span id="line.59">    public BaseAddress getAddress();</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Custom fields defined for the Channel.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">    */</span>
+<span class="source-line-no">064</span><span id="line.64">    @Valid</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("custom")</span>
+<span class="source-line-no">066</span><span id="line.66">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;GeoJSON geometry object encoding the geo location of the Channel.</span>
+<span class="source-line-no">070</span><span id="line.70">    *  Currently, only the &lt;a href="/../api/types#point"&gt;Point&lt;/a&gt; type is supported.&lt;/p&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">    */</span>
+<span class="source-line-no">072</span><span id="line.72">    @Valid</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("geoLocation")</span>
+<span class="source-line-no">074</span><span id="line.74">    public GeoJson getGeoLocation();</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setKey(final String key);</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonIgnore</span>
+<span class="source-line-no">079</span><span id="line.79">    public void setRoles(final ChannelRoleEnum... roles);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setRoles(final List&lt;ChannelRoleEnum&gt; roles);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setAddress(final BaseAddress address);</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static ChannelDraftBuilder builder() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return ChannelDraftBuilder.of();</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static ChannelDraftBuilder builder(final ChannelDraft template) {</span>
-<span class="source-line-no">096</span><span id="line.96">        return ChannelDraftBuilder.of(template);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    default &lt;T&gt; T withChannelDraft(Function&lt;ChannelDraft, T&gt; helper) {</span>
-<span class="source-line-no">100</span><span id="line.100">        return helper.apply(this);</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102">}</span>
+<span class="source-line-no">091</span><span id="line.91">    public void setGeoLocation(final GeoJson geoLocation);</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public static ChannelDraft of() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return new ChannelDraftImpl();</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public static ChannelDraft of(final ChannelDraft template) {</span>
+<span class="source-line-no">098</span><span id="line.98">        ChannelDraftImpl instance = new ChannelDraftImpl();</span>
+<span class="source-line-no">099</span><span id="line.99">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setRoles(template.getRoles());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setName(template.getName());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">103</span><span id="line.103">        instance.setAddress(template.getAddress());</span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setGeoLocation(template.getGeoLocation());</span>
+<span class="source-line-no">106</span><span id="line.106">        return instance;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public static ChannelDraftBuilder builder() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return ChannelDraftBuilder.of();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public static ChannelDraftBuilder builder(final ChannelDraft template) {</span>
+<span class="source-line-no">114</span><span id="line.114">        return ChannelDraftBuilder.of(template);</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    default &lt;T&gt; T withChannelDraft(Function&lt;ChannelDraft, T&gt; helper) {</span>
+<span class="source-line-no">118</span><span id="line.118">        return helper.apply(this);</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120">}</span>
 
 
 

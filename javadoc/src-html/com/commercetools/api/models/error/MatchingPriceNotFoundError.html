@@ -55,50 +55,53 @@
 <span class="source-line-no">042</span><span id="line.42">    @JsonProperty("customerGroup")</span>
 <span class="source-line-no">043</span><span id="line.43">    public CustomerGroupReference getCustomerGroup();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("channel")</span>
-<span class="source-line-no">047</span><span id="line.47">    public ChannelReference getChannel();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public void setProductId(final String productId);</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public void setVariantId(final Integer variantId);</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public void setCurrency(final String currency);</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public void setCountry(final String country);</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setChannel(final ChannelReference channel);</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static MatchingPriceNotFoundError of() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return new MatchingPriceNotFoundErrorImpl();</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {</span>
-<span class="source-line-no">066</span><span id="line.66">        MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();</span>
-<span class="source-line-no">067</span><span id="line.67">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">068</span><span id="line.68">        instance.setProductId(template.getProductId());</span>
-<span class="source-line-no">069</span><span id="line.69">        instance.setVariantId(template.getVariantId());</span>
-<span class="source-line-no">070</span><span id="line.70">        instance.setCurrency(template.getCurrency());</span>
-<span class="source-line-no">071</span><span id="line.71">        instance.setCountry(template.getCountry());</span>
-<span class="source-line-no">072</span><span id="line.72">        instance.setCustomerGroup(template.getCustomerGroup());</span>
-<span class="source-line-no">073</span><span id="line.73">        instance.setChannel(template.getChannel());</span>
-<span class="source-line-no">074</span><span id="line.74">        return instance;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static MatchingPriceNotFoundErrorBuilder builder() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return MatchingPriceNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static MatchingPriceNotFoundErrorBuilder builder(final MatchingPriceNotFoundError template) {</span>
-<span class="source-line-no">082</span><span id="line.82">        return MatchingPriceNotFoundErrorBuilder.of(template);</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    default &lt;T&gt; T withMatchingPriceNotFoundError(Function&lt;MatchingPriceNotFoundError, T&gt; helper) {</span>
-<span class="source-line-no">086</span><span id="line.86">        return helper.apply(this);</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88">}</span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;&lt;a href="/../api/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("channel")</span>
+<span class="source-line-no">050</span><span id="line.50">    public ChannelReference getChannel();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public void setProductId(final String productId);</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public void setVariantId(final Integer variantId);</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setCurrency(final String currency);</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public void setCountry(final String country);</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setChannel(final ChannelReference channel);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public static MatchingPriceNotFoundError of() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return new MatchingPriceNotFoundErrorImpl();</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {</span>
+<span class="source-line-no">069</span><span id="line.69">        MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();</span>
+<span class="source-line-no">070</span><span id="line.70">        instance.setMessage(template.getMessage());</span>
+<span class="source-line-no">071</span><span id="line.71">        instance.setProductId(template.getProductId());</span>
+<span class="source-line-no">072</span><span id="line.72">        instance.setVariantId(template.getVariantId());</span>
+<span class="source-line-no">073</span><span id="line.73">        instance.setCurrency(template.getCurrency());</span>
+<span class="source-line-no">074</span><span id="line.74">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">075</span><span id="line.75">        instance.setCustomerGroup(template.getCustomerGroup());</span>
+<span class="source-line-no">076</span><span id="line.76">        instance.setChannel(template.getChannel());</span>
+<span class="source-line-no">077</span><span id="line.77">        return instance;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public static MatchingPriceNotFoundErrorBuilder builder() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return MatchingPriceNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public static MatchingPriceNotFoundErrorBuilder builder(final MatchingPriceNotFoundError template) {</span>
+<span class="source-line-no">085</span><span id="line.85">        return MatchingPriceNotFoundErrorBuilder.of(template);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    default &lt;T&gt; T withMatchingPriceNotFoundError(Function&lt;MatchingPriceNotFoundError, T&gt; helper) {</span>
+<span class="source-line-no">089</span><span id="line.89">        return helper.apply(this);</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91">}</span>
 
 
 

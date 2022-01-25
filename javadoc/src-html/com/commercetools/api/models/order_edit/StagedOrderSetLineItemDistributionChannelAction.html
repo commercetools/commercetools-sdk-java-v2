@@ -38,40 +38,43 @@
 <span class="source-line-no">025</span><span id="line.25">    @JsonProperty("lineItemId")</span>
 <span class="source-line-no">026</span><span id="line.26">    public String getLineItemId();</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    @Valid</span>
-<span class="source-line-no">029</span><span id="line.29">    @JsonProperty("distributionChannel")</span>
-<span class="source-line-no">030</span><span id="line.30">    public ChannelResourceIdentifier getDistributionChannel();</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public void setLineItemId(final String lineItemId);</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public static StagedOrderSetLineItemDistributionChannelAction of() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return new StagedOrderSetLineItemDistributionChannelActionImpl();</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public static StagedOrderSetLineItemDistributionChannelAction of(</span>
-<span class="source-line-no">041</span><span id="line.41">            final StagedOrderSetLineItemDistributionChannelAction template) {</span>
-<span class="source-line-no">042</span><span id="line.42">        StagedOrderSetLineItemDistributionChannelActionImpl instance = new StagedOrderSetLineItemDistributionChannelActionImpl();</span>
-<span class="source-line-no">043</span><span id="line.43">        instance.setLineItemId(template.getLineItemId());</span>
-<span class="source-line-no">044</span><span id="line.44">        instance.setDistributionChannel(template.getDistributionChannel());</span>
-<span class="source-line-no">045</span><span id="line.45">        return instance;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return StagedOrderSetLineItemDistributionChannelActionBuilder.of();</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder(</span>
-<span class="source-line-no">053</span><span id="line.53">            final StagedOrderSetLineItemDistributionChannelAction template) {</span>
-<span class="source-line-no">054</span><span id="line.54">        return StagedOrderSetLineItemDistributionChannelActionBuilder.of(template);</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    default &lt;T&gt; T withStagedOrderSetLineItemDistributionChannelAction(</span>
-<span class="source-line-no">058</span><span id="line.58">            Function&lt;StagedOrderSetLineItemDistributionChannelAction, T&gt; helper) {</span>
-<span class="source-line-no">059</span><span id="line.59">        return helper.apply(this);</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61">}</span>
+<span class="source-line-no">028</span><span id="line.28">    /**</span>
+<span class="source-line-no">029</span><span id="line.29">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30">    */</span>
+<span class="source-line-no">031</span><span id="line.31">    @Valid</span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("distributionChannel")</span>
+<span class="source-line-no">033</span><span id="line.33">    public ChannelResourceIdentifier getDistributionChannel();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public void setLineItemId(final String lineItemId);</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public static StagedOrderSetLineItemDistributionChannelAction of() {</span>
+<span class="source-line-no">040</span><span id="line.40">        return new StagedOrderSetLineItemDistributionChannelActionImpl();</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public static StagedOrderSetLineItemDistributionChannelAction of(</span>
+<span class="source-line-no">044</span><span id="line.44">            final StagedOrderSetLineItemDistributionChannelAction template) {</span>
+<span class="source-line-no">045</span><span id="line.45">        StagedOrderSetLineItemDistributionChannelActionImpl instance = new StagedOrderSetLineItemDistributionChannelActionImpl();</span>
+<span class="source-line-no">046</span><span id="line.46">        instance.setLineItemId(template.getLineItemId());</span>
+<span class="source-line-no">047</span><span id="line.47">        instance.setDistributionChannel(template.getDistributionChannel());</span>
+<span class="source-line-no">048</span><span id="line.48">        return instance;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder() {</span>
+<span class="source-line-no">052</span><span id="line.52">        return StagedOrderSetLineItemDistributionChannelActionBuilder.of();</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder(</span>
+<span class="source-line-no">056</span><span id="line.56">            final StagedOrderSetLineItemDistributionChannelAction template) {</span>
+<span class="source-line-no">057</span><span id="line.57">        return StagedOrderSetLineItemDistributionChannelActionBuilder.of(template);</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    default &lt;T&gt; T withStagedOrderSetLineItemDistributionChannelAction(</span>
+<span class="source-line-no">061</span><span id="line.61">            Function&lt;StagedOrderSetLineItemDistributionChannelAction, T&gt; helper) {</span>
+<span class="source-line-no">062</span><span id="line.62">        return helper.apply(this);</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64">}</span>
 
 
 

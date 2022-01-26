@@ -2,9 +2,7 @@
 package io.vrap.rmf.base.client;
 
 import java.time.ZonedDateTime;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.builder.RecursiveToStringStyle;

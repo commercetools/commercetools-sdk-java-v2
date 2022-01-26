@@ -20,7 +20,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
-import com.commercetools.api.product.AttributeAccessor;
+import com.commercetools.api.models.product.AttributeAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -31,6 +31,16 @@ import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 
 public class AttributesTest {
+
+    @Test
+    public void deprecatedAttributesAccessor() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        Map<String, Object> attributes = variant.withProductVariant(com.commercetools.api.product.AttributeAccessor::asAttributeMap);
+        assertThat(attributes.get("text")).isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
+    }
 
     @Test
     public void attributes() throws IOException {

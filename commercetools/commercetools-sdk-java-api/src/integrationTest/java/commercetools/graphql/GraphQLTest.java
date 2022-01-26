@@ -32,7 +32,7 @@ public class GraphQLTest {
                     .execute()
                     .thenApply(graphQLResponse -> {
                         if (graphQLResponse.getBody().getErrors() != null
-                                && graphQLResponse.getBody().getErrors().isEmpty()) {
+                                && !graphQLResponse.getBody().getErrors().isEmpty()) {
                             throw new RuntimeException("errors happened");
                         }
                         return graphQLResponse;

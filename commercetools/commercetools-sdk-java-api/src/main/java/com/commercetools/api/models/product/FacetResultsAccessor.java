@@ -1,13 +1,14 @@
 
 package com.commercetools.api.models.product;
 
-import io.vrap.rmf.base.client.Accessor;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
-
-import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public class FacetResultsAccessor extends Accessor<FacetResults> {
     public FacetResultsAccessor(FacetResults value) {

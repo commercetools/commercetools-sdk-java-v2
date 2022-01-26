@@ -14,13 +14,13 @@ import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.AttributeAccessor;
 import com.commercetools.api.models.product.AttributeBuilder;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
-import com.commercetools.api.models.product.AttributeAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -38,7 +38,8 @@ public class AttributesTest {
 
         assertThat(variant.getAttributes()).isNotEmpty();
 
-        Map<String, Object> attributes = variant.withProductVariant(com.commercetools.api.product.AttributeAccessor::asAttributeMap);
+        Map<String, Object> attributes = variant
+                .withProductVariant(com.commercetools.api.product.AttributeAccessor::asAttributeMap);
         assertThat(attributes.get("text")).isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
     }
 

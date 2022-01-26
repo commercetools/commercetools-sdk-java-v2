@@ -1,9 +1,5 @@
-package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.common.TypedMoney;
+package com.commercetools.api.models.type;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -15,11 +11,18 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.TypedMoney;
+
 public class CustomFieldsAccessor {
     private final Map<String, Object> values;
 
     public CustomFieldsAccessor(CustomFields customFields) {
-        this.values = Optional.ofNullable(customFields.getFields()).map(FieldContainer::values).orElse(Collections.emptyMap());
+        this.values = Optional.ofNullable(customFields.getFields())
+                .map(FieldContainer::values)
+                .orElse(Collections.emptyMap());
     }
 
     public CustomFieldsAccessor(FieldContainer fieldContainer) {

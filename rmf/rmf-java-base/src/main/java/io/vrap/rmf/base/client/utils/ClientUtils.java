@@ -78,8 +78,12 @@ public class ClientUtils {
         try {
             return completionStage.toCompletableFuture().get(timeout, unit);
         }
-        catch (InterruptedException | ExecutionException e) {
-            final Throwable cause = e.getCause() != null && e instanceof ExecutionException ? e.getCause() : e;
+        catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new CompletionException(e);
+        }
+        catch (ExecutionException e) {
+            final Throwable cause = e.getCause() != null ? e.getCause() : e;
             throw cause instanceof RuntimeException ? (RuntimeException) cause : new CompletionException(cause);
         }
         catch (final TimeoutException e) {

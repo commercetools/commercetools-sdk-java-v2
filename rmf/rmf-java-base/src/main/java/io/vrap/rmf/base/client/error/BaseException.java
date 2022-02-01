@@ -13,11 +13,14 @@ package io.vrap.rmf.base.client.error;
  * }
  * package io.vrap.rmf.base.client.error {
  *   class BaseException
+ *   class JsonException extends BaseException
+ *   class FileException extends BaseException
  *   class ApiHttpException extends BaseException
  *   class RmfTimeoutException extends BaseException
  *
  *   class ApiClientException extends ApiHttpException
  *   class ApiServerException extends ApiHttpException
+ *   class AuthException extends ApiHttpException
  *
  *   class BadGateWayException extends ApiServerException
  *   class GatewayTimeoutException extends ApiServerException

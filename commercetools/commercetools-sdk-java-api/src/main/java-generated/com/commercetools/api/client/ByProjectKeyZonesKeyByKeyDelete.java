@@ -45,7 +45,6 @@ public class ByProjectKeyZonesKeyByKeyDelete
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 

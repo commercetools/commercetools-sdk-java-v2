@@ -43,7 +43,6 @@ public class ByProjectKeyCustomerGroupsByIDGet
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 

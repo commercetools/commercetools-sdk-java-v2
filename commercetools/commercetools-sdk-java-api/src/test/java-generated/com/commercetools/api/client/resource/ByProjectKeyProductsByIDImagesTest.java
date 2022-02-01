@@ -69,7 +69,7 @@ public class ByProjectKeyProductsByIDImagesTest {
                                 .products()
                                 .withId("test_ID")
                                 .images()
-                                .post(null)
+                                .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                                 .withFilename("filename")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/products/test_ID/images?filename=filename", },
@@ -77,28 +77,28 @@ public class ByProjectKeyProductsByIDImagesTest {
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withVariant(7)
                         .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?variant=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withSku("sku")
                         .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?sku=sku", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withStaged(true)
                         .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?staged=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images", } };
     }
 
@@ -109,27 +109,30 @@ public class ByProjectKeyProductsByIDImagesTest {
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withFilename("filename"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withVariant(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withSku("sku"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
-                        .post(null)
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class))
                         .withStaged(true), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").products().withId("test_ID").images().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withId("test_ID")
+                        .images()
+                        .post(FileTestUtils.testFileFor(ByProjectKeyProductsByIDImagesTest.class)), } };
     }
 }

@@ -46,16 +46,10 @@ public class ByProjectKeyCustomersPasswordTokenPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService()
-                    .toJsonByteArray(customerCreatePasswordResetToken);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils.executing(
+                () -> apiHttpClient().getSerializerService().toJsonByteArray(customerCreatePasswordResetToken)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override

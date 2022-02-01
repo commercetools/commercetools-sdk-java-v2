@@ -44,7 +44,6 @@ public class ByProjectKeyProductsKeyByKeyHead
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.HEAD, URI.create(httpRequestPath), getHeaders(), null);
     }
 

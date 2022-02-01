@@ -54,6 +54,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayloadImpl.class, name = OrderLineItemDiscountSetMessagePayload.ORDER_LINE_ITEM_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayloadImpl.class, name = OrderLineItemDistributionChannelSetMessagePayload.ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemRemovedMessagePayloadImpl.class, name = OrderLineItemRemovedMessagePayload.ORDER_LINE_ITEM_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadImpl.class, name = OrderPaymentAddedMessagePayload.ORDER_PAYMENT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadImpl.class, name = OrderPaymentStateChangedMessagePayload.ORDER_PAYMENT_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadImpl.class, name = OrderReturnInfoAddedMessagePayload.RETURN_INFO_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadImpl.class, name = OrderReturnInfoSetMessagePayload.RETURN_INFO_SET),

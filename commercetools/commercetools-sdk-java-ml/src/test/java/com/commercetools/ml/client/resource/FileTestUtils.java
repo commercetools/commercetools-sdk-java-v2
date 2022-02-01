@@ -14,6 +14,6 @@ public class FileTestUtils {
     }
 
     public static File testFileFor(Class<?> clazz) {
-        return fileFromResource("numbers.json");
+        return fileFromResource("example_flower.jpg");
     }
 }

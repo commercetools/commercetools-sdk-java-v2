@@ -37,7 +37,6 @@ public class ByProjectKeyMeEmailConfirmPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 

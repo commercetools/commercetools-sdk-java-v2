@@ -53,7 +53,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 

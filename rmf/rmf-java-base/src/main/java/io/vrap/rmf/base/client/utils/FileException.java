@@ -1,9 +1,10 @@
+
 package io.vrap.rmf.base.client.utils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.error.BaseException;
 
-public class FileException  extends BaseException {
+public class FileException extends BaseException {
     private static final long serialVersionUID = 0L;
 
     public FileException(final Throwable cause) {

@@ -1,3 +1,4 @@
+
 package com.commercetools.api.client.resource;
 
 import java.io.File;

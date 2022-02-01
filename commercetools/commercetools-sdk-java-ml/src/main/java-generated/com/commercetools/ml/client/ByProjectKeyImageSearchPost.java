@@ -47,21 +47,15 @@ public class ByProjectKeyImageSearchPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            ApiHttpHeaders headers = getHeaders();
-            if (headers.getFirst(ApiHttpHeaders.CONTENT_TYPE) == null) {
-                final String mimeType = Optional.ofNullable(URLConnection.guessContentTypeFromName(file.getName()))
-                        .orElse("application/octet-stream");
-                headers = headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, mimeType);
-            }
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), headers,
-                Files.readAllBytes(file.toPath()));
+        ApiHttpHeaders headers = getHeaders();
+        if (headers.getFirst(ApiHttpHeaders.CONTENT_TYPE) == null) {
+            final String mimeType = Optional.ofNullable(URLConnection.guessContentTypeFromName(file.getName()))
+                    .orElse("application/octet-stream");
+            headers = headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, mimeType);
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), headers,
+            io.vrap.rmf.base.client.utils.FileUtils.executing(() -> Files.readAllBytes(file.toPath())));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override

@@ -37,7 +37,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
                 new ApiHttpHeaders.StringHeaderEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded")),
             new ArrayList<>());
         this.projectKey = projectKey;
-        this.formParams = formParams;
+        this.formParams = formParams != null ? formParams : new ArrayList<>();
     }
 
     public ByProjectKeyProductProjectionsSearchPost(ByProjectKeyProductProjectionsSearchPost t) {
@@ -53,15 +53,8 @@ public class ByProjectKeyProductProjectionsSearchPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
-        try {
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-                getFormParamUriString().getBytes(StandardCharsets.UTF_8));
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            getFormParamUriString().getBytes(StandardCharsets.UTF_8));
     }
 
     @Override

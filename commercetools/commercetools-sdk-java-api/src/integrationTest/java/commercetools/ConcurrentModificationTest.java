@@ -68,6 +68,7 @@ public class ConcurrentModificationTest {
             return new Retry<>(request, builderCopyFn, updateFn);
         }
 
+        @SuppressWarnings("unchecked")
         public CompletableFuture<ApiHttpResponse<TResult>> execute() {
             Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
                 if (throwable.getCause() instanceof ConcurrentModificationException) {

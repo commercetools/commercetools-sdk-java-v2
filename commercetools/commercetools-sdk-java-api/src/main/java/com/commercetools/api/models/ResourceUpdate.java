@@ -3,7 +3,9 @@ package com.commercetools.api.models;
 
 import java.util.List;
 
-public interface ResourceUpdate<U extends ResourceUpdate<U, T>, T extends ResourceUpdateAction<T>> {
+import io.vrap.rmf.base.client.Builder;
+
+public interface ResourceUpdate<U extends ResourceUpdate<U, T, UBuilder>, T extends ResourceUpdateAction<T>, UBuilder extends Builder<U>> {
 
     public Long getVersion();
 
@@ -16,5 +18,4 @@ public interface ResourceUpdate<U extends ResourceUpdate<U, T>, T extends Resour
     default U get() {
         return (U) this;
     }
-
 }

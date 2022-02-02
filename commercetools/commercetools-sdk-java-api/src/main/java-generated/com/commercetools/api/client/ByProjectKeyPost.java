@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Update project</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost, com.commercetools.api.models.project.Project>
+public class ByProjectKeyPost extends
+        BodyApiMethod<ByProjectKeyPost, com.commercetools.api.models.project.Project, com.commercetools.api.models.project.ProjectUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyPost> {
 
     private String projectKey;
@@ -68,6 +69,16 @@ public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost, com.commerceto
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.project.ProjectUpdate getBody() {
+        return projectUpdate;
+    }
+
+    public ByProjectKeyPost withBody(com.commercetools.api.models.project.ProjectUpdate projectUpdate) {
+        ByProjectKeyPost t = copy();
+        t.projectUpdate = projectUpdate;
+        return t;
     }
 
     @Override

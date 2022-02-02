@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  the shipping address is used for tax calculation.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderFromCartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost> {
@@ -121,6 +121,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
     public ByProjectKeyInStoreKeyByStoreKeyOrdersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order.OrderFromCartDraft getBody() {
+        return orderFromCartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost withBody(
+            com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyOrdersPost t = copy();
+        t.orderFromCartDraft = orderFromCartDraft;
+        return t;
     }
 
     @Override

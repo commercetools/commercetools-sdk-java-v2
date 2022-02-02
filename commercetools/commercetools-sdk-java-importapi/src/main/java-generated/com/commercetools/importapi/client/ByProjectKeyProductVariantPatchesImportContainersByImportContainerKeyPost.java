@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost extends
-        ApiMethod<ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost> {
 
@@ -84,6 +84,17 @@ public class ByProjectKeyProductVariantPatchesImportContainersByImportContainerK
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest getBody() {
+        return productVariantPatchRequest;
+    }
+
+    public ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest) {
+        ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyPost t = copy();
+        t.productVariantPatchRequest = productVariantPatchRequest;
+        return t;
     }
 
     @Override

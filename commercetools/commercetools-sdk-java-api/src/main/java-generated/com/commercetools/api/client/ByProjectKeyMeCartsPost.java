@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeCartsPost extends ApiMethod<ByProjectKeyMeCartsPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyMeCartsPost extends
+        BodyApiMethod<ByProjectKeyMeCartsPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.me.MyCartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyMeCartsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsPost> {
@@ -103,6 +104,16 @@ public class ByProjectKeyMeCartsPost extends ApiMethod<ByProjectKeyMeCartsPost, 
     public ByProjectKeyMeCartsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyCartDraft getBody() {
+        return myCartDraft;
+    }
+
+    public ByProjectKeyMeCartsPost withBody(com.commercetools.api.models.me.MyCartDraft myCartDraft) {
+        ByProjectKeyMeCartsPost t = copy();
+        t.myCartDraft = myCartDraft;
+        return t;
     }
 
     @Override

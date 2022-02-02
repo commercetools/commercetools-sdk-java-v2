@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsByIDPost
-        extends ApiMethod<ByProjectKeyProductsByIDPost, com.commercetools.api.models.product.Product>
+public class ByProjectKeyProductsByIDPost extends
+        BodyApiMethod<ByProjectKeyProductsByIDPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductUpdate>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDPost>,
@@ -339,6 +339,16 @@ public class ByProjectKeyProductsByIDPost
     public ByProjectKeyProductsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.product.ProductUpdate getBody() {
+        return productUpdate;
+    }
+
+    public ByProjectKeyProductsByIDPost withBody(com.commercetools.api.models.product.ProductUpdate productUpdate) {
+        ByProjectKeyProductsByIDPost t = copy();
+        t.productUpdate = productUpdate;
+        return t;
     }
 
     @Override

@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeySubscriptionsKeyByKeyPost
-        extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, com.commercetools.api.models.subscription.Subscription>
+public class ByProjectKeySubscriptionsKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyPost>,
@@ -116,6 +116,17 @@ public class ByProjectKeySubscriptionsKeyByKeyPost
     public ByProjectKeySubscriptionsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.subscription.SubscriptionUpdate getBody() {
+        return subscriptionUpdate;
+    }
+
+    public ByProjectKeySubscriptionsKeyByKeyPost withBody(
+            com.commercetools.api.models.subscription.SubscriptionUpdate subscriptionUpdate) {
+        ByProjectKeySubscriptionsKeyByKeyPost t = copy();
+        t.subscriptionUpdate = subscriptionUpdate;
+        return t;
     }
 
     @Override

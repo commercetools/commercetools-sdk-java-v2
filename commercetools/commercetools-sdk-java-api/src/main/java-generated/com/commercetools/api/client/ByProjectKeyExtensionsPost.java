@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Currently, a maximum of 25 extensions can be created per project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyExtensionsPost
-        extends ApiMethod<ByProjectKeyExtensionsPost, com.commercetools.api.models.extension.Extension>
+public class ByProjectKeyExtensionsPost extends
+        BodyApiMethod<ByProjectKeyExtensionsPost, com.commercetools.api.models.extension.Extension, com.commercetools.api.models.extension.ExtensionDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyExtensionsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsPost> {
@@ -107,6 +107,16 @@ public class ByProjectKeyExtensionsPost
     public ByProjectKeyExtensionsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.extension.ExtensionDraft getBody() {
+        return extensionDraft;
+    }
+
+    public ByProjectKeyExtensionsPost withBody(com.commercetools.api.models.extension.ExtensionDraft extensionDraft) {
+        ByProjectKeyExtensionsPost t = copy();
+        t.extensionDraft = extensionDraft;
+        return t;
     }
 
     @Override

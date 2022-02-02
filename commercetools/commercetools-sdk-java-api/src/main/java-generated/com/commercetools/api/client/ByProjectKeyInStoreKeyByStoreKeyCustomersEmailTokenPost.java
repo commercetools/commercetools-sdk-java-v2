@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken, com.commercetools.api.models.customer.CustomerCreateEmailToken>
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost> {
 
@@ -83,6 +83,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost extends
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerCreateEmailToken getBody() {
+        return customerCreateEmailToken;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost withBody(
+            com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken) {
+        ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost t = copy();
+        t.customerCreateEmailToken = customerCreateEmailToken;
+        return t;
     }
 
     @Override

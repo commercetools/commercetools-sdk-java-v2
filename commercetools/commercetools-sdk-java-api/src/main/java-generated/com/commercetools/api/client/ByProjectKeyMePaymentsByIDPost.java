@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMePaymentsByIDPost
-        extends ApiMethod<ByProjectKeyMePaymentsByIDPost, com.commercetools.api.models.me.MyPayment>
+public class ByProjectKeyMePaymentsByIDPost extends
+        BodyApiMethod<ByProjectKeyMePaymentsByIDPost, com.commercetools.api.models.me.MyPayment, com.commercetools.api.models.me.MyPaymentUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePaymentsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMePaymentsByIDPost>,
@@ -116,6 +116,16 @@ public class ByProjectKeyMePaymentsByIDPost
     public ByProjectKeyMePaymentsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyPaymentUpdate getBody() {
+        return myPaymentUpdate;
+    }
+
+    public ByProjectKeyMePaymentsByIDPost withBody(com.commercetools.api.models.me.MyPaymentUpdate myPaymentUpdate) {
+        ByProjectKeyMePaymentsByIDPost t = copy();
+        t.myPaymentUpdate = myPaymentUpdate;
+        return t;
     }
 
     @Override

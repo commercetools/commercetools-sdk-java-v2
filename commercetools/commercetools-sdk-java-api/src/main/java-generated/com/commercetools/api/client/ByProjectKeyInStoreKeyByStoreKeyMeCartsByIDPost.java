@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.me.MyCartUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>,
@@ -128,6 +128,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyCartUpdate getBody() {
+        return myCartUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost withBody(
+            com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost t = copy();
+        t.myCartUpdate = myCartUpdate;
+        return t;
     }
 
     @Override

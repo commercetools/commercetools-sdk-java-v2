@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCartDiscountsByIDPost
-        extends ApiMethod<ByProjectKeyCartDiscountsByIDPost, com.commercetools.api.models.cart_discount.CartDiscount>
+public class ByProjectKeyCartDiscountsByIDPost extends
+        BodyApiMethod<ByProjectKeyCartDiscountsByIDPost, com.commercetools.api.models.cart_discount.CartDiscount, com.commercetools.api.models.cart_discount.CartDiscountUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartDiscountsByIDPost>,
@@ -116,6 +116,17 @@ public class ByProjectKeyCartDiscountsByIDPost
     public ByProjectKeyCartDiscountsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart_discount.CartDiscountUpdate getBody() {
+        return cartDiscountUpdate;
+    }
+
+    public ByProjectKeyCartDiscountsByIDPost withBody(
+            com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate) {
+        ByProjectKeyCartDiscountsByIDPost t = copy();
+        t.cartDiscountUpdate = cartDiscountUpdate;
+        return t;
     }
 
     @Override

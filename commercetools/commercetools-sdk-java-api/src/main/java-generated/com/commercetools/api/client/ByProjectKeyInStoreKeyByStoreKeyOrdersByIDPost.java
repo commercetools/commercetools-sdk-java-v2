@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  or the store field references a different store, this method returns a ResourceNotFound error.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost>,
@@ -133,6 +133,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order.OrderUpdate getBody() {
+        return orderUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost withBody(
+            com.commercetools.api.models.order.OrderUpdate orderUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost t = copy();
+        t.orderUpdate = orderUpdate;
+        return t;
     }
 
     @Override

@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  in the CartDraft has a predicate which does not match the cart.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyInStoreKeyByStoreKeyCartsPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyCartsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsPost> {
@@ -121,6 +121,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost
     public ByProjectKeyInStoreKeyByStoreKeyCartsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart.CartDraft getBody() {
+        return cartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsPost withBody(com.commercetools.api.models.cart.CartDraft cartDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyCartsPost t = copy();
+        t.cartDraft = cartDraft;
+        return t;
     }
 
     @Override

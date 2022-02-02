@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyZonesByIDPost
-        extends ApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone>
+public class ByProjectKeyZonesByIDPost extends
+        BodyApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone, com.commercetools.api.models.zone.ZoneUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesByIDPost>,
@@ -116,6 +116,16 @@ public class ByProjectKeyZonesByIDPost
     public ByProjectKeyZonesByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.zone.ZoneUpdate getBody() {
+        return zoneUpdate;
+    }
+
+    public ByProjectKeyZonesByIDPost withBody(com.commercetools.api.models.zone.ZoneUpdate zoneUpdate) {
+        ByProjectKeyZonesByIDPost t = copy();
+        t.zoneUpdate = zoneUpdate;
+        return t;
     }
 
     @Override

@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Accepts an image file and returns similar products from product catalogue.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyImageSearchPost
-        extends ApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse> {
+public class ByProjectKeyImageSearchPost extends
+        BodyApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse, java.io.File> {
 
     private String projectKey;
 
@@ -146,6 +146,16 @@ public class ByProjectKeyImageSearchPost
     public ByProjectKeyImageSearchPost addOffset(final List<Integer> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    public java.io.File getBody() {
+        return file;
+    }
+
+    public ByProjectKeyImageSearchPost withBody(java.io.File file) {
+        ByProjectKeyImageSearchPost t = copy();
+        t.file = file;
+        return t;
     }
 
     @Override

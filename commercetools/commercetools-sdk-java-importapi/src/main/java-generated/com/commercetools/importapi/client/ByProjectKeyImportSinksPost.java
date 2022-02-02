@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Creates a new import sink.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyImportSinksPost
-        extends ApiMethod<ByProjectKeyImportSinksPost, com.commercetools.importapi.models.importsinks.ImportSink>
+public class ByProjectKeyImportSinksPost extends
+        BodyApiMethod<ByProjectKeyImportSinksPost, com.commercetools.importapi.models.importsinks.ImportSink, com.commercetools.importapi.models.importsinks.ImportSinkDraft>
         implements com.commercetools.importapi.client.Secured_by_manage_import_sinksTrait<ByProjectKeyImportSinksPost> {
 
     private String projectKey;
@@ -69,6 +69,17 @@ public class ByProjectKeyImportSinksPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.importapi.models.importsinks.ImportSinkDraft getBody() {
+        return importSinkDraft;
+    }
+
+    public ByProjectKeyImportSinksPost withBody(
+            com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft) {
+        ByProjectKeyImportSinksPost t = copy();
+        t.importSinkDraft = importSinkDraft;
+        return t;
     }
 
     @Override

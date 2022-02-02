@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  or the store field references a different store, this method returns a ResourceNotFound error.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost>,
@@ -133,6 +133,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart.CartUpdate getBody() {
+        return cartUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withBody(
+            com.commercetools.api.models.cart.CartUpdate cartUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost t = copy();
+        t.cartUpdate = cartUpdate;
+        return t;
     }
 
     @Override

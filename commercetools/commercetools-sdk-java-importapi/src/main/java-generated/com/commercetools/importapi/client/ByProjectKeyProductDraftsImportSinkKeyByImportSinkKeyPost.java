@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost extends
-        ApiMethod<ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.ProductDraftImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost> {
 
@@ -84,6 +84,17 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost extends
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductDraftImportRequest getBody() {
+        return productDraftImportRequest;
+    }
+
+    public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.ProductDraftImportRequest productDraftImportRequest) {
+        ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost t = copy();
+        t.productDraftImportRequest = productDraftImportRequest;
+        return t;
     }
 
     @Override

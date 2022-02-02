@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyOrdersEditsByIDApplyPost
-        extends ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode>
+public class ByProjectKeyOrdersEditsByIDApplyPost extends
+        BodyApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode, com.commercetools.api.models.order_edit.OrderEditApply>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDApplyPost> {
 
     private String projectKey;
@@ -77,6 +77,17 @@ public class ByProjectKeyOrdersEditsByIDApplyPost
 
     public void setID(final String ID) {
         this.ID = ID;
+    }
+
+    public com.commercetools.api.models.order_edit.OrderEditApply getBody() {
+        return orderEditApply;
+    }
+
+    public ByProjectKeyOrdersEditsByIDApplyPost withBody(
+            com.commercetools.api.models.order_edit.OrderEditApply orderEditApply) {
+        ByProjectKeyOrdersEditsByIDApplyPost t = copy();
+        t.orderEditApply = orderEditApply;
+        return t;
     }
 
     @Override

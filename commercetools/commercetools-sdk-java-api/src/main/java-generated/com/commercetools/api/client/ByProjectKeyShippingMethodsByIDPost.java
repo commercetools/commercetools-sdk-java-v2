@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyShippingMethodsByIDPost extends
-        ApiMethod<ByProjectKeyShippingMethodsByIDPost, com.commercetools.api.models.shipping_method.ShippingMethod>
+        BodyApiMethod<ByProjectKeyShippingMethodsByIDPost, com.commercetools.api.models.shipping_method.ShippingMethod, com.commercetools.api.models.shipping_method.ShippingMethodUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyShippingMethodsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsByIDPost>,
@@ -116,6 +116,17 @@ public class ByProjectKeyShippingMethodsByIDPost extends
     public ByProjectKeyShippingMethodsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodUpdate getBody() {
+        return shippingMethodUpdate;
+    }
+
+    public ByProjectKeyShippingMethodsByIDPost withBody(
+            com.commercetools.api.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate) {
+        ByProjectKeyShippingMethodsByIDPost t = copy();
+        t.shippingMethodUpdate = shippingMethodUpdate;
+        return t;
     }
 
     @Override

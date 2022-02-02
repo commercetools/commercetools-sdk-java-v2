@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyTaxCategoriesPost
-        extends ApiMethod<ByProjectKeyTaxCategoriesPost, com.commercetools.api.models.tax_category.TaxCategory>
+public class ByProjectKeyTaxCategoriesPost extends
+        BodyApiMethod<ByProjectKeyTaxCategoriesPost, com.commercetools.api.models.tax_category.TaxCategory, com.commercetools.api.models.tax_category.TaxCategoryDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyTaxCategoriesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesPost> {
@@ -104,6 +104,17 @@ public class ByProjectKeyTaxCategoriesPost
     public ByProjectKeyTaxCategoriesPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.tax_category.TaxCategoryDraft getBody() {
+        return taxCategoryDraft;
+    }
+
+    public ByProjectKeyTaxCategoriesPost withBody(
+            com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
+        ByProjectKeyTaxCategoriesPost t = copy();
+        t.taxCategoryDraft = taxCategoryDraft;
+        return t;
     }
 
     @Override

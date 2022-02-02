@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductTypesPost
-        extends ApiMethod<ByProjectKeyProductTypesPost, com.commercetools.api.models.product_type.ProductType>
+public class ByProjectKeyProductTypesPost extends
+        BodyApiMethod<ByProjectKeyProductTypesPost, com.commercetools.api.models.product_type.ProductType, com.commercetools.api.models.product_type.ProductTypeDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyProductTypesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesPost> {
@@ -104,6 +104,17 @@ public class ByProjectKeyProductTypesPost
     public ByProjectKeyProductTypesPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.product_type.ProductTypeDraft getBody() {
+        return productTypeDraft;
+    }
+
+    public ByProjectKeyProductTypesPost withBody(
+            com.commercetools.api.models.product_type.ProductTypeDraft productTypeDraft) {
+        ByProjectKeyProductTypesPost t = copy();
+        t.productTypeDraft = productTypeDraft;
+        return t;
     }
 
     @Override

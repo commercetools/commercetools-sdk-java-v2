@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Set a new password using a token.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomersPasswordResetPost
-        extends ApiMethod<ByProjectKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer>
+public class ByProjectKeyCustomersPasswordResetPost extends
+        BodyApiMethod<ByProjectKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerResetPassword>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersPasswordResetPost> {
 
     private String projectKey;
@@ -69,6 +69,17 @@ public class ByProjectKeyCustomersPasswordResetPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerResetPassword getBody() {
+        return customerResetPassword;
+    }
+
+    public ByProjectKeyCustomersPasswordResetPost withBody(
+            com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword) {
+        ByProjectKeyCustomersPasswordResetPost t = copy();
+        t.customerResetPassword = customerResetPassword;
+        return t;
     }
 
     @Override

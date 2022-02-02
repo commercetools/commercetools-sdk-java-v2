@@ -24,8 +24,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Fields with null values will not be saved.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomObjectsPost
-        extends ApiMethod<ByProjectKeyCustomObjectsPost, com.commercetools.api.models.custom_object.CustomObject>
+public class ByProjectKeyCustomObjectsPost extends
+        BodyApiMethod<ByProjectKeyCustomObjectsPost, com.commercetools.api.models.custom_object.CustomObject, com.commercetools.api.models.custom_object.CustomObjectDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomObjectsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsPost> {
@@ -113,6 +113,17 @@ public class ByProjectKeyCustomObjectsPost
     public ByProjectKeyCustomObjectsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.custom_object.CustomObjectDraft getBody() {
+        return customObjectDraft;
+    }
+
+    public ByProjectKeyCustomObjectsPost withBody(
+            com.commercetools.api.models.custom_object.CustomObjectDraft customObjectDraft) {
+        ByProjectKeyCustomObjectsPost t = copy();
+        t.customObjectDraft = customObjectDraft;
+        return t;
     }
 
     @Override

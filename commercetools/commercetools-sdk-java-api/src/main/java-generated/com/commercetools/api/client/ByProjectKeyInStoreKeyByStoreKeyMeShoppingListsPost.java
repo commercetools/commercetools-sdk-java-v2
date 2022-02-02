@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost, com.commercetools.api.models.shopping_list.ShoppingList>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.me.MyShoppingListDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost> {
@@ -115,6 +115,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost extends
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyShoppingListDraft getBody() {
+        return myShoppingListDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost withBody(
+            com.commercetools.api.models.me.MyShoppingListDraft myShoppingListDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost t = copy();
+        t.myShoppingListDraft = myShoppingListDraft;
+        return t;
     }
 
     @Override

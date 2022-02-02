@@ -68,8 +68,9 @@ public class ConcurrentModificationTest {
             return new Retry<>(request, builderCopyFn, updateFn);
         }
 
+        @SuppressWarnings("unchecked")
         public CompletableFuture<ApiHttpResponse<TResult>> execute() {
-            return request.execute().exceptionallyCompose((throwable) -> {
+            Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
                 if (throwable.getCause() instanceof ConcurrentModificationException) {
                     final ErrorResponse body = ((ConcurrentModificationException) throwable.getCause())
                             .getBodyAs(ErrorResponse.class);
@@ -86,7 +87,11 @@ public class ConcurrentModificationTest {
                 CompletableFuture<ApiHttpResponse<TResult>> f = new CompletableFuture<>();
                 f.completeExceptionally(throwable);
                 return f;
-            });
+            };
+
+            return request.execute()
+                    .handle((r, ex) -> (ex == null) ? this : fn.apply(ex))
+                    .thenCompose(x -> (CompletableFuture<ApiHttpResponse<TResult>>) x);
         }
     }
 }

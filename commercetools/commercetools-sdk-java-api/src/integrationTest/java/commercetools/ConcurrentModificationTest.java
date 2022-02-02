@@ -3,7 +3,6 @@ package commercetools;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -89,10 +88,9 @@ public class ConcurrentModificationTest {
                 return f;
             };
 
-            return request.execute().handle((r, ex) -> (ex == null)
-                    ? this
-                    : fn.apply(ex))
-                    .thenCompose(x -> (CompletableFuture<ApiHttpResponse<TResult>>)x);
+            return request.execute()
+                    .handle((r, ex) -> (ex == null) ? this : fn.apply(ex))
+                    .thenCompose(x -> (CompletableFuture<ApiHttpResponse<TResult>>) x);
         }
     }
 }

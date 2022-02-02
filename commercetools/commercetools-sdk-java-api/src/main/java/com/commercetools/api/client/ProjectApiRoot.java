@@ -110,6 +110,10 @@ public class ProjectApiRoot implements Closeable {
         return with().productProjections();
     }
 
+    public ByProjectKeyProductSelectionsRequestBuilder productSelections() {
+        return with().productSelections();
+    }
+
     public ByProjectKeyProductTypesRequestBuilder productTypes() {
         return with().productTypes();
     }

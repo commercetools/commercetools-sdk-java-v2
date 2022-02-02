@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerChangePassword>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost> {
 
     private String projectKey;
@@ -82,6 +82,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerChangePassword getBody() {
+        return customerChangePassword;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost withBody(
+            com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
+        ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost t = copy();
+        t.customerChangePassword = customerChangePassword;
+        return t;
     }
 
     @Override

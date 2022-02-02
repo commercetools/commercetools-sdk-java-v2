@@ -15,7 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelUpdateImpl.class)
-public interface ChannelUpdate extends com.commercetools.api.models.ResourceUpdate<ChannelUpdate, ChannelUpdateAction> {
+public interface ChannelUpdate
+        extends com.commercetools.api.models.ResourceUpdate<ChannelUpdate, ChannelUpdateAction, ChannelUpdateBuilder> {
 
     /**
     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> error will be returned.</p>

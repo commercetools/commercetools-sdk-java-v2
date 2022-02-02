@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCartsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyCartsKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartsKeyByKeyPost>,
@@ -116,6 +116,16 @@ public class ByProjectKeyCartsKeyByKeyPost
     public ByProjectKeyCartsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart.CartUpdate getBody() {
+        return cartUpdate;
+    }
+
+    public ByProjectKeyCartsKeyByKeyPost withBody(com.commercetools.api.models.cart.CartUpdate cartUpdate) {
+        ByProjectKeyCartsKeyByKeyPost t = copy();
+        t.cartUpdate = cartUpdate;
+        return t;
     }
 
     @Override

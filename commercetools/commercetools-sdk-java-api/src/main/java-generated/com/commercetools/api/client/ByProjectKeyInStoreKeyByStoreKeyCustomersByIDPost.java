@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost, com.commercetools.api.models.customer.Customer>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost>,
@@ -133,6 +133,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.customer.CustomerUpdate getBody() {
+        return customerUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost withBody(
+            com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost t = copy();
+        t.customerUpdate = customerUpdate;
+        return t;
     }
 
     @Override

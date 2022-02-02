@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyImageSearchConfigPost extends
-        ApiMethod<ByProjectKeyImageSearchConfigPost, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
+        BodyApiMethod<ByProjectKeyImageSearchConfigPost, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse, com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest> {
 
     private String projectKey;
 
@@ -69,6 +69,17 @@ public class ByProjectKeyImageSearchConfigPost extends
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest getBody() {
+        return imageSearchConfigRequest;
+    }
+
+    public ByProjectKeyImageSearchConfigPost withBody(
+            com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest imageSearchConfigRequest) {
+        ByProjectKeyImageSearchConfigPost t = copy();
+        t.imageSearchConfigRequest = imageSearchConfigRequest;
+        return t;
     }
 
     @Override

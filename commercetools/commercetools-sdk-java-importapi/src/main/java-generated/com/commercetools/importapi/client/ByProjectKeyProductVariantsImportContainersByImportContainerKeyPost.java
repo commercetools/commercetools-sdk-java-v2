@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost extends
-        ApiMethod<ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.ProductVariantImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost> {
 
@@ -84,6 +84,17 @@ public class ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductVariantImportRequest getBody() {
+        return productVariantImportRequest;
+    }
+
+    public ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.ProductVariantImportRequest productVariantImportRequest) {
+        ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost t = copy();
+        t.productVariantImportRequest = productVariantImportRequest;
+        return t;
     }
 
     @Override

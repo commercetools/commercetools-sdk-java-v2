@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Create an Order by Import</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyOrdersImportPost
-        extends ApiMethod<ByProjectKeyOrdersImportPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyOrdersImportPost extends
+        BodyApiMethod<ByProjectKeyOrdersImportPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderImportDraft>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersImportPost> {
 
     private String projectKey;
@@ -69,6 +69,16 @@ public class ByProjectKeyOrdersImportPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.order.OrderImportDraft getBody() {
+        return orderImportDraft;
+    }
+
+    public ByProjectKeyOrdersImportPost withBody(com.commercetools.api.models.order.OrderImportDraft orderImportDraft) {
+        ByProjectKeyOrdersImportPost t = copy();
+        t.orderImportDraft = orderImportDraft;
+        return t;
     }
 
     @Override

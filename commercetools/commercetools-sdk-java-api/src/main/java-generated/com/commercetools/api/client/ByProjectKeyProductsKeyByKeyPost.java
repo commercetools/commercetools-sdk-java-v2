@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyProductsKeyByKeyPost, com.commercetools.api.models.product.Product>
+public class ByProjectKeyProductsKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeyProductsKeyByKeyPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductUpdate>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsKeyByKeyPost>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsKeyByKeyPost>,
@@ -339,6 +339,16 @@ public class ByProjectKeyProductsKeyByKeyPost
     public ByProjectKeyProductsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.product.ProductUpdate getBody() {
+        return productUpdate;
+    }
+
+    public ByProjectKeyProductsKeyByKeyPost withBody(com.commercetools.api.models.product.ProductUpdate productUpdate) {
+        ByProjectKeyProductsKeyByKeyPost t = copy();
+        t.productUpdate = productUpdate;
+        return t;
     }
 
     @Override

@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMissingDataPricesPost
-        extends ApiMethod<ByProjectKeyMissingDataPricesPost, com.commercetools.ml.models.common.TaskToken> {
+public class ByProjectKeyMissingDataPricesPost extends
+        BodyApiMethod<ByProjectKeyMissingDataPricesPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.missing_data.MissingPricesSearchRequest> {
 
     private String projectKey;
 
@@ -65,6 +65,17 @@ public class ByProjectKeyMissingDataPricesPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.ml.models.missing_data.MissingPricesSearchRequest getBody() {
+        return missingPricesSearchRequest;
+    }
+
+    public ByProjectKeyMissingDataPricesPost withBody(
+            com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest) {
+        ByProjectKeyMissingDataPricesPost t = copy();
+        t.missingPricesSearchRequest = missingPricesSearchRequest;
+        return t;
     }
 
     @Override

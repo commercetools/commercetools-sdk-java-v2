@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyTypesByIDPost
-        extends ApiMethod<ByProjectKeyTypesByIDPost, com.commercetools.api.models.type.Type>
+public class ByProjectKeyTypesByIDPost extends
+        BodyApiMethod<ByProjectKeyTypesByIDPost, com.commercetools.api.models.type.Type, com.commercetools.api.models.type.TypeUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyTypesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTypesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTypesByIDPost>,
@@ -116,6 +116,16 @@ public class ByProjectKeyTypesByIDPost
     public ByProjectKeyTypesByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.type.TypeUpdate getBody() {
+        return typeUpdate;
+    }
+
+    public ByProjectKeyTypesByIDPost withBody(com.commercetools.api.models.type.TypeUpdate typeUpdate) {
+        ByProjectKeyTypesByIDPost t = copy();
+        t.typeUpdate = typeUpdate;
+        return t;
     }
 
     @Override

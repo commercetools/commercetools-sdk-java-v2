@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupUpdateImpl.class)
-public interface CustomerGroupUpdate
-        extends com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction> {
+public interface CustomerGroupUpdate extends
+        com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction, CustomerGroupUpdateBuilder> {
 
     /**
     *  <p>Expected version of the Customer Group on which the changes should be applied.

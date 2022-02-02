@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeUpdateImpl.class)
-public interface DiscountCodeUpdate
-        extends com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction> {
+public interface DiscountCodeUpdate extends
+        com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction, DiscountCodeUpdateBuilder> {
 
     @NotNull
     @JsonProperty("version")

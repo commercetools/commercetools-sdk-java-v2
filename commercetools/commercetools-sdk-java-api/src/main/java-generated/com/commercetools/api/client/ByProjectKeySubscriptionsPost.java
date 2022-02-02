@@ -22,8 +22,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  Currently, a maximum of 25 subscriptions can be created per project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeySubscriptionsPost
-        extends ApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription>
+public class ByProjectKeySubscriptionsPost extends
+        BodyApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPost> {
@@ -111,6 +111,17 @@ public class ByProjectKeySubscriptionsPost
     public ByProjectKeySubscriptionsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.subscription.SubscriptionDraft getBody() {
+        return subscriptionDraft;
+    }
+
+    public ByProjectKeySubscriptionsPost withBody(
+            com.commercetools.api.models.subscription.SubscriptionDraft subscriptionDraft) {
+        ByProjectKeySubscriptionsPost t = copy();
+        t.subscriptionDraft = subscriptionDraft;
+        return t;
     }
 
     @Override

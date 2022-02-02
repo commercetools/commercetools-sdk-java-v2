@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomersPost
-        extends ApiMethod<ByProjectKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult>
+public class ByProjectKeyCustomersPost extends
+        BodyApiMethod<ByProjectKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersPost> {
@@ -109,6 +109,16 @@ public class ByProjectKeyCustomersPost
     public ByProjectKeyCustomersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.customer.CustomerDraft getBody() {
+        return customerDraft;
+    }
+
+    public ByProjectKeyCustomersPost withBody(com.commercetools.api.models.customer.CustomerDraft customerDraft) {
+        ByProjectKeyCustomersPost t = copy();
+        t.customerDraft = customerDraft;
+        return t;
     }
 
     @Override

@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeOrdersPost
-        extends ApiMethod<ByProjectKeyMeOrdersPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyMeOrdersPost extends
+        BodyApiMethod<ByProjectKeyMeOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromCartDraft>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeOrdersPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyMeOrdersPost>,
@@ -105,6 +105,17 @@ public class ByProjectKeyMeOrdersPost
     public ByProjectKeyMeOrdersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyOrderFromCartDraft getBody() {
+        return myOrderFromCartDraft;
+    }
+
+    public ByProjectKeyMeOrdersPost withBody(
+            com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft) {
+        ByProjectKeyMeOrdersPost t = copy();
+        t.myOrderFromCartDraft = myOrderFromCartDraft;
+        return t;
     }
 
     @Override

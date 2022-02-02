@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeShoppingListsByIDPost
-        extends ApiMethod<ByProjectKeyMeShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList>
+public class ByProjectKeyMeShoppingListsByIDPost extends
+        BodyApiMethod<ByProjectKeyMeShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.me.MyShoppingListUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeShoppingListsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeShoppingListsByIDPost>,
@@ -116,6 +116,17 @@ public class ByProjectKeyMeShoppingListsByIDPost
     public ByProjectKeyMeShoppingListsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyShoppingListUpdate getBody() {
+        return myShoppingListUpdate;
+    }
+
+    public ByProjectKeyMeShoppingListsByIDPost withBody(
+            com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate) {
+        ByProjectKeyMeShoppingListsByIDPost t = copy();
+        t.myShoppingListUpdate = myShoppingListUpdate;
+        return t;
     }
 
     @Override

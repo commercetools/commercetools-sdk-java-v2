@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyApiClientsPost
-        extends ApiMethod<ByProjectKeyApiClientsPost, com.commercetools.api.models.api_client.ApiClient>
+public class ByProjectKeyApiClientsPost extends
+        BodyApiMethod<ByProjectKeyApiClientsPost, com.commercetools.api.models.api_client.ApiClient, com.commercetools.api.models.api_client.ApiClientDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyApiClientsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyApiClientsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyApiClientsPost> {
@@ -104,6 +104,16 @@ public class ByProjectKeyApiClientsPost
     public ByProjectKeyApiClientsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.api_client.ApiClientDraft getBody() {
+        return apiClientDraft;
+    }
+
+    public ByProjectKeyApiClientsPost withBody(com.commercetools.api.models.api_client.ApiClientDraft apiClientDraft) {
+        ByProjectKeyApiClientsPost t = copy();
+        t.apiClientDraft = apiClientDraft;
+        return t;
     }
 
     @Override

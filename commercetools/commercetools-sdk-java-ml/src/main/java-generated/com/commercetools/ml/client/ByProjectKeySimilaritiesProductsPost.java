@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeySimilaritiesProductsPost
-        extends ApiMethod<ByProjectKeySimilaritiesProductsPost, com.commercetools.ml.models.common.TaskToken> {
+public class ByProjectKeySimilaritiesProductsPost extends
+        BodyApiMethod<ByProjectKeySimilaritiesProductsPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.similar_products.SimilarProductSearchRequest> {
 
     private String projectKey;
 
@@ -65,6 +65,17 @@ public class ByProjectKeySimilaritiesProductsPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.ml.models.similar_products.SimilarProductSearchRequest getBody() {
+        return similarProductSearchRequest;
+    }
+
+    public ByProjectKeySimilaritiesProductsPost withBody(
+            com.commercetools.ml.models.similar_products.SimilarProductSearchRequest similarProductSearchRequest) {
+        ByProjectKeySimilaritiesProductsPost t = copy();
+        t.similarProductSearchRequest = similarProductSearchRequest;
+        return t;
     }
 
     @Override

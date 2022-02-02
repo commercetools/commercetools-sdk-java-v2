@@ -23,7 +23,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost, com.commercetools.api.models.order.Order>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderUpdate>
         implements
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost>,
@@ -138,6 +138,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order.OrderUpdate getBody() {
+        return orderUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost withBody(
+            com.commercetools.api.models.order.OrderUpdate orderUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost t = copy();
+        t.orderUpdate = orderUpdate;
+        return t;
     }
 
     @Override

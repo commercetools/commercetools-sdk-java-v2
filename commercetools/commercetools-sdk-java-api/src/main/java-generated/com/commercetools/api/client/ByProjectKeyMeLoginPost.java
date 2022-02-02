@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeLoginPost
-        extends ApiMethod<ByProjectKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult>
+public class ByProjectKeyMeLoginPost extends
+        BodyApiMethod<ByProjectKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerSignin>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeLoginPost> {
 
     private String projectKey;
@@ -66,6 +66,16 @@ public class ByProjectKeyMeLoginPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerSignin getBody() {
+        return customerSignin;
+    }
+
+    public ByProjectKeyMeLoginPost withBody(com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+        ByProjectKeyMeLoginPost t = copy();
+        t.customerSignin = customerSignin;
+        return t;
     }
 
     @Override

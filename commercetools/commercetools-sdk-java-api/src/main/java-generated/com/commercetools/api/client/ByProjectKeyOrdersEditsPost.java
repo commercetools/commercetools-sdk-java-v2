@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyOrdersEditsPost
-        extends ApiMethod<ByProjectKeyOrdersEditsPost, com.commercetools.api.models.order_edit.OrderEdit>
+public class ByProjectKeyOrdersEditsPost extends
+        BodyApiMethod<ByProjectKeyOrdersEditsPost, com.commercetools.api.models.order_edit.OrderEdit, com.commercetools.api.models.order_edit.OrderEditDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyOrdersEditsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsPost> {
@@ -104,6 +104,16 @@ public class ByProjectKeyOrdersEditsPost
     public ByProjectKeyOrdersEditsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order_edit.OrderEditDraft getBody() {
+        return orderEditDraft;
+    }
+
+    public ByProjectKeyOrdersEditsPost withBody(com.commercetools.api.models.order_edit.OrderEditDraft orderEditDraft) {
+        ByProjectKeyOrdersEditsPost t = copy();
+        t.orderEditDraft = orderEditDraft;
+        return t;
     }
 
     @Override

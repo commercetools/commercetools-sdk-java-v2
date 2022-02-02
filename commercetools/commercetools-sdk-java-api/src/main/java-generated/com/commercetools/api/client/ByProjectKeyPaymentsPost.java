@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>To create a payment object a payment draft object has to be given with the request.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyPaymentsPost
-        extends ApiMethod<ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment>
+public class ByProjectKeyPaymentsPost extends
+        BodyApiMethod<ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyPaymentsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsPost> {
@@ -107,6 +107,16 @@ public class ByProjectKeyPaymentsPost
     public ByProjectKeyPaymentsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.payment.PaymentDraft getBody() {
+        return paymentDraft;
+    }
+
+    public ByProjectKeyPaymentsPost withBody(com.commercetools.api.models.payment.PaymentDraft paymentDraft) {
+        ByProjectKeyPaymentsPost t = copy();
+        t.paymentDraft = paymentDraft;
+        return t;
     }
 
     @Override

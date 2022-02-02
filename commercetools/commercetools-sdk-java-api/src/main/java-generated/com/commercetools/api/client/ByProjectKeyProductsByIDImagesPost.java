@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsByIDImagesPost
-        extends ApiMethod<ByProjectKeyProductsByIDImagesPost, com.commercetools.api.models.product.Product> {
+public class ByProjectKeyProductsByIDImagesPost extends
+        BodyApiMethod<ByProjectKeyProductsByIDImagesPost, com.commercetools.api.models.product.Product, java.io.File> {
 
     private String projectKey;
     private String ID;
@@ -229,6 +229,16 @@ public class ByProjectKeyProductsByIDImagesPost
     public ByProjectKeyProductsByIDImagesPost addStaged(final List<Boolean> staged) {
         return copy().addQueryParams(
             staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    public java.io.File getBody() {
+        return file;
+    }
+
+    public ByProjectKeyProductsByIDImagesPost withBody(java.io.File file) {
+        ByProjectKeyProductsByIDImagesPost t = copy();
+        t.file = file;
+        return t;
     }
 
     @Override

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, com.commercetools.api.models.state.State>
+public class ByProjectKeyStatesPost extends
+        BodyApiMethod<ByProjectKeyStatesPost, com.commercetools.api.models.state.State, com.commercetools.api.models.state.StateDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyStatesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesPost> {
@@ -103,6 +104,16 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, co
     public ByProjectKeyStatesPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.state.StateDraft getBody() {
+        return stateDraft;
+    }
+
+    public ByProjectKeyStatesPost withBody(com.commercetools.api.models.state.StateDraft stateDraft) {
+        ByProjectKeyStatesPost t = copy();
+        t.stateDraft = stateDraft;
+        return t;
     }
 
     @Override

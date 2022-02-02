@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDiscountsMatchingPost extends
-        ApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount>
+        BodyApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPost> {
 
     private String projectKey;
@@ -66,6 +66,17 @@ public class ByProjectKeyProductDiscountsMatchingPost extends
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.product_discount.ProductDiscountMatchQuery getBody() {
+        return productDiscountMatchQuery;
+    }
+
+    public ByProjectKeyProductDiscountsMatchingPost withBody(
+            com.commercetools.api.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery) {
+        ByProjectKeyProductDiscountsMatchingPost t = copy();
+        t.productDiscountMatchQuery = productDiscountMatchQuery;
+        return t;
     }
 
     @Override

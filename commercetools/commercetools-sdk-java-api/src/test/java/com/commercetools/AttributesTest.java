@@ -249,10 +249,13 @@ public class AttributesTest {
 
         assertThat(variant.getAttributes()).isNotEmpty();
 
-        AttributeAccessor attributesAccessor = variant.withProductVariant(AttributeAccessor::asAccessor);
+        AttributeAccessor attributesAccessor = variant.withProductVariant(AttributeAccessor::of);
         assertThat(attributesAccessor.getAsString("text")).isInstanceOfSatisfying(String.class,
             s -> assertThat(s).isEqualTo("foo"));
         assertThat(attributesAccessor.getAsString("null")).isNull();
+        assertThat(attributesAccessor.get("text", AttributeAccessor::asString)).isInstanceOfSatisfying(String.class,
+                s -> assertThat(s).isEqualTo("foo"));
+        assertThat(attributesAccessor.get("null", AttributeAccessor::asString)).isNull();
 
         Map<String, Attribute> attributes = variant.withProductVariant(AttributeAccessor::asMap);
         assertThat(attributes.get("text").withAttribute(AttributeAccessor::asString))

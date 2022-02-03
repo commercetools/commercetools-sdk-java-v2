@@ -40,6 +40,9 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
         return this.action;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }

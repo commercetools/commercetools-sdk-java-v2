@@ -36,6 +36,10 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
         return this.action;
     }
 
+    /**
+    *  <p>Value to set.
+    *  If empty, any existing value will be removed.</p>
+    */
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

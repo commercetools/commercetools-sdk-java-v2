@@ -14,17 +14,22 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.state.State> results;
 
     public StatePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public StatePagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
 
     public StatePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public StatePagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -74,6 +74,10 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -83,27 +87,23 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.state.State> getResults() {
         return this.results;
     }
 
     public StatePagedQueryResponse build() {
         Objects.requireNonNull(limit, StatePagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, StatePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, StatePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, StatePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, StatePagedQueryResponse.class + ": results is missing");
-        return new StatePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new StatePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds StatePagedQueryResponse without checking for non null required values
      */
     public StatePagedQueryResponse buildUnchecked() {
-        return new StatePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new StatePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static StatePagedQueryResponseBuilder of() {
@@ -113,9 +113,9 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
     public static StatePagedQueryResponseBuilder of(final StatePagedQueryResponse template) {
         StatePagedQueryResponseBuilder builder = new StatePagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

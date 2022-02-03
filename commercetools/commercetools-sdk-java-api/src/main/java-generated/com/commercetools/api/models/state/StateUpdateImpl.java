@@ -31,10 +31,16 @@ public class StateUpdateImpl implements StateUpdate, ModelBase {
     public StateUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Update actions to be performed on the State.</p>
+    */
     public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions() {
         return this.actions;
     }

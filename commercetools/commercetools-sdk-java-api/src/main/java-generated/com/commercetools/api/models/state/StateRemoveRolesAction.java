@@ -18,6 +18,9 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
 
     String REMOVE_ROLES = "removeRoles";
 
+    /**
+    *  <p>Roles to remove from the State.</p>
+    */
     @NotNull
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();

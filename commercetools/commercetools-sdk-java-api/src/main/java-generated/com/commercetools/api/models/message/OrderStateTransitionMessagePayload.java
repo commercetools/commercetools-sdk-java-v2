@@ -20,11 +20,17 @@ public interface OrderStateTransitionMessagePayload extends MessagePayload {
 
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();

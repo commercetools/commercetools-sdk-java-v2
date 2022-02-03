@@ -29,11 +29,11 @@ jobs:
           echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
       - name: Fix code style
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        if: github.event_name == 'push'
         run: ./gradlew spotlessApply
 
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        if: github.event_name == 'push'
         with:
             commit_message: "spotless: Fix code style"
             commit_user_name: Auto Mation

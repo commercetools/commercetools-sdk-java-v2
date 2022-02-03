@@ -11,42 +11,166 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.MapAccessor;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 
-public class CustomFieldsAccessor {
+import javax.annotation.Nullable;
+
+public class CustomFieldsAccessor extends MapAccessor<Object> {
     private final Map<String, Object> values;
 
     public CustomFieldsAccessor(CustomFields customFields) {
+        super(Optional.ofNullable(customFields.getFields())
+                .map(FieldContainer::values)
+                .orElse(Collections.emptyMap()));
         this.values = Optional.ofNullable(customFields.getFields())
                 .map(FieldContainer::values)
                 .orElse(Collections.emptyMap());
     }
 
     public CustomFieldsAccessor(FieldContainer fieldContainer) {
+        super(fieldContainer.values());
         this.values = fieldContainer.values();
     }
 
+    @Nullable
     public LocalDate asDate(final String field) {
-        Object value = values.get(field);
+        return get(field, CustomFieldsAccessor::mapAsDate);
+    }
+
+    @Nullable
+    public LocalTime asTime(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsTime);
+    }
+
+    @Nullable
+    public ZonedDateTime asDateTime(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsDateTime);
+    }
+
+    @Nullable
+    public List<LocalDate> asSetDate(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetDate);
+    }
+
+    @Nullable
+    public List<LocalTime> asSetTime(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetTime);
+    }
+
+    @Nullable
+    public List<ZonedDateTime> asSetDateTime(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetDateTime);
+    }
+
+    @Nullable
+    public String asString(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsString);
+    }
+
+    @Nullable
+    public Boolean asBoolean(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsBoolean);
+    }
+
+    @Nullable
+    public Double asDouble(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsDouble);
+    }
+
+    @Nullable
+    public LocalizedString asLocalizedString(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsLocalizedString);
+    }
+
+    @Nullable
+    public CustomFieldEnumValue asEnum(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsEnum);
+    }
+
+    @Nullable
+    public CustomFieldLocalizedEnumValue asLocalizedEnum(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsLocalizedEnum);
+    }
+
+    @Nullable
+    public Long asLong(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsLong);
+    }
+
+    @Nullable
+    public Reference asReference(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsReference);
+    }
+
+    @Nullable
+    public TypedMoney asMoney(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsMoney);
+    }
+
+    @Nullable
+    public List<String> asSetString(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetString);
+    }
+
+    @Nullable
+    public List<Boolean> asSetBoolean(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetBoolean);
+    }
+
+    @Nullable
+    public List<Double> asSetDouble(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetDouble);
+    }
+
+    @Nullable
+    public List<LocalizedString> asSetLocalizedString(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetLocalizedString);
+    }
+
+    @Nullable
+    public List<CustomFieldEnumValue> asSetEnum(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetEnum);
+    }
+
+    @Nullable
+    public List<CustomFieldLocalizedEnumValue> asSetLocalizedEnum(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetLocalizedEnum);
+    }
+
+    @Nullable
+    public List<Long> asSetLong(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetLong);
+    }
+
+    @Nullable
+    public List<Reference> asSetReference(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetReference);
+    }
+
+    @Nullable
+    public List<Money> asSetMoney(final String field) {
+        return get(field, CustomFieldsAccessor::mapAsSetMoney);
+    }
+
+    private static LocalDate mapAsDate(final Object value) {
         if (value instanceof LocalDate) {
             return (LocalDate) value;
         }
         return LocalDate.parse((String) value, DateTimeFormatter.ISO_LOCAL_DATE);
     }
 
-    public LocalTime asTime(final String field) {
-        Object value = values.get(field);
+    private static LocalTime mapAsTime(final Object value) {
         if (value instanceof LocalTime) {
             return (LocalTime) value;
         }
         return LocalTime.parse((String) value, DateTimeFormatter.ISO_LOCAL_TIME);
     }
 
-    public ZonedDateTime asDateTime(final String field) {
-        Object value = values.get(field);
+    private static ZonedDateTime mapAsDateTime(final Object value) {
         if (value instanceof ZonedDateTime) {
             return (ZonedDateTime) value;
         }
@@ -54,8 +178,8 @@ public class CustomFieldsAccessor {
     }
 
     @SuppressWarnings("unchecked")
-    public List<LocalDate> asSetDate(final String field) {
-        return ((List<Object>) values.get(field)).stream().map(value -> {
+    private static List<LocalDate> mapAsSetDate(final Object listValue) {
+        return ((List<Object>) listValue).stream().map(value -> {
             if (value instanceof LocalDate) {
                 return (LocalDate) value;
             }
@@ -64,8 +188,8 @@ public class CustomFieldsAccessor {
     }
 
     @SuppressWarnings("unchecked")
-    public List<LocalTime> asSetTime(final String field) {
-        return ((List<Object>) values.get(field)).stream().map(value -> {
+    private static List<LocalTime> mapAsSetTime(final Object listValue) {
+        return ((List<Object>) listValue).stream().map(value -> {
             if (value instanceof LocalTime) {
                 return (LocalTime) value;
             }
@@ -74,8 +198,8 @@ public class CustomFieldsAccessor {
     }
 
     @SuppressWarnings("unchecked")
-    public List<ZonedDateTime> asSetDateTime(final String field) {
-        return ((List<Object>) values.get(field)).stream().map(value -> {
+    private static List<ZonedDateTime> mapAsSetDateTime(final Object listValue) {
+        return ((List<Object>) listValue).stream().map(value -> {
             if (value instanceof ZonedDateTime) {
                 return (ZonedDateTime) value;
             }
@@ -83,84 +207,84 @@ public class CustomFieldsAccessor {
         }).collect(Collectors.toList());
     }
 
-    public String asString(final String field) {
-        return (String) values.get(field);
+    private static String mapAsString(final Object value) {
+        return (String) value;
     }
 
-    public Boolean asBoolean(final String field) {
-        return (Boolean) values.get(field);
+    private static Boolean mapAsBoolean(final Object value) {
+        return (Boolean) value;
     }
 
-    public Double asDouble(final String field) {
-        return (Double) values.get(field);
+    private static Double mapAsDouble(final Object value) {
+        return (Double) value;
     }
 
-    public LocalizedString asLocalizedString(final String field) {
-        return (LocalizedString) values.get(field);
+    private static LocalizedString mapAsLocalizedString(final Object value) {
+        return (LocalizedString) value;
     }
 
-    public CustomFieldEnumValue asEnum(final String field) {
-        return (CustomFieldEnumValue) values.get(field);
+    private static CustomFieldEnumValue mapAsEnum(final Object value) {
+        return (CustomFieldEnumValue) value;
     }
 
-    public CustomFieldLocalizedEnumValue asLocalizedEnum(final String field) {
-        return (CustomFieldLocalizedEnumValue) values.get(field);
+    private static CustomFieldLocalizedEnumValue mapAsLocalizedEnum(final Object value) {
+        return (CustomFieldLocalizedEnumValue) value;
     }
 
-    public Long asLong(final String field) {
-        return (Long) values.get(field);
+    private static Long mapAsLong(final Object value) {
+        return (Long) value;
     }
 
-    public Reference asReference(final String field) {
-        return (Reference) values.get(field);
+    private static Reference mapAsReference(final Object value) {
+        return (Reference) value;
     }
 
-    public TypedMoney asMoney(final String field) {
-        return (TypedMoney) values.get(field);
-    }
-
-    @SuppressWarnings("unchecked")
-    public List<String> asSetString(final String field) {
-        return (List<String>) values.get(field);
+    private static TypedMoney mapAsMoney(final Object value) {
+        return (TypedMoney) value;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Boolean> asSetBoolean(final String field) {
-        return (List<Boolean>) values.get(field);
+    private static List<String> mapAsSetString(final Object listValue) {
+        return (List<String>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Double> asSetDouble(final String field) {
-        return (List<Double>) values.get(field);
+    private static List<Boolean> mapAsSetBoolean(final Object listValue) {
+        return (List<Boolean>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<LocalizedString> asSetLocalizedString(final String field) {
-        return (List<LocalizedString>) values.get(field);
+    private static List<Double> mapAsSetDouble(final Object listValue) {
+        return (List<Double>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<CustomFieldEnumValue> asSetEnum(final String field) {
-        return (List<CustomFieldEnumValue>) values.get(field);
+    private static List<LocalizedString> mapAsSetLocalizedString(final Object listValue) {
+        return (List<LocalizedString>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<CustomFieldLocalizedEnumValue> asSetLocalizedEnum(final String field) {
-        return (List<CustomFieldLocalizedEnumValue>) values.get(field);
+    private static List<CustomFieldEnumValue> mapAsSetEnum(final Object listValue) {
+        return (List<CustomFieldEnumValue>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Long> asSetLong(final String field) {
-        return (List<Long>) values.get(field);
+    private static List<CustomFieldLocalizedEnumValue> mapAsSetLocalizedEnum(final Object listValue) {
+        return (List<CustomFieldLocalizedEnumValue>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Reference> asSetReference(final String field) {
-        return (List<Reference>) values.get(field);
+    private static List<Long> mapAsSetLong(final Object listValue) {
+        return (List<Long>) listValue;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Money> asSetMoney(final String field) {
-        return (List<Money>) values.get(field);
+    private static List<Reference> mapAsSetReference(final Object listValue) {
+        return (List<Reference>) listValue;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static List<Money> mapAsSetMoney(final Object listValue) {
+        return (List<Money>) listValue;
     }
 }

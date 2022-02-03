@@ -160,6 +160,7 @@ public class CustomFieldsTest {
         assertThat(customFields.getFields().values()).isNotEmpty();
 
         CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+        assertThat(fields.asString("null")).isNull();
         assertThat(fields.asString("text")).isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
         assertThat(fields.asLocalizedString("ltext")).isInstanceOfSatisfying(LocalizedString.class,
             localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));

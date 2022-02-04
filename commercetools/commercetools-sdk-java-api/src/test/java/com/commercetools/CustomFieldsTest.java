@@ -139,6 +139,136 @@ public class CustomFieldsTest {
     }
 
     @Test
+    public void fieldsEmpty() throws IOException {
+        ObjectMapper mapper = JsonUtils.createObjectMapper();
+        CustomFields customFields = mapper.readValue("{}", CustomFields.class);
+
+        CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+        Assertions.assertThat(fields).isInstanceOf(CustomFieldsAccessor.class);
+
+        CustomFields customFields2 = mapper.readValue("{\"fields\": []}", CustomFields.class);
+
+        CustomFieldsAccessor fields2 = customFields2.getFields().withFieldContainer(CustomFieldsAccessor::new);
+        Assertions.assertThat(fields2).isInstanceOf(CustomFieldsAccessor.class);
+    }
+
+    @Test
+    public void fieldsAccessor() throws IOException {
+        ObjectMapper mapper = JsonUtils.createObjectMapper();
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+
+        assertThat(customFields.getFields().values()).isNotEmpty();
+
+        CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+        assertThat(fields.asString("null")).isNull();
+        assertThat(fields.asString("text")).isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
+        assertThat(fields.asLocalizedString("ltext")).isInstanceOfSatisfying(LocalizedString.class,
+            localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));
+        assertThat(fields.asEnum("enum")).isInstanceOfSatisfying(CustomFieldEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel()).isEqualTo("foo"));
+        assertThat(fields.asLocalizedEnum("lenum")).isInstanceOfSatisfying(CustomFieldLocalizedEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
+        assertThat(fields.asDate("date")).isInstanceOfSatisfying(LocalDate.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(fields.asTime("time")).isInstanceOfSatisfying(LocalTime.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(fields.asDateTime("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.asBoolean("boolean")).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(fields.asLong("integer")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
+        assertThat(fields.asDouble("double")).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.asBoolean("boolean")).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(fields.asReference("reference")).isInstanceOfSatisfying(ProductReference.class,
+            reference -> assertThat(reference.getId()).isEqualTo("12345"));
+        assertThat(fields.asMoney("money")).isInstanceOfSatisfying(TypedMoney.class,
+            money -> assertThat(money.getCentAmount()).isEqualTo(100));
+        assertThat(fields.asSetString("set-text")).asList().first().isInstanceOf(String.class);
+        assertThat(fields.asSetLocalizedString("set-ltext")).asList().first().isInstanceOf(LocalizedString.class);
+        assertThat(fields.asSetEnum("set-enum")).asList().first().isInstanceOf(CustomFieldEnumValue.class);
+        assertThat(fields.asSetLocalizedEnum("set-lenum")).asList()
+                .first()
+                .isInstanceOf(CustomFieldLocalizedEnumValue.class);
+        assertThat(fields.asSetDate("set-date")).asList().first().isInstanceOf(LocalDate.class);
+        assertThat(fields.asSetTime("set-time")).asList().first().isInstanceOf(LocalTime.class);
+        assertThat(fields.asSetDateTime("set-datetime")).asList().first().isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.asSetBoolean("set-boolean")).asList().first().isInstanceOf(Boolean.class);
+        assertThat(fields.asSetLong("set-integer")).asList()
+                .first()
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
+        assertThat(fields.asSetDouble("set-double")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.asSetReference("set-reference")).asList().first().isInstanceOf(ProductReference.class);
+        assertThat(fields.asSetMoney("set-money")).asList().first().isInstanceOf(TypedMoney.class);
+        assertThat(fields.asSetLong("set-empty")).asList().isEmpty();
+    }
+
+    @Test
+    public void fieldsAsDateFalseAccessor() throws IOException {
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withDateAttributeAsString(true)
+                .withDateCustomFieldAsString(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+
+        assertThat(customFields.getFields().values()).isNotEmpty();
+
+        CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+
+        assertThat(fields.asString("text")).isInstanceOfSatisfying(String.class, s -> assertThat(s).isEqualTo("foo"));
+        assertThat(fields.asLocalizedString("ltext")).isInstanceOfSatisfying(LocalizedString.class,
+            localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));
+        assertThat(fields.asEnum("enum")).isInstanceOfSatisfying(CustomFieldEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel()).isEqualTo("foo"));
+        assertThat(fields.asLocalizedEnum("lenum")).isInstanceOfSatisfying(CustomFieldLocalizedEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
+
+        assertThat(fields.asString("date")).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(fields.asString("time")).isInstanceOfSatisfying(String.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(fields.asString("datetime")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+
+        assertThat(fields.asBoolean("boolean")).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(fields.asLong("integer")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
+        assertThat(fields.asDouble("double")).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.asBoolean("boolean")).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(fields.asReference("reference")).isInstanceOfSatisfying(ProductReference.class,
+            reference -> assertThat(reference.getId()).isEqualTo("12345"));
+        assertThat(fields.asMoney("money")).isInstanceOfSatisfying(TypedMoney.class,
+            money -> assertThat(money.getCentAmount()).isEqualTo(100));
+        assertThat(fields.asSetString("set-text")).asList().first().isInstanceOf(String.class);
+        assertThat(fields.asSetLocalizedString("set-ltext")).asList().first().isInstanceOf(LocalizedString.class);
+        assertThat(fields.asSetEnum("set-enum")).asList().first().isInstanceOf(CustomFieldEnumValue.class);
+        assertThat(fields.asSetLocalizedEnum("set-lenum")).asList()
+                .first()
+                .isInstanceOf(CustomFieldLocalizedEnumValue.class);
+        assertThat(fields.asSetString("set-date")).asList().first().isInstanceOf(String.class);
+        assertThat(fields.asSetString("set-time")).asList().first().isInstanceOf(String.class);
+        assertThat(fields.asSetString("set-datetime")).asList().first().isInstanceOf(String.class);
+        assertThat(fields.asSetBoolean("set-boolean")).asList().first().isInstanceOf(Boolean.class);
+        assertThat(fields.asSetLong("set-integer")).asList()
+                .first()
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
+        assertThat(fields.asSetDouble("set-double")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.asSetReference("set-reference")).asList().first().isInstanceOf(ProductReference.class);
+        assertThat(fields.asSetMoney("set-money")).asList().first().isInstanceOf(TypedMoney.class);
+        assertThat(fields.asSetReference("set-empty")).asList().isEmpty();
+    }
+
+    @Test
     public void emptyField() throws IOException {
         Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"), Order.class);
 

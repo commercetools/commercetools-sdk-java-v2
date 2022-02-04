@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInventoryPost
-        extends ApiMethod<ByProjectKeyInventoryPost, com.commercetools.api.models.inventory.InventoryEntry>
+public class ByProjectKeyInventoryPost extends
+        BodyApiMethod<ByProjectKeyInventoryPost, com.commercetools.api.models.inventory.InventoryEntry, com.commercetools.api.models.inventory.InventoryEntryDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInventoryPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryPost> {
@@ -45,15 +45,10 @@ public class ByProjectKeyInventoryPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(inventoryEntryDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(inventoryEntryDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -109,6 +104,17 @@ public class ByProjectKeyInventoryPost
     public ByProjectKeyInventoryPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.inventory.InventoryEntryDraft getBody() {
+        return inventoryEntryDraft;
+    }
+
+    public ByProjectKeyInventoryPost withBody(
+            com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft) {
+        ByProjectKeyInventoryPost t = copy();
+        t.inventoryEntryDraft = inventoryEntryDraft;
+        return t;
     }
 
     @Override

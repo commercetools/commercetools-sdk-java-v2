@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends
-        ApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.CategoryImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost> {
 
@@ -51,15 +51,10 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(categoryImportRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(categoryImportRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -88,6 +83,17 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.CategoryImportRequest getBody() {
+        return categoryImportRequest;
+    }
+
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.CategoryImportRequest categoryImportRequest) {
+        ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost t = copy();
+        t.categoryImportRequest = categoryImportRequest;
+        return t;
     }
 
     @Override

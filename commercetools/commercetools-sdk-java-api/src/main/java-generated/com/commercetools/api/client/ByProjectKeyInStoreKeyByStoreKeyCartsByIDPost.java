@@ -15,13 +15,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Updates a cart in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store's key.
+*  <p>Updates a cart in the store specified by {storeKey}.
 *  If the cart exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost>,
@@ -57,15 +57,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -137,6 +132,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost
     public ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart.CartUpdate getBody() {
+        return cartUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost withBody(
+            com.commercetools.api.models.cart.CartUpdate cartUpdate) {
+        ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost t = copy();
+        t.cartUpdate = cartUpdate;
+        return t;
     }
 
     @Override

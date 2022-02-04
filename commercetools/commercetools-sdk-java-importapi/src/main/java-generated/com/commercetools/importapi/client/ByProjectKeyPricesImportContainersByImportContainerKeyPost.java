@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyPricesImportContainersByImportContainerKeyPost extends
-        ApiMethod<ByProjectKeyPricesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyPricesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.PriceImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyPricesImportContainersByImportContainerKeyPost> {
 
@@ -52,15 +52,10 @@ public class ByProjectKeyPricesImportContainersByImportContainerKeyPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -89,6 +84,17 @@ public class ByProjectKeyPricesImportContainersByImportContainerKeyPost extends
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.PriceImportRequest getBody() {
+        return priceImportRequest;
+    }
+
+    public ByProjectKeyPricesImportContainersByImportContainerKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest) {
+        ByProjectKeyPricesImportContainersByImportContainerKeyPost t = copy();
+        t.priceImportRequest = priceImportRequest;
+        return t;
     }
 
     @Override

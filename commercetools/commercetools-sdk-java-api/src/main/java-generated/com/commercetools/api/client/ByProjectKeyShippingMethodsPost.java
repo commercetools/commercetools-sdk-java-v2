@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyShippingMethodsPost
-        extends ApiMethod<ByProjectKeyShippingMethodsPost, com.commercetools.api.models.shipping_method.ShippingMethod>
+public class ByProjectKeyShippingMethodsPost extends
+        BodyApiMethod<ByProjectKeyShippingMethodsPost, com.commercetools.api.models.shipping_method.ShippingMethod, com.commercetools.api.models.shipping_method.ShippingMethodDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyShippingMethodsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsPost> {
@@ -45,15 +45,10 @@ public class ByProjectKeyShippingMethodsPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(shippingMethodDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(shippingMethodDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -109,6 +104,17 @@ public class ByProjectKeyShippingMethodsPost
     public ByProjectKeyShippingMethodsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodDraft getBody() {
+        return shippingMethodDraft;
+    }
+
+    public ByProjectKeyShippingMethodsPost withBody(
+            com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
+        ByProjectKeyShippingMethodsPost t = copy();
+        t.shippingMethodDraft = shippingMethodDraft;
+        return t;
     }
 
     @Override

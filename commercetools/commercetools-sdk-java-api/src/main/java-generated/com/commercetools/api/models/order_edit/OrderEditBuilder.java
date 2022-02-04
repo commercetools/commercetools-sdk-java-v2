@@ -89,6 +89,12 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    public OrderEditBuilder resource(
+            Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReferenceBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.order.OrderReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderEditBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
         this.resource = resource;
         return this;

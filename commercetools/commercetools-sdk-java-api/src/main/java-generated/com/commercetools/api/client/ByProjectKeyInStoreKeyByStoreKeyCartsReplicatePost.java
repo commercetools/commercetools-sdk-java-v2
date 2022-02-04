@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost, com.commercetools.api.models.cart.Cart>
+public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.ReplicaCartDraft>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost> {
 
     private String projectKey;
@@ -45,15 +45,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(replicaCartDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(replicaCartDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -82,6 +77,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    public com.commercetools.api.models.cart.ReplicaCartDraft getBody() {
+        return replicaCartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost withBody(
+            com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost t = copy();
+        t.replicaCartDraft = replicaCartDraft;
+        return t;
     }
 
     @Override

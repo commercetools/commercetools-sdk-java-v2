@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Creating a category produces the CategoryCreated message.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCategoriesPost
-        extends ApiMethod<ByProjectKeyCategoriesPost, com.commercetools.api.models.category.Category>
+public class ByProjectKeyCategoriesPost extends
+        BodyApiMethod<ByProjectKeyCategoriesPost, com.commercetools.api.models.category.Category, com.commercetools.api.models.category.CategoryDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCategoriesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCategoriesPost> {
@@ -48,15 +48,10 @@ public class ByProjectKeyCategoriesPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(categoryDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(categoryDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -112,6 +107,16 @@ public class ByProjectKeyCategoriesPost
     public ByProjectKeyCategoriesPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.category.CategoryDraft getBody() {
+        return categoryDraft;
+    }
+
+    public ByProjectKeyCategoriesPost withBody(com.commercetools.api.models.category.CategoryDraft categoryDraft) {
+        ByProjectKeyCategoriesPost t = copy();
+        t.categoryDraft = categoryDraft;
+        return t;
     }
 
     @Override

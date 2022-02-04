@@ -15,14 +15,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates an order from a Cart from a specific Store. The {storeKey} path parameter maps to a Store's key.
+*  <p>Creates an order from a Cart from a specific Store.
 *  When using this endpoint the orders's store field is always set to the store specified in the path parameter.
 *  The cart must have a shipping address set before creating an order. When using the Platform TaxMode,
 *  the shipping address is used for tax calculation.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderFromCartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost> {
@@ -54,15 +54,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -126,6 +121,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost
     public ByProjectKeyInStoreKeyByStoreKeyOrdersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order.OrderFromCartDraft getBody() {
+        return orderFromCartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersPost withBody(
+            com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyOrdersPost t = copy();
+        t.orderFromCartDraft = orderFromCartDraft;
+        return t;
     }
 
     @Override

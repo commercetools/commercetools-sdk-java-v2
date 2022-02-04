@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCategoriesImportContainersByImportContainerKeyPost extends
-        ApiMethod<ByProjectKeyCategoriesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyCategoriesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.CategoryImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyCategoriesImportContainersByImportContainerKeyPost> {
 
@@ -52,15 +52,10 @@ public class ByProjectKeyCategoriesImportContainersByImportContainerKeyPost exte
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(categoryImportRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(categoryImportRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -89,6 +84,17 @@ public class ByProjectKeyCategoriesImportContainersByImportContainerKeyPost exte
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.CategoryImportRequest getBody() {
+        return categoryImportRequest;
+    }
+
+    public ByProjectKeyCategoriesImportContainersByImportContainerKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.CategoryImportRequest categoryImportRequest) {
+        ByProjectKeyCategoriesImportContainersByImportContainerKeyPost t = copy();
+        t.categoryImportRequest = categoryImportRequest;
+        return t;
     }
 
     @Override

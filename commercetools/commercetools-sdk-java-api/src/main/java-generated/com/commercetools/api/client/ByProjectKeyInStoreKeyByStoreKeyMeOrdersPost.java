@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost extends
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromCartDraft>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myOrderFromCartDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myOrderFromCartDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.me.MyOrderFromCartDraft getBody() {
+        return myOrderFromCartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost withBody(
+            com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost t = copy();
+        t.myOrderFromCartDraft = myOrderFromCartDraft;
+        return t;
     }
 
     @Override

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost extends
-        ApiMethod<ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost> {
 
@@ -52,15 +52,10 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost e
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productVariantPatchRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils.executing(
+                () -> apiHttpClient().getSerializerService().toJsonByteArray(productVariantPatchRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -89,6 +84,17 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost e
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest getBody() {
+        return productVariantPatchRequest;
+    }
+
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest) {
+        ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost t = copy();
+        t.productVariantPatchRequest = productVariantPatchRequest;
+        return t;
     }
 
     @Override

@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  the selected prices will be added to the response.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsPost
-        extends ApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product>
+public class ByProjectKeyProductsPost extends
+        BodyApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductDraft>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyProductsPost>,
@@ -51,15 +51,10 @@ public class ByProjectKeyProductsPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(productDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -337,6 +332,16 @@ public class ByProjectKeyProductsPost
     public ByProjectKeyProductsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.product.ProductDraft getBody() {
+        return productDraft;
+    }
+
+    public ByProjectKeyProductsPost withBody(com.commercetools.api.models.product.ProductDraft productDraft) {
+        ByProjectKeyProductsPost t = copy();
+        t.productDraft = productDraft;
+        return t;
     }
 
     @Override

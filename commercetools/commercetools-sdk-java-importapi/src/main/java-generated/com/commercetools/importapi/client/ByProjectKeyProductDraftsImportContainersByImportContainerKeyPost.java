@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost extends
-        ApiMethod<ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.ProductDraftImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost> {
 
@@ -52,15 +52,10 @@ public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost e
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productDraftImportRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils.executing(
+                () -> apiHttpClient().getSerializerService().toJsonByteArray(productDraftImportRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -89,6 +84,17 @@ public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost e
 
     public void setImportContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductDraftImportRequest getBody() {
+        return productDraftImportRequest;
+    }
+
+    public ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.ProductDraftImportRequest productDraftImportRequest) {
+        ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost t = copy();
+        t.productDraftImportRequest = productDraftImportRequest;
+        return t;
     }
 
     @Override

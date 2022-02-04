@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductDiscountsKeyByKeyPost extends
-        ApiMethod<ByProjectKeyProductDiscountsKeyByKeyPost, com.commercetools.api.models.product_discount.ProductDiscount>
+        BodyApiMethod<ByProjectKeyProductDiscountsKeyByKeyPost, com.commercetools.api.models.product_discount.ProductDiscount, com.commercetools.api.models.product_discount.ProductDiscountUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductDiscountsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductDiscountsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductDiscountsKeyByKeyPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productDiscountUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(productDiscountUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,17 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
     public ByProjectKeyProductDiscountsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.product_discount.ProductDiscountUpdate getBody() {
+        return productDiscountUpdate;
+    }
+
+    public ByProjectKeyProductDiscountsKeyByKeyPost withBody(
+            com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate) {
+        ByProjectKeyProductDiscountsKeyByKeyPost t = copy();
+        t.productDiscountUpdate = productDiscountUpdate;
+        return t;
     }
 
     @Override

@@ -15,24 +15,23 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     private String lineItemId;
 
     @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     public MyCartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
-    public MyCartSetLineItemSupplyChannelActionBuilder distributionChannel(
+    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
 
-    public MyCartSetLineItemSupplyChannelActionBuilder distributionChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
+    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
         return this;
     }
 
@@ -41,20 +40,20 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     }
 
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
     }
 
     public MyCartSetLineItemSupplyChannelAction build() {
         Objects.requireNonNull(lineItemId, MyCartSetLineItemSupplyChannelAction.class + ": lineItemId is missing");
-        return new MyCartSetLineItemSupplyChannelActionImpl(lineItemId, distributionChannel);
+        return new MyCartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
     }
 
     /**
      * builds MyCartSetLineItemSupplyChannelAction without checking for non null required values
      */
     public MyCartSetLineItemSupplyChannelAction buildUnchecked() {
-        return new MyCartSetLineItemSupplyChannelActionImpl(lineItemId, distributionChannel);
+        return new MyCartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
     }
 
     public static MyCartSetLineItemSupplyChannelActionBuilder of() {
@@ -64,7 +63,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     public static MyCartSetLineItemSupplyChannelActionBuilder of(final MyCartSetLineItemSupplyChannelAction template) {
         MyCartSetLineItemSupplyChannelActionBuilder builder = new MyCartSetLineItemSupplyChannelActionBuilder();
         builder.lineItemId = template.getLineItemId();
-        builder.distributionChannel = template.getDistributionChannel();
+        builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }
 

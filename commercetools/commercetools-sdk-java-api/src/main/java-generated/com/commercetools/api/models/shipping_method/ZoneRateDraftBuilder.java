@@ -14,6 +14,12 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates;
 
+    public ZoneRateDraftBuilder zone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
     public ZoneRateDraftBuilder zone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
         return this;

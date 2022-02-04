@@ -20,7 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyOrdersPost extends ApiMethod<ByProjectKeyOrdersPost, com.commercetools.api.models.order.Order>
+public class ByProjectKeyOrdersPost extends
+        BodyApiMethod<ByProjectKeyOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderFromCartDraft>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyOrdersPost>,
@@ -50,15 +51,10 @@ public class ByProjectKeyOrdersPost extends ApiMethod<ByProjectKeyOrdersPost, co
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -114,6 +110,16 @@ public class ByProjectKeyOrdersPost extends ApiMethod<ByProjectKeyOrdersPost, co
     public ByProjectKeyOrdersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.order.OrderFromCartDraft getBody() {
+        return orderFromCartDraft;
+    }
+
+    public ByProjectKeyOrdersPost withBody(com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+        ByProjectKeyOrdersPost t = copy();
+        t.orderFromCartDraft = orderFromCartDraft;
+        return t;
     }
 
     @Override

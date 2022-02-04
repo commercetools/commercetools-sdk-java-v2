@@ -84,8 +84,23 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     public ShippingInfoBuilder taxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ShippingInfoBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
+        return this;
+    }
+
+    public ShippingInfoBuilder shippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder, com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder.of())
+                .build();
         return this;
     }
 

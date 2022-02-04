@@ -2,8 +2,8 @@
 package io.vrap.rmf.base.client;
 
 import java.time.ZonedDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.commons.lang3.builder.RecursiveToStringStyle;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -12,10 +12,11 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public interface ModelBase {
 
     class FilteredRecursiveToStringStyle extends RecursiveToStringStyle {
-        static Map<Class<?>, Boolean> filter;
+        static Set<Class<?>> filter;
         static {
-            filter = new HashMap<>();
-            filter.put(ZonedDateTime.class, true);
+            filter = new HashSet<>();
+            filter.add(ZonedDateTime.class);
+            filter.add(Enum.class);
         }
 
         public FilteredRecursiveToStringStyle() {
@@ -25,7 +26,7 @@ public interface ModelBase {
 
         @Override
         protected boolean accept(Class<?> clazz) {
-            return !filter.containsKey(clazz);
+            return filter.stream().noneMatch(aClass -> aClass.isAssignableFrom(clazz));
         }
     }
 
@@ -35,5 +36,20 @@ public interface ModelBase {
 
     default public String reflectionString(ToStringStyle toStringStyle) {
         return ReflectionToStringBuilder.reflectionToString(this, toStringStyle);
+    }
+
+    static ModelBase asModelBase(Object object) {
+        if (!(object instanceof ModelBase)) {
+            throw new IllegalArgumentException("argument must be of type " + ModelBase.class);
+        }
+        return (ModelBase) object;
+    }
+
+    static String reflectionString(Object object) {
+        return ReflectionToStringBuilder.reflectionToString(object, new FilteredRecursiveToStringStyle());
+    }
+
+    static String reflectionString(Object object, ToStringStyle toStringStyle) {
+        return ReflectionToStringBuilder.reflectionToString(object, toStringStyle);
     }
 }

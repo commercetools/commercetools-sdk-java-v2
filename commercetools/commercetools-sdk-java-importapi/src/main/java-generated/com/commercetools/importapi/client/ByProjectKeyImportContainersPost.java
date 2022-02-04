@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyImportContainersPost extends
-        ApiMethod<ByProjectKeyImportContainersPost, com.commercetools.importapi.models.importcontainers.ImportContainer>
+        BodyApiMethod<ByProjectKeyImportContainersPost, com.commercetools.importapi.models.importcontainers.ImportContainer, com.commercetools.importapi.models.importcontainers.ImportContainerDraft>
         implements
         com.commercetools.importapi.client.Secured_by_manage_import_containersTrait<ByProjectKeyImportContainersPost> {
 
@@ -46,15 +46,10 @@ public class ByProjectKeyImportContainersPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(importContainerDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(importContainerDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -76,6 +71,17 @@ public class ByProjectKeyImportContainersPost extends
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.importapi.models.importcontainers.ImportContainerDraft getBody() {
+        return importContainerDraft;
+    }
+
+    public ByProjectKeyImportContainersPost withBody(
+            com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft) {
+        ByProjectKeyImportContainersPost t = copy();
+        t.importContainerDraft = importContainerDraft;
+        return t;
     }
 
     @Override

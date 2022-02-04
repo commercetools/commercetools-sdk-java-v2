@@ -91,6 +91,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductProjectionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductSelectionsRequestBuilder productSelections() {
+        return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductTypesRequestBuilder productTypes() {
         return new ByProjectKeyProductTypesRequestBuilder(apiHttpClient, projectKey);
     }

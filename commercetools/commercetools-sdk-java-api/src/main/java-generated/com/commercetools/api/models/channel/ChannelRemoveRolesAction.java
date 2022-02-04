@@ -18,6 +18,9 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     String REMOVE_ROLES = "removeRoles";
 
+    /**
+    *  <p>Value to remove from the array.</p>
+    */
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();

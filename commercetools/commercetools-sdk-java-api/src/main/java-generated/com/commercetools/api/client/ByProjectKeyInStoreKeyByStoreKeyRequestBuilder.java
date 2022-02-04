@@ -45,4 +45,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder shoppingLists() {
         return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder productProjections() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder(apiHttpClient, projectKey,
+            storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder productSelectionAssignments() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder(apiHttpClient, projectKey,
+            storeKey);
+    }
 }

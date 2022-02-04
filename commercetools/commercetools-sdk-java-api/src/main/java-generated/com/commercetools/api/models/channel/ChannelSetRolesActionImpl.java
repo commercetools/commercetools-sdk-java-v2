@@ -36,6 +36,9 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
         return this.action;
     }
 
+    /**
+    *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+    */
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

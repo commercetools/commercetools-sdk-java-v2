@@ -175,7 +175,7 @@ public class JsonUtils {
         });
     }
 
-    private static <T> T executing(final SupplierThrowingIOException<T> supplier) {
+    public static <T> T executing(final SupplierThrowingIOException<T> supplier) {
         try {
             return supplier.get();
         }
@@ -185,7 +185,7 @@ public class JsonUtils {
     }
 
     @FunctionalInterface
-    private interface SupplierThrowingIOException<T> {
+    public interface SupplierThrowingIOException<T> {
         T get() throws IOException;
     }
 }

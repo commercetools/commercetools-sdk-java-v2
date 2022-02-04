@@ -89,6 +89,9 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
         return this.customerGroup;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }

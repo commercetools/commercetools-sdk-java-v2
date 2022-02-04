@@ -24,6 +24,9 @@ public interface OrderLineItemDistributionChannelSetMessage extends Message {
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelReference getDistributionChannel();

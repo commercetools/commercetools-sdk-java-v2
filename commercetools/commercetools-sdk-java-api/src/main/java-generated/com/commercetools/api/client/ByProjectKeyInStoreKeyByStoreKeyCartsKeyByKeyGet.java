@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Returns a cart by its key from a specific Store. The {storeKey} path parameter maps to a Store's key.
+*  <p>Returns a cart by its key from a specific Store.
 *  If the cart exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.
 *  The cart may not contain up-to-date prices, discounts etc.
@@ -55,7 +55,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 

@@ -44,6 +44,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
@@ -201,6 +203,36 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         return this;
     }
 
+    public StoreCreatedMessageBuilder productSelections(
+            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+        return this;
+    }
+
+    public StoreCreatedMessageBuilder withProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.productSelections = new ArrayList<>();
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessageBuilder plusProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        if (this.productSelections == null) {
+            this.productSelections = new ArrayList<>();
+        }
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessageBuilder productSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
+        this.productSelections = productSelections;
+        return this;
+    }
+
     public StoreCreatedMessageBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
@@ -272,6 +304,10 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         return this.supplyChannels;
     }
 
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+        return this.productSelections;
+    }
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
@@ -288,9 +324,10 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         Objects.requireNonNull(languages, StoreCreatedMessage.class + ": languages is missing");
         Objects.requireNonNull(distributionChannels, StoreCreatedMessage.class + ": distributionChannels is missing");
         Objects.requireNonNull(supplyChannels, StoreCreatedMessage.class + ": supplyChannels is missing");
+        Objects.requireNonNull(productSelections, StoreCreatedMessage.class + ": productSelections is missing");
         return new StoreCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, languages,
-            distributionChannels, supplyChannels, custom);
+            distributionChannels, supplyChannels, productSelections, custom);
     }
 
     /**
@@ -299,7 +336,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     public StoreCreatedMessage buildUnchecked() {
         return new StoreCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, languages,
-            distributionChannels, supplyChannels, custom);
+            distributionChannels, supplyChannels, productSelections, custom);
     }
 
     public static StoreCreatedMessageBuilder of() {
@@ -322,6 +359,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         builder.languages = template.getLanguages();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
+        builder.productSelections = template.getProductSelections();
         builder.custom = template.getCustom();
         return builder;
     }

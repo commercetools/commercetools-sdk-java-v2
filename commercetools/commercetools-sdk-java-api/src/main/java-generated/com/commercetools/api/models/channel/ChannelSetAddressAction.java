@@ -19,6 +19,9 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
     String SET_ADDRESS = "setAddress";
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();

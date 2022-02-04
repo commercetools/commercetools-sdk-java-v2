@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyStatesByIDPost
-        extends ApiMethod<ByProjectKeyStatesByIDPost, com.commercetools.api.models.state.State>
+public class ByProjectKeyStatesByIDPost extends
+        BodyApiMethod<ByProjectKeyStatesByIDPost, com.commercetools.api.models.state.State, com.commercetools.api.models.state.StateUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStatesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStatesByIDPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyStatesByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(stateUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(stateUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,16 @@ public class ByProjectKeyStatesByIDPost
     public ByProjectKeyStatesByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.state.StateUpdate getBody() {
+        return stateUpdate;
+    }
+
+    public ByProjectKeyStatesByIDPost withBody(com.commercetools.api.models.state.StateUpdate stateUpdate) {
+        ByProjectKeyStatesByIDPost t = copy();
+        t.stateUpdate = stateUpdate;
+        return t;
     }
 
     @Override

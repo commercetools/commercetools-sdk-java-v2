@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMePasswordPost
-        extends ApiMethod<ByProjectKeyMePasswordPost, com.commercetools.api.models.customer.Customer>
+public class ByProjectKeyMePasswordPost extends
+        BodyApiMethod<ByProjectKeyMePasswordPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerChangePassword>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePasswordPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPost> {
 
@@ -43,15 +43,10 @@ public class ByProjectKeyMePasswordPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCustomerChangePassword);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myCustomerChangePassword)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -72,6 +67,17 @@ public class ByProjectKeyMePasswordPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.MyCustomerChangePassword getBody() {
+        return myCustomerChangePassword;
+    }
+
+    public ByProjectKeyMePasswordPost withBody(
+            com.commercetools.api.models.customer.MyCustomerChangePassword myCustomerChangePassword) {
+        ByProjectKeyMePasswordPost t = copy();
+        t.myCustomerChangePassword = myCustomerChangePassword;
+        return t;
     }
 
     @Override

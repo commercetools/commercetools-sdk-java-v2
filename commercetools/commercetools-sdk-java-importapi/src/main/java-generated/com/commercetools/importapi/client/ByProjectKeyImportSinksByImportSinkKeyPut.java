@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyImportSinksByImportSinkKeyPut extends
-        ApiMethod<ByProjectKeyImportSinksByImportSinkKeyPut, com.commercetools.importapi.models.importsinks.ImportSink>
+        BodyApiMethod<ByProjectKeyImportSinksByImportSinkKeyPut, com.commercetools.importapi.models.importsinks.ImportSink, com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft>
         implements
         com.commercetools.importapi.client.Secured_by_manage_import_sinksTrait<ByProjectKeyImportSinksByImportSinkKeyPut> {
 
@@ -50,15 +50,10 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(importSinkUpdateDraft);
-            return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(importSinkUpdateDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -87,6 +82,17 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    public com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft getBody() {
+        return importSinkUpdateDraft;
+    }
+
+    public ByProjectKeyImportSinksByImportSinkKeyPut withBody(
+            com.commercetools.importapi.models.importsinks.ImportSinkUpdateDraft importSinkUpdateDraft) {
+        ByProjectKeyImportSinksByImportSinkKeyPut t = copy();
+        t.importSinkUpdateDraft = importSinkUpdateDraft;
+        return t;
     }
 
     @Override

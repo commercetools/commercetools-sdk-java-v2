@@ -40,7 +40,6 @@ public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet, com.commercetool
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 

@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Accepts an image file and returns similar products from product catalogue.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyImageSearchPost
-        extends ApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse> {
+public class ByProjectKeyImageSearchPost extends
+        BodyApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse, java.io.File> {
 
     private String projectKey;
 
@@ -47,21 +47,15 @@ public class ByProjectKeyImageSearchPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            ApiHttpHeaders headers = getHeaders();
-            if (headers.getFirst(ApiHttpHeaders.CONTENT_TYPE) == null) {
-                final String mimeType = Optional.ofNullable(URLConnection.guessContentTypeFromName(file.getName()))
-                        .orElse("application/octet-stream");
-                headers = headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, mimeType);
-            }
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), headers,
-                Files.readAllBytes(file.toPath()));
+        ApiHttpHeaders headers = getHeaders();
+        if (headers.getFirst(ApiHttpHeaders.CONTENT_TYPE) == null) {
+            final String mimeType = Optional.ofNullable(URLConnection.guessContentTypeFromName(file.getName()))
+                    .orElse("application/octet-stream");
+            headers = headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, mimeType);
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), headers,
+            io.vrap.rmf.base.client.utils.FileUtils.executing(() -> Files.readAllBytes(file.toPath())));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -152,6 +146,16 @@ public class ByProjectKeyImageSearchPost
     public ByProjectKeyImageSearchPost addOffset(final List<Integer> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    public java.io.File getBody() {
+        return file;
+    }
+
+    public ByProjectKeyImageSearchPost withBody(java.io.File file) {
+        ByProjectKeyImageSearchPost t = copy();
+        t.file = file;
+        return t;
     }
 
     @Override

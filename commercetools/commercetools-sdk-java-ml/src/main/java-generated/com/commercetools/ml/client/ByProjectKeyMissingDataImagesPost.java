@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMissingDataImagesPost
-        extends ApiMethod<ByProjectKeyMissingDataImagesPost, com.commercetools.ml.models.common.TaskToken> {
+public class ByProjectKeyMissingDataImagesPost extends
+        BodyApiMethod<ByProjectKeyMissingDataImagesPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.missing_data.MissingImagesSearchRequest> {
 
     private String projectKey;
 
@@ -41,15 +41,10 @@ public class ByProjectKeyMissingDataImagesPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(missingImagesSearchRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils.executing(
+                () -> apiHttpClient().getSerializerService().toJsonByteArray(missingImagesSearchRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -70,6 +65,17 @@ public class ByProjectKeyMissingDataImagesPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.ml.models.missing_data.MissingImagesSearchRequest getBody() {
+        return missingImagesSearchRequest;
+    }
+
+    public ByProjectKeyMissingDataImagesPost withBody(
+            com.commercetools.ml.models.missing_data.MissingImagesSearchRequest missingImagesSearchRequest) {
+        ByProjectKeyMissingDataImagesPost t = copy();
+        t.missingImagesSearchRequest = missingImagesSearchRequest;
+        return t;
     }
 
     @Override

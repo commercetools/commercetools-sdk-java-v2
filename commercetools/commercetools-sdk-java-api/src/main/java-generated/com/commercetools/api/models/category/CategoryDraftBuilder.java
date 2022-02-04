@@ -81,6 +81,13 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     public CategoryDraftBuilder parent(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    public CategoryDraftBuilder parent(
             @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
         this.parent = parent;
         return this;

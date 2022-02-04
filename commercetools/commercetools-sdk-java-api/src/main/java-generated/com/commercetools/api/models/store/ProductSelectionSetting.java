@@ -1,0 +1,62 @@
+
+package com.commercetools.api.models.store;
+
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.product_selection.ProductSelectionReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@JsonDeserialize(as = ProductSelectionSettingImpl.class)
+public interface ProductSelectionSetting {
+
+    /**
+    *  <p>Reference to a Product Selection</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("productSelection")
+    public ProductSelectionReference getProductSelection();
+
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+    */
+    @NotNull
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    public void setProductSelection(final ProductSelectionReference productSelection);
+
+    public void setActive(final Boolean active);
+
+    public static ProductSelectionSetting of() {
+        return new ProductSelectionSettingImpl();
+    }
+
+    public static ProductSelectionSetting of(final ProductSelectionSetting template) {
+        ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
+        instance.setProductSelection(template.getProductSelection());
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    public static ProductSelectionSettingBuilder builder() {
+        return ProductSelectionSettingBuilder.of();
+    }
+
+    public static ProductSelectionSettingBuilder builder(final ProductSelectionSetting template) {
+        return ProductSelectionSettingBuilder.of(template);
+    }
+
+    default <T> T withProductSelectionSetting(Function<ProductSelectionSetting, T> helper) {
+        return helper.apply(this);
+    }
+}

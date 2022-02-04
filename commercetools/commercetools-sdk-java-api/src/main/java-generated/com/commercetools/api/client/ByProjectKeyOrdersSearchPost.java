@@ -14,8 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyOrdersSearchPost
-        extends ApiMethod<ByProjectKeyOrdersSearchPost, com.commercetools.api.models.order.OrderPagedSearchResponse>
+public class ByProjectKeyOrdersSearchPost extends
+        BodyApiMethod<ByProjectKeyOrdersSearchPost, com.commercetools.api.models.order.OrderPagedSearchResponse, com.commercetools.api.models.order.OrderSearchRequest>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersSearchPost> {
 
     private String projectKey;
@@ -42,15 +42,10 @@ public class ByProjectKeyOrdersSearchPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderSearchRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(orderSearchRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -71,6 +66,17 @@ public class ByProjectKeyOrdersSearchPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.order.OrderSearchRequest getBody() {
+        return orderSearchRequest;
+    }
+
+    public ByProjectKeyOrdersSearchPost withBody(
+            com.commercetools.api.models.order.OrderSearchRequest orderSearchRequest) {
+        ByProjectKeyOrdersSearchPost t = copy();
+        t.orderSearchRequest = orderSearchRequest;
+        return t;
     }
 
     @Override

@@ -21,6 +21,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
+    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
@@ -106,6 +108,36 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    public StoreCreatedMessagePayloadBuilder productSelections(
+            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
+        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder withProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.productSelections = new ArrayList<>();
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder plusProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        if (this.productSelections == null) {
+            this.productSelections = new ArrayList<>();
+        }
+        this.productSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+        return this;
+    }
+
+    public StoreCreatedMessagePayloadBuilder productSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
+        this.productSelections = productSelections;
+        return this;
+    }
+
     public StoreCreatedMessagePayloadBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
@@ -135,6 +167,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this.supplyChannels;
     }
 
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+        return this.productSelections;
+    }
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
@@ -145,14 +181,17 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         Objects.requireNonNull(distributionChannels,
             StoreCreatedMessagePayload.class + ": distributionChannels is missing");
         Objects.requireNonNull(supplyChannels, StoreCreatedMessagePayload.class + ": supplyChannels is missing");
-        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels, custom);
+        Objects.requireNonNull(productSelections, StoreCreatedMessagePayload.class + ": productSelections is missing");
+        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels,
+            productSelections, custom);
     }
 
     /**
      * builds StoreCreatedMessagePayload without checking for non null required values
      */
     public StoreCreatedMessagePayload buildUnchecked() {
-        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels, custom);
+        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels,
+            productSelections, custom);
     }
 
     public static StoreCreatedMessagePayloadBuilder of() {
@@ -165,6 +204,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         builder.languages = template.getLanguages();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
+        builder.productSelections = template.getProductSelections();
         builder.custom = template.getCustom();
         return builder;
     }

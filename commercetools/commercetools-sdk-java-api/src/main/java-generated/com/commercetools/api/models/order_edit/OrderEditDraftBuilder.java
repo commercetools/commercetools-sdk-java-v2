@@ -34,6 +34,12 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         return this;
     }
 
+    public OrderEditDraftBuilder resource(
+            Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReferenceBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.order.OrderReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderEditDraftBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
         this.resource = resource;
         return this;

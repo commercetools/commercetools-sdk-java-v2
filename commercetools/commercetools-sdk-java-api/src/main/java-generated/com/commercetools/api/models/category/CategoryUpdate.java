@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryUpdateImpl.class)
-public interface CategoryUpdate
-        extends com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction> {
+public interface CategoryUpdate extends
+        com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
 
     @NotNull
     @JsonProperty("version")

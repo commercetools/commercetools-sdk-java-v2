@@ -14,17 +14,22 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.channel.Channel> results;
 
     public ChannelPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public ChannelPagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
 
     public ChannelPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public ChannelPagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -74,6 +74,10 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -83,27 +87,23 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.channel.Channel> getResults() {
         return this.results;
     }
 
     public ChannelPagedQueryResponse build() {
         Objects.requireNonNull(limit, ChannelPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, ChannelPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ChannelPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ChannelPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, ChannelPagedQueryResponse.class + ": results is missing");
-        return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ChannelPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds ChannelPagedQueryResponse without checking for non null required values
      */
     public ChannelPagedQueryResponse buildUnchecked() {
-        return new ChannelPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ChannelPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static ChannelPagedQueryResponseBuilder of() {
@@ -113,9 +113,9 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     public static ChannelPagedQueryResponseBuilder of(final ChannelPagedQueryResponse template) {
         ChannelPagedQueryResponseBuilder builder = new ChannelPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

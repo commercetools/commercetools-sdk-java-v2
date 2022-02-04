@@ -23,6 +23,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base
         implements RequestCommand<TResult>, ClientRequestCommand<TResult> {
+
     public static class ParamEntry<K, V> extends Base implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
@@ -58,9 +59,8 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
                 return key + "=" + URLEncoder.encode(value.toString(), StandardCharsets.UTF_8.toString());
             }
             catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+                throw new EncodingException(e);
             }
-            return "";
         }
 
         @Override

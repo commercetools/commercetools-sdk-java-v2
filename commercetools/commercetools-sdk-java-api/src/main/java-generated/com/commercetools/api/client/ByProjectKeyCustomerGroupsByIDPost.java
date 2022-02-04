@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomerGroupsByIDPost
-        extends ApiMethod<ByProjectKeyCustomerGroupsByIDPost, com.commercetools.api.models.customer_group.CustomerGroup>
+public class ByProjectKeyCustomerGroupsByIDPost extends
+        BodyApiMethod<ByProjectKeyCustomerGroupsByIDPost, com.commercetools.api.models.customer_group.CustomerGroup, com.commercetools.api.models.customer_group.CustomerGroupUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCustomerGroupsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomerGroupsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomerGroupsByIDPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyCustomerGroupsByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerGroupUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerGroupUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,17 @@ public class ByProjectKeyCustomerGroupsByIDPost
     public ByProjectKeyCustomerGroupsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.customer_group.CustomerGroupUpdate getBody() {
+        return customerGroupUpdate;
+    }
+
+    public ByProjectKeyCustomerGroupsByIDPost withBody(
+            com.commercetools.api.models.customer_group.CustomerGroupUpdate customerGroupUpdate) {
+        ByProjectKeyCustomerGroupsByIDPost t = copy();
+        t.customerGroupUpdate = customerGroupUpdate;
+        return t;
     }
 
     @Override

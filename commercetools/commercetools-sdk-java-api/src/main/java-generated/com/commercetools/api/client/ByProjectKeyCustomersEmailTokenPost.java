@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Create a Token for verifying the Customer's Email</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomersEmailTokenPost
-        extends ApiMethod<ByProjectKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken>
+public class ByProjectKeyCustomersEmailTokenPost extends
+        BodyApiMethod<ByProjectKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken, com.commercetools.api.models.customer.CustomerCreateEmailToken>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailTokenPost> {
 
     private String projectKey;
@@ -45,15 +45,10 @@ public class ByProjectKeyCustomersEmailTokenPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerCreateEmailToken);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerCreateEmailToken)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -74,6 +69,17 @@ public class ByProjectKeyCustomersEmailTokenPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerCreateEmailToken getBody() {
+        return customerCreateEmailToken;
+    }
+
+    public ByProjectKeyCustomersEmailTokenPost withBody(
+            com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken) {
+        ByProjectKeyCustomersEmailTokenPost t = copy();
+        t.customerCreateEmailToken = customerCreateEmailToken;
+        return t;
     }
 
     @Override

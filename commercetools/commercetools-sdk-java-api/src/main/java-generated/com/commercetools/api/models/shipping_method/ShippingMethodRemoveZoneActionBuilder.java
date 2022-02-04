@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -10,6 +11,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMethodRemoveZoneAction> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
+
+    public ShippingMethodRemoveZoneActionBuilder zone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
+        return this;
+    }
 
     public ShippingMethodRemoveZoneActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {

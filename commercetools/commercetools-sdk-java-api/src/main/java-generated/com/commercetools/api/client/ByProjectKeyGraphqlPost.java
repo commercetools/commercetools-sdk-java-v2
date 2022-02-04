@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Execute a GraphQL query</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyGraphqlPost
-        extends ApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse>
+public class ByProjectKeyGraphqlPost extends
+        BodyApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse, com.commercetools.api.models.graph_ql.GraphQLRequest>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPost> {
 
     private String projectKey;
@@ -45,15 +45,10 @@ public class ByProjectKeyGraphqlPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(graphQLRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(graphQLRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -74,6 +69,16 @@ public class ByProjectKeyGraphqlPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.graph_ql.GraphQLRequest getBody() {
+        return graphQLRequest;
+    }
+
+    public ByProjectKeyGraphqlPost withBody(com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest) {
+        ByProjectKeyGraphqlPost t = copy();
+        t.graphQLRequest = graphQLRequest;
+        return t;
     }
 
     @Override

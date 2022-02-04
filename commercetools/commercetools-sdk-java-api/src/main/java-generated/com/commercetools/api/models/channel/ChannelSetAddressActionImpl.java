@@ -36,6 +36,9 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
         return this.action;
     }
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }

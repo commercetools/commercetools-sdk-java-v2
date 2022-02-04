@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyPaymentsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyPaymentsKeyByKeyPost, com.commercetools.api.models.payment.Payment>
+public class ByProjectKeyPaymentsKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeyPaymentsKeyByKeyPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyPaymentsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsKeyByKeyPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyPaymentsKeyByKeyPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(paymentUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(paymentUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,16 @@ public class ByProjectKeyPaymentsKeyByKeyPost
     public ByProjectKeyPaymentsKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.payment.PaymentUpdate getBody() {
+        return paymentUpdate;
+    }
+
+    public ByProjectKeyPaymentsKeyByKeyPost withBody(com.commercetools.api.models.payment.PaymentUpdate paymentUpdate) {
+        ByProjectKeyPaymentsKeyByKeyPost t = copy();
+        t.paymentUpdate = paymentUpdate;
+        return t;
     }
 
     @Override

@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyTaxCategoriesByIDPost
-        extends ApiMethod<ByProjectKeyTaxCategoriesByIDPost, com.commercetools.api.models.tax_category.TaxCategory>
+public class ByProjectKeyTaxCategoriesByIDPost extends
+        BodyApiMethod<ByProjectKeyTaxCategoriesByIDPost, com.commercetools.api.models.tax_category.TaxCategory, com.commercetools.api.models.tax_category.TaxCategoryUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyTaxCategoriesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesByIDPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyTaxCategoriesByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(taxCategoryUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(taxCategoryUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,17 @@ public class ByProjectKeyTaxCategoriesByIDPost
     public ByProjectKeyTaxCategoriesByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.tax_category.TaxCategoryUpdate getBody() {
+        return taxCategoryUpdate;
+    }
+
+    public ByProjectKeyTaxCategoriesByIDPost withBody(
+            com.commercetools.api.models.tax_category.TaxCategoryUpdate taxCategoryUpdate) {
+        ByProjectKeyTaxCategoriesByIDPost t = copy();
+        t.taxCategoryUpdate = taxCategoryUpdate;
+        return t;
     }
 
     @Override

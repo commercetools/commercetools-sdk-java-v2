@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyStoresKeyByKeyPost
-        extends ApiMethod<ByProjectKeyStoresKeyByKeyPost, com.commercetools.api.models.store.Store>
+public class ByProjectKeyStoresKeyByKeyPost extends
+        BodyApiMethod<ByProjectKeyStoresKeyByKeyPost, com.commercetools.api.models.store.Store, com.commercetools.api.models.store.StoreUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStoresKeyByKeyPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyStoresKeyByKeyPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(storeUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(storeUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,16 @@ public class ByProjectKeyStoresKeyByKeyPost
     public ByProjectKeyStoresKeyByKeyPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.store.StoreUpdate getBody() {
+        return storeUpdate;
+    }
+
+    public ByProjectKeyStoresKeyByKeyPost withBody(com.commercetools.api.models.store.StoreUpdate storeUpdate) {
+        ByProjectKeyStoresKeyByKeyPost t = copy();
+        t.storeUpdate = storeUpdate;
+        return t;
     }
 
     @Override

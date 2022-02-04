@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInventoryByIDPost
-        extends ApiMethod<ByProjectKeyInventoryByIDPost, com.commercetools.api.models.inventory.InventoryEntry>
+public class ByProjectKeyInventoryByIDPost extends
+        BodyApiMethod<ByProjectKeyInventoryByIDPost, com.commercetools.api.models.inventory.InventoryEntry, com.commercetools.api.models.inventory.InventoryEntryUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInventoryByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryByIDPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyInventoryByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(inventoryEntryUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(inventoryEntryUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,17 @@ public class ByProjectKeyInventoryByIDPost
     public ByProjectKeyInventoryByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.inventory.InventoryEntryUpdate getBody() {
+        return inventoryEntryUpdate;
+    }
+
+    public ByProjectKeyInventoryByIDPost withBody(
+            com.commercetools.api.models.inventory.InventoryEntryUpdate inventoryEntryUpdate) {
+        ByProjectKeyInventoryByIDPost t = copy();
+        t.inventoryEntryUpdate = inventoryEntryUpdate;
+        return t;
     }
 
     @Override

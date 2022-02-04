@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyChannelsByIDPost
-        extends ApiMethod<ByProjectKeyChannelsByIDPost, com.commercetools.api.models.channel.Channel>
+public class ByProjectKeyChannelsByIDPost extends
+        BodyApiMethod<ByProjectKeyChannelsByIDPost, com.commercetools.api.models.channel.Channel, com.commercetools.api.models.channel.ChannelUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsByIDPost>,
@@ -49,15 +49,10 @@ public class ByProjectKeyChannelsByIDPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(channelUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(channelUpdate)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -121,6 +116,16 @@ public class ByProjectKeyChannelsByIDPost
     public ByProjectKeyChannelsByIDPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.channel.ChannelUpdate getBody() {
+        return channelUpdate;
+    }
+
+    public ByProjectKeyChannelsByIDPost withBody(com.commercetools.api.models.channel.ChannelUpdate channelUpdate) {
+        ByProjectKeyChannelsByIDPost t = copy();
+        t.channelUpdate = channelUpdate;
+        return t;
     }
 
     @Override

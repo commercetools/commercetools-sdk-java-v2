@@ -31,10 +31,16 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
     public ChannelUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> error will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Channel.</p>
+    */
     public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions() {
         return this.actions;
     }

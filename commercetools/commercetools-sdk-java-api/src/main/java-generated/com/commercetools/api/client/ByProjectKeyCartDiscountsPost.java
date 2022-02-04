@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCartDiscountsPost
-        extends ApiMethod<ByProjectKeyCartDiscountsPost, com.commercetools.api.models.cart_discount.CartDiscount>
+public class ByProjectKeyCartDiscountsPost extends
+        BodyApiMethod<ByProjectKeyCartDiscountsPost, com.commercetools.api.models.cart_discount.CartDiscount, com.commercetools.api.models.cart_discount.CartDiscountDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCartDiscountsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsPost> {
@@ -45,15 +45,10 @@ public class ByProjectKeyCartDiscountsPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(cartDiscountDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(cartDiscountDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -109,6 +104,17 @@ public class ByProjectKeyCartDiscountsPost
     public ByProjectKeyCartDiscountsPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.cart_discount.CartDiscountDraft getBody() {
+        return cartDiscountDraft;
+    }
+
+    public ByProjectKeyCartDiscountsPost withBody(
+            com.commercetools.api.models.cart_discount.CartDiscountDraft cartDiscountDraft) {
+        ByProjectKeyCartDiscountsPost t = copy();
+        t.cartDiscountDraft = cartDiscountDraft;
+        return t;
     }
 
     @Override

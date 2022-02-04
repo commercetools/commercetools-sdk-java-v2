@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.commercetools.api.models.customer.Customer>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerEmailVerify>
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
 
@@ -52,15 +52,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerEmailVerify);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerEmailVerify)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -89,6 +84,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerEmailVerify getBody() {
+        return customerEmailVerify;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost withBody(
+            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+        ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost t = copy();
+        t.customerEmailVerify = customerEmailVerify;
+        return t;
     }
 
     @Override

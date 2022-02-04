@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 *  <p>Change a customers password</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyCustomersPasswordPost
-        extends ApiMethod<ByProjectKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer>
+public class ByProjectKeyCustomersPasswordPost extends
+        BodyApiMethod<ByProjectKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerChangePassword>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersPasswordPost> {
 
     private String projectKey;
@@ -45,15 +45,10 @@ public class ByProjectKeyCustomersPasswordPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerChangePassword);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerChangePassword)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -74,6 +69,17 @@ public class ByProjectKeyCustomersPasswordPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerChangePassword getBody() {
+        return customerChangePassword;
+    }
+
+    public ByProjectKeyCustomersPasswordPost withBody(
+            com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
+        ByProjectKeyCustomersPasswordPost t = copy();
+        t.customerChangePassword = customerChangePassword;
+        return t;
     }
 
     @Override

@@ -17,6 +17,12 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    public CustomFieldsDraftBuilder type(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
     public CustomFieldsDraftBuilder type(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;

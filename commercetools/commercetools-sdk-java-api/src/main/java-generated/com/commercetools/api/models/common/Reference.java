@@ -21,6 +21,7 @@ import com.commercetools.api.models.order_edit.OrderEditReference;
 import com.commercetools.api.models.payment.PaymentReference;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_discount.ProductDiscountReference;
+import com.commercetools.api.models.product_selection.ProductSelectionReference;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.review.ReviewReference;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
@@ -50,6 +51,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentReferenceImpl.class, name = PaymentReference.PAYMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl.class, name = ProductDiscountReference.PRODUCT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionReferenceImpl.class, name = ProductSelectionReference.PRODUCT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = ReviewReference.REVIEW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = ShippingMethodReference.SHIPPING_METHOD),

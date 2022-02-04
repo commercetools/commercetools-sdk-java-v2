@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates a customer in a specific Store. The {storeKey} path parameter maps to a Store's key.
+*  <p>Creates a customer in a specific Store.
 *  When using this endpoint, if omitted,
 *  the customer's stores field is set to the store specified in the path parameter.
 *  If an anonymous cart is passed in as when using this method,
@@ -26,7 +26,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyCustomersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPost> {
@@ -58,15 +58,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerDraft)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -130,6 +125,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    public com.commercetools.api.models.customer.CustomerDraft getBody() {
+        return customerDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPost withBody(
+            com.commercetools.api.models.customer.CustomerDraft customerDraft) {
+        ByProjectKeyInStoreKeyByStoreKeyCustomersPost t = copy();
+        t.customerDraft = customerDraft;
+        return t;
     }
 
     @Override

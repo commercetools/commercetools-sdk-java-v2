@@ -17,6 +17,12 @@ public class CustomBuilder implements Builder<Custom> {
     @Nullable
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
+    public CustomBuilder type(
+            Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReferenceBuilder> builder) {
+        this.type = builder.apply(com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
     public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
         this.type = type;
         return this;

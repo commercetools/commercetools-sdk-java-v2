@@ -15,6 +15,12 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
     public ShippingMethodAddShippingRateActionBuilder zone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    public ShippingMethodAddShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
         return this;

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost extends
-        ApiMethod<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse>
+        BodyApiMethod<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.PriceImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost> {
 
@@ -50,15 +50,10 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(priceImportRequest)));
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -87,6 +82,17 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost extends
 
     public void setImportSinkKey(final String importSinkKey) {
         this.importSinkKey = importSinkKey;
+    }
+
+    public com.commercetools.importapi.models.importrequests.PriceImportRequest getBody() {
+        return priceImportRequest;
+    }
+
+    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost withBody(
+            com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest) {
+        ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost t = copy();
+        t.priceImportRequest = priceImportRequest;
+        return t;
     }
 
     @Override

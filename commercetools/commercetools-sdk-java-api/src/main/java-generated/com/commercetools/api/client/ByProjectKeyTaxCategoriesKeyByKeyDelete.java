@@ -45,7 +45,6 @@ public class ByProjectKeyTaxCategoriesKeyByKeyDelete extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 

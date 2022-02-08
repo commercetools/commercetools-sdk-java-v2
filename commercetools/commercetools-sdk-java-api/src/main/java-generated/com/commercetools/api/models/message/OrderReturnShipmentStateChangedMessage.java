@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessageImpl.class)
-public interface OrderReturnShipmentStateChangedMessage extends Message {
+public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
 
     String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
 

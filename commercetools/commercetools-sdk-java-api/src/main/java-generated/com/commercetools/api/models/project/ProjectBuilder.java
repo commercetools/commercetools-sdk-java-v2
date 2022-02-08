@@ -29,7 +29,7 @@ public class ProjectBuilder implements Builder<Project> {
     @Nullable
     private String trialUntil;
 
-    private com.commercetools.api.models.message.MessageConfiguration messages;
+    private com.commercetools.api.models.message.MessagesConfiguration messages;
 
     @Nullable
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
@@ -101,12 +101,12 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     public ProjectBuilder messages(
-            Function<com.commercetools.api.models.message.MessageConfigurationBuilder, com.commercetools.api.models.message.MessageConfigurationBuilder> builder) {
-        this.messages = builder.apply(com.commercetools.api.models.message.MessageConfigurationBuilder.of()).build();
+            Function<com.commercetools.api.models.message.MessagesConfigurationBuilder, com.commercetools.api.models.message.MessagesConfigurationBuilder> builder) {
+        this.messages = builder.apply(com.commercetools.api.models.message.MessagesConfigurationBuilder.of()).build();
         return this;
     }
 
-    public ProjectBuilder messages(final com.commercetools.api.models.message.MessageConfiguration messages) {
+    public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {
         this.messages = messages;
         return this;
     }
@@ -200,7 +200,7 @@ public class ProjectBuilder implements Builder<Project> {
         return this.trialUntil;
     }
 
-    public com.commercetools.api.models.message.MessageConfiguration getMessages() {
+    public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
         return this.messages;
     }
 

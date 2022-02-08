@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletedDeliveryImpl.class)
-public interface ResourceDeletedDelivery extends SubscriptionDelivery {
+public interface ResourceDeletedDelivery extends DeliveryPayload {
 
     String RESOURCE_DELETED = "ResourceDeleted";
 

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemDistributionChannelSetMessageImpl.class)
-public interface OrderLineItemDistributionChannelSetMessage extends Message {
+public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage {
 
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 

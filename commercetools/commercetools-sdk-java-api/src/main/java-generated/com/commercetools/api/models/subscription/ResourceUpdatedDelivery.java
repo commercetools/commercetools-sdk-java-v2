@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ResourceUpdatedDeliveryImpl.class)
-public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
+public interface ResourceUpdatedDelivery extends DeliveryPayload {
 
     String RESOURCE_UPDATED = "ResourceUpdated";
 

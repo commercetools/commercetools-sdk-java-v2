@@ -21,6 +21,9 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
 
     String TRANSITION_STATE = "transitionState";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("state")

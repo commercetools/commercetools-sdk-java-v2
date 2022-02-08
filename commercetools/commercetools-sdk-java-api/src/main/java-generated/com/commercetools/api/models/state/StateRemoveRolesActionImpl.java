@@ -36,6 +36,9 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
         return this.action;
     }
 
+    /**
+    *  <p>Roles to remove from the State.</p>
+    */
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

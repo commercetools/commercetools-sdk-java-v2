@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.state;
+package com.commercetools.api.models.product_selection;
 
 import java.time.*;
 import java.util.*;
@@ -15,10 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:State">State</a>.</p>
+*  <p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> containing an array of <a href="ctp:api:type:AssignedProductSelection">AssignedProductSelection</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, ModelBase {
+public class AssignedProductSelectionPagedQueryResponseImpl
+        implements AssignedProductSelectionPagedQueryResponse, ModelBase {
 
     private Long limit;
 
@@ -28,12 +29,13 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
 
     private Long total;
 
-    private java.util.List<com.commercetools.api.models.state.State> results;
+    private java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results;
 
     @JsonCreator
-    StatePagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
-            @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
-            @JsonProperty("results") final java.util.List<com.commercetools.api.models.state.State> results) {
+    AssignedProductSelectionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
+            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
+            @JsonProperty("total") final Long total,
+            @JsonProperty("results") final java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results) {
         this.limit = limit;
         this.offset = offset;
         this.count = count;
@@ -41,7 +43,7 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
         this.results = results;
     }
 
-    public StatePagedQueryResponseImpl() {
+    public AssignedProductSelectionPagedQueryResponseImpl() {
     }
 
     /**
@@ -68,19 +70,19 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
 
     /**
     *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
-    *  This field is returned by default.
-    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/contract#queries">limit</a>.</p>
+    *  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
+    *  Unlike other endpoints, the Product Selection endpoint does not return this field by default.
+    *  To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>.
+    *  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/limits#queries">limit</a>.</p>
     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p><a href="ctp:api:type:State">States</a> matching the query.</p>
+    *  <p>References to Product Selection that are assigned to the Product.</p>
     */
-    public java.util.List<com.commercetools.api.models.state.State> getResults() {
+    public java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> getResults() {
         return this.results;
     }
 
@@ -100,11 +102,12 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
         this.total = total;
     }
 
-    public void setResults(final com.commercetools.api.models.state.State... results) {
+    public void setResults(final com.commercetools.api.models.product_selection.AssignedProductSelection... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
     }
 
-    public void setResults(final java.util.List<com.commercetools.api.models.state.State> results) {
+    public void setResults(
+            final java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results) {
         this.results = results;
     }
 
@@ -116,7 +119,7 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StatePagedQueryResponseImpl that = (StatePagedQueryResponseImpl) o;
+        AssignedProductSelectionPagedQueryResponseImpl that = (AssignedProductSelectionPagedQueryResponseImpl) o;
 
         return new EqualsBuilder().append(limit, that.limit)
                 .append(offset, that.offset)

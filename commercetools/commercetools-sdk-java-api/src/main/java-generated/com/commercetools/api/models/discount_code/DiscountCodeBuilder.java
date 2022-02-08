@@ -60,6 +60,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    @Nullable
     private Long applicationVersion;
 
     public DiscountCodeBuilder id(final String id) {
@@ -225,7 +226,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this;
     }
 
-    public DiscountCodeBuilder applicationVersion(final Long applicationVersion) {
+    public DiscountCodeBuilder applicationVersion(@Nullable final Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
@@ -316,6 +317,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this.validUntil;
     }
 
+    @Nullable
     public Long getApplicationVersion() {
         return this.applicationVersion;
     }
@@ -330,7 +332,6 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
         Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
         Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
-        Objects.requireNonNull(applicationVersion, DiscountCode.class + ": applicationVersion is missing");
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);

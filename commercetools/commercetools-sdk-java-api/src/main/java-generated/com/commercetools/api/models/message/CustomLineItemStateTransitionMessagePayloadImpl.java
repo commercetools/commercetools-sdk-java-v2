@@ -64,10 +64,16 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
         return this.quantity;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;
     }

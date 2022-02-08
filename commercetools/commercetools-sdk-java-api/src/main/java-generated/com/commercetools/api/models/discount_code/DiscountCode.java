@@ -150,7 +150,7 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
     *  It can change at any time due to internal and external factors.
     *  It should not be used in customer logic.</p>
     */
-    @NotNull
+
     @JsonProperty("applicationVersion")
     public Long getApplicationVersion();
 

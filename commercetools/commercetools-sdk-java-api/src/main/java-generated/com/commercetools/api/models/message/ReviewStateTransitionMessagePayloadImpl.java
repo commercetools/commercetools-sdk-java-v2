@@ -56,10 +56,16 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
         return this.type;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
     }

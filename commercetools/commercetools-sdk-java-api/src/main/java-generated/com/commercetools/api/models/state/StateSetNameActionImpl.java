@@ -35,6 +35,10 @@ public class StateSetNameActionImpl implements StateSetNameAction, ModelBase {
         return this.action;
     }
 
+    /**
+    *  <p>Value to set.
+    *  If empty, any existing value will be removed.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }

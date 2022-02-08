@@ -101,6 +101,9 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
+    @Nullable
+    private Long totalLineItemQuantity;
+
     public CartBuilder id(final String id) {
         this.id = id;
         return this;
@@ -451,6 +454,11 @@ public class CartBuilder implements Builder<Cart> {
         return this;
     }
 
+    public CartBuilder totalLineItemQuantity(@Nullable final Long totalLineItemQuantity) {
+        this.totalLineItemQuantity = totalLineItemQuantity;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -608,6 +616,11 @@ public class CartBuilder implements Builder<Cart> {
         return this.itemShippingAddresses;
     }
 
+    @Nullable
+    public Long getTotalLineItemQuantity() {
+        return this.totalLineItemQuantity;
+    }
+
     public Cart build() {
         Objects.requireNonNull(id, Cart.class + ": id is missing");
         Objects.requireNonNull(version, Cart.class + ": version is missing");
@@ -626,7 +639,7 @@ public class CartBuilder implements Builder<Cart> {
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
             country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
-            refusedGifts, origin, shippingRateInput, itemShippingAddresses);
+            refusedGifts, origin, shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
     }
 
     /**
@@ -637,7 +650,7 @@ public class CartBuilder implements Builder<Cart> {
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
             country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
-            refusedGifts, origin, shippingRateInput, itemShippingAddresses);
+            refusedGifts, origin, shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
     }
 
     public static CartBuilder of() {
@@ -680,6 +693,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.origin = template.getOrigin();
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.totalLineItemQuantity = template.getTotalLineItemQuantity();
         return builder;
     }
 

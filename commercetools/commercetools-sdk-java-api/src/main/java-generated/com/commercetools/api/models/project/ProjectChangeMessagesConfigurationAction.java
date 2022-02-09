@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.message.MessageConfigurationDraft;
+import com.commercetools.api.models.message.MessagesConfigurationDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -23,9 +23,9 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     @NotNull
     @Valid
     @JsonProperty("messagesConfiguration")
-    public MessageConfigurationDraft getMessagesConfiguration();
+    public MessagesConfigurationDraft getMessagesConfiguration();
 
-    public void setMessagesConfiguration(final MessageConfigurationDraft messagesConfiguration);
+    public void setMessagesConfiguration(final MessagesConfigurationDraft messagesConfiguration);
 
     public static ProjectChangeMessagesConfigurationAction of() {
         return new ProjectChangeMessagesConfigurationActionImpl();

@@ -20,11 +20,11 @@ public class ProjectChangeMessagesConfigurationActionImpl
 
     private String action;
 
-    private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
+    private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
     @JsonCreator
     ProjectChangeMessagesConfigurationActionImpl(
-            @JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
+            @JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
         this.messagesConfiguration = messagesConfiguration;
         this.action = CHANGE_MESSAGES_CONFIGURATION;
     }
@@ -37,12 +37,12 @@ public class ProjectChangeMessagesConfigurationActionImpl
         return this.action;
     }
 
-    public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration() {
+    public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {
         return this.messagesConfiguration;
     }
 
     public void setMessagesConfiguration(
-            final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
+            final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
         this.messagesConfiguration = messagesConfiguration;
     }
 

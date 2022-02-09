@@ -11,23 +11,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ProjectChangeMessagesConfigurationActionBuilder
         implements Builder<ProjectChangeMessagesConfigurationAction> {
 
-    private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
+    private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
-            Function<com.commercetools.api.models.message.MessageConfigurationDraftBuilder, com.commercetools.api.models.message.MessageConfigurationDraftBuilder> builder) {
+            Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder> builder) {
         this.messagesConfiguration = builder
-                .apply(com.commercetools.api.models.message.MessageConfigurationDraftBuilder.of())
+                .apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of())
                 .build();
         return this;
     }
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
-            final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
+            final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
         this.messagesConfiguration = messagesConfiguration;
         return this;
     }
 
-    public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration() {
+    public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {
         return this.messagesConfiguration;
     }
 

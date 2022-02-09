@@ -38,7 +38,7 @@ public interface TermFacetResult extends FacetResult {
     @NotNull
     @Valid
     @JsonProperty("terms")
-    public List<FacetResultTerm> getTerms();
+    public List<FacetTerm> getTerms();
 
     public void setDataType(final TermFacetResultType dataType);
 
@@ -49,9 +49,9 @@ public interface TermFacetResult extends FacetResult {
     public void setOther(final Long other);
 
     @JsonIgnore
-    public void setTerms(final FacetResultTerm... terms);
+    public void setTerms(final FacetTerm... terms);
 
-    public void setTerms(final List<FacetResultTerm> terms);
+    public void setTerms(final List<FacetTerm> terms);
 
     public static TermFacetResult of() {
         return new TermFacetResultImpl();

@@ -33,7 +33,7 @@ public class ProjectImpl implements Project, ModelBase {
 
     private String trialUntil;
 
-    private com.commercetools.api.models.message.MessageConfiguration messages;
+    private com.commercetools.api.models.message.MessagesConfiguration messages;
 
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
@@ -52,7 +52,7 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("languages") final java.util.List<String> languages,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("trialUntil") final String trialUntil,
-            @JsonProperty("messages") final com.commercetools.api.models.message.MessageConfiguration messages,
+            @JsonProperty("messages") final com.commercetools.api.models.message.MessagesConfiguration messages,
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
             @JsonProperty("carts") final com.commercetools.api.models.project.CartsConfiguration carts,
@@ -127,7 +127,7 @@ public class ProjectImpl implements Project, ModelBase {
         return this.trialUntil;
     }
 
-    public com.commercetools.api.models.message.MessageConfiguration getMessages() {
+    public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
         return this.messages;
     }
 
@@ -195,7 +195,7 @@ public class ProjectImpl implements Project, ModelBase {
         this.trialUntil = trialUntil;
     }
 
-    public void setMessages(final com.commercetools.api.models.message.MessageConfiguration messages) {
+    public void setMessages(final com.commercetools.api.models.message.MessagesConfiguration messages) {
         this.messages = messages;
     }
 

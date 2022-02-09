@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LineItemStateTransitionMessagePayloadImpl.class)
-public interface LineItemStateTransitionMessagePayload extends MessagePayload {
+public interface LineItemStateTransitionMessagePayload extends OrderMessagePayload {
 
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 

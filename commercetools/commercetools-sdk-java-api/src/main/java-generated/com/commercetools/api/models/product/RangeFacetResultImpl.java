@@ -19,11 +19,11 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
 
     private com.commercetools.api.models.product.FacetTypes type;
 
-    private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
+    private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
     @JsonCreator
     RangeFacetResultImpl(
-            @JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+            @JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
         this.ranges = ranges;
         this.type = FacetTypes.findEnum("range");
     }
@@ -36,15 +36,15 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
         return this.type;
     }
 
-    public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges() {
+    public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {
         return this.ranges;
     }
 
-    public void setRanges(final com.commercetools.api.models.product.FacetResultRange... ranges) {
+    public void setRanges(final com.commercetools.api.models.product.FacetRange... ranges) {
         this.ranges = new ArrayList<>(Arrays.asList(ranges));
     }
 
-    public void setRanges(final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+    public void setRanges(final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
         this.ranges = ranges;
     }
 

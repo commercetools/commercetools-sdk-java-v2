@@ -10,36 +10,36 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
-    private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
+    private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
-    public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetResultRange... ranges) {
+    public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetRange... ranges) {
         this.ranges = new ArrayList<>(Arrays.asList(ranges));
         return this;
     }
 
     public RangeFacetResultBuilder withRanges(
-            Function<com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder> builder) {
+            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {
         this.ranges = new ArrayList<>();
-        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());
+        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
         return this;
     }
 
     public RangeFacetResultBuilder plusRanges(
-            Function<com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder> builder) {
+            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {
         if (this.ranges == null) {
             this.ranges = new ArrayList<>();
         }
-        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());
+        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
         return this;
     }
 
     public RangeFacetResultBuilder ranges(
-            final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+            final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
         this.ranges = ranges;
         return this;
     }
 
-    public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges() {
+    public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {
         return this.ranges;
     }
 

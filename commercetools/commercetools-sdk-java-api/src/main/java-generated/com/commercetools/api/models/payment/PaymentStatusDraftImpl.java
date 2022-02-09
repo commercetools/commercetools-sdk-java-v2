@@ -43,6 +43,9 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
         return this.interfaceText;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }

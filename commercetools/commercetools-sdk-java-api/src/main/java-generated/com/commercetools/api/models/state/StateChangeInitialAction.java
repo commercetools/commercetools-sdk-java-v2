@@ -18,6 +18,9 @@ public interface StateChangeInitialAction extends StateUpdateAction {
 
     String CHANGE_INITIAL = "changeInitial";
 
+    /**
+    *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+    */
     @NotNull
     @JsonProperty("initial")
     public Boolean getInitial();

@@ -9,7 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.message.MessageConfiguration;
+import com.commercetools.api.models.message.MessagesConfiguration;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -72,7 +72,7 @@ public interface Project {
     @NotNull
     @Valid
     @JsonProperty("messages")
-    public MessageConfiguration getMessages();
+    public MessagesConfiguration getMessages();
 
     @Valid
     @JsonProperty("shippingRateInputType")
@@ -120,7 +120,7 @@ public interface Project {
 
     public void setTrialUntil(final String trialUntil);
 
-    public void setMessages(final MessageConfiguration messages);
+    public void setMessages(final MessagesConfiguration messages);
 
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 

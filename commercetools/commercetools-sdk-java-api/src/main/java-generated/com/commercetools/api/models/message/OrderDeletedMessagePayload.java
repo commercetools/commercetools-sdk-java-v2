@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderDeletedMessagePayloadImpl.class)
-public interface OrderDeletedMessagePayload extends MessagePayload {
+public interface OrderDeletedMessagePayload extends OrderMessagePayload {
 
     String ORDER_DELETED = "OrderDeleted";
 

@@ -20,6 +20,9 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
 
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("state")

@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessagePayloadImpl.class)
-public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePayload {
+public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessagePayload {
 
     String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
 

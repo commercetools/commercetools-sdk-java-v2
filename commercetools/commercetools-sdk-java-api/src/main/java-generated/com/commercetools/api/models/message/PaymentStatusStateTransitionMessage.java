@@ -20,6 +20,9 @@ public interface PaymentStatusStateTransitionMessage extends Message {
 
     String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("state")

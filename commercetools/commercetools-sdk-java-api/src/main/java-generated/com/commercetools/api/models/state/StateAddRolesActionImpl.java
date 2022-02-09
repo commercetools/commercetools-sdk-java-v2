@@ -36,6 +36,9 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
         return this.action;
     }
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
-        ApiMethod<ByProjectKeyProductsKeyByKeyProductSelectionsGet, com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>
+        ApiMethod<ByProjectKeyProductsKeyByKeyProductSelectionsGet, com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsKeyByKeyProductSelectionsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyProductsKeyByKeyProductSelectionsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductsKeyByKeyProductSelectionsGet>,
@@ -51,16 +51,17 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse> executeBlocking(
+    public ApiHttpResponse<com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout,
-            com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse.class);
+            com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return execute(client, com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse.class);
+        return execute(client,
+            com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse.class);
     }
 
     public String getProjectKey() {

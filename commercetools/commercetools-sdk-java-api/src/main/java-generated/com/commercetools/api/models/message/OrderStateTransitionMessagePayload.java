@@ -16,15 +16,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderStateTransitionMessagePayloadImpl.class)
-public interface OrderStateTransitionMessagePayload extends MessagePayload {
+public interface OrderStateTransitionMessagePayload extends OrderMessagePayload {
 
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();

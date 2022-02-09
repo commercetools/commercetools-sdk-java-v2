@@ -128,10 +128,16 @@ public class OrderStateTransitionMessageImpl implements OrderStateTransitionMess
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }

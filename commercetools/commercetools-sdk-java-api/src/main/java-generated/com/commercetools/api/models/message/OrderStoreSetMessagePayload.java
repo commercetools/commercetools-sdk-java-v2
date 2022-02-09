@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderStoreSetMessagePayloadImpl.class)
-public interface OrderStoreSetMessagePayload extends MessagePayload {
+public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
 
     String ORDER_STORE_SET = "OrderStoreSet";
 

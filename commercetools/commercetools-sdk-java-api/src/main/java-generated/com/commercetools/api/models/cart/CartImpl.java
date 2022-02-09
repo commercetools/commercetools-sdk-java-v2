@@ -85,6 +85,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
+    private Long totalLineItemQuantity;
+
     @JsonCreator
     CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -118,7 +120,8 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
+            @JsonProperty("totalLineItemQuantity") final Long totalLineItemQuantity) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -153,6 +156,7 @@ public class CartImpl implements Cart, ModelBase {
         this.origin = origin;
         this.shippingRateInput = shippingRateInput;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.totalLineItemQuantity = totalLineItemQuantity;
     }
 
     public CartImpl() {
@@ -361,6 +365,13 @@ public class CartImpl implements Cart, ModelBase {
         return this.itemShippingAddresses;
     }
 
+    /**
+    *  <p>The sum off all the <a href="ctp:api:type:LineItem">Line Items</a> quantities. Does not take <a href="ctp:api:type:CustomLineItem">Custom Line Items</a> into consideration.</p>
+    */
+    public Long getTotalLineItemQuantity() {
+        return this.totalLineItemQuantity;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -523,6 +534,10 @@ public class CartImpl implements Cart, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
+    public void setTotalLineItemQuantity(final Long totalLineItemQuantity) {
+        this.totalLineItemQuantity = totalLineItemQuantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -567,6 +582,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin, that.origin)
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(totalLineItemQuantity, that.totalLineItemQuantity)
                 .isEquals();
     }
 
@@ -606,6 +622,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin)
                 .append(shippingRateInput)
                 .append(itemShippingAddresses)
+                .append(totalLineItemQuantity)
                 .toHashCode();
     }
 

@@ -22,12 +22,12 @@ public interface RangeFacetResult extends FacetResult {
     @NotNull
     @Valid
     @JsonProperty("ranges")
-    public List<FacetResultRange> getRanges();
+    public List<FacetRange> getRanges();
 
     @JsonIgnore
-    public void setRanges(final FacetResultRange... ranges);
+    public void setRanges(final FacetRange... ranges);
 
-    public void setRanges(final List<FacetResultRange> ranges);
+    public void setRanges(final List<FacetRange> ranges);
 
     public static RangeFacetResult of() {
         return new RangeFacetResultImpl();

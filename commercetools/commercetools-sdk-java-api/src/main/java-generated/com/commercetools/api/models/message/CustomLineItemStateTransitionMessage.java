@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemStateTransitionMessageImpl.class)
-public interface CustomLineItemStateTransitionMessage extends Message {
+public interface CustomLineItemStateTransitionMessage extends OrderMessage {
 
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
@@ -33,11 +33,17 @@ public interface CustomLineItemStateTransitionMessage extends Message {
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("toState")

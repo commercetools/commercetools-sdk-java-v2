@@ -26,7 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartImpl.class)
-public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart> {
+public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>,
+        com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
     *  <p>The unique ID of the cart.</p>
@@ -231,6 +232,13 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
 
+    /**
+    *  <p>The sum off all the <a href="ctp:api:type:LineItem">Line Items</a> quantities. Does not take <a href="ctp:api:type:CustomLineItem">Custom Line Items</a> into consideration.</p>
+    */
+
+    @JsonProperty("totalLineItemQuantity")
+    public Long getTotalLineItemQuantity();
+
     public void setId(final String id);
 
     public void setKey(final String key);
@@ -314,6 +322,8 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
 
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
+    public void setTotalLineItemQuantity(final Long totalLineItemQuantity);
+
     public static Cart of() {
         return new CartImpl();
     }
@@ -354,6 +364,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         instance.setOrigin(template.getOrigin());
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setTotalLineItemQuantity(template.getTotalLineItemQuantity());
         return instance;
     }
 

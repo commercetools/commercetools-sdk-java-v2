@@ -9,17 +9,36 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Resource or object type the State can be assigned to.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface StateTypeEnum {
 
+    /**
+    	<p>Used by <a href="ctp:api:type:Order">Orders</a>.</p>
+
+    */
     StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:LineItem">LineItems</a> and <a href="ctp:api:type:CustomLineItem">CustomLineItems</a> in <a href="ctp:api:type:Cart">Carts</a> and <a href="ctp:api:type:Order">Orders</a>.</p>
 
+    */
     StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:Product">Products</a>.</p>
 
+    */
     StateTypeEnum PRODUCT_STATE = StateTypeEnumEnum.PRODUCT_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:Review">Reviews</a>.</p>
 
+    */
     StateTypeEnum REVIEW_STATE = StateTypeEnumEnum.REVIEW_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:PaymentStatus">PaymentStatus</a> in <a href="ctp:api:type:Payment">Payments</a>.</p>
 
+    */
     StateTypeEnum PAYMENT_STATE = StateTypeEnumEnum.PAYMENT_STATE;
 
     enum StateTypeEnumEnum implements StateTypeEnum {

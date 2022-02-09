@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ParcelItemsUpdatedMessageImpl.class)
-public interface ParcelItemsUpdatedMessage extends Message {
+public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 

@@ -9,18 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart.CartOrigin;
-import com.commercetools.api.models.cart.CartReference;
-import com.commercetools.api.models.cart.CustomLineItem;
-import com.commercetools.api.models.cart.DiscountCodeInfo;
-import com.commercetools.api.models.cart.InventoryMode;
-import com.commercetools.api.models.cart.LineItem;
-import com.commercetools.api.models.cart.RoundingMode;
-import com.commercetools.api.models.cart.ShippingInfo;
-import com.commercetools.api.models.cart.ShippingRateInput;
-import com.commercetools.api.models.cart.TaxCalculationMode;
-import com.commercetools.api.models.cart.TaxMode;
-import com.commercetools.api.models.cart.TaxedPrice;
+import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.common.BaseResource;
@@ -38,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImpl.class)
-public interface Order extends BaseResource, com.commercetools.api.models.DomainResource<Order> {
+public interface Order extends BaseResource, com.commercetools.api.models.DomainResource<Order>, OrderLike<Cart> {
 
     /**
     *  <p>The unique ID of the order.</p>

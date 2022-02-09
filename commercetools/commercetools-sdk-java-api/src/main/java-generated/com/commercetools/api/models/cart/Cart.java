@@ -16,7 +16,6 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
-import com.commercetools.api.models.order.OrderLike;
 import com.commercetools.api.models.order.PaymentInfo;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
@@ -27,7 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartImpl.class)
-public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>, OrderLike<Cart> {
+public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>,
+        com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
     *  <p>The unique ID of the cart.</p>

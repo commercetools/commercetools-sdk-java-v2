@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, ModelBase {
+public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDeliveryPayload, ModelBase {
 
     private String projectKey;
 
@@ -27,27 +27,28 @@ public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, Mod
 
     private Long version;
 
-    private Long oldVersion;
-
     private java.time.ZonedDateTime modifiedAt;
 
+    private Boolean dataErasure;
+
     @JsonCreator
-    ResourceUpdatedDeliveryImpl(@JsonProperty("projectKey") final String projectKey,
+    ResourceDeletedDeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("version") final Long version, @JsonProperty("oldVersion") final Long oldVersion,
-            @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt) {
+            @JsonProperty("version") final Long version,
+            @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt,
+            @JsonProperty("dataErasure") final Boolean dataErasure) {
         this.projectKey = projectKey;
         this.resource = resource;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.version = version;
-        this.oldVersion = oldVersion;
         this.modifiedAt = modifiedAt;
-        this.notificationType = RESOURCE_UPDATED;
+        this.dataErasure = dataErasure;
+        this.notificationType = RESOURCE_DELETED;
     }
 
-    public ResourceUpdatedDeliveryImpl() {
-        this.notificationType = RESOURCE_UPDATED;
+    public ResourceDeletedDeliveryPayloadImpl() {
+        this.notificationType = RESOURCE_DELETED;
     }
 
     public String getProjectKey() {
@@ -70,12 +71,12 @@ public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, Mod
         return this.version;
     }
 
-    public Long getOldVersion() {
-        return this.oldVersion;
-    }
-
     public java.time.ZonedDateTime getModifiedAt() {
         return this.modifiedAt;
+    }
+
+    public Boolean getDataErasure() {
+        return this.dataErasure;
     }
 
     public void setProjectKey(final String projectKey) {
@@ -95,12 +96,12 @@ public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, Mod
         this.version = version;
     }
 
-    public void setOldVersion(final Long oldVersion) {
-        this.oldVersion = oldVersion;
-    }
-
     public void setModifiedAt(final java.time.ZonedDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
+    }
+
+    public void setDataErasure(final Boolean dataErasure) {
+        this.dataErasure = dataErasure;
     }
 
     @Override
@@ -111,15 +112,15 @@ public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, Mod
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ResourceUpdatedDeliveryImpl that = (ResourceUpdatedDeliveryImpl) o;
+        ResourceDeletedDeliveryPayloadImpl that = (ResourceDeletedDeliveryPayloadImpl) o;
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
                 .append(notificationType, that.notificationType)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
-                .append(oldVersion, that.oldVersion)
                 .append(modifiedAt, that.modifiedAt)
+                .append(dataErasure, that.dataErasure)
                 .isEquals();
     }
 
@@ -130,8 +131,8 @@ public class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery, Mod
                 .append(resource)
                 .append(resourceUserProvidedIdentifiers)
                 .append(version)
-                .append(oldVersion)
                 .append(modifiedAt)
+                .append(dataErasure)
                 .toHashCode();
     }
 

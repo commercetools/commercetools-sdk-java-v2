@@ -17,9 +17,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.MessageDeliveryPayloadImpl.class, name = MessageDeliveryPayload.MESSAGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryImpl.class, name = ResourceCreatedDelivery.RESOURCE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryImpl.class, name = ResourceDeletedDelivery.RESOURCE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryImpl.class, name = ResourceUpdatedDelivery.RESOURCE_UPDATED) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayloadImpl.class, name = ResourceCreatedDeliveryPayload.RESOURCE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayloadImpl.class, name = ResourceDeletedDeliveryPayload.RESOURCE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayloadImpl.class, name = ResourceUpdatedDeliveryPayload.RESOURCE_UPDATED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "notificationType", defaultImpl = DeliveryPayloadImpl.class, visible = true)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface DeliveryPayload {

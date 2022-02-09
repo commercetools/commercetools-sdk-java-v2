@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ResourceUpdatedDeliveryBuilder implements Builder<ResourceUpdatedDelivery> {
+public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCreatedDeliveryPayload> {
 
     private String projectKey;
 
@@ -21,21 +21,20 @@ public class ResourceUpdatedDeliveryBuilder implements Builder<ResourceUpdatedDe
 
     private Long version;
 
-    private Long oldVersion;
-
     private java.time.ZonedDateTime modifiedAt;
 
-    public ResourceUpdatedDeliveryBuilder projectKey(final String projectKey) {
+    public ResourceCreatedDeliveryPayloadBuilder projectKey(final String projectKey) {
         this.projectKey = projectKey;
         return this;
     }
 
-    public ResourceUpdatedDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public ResourceCreatedDeliveryPayloadBuilder resource(
+            final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
 
-    public ResourceUpdatedDeliveryBuilder resourceUserProvidedIdentifiers(
+    public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -43,23 +42,18 @@ public class ResourceUpdatedDeliveryBuilder implements Builder<ResourceUpdatedDe
         return this;
     }
 
-    public ResourceUpdatedDeliveryBuilder resourceUserProvidedIdentifiers(
+    public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
-    public ResourceUpdatedDeliveryBuilder version(final Long version) {
+    public ResourceCreatedDeliveryPayloadBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
-    public ResourceUpdatedDeliveryBuilder oldVersion(final Long oldVersion) {
-        this.oldVersion = oldVersion;
-        return this;
-    }
-
-    public ResourceUpdatedDeliveryBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
+    public ResourceCreatedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
     }
@@ -81,43 +75,37 @@ public class ResourceUpdatedDeliveryBuilder implements Builder<ResourceUpdatedDe
         return this.version;
     }
 
-    public Long getOldVersion() {
-        return this.oldVersion;
-    }
-
     public java.time.ZonedDateTime getModifiedAt() {
         return this.modifiedAt;
     }
 
-    public ResourceUpdatedDelivery build() {
-        Objects.requireNonNull(projectKey, ResourceUpdatedDelivery.class + ": projectKey is missing");
-        Objects.requireNonNull(resource, ResourceUpdatedDelivery.class + ": resource is missing");
-        Objects.requireNonNull(version, ResourceUpdatedDelivery.class + ": version is missing");
-        Objects.requireNonNull(oldVersion, ResourceUpdatedDelivery.class + ": oldVersion is missing");
-        Objects.requireNonNull(modifiedAt, ResourceUpdatedDelivery.class + ": modifiedAt is missing");
-        return new ResourceUpdatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
-            oldVersion, modifiedAt);
+    public ResourceCreatedDeliveryPayload build() {
+        Objects.requireNonNull(projectKey, ResourceCreatedDeliveryPayload.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceCreatedDeliveryPayload.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceCreatedDeliveryPayload.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceCreatedDeliveryPayload.class + ": modifiedAt is missing");
+        return new ResourceCreatedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt);
     }
 
     /**
-     * builds ResourceUpdatedDelivery without checking for non null required values
+     * builds ResourceCreatedDeliveryPayload without checking for non null required values
      */
-    public ResourceUpdatedDelivery buildUnchecked() {
-        return new ResourceUpdatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
-            oldVersion, modifiedAt);
+    public ResourceCreatedDeliveryPayload buildUnchecked() {
+        return new ResourceCreatedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt);
     }
 
-    public static ResourceUpdatedDeliveryBuilder of() {
-        return new ResourceUpdatedDeliveryBuilder();
+    public static ResourceCreatedDeliveryPayloadBuilder of() {
+        return new ResourceCreatedDeliveryPayloadBuilder();
     }
 
-    public static ResourceUpdatedDeliveryBuilder of(final ResourceUpdatedDelivery template) {
-        ResourceUpdatedDeliveryBuilder builder = new ResourceUpdatedDeliveryBuilder();
+    public static ResourceCreatedDeliveryPayloadBuilder of(final ResourceCreatedDeliveryPayload template) {
+        ResourceCreatedDeliveryPayloadBuilder builder = new ResourceCreatedDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();
         builder.resource = template.getResource();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.version = template.getVersion();
-        builder.oldVersion = template.getOldVersion();
         builder.modifiedAt = template.getModifiedAt();
         return builder;
     }

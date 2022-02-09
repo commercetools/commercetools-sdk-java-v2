@@ -14,18 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = ResourceUpdatedDeliveryImpl.class)
-public interface ResourceUpdatedDelivery extends DeliveryPayload {
+@JsonDeserialize(as = ResourceCreatedDeliveryPayloadImpl.class)
+public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
 
-    String RESOURCE_UPDATED = "ResourceUpdated";
+    String RESOURCE_CREATED = "ResourceCreated";
 
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
-    @NotNull
-    @JsonProperty("oldVersion")
-    public Long getOldVersion();
 
     @NotNull
     @JsonProperty("modifiedAt")
@@ -33,34 +29,31 @@ public interface ResourceUpdatedDelivery extends DeliveryPayload {
 
     public void setVersion(final Long version);
 
-    public void setOldVersion(final Long oldVersion);
-
     public void setModifiedAt(final ZonedDateTime modifiedAt);
 
-    public static ResourceUpdatedDelivery of() {
-        return new ResourceUpdatedDeliveryImpl();
+    public static ResourceCreatedDeliveryPayload of() {
+        return new ResourceCreatedDeliveryPayloadImpl();
     }
 
-    public static ResourceUpdatedDelivery of(final ResourceUpdatedDelivery template) {
-        ResourceUpdatedDeliveryImpl instance = new ResourceUpdatedDeliveryImpl();
+    public static ResourceCreatedDeliveryPayload of(final ResourceCreatedDeliveryPayload template) {
+        ResourceCreatedDeliveryPayloadImpl instance = new ResourceCreatedDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setVersion(template.getVersion());
-        instance.setOldVersion(template.getOldVersion());
         instance.setModifiedAt(template.getModifiedAt());
         return instance;
     }
 
-    public static ResourceUpdatedDeliveryBuilder builder() {
-        return ResourceUpdatedDeliveryBuilder.of();
+    public static ResourceCreatedDeliveryPayloadBuilder builder() {
+        return ResourceCreatedDeliveryPayloadBuilder.of();
     }
 
-    public static ResourceUpdatedDeliveryBuilder builder(final ResourceUpdatedDelivery template) {
-        return ResourceUpdatedDeliveryBuilder.of(template);
+    public static ResourceCreatedDeliveryPayloadBuilder builder(final ResourceCreatedDeliveryPayload template) {
+        return ResourceCreatedDeliveryPayloadBuilder.of(template);
     }
 
-    default <T> T withResourceUpdatedDelivery(Function<ResourceUpdatedDelivery, T> helper) {
+    default <T> T withResourceCreatedDeliveryPayload(Function<ResourceCreatedDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
 }

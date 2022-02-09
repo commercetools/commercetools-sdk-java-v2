@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ResourceCreatedDeliveryBuilder implements Builder<ResourceCreatedDelivery> {
+public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDeletedDeliveryPayload> {
 
     private String projectKey;
 
@@ -23,17 +23,21 @@ public class ResourceCreatedDeliveryBuilder implements Builder<ResourceCreatedDe
 
     private java.time.ZonedDateTime modifiedAt;
 
-    public ResourceCreatedDeliveryBuilder projectKey(final String projectKey) {
+    @Nullable
+    private Boolean dataErasure;
+
+    public ResourceDeletedDeliveryPayloadBuilder projectKey(final String projectKey) {
         this.projectKey = projectKey;
         return this;
     }
 
-    public ResourceCreatedDeliveryBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public ResourceDeletedDeliveryPayloadBuilder resource(
+            final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
 
-    public ResourceCreatedDeliveryBuilder resourceUserProvidedIdentifiers(
+    public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -41,19 +45,24 @@ public class ResourceCreatedDeliveryBuilder implements Builder<ResourceCreatedDe
         return this;
     }
 
-    public ResourceCreatedDeliveryBuilder resourceUserProvidedIdentifiers(
+    public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
-    public ResourceCreatedDeliveryBuilder version(final Long version) {
+    public ResourceDeletedDeliveryPayloadBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
-    public ResourceCreatedDeliveryBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
+    public ResourceDeletedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
+        return this;
+    }
+
+    public ResourceDeletedDeliveryPayloadBuilder dataErasure(@Nullable final Boolean dataErasure) {
+        this.dataErasure = dataErasure;
         return this;
     }
 
@@ -78,34 +87,40 @@ public class ResourceCreatedDeliveryBuilder implements Builder<ResourceCreatedDe
         return this.modifiedAt;
     }
 
-    public ResourceCreatedDelivery build() {
-        Objects.requireNonNull(projectKey, ResourceCreatedDelivery.class + ": projectKey is missing");
-        Objects.requireNonNull(resource, ResourceCreatedDelivery.class + ": resource is missing");
-        Objects.requireNonNull(version, ResourceCreatedDelivery.class + ": version is missing");
-        Objects.requireNonNull(modifiedAt, ResourceCreatedDelivery.class + ": modifiedAt is missing");
-        return new ResourceCreatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
-            modifiedAt);
+    @Nullable
+    public Boolean getDataErasure() {
+        return this.dataErasure;
+    }
+
+    public ResourceDeletedDeliveryPayload build() {
+        Objects.requireNonNull(projectKey, ResourceDeletedDeliveryPayload.class + ": projectKey is missing");
+        Objects.requireNonNull(resource, ResourceDeletedDeliveryPayload.class + ": resource is missing");
+        Objects.requireNonNull(version, ResourceDeletedDeliveryPayload.class + ": version is missing");
+        Objects.requireNonNull(modifiedAt, ResourceDeletedDeliveryPayload.class + ": modifiedAt is missing");
+        return new ResourceDeletedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt, dataErasure);
     }
 
     /**
-     * builds ResourceCreatedDelivery without checking for non null required values
+     * builds ResourceDeletedDeliveryPayload without checking for non null required values
      */
-    public ResourceCreatedDelivery buildUnchecked() {
-        return new ResourceCreatedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
-            modifiedAt);
+    public ResourceDeletedDeliveryPayload buildUnchecked() {
+        return new ResourceDeletedDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, version,
+            modifiedAt, dataErasure);
     }
 
-    public static ResourceCreatedDeliveryBuilder of() {
-        return new ResourceCreatedDeliveryBuilder();
+    public static ResourceDeletedDeliveryPayloadBuilder of() {
+        return new ResourceDeletedDeliveryPayloadBuilder();
     }
 
-    public static ResourceCreatedDeliveryBuilder of(final ResourceCreatedDelivery template) {
-        ResourceCreatedDeliveryBuilder builder = new ResourceCreatedDeliveryBuilder();
+    public static ResourceDeletedDeliveryPayloadBuilder of(final ResourceDeletedDeliveryPayload template) {
+        ResourceDeletedDeliveryPayloadBuilder builder = new ResourceDeletedDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();
         builder.resource = template.getResource();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.version = template.getVersion();
         builder.modifiedAt = template.getModifiedAt();
+        builder.dataErasure = template.getDataErasure();
         return builder;
     }
 

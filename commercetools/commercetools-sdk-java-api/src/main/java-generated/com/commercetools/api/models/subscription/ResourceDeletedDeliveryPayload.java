@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-@JsonDeserialize(as = ResourceDeletedDeliveryImpl.class)
-public interface ResourceDeletedDelivery extends DeliveryPayload {
+@JsonDeserialize(as = ResourceDeletedDeliveryPayloadImpl.class)
+public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
 
     String RESOURCE_DELETED = "ResourceDeleted";
 
@@ -36,12 +36,12 @@ public interface ResourceDeletedDelivery extends DeliveryPayload {
 
     public void setDataErasure(final Boolean dataErasure);
 
-    public static ResourceDeletedDelivery of() {
-        return new ResourceDeletedDeliveryImpl();
+    public static ResourceDeletedDeliveryPayload of() {
+        return new ResourceDeletedDeliveryPayloadImpl();
     }
 
-    public static ResourceDeletedDelivery of(final ResourceDeletedDelivery template) {
-        ResourceDeletedDeliveryImpl instance = new ResourceDeletedDeliveryImpl();
+    public static ResourceDeletedDeliveryPayload of(final ResourceDeletedDeliveryPayload template) {
+        ResourceDeletedDeliveryPayloadImpl instance = new ResourceDeletedDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
@@ -51,15 +51,15 @@ public interface ResourceDeletedDelivery extends DeliveryPayload {
         return instance;
     }
 
-    public static ResourceDeletedDeliveryBuilder builder() {
-        return ResourceDeletedDeliveryBuilder.of();
+    public static ResourceDeletedDeliveryPayloadBuilder builder() {
+        return ResourceDeletedDeliveryPayloadBuilder.of();
     }
 
-    public static ResourceDeletedDeliveryBuilder builder(final ResourceDeletedDelivery template) {
-        return ResourceDeletedDeliveryBuilder.of(template);
+    public static ResourceDeletedDeliveryPayloadBuilder builder(final ResourceDeletedDeliveryPayload template) {
+        return ResourceDeletedDeliveryPayloadBuilder.of(template);
     }
 
-    default <T> T withResourceDeletedDelivery(Function<ResourceDeletedDelivery, T> helper) {
+    default <T> T withResourceDeletedDeliveryPayload(Function<ResourceDeletedDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ResourceCreatedDeliveryImpl implements ResourceCreatedDelivery, ModelBase {
+public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDeliveryPayload, ModelBase {
 
     private String projectKey;
 
@@ -30,7 +30,7 @@ public class ResourceCreatedDeliveryImpl implements ResourceCreatedDelivery, Mod
     private java.time.ZonedDateTime modifiedAt;
 
     @JsonCreator
-    ResourceCreatedDeliveryImpl(@JsonProperty("projectKey") final String projectKey,
+    ResourceCreatedDeliveryPayloadImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("version") final Long version,
@@ -43,7 +43,7 @@ public class ResourceCreatedDeliveryImpl implements ResourceCreatedDelivery, Mod
         this.notificationType = RESOURCE_CREATED;
     }
 
-    public ResourceCreatedDeliveryImpl() {
+    public ResourceCreatedDeliveryPayloadImpl() {
         this.notificationType = RESOURCE_CREATED;
     }
 
@@ -100,7 +100,7 @@ public class ResourceCreatedDeliveryImpl implements ResourceCreatedDelivery, Mod
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ResourceCreatedDeliveryImpl that = (ResourceCreatedDeliveryImpl) o;
+        ResourceCreatedDeliveryPayloadImpl that = (ResourceCreatedDeliveryPayloadImpl) o;
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
                 .append(notificationType, that.notificationType)

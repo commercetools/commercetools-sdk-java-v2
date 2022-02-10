@@ -11,6 +11,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String conflictingProductTypeId;
 
     private String conflictingProductTypeName;
@@ -19,6 +21,19 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public AttributeDefinitionTypeConflictErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public AttributeDefinitionTypeConflictErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -42,6 +57,10 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
@@ -56,13 +75,14 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     public AttributeDefinitionTypeConflictError build() {
         Objects.requireNonNull(message, AttributeDefinitionTypeConflictError.class + ": message is missing");
+        Objects.requireNonNull(values, AttributeDefinitionTypeConflictError.class + ": values are missing");
         Objects.requireNonNull(conflictingProductTypeId,
             AttributeDefinitionTypeConflictError.class + ": conflictingProductTypeId is missing");
         Objects.requireNonNull(conflictingProductTypeName,
             AttributeDefinitionTypeConflictError.class + ": conflictingProductTypeName is missing");
         Objects.requireNonNull(conflictingAttributeName,
             AttributeDefinitionTypeConflictError.class + ": conflictingAttributeName is missing");
-        return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
+        return new AttributeDefinitionTypeConflictErrorImpl(message, values, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }
 
@@ -70,7 +90,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
      * builds AttributeDefinitionTypeConflictError without checking for non null required values
      */
     public AttributeDefinitionTypeConflictError buildUnchecked() {
-        return new AttributeDefinitionTypeConflictErrorImpl(message, conflictingProductTypeId,
+        return new AttributeDefinitionTypeConflictErrorImpl(message, values, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }
 
@@ -81,6 +101,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     public static AttributeDefinitionTypeConflictErrorBuilder of(final AttributeDefinitionTypeConflictError template) {
         AttributeDefinitionTypeConflictErrorBuilder builder = new AttributeDefinitionTypeConflictErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.conflictingProductTypeId = template.getConflictingProductTypeId();
         builder.conflictingProductTypeName = template.getConflictingProductTypeName();
         builder.conflictingAttributeName = template.getConflictingAttributeName();

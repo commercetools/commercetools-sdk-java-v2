@@ -21,15 +21,19 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String extensionId;
 
     private String extensionKey;
 
     @JsonCreator
     ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("extensionId") final String extensionId,
             @JsonProperty("extensionKey") final String extensionKey) {
         this.message = message;
+        this.values = values;
         this.extensionId = extensionId;
         this.extensionKey = extensionKey;
         this.code = EXTENSION_NO_RESPONSE;
@@ -47,6 +51,10 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getExtensionId() {
         return this.extensionId;
     }
@@ -57,6 +65,13 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setExtensionId(final String extensionId) {
@@ -79,6 +94,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
                 .isEquals();
@@ -88,6 +104,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(extensionId)
                 .append(extensionKey)
                 .toHashCode();

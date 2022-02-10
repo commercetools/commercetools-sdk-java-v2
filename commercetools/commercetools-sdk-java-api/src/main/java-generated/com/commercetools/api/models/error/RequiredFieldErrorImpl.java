@@ -21,11 +21,16 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String field;
 
     @JsonCreator
-    RequiredFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field) {
+    RequiredFieldErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonProperty("field") final String field) {
         this.message = message;
+        this.values = values;
         this.field = field;
         this.code = REQUIRED_FIELD;
     }
@@ -42,12 +47,23 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getField() {
         return this.field;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setField(final String field) {
@@ -66,13 +82,14 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(field, that.field)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(field).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(field).toHashCode();
     }
 
 }

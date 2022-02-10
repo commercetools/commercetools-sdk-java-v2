@@ -21,14 +21,18 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String subject;
 
     private String itemId;
 
     @JsonCreator
     InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
         this.message = message;
+        this.values = values;
         this.subject = subject;
         this.itemId = itemId;
         this.code = INVALID_ITEM_SHIPPING_DETAILS;
@@ -46,6 +50,10 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getSubject() {
         return this.subject;
     }
@@ -56,6 +64,13 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setSubject(final String subject) {
@@ -78,6 +93,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(subject, that.subject)
                 .append(itemId, that.itemId)
                 .isEquals();
@@ -85,7 +101,12 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(subject).append(itemId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(subject)
+                .append(itemId)
+                .toHashCode();
     }
 
 }

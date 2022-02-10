@@ -21,9 +21,13 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     @JsonCreator
-    ResourceSizeLimitExceededErrorImpl(@JsonProperty("message") final String message) {
+    ResourceSizeLimitExceededErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
+        this.values = values;
         this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }
 
@@ -39,8 +43,19 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     @Override
@@ -53,12 +68,15 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
 
         ResourceSizeLimitExceededErrorImpl that = (ResourceSizeLimitExceededErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).toHashCode();
     }
 
 }

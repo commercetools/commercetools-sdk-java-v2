@@ -23,6 +23,7 @@ public interface InvalidJsonInputError extends ErrorObject {
     public static InvalidJsonInputError of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

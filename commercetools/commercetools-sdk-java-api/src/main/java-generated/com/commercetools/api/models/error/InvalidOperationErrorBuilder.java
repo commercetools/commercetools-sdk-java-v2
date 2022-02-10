@@ -11,8 +11,23 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InvalidOperationErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InvalidOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InvalidOperationErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InvalidOperationError build() {
         Objects.requireNonNull(message, InvalidOperationError.class + ": message is missing");
-        return new InvalidOperationErrorImpl(message);
+        Objects.requireNonNull(values, InvalidOperationError.class + ": values are missing");
+        return new InvalidOperationErrorImpl(message, values);
     }
 
     /**
      * builds InvalidOperationError without checking for non null required values
      */
     public InvalidOperationError buildUnchecked() {
-        return new InvalidOperationErrorImpl(message);
+        return new InvalidOperationErrorImpl(message, values);
     }
 
     public static InvalidOperationErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
     public static InvalidOperationErrorBuilder of(final InvalidOperationError template) {
         InvalidOperationErrorBuilder builder = new InvalidOperationErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

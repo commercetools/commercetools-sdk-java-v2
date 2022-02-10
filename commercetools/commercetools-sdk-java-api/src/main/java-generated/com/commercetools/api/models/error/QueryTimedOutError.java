@@ -23,6 +23,7 @@ public interface QueryTimedOutError extends ErrorObject {
     public static QueryTimedOutError of(final QueryTimedOutError template) {
         QueryTimedOutErrorImpl instance = new QueryTimedOutErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

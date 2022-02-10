@@ -23,6 +23,7 @@ public interface OverCapacityError extends ErrorObject {
     public static OverCapacityError of(final OverCapacityError template) {
         OverCapacityErrorImpl instance = new OverCapacityErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

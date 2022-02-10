@@ -42,6 +42,7 @@ public interface DuplicateFieldError extends ErrorObject {
     public static DuplicateFieldError of(final DuplicateFieldError template) {
         DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
         instance.setConflictingResource(template.getConflictingResource());

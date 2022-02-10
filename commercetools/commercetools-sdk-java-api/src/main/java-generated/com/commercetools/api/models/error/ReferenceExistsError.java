@@ -29,6 +29,7 @@ public interface ReferenceExistsError extends ErrorObject {
     public static ReferenceExistsError of(final ReferenceExistsError template) {
         ReferenceExistsErrorImpl instance = new ReferenceExistsErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setReferencedBy(template.getReferencedBy());
         return instance;
     }

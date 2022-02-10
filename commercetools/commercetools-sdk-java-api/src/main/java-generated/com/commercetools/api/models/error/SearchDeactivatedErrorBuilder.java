@@ -11,8 +11,23 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public SearchDeactivatedErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public SearchDeactivatedErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public SearchDeactivatedErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public SearchDeactivatedError build() {
         Objects.requireNonNull(message, SearchDeactivatedError.class + ": message is missing");
-        return new SearchDeactivatedErrorImpl(message);
+        Objects.requireNonNull(values, SearchDeactivatedError.class + ": values are missing");
+        return new SearchDeactivatedErrorImpl(message, values);
     }
 
     /**
      * builds SearchDeactivatedError without checking for non null required values
      */
     public SearchDeactivatedError buildUnchecked() {
-        return new SearchDeactivatedErrorImpl(message);
+        return new SearchDeactivatedErrorImpl(message, values);
     }
 
     public static SearchDeactivatedErrorBuilder of() {
@@ -39,6 +59,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     public static SearchDeactivatedErrorBuilder of(final SearchDeactivatedError template) {
         SearchDeactivatedErrorBuilder builder = new SearchDeactivatedErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

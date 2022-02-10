@@ -14,6 +14,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedMessage;
 
@@ -24,6 +26,19 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     public ExtensionUpdateActionsFailedErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public ExtensionUpdateActionsFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public ExtensionUpdateActionsFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -61,6 +76,10 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
@@ -77,9 +96,10 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     public ExtensionUpdateActionsFailedError build() {
         Objects.requireNonNull(message, ExtensionUpdateActionsFailedError.class + ": message is missing");
+        Objects.requireNonNull(values, ExtensionUpdateActionsFailedError.class + ": values are missing");
         Objects.requireNonNull(errorByExtension,
             ExtensionUpdateActionsFailedError.class + ": errorByExtension is missing");
-        return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
+        return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,
             errorByExtension);
     }
 
@@ -87,7 +107,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
      * builds ExtensionUpdateActionsFailedError without checking for non null required values
      */
     public ExtensionUpdateActionsFailedError buildUnchecked() {
-        return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
+        return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,
             errorByExtension);
     }
 
@@ -98,6 +118,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     public static ExtensionUpdateActionsFailedErrorBuilder of(final ExtensionUpdateActionsFailedError template) {
         ExtensionUpdateActionsFailedErrorBuilder builder = new ExtensionUpdateActionsFailedErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.localizedMessage = template.getLocalizedMessage();
         builder.extensionExtraInfo = template.getExtensionExtraInfo();
         builder.errorByExtension = template.getErrorByExtension();

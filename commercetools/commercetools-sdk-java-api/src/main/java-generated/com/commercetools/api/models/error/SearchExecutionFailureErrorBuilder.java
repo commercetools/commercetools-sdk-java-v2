@@ -11,8 +11,23 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public SearchExecutionFailureErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public SearchExecutionFailureErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public SearchExecutionFailureErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public SearchExecutionFailureError build() {
         Objects.requireNonNull(message, SearchExecutionFailureError.class + ": message is missing");
-        return new SearchExecutionFailureErrorImpl(message);
+        Objects.requireNonNull(values, SearchExecutionFailureError.class + ": values are missing");
+        return new SearchExecutionFailureErrorImpl(message, values);
     }
 
     /**
      * builds SearchExecutionFailureError without checking for non null required values
      */
     public SearchExecutionFailureError buildUnchecked() {
-        return new SearchExecutionFailureErrorImpl(message);
+        return new SearchExecutionFailureErrorImpl(message, values);
     }
 
     public static SearchExecutionFailureErrorBuilder of() {
@@ -39,6 +59,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
     public static SearchExecutionFailureErrorBuilder of(final SearchExecutionFailureError template) {
         SearchExecutionFailureErrorBuilder builder = new SearchExecutionFailureErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

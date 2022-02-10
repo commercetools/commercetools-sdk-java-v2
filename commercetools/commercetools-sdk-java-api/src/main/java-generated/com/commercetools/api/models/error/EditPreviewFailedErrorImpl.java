@@ -21,12 +21,16 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
     @JsonCreator
     EditPreviewFailedErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
         this.message = message;
+        this.values = values;
         this.result = result;
         this.code = EDIT_PREVIEW_FAILED;
     }
@@ -43,12 +47,23 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {
         return this.result;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setResult(final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
@@ -67,13 +82,14 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(result, that.result)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(result).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(result).toHashCode();
     }
 
 }

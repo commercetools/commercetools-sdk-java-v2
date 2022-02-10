@@ -21,6 +21,8 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String productId;
 
     private Integer variantId;
@@ -35,11 +37,13 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
     @JsonCreator
     MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId,
             @JsonProperty("currency") final String currency, @JsonProperty("country") final String country,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel) {
         this.message = message;
+        this.values = values;
         this.productId = productId;
         this.variantId = variantId;
         this.currency = currency;
@@ -59,6 +63,10 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
     public String getMessage() {
         return this.message;
+    }
+
+    public Map<String, java.lang.Object> values() {
+        return values;
     }
 
     public String getProductId() {
@@ -93,6 +101,13 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setProductId(final String productId) {
@@ -132,6 +147,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(currency, that.currency)
@@ -145,6 +161,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(productId)
                 .append(variantId)
                 .append(currency)

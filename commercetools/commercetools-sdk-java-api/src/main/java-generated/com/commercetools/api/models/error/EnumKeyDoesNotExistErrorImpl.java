@@ -21,15 +21,19 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String conflictingEnumKey;
 
     private String conflictingAttributeName;
 
     @JsonCreator
     EnumKeyDoesNotExistErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingEnumKey") final String conflictingEnumKey,
             @JsonProperty("conflictingAttributeName") final String conflictingAttributeName) {
         this.message = message;
+        this.values = values;
         this.conflictingEnumKey = conflictingEnumKey;
         this.conflictingAttributeName = conflictingAttributeName;
         this.code = ENUM_KEY_DOES_NOT_EXIST;
@@ -47,6 +51,10 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getConflictingEnumKey() {
         return this.conflictingEnumKey;
     }
@@ -57,6 +65,13 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setConflictingEnumKey(final String conflictingEnumKey) {
@@ -79,6 +94,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(conflictingEnumKey, that.conflictingEnumKey)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
@@ -88,6 +104,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(conflictingEnumKey)
                 .append(conflictingAttributeName)
                 .toHashCode();

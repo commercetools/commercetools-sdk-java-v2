@@ -11,8 +11,23 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public ShippingMethodDoesNotMatchCartErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public ShippingMethodDoesNotMatchCartErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public ShippingMethodDoesNotMatchCartErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public ShippingMethodDoesNotMatchCartError build() {
         Objects.requireNonNull(message, ShippingMethodDoesNotMatchCartError.class + ": message is missing");
-        return new ShippingMethodDoesNotMatchCartErrorImpl(message);
+        Objects.requireNonNull(values, ShippingMethodDoesNotMatchCartError.class + ": values are missing");
+        return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);
     }
 
     /**
      * builds ShippingMethodDoesNotMatchCartError without checking for non null required values
      */
     public ShippingMethodDoesNotMatchCartError buildUnchecked() {
-        return new ShippingMethodDoesNotMatchCartErrorImpl(message);
+        return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);
     }
 
     public static ShippingMethodDoesNotMatchCartErrorBuilder of() {
@@ -39,6 +59,7 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
     public static ShippingMethodDoesNotMatchCartErrorBuilder of(final ShippingMethodDoesNotMatchCartError template) {
         ShippingMethodDoesNotMatchCartErrorBuilder builder = new ShippingMethodDoesNotMatchCartErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

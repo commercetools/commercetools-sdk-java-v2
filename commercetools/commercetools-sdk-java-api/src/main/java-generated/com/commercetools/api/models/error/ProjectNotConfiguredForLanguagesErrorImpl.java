@@ -21,12 +21,16 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private java.util.List<String> languages;
 
     @JsonCreator
     ProjectNotConfiguredForLanguagesErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("languages") final java.util.List<String> languages) {
         this.message = message;
+        this.values = values;
         this.languages = languages;
         this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }
@@ -43,12 +47,23 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setLanguages(final String... languages) {
@@ -71,13 +86,14 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(languages, that.languages)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(languages).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(languages).toHashCode();
     }
 
 }

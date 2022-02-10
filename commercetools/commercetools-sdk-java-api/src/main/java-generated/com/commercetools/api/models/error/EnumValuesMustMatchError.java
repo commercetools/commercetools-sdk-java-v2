@@ -23,6 +23,7 @@ public interface EnumValuesMustMatchError extends ErrorObject {
     public static EnumValuesMustMatchError of(final EnumValuesMustMatchError template) {
         EnumValuesMustMatchErrorImpl instance = new EnumValuesMustMatchErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

@@ -11,8 +11,23 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public QueryComplexityLimitExceededErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public QueryComplexityLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public QueryComplexityLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public QueryComplexityLimitExceededError build() {
         Objects.requireNonNull(message, QueryComplexityLimitExceededError.class + ": message is missing");
-        return new QueryComplexityLimitExceededErrorImpl(message);
+        Objects.requireNonNull(values, QueryComplexityLimitExceededError.class + ": values are missing");
+        return new QueryComplexityLimitExceededErrorImpl(message, values);
     }
 
     /**
      * builds QueryComplexityLimitExceededError without checking for non null required values
      */
     public QueryComplexityLimitExceededError buildUnchecked() {
-        return new QueryComplexityLimitExceededErrorImpl(message);
+        return new QueryComplexityLimitExceededErrorImpl(message, values);
     }
 
     public static QueryComplexityLimitExceededErrorBuilder of() {
@@ -39,6 +59,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     public static QueryComplexityLimitExceededErrorBuilder of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorBuilder builder = new QueryComplexityLimitExceededErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

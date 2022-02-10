@@ -21,9 +21,13 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     @JsonCreator
-    InvalidJsonInputErrorImpl(@JsonProperty("message") final String message) {
+    InvalidJsonInputErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
+        this.values = values;
         this.code = INVALID_JSON_INPUT;
     }
 
@@ -39,8 +43,19 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     @Override
@@ -53,12 +68,15 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
 
         InvalidJsonInputErrorImpl that = (InvalidJsonInputErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).toHashCode();
     }
 
 }

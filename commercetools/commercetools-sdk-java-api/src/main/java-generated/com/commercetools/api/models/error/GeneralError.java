@@ -23,6 +23,7 @@ public interface GeneralError extends ErrorObject {
     public static GeneralError of(final GeneralError template) {
         GeneralErrorImpl instance = new GeneralErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

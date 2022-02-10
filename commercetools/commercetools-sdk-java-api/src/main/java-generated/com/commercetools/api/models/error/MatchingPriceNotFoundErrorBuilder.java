@@ -14,6 +14,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String productId;
 
     private Integer variantId;
@@ -32,6 +34,19 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     public MatchingPriceNotFoundErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public MatchingPriceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -85,6 +100,10 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getProductId() {
         return this.productId;
     }
@@ -115,18 +134,19 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     public MatchingPriceNotFoundError build() {
         Objects.requireNonNull(message, MatchingPriceNotFoundError.class + ": message is missing");
+        Objects.requireNonNull(values, MatchingPriceNotFoundError.class + ": values are missing");
         Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");
         Objects.requireNonNull(variantId, MatchingPriceNotFoundError.class + ": variantId is missing");
-        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
-            channel);
+        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,
+            customerGroup, channel);
     }
 
     /**
      * builds MatchingPriceNotFoundError without checking for non null required values
      */
     public MatchingPriceNotFoundError buildUnchecked() {
-        return new MatchingPriceNotFoundErrorImpl(message, productId, variantId, currency, country, customerGroup,
-            channel);
+        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,
+            customerGroup, channel);
     }
 
     public static MatchingPriceNotFoundErrorBuilder of() {
@@ -136,6 +156,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     public static MatchingPriceNotFoundErrorBuilder of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorBuilder builder = new MatchingPriceNotFoundErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.currency = template.getCurrency();

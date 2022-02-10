@@ -11,8 +11,23 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public PendingOperationErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public PendingOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public PendingOperationErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public PendingOperationError build() {
         Objects.requireNonNull(message, PendingOperationError.class + ": message is missing");
-        return new PendingOperationErrorImpl(message);
+        Objects.requireNonNull(values, PendingOperationError.class + ": values are missing");
+        return new PendingOperationErrorImpl(message, values);
     }
 
     /**
      * builds PendingOperationError without checking for non null required values
      */
     public PendingOperationError buildUnchecked() {
-        return new PendingOperationErrorImpl(message);
+        return new PendingOperationErrorImpl(message, values);
     }
 
     public static PendingOperationErrorBuilder of() {
@@ -39,6 +59,7 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
     public static PendingOperationErrorBuilder of(final PendingOperationError template) {
         PendingOperationErrorBuilder builder = new PendingOperationErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

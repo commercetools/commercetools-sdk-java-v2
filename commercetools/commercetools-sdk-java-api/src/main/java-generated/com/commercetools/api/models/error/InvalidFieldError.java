@@ -45,6 +45,7 @@ public interface InvalidFieldError extends ErrorObject {
     public static InvalidFieldError of(final InvalidFieldError template) {
         InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
         instance.setAllowedValues(template.getAllowedValues());

@@ -12,6 +12,8 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String field;
 
     private java.lang.Object duplicateValue;
@@ -20,6 +22,19 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     public DuplicateFieldWithConflictingResourceErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DuplicateFieldWithConflictingResourceErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public DuplicateFieldWithConflictingResourceErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -43,6 +58,10 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getField() {
         return this.field;
     }
@@ -57,19 +76,22 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     public DuplicateFieldWithConflictingResourceError build() {
         Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");
+        Objects.requireNonNull(values, DuplicateFieldWithConflictingResourceError.class + ": values are missing");
         Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");
         Objects.requireNonNull(duplicateValue,
             DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");
         Objects.requireNonNull(conflictingResource,
             DuplicateFieldWithConflictingResourceError.class + ": conflictingResource is missing");
-        return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
+        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,
+            conflictingResource);
     }
 
     /**
      * builds DuplicateFieldWithConflictingResourceError without checking for non null required values
      */
     public DuplicateFieldWithConflictingResourceError buildUnchecked() {
-        return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
+        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,
+            conflictingResource);
     }
 
     public static DuplicateFieldWithConflictingResourceErrorBuilder of() {
@@ -80,6 +102,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
             final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorBuilder builder = new DuplicateFieldWithConflictingResourceErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.field = template.getField();
         builder.duplicateValue = template.getDuplicateValue();
         builder.conflictingResource = template.getConflictingResource();

@@ -23,6 +23,7 @@ public interface PendingOperationError extends ErrorObject {
     public static PendingOperationError of(final PendingOperationError template) {
         PendingOperationErrorImpl instance = new PendingOperationErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

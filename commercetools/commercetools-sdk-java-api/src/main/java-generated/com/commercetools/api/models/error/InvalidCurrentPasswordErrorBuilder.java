@@ -11,8 +11,23 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InvalidCurrentPasswordErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InvalidCurrentPasswordErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InvalidCurrentPasswordErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InvalidCurrentPasswordError build() {
         Objects.requireNonNull(message, InvalidCurrentPasswordError.class + ": message is missing");
-        return new InvalidCurrentPasswordErrorImpl(message);
+        Objects.requireNonNull(values, InvalidCurrentPasswordError.class + ": values are missing");
+        return new InvalidCurrentPasswordErrorImpl(message, values);
     }
 
     /**
      * builds InvalidCurrentPasswordError without checking for non null required values
      */
     public InvalidCurrentPasswordError buildUnchecked() {
-        return new InvalidCurrentPasswordErrorImpl(message);
+        return new InvalidCurrentPasswordErrorImpl(message, values);
     }
 
     public static InvalidCurrentPasswordErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
     public static InvalidCurrentPasswordErrorBuilder of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorBuilder builder = new InvalidCurrentPasswordErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

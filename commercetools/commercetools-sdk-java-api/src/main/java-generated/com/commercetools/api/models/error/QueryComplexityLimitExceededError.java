@@ -23,6 +23,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     public static QueryComplexityLimitExceededError of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorImpl instance = new QueryComplexityLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

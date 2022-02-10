@@ -37,6 +37,7 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
     public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {
         EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setConflictingEnumKey(template.getConflictingEnumKey());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;

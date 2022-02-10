@@ -11,8 +11,23 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InvalidJsonInputErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InvalidJsonInputErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InvalidJsonInputErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InvalidJsonInputError build() {
         Objects.requireNonNull(message, InvalidJsonInputError.class + ": message is missing");
-        return new InvalidJsonInputErrorImpl(message);
+        Objects.requireNonNull(values, InvalidJsonInputError.class + ": values are missing");
+        return new InvalidJsonInputErrorImpl(message, values);
     }
 
     /**
      * builds InvalidJsonInputError without checking for non null required values
      */
     public InvalidJsonInputError buildUnchecked() {
-        return new InvalidJsonInputErrorImpl(message);
+        return new InvalidJsonInputErrorImpl(message, values);
     }
 
     public static InvalidJsonInputErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     public static InvalidJsonInputErrorBuilder of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorBuilder builder = new InvalidJsonInputErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

@@ -90,7 +90,14 @@ public interface ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, Object> values();
+
     public void setMessage(final String message);
+
+    @JsonAnySetter
+    public void setValue(String key, Object value);
 
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);

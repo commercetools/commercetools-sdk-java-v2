@@ -23,6 +23,7 @@ public interface BadGatewayError extends ErrorObject {
     public static BadGatewayError of(final BadGatewayError template) {
         BadGatewayErrorImpl instance = new BadGatewayErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

@@ -11,8 +11,23 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InternalConstraintViolatedErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InternalConstraintViolatedErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InternalConstraintViolatedErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InternalConstraintViolatedError build() {
         Objects.requireNonNull(message, InternalConstraintViolatedError.class + ": message is missing");
-        return new InternalConstraintViolatedErrorImpl(message);
+        Objects.requireNonNull(values, InternalConstraintViolatedError.class + ": values are missing");
+        return new InternalConstraintViolatedErrorImpl(message, values);
     }
 
     /**
      * builds InternalConstraintViolatedError without checking for non null required values
      */
     public InternalConstraintViolatedError buildUnchecked() {
-        return new InternalConstraintViolatedErrorImpl(message);
+        return new InternalConstraintViolatedErrorImpl(message, values);
     }
 
     public static InternalConstraintViolatedErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
     public static InternalConstraintViolatedErrorBuilder of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorBuilder builder = new InternalConstraintViolatedErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

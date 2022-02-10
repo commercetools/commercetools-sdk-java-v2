@@ -23,6 +23,7 @@ public interface InvalidTokenError extends ErrorObject {
     public static InvalidTokenError of(final InvalidTokenError template) {
         InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

@@ -31,6 +31,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     public static AttributeNameDoesNotExistError of(final AttributeNameDoesNotExistError template) {
         AttributeNameDoesNotExistErrorImpl instance = new AttributeNameDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setInvalidAttributeName(template.getInvalidAttributeName());
         return instance;
     }

@@ -23,6 +23,7 @@ public interface InvalidSubjectError extends ErrorObject {
     public static InvalidSubjectError of(final InvalidSubjectError template) {
         InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

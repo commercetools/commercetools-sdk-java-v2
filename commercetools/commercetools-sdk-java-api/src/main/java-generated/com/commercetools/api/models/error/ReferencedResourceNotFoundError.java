@@ -42,6 +42,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     public static ReferencedResourceNotFoundError of(final ReferencedResourceNotFoundError template) {
         ReferencedResourceNotFoundErrorImpl instance = new ReferencedResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setTypeId(template.getTypeId());
         instance.setId(template.getId());
         instance.setKey(template.getKey());

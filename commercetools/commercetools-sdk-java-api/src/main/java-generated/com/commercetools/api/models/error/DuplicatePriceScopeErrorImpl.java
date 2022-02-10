@@ -21,12 +21,16 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
 
     @JsonCreator
     DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
         this.message = message;
+        this.values = values;
         this.conflictingPrices = conflictingPrices;
         this.code = DUPLICATE_PRICE_SCOPE;
     }
@@ -43,12 +47,23 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices() {
         return this.conflictingPrices;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setConflictingPrices(final com.commercetools.api.models.common.Price... conflictingPrices) {
@@ -72,13 +87,18 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(conflictingPrices, that.conflictingPrices)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(conflictingPrices).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(conflictingPrices)
+                .toHashCode();
     }
 
 }

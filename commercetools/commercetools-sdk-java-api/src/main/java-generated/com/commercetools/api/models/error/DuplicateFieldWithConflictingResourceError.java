@@ -47,6 +47,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
             final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorImpl instance = new DuplicateFieldWithConflictingResourceErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
         instance.setConflictingResource(template.getConflictingResource());

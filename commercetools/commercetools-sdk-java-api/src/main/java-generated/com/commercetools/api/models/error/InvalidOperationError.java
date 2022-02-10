@@ -23,6 +23,7 @@ public interface InvalidOperationError extends ErrorObject {
     public static InvalidOperationError of(final InvalidOperationError template) {
         InvalidOperationErrorImpl instance = new InvalidOperationErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

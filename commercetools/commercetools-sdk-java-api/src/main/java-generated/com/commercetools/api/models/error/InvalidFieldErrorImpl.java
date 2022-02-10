@@ -21,6 +21,8 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String field;
 
     private java.lang.Object invalidValue;
@@ -28,10 +30,13 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     private java.util.List<java.lang.Object> allowedValues;
 
     @JsonCreator
-    InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field,
+    InvalidFieldErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonProperty("field") final String field,
             @JsonProperty("invalidValue") final java.lang.Object invalidValue,
             @JsonProperty("allowedValues") final java.util.List<java.lang.Object> allowedValues) {
         this.message = message;
+        this.values = values;
         this.field = field;
         this.invalidValue = invalidValue;
         this.allowedValues = allowedValues;
@@ -50,6 +55,10 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getField() {
         return this.field;
     }
@@ -64,6 +73,13 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setField(final String field) {
@@ -94,6 +110,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(field, that.field)
                 .append(invalidValue, that.invalidValue)
                 .append(allowedValues, that.allowedValues)
@@ -104,6 +121,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(field)
                 .append(invalidValue)
                 .append(allowedValues)

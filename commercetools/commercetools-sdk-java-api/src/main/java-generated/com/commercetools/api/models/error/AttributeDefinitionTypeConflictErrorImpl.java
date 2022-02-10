@@ -21,6 +21,8 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String conflictingProductTypeId;
 
     private String conflictingProductTypeName;
@@ -29,10 +31,12 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
 
     @JsonCreator
     AttributeDefinitionTypeConflictErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingProductTypeId") final String conflictingProductTypeId,
             @JsonProperty("conflictingProductTypeName") final String conflictingProductTypeName,
             @JsonProperty("conflictingAttributeName") final String conflictingAttributeName) {
         this.message = message;
+        this.values = values;
         this.conflictingProductTypeId = conflictingProductTypeId;
         this.conflictingProductTypeName = conflictingProductTypeName;
         this.conflictingAttributeName = conflictingAttributeName;
@@ -51,6 +55,10 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
@@ -65,6 +73,13 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setConflictingProductTypeId(final String conflictingProductTypeId) {
@@ -91,6 +106,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(conflictingProductTypeId, that.conflictingProductTypeId)
                 .append(conflictingProductTypeName, that.conflictingProductTypeName)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
@@ -101,6 +117,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(conflictingProductTypeId)
                 .append(conflictingProductTypeName)
                 .append(conflictingAttributeName)

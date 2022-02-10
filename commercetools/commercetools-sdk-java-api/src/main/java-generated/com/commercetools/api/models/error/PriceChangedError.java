@@ -40,6 +40,7 @@ public interface PriceChangedError extends ErrorObject {
     public static PriceChangedError of(final PriceChangedError template) {
         PriceChangedErrorImpl instance = new PriceChangedErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setLineItems(template.getLineItems());
         instance.setShipping(template.getShipping());
         return instance;

@@ -11,8 +11,23 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InvalidInputErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InvalidInputErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InvalidInputErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InvalidInputError build() {
         Objects.requireNonNull(message, InvalidInputError.class + ": message is missing");
-        return new InvalidInputErrorImpl(message);
+        Objects.requireNonNull(values, InvalidInputError.class + ": values are missing");
+        return new InvalidInputErrorImpl(message, values);
     }
 
     /**
      * builds InvalidInputError without checking for non null required values
      */
     public InvalidInputError buildUnchecked() {
-        return new InvalidInputErrorImpl(message);
+        return new InvalidInputErrorImpl(message, values);
     }
 
     public static InvalidInputErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     public static InvalidInputErrorBuilder of(final InvalidInputError template) {
         InvalidInputErrorBuilder builder = new InvalidInputErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

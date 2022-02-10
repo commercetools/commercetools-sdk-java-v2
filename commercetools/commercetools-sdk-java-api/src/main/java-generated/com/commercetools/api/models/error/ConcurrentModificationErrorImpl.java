@@ -21,12 +21,16 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private Long currentVersion;
 
     @JsonCreator
     ConcurrentModificationErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("currentVersion") final Long currentVersion) {
         this.message = message;
+        this.values = values;
         this.currentVersion = currentVersion;
         this.code = CONCURRENT_MODIFICATION;
     }
@@ -43,12 +47,23 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public Long getCurrentVersion() {
         return this.currentVersion;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setCurrentVersion(final Long currentVersion) {
@@ -67,13 +82,18 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(currentVersion, that.currentVersion)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(currentVersion).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(currentVersion)
+                .toHashCode();
     }
 
 }

@@ -21,12 +21,16 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private com.commercetools.api.models.error.VariantValues variantValues;
 
     @JsonCreator
     DuplicateVariantValuesErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("variantValues") final com.commercetools.api.models.error.VariantValues variantValues) {
         this.message = message;
+        this.values = values;
         this.variantValues = variantValues;
         this.code = DUPLICATE_VARIANT_VALUES;
     }
@@ -43,12 +47,23 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public com.commercetools.api.models.error.VariantValues getVariantValues() {
         return this.variantValues;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setVariantValues(final com.commercetools.api.models.error.VariantValues variantValues) {
@@ -67,13 +82,18 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(variantValues, that.variantValues)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(variantValues).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(variantValues)
+                .toHashCode();
     }
 
 }

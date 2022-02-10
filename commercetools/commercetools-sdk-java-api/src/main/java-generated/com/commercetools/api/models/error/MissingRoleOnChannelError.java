@@ -46,6 +46,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     public static MissingRoleOnChannelError of(final MissingRoleOnChannelError template) {
         MissingRoleOnChannelErrorImpl instance = new MissingRoleOnChannelErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setChannel(template.getChannel());
         instance.setMissingRole(template.getMissingRole());
         return instance;

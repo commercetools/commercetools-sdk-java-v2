@@ -37,6 +37,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     public static DuplicateAttributeValuesError of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setAttributes(template.getAttributes());
         return instance;
     }

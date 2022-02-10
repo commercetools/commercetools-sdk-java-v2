@@ -11,8 +11,23 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public InvalidCredentialsErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public InvalidCredentialsErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public InvalidCredentialsErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public InvalidCredentialsError build() {
         Objects.requireNonNull(message, InvalidCredentialsError.class + ": message is missing");
-        return new InvalidCredentialsErrorImpl(message);
+        Objects.requireNonNull(values, InvalidCredentialsError.class + ": values are missing");
+        return new InvalidCredentialsErrorImpl(message, values);
     }
 
     /**
      * builds InvalidCredentialsError without checking for non null required values
      */
     public InvalidCredentialsError buildUnchecked() {
-        return new InvalidCredentialsErrorImpl(message);
+        return new InvalidCredentialsErrorImpl(message, values);
     }
 
     public static InvalidCredentialsErrorBuilder of() {
@@ -39,6 +59,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     public static InvalidCredentialsErrorBuilder of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorBuilder builder = new InvalidCredentialsErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

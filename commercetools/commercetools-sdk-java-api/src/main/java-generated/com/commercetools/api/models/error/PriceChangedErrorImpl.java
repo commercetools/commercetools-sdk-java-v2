@@ -21,15 +21,19 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private java.util.List<String> lineItems;
 
     private Boolean shipping;
 
     @JsonCreator
     PriceChangedErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("lineItems") final java.util.List<String> lineItems,
             @JsonProperty("shipping") final Boolean shipping) {
         this.message = message;
+        this.values = values;
         this.lineItems = lineItems;
         this.shipping = shipping;
         this.code = PRICE_CHANGED;
@@ -47,6 +51,10 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public java.util.List<String> getLineItems() {
         return this.lineItems;
     }
@@ -57,6 +65,13 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setLineItems(final String... lineItems) {
@@ -83,6 +98,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(shipping, that.shipping)
                 .isEquals();
@@ -90,7 +106,12 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(lineItems).append(shipping).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(lineItems)
+                .append(shipping)
+                .toHashCode();
     }
 
 }

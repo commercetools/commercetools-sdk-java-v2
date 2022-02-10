@@ -21,12 +21,16 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private java.util.List<String> duplicates;
 
     @JsonCreator
     DuplicateEnumValuesErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("duplicates") final java.util.List<String> duplicates) {
         this.message = message;
+        this.values = values;
         this.duplicates = duplicates;
         this.code = DUPLICATE_ENUM_VALUES;
     }
@@ -43,12 +47,23 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public java.util.List<String> getDuplicates() {
         return this.duplicates;
     }
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setDuplicates(final String... duplicates) {
@@ -71,13 +86,14 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(duplicates, that.duplicates)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(duplicates).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(duplicates).toHashCode();
     }
 
 }

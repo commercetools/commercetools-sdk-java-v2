@@ -23,6 +23,7 @@ public interface NotEnabledError extends ErrorObject {
     public static NotEnabledError of(final NotEnabledError template) {
         NotEnabledErrorImpl instance = new NotEnabledErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

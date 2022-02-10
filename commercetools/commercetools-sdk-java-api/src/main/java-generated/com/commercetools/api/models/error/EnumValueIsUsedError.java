@@ -23,6 +23,7 @@ public interface EnumValueIsUsedError extends ErrorObject {
     public static EnumValueIsUsedError of(final EnumValueIsUsedError template) {
         EnumValueIsUsedErrorImpl instance = new EnumValueIsUsedErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

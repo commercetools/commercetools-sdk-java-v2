@@ -11,8 +11,23 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public BadGatewayErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public BadGatewayErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public BadGatewayErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public BadGatewayError build() {
         Objects.requireNonNull(message, BadGatewayError.class + ": message is missing");
-        return new BadGatewayErrorImpl(message);
+        Objects.requireNonNull(values, BadGatewayError.class + ": values are missing");
+        return new BadGatewayErrorImpl(message, values);
     }
 
     /**
      * builds BadGatewayError without checking for non null required values
      */
     public BadGatewayError buildUnchecked() {
-        return new BadGatewayErrorImpl(message);
+        return new BadGatewayErrorImpl(message, values);
     }
 
     public static BadGatewayErrorBuilder of() {
@@ -39,6 +59,7 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
     public static BadGatewayErrorBuilder of(final BadGatewayError template) {
         BadGatewayErrorBuilder builder = new BadGatewayErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

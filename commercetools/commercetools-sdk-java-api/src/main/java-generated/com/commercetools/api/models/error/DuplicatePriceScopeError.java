@@ -37,6 +37,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     public static DuplicatePriceScopeError of(final DuplicatePriceScopeError template) {
         DuplicatePriceScopeErrorImpl instance = new DuplicatePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setConflictingPrices(template.getConflictingPrices());
         return instance;
     }

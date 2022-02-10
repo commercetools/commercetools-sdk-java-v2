@@ -11,8 +11,23 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     public SearchFacetPathNotFoundErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public SearchFacetPathNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public SearchFacetPathNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -20,16 +35,21 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public SearchFacetPathNotFoundError build() {
         Objects.requireNonNull(message, SearchFacetPathNotFoundError.class + ": message is missing");
-        return new SearchFacetPathNotFoundErrorImpl(message);
+        Objects.requireNonNull(values, SearchFacetPathNotFoundError.class + ": values are missing");
+        return new SearchFacetPathNotFoundErrorImpl(message, values);
     }
 
     /**
      * builds SearchFacetPathNotFoundError without checking for non null required values
      */
     public SearchFacetPathNotFoundError buildUnchecked() {
-        return new SearchFacetPathNotFoundErrorImpl(message);
+        return new SearchFacetPathNotFoundErrorImpl(message, values);
     }
 
     public static SearchFacetPathNotFoundErrorBuilder of() {
@@ -39,6 +59,7 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
     public static SearchFacetPathNotFoundErrorBuilder of(final SearchFacetPathNotFoundError template) {
         SearchFacetPathNotFoundErrorBuilder builder = new SearchFacetPathNotFoundErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         return builder;
     }
 

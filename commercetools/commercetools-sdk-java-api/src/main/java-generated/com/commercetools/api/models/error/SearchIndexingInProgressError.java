@@ -23,6 +23,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     public static SearchIndexingInProgressError of(final SearchIndexingInProgressError template) {
         SearchIndexingInProgressErrorImpl instance = new SearchIndexingInProgressErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

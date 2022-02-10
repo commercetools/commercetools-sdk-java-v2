@@ -12,10 +12,25 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -51,21 +66,26 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
     public DuplicateAttributeValuesError build() {
         Objects.requireNonNull(message, DuplicateAttributeValuesError.class + ": message is missing");
+        Objects.requireNonNull(values, DuplicateAttributeValuesError.class + ": values are missing");
         Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");
-        return new DuplicateAttributeValuesErrorImpl(message, attributes);
+        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);
     }
 
     /**
      * builds DuplicateAttributeValuesError without checking for non null required values
      */
     public DuplicateAttributeValuesError buildUnchecked() {
-        return new DuplicateAttributeValuesErrorImpl(message, attributes);
+        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);
     }
 
     public static DuplicateAttributeValuesErrorBuilder of() {
@@ -75,6 +95,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     public static DuplicateAttributeValuesErrorBuilder of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorBuilder builder = new DuplicateAttributeValuesErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.attributes = template.getAttributes();
         return builder;
     }

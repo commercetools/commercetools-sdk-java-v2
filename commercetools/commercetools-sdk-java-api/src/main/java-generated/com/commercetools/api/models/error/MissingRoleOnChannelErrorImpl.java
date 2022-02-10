@@ -21,15 +21,19 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
 
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
     @JsonCreator
     MissingRoleOnChannelErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
             @JsonProperty("missingRole") final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {
         this.message = message;
+        this.values = values;
         this.channel = channel;
         this.missingRole = missingRole;
         this.code = MISSING_ROLE_ON_CHANNEL;
@@ -45,6 +49,10 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
 
     public String getMessage() {
         return this.message;
+    }
+
+    public Map<String, java.lang.Object> values() {
+        return values;
     }
 
     /**
@@ -63,6 +71,13 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
@@ -85,6 +100,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(channel, that.channel)
                 .append(missingRole, that.missingRole)
                 .isEquals();
@@ -94,6 +110,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(channel)
                 .append(missingRole)
                 .toHashCode();

@@ -23,6 +23,7 @@ public interface InvalidInputError extends ErrorObject {
     public static InvalidInputError of(final InvalidInputError template) {
         InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

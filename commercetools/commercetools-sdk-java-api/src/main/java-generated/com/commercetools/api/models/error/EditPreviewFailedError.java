@@ -34,6 +34,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     public static EditPreviewFailedError of(final EditPreviewFailedError template) {
         EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setResult(template.getResult());
         return instance;
     }

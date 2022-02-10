@@ -11,6 +11,8 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String conflictingProductTypeId;
 
     private String conflictingProductTypeName;
@@ -19,6 +21,19 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     public AttributeDefinitionAlreadyExistsErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public AttributeDefinitionAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public AttributeDefinitionAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -44,6 +59,10 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
@@ -58,13 +77,14 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     public AttributeDefinitionAlreadyExistsError build() {
         Objects.requireNonNull(message, AttributeDefinitionAlreadyExistsError.class + ": message is missing");
+        Objects.requireNonNull(values, AttributeDefinitionAlreadyExistsError.class + ": values are missing");
         Objects.requireNonNull(conflictingProductTypeId,
             AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeId is missing");
         Objects.requireNonNull(conflictingProductTypeName,
             AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeName is missing");
         Objects.requireNonNull(conflictingAttributeName,
             AttributeDefinitionAlreadyExistsError.class + ": conflictingAttributeName is missing");
-        return new AttributeDefinitionAlreadyExistsErrorImpl(message, conflictingProductTypeId,
+        return new AttributeDefinitionAlreadyExistsErrorImpl(message, values, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }
 
@@ -72,7 +92,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
      * builds AttributeDefinitionAlreadyExistsError without checking for non null required values
      */
     public AttributeDefinitionAlreadyExistsError buildUnchecked() {
-        return new AttributeDefinitionAlreadyExistsErrorImpl(message, conflictingProductTypeId,
+        return new AttributeDefinitionAlreadyExistsErrorImpl(message, values, conflictingProductTypeId,
             conflictingProductTypeName, conflictingAttributeName);
     }
 
@@ -84,6 +104,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
             final AttributeDefinitionAlreadyExistsError template) {
         AttributeDefinitionAlreadyExistsErrorBuilder builder = new AttributeDefinitionAlreadyExistsErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.conflictingProductTypeId = template.getConflictingProductTypeId();
         builder.conflictingProductTypeName = template.getConflictingProductTypeName();
         builder.conflictingAttributeName = template.getConflictingAttributeName();

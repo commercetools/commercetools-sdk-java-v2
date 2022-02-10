@@ -13,6 +13,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String taxCategoryId;
 
     @Nullable
@@ -23,6 +25,19 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     public MissingTaxRateForCountryErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public MissingTaxRateForCountryErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public MissingTaxRateForCountryErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -45,6 +60,10 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getTaxCategoryId() {
         return this.taxCategoryId;
     }
@@ -61,15 +80,16 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     public MissingTaxRateForCountryError build() {
         Objects.requireNonNull(message, MissingTaxRateForCountryError.class + ": message is missing");
+        Objects.requireNonNull(values, MissingTaxRateForCountryError.class + ": values are missing");
         Objects.requireNonNull(taxCategoryId, MissingTaxRateForCountryError.class + ": taxCategoryId is missing");
-        return new MissingTaxRateForCountryErrorImpl(message, taxCategoryId, country, state);
+        return new MissingTaxRateForCountryErrorImpl(message, values, taxCategoryId, country, state);
     }
 
     /**
      * builds MissingTaxRateForCountryError without checking for non null required values
      */
     public MissingTaxRateForCountryError buildUnchecked() {
-        return new MissingTaxRateForCountryErrorImpl(message, taxCategoryId, country, state);
+        return new MissingTaxRateForCountryErrorImpl(message, values, taxCategoryId, country, state);
     }
 
     public static MissingTaxRateForCountryErrorBuilder of() {
@@ -79,6 +99,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     public static MissingTaxRateForCountryErrorBuilder of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorBuilder builder = new MissingTaxRateForCountryErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.taxCategoryId = template.getTaxCategoryId();
         builder.country = template.getCountry();
         builder.state = template.getState();

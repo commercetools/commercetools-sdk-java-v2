@@ -13,6 +13,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 
     @Nullable
@@ -23,6 +25,19 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     public ReferencedResourceNotFoundErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -46,6 +61,10 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
@@ -62,15 +81,16 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     public ReferencedResourceNotFoundError build() {
         Objects.requireNonNull(message, ReferencedResourceNotFoundError.class + ": message is missing");
+        Objects.requireNonNull(values, ReferencedResourceNotFoundError.class + ": values are missing");
         Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
-        return new ReferencedResourceNotFoundErrorImpl(message, typeId, id, key);
+        return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);
     }
 
     /**
      * builds ReferencedResourceNotFoundError without checking for non null required values
      */
     public ReferencedResourceNotFoundError buildUnchecked() {
-        return new ReferencedResourceNotFoundErrorImpl(message, typeId, id, key);
+        return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);
     }
 
     public static ReferencedResourceNotFoundErrorBuilder of() {
@@ -80,6 +100,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     public static ReferencedResourceNotFoundErrorBuilder of(final ReferencedResourceNotFoundError template) {
         ReferencedResourceNotFoundErrorBuilder builder = new ReferencedResourceNotFoundErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.typeId = template.getTypeId();
         builder.id = template.getId();
         builder.key = template.getKey();

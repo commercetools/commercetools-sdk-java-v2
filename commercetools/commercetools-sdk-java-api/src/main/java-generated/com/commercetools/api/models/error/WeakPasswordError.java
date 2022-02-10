@@ -23,6 +23,7 @@ public interface WeakPasswordError extends ErrorObject {
     public static WeakPasswordError of(final WeakPasswordError template) {
         WeakPasswordErrorImpl instance = new WeakPasswordErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

@@ -11,10 +11,25 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String invalidAttributeName;
 
     public AttributeNameDoesNotExistErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public AttributeNameDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public AttributeNameDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -27,22 +42,27 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getInvalidAttributeName() {
         return this.invalidAttributeName;
     }
 
     public AttributeNameDoesNotExistError build() {
         Objects.requireNonNull(message, AttributeNameDoesNotExistError.class + ": message is missing");
+        Objects.requireNonNull(values, AttributeNameDoesNotExistError.class + ": values are missing");
         Objects.requireNonNull(invalidAttributeName,
             AttributeNameDoesNotExistError.class + ": invalidAttributeName is missing");
-        return new AttributeNameDoesNotExistErrorImpl(message, invalidAttributeName);
+        return new AttributeNameDoesNotExistErrorImpl(message, values, invalidAttributeName);
     }
 
     /**
      * builds AttributeNameDoesNotExistError without checking for non null required values
      */
     public AttributeNameDoesNotExistError buildUnchecked() {
-        return new AttributeNameDoesNotExistErrorImpl(message, invalidAttributeName);
+        return new AttributeNameDoesNotExistErrorImpl(message, values, invalidAttributeName);
     }
 
     public static AttributeNameDoesNotExistErrorBuilder of() {
@@ -52,6 +72,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     public static AttributeNameDoesNotExistErrorBuilder of(final AttributeNameDoesNotExistError template) {
         AttributeNameDoesNotExistErrorBuilder builder = new AttributeNameDoesNotExistErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.invalidAttributeName = template.getInvalidAttributeName();
         return builder;
     }

@@ -23,6 +23,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     public static InvalidCredentialsError of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

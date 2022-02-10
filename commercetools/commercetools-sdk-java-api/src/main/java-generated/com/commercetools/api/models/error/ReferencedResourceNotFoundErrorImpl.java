@@ -21,6 +21,8 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
 
     private String id;
@@ -29,9 +31,11 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
 
     @JsonCreator
     ReferencedResourceNotFoundErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,
             @JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.message = message;
+        this.values = values;
         this.typeId = typeId;
         this.id = id;
         this.key = key;
@@ -50,6 +54,10 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
         return this.message;
     }
 
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
@@ -64,6 +72,13 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setTypeId(final com.commercetools.api.models.common.ReferenceTypeId typeId) {
@@ -90,6 +105,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(typeId, that.typeId)
                 .append(id, that.id)
                 .append(key, that.key)
@@ -100,6 +116,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(typeId)
                 .append(id)
                 .append(key)

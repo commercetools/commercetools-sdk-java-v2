@@ -23,6 +23,7 @@ public interface ObjectNotFoundError extends ErrorObject {
     public static ObjectNotFoundError of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

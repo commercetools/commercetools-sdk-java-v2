@@ -23,6 +23,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     public static LanguageUsedInStoresError of(final LanguageUsedInStoresError template) {
         LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

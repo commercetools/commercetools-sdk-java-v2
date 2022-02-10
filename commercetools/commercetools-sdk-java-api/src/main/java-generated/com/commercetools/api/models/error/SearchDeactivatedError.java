@@ -23,6 +23,7 @@ public interface SearchDeactivatedError extends ErrorObject {
     public static SearchDeactivatedError of(final SearchDeactivatedError template) {
         SearchDeactivatedErrorImpl instance = new SearchDeactivatedErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

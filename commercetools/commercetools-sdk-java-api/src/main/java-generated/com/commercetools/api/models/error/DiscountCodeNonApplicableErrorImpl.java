@@ -21,6 +21,8 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     private String message;
 
+    private Map<String, java.lang.Object> values;
+
     private String discountCode;
 
     private String reason;
@@ -35,12 +37,14 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     @JsonCreator
     DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("discountCode") final String discountCode, @JsonProperty("reason") final String reason,
             @JsonProperty("dicountCodeId") final String dicountCodeId,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("validityCheckTime") final java.time.ZonedDateTime validityCheckTime) {
         this.message = message;
+        this.values = values;
         this.discountCode = discountCode;
         this.reason = reason;
         this.dicountCodeId = dicountCodeId;
@@ -60,6 +64,10 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     public String getMessage() {
         return this.message;
+    }
+
+    public Map<String, java.lang.Object> values() {
+        return values;
     }
 
     public String getDiscountCode() {
@@ -88,6 +96,13 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
     }
 
     public void setDiscountCode(final String discountCode) {
@@ -126,6 +141,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(values, that.values)
                 .append(discountCode, that.discountCode)
                 .append(reason, that.reason)
                 .append(dicountCodeId, that.dicountCodeId)
@@ -139,6 +155,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
+                .append(values)
                 .append(discountCode)
                 .append(reason)
                 .append(dicountCodeId)

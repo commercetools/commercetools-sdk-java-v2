@@ -13,6 +13,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     @Nullable
     private String discountCode;
 
@@ -33,6 +35,19 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     public DiscountCodeNonApplicableErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public DiscountCodeNonApplicableErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public DiscountCodeNonApplicableErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -71,6 +86,10 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     @Nullable
     public String getDiscountCode() {
         return this.discountCode;
@@ -103,7 +122,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     public DiscountCodeNonApplicableError build() {
         Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
-        return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom,
+        Objects.requireNonNull(values, DiscountCodeNonApplicableError.class + ": values are missing");
+        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, dicountCodeId, validFrom,
             validUntil, validityCheckTime);
     }
 
@@ -111,7 +131,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
      * builds DiscountCodeNonApplicableError without checking for non null required values
      */
     public DiscountCodeNonApplicableError buildUnchecked() {
-        return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom,
+        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, dicountCodeId, validFrom,
             validUntil, validityCheckTime);
     }
 
@@ -122,6 +142,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     public static DiscountCodeNonApplicableErrorBuilder of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorBuilder builder = new DiscountCodeNonApplicableErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.discountCode = template.getDiscountCode();
         builder.reason = template.getReason();
         builder.dicountCodeId = template.getDicountCodeId();

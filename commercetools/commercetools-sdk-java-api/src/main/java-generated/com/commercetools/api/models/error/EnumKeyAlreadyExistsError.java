@@ -37,6 +37,7 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
     public static EnumKeyAlreadyExistsError of(final EnumKeyAlreadyExistsError template) {
         EnumKeyAlreadyExistsErrorImpl instance = new EnumKeyAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setConflictingEnumKey(template.getConflictingEnumKey());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;

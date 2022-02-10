@@ -54,6 +54,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setDiscountCode(template.getDiscountCode());
         instance.setReason(template.getReason());
         instance.setDicountCodeId(template.getDicountCodeId());

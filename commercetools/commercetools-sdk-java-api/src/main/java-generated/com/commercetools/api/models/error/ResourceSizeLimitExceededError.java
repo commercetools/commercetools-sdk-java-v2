@@ -23,6 +23,7 @@ public interface ResourceSizeLimitExceededError extends ErrorObject {
     public static ResourceSizeLimitExceededError of(final ResourceSizeLimitExceededError template) {
         ResourceSizeLimitExceededErrorImpl instance = new ResourceSizeLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

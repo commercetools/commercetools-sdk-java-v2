@@ -34,6 +34,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     public static DuplicateEnumValuesError of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setDuplicates(template.getDuplicates());
         return instance;
     }

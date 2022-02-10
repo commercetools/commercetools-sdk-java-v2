@@ -11,10 +11,25 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     private String message;
 
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
     private String field;
 
     public RequiredFieldErrorBuilder message(final String message) {
         this.message = message;
+        return this;
+    }
+
+    public RequiredFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    public RequiredFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
         return this;
     }
 
@@ -27,21 +42,26 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this.message;
     }
 
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
     public String getField() {
         return this.field;
     }
 
     public RequiredFieldError build() {
         Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");
+        Objects.requireNonNull(values, RequiredFieldError.class + ": values are missing");
         Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
-        return new RequiredFieldErrorImpl(message, field);
+        return new RequiredFieldErrorImpl(message, values, field);
     }
 
     /**
      * builds RequiredFieldError without checking for non null required values
      */
     public RequiredFieldError buildUnchecked() {
-        return new RequiredFieldErrorImpl(message, field);
+        return new RequiredFieldErrorImpl(message, values, field);
     }
 
     public static RequiredFieldErrorBuilder of() {
@@ -51,6 +71,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     public static RequiredFieldErrorBuilder of(final RequiredFieldError template) {
         RequiredFieldErrorBuilder builder = new RequiredFieldErrorBuilder();
         builder.message = template.getMessage();
+        builder.values = template.values();
         builder.field = template.getField();
         return builder;
     }

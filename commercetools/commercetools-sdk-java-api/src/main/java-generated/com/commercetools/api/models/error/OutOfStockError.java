@@ -43,6 +43,7 @@ public interface OutOfStockError extends ErrorObject {
     public static OutOfStockError of(final OutOfStockError template) {
         OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setLineItems(template.getLineItems());
         instance.setSkus(template.getSkus());
         return instance;

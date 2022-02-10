@@ -32,6 +32,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     public static MaxResourceLimitExceededError of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
+
         instance.setExceededResource(template.getExceededResource());
         return instance;
     }

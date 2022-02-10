@@ -23,6 +23,7 @@ public interface InternalConstraintViolatedError extends ErrorObject {
     public static InternalConstraintViolatedError of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorImpl instance = new InternalConstraintViolatedErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

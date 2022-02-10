@@ -23,6 +23,7 @@ public interface AccessDeniedError extends ErrorObject {
     public static AccessDeniedError of(final AccessDeniedError template) {
         AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();
         instance.setMessage(template.getMessage());
+
         return instance;
     }
 

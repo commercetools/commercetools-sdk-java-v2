@@ -10,8 +10,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Component
 public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationManager {
@@ -45,8 +51,13 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                     client
             );
             return Mono.fromFuture(() -> supplier.getToken().thenApply(token -> {
-                authentication.setAuthenticated(true);
-                return authentication;
+                final Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+                SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_USER");
+                Collection<GrantedAuthority> updatedAuthorities = new ArrayList<>();
+                updatedAuthorities.add(authority);
+                updatedAuthorities.addAll(authorities);
+
+                return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), authentication.getCredentials(), updatedAuthorities);
             }));
         }
         return null;

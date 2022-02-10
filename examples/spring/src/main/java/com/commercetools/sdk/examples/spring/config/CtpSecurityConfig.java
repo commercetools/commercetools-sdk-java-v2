@@ -42,23 +42,8 @@ public class CtpSecurityConfig {
                 .pathMatchers("/").permitAll()
                 .pathMatchers("/home").permitAll()
                 .pathMatchers( "/p/**").permitAll()
-                .anyExchange().access(this::currentUserMatchesPath).and()
+                .anyExchange().authenticated().and()
+                .formLogin().and()
                 .build();
-    }
-
-    private Mono<AuthorizationDecision> currentUserMatchesPath(Mono<Authentication> authentication, AuthorizationContext context) {
-        return authentication
-                .map(authenticationManager::authenticate)
-                .map( am -> am
-                            .map(a -> context.getVariables().get("user").equals(a.getName()))
-                            .map(aBoolean -> new AuthorizationDecision(aBoolean))
-                );
-    }
-
-    @Bean
-    public MapReactiveUserDetailsService userDetailsService() {
-        UserDetails rob = User.withUsername("test").password("test123").roles("USER").build();
-        UserDetails admin = User.withUsername("admin").password("admin123").roles("USER","ADMIN").build();
-        return new MapReactiveUserDetailsService(rob, admin);
     }
 }

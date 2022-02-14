@@ -55,24 +55,25 @@
 <span class="source-line-no">042</span><span id="line.42">    public static ReferencedResourceNotFoundError of(final ReferencedResourceNotFoundError template) {</span>
 <span class="source-line-no">043</span><span id="line.43">        ReferencedResourceNotFoundErrorImpl instance = new ReferencedResourceNotFoundErrorImpl();</span>
 <span class="source-line-no">044</span><span id="line.44">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">045</span><span id="line.45">        instance.setTypeId(template.getTypeId());</span>
-<span class="source-line-no">046</span><span id="line.46">        instance.setId(template.getId());</span>
-<span class="source-line-no">047</span><span id="line.47">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">048</span><span id="line.48">        return instance;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static ReferencedResourceNotFoundErrorBuilder builder() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return ReferencedResourceNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public static ReferencedResourceNotFoundErrorBuilder builder(final ReferencedResourceNotFoundError template) {</span>
-<span class="source-line-no">056</span><span id="line.56">        return ReferencedResourceNotFoundErrorBuilder.of(template);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    default &lt;T&gt; T withReferencedResourceNotFoundError(Function&lt;ReferencedResourceNotFoundError, T&gt; helper) {</span>
-<span class="source-line-no">060</span><span id="line.60">        return helper.apply(this);</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62">}</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">        instance.setTypeId(template.getTypeId());</span>
+<span class="source-line-no">047</span><span id="line.47">        instance.setId(template.getId());</span>
+<span class="source-line-no">048</span><span id="line.48">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">049</span><span id="line.49">        return instance;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public static ReferencedResourceNotFoundErrorBuilder builder() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return ReferencedResourceNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public static ReferencedResourceNotFoundErrorBuilder builder(final ReferencedResourceNotFoundError template) {</span>
+<span class="source-line-no">057</span><span id="line.57">        return ReferencedResourceNotFoundErrorBuilder.of(template);</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    default &lt;T&gt; T withReferencedResourceNotFoundError(Function&lt;ReferencedResourceNotFoundError, T&gt; helper) {</span>
+<span class="source-line-no">061</span><span id="line.61">        return helper.apply(this);</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63">}</span>
 
 
 

@@ -16,11 +16,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var evenRowColor = "even-row-color";
-var oddRowColor = "odd-row-color";
-var tableTab = "table-tab";
-var activeTableTab = "active-table-tab";
-var pathtoroot = "../../../../../";
+<script type="text/javascript">var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -54,7 +50,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method.detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search">SEARCH:</label>
@@ -76,11 +72,16 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl class="notes">
-<dt>All Known Implementing Classes:</dt>
-<dd><code><a href="FacetResultRangeImpl.html" title="class in com.commercetools.api.models.product">FacetResultRangeImpl</a></code></dd>
+<dt>All Superinterfaces:</dt>
+<dd><code><a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.15">FacetResultRange</a></span></div>
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.9">FacetResultRange</a></span><span class="extends-implements">
+extends <a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a></span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="FacetRange.html" title="interface in com.commercetools.api.models.product"><code>FacetRange</code></a> instead</div>
+</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -88,262 +89,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
-<div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="FacetResultRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetResultRangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder()">builder</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="FacetResultRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetResultRangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.product.FacetResultRange)">builder</a></span>&#8203;(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCount()">getCount</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFrom()">getFrom</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFromStr()">getFromStr</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMax()">getMax</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMean()">getMean</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMin()">getMin</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProductCount()">getProductCount</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTo()">getTo</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getToStr()">getToStr</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotal()">getTotal</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.product.FacetResultRange)">of</a></span>&#8203;(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCount(java.lang.Long)">setCount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setFrom(java.lang.Double)">setFrom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;from)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setFromStr(java.lang.String)">setFromStr</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fromStr)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setMax(java.lang.Double)">setMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;max)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setMean(java.lang.Double)">setMean</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;mean)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setMin(java.lang.Double)">setMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;min)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setProductCount(java.lang.Long)">setProductCount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;productCount)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setTo(java.lang.Double)">setTo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;to)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setToStr(java.lang.String)">setToStr</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;toStr)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setTotal(java.lang.Double)">setTotal</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;total)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withFacetResultRange(java.util.function.Function)">withFacetResultRange</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
-</div>
-</div>
-</div>
-</section>
-</li>
-</ul>
-</section>
-<section class="details">
-<ul class="details-list">
-<!-- ============ METHOD DETAIL ========== -->
-<li>
-<section class="method-details" id="method.detail">
-<h2>Method Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="getFrom()">
-<h3>getFrom</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.19">getFrom</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getFromStr()">
-<h3>getFromStr</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.23">getFromStr</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getTo()">
-<h3>getTo</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.27">getTo</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getToStr()">
-<h3>getToStr</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.31">getToStr</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCount()">
-<h3>getCount</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.35">getCount</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getProductCount()">
-<h3>getProductCount</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.39">getProductCount</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getTotal()">
-<h3>getTotal</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.42">getTotal</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getMin()">
-<h3>getMin</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.46">getMin</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getMax()">
-<h3>getMax</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.50">getMax</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getMean()">
-<h3>getMean</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.54">getMean</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setFrom(java.lang.Double)">
-<h3>setFrom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.58">setFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;from)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setFromStr(java.lang.String)">
-<h3>setFromStr</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.60">setFromStr</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fromStr)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setTo(java.lang.Double)">
-<h3>setTo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.62">setTo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;to)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setToStr(java.lang.String)">
-<h3>setToStr</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.64">setToStr</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;toStr)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setCount(java.lang.Long)">
-<h3>setCount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.66">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setProductCount(java.lang.Long)">
-<h3>setProductCount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.68">setProductCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;productCount)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setTotal(java.lang.Double)">
-<h3>setTotal</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.70">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;total)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setMin(java.lang.Double)">
-<h3>setMin</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.72">setMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;min)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setMax(java.lang.Double)">
-<h3>setMax</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.74">setMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;max)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setMean(java.lang.Double)">
-<h3>setMean</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.76">setMean</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;mean)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="of()">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.78">of</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="of(com.commercetools.api.models.product.FacetResultRange)">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&nbsp;template)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="builder()">
-<h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FacetResultRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetResultRangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.97">builder</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="builder(com.commercetools.api.models.product.FacetResultRange)">
-<h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FacetResultRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetResultRangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.101">builder</a></span>&#8203;<span class="parameters">(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&nbsp;template)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="withFacetResultRange(java.util.function.Function)">
-<h3>withFacetResultRange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/FacetResultRange.html#line.105">withFacetResultRange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
-</section>
-</li>
-</ul>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.product.FacetRange">Methods inherited from interface&nbsp;com.commercetools.api.models.product.<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a></h3>
+<code><a href="FacetRange.html#getCount()">getCount</a>, <a href="FacetRange.html#getFrom()">getFrom</a>, <a href="FacetRange.html#getFromStr()">getFromStr</a>, <a href="FacetRange.html#getMax()">getMax</a>, <a href="FacetRange.html#getMean()">getMean</a>, <a href="FacetRange.html#getMin()">getMin</a>, <a href="FacetRange.html#getProductCount()">getProductCount</a>, <a href="FacetRange.html#getTo()">getTo</a>, <a href="FacetRange.html#getToStr()">getToStr</a>, <a href="FacetRange.html#getTotal()">getTotal</a>, <a href="FacetRange.html#setCount(java.lang.Long)">setCount</a>, <a href="FacetRange.html#setFrom(java.lang.Double)">setFrom</a>, <a href="FacetRange.html#setFromStr(java.lang.String)">setFromStr</a>, <a href="FacetRange.html#setMax(java.lang.Double)">setMax</a>, <a href="FacetRange.html#setMean(java.lang.Double)">setMean</a>, <a href="FacetRange.html#setMin(java.lang.Double)">setMin</a>, <a href="FacetRange.html#setProductCount(java.lang.Long)">setProductCount</a>, <a href="FacetRange.html#setTo(java.lang.Double)">setTo</a>, <a href="FacetRange.html#setToStr(java.lang.String)">setToStr</a>, <a href="FacetRange.html#setTotal(java.lang.Double)">setTotal</a>, <a href="FacetRange.html#withFacetRange(java.util.function.Function)">withFacetRange</a></code></div>
 </section>
 </li>
 </ul>

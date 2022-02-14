@@ -31,8 +31,8 @@
 <span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;To create a payment object a payment draft object has to be given with the request.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19">*/</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">public class ByProjectKeyPaymentsPost</span>
-<span class="source-line-no">022</span><span id="line.22">        extends ApiMethod&lt;ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment&gt;</span>
+<span class="source-line-no">021</span><span id="line.21">public class ByProjectKeyPaymentsPost extends</span>
+<span class="source-line-no">022</span><span id="line.22">        BodyApiMethod&lt;ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentDraft&gt;</span>
 <span class="source-line-no">023</span><span id="line.23">        implements com.commercetools.api.client.ExpandableTrait&lt;ByProjectKeyPaymentsPost&gt;,</span>
 <span class="source-line-no">024</span><span id="line.24">        com.commercetools.api.client.Deprecatable201Trait&lt;ByProjectKeyPaymentsPost&gt;,</span>
 <span class="source-line-no">025</span><span id="line.25">        com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyPaymentsPost&gt; {</span>
@@ -61,97 +61,102 @@
 <span class="source-line-no">048</span><span id="line.48">        if (!params.isEmpty()) {</span>
 <span class="source-line-no">049</span><span id="line.49">            httpRequestPath += "?" + String.join("&amp;", params);</span>
 <span class="source-line-no">050</span><span id="line.50">        }</span>
-<span class="source-line-no">051</span><span id="line.51">        try {</span>
-<span class="source-line-no">052</span><span id="line.52">            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(paymentDraft);</span>
-<span class="source-line-no">053</span><span id="line.53">            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);</span>
-<span class="source-line-no">054</span><span id="line.54">        }</span>
-<span class="source-line-no">055</span><span id="line.55">        catch (Exception e) {</span>
-<span class="source-line-no">056</span><span id="line.56">            e.printStackTrace();</span>
-<span class="source-line-no">057</span><span id="line.57">        }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @Override</span>
-<span class="source-line-no">063</span><span id="line.63">    public ApiHttpResponse&lt;com.commercetools.api.models.payment.Payment&gt; executeBlocking(final ApiHttpClient client,</span>
-<span class="source-line-no">064</span><span id="line.64">            final Duration timeout) {</span>
-<span class="source-line-no">065</span><span id="line.65">        return executeBlocking(client, timeout, com.commercetools.api.models.payment.Payment.class);</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    @Override</span>
-<span class="source-line-no">069</span><span id="line.69">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.payment.Payment&gt;&gt; execute(</span>
-<span class="source-line-no">070</span><span id="line.70">            final ApiHttpClient client) {</span>
-<span class="source-line-no">071</span><span id="line.71">        return execute(client, com.commercetools.api.models.payment.Payment.class);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public String getProjectKey() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return this.projectKey;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public List&lt;String&gt; getExpand() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return this.getQueryParam("expand");</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.projectKey = projectKey;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     * set expand with the specificied value</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    public ByProjectKeyPaymentsPost withExpand(final String expand) {</span>
-<span class="source-line-no">090</span><span id="line.90">        return copy().withQueryParam("expand", expand);</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     * add additional expand query parameter</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    public ByProjectKeyPaymentsPost addExpand(final String expand) {</span>
-<span class="source-line-no">097</span><span id="line.97">        return copy().addQueryParam("expand", expand);</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     * set expand with the specificied values</span>
-<span class="source-line-no">102</span><span id="line.102">     */</span>
-<span class="source-line-no">103</span><span id="line.103">    public ByProjectKeyPaymentsPost withExpand(final List&lt;String&gt; expand) {</span>
-<span class="source-line-no">104</span><span id="line.104">        return copy().withoutQueryParam("expand")</span>
-<span class="source-line-no">105</span><span id="line.105">                .addQueryParams(</span>
-<span class="source-line-no">106</span><span id="line.106">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     * add additional expand query parameters</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public ByProjectKeyPaymentsPost addExpand(final List&lt;String&gt; expand) {</span>
-<span class="source-line-no">113</span><span id="line.113">        return copy().addQueryParams(</span>
-<span class="source-line-no">114</span><span id="line.114">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    @Override</span>
-<span class="source-line-no">118</span><span id="line.118">    public boolean equals(Object o) {</span>
-<span class="source-line-no">119</span><span id="line.119">        if (this == o)</span>
-<span class="source-line-no">120</span><span id="line.120">            return true;</span>
+<span class="source-line-no">051</span><span id="line.51">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),</span>
+<span class="source-line-no">052</span><span id="line.52">            io.vrap.rmf.base.client.utils.json.JsonUtils</span>
+<span class="source-line-no">053</span><span id="line.53">                    .executing(() -&gt; apiHttpClient().getSerializerService().toJsonByteArray(paymentDraft)));</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @Override</span>
+<span class="source-line-no">058</span><span id="line.58">    public ApiHttpResponse&lt;com.commercetools.api.models.payment.Payment&gt; executeBlocking(final ApiHttpClient client,</span>
+<span class="source-line-no">059</span><span id="line.59">            final Duration timeout) {</span>
+<span class="source-line-no">060</span><span id="line.60">        return executeBlocking(client, timeout, com.commercetools.api.models.payment.Payment.class);</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    @Override</span>
+<span class="source-line-no">064</span><span id="line.64">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.payment.Payment&gt;&gt; execute(</span>
+<span class="source-line-no">065</span><span id="line.65">            final ApiHttpClient client) {</span>
+<span class="source-line-no">066</span><span id="line.66">        return execute(client, com.commercetools.api.models.payment.Payment.class);</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public String getProjectKey() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return this.projectKey;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public List&lt;String&gt; getExpand() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.getQueryParam("expand");</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.projectKey = projectKey;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     * set expand with the specificied value</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
+<span class="source-line-no">084</span><span id="line.84">    public ByProjectKeyPaymentsPost withExpand(final String expand) {</span>
+<span class="source-line-no">085</span><span id="line.85">        return copy().withQueryParam("expand", expand);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     * add additional expand query parameter</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public ByProjectKeyPaymentsPost addExpand(final String expand) {</span>
+<span class="source-line-no">092</span><span id="line.92">        return copy().addQueryParam("expand", expand);</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">     * set expand with the specificied values</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98">    public ByProjectKeyPaymentsPost withExpand(final List&lt;String&gt; expand) {</span>
+<span class="source-line-no">099</span><span id="line.99">        return copy().withoutQueryParam("expand")</span>
+<span class="source-line-no">100</span><span id="line.100">                .addQueryParams(</span>
+<span class="source-line-no">101</span><span id="line.101">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    /**</span>
+<span class="source-line-no">105</span><span id="line.105">     * add additional expand query parameters</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107">    public ByProjectKeyPaymentsPost addExpand(final List&lt;String&gt; expand) {</span>
+<span class="source-line-no">108</span><span id="line.108">        return copy().addQueryParams(</span>
+<span class="source-line-no">109</span><span id="line.109">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public com.commercetools.api.models.payment.PaymentDraft getBody() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return paymentDraft;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public ByProjectKeyPaymentsPost withBody(com.commercetools.api.models.payment.PaymentDraft paymentDraft) {</span>
+<span class="source-line-no">117</span><span id="line.117">        ByProjectKeyPaymentsPost t = copy();</span>
+<span class="source-line-no">118</span><span id="line.118">        t.paymentDraft = paymentDraft;</span>
+<span class="source-line-no">119</span><span id="line.119">        return t;</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">123</span><span id="line.123">            return false;</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">        ByProjectKeyPaymentsPost that = (ByProjectKeyPaymentsPost) o;</span>
+<span class="source-line-no">122</span><span id="line.122">    @Override</span>
+<span class="source-line-no">123</span><span id="line.123">    public boolean equals(Object o) {</span>
+<span class="source-line-no">124</span><span id="line.124">        if (this == o)</span>
+<span class="source-line-no">125</span><span id="line.125">            return true;</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">128</span><span id="line.128">                .append(paymentDraft, that.paymentDraft)</span>
-<span class="source-line-no">129</span><span id="line.129">                .isEquals();</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">127</span><span id="line.127">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">128</span><span id="line.128">            return false;</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">        ByProjectKeyPaymentsPost that = (ByProjectKeyPaymentsPost) o;</span>
 <span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    @Override</span>
-<span class="source-line-no">133</span><span id="line.133">    public int hashCode() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return new HashCodeBuilder(17, 37).append(projectKey).append(paymentDraft).toHashCode();</span>
+<span class="source-line-no">132</span><span id="line.132">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">133</span><span id="line.133">                .append(paymentDraft, that.paymentDraft)</span>
+<span class="source-line-no">134</span><span id="line.134">                .isEquals();</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
 <span class="source-line-no">137</span><span id="line.137">    @Override</span>
-<span class="source-line-no">138</span><span id="line.138">    protected ByProjectKeyPaymentsPost copy() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return new ByProjectKeyPaymentsPost(this);</span>
+<span class="source-line-no">138</span><span id="line.138">    public int hashCode() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return new HashCodeBuilder(17, 37).append(projectKey).append(paymentDraft).toHashCode();</span>
 <span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141">}</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    @Override</span>
+<span class="source-line-no">143</span><span id="line.143">    protected ByProjectKeyPaymentsPost copy() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return new ByProjectKeyPaymentsPost(this);</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146">}</span>
 
 
 

@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code>, <code><a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.18">StateReferenceImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.21">StateReferenceImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block"><p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -137,11 +138,13 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Unique ID of the referenced resource.</div>
+<div class="block">Unique ID of the referenced <a href="ctp:api:type:State">State</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getObj()">getObj</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains the representation of the expanded State.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTypeId()">getTypeId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -183,7 +186,7 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StateReferenceImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.35">StateReferenceImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.38">StateReferenceImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -197,7 +200,7 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.39">getTypeId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.42">getTypeId</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#getTypeId()">getTypeId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
@@ -207,18 +210,21 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.46">getId</a></span>()</div>
-<div class="block"><p>Unique ID of the referenced resource.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.49">getId</a></span>()</div>
+<div class="block"><p>Unique ID of the referenced <a href="ctp:api:type:State">State</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="StateReference.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getObj()">
 <h3>getObj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.50">getObj</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.56">getObj</a></span>()</div>
+<div class="block"><p>Contains the representation of the expanded State. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StateReference.html#getObj()">getObj</a></code>&nbsp;in interface&nbsp;<code><a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></dd>
@@ -228,17 +234,19 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.54">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.60">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="StateReference.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setObj(com.commercetools.api.models.state.State)">
 <h3>setObj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.58">setObj</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;obj)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.64">setObj</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;obj)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StateReference.html#setObj(com.commercetools.api.models.state.State)">setObj</a></code>&nbsp;in interface&nbsp;<code><a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></dd>
@@ -248,7 +256,7 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.62">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.68">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -258,7 +266,7 @@ implements <a href="StateReference.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.75">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateReferenceImpl.html#line.81">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

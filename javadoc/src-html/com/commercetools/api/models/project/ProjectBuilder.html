@@ -42,7 +42,7 @@
 <span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
 <span class="source-line-no">030</span><span id="line.30">    private String trialUntil;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.message.MessageConfiguration messages;</span>
+<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.message.MessagesConfiguration messages;</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
 <span class="source-line-no">035</span><span id="line.35">    private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;</span>
@@ -114,12 +114,12 @@
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    public ProjectBuilder messages(</span>
-<span class="source-line-no">104</span><span id="line.104">            Function&lt;com.commercetools.api.models.message.MessageConfigurationBuilder, com.commercetools.api.models.message.MessageConfigurationBuilder&gt; builder) {</span>
-<span class="source-line-no">105</span><span id="line.105">        this.messages = builder.apply(com.commercetools.api.models.message.MessageConfigurationBuilder.of()).build();</span>
+<span class="source-line-no">104</span><span id="line.104">            Function&lt;com.commercetools.api.models.message.MessagesConfigurationBuilder, com.commercetools.api.models.message.MessagesConfigurationBuilder&gt; builder) {</span>
+<span class="source-line-no">105</span><span id="line.105">        this.messages = builder.apply(com.commercetools.api.models.message.MessagesConfigurationBuilder.of()).build();</span>
 <span class="source-line-no">106</span><span id="line.106">        return this;</span>
 <span class="source-line-no">107</span><span id="line.107">    }</span>
 <span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public ProjectBuilder messages(final com.commercetools.api.models.message.MessageConfiguration messages) {</span>
+<span class="source-line-no">109</span><span id="line.109">    public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {</span>
 <span class="source-line-no">110</span><span id="line.110">        this.messages = messages;</span>
 <span class="source-line-no">111</span><span id="line.111">        return this;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
@@ -213,7 +213,7 @@
 <span class="source-line-no">200</span><span id="line.200">        return this.trialUntil;</span>
 <span class="source-line-no">201</span><span id="line.201">    }</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public com.commercetools.api.models.message.MessageConfiguration getMessages() {</span>
+<span class="source-line-no">203</span><span id="line.203">    public com.commercetools.api.models.message.MessagesConfiguration getMessages() {</span>
 <span class="source-line-no">204</span><span id="line.204">        return this.messages;</span>
 <span class="source-line-no">205</span><span id="line.205">    }</span>
 <span class="source-line-no">206</span><span id="line.206"></span>

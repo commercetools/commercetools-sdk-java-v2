@@ -36,8 +36,8 @@
 <span class="source-line-no">023</span><span id="line.23">*  and invalid line items have been removed.).&lt;/p&gt;</span>
 <span class="source-line-no">024</span><span id="line.24">*/</span>
 <span class="source-line-no">025</span><span id="line.25">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">026</span><span id="line.26">public class ByProjectKeyLoginPost</span>
-<span class="source-line-no">027</span><span id="line.27">        extends ApiMethod&lt;ByProjectKeyLoginPost, com.commercetools.api.models.customer.CustomerSignInResult&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">public class ByProjectKeyLoginPost extends</span>
+<span class="source-line-no">027</span><span id="line.27">        BodyApiMethod&lt;ByProjectKeyLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerSignin&gt;</span>
 <span class="source-line-no">028</span><span id="line.28">        implements com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyLoginPost&gt; {</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    private String projectKey;</span>
@@ -64,62 +64,67 @@
 <span class="source-line-no">051</span><span id="line.51">        if (!params.isEmpty()) {</span>
 <span class="source-line-no">052</span><span id="line.52">            httpRequestPath += "?" + String.join("&amp;", params);</span>
 <span class="source-line-no">053</span><span id="line.53">        }</span>
-<span class="source-line-no">054</span><span id="line.54">        try {</span>
-<span class="source-line-no">055</span><span id="line.55">            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerSignin);</span>
-<span class="source-line-no">056</span><span id="line.56">            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);</span>
-<span class="source-line-no">057</span><span id="line.57">        }</span>
-<span class="source-line-no">058</span><span id="line.58">        catch (Exception e) {</span>
-<span class="source-line-no">059</span><span id="line.59">            e.printStackTrace();</span>
-<span class="source-line-no">060</span><span id="line.60">        }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @Override</span>
-<span class="source-line-no">066</span><span id="line.66">    public ApiHttpResponse&lt;com.commercetools.api.models.customer.CustomerSignInResult&gt; executeBlocking(</span>
-<span class="source-line-no">067</span><span id="line.67">            final ApiHttpClient client, final Duration timeout) {</span>
-<span class="source-line-no">068</span><span id="line.68">        return executeBlocking(client, timeout, com.commercetools.api.models.customer.CustomerSignInResult.class);</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    @Override</span>
-<span class="source-line-no">072</span><span id="line.72">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.customer.CustomerSignInResult&gt;&gt; execute(</span>
-<span class="source-line-no">073</span><span id="line.73">            final ApiHttpClient client) {</span>
-<span class="source-line-no">074</span><span id="line.74">        return execute(client, com.commercetools.api.models.customer.CustomerSignInResult.class);</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public String getProjectKey() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return this.projectKey;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.projectKey = projectKey;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    @Override</span>
-<span class="source-line-no">086</span><span id="line.86">    public boolean equals(Object o) {</span>
-<span class="source-line-no">087</span><span id="line.87">        if (this == o)</span>
-<span class="source-line-no">088</span><span id="line.88">            return true;</span>
+<span class="source-line-no">054</span><span id="line.54">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),</span>
+<span class="source-line-no">055</span><span id="line.55">            io.vrap.rmf.base.client.utils.json.JsonUtils</span>
+<span class="source-line-no">056</span><span id="line.56">                    .executing(() -&gt; apiHttpClient().getSerializerService().toJsonByteArray(customerSignin)));</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    @Override</span>
+<span class="source-line-no">061</span><span id="line.61">    public ApiHttpResponse&lt;com.commercetools.api.models.customer.CustomerSignInResult&gt; executeBlocking(</span>
+<span class="source-line-no">062</span><span id="line.62">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">063</span><span id="line.63">        return executeBlocking(client, timeout, com.commercetools.api.models.customer.CustomerSignInResult.class);</span>
+<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    @Override</span>
+<span class="source-line-no">067</span><span id="line.67">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.customer.CustomerSignInResult&gt;&gt; execute(</span>
+<span class="source-line-no">068</span><span id="line.68">            final ApiHttpClient client) {</span>
+<span class="source-line-no">069</span><span id="line.69">        return execute(client, com.commercetools.api.models.customer.CustomerSignInResult.class);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public String getProjectKey() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return this.projectKey;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.projectKey = projectKey;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public com.commercetools.api.models.customer.CustomerSignin getBody() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return customerSignin;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public ByProjectKeyLoginPost withBody(com.commercetools.api.models.customer.CustomerSignin customerSignin) {</span>
+<span class="source-line-no">085</span><span id="line.85">        ByProjectKeyLoginPost t = copy();</span>
+<span class="source-line-no">086</span><span id="line.86">        t.customerSignin = customerSignin;</span>
+<span class="source-line-no">087</span><span id="line.87">        return t;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">091</span><span id="line.91">            return false;</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">        ByProjectKeyLoginPost that = (ByProjectKeyLoginPost) o;</span>
+<span class="source-line-no">090</span><span id="line.90">    @Override</span>
+<span class="source-line-no">091</span><span id="line.91">    public boolean equals(Object o) {</span>
+<span class="source-line-no">092</span><span id="line.92">        if (this == o)</span>
+<span class="source-line-no">093</span><span id="line.93">            return true;</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">096</span><span id="line.96">                .append(customerSignin, that.customerSignin)</span>
-<span class="source-line-no">097</span><span id="line.97">                .isEquals();</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">095</span><span id="line.95">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">096</span><span id="line.96">            return false;</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">        ByProjectKeyLoginPost that = (ByProjectKeyLoginPost) o;</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Override</span>
-<span class="source-line-no">101</span><span id="line.101">    public int hashCode() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return new HashCodeBuilder(17, 37).append(projectKey).append(customerSignin).toHashCode();</span>
+<span class="source-line-no">100</span><span id="line.100">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">101</span><span id="line.101">                .append(customerSignin, that.customerSignin)</span>
+<span class="source-line-no">102</span><span id="line.102">                .isEquals();</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
 <span class="source-line-no">105</span><span id="line.105">    @Override</span>
-<span class="source-line-no">106</span><span id="line.106">    protected ByProjectKeyLoginPost copy() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return new ByProjectKeyLoginPost(this);</span>
+<span class="source-line-no">106</span><span id="line.106">    public int hashCode() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return new HashCodeBuilder(17, 37).append(projectKey).append(customerSignin).toHashCode();</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109">}</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @Override</span>
+<span class="source-line-no">111</span><span id="line.111">    protected ByProjectKeyLoginPost copy() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return new ByProjectKeyLoginPost(this);</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114">}</span>
 
 
 

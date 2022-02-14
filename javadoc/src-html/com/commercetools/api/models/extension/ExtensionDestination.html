@@ -26,8 +26,8 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionAWSLambdaDestinationImpl.class, name = ExtensionAWSLambdaDestination.AWS_LAMBDA),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionHttpDestinationImpl.class, name = ExtensionHttpDestination.HTTP) })</span>
+<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),</span>
+<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.HttpDestinationImpl.class, name = HttpDestination.HTTP) })</span>
 <span class="source-line-no">018</span><span id="line.18">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ExtensionDestinationImpl.class, visible = true)</span>
 <span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">020</span><span id="line.20">public interface ExtensionDestination {</span>

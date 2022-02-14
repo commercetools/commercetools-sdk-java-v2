@@ -75,8 +75,10 @@ loadScripts(document, 'script');</script>
 <h1 title="Class ByProjectKeyImageSearchPost" class="title">Class ByProjectKeyImageSearchPost</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;
+<div class="inheritance"><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;T,&#8203;TResult&gt;
+<div class="inheritance"><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.BodyApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&gt;
 <div class="inheritance">com.commercetools.ml.client.ByProjectKeyImageSearchPost</div>
+</div>
 </div>
 </div>
 <section class="description">
@@ -86,7 +88,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.23">ByProjectKeyImageSearchPost</a></span>
-<span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&gt;</span></div>
 <div class="block"><p>Accepts an image file and returns similar products from product catalogue.</p></div>
 </section>
 <section class="summary">
@@ -161,26 +163,32 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">executeBlocking</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getBody()">getBody</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setProjectKey(java.lang.String)">setProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setProjectKey(java.lang.String)">setProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withBody(java.io.File)">withBody</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;file)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(int)">withLimit</a></span>&#8203;(int&nbsp;limit)</code></div>
@@ -257,7 +265,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.67">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.61">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -270,7 +278,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.73">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.67">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>&gt;</code></dd>
@@ -282,93 +290,113 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.79">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.73">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.83">getLimit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.77">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.87">getOffset</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.81">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.91">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.85">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLimit(int)">
 <h3>withLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.98">withLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.92">withLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
 <div class="block">set limit with the specificied value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLimit(int)">
 <h3>addLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.105">addLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.99">addLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
 <div class="block">add additional limit query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLimit(java.util.List)">
 <h3>withLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.112">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.106">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
 <div class="block">set limit with the specificied values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLimit(java.util.List)">
 <h3>addLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.121">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.115">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
 <div class="block">add additional limit query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOffset(int)">
 <h3>withOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.129">withOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.123">withOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
 <div class="block">set offset with the specificied value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addOffset(int)">
 <h3>addOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.136">addOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.130">addOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
 <div class="block">add additional offset query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOffset(java.util.List)">
 <h3>withOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.143">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.137">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
 <div class="block">set offset with the specificied values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addOffset(java.util.List)">
 <h3>addOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.152">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.146">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
 <div class="block">add additional offset query parameters</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getBody()">
+<h3>getBody</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.151">getBody</a></span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html#getBody()">getBody</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withBody(java.io.File)">
+<h3>withBody</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.155">withBody</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;file)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html#withBody(TBody)">withBody</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyImageSearchPost.html" title="class in com.commercetools.ml.client">ByProjectKeyImageSearchPost</a>,&#8203;<a href="../models/image_search/ImageSearchResponse.html" title="interface in com.commercetools.ml.models.image_search">ImageSearchResponse</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&gt;</code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.157">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.161">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.170">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyImageSearchPost.html#line.174">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

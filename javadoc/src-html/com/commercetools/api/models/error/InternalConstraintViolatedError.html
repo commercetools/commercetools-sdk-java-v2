@@ -36,21 +36,22 @@
 <span class="source-line-no">023</span><span id="line.23">    public static InternalConstraintViolatedError of(final InternalConstraintViolatedError template) {</span>
 <span class="source-line-no">024</span><span id="line.24">        InternalConstraintViolatedErrorImpl instance = new InternalConstraintViolatedErrorImpl();</span>
 <span class="source-line-no">025</span><span id="line.25">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">026</span><span id="line.26">        return instance;</span>
-<span class="source-line-no">027</span><span id="line.27">    }</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public static InternalConstraintViolatedErrorBuilder builder() {</span>
-<span class="source-line-no">030</span><span id="line.30">        return InternalConstraintViolatedErrorBuilder.of();</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public static InternalConstraintViolatedErrorBuilder builder(final InternalConstraintViolatedError template) {</span>
-<span class="source-line-no">034</span><span id="line.34">        return InternalConstraintViolatedErrorBuilder.of(template);</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    default &lt;T&gt; T withInternalConstraintViolatedError(Function&lt;InternalConstraintViolatedError, T&gt; helper) {</span>
-<span class="source-line-no">038</span><span id="line.38">        return helper.apply(this);</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40">}</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">        return instance;</span>
+<span class="source-line-no">028</span><span id="line.28">    }</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    public static InternalConstraintViolatedErrorBuilder builder() {</span>
+<span class="source-line-no">031</span><span id="line.31">        return InternalConstraintViolatedErrorBuilder.of();</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public static InternalConstraintViolatedErrorBuilder builder(final InternalConstraintViolatedError template) {</span>
+<span class="source-line-no">035</span><span id="line.35">        return InternalConstraintViolatedErrorBuilder.of(template);</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    default &lt;T&gt; T withInternalConstraintViolatedError(Function&lt;InternalConstraintViolatedError, T&gt; helper) {</span>
+<span class="source-line-no">039</span><span id="line.39">        return helper.apply(this);</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41">}</span>
 
 
 

@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.Valid;</span>
 <span class="source-line-no">010</span><span id="line.10">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.message.MessageConfiguration;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.message.MessagesConfiguration;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
@@ -85,7 +85,7 @@
 <span class="source-line-no">072</span><span id="line.72">    @NotNull</span>
 <span class="source-line-no">073</span><span id="line.73">    @Valid</span>
 <span class="source-line-no">074</span><span id="line.74">    @JsonProperty("messages")</span>
-<span class="source-line-no">075</span><span id="line.75">    public MessageConfiguration getMessages();</span>
+<span class="source-line-no">075</span><span id="line.75">    public MessagesConfiguration getMessages();</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    @Valid</span>
 <span class="source-line-no">078</span><span id="line.78">    @JsonProperty("shippingRateInputType")</span>
@@ -133,7 +133,7 @@
 <span class="source-line-no">120</span><span id="line.120"></span>
 <span class="source-line-no">121</span><span id="line.121">    public void setTrialUntil(final String trialUntil);</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public void setMessages(final MessageConfiguration messages);</span>
+<span class="source-line-no">123</span><span id="line.123">    public void setMessages(final MessagesConfiguration messages);</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);</span>
 <span class="source-line-no">126</span><span id="line.126"></span>

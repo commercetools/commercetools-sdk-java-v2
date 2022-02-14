@@ -45,7 +45,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -89,6 +89,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested.class.summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;<a href="JsonUtils.SupplierThrowingIOException.html" title="type parameter in JsonUtils.SupplierThrowingIOException">T</a>&gt;</span></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor.summary">
@@ -122,41 +137,44 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createObjectMapper(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)">createObjectMapper</a></span>&#8203;(<a href="modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromInputStream(java.io.InputStream,java.lang.Class)">fromInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">deserializes the given json string to the given class</div>
-</div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#executing(io.vrap.rmf.base.client.utils.json.JsonUtils.SupplierThrowingIOException)">executing</a></span>&#8203;(<a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;T&gt;&nbsp;supplier)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonByteArray(byte%5B%5D,java.lang.Class)">fromJsonByteArray</a></span>&#8203;(byte[]&nbsp;content,
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromInputStream(java.io.InputStream,java.lang.Class)">fromInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">deserializes the given json string to the given class</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonString(java.lang.String,java.lang.Class)">fromJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content,
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonByteArray(byte%5B%5D,java.lang.Class)">fromJsonByteArray</a></span>&#8203;(byte[]&nbsp;content,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">deserializes the given json string to the given class</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfiguredObjectMapper()">getConfiguredObjectMapper</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonString(java.lang.String,java.lang.Class)">fromJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">deserializes the given json string to the given class</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfiguredObjectMapper()">getConfiguredObjectMapper</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">default <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a></div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#prettyPrint(java.lang.String)">prettyPrint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;json)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#prettyPrint(java.lang.String)">prettyPrint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;json)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">Pretty prints a given JSON string.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static byte[]</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonByteArray(java.lang.Object)">toJsonByteArray</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static byte[]</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonByteArray(java.lang.Object)">toJsonByteArray</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">serializes the given object to JSON as a byte array</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonString(java.lang.Object)">toJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonString(java.lang.Object)">toJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">serializes the given object to JSON as a byte array</div>
 </div>
 </div>
@@ -321,6 +339,12 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd><code>json</code> formatted</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="executing(io.vrap.rmf.base.client.utils.json.JsonUtils.SupplierThrowingIOException)">
+<h3>executing</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.178">executing</a></span>&#8203;<span class="parameters">(<a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;T&gt;&nbsp;supplier)</span></div>
 </section>
 </li>
 </ul>

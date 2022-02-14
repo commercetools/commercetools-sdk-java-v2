@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{shared/layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+<section>
+    <p>Home test</p>
+    <p th:text="'Hello, ' + ${project} + '!'" />
+</section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{shared/layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+<section>
+    <div class="text-center">
+        <h5>
+            Select products you want and add to the cart
+        </h5>
+        <div id="div-Products">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody th:each="product : ${products}">
+                <tr>
+                    <td th:text="${product.name.values.en}">Name</td>
+                    <!--                    <td>-->
+                    <!--                        <a id="btn_add" href="@Url.Action("AddToCart", "Home", product)" class="btn btn-info btn-lg">-->
+                    <!--                        <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart-->
+                    <!--                        </a>-->
+                    <!--                    </td>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>

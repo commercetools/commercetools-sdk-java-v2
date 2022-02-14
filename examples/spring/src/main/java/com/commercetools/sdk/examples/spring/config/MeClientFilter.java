@@ -4,7 +4,6 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,6 @@ import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
-
-import java.time.Duration;
 
 @Component
 public class MeClientFilter implements WebFilter {
@@ -65,35 +62,4 @@ public class MeClientFilter implements WebFilter {
         return builder.build(projectKey);
     }
 
-    private static class SessionTokenStorage implements TokenStorage {
-        private Mono<WebSession> session;
-
-        public SessionTokenStorage(Mono<WebSession> session) {
-            this.session = session;
-        }
-
-        @Override
-        public AuthenticationToken getToken() {
-            WebSession s = session.block(Duration.ofMillis(500));
-            assert s != null;
-            final String accessToken = s.getAttribute(SessionConfig.SESSION_ACCESS_TOKEN);
-            final String refreshToken = s.getAttribute(SessionConfig.SESSION_REFRESH_TOKEN);
-            if (accessToken == null) {
-                return null;
-            }
-            AuthenticationToken token = new AuthenticationToken();
-            token.setAccessToken(accessToken);
-            token.setRefreshToken(refreshToken);
-            return token;
-        }
-
-        @Override
-        public void setToken(AuthenticationToken token) {
-            WebSession s = session.block(Duration.ofMillis(500));
-            assert s != null;
-            s.getAttributes().put(SessionConfig.SESSION_ACCESS_TOKEN, token.getAccessToken());
-            s.getAttributes().put(SessionConfig.SESSION_REFRESH_TOKEN, token.getRefreshToken());
-            s.save();
-        }
-    }
 }

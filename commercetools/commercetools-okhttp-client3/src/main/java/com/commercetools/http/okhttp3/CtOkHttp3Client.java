@@ -48,20 +48,32 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
         okHttpClient = clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)).build();
     }
 
+    public CtOkHttp3Client(final int maxRequests, final int maxRequestsPerHost, final BuilderOptions options) {
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)))
+                .build();
+    }
+
     public CtOkHttp3Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
         okHttpClient = clientBuilder.get()
                 .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
                 .build();
     }
 
-    private okhttp3.Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
+    public CtOkHttp3Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost,
+            final BuilderOptions options) {
+        okHttpClient = options
+                .plus(clientBuilder.get().dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost)))
+                .build();
+    }
+
+    public okhttp3.Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
         final okhttp3.Dispatcher dispatcher = new okhttp3.Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
         return dispatcher;
     }
 
-    private okhttp3.Dispatcher createDispatcher(final ExecutorService executor, final int maxRequests,
+    public okhttp3.Dispatcher createDispatcher(final ExecutorService executor, final int maxRequests,
             final int maxRequestsPerHost) {
         final okhttp3.Dispatcher dispatcher = new okhttp3.Dispatcher(executor);
         dispatcher.setMaxRequests(maxRequests);
@@ -159,7 +171,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
             Objects.requireNonNull(okHttpClient.cache()).close();
     }
 
-    private static class UnzippingInterceptor implements okhttp3.Interceptor {
+    public static class UnzippingInterceptor implements okhttp3.Interceptor {
         @Override
         public okhttp3.Response intercept(Chain chain) throws IOException {
             okhttp3.Response response = chain.proceed(chain.request());

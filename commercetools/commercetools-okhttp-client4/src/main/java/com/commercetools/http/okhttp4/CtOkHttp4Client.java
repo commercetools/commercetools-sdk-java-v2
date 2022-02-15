@@ -51,7 +51,8 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     }
 
     public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost, final BuilderOptions options) {
-        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost))).build();
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)))
+                .build();
     }
 
     public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
@@ -60,9 +61,10 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
                 .build();
     }
 
-    public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost, final BuilderOptions options) {
-        okHttpClient = options.plus(clientBuilder.get()
-                .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost)))
+    public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost,
+            final BuilderOptions options) {
+        okHttpClient = options
+                .plus(clientBuilder.get().dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost)))
                 .build();
     }
 

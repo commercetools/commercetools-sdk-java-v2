@@ -20,7 +20,6 @@ import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
-import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManager;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
 import org.apache.hc.client5.http.nio.AsyncClientConnectionManager;
 import org.apache.hc.client5.http.ssl.ClientTlsStrategyBuilder;
@@ -49,11 +48,12 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
         return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
     }
 
-    public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal, final int maxConnPerRoute) {
+    public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal,
+            final int maxConnPerRoute) {
         final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create()
                 .useSystemProperties()
                 .setTlsDetailsFactory(
-                        sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
+                    sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
                 .build();
         return PoolingAsyncClientConnectionManagerBuilder.create()
                 .setMaxConnPerRoute(maxConnPerRoute)
@@ -83,7 +83,9 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
-        apacheHttpClient = options.plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build())).build();
+        apacheHttpClient = options
+                .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
         init();
     }
 

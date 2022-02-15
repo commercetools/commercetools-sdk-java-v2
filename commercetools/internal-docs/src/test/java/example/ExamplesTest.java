@@ -3,10 +3,12 @@ package example;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.client.ApiRoot;
@@ -20,6 +22,7 @@ import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -27,7 +30,12 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
+import okhttp3.OkHttpClient;
 import org.apache.commons.lang3.tuple.Pair;
+import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.client5.http.nio.AsyncClientConnectionManager;
+import org.apache.hc.core5.util.TimeValue;
+import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -274,6 +282,36 @@ public class ExamplesTest {
                         .withScopes("your-scopes")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    @Test
+    public void okhttpConnectionsAndTimeouts() {
+        VrapHttpClient httpClient = new CtOkHttp4Client(128, 128, builder -> builder.connectTimeout(
+                Duration.ofMillis(200)).writeTimeout(Duration.ofSeconds(60)).readTimeout(Duration.ofSeconds(120)));
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+                .defaultClient(ClientCredentials.of()
+                                .withClientId("your-client-id")
+                                .withClientSecret("your-client-secret")
+                                .withScopes("your-scopes")
+                                .build(),
+                        ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    @Test
+    public void apacheConnectionsAndTimeouts() {
+        RequestConfig config = RequestConfig.custom().setConnectTimeout(Timeout.ofMilliseconds(100)).setResponseTimeout(Timeout.ofSeconds(120)).build();
+        VrapHttpClient httpClient = new CtApacheHttpClient(128, 128, builder -> builder.setDefaultRequestConfig(config));
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+                .defaultClient(ClientCredentials.of()
+                                .withClientId("your-client-id")
+                                .withClientSecret("your-client-secret")
+                                .withScopes("your-scopes")
+                                .build(),
+                        ServiceRegion.GCP_EUROPE_WEST1)
                 .build("my-project");
     }
 

@@ -4,6 +4,7 @@ dependencies {
     implementation project(":commercetools:commercetools-sdk-java-ml")
     implementation project(":commercetools:commercetools-sdk-java-history")
     implementation project(":commercetools:commercetools-http-client")
+    implementation project(":commercetools:commercetools-apachehttp-client")
     implementation project(":commercetools:commercetools-sdk-compat-v1")
 
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk

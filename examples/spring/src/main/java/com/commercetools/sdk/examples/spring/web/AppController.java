@@ -1,4 +1,7 @@
+
 package com.commercetools.sdk.examples.spring.web;
+
+import java.util.List;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.cart.Cart;
@@ -7,6 +10,7 @@ import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.sdk.examples.spring.service.MeRepository;
 import com.commercetools.sdk.examples.spring.service.ProductsRepository;
 import com.commercetools.sdk.examples.spring.service.ProjectRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -17,8 +21,6 @@ import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @Controller
 public class AppController {
@@ -35,7 +37,7 @@ public class AppController {
     }
 
     @PostMapping("/login")
-    public Mono<String> login(ServerWebExchange exchange, Authentication authentication){
+    public Mono<String> login(ServerWebExchange exchange, Authentication authentication) {
         return Mono.just("redirect:/me");
     }
 

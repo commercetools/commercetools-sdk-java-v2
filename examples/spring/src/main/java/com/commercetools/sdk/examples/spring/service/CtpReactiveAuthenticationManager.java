@@ -1,12 +1,18 @@
+
 package com.commercetools.sdk.examples.spring.service;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.customer.CustomerSigninBuilder;
 import com.commercetools.sdk.examples.spring.config.CustomerAuthenticationToken;
 import com.commercetools.sdk.examples.spring.config.TokenGrantedAuthority;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -17,9 +23,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
-
-import java.util.ArrayList;
-import java.util.Collection;
 
 @Component
 @EnableAutoConfiguration
@@ -55,14 +58,16 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                 customerSignin.anonymousCart(((CustomerAuthenticationToken) authentication).getCart());
             }
 
-            return Mono.fromFuture(apiRoot.me().login().post(customerSignin.build()).execute().exceptionally(throwable -> null))
+            return Mono
+                    .fromFuture(
+                        apiRoot.me().login().post(customerSignin.build()).execute().exceptionally(throwable -> null))
                     .flatMap(customerSignInResultApiHttpResponse -> {
-                            GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(clientId,
-                                    clientSecret, authentication.getName(), authentication.getCredentials().toString(), null,
-                                    ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey), client);
+                        GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(clientId,
+                            clientSecret, authentication.getName(), authentication.getCredentials().toString(), null,
+                            ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey), client);
 
-                            return Mono.fromFuture(supplier.getToken().exceptionally(null));
-                        })
+                        return Mono.fromFuture(supplier.getToken().exceptionally(throwable -> null));
+                    })
                     .switchIfEmpty(Mono.defer(() -> Mono.error(new BadCredentialsException("Invalid Credentials"))))
                     .map(token -> {
                         final Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
@@ -71,7 +76,8 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                         updatedAuthorities.add(authority);
                         updatedAuthorities.addAll(authorities);
 
-                        return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), "", updatedAuthorities);
+                        return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), "",
+                            updatedAuthorities);
                     });
         }
         return Mono.defer(() -> Mono.error(new BadCredentialsException("Invalid authentication")));

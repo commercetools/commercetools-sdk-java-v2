@@ -1,8 +1,11 @@
+
 package com.commercetools.sdk.examples.spring.config;
 
 import com.commercetools.api.models.cart.CartResourceIdentifierBuilder;
 import com.commercetools.sdk.examples.spring.service.MeRepository;
+
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,27 +37,36 @@ public class CtpSecurityConfig {
         this.authenticationManager = authenticationManager;
     }
 
-    @Bean SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         ServerSecurityContextRepository securityContextRepository = new WebSessionServerSecurityContextRepository();
-        return http
-                .securityContextRepository(securityContextRepository)
-                .addFilterBefore(new LoginWebFilter(authenticationManager, securityContextRepository), SecurityWebFiltersOrder.FORM_LOGIN)
+        return http.securityContextRepository(securityContextRepository)
+                .addFilterBefore(new LoginWebFilter(authenticationManager, securityContextRepository),
+                    SecurityWebFiltersOrder.FORM_LOGIN)
                 .formLogin()
                 .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
                 .authenticationManager(Mono::just)
                 .and()
                 .authorizeExchange()
-                .pathMatchers("/").permitAll()
-                .pathMatchers("/home").permitAll()
-                .pathMatchers("/p/**").permitAll()
-                .pathMatchers("/cart/**").permitAll()
-                .pathMatchers("/me/**").authenticated()
-                .anyExchange().authenticated().and()
+                .pathMatchers("/")
+                .permitAll()
+                .pathMatchers("/home")
+                .permitAll()
+                .pathMatchers("/p/**")
+                .permitAll()
+                .pathMatchers("/cart/**")
+                .permitAll()
+                .pathMatchers("/me/**")
+                .authenticated()
+                .anyExchange()
+                .authenticated()
+                .and()
                 .build();
     }
 
     public static class LoginWebFilter extends AuthenticationWebFilter {
-        public LoginWebFilter(ReactiveAuthenticationManager authenticationManager, ServerSecurityContextRepository securityContextRepository) {
+        public LoginWebFilter(ReactiveAuthenticationManager authenticationManager,
+                ServerSecurityContextRepository securityContextRepository) {
             super(authenticationManager);
             setServerAuthenticationConverter(new CtpServerAuthenticationConverter());
             setRequiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers(HttpMethod.POST, "/login"));
@@ -73,7 +85,8 @@ public class CtpSecurityConfig {
                 return webSession.map(session -> {
                     Object cart = session.getAttribute(MeRepository.SESSION_CART);
                     if (cart != null) {
-                        return new CustomerAuthenticationToken(authentication, CartResourceIdentifierBuilder.of().id(cart.toString()).build());
+                        return new CustomerAuthenticationToken(authentication,
+                            CartResourceIdentifierBuilder.of().id(cart.toString()).build());
                     }
                     return authentication;
                 });
@@ -81,9 +94,11 @@ public class CtpSecurityConfig {
         }
     }
 
-    private static class WebFilterChainServerAuthenticationSuccessHandler implements ServerAuthenticationSuccessHandler {
+    private static class WebFilterChainServerAuthenticationSuccessHandler
+            implements ServerAuthenticationSuccessHandler {
 
-        @Override public Mono<Void> onAuthenticationSuccess(WebFilterExchange webFilterExchange, Authentication authentication) {
+        @Override
+        public Mono<Void> onAuthenticationSuccess(WebFilterExchange webFilterExchange, Authentication authentication) {
             ServerWebExchange exchange = webFilterExchange.getExchange();
             TokenStorage storage = new SessionTokenStorage(exchange.getSession());
             TokenGrantedAuthority authority = (TokenGrantedAuthority) authentication.getAuthorities()

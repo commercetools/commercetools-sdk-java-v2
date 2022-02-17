@@ -1,11 +1,14 @@
+
 package com.commercetools.sdk.examples.spring.config;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -29,12 +32,8 @@ public class MeClientFilter implements WebFilter {
     private String projectKey;
 
     private ClientCredentials credentials() {
-        return ClientCredentials.of()
-                .withClientId(clientId)
-                .withClientSecret(clientSecret)
-                .build();
+        return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
-
 
     @Autowired
     public MeClientFilter(ApiHttpClient client) {
@@ -44,14 +43,12 @@ public class MeClientFilter implements WebFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         final ProjectApiRoot meClient = exchange.getAttributeOrDefault("meClient",
-                meClient(client, exchange.getSession()));
+            meClient(client, exchange.getSession()));
         exchange.getAttributes().put("meClient", meClient);
         return chain.filter(exchange);
     }
 
-    private ProjectApiRoot meClient(
-            ApiHttpClient client,
-            Mono<WebSession> session) {
+    private ProjectApiRoot meClient(ApiHttpClient client, Mono<WebSession> session) {
         TokenStorage storage = new SessionTokenStorage(session);
 
         ApiRootBuilder builder = ApiRootBuilder.of(client)

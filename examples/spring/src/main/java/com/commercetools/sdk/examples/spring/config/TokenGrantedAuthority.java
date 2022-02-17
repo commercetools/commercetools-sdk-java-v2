@@ -1,6 +1,8 @@
+
 package com.commercetools.sdk.examples.spring.config;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
+
 import org.springframework.security.core.GrantedAuthority;
 
 public class TokenGrantedAuthority implements GrantedAuthority {

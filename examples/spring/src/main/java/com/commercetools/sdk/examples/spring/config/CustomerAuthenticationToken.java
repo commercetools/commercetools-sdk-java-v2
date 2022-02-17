@@ -1,11 +1,13 @@
+
 package com.commercetools.sdk.examples.spring.config;
 
+import java.util.Collection;
+
 import com.commercetools.api.models.cart.CartResourceIdentifier;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-
-import java.util.Collection;
 
 public class CustomerAuthenticationToken extends UsernamePasswordAuthenticationToken {
     private final CartResourceIdentifier cart;
@@ -21,7 +23,8 @@ public class CustomerAuthenticationToken extends UsernamePasswordAuthenticationT
         this.cart = cart;
     }
 
-    public CustomerAuthenticationToken(Authentication usernamePasswordAuthenticationToken, CartResourceIdentifier cart) {
+    public CustomerAuthenticationToken(Authentication usernamePasswordAuthenticationToken,
+            CartResourceIdentifier cart) {
         super(usernamePasswordAuthenticationToken.getPrincipal(), usernamePasswordAuthenticationToken.getCredentials());
         this.cart = cart;
     }

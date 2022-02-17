@@ -14,9 +14,24 @@ repositories {
     mavenCentral()
 }
 
+apply plugin: 'com.diffplug.spotless'
+
+spotless {
+    def importOrderConfigFile = rootProject.file("../../src/eclipse/eclipse.importorder")
+    def javaFormatterConfigFile = rootProject.file("../../src/eclipse/eclipse-formatter-settings.xml")
+
+    java {
+        importOrderFile(importOrderConfigFile)
+        eclipse().configFile(javaFormatterConfigFile)
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+}
+
 ext {
     versions = [
-        commercetools: "7.4.0-SNAPSHOT"
+        commercetools: "8.0.0-beta.2"
     ]
 }
 

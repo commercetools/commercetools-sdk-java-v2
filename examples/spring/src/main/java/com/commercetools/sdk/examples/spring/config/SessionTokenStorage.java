@@ -1,11 +1,13 @@
+
 package com.commercetools.sdk.examples.spring.config;
+
+import java.time.Duration;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
+
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
-
-import java.time.Duration;
 
 public class SessionTokenStorage implements TokenStorage {
     private final Mono<WebSession> session;
@@ -14,7 +16,8 @@ public class SessionTokenStorage implements TokenStorage {
         this.session = session;
     }
 
-    @Override public AuthenticationToken getToken() {
+    @Override
+    public AuthenticationToken getToken() {
         WebSession s = session.block(Duration.ofMillis(500));
         assert s != null;
         final String accessToken = s.getAttribute(SessionConfig.SESSION_ACCESS_TOKEN);
@@ -30,7 +33,8 @@ public class SessionTokenStorage implements TokenStorage {
         return token;
     }
 
-    @Override public void setToken(AuthenticationToken token) {
+    @Override
+    public void setToken(AuthenticationToken token) {
         WebSession s = session.block(Duration.ofMillis(500));
         assert s != null;
         s.getAttributes().put(SessionConfig.SESSION_ACCESS_TOKEN, token.getAccessToken());

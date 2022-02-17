@@ -1,4 +1,7 @@
+
 package com.commercetools.sdk.examples.spring;
+
+import java.time.Duration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,8 +15,6 @@ import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder;
 import reactor.netty.http.server.HttpServer;
 
-import java.time.Duration;
-
 @SpringBootApplication
 @ComponentScan
 @PropertySource(value = "classpath:application.properties", ignoreResourceNotFound = true)
@@ -22,10 +23,8 @@ public class Application {
     private int port = 8080;
 
     public static void main(String[] args) throws Exception {
-        try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
-                Application.class)) {
-            context.getBean(HttpServer.class)
-                    .bindUntilJavaShutdown(Duration.ofSeconds(60), null);
+        try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Application.class)) {
+            context.getBean(HttpServer.class).bindUntilJavaShutdown(Duration.ofSeconds(60), null);
         }
     }
 
@@ -33,10 +32,7 @@ public class Application {
     public HttpServer httpServer(ApplicationContext context) {
         HttpHandler handler = WebHttpHandlerBuilder.applicationContext(context).build();
         ReactorHttpHandlerAdapter adapter = new ReactorHttpHandlerAdapter(handler);
-        return  HttpServer.create()
-                .host("localhost")
-                .port(this.port)
-                .handle(adapter);
+        return HttpServer.create().host("localhost").port(this.port).handle(adapter);
     }
 
 }

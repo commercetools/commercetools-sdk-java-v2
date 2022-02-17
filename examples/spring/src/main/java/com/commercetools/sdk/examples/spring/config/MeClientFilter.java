@@ -55,7 +55,7 @@ public class MeClientFilter implements WebFilter {
         TokenStorage storage = new SessionTokenStorage(session);
 
         ApiRootBuilder builder = ApiRootBuilder.of(client)
-                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withProjectKey(projectKey)
                 .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
 

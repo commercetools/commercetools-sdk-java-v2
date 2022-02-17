@@ -17,9 +17,7 @@ public class MeRepository {
 
     private final WebSession session;
 
-    private static final String SESSION_CART = "ctp.session.cart";
-
-    private static final Logger logger = LoggerFactory.getLogger(MeRepository.class);
+    public static final String SESSION_CART = "ctp.session.cart";
 
     public MeRepository(ProjectApiRoot apiRoot, WebSession session) {
         this.apiRoot = apiRoot;

@@ -12,7 +12,7 @@
 
     <logger name="org.thymeleaf" level="debug" />
     <logger name="commercetools" level="debug" />
-    <logger name="commercetools.me.response" level="info" />
+<!--    <logger name="commercetools.me.response" level="info" />-->
 
     <!-- LOG everything at INFO level -->
     <root level="info">

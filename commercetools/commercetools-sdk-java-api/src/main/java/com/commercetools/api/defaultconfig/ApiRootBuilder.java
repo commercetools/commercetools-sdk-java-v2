@@ -14,6 +14,7 @@ import com.commercetools.api.client.ApiInternalLoggerFactory;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
@@ -33,6 +34,7 @@ public class ApiRootBuilder {
     private String projectKey;
 
     private ApiRootBuilder(ClientBuilder builder) {
+        builder.withHttpExceptionFactory(ApiHttpExceptionFactory::of);
         this.builder = builder;
     }
 

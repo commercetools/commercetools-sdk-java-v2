@@ -23,12 +23,20 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
 
     private Long deleteDaysAfterCreation;
 
+    private Integer accessTokenValiditySeconds;
+
+    private Integer refreshTokenValiditySeconds;
+
     @JsonCreator
     ApiClientDraftImpl(@JsonProperty("name") final String name, @JsonProperty("scope") final String scope,
-            @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation) {
+            @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation,
+            @JsonProperty("accessTokenValiditySeconds") final Integer accessTokenValiditySeconds,
+            @JsonProperty("refreshTokenValiditySeconds") final Integer refreshTokenValiditySeconds) {
         this.name = name;
         this.scope = scope;
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
     }
 
     public ApiClientDraftImpl() {
@@ -49,10 +57,24 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-    *  <p>If set, the client will be deleted after the specified amount of days.</p>
+    *  <p>If set, the Client will be deleted after the specified amount of days.</p>
     */
     public Long getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
+    }
+
+    /**
+    *  <p>Expiration time in seconds for each access token obtained by the API Client. If not set the default value applies.</p>
+    */
+    public Integer getAccessTokenValiditySeconds() {
+        return this.accessTokenValiditySeconds;
+    }
+
+    /**
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+    */
+    public Integer getRefreshTokenValiditySeconds() {
+        return this.refreshTokenValiditySeconds;
     }
 
     public void setName(final String name) {
@@ -65,6 +87,14 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
 
     public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+    }
+
+    public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds) {
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+    }
+
+    public void setRefreshTokenValiditySeconds(final Integer refreshTokenValiditySeconds) {
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
     }
 
     @Override
@@ -80,12 +110,19 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
         return new EqualsBuilder().append(name, that.name)
                 .append(scope, that.scope)
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(scope).append(deleteDaysAfterCreation).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(scope)
+                .append(deleteDaysAfterCreation)
+                .append(accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds)
+                .toHashCode();
     }
 
 }

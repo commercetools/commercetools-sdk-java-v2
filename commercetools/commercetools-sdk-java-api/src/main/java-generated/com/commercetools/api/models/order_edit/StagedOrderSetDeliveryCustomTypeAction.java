@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -19,6 +20,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdateAction {
 
     String SET_DELIVERY_CUSTOM_TYPE = "setDeliveryCustomType";
+
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
 
     /**
     *  <p>If set, the custom type is set to this new value.
@@ -35,6 +40,8 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     @JsonProperty("fields")
     public Object getFields();
 
+    public void setDeliveryId(final String deliveryId);
+
     public void setType(final TypeResourceIdentifier type);
 
     public void setFields(final Object fields);
@@ -45,6 +52,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
 
     public static StagedOrderSetDeliveryCustomTypeAction of(final StagedOrderSetDeliveryCustomTypeAction template) {
         StagedOrderSetDeliveryCustomTypeActionImpl instance = new StagedOrderSetDeliveryCustomTypeActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;

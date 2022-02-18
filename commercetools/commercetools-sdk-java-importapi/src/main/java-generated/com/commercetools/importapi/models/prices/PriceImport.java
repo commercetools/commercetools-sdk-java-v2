@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceImport extends ImportResource {
 
     /**
-    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    *  <p>Maps to <code>Price.value</code>.</p>
     */
     @NotNull
     @Valid

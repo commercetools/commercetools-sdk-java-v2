@@ -19,9 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface TypedMoneyDraft extends Money {
 
+    /**
+    *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+    */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
+
+    /**
+    *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+    */
 
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();

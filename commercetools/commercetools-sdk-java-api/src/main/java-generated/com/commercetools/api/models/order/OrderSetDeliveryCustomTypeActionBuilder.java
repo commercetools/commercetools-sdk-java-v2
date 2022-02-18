@@ -12,11 +12,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSetDeliveryCustomTypeAction> {
 
+    private String deliveryId;
+
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
+
+    public OrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
+        return this;
+    }
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -42,6 +49,10 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
         return this;
     }
 
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
@@ -53,14 +64,15 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     public OrderSetDeliveryCustomTypeAction build() {
-        return new OrderSetDeliveryCustomTypeActionImpl(type, fields);
+        Objects.requireNonNull(deliveryId, OrderSetDeliveryCustomTypeAction.class + ": deliveryId is missing");
+        return new OrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     /**
      * builds OrderSetDeliveryCustomTypeAction without checking for non null required values
      */
     public OrderSetDeliveryCustomTypeAction buildUnchecked() {
-        return new OrderSetDeliveryCustomTypeActionImpl(type, fields);
+        return new OrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     public static OrderSetDeliveryCustomTypeActionBuilder of() {
@@ -69,6 +81,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     public static OrderSetDeliveryCustomTypeActionBuilder of(final OrderSetDeliveryCustomTypeAction template) {
         OrderSetDeliveryCustomTypeActionBuilder builder = new OrderSetDeliveryCustomTypeActionBuilder();
+        builder.deliveryId = template.getDeliveryId();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

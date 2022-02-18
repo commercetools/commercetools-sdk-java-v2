@@ -25,6 +25,10 @@ public interface QueryPrice {
     @JsonProperty("id")
     public String getId();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -61,6 +65,9 @@ public interface QueryPrice {
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

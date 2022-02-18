@@ -41,7 +41,7 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
     }
 
     /**
-    *  <p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p>
+    *  <p>If absent, the <a href="/../api/projects/custom-fields">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
@@ -49,7 +49,7 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
 
     /**
     *  <p>Valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
-    *  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p>
+    *  Sets the <a href="/../api/projects/custom-fields">custom</a> fields to this value.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

@@ -25,6 +25,9 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

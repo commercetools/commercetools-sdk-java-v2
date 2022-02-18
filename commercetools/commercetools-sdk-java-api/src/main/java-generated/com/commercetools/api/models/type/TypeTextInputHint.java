@@ -9,11 +9,21 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>. Following values are supported:</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface TypeTextInputHint {
 
-    TypeTextInputHint SINGLE_LINE = TypeTextInputHintEnum.SINGLE_LINE;
+    /**
+    	<p>Hint for GUIs to display the field's content in a single line of text.</p>
 
+    */
+    TypeTextInputHint SINGLE_LINE = TypeTextInputHintEnum.SINGLE_LINE;
+    /**
+    	<p>Hint for GUIs to display the field's content over multiple lines of text.</p>
+
+    */
     TypeTextInputHint MULTI_LINE = TypeTextInputHintEnum.MULTI_LINE;
 
     enum TypeTextInputHintEnum implements TypeTextInputHint {

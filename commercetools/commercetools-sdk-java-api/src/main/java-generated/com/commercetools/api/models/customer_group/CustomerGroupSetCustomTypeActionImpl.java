@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
 *  <p>This action sets or removes the custom type for an existing Customer Group.
-*  If present, this action overwrites any existing <a href="/../api/projects/custom-fields#custom">custom</a> type and fields.</p>
+*  If present, this action overwrites any existing <a href="/../api/projects/custom-fields">custom</a> type and fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCustomTypeAction, ModelBase {
@@ -45,7 +45,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-    *  <p>If absent, the <a href="/../api/projects/custom-fields#custom">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p>
+    *  <p>If absent, the <a href="/../api/projects/custom-fields">custom</a> type and any existing <a href="/../api/projects/custom-fields">CustomFields</a> are removed.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
@@ -53,7 +53,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
 
     /**
     *  <p>Valid JSON object, based on the <a href="/../api/projects/types#fielddefinition">FieldDefinitions</a> of the <a href="/../api/projects/types#type">Type</a>.
-    *  Sets the <a href="/../api/projects/custom-fields#custom">custom</a> fields to this value.</p>
+    *  Sets the <a href="/../api/projects/custom-fields">custom</a> fields to this value.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

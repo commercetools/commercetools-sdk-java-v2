@@ -9,15 +9,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldReferenceType> {
 
-    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
+    private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
     public CustomFieldReferenceTypeBuilder referenceTypeId(
-            final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+            final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         return this;
     }
 
-    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {
+    public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
         return this.referenceTypeId;
     }
 

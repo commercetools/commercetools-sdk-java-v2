@@ -67,10 +67,16 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
         return this.id;
     }
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     public com.commercetools.api.models.common.TypedMoney getCurrentValue() {
         return this.currentValue;
     }
@@ -108,6 +114,9 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
         return this.discounted;
     }
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

@@ -25,14 +25,14 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     OrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.items = items;
         this.address = address;
         this.parcels = parcels;
@@ -63,7 +63,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     /**
     *  <p>Custom Fields for the Transaction.</p>
     */
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -87,7 +87,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         this.parcels = parcels;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Defines an allowed value of a <a href="ctp:api:type:CustomFieldLocalizedEnumType">CustomFieldLocalizedEnumType</a> field.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEnumValue, ModelBase {
 
@@ -31,10 +34,16 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
     public CustomFieldLocalizedEnumValueImpl() {
     }
 
+    /**
+    *  <p>Key of the value used as a programmatic identifier.</p>
+    */
     public String getKey() {
         return this.key;
     }
 
+    /**
+    *  <p>Descriptive localized label of the value.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }

@@ -11,11 +11,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeResourceIdentifierImpl.class)
 public interface TypeResourceIdentifier extends ResourceIdentifier {
 
     String TYPE = "type";
+
+    /**
+    *  <p>Unique ID of the referenced <a href="ctp:api:type:Type">Type</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+    *  <p>Unique key of the referenced <a href="ctp:api:type:Type">Type</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    public void setId(final String id);
+
+    public void setKey(final String key);
 
     public static TypeResourceIdentifier of() {
         return new TypeResourceIdentifierImpl();

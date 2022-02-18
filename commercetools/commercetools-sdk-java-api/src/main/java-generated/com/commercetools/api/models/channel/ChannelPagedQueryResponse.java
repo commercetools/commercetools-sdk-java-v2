@@ -47,7 +47,7 @@ public interface ChannelPagedQueryResponse extends com.commercetools.api.models.
     *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
     *  This field is returned by default.
     *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/contract#queries">limit</a>.</p>
+    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
     */
 
     @JsonProperty("total")

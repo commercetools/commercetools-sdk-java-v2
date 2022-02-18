@@ -64,13 +64,13 @@ public class ByProjectKeyMePasswordResetTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").me().password().reset().post().createHttpRequest(), "post",
-                "/test_projectKey/me/password/reset", } };
+                apiRoot.withProjectKey("test_projectKey").me().password().reset().post(null).createHttpRequest(),
+                "post", "/test_projectKey/me/password/reset", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().reset().post(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().reset().post(null), } };
     }
 }

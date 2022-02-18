@@ -18,6 +18,12 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     @Nullable
     private Long deleteDaysAfterCreation;
 
+    @Nullable
+    private Integer accessTokenValiditySeconds;
+
+    @Nullable
+    private Integer refreshTokenValiditySeconds;
+
     public ApiClientDraftBuilder name(final String name) {
         this.name = name;
         return this;
@@ -30,6 +36,16 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+        return this;
+    }
+
+    public ApiClientDraftBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+        return this;
+    }
+
+    public ApiClientDraftBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
         return this;
     }
 
@@ -46,17 +62,29 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
         return this.deleteDaysAfterCreation;
     }
 
+    @Nullable
+    public Integer getAccessTokenValiditySeconds() {
+        return this.accessTokenValiditySeconds;
+    }
+
+    @Nullable
+    public Integer getRefreshTokenValiditySeconds() {
+        return this.refreshTokenValiditySeconds;
+    }
+
     public ApiClientDraft build() {
         Objects.requireNonNull(name, ApiClientDraft.class + ": name is missing");
         Objects.requireNonNull(scope, ApiClientDraft.class + ": scope is missing");
-        return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation);
+        return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation, accessTokenValiditySeconds,
+            refreshTokenValiditySeconds);
     }
 
     /**
      * builds ApiClientDraft without checking for non null required values
      */
     public ApiClientDraft buildUnchecked() {
-        return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation);
+        return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation, accessTokenValiditySeconds,
+            refreshTokenValiditySeconds);
     }
 
     public static ApiClientDraftBuilder of() {
@@ -68,6 +96,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
         builder.name = template.getName();
         builder.scope = template.getScope();
         builder.deleteDaysAfterCreation = template.getDeleteDaysAfterCreation();
+        builder.accessTokenValiditySeconds = template.getAccessTokenValiditySeconds();
+        builder.refreshTokenValiditySeconds = template.getRefreshTokenValiditySeconds();
         return builder;
     }
 

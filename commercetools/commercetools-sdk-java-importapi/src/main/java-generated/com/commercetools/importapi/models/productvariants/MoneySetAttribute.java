@@ -23,9 +23,6 @@ public interface MoneySetAttribute extends Attribute {
 
     String MONEY_SET = "money-set";
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("value")

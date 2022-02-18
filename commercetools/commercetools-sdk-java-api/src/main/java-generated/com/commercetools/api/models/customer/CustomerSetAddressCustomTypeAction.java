@@ -21,6 +21,9 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
 
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

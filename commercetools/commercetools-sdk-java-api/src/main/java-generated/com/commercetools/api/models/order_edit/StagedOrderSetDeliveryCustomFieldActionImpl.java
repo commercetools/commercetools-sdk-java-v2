@@ -19,13 +19,16 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
 
     private String action;
 
+    private String deliveryId;
+
     private String name;
 
     private java.lang.Object value;
 
     @JsonCreator
-    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+        this.deliveryId = deliveryId;
         this.name = name;
         this.value = value;
         this.action = SET_DELIVERY_CUSTOM_FIELD;
@@ -39,12 +42,20 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         return this.action;
     }
 
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
     public String getName() {
         return this.name;
     }
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     public void setName(final String name) {
@@ -66,6 +77,7 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         StagedOrderSetDeliveryCustomFieldActionImpl that = (StagedOrderSetDeliveryCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -73,7 +85,7 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
     }
 
 }

@@ -39,6 +39,9 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
         return this.action;
     }
 
+    /**
+    *  <p>Name of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    */
     public String getFieldName() {
         return this.fieldName;
     }

@@ -47,6 +47,9 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
         return this.parcelId;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }

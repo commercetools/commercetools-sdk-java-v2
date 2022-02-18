@@ -26,6 +26,9 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
 
     String ADD_LINE_ITEM = "addLineItem";
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -63,6 +66,10 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();

@@ -67,9 +67,6 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
         return this.shippingMethodName;
     }
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     public com.commercetools.importapi.models.common.TypedMoney getPrice() {
         return this.price;
     }

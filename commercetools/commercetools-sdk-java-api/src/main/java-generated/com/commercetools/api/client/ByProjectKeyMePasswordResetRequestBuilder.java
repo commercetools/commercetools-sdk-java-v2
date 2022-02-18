@@ -15,8 +15,9 @@ public class ByProjectKeyMePasswordResetRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyMePasswordResetPost post() {
-        return new ByProjectKeyMePasswordResetPost(apiHttpClient, projectKey);
+    public ByProjectKeyMePasswordResetPost post(
+            com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
+        return new ByProjectKeyMePasswordResetPost(apiHttpClient, projectKey, myCustomerResetPassword);
     }
 
 }

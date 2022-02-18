@@ -7,20 +7,18 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.error.ConcurrentModificationException;
 import com.commercetools.api.models.ResourceUpdate;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartSetCountryActionBuilder;
 import com.commercetools.api.models.cart.CartUpdate;
 import com.commercetools.api.models.cart.CartUpdateBuilder;
-import com.commercetools.api.models.error.ConcurrentModificationError;
-import com.commercetools.api.models.error.ErrorResponse;
 import commercetools.cart.CartsFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.BodyApiMethod;
 import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.error.ConcurrentModificationException;
 import io.vrap.rmf.base.client.utils.ClientUtils;
 
 import org.junit.jupiter.api.Test;
@@ -72,15 +70,8 @@ public class ConcurrentModificationTest {
         public CompletableFuture<ApiHttpResponse<TResult>> execute() {
             Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
                 if (throwable.getCause() instanceof ConcurrentModificationException) {
-                    final ErrorResponse body = ((ConcurrentModificationException) throwable.getCause())
-                            .getBodyAs(ErrorResponse.class);
-                    final Long currentVersion = body.getErrors()
-                            .stream()
-                            .filter(errorObject -> errorObject instanceof ConcurrentModificationError)
-                            .findFirst()
-                            .map(errorObject -> ((ConcurrentModificationError) errorObject).getCurrentVersion())
-                            .get();
-                    final TBuilder body1 = updateFn.apply(builderCopyFn.apply(request.getBody()), currentVersion);
+                    final TBuilder body1 = updateFn.apply(builderCopyFn.apply(request.getBody()),
+                        ((ConcurrentModificationException) throwable.getCause()).getCurrentVersion());
                     return request.withBody(body1.build()).execute();
                 }
 

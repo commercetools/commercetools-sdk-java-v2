@@ -1,12 +1,12 @@
 
 package commercetools;
 
+import com.commercetools.api.client.error.BadRequestException;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.api.models.error.ErrorResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.assertj.core.api.Assertions;
@@ -33,7 +33,7 @@ public class ExceptionTest {
         ApiHttpException e = (ApiHttpException) Assertions.catchThrowable(
             () -> CommercetoolsTestUtils.getProjectApiRoot().carts().post(CartDraft.of()).executeBlocking());
 
-        Assertions.assertThat(e).isInstanceOf(BadRequestException.class);
+        Assertions.assertThat(e).isInstanceOf(io.vrap.rmf.base.client.error.BadRequestException.class);
         Assertions.assertThat(toErrorResponse(e).getMessage()).isEqualTo("Request body does not contain valid JSON.");
     }
 
@@ -44,7 +44,28 @@ public class ExceptionTest {
                     () -> CommercetoolsTestUtils.getProjectApiRoot().carts().post(CartDraft.of()).execute().get())
                 .getCause();
 
-        Assertions.assertThat(e).isInstanceOf(BadRequestException.class);
+        Assertions.assertThat(e).isInstanceOf(io.vrap.rmf.base.client.error.BadRequestException.class);
         Assertions.assertThat(toErrorResponse(e).getMessage()).isEqualTo("Request body does not contain valid JSON.");
+    }
+
+    @Test
+    public void testApiErrorResponseBlocking() {
+        ApiHttpException e = (ApiHttpException) Assertions.catchThrowable(
+            () -> CommercetoolsTestUtils.getProjectApiRoot().carts().post(CartDraft.of()).executeBlocking());
+
+        Assertions.assertThat(e).isInstanceOf(BadRequestException.class);
+        Assertions.assertThat(((BadRequestException) e).getErrorResponse().getMessage())
+                .isEqualTo("Request body does not contain valid JSON.");
+    }
+
+    @Test
+    public void testApiErrorResponse() {
+        ApiHttpException e = (ApiHttpException) Assertions
+                .catchThrowable(
+                    () -> CommercetoolsTestUtils.getProjectApiRoot().carts().post(CartDraft.of()).execute().get())
+                .getCause();
+        Assertions.assertThat(e).isInstanceOf(BadRequestException.class);
+        Assertions.assertThat(((BadRequestException) e).getErrorResponse().getMessage())
+                .isEqualTo("Request body does not contain valid JSON.");
     }
 }

@@ -14,6 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+*  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class MoneyImpl implements Money, ModelBase {
 
@@ -31,6 +35,13 @@ public class MoneyImpl implements Money, ModelBase {
     public MoneyImpl() {
     }
 
+    /**
+    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
+    *  <ul>
+    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
+    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+    *  </ul>
+    */
     public Long getCentAmount() {
         return this.centAmount;
     }

@@ -22,7 +22,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public OrderAddDeliveryActionBuilder items(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -93,12 +93,13 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     public OrderAddDeliveryActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    public OrderAddDeliveryActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public OrderAddDeliveryActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -119,7 +120,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

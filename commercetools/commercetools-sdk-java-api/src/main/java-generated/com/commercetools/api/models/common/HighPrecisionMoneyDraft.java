@@ -12,12 +12,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)
 public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
 
     String HIGH_PRECISION = "highPrecision";
 
+    /**
+    *  <p>amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+    */
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();

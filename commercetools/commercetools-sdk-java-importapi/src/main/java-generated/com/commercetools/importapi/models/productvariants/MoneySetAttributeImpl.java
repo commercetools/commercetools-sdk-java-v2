@@ -51,9 +51,6 @@ public class MoneySetAttributeImpl implements MoneySetAttribute, ModelBase {
         return this.type;
     }
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
     }

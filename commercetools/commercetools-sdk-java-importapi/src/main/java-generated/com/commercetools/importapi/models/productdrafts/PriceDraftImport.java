@@ -27,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceDraftImportImpl.class)
 public interface PriceDraftImport {
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("value")

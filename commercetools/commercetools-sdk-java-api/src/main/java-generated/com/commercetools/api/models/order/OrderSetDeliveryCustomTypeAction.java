@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -20,6 +21,10 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
 
     String SET_DELIVERY_CUSTOM_TYPE = "setDeliveryCustomType";
 
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
@@ -27,6 +32,8 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
+
+    public void setDeliveryId(final String deliveryId);
 
     public void setType(final TypeResourceIdentifier type);
 
@@ -38,6 +45,7 @@ public interface OrderSetDeliveryCustomTypeAction extends OrderUpdateAction {
 
     public static OrderSetDeliveryCustomTypeAction of(final OrderSetDeliveryCustomTypeAction template) {
         OrderSetDeliveryCustomTypeActionImpl instance = new OrderSetDeliveryCustomTypeActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;

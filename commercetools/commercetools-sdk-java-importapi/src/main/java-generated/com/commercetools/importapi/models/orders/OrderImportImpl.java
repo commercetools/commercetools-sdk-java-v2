@@ -151,7 +151,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Order.totalPrice</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    *  <p>Maps to <code>Order.totalPrice</code>.</p>
     */
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;

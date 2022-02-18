@@ -19,19 +19,19 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
 
     private com.commercetools.api.models.common.MoneyType type;
 
-    private Integer fractionDigits;
+    private String currencyCode;
 
     private Long centAmount;
 
-    private String currencyCode;
+    private Integer fractionDigits;
 
     @JsonCreator
-    CentPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits,
+    CentPrecisionMoneyImpl(@JsonProperty("currencyCode") final String currencyCode,
             @JsonProperty("centAmount") final Long centAmount,
-            @JsonProperty("currencyCode") final String currencyCode) {
-        this.fractionDigits = fractionDigits;
-        this.centAmount = centAmount;
+            @JsonProperty("fractionDigits") final Integer fractionDigits) {
         this.currencyCode = currencyCode;
+        this.centAmount = centAmount;
+        this.fractionDigits = fractionDigits;
         this.type = MoneyType.findEnum("centPrecision");
     }
 
@@ -39,16 +39,11 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
         this.type = MoneyType.findEnum("centPrecision");
     }
 
+    /**
+    *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+    */
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;
-    }
-
-    public Integer getFractionDigits() {
-        return this.fractionDigits;
-    }
-
-    public Long getCentAmount() {
-        return this.centAmount;
     }
 
     /**
@@ -58,16 +53,38 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
         return this.currencyCode;
     }
 
-    public void setFractionDigits(final Integer fractionDigits) {
-        this.fractionDigits = fractionDigits;
+    /**
+    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
+    *  <ul>
+    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
+    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+    *  </ul>
+    */
+    public Long getCentAmount() {
+        return this.centAmount;
+    }
+
+    /**
+    *  <p>number of digits after the decimal separator</p>
+    *  <ul>
+    *  <li>equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
+    *  <li>greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
+    *  </ul>
+    */
+    public Integer getFractionDigits() {
+        return this.fractionDigits;
+    }
+
+    public void setCurrencyCode(final String currencyCode) {
+        this.currencyCode = currencyCode;
     }
 
     public void setCentAmount(final Long centAmount) {
         this.centAmount = centAmount;
     }
 
-    public void setCurrencyCode(final String currencyCode) {
-        this.currencyCode = currencyCode;
+    public void setFractionDigits(final Integer fractionDigits) {
+        this.fractionDigits = fractionDigits;
     }
 
     @Override
@@ -81,18 +98,18 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
         CentPrecisionMoneyImpl that = (CentPrecisionMoneyImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(fractionDigits, that.fractionDigits)
-                .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
+                .append(centAmount, that.centAmount)
+                .append(fractionDigits, that.fractionDigits)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
-                .append(fractionDigits)
-                .append(centAmount)
                 .append(currencyCode)
+                .append(centAmount)
+                .append(fractionDigits)
                 .toHashCode();
     }
 

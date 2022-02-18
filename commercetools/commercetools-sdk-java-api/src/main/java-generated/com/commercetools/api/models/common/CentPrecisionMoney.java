@@ -22,9 +22,9 @@ public interface CentPrecisionMoney extends TypedMoney {
 
     public static CentPrecisionMoney of(final CentPrecisionMoney template) {
         CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
-        instance.setFractionDigits(template.getFractionDigits());
-        instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setCentAmount(template.getCentAmount());
+        instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
 

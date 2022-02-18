@@ -20,11 +20,17 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     String SET_DELIVERY_CUSTOM_FIELD = "setDeliveryCustomField";
 
     @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    @NotNull
     @JsonProperty("name")
     public String getName();
 
     @JsonProperty("value")
     public Object getValue();
+
+    public void setDeliveryId(final String deliveryId);
 
     public void setName(final String name);
 
@@ -36,6 +42,7 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
 
     public static StagedOrderSetDeliveryCustomFieldAction of(final StagedOrderSetDeliveryCustomFieldAction template) {
         StagedOrderSetDeliveryCustomFieldActionImpl instance = new StagedOrderSetDeliveryCustomFieldActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

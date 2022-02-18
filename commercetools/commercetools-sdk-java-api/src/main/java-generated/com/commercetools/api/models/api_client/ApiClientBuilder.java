@@ -29,6 +29,12 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     @Nullable
     private java.time.ZonedDateTime createdAt;
 
+    @Nullable
+    private Integer accessTokenValiditySeconds;
+
+    @Nullable
+    private Integer refreshTokenValiditySeconds;
+
     public ApiClientBuilder id(final String id) {
         this.id = id;
         return this;
@@ -64,6 +70,16 @@ public class ApiClientBuilder implements Builder<ApiClient> {
         return this;
     }
 
+    public ApiClientBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+        return this;
+    }
+
+    public ApiClientBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -96,18 +112,30 @@ public class ApiClientBuilder implements Builder<ApiClient> {
         return this.createdAt;
     }
 
+    @Nullable
+    public Integer getAccessTokenValiditySeconds() {
+        return this.accessTokenValiditySeconds;
+    }
+
+    @Nullable
+    public Integer getRefreshTokenValiditySeconds() {
+        return this.refreshTokenValiditySeconds;
+    }
+
     public ApiClient build() {
         Objects.requireNonNull(id, ApiClient.class + ": id is missing");
         Objects.requireNonNull(name, ApiClient.class + ": name is missing");
         Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");
-        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);
+        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,
+            refreshTokenValiditySeconds);
     }
 
     /**
      * builds ApiClient without checking for non null required values
      */
     public ApiClient buildUnchecked() {
-        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt);
+        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,
+            refreshTokenValiditySeconds);
     }
 
     public static ApiClientBuilder of() {
@@ -123,6 +151,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
         builder.lastUsedAt = template.getLastUsedAt();
         builder.deleteAt = template.getDeleteAt();
         builder.createdAt = template.getCreatedAt();
+        builder.accessTokenValiditySeconds = template.getAccessTokenValiditySeconds();
+        builder.refreshTokenValiditySeconds = template.getRefreshTokenValiditySeconds();
         return builder;
     }
 

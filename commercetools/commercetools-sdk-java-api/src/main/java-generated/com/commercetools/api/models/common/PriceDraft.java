@@ -21,6 +21,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceDraftImpl.class)
 public interface PriceDraft {
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")

@@ -19,11 +19,17 @@ public interface OrderSetDeliveryCustomFieldAction extends OrderUpdateAction {
     String SET_DELIVERY_CUSTOM_FIELD = "setDeliveryCustomField";
 
     @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    @NotNull
     @JsonProperty("name")
     public String getName();
 
     @JsonProperty("value")
     public Object getValue();
+
+    public void setDeliveryId(final String deliveryId);
 
     public void setName(final String name);
 
@@ -35,6 +41,7 @@ public interface OrderSetDeliveryCustomFieldAction extends OrderUpdateAction {
 
     public static OrderSetDeliveryCustomFieldAction of(final OrderSetDeliveryCustomFieldAction template) {
         OrderSetDeliveryCustomFieldActionImpl instance = new OrderSetDeliveryCustomFieldActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

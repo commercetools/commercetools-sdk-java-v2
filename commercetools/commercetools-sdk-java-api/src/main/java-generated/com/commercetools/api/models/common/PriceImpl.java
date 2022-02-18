@@ -67,6 +67,9 @@ public class PriceImpl implements Price, ModelBase {
         return this.id;
     }
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }

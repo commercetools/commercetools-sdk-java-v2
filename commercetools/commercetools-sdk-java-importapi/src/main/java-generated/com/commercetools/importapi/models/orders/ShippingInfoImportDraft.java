@@ -29,9 +29,6 @@ public interface ShippingInfoImportDraft {
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("price")

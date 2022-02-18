@@ -19,14 +19,17 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
 
     private String action;
 
+    private String deliveryId;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private java.lang.Object fields;
 
     @JsonCreator
-    StagedOrderSetDeliveryCustomTypeActionImpl(
+    StagedOrderSetDeliveryCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final java.lang.Object fields) {
+        this.deliveryId = deliveryId;
         this.type = type;
         this.fields = fields;
         this.action = SET_DELIVERY_CUSTOM_TYPE;
@@ -38,6 +41,10 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
 
     public String getAction() {
         return this.action;
+    }
+
+    public String getDeliveryId() {
+        return this.deliveryId;
     }
 
     /**
@@ -53,6 +60,10 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
     */
     public java.lang.Object getFields() {
         return this.fields;
+    }
+
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -74,6 +85,7 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
         StagedOrderSetDeliveryCustomTypeActionImpl that = (StagedOrderSetDeliveryCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -81,7 +93,7 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();
     }
 
 }

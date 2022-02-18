@@ -25,11 +25,17 @@ public interface ScopedPrice {
     @JsonProperty("id")
     public String getId();
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("currentValue")

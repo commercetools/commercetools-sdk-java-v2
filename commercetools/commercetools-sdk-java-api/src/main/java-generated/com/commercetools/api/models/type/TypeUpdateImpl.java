@@ -31,10 +31,17 @@ public class TypeUpdateImpl implements TypeUpdate, ModelBase {
     public TypeUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the type on which the changes should be applied.
+    *  If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Type.</p>
+    */
     public java.util.List<com.commercetools.api.models.type.TypeUpdateAction> getActions() {
         return this.actions;
     }

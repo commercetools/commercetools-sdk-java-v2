@@ -20,6 +20,9 @@ public interface CartSetShippingAddressCustomTypeAction extends CartUpdateAction
 
     String SET_SHIPPING_ADDRESS_CUSTOM_TYPE = "setShippingAddressCustomType";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

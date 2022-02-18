@@ -27,6 +27,9 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
     public FieldContainerImpl() {
     }
 
+    /**
+    *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="ctp:api:type:FieldDefinition">FieldDefinitions</a>) and values given by <a href="ctp:api:type:CustomFieldValue">CustomFieldValue</a>.</p>
+    */
     public Map<String, java.lang.Object> values() {
         return values;
     }

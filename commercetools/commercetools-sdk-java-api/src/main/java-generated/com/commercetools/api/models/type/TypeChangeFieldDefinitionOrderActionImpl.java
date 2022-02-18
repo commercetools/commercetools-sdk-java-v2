@@ -35,6 +35,9 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
         return this.action;
     }
 
+    /**
+    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+    */
     public java.util.List<String> getFieldNames() {
         return this.fieldNames;
     }

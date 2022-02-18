@@ -18,6 +18,9 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
 
     String CHANGE_FIELD_DEFINITION_ORDER = "changeFieldDefinitionOrder";
 
+    /**
+    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+    */
     @NotNull
     @JsonProperty("fieldNames")
     public List<String> getFieldNames();

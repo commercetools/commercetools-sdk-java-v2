@@ -16,6 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = FieldContainerImpl.class)
 public interface FieldContainer {
 
+    /**
+    *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="ctp:api:type:FieldDefinition">FieldDefinitions</a>) and values given by <a href="ctp:api:type:CustomFieldValue">CustomFieldValue</a>.</p>
+    */
     @NotNull
     @JsonAnyGetter
     public Map<String, Object> values();

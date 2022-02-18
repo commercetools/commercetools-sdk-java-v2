@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomFieldsImpl implements CustomFields, ModelBase {
 
@@ -31,12 +34,15 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     public CustomFieldsImpl() {
     }
 
+    /**
+    *  <p>Reference to the <a href="ctp:api:type:Type">Type</a> that holds the <a href="ctp:api:type:FieldDefinition">FieldDefinitions</a> for the Custom Fields.</p>
+    */
     public com.commercetools.api.models.type.TypeReference getType() {
         return this.type;
     }
 
     /**
-    *  <p>A valid JSON object, based on FieldDefinition.</p>
+    *  <p>Object containing the Custom Fields for the <a href="/../api/projects/types#list-of-customizable-data-types">customized resource or data type</a>.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

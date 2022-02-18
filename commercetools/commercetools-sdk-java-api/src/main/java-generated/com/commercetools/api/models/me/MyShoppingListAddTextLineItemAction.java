@@ -37,6 +37,9 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

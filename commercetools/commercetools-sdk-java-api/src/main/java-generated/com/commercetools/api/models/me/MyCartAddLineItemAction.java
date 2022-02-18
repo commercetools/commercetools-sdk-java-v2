@@ -25,6 +25,9 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
 
     String ADD_LINE_ITEM = "addLineItem";
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

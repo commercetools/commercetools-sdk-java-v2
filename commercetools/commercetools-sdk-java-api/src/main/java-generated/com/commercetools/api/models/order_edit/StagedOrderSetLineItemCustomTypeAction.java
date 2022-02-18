@@ -26,6 +26,9 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

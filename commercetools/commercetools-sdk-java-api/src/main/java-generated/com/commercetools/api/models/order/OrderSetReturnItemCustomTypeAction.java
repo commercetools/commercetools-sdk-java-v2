@@ -25,6 +25,9 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

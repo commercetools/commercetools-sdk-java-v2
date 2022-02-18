@@ -14,14 +14,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Defines an allowed value of a <a href="ctp:api:type:CustomFieldLocalizedEnumType">CustomFieldLocalizedEnumType</a> field.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedEnumValueImpl.class)
 public interface CustomFieldLocalizedEnumValue {
 
+    /**
+    *  <p>Key of the value used as a programmatic identifier.</p>
+    */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Descriptive localized label of the value.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("label")

@@ -108,6 +108,9 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
         return this.discounted;
     }
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

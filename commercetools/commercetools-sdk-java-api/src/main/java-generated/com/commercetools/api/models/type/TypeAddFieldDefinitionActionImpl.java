@@ -36,6 +36,9 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
         return this.action;
     }
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     public com.commercetools.api.models.type.FieldDefinition getFieldDefinition() {
         return this.fieldDefinition;
     }

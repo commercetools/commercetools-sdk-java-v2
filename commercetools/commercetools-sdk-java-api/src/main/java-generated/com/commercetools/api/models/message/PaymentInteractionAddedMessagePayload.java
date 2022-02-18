@@ -20,6 +20,9 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
 
     String PAYMENT_INTERACTION_ADDED = "PaymentInteractionAdded";
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("interaction")

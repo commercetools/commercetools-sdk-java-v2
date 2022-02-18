@@ -19,6 +19,9 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
     String ADD_FIELD_DEFINITION = "addFieldDefinition";
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("fieldDefinition")

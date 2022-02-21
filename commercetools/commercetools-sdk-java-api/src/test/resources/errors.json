@@ -1,0 +1,11 @@
+{
+    "statusCode": 400,
+    "message": "Request body does not contain valid JSON.",
+    "errors": [
+        {
+            "code": "InvalidJsonInput",
+            "message": "Request body does not contain valid JSON.",
+            "detailedErrorMessage": "actions -> name: Missing required value"
+        }
+    ]
+}

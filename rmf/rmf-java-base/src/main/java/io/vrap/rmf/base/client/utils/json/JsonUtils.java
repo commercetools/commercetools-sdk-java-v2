@@ -7,6 +7,7 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -87,10 +88,57 @@ public class JsonUtils {
      * @param clazz class to serialize to
      * @param content json as string
      * @return deserialized object
-     * @throws IOException deserialization errors
      */
-    public static <T> T fromJsonString(final String content, final Class<T> clazz) throws IOException {
-        return OBJECT_MAPPER.readValue(content, clazz);
+    public static <T> T fromJsonString(final String content, final Class<T> clazz) {
+        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+    }
+
+    /**
+     * Reads a Java object from JSON data (String).
+     *
+     * @param jsonAsString  the JSON data which represents sth. of type {@code <T>}
+     * @param typeReference the full generic type information about the object to create
+     * @param <T>           the type of the result
+     * @return the created objected
+     */
+    public static <T> T fromJsonString(final String jsonAsString, final TypeReference<T> typeReference) {
+        return executing(() -> OBJECT_MAPPER.readValue(jsonAsString, typeReference));
+    }
+
+    /**
+     * Reads a Java object from JsonNode data.
+     * <p>
+     *
+     * @param jsonNode      the JSON data which represents sth. of type {@code <T>}
+     * @param typeReference the full generic type information about the object to create
+     * @param <T>           the type of the result
+     * @return the created objected
+     */
+    public static <T> T fromJsonNode(final JsonNode jsonNode, final TypeReference<T> typeReference) {
+        return executing(() -> OBJECT_MAPPER.readerFor(typeReference).readValue(jsonNode));
+    }
+
+    /**
+     * Converts a commercetools platform Java object to JSON as {@link JsonNode}.
+     * <p>If {@code value} is of type String and contains JSON data, that will be ignored, {@code value} will be treated as just any String.
+     * If you want to parse a JSON String to a JsonNode use {@link JsonUtils#parse(java.lang.String)} instead.</p>
+     * <p>
+     *
+     * @param value the object to convert
+     * @return new json
+     */
+    public static JsonNode toJsonNode(final Object value) {
+        return OBJECT_MAPPER.valueToTree(value);
+    }
+
+    /**
+     * Parses a String containing JSON data and produces a {@link JsonNode}.
+     *
+     * @param jsonAsString json data
+     * @return new JsonNode
+     */
+    public static JsonNode parse(final String jsonAsString) {
+        return executing(() -> OBJECT_MAPPER.readTree(jsonAsString));
     }
 
     /**
@@ -98,10 +146,10 @@ public class JsonUtils {
      * @param clazz class to serialize to
      * @param content json as byte array
      * @return deserialized object
-     * @throws IOException deserialization errors
+     * @throws JsonException deserialization errors
      */
-    public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) throws IOException {
-        return OBJECT_MAPPER.readValue(content, clazz);
+    public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) {
+        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
     }
 
     /**
@@ -109,10 +157,10 @@ public class JsonUtils {
      * @param clazz class to serialize to
      * @param content json as inputstream
      * @return deserialized object
-     * @throws IOException deserialization errors
+     * @throws JsonException deserialization errors
      */
-    public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) throws IOException {
-        return OBJECT_MAPPER.readValue(content, clazz);
+    public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) {
+        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
     }
 
     /**

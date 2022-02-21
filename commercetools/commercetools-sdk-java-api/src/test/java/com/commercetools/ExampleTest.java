@@ -40,6 +40,10 @@ public class ExampleTest {
         return apiRoot;
     }
 
+    public void localizedString() {
+        LocalizedString string = LocalizedString.of();
+    }
+
     public void performRequest() {
         ApiRoot apiRoot = createClient();
         final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot

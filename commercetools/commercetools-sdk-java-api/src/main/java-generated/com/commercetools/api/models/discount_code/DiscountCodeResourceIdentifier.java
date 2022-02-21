@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeResourceIdentifierImpl.class)
-public interface DiscountCodeResourceIdentifier extends ResourceIdentifier {
+public interface DiscountCodeResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<DiscountCode> {
 
     String DISCOUNT_CODE = "discount-code";
 

@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentResourceIdentifierImpl.class)
-public interface PaymentResourceIdentifier extends ResourceIdentifier {
+public interface PaymentResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Payment> {
 
     String PAYMENT = "payment";
 

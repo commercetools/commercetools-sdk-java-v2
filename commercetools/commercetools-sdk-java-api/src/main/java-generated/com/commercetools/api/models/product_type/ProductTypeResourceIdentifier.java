@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeResourceIdentifierImpl.class)
-public interface ProductTypeResourceIdentifier extends ResourceIdentifier {
+public interface ProductTypeResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ProductType> {
 
     String PRODUCT_TYPE = "product-type";
 

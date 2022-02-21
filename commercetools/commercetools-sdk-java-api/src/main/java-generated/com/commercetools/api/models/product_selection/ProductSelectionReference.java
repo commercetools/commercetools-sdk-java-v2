@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionReferenceImpl.class)
-public interface ProductSelectionReference extends Reference {
+public interface ProductSelectionReference
+        extends Reference, com.commercetools.api.models.Identifiable<ProductSelection> {
 
     String PRODUCT_SELECTION = "product-selection";
 

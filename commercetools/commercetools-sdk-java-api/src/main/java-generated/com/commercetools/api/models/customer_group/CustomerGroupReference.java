@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupReferenceImpl.class)
-public interface CustomerGroupReference extends Reference {
+public interface CustomerGroupReference extends Reference, com.commercetools.api.models.Identifiable<CustomerGroup> {
 
     String CUSTOMER_GROUP = "customer-group";
 

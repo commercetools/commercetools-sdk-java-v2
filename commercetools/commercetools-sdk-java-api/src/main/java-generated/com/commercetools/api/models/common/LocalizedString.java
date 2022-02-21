@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LocalizedStringImpl.class)
-public interface LocalizedString extends LocalizedStringUtil {
+public interface LocalizedString extends com.commercetools.api.models.common.LocalizedStringUtil {
 
     @NotNull
     @JsonAnyGetter

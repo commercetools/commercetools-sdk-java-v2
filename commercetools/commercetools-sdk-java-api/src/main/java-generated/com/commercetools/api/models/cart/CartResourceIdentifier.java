@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartResourceIdentifierImpl.class)
-public interface CartResourceIdentifier extends ResourceIdentifier {
+public interface CartResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Cart> {
 
     String CART = "cart";
 

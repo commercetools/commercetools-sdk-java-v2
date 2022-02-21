@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
-public interface CustomObjectReference extends Reference {
+public interface CustomObjectReference extends Reference, com.commercetools.api.models.Identifiable<CustomObject> {
 
     String KEY_VALUE_DOCUMENT = "key-value-document";
 

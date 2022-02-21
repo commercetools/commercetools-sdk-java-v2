@@ -194,6 +194,7 @@ public interface LocalizedStringUtil {
      * @return a translation matching one of the locales or null
      */
     @Nullable
+    @JsonIgnore
     default public String getTranslation(final Iterable<Locale> locales) {
         return StreamSupport.stream(locales.spliterator(), false).map(localeToFind -> {
             String match = get(localeToFind);
@@ -283,7 +284,6 @@ public interface LocalizedStringUtil {
         return immutableCopyOf(localeValues());
     }
 
-    @JsonIgnore
     default void set(final Locale languageTag, final String value) {
         setValue(languageTag.toLanguageTag(), value);
     }

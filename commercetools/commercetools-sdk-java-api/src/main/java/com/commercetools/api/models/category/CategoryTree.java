@@ -1,10 +1,11 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.Identifiable;
+import static java.util.Objects.requireNonNull;
 
 import java.util.*;
 
-import static java.util.Objects.requireNonNull;
+import com.commercetools.api.models.Identifiable;
 
 /**
  * All categories in the project, represented as an in-memory tree.

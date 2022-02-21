@@ -1,15 +1,16 @@
+
 package com.commercetools.api.models;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import static java.lang.String.format;
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.joining;
 
 import java.text.Normalizer;
 import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import static java.lang.String.format;
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.joining;
+import org.apache.commons.lang3.RandomStringUtils;
 
 final public class InternalUtils {
     private static final int MAX_SLUG_LENGTH = 256;
@@ -27,7 +28,7 @@ final public class InternalUtils {
 
     @SafeVarargs
     @SuppressWarnings("varargs")
-    public static <T> List<T> asImmutableList(final T ... elements) {
+    public static <T> List<T> asImmutableList(final T... elements) {
         return Collections.unmodifiableList(asList(elements));
     }
 
@@ -59,10 +60,9 @@ final public class InternalUtils {
         return result;
     }
 
-
     @SafeVarargs
     @SuppressWarnings("varargs")
-    public static <T> Set<T> asSet(final T ... params) {
+    public static <T> Set<T> asSet(final T... params) {
         return new LinkedHashSet<>(asList(params));
     }
 
@@ -87,7 +87,8 @@ final public class InternalUtils {
     public static String slugifyUnique(final String s) {
         final String postFix = "-" + RandomStringUtils.randomNumeric(8);
         final String intermediate = slugify(s);
-        final String result = intermediate.substring(0, Math.min(intermediate.length(), MAX_SLUG_LENGTH - postFix.length())) + postFix;
+        final String result = intermediate.substring(0,
+            Math.min(intermediate.length(), MAX_SLUG_LENGTH - postFix.length())) + postFix;
         return result;
     }
 
@@ -104,10 +105,12 @@ final public class InternalUtils {
         return intermediateResult.substring(0, Math.min(MAX_SLUG_LENGTH, intermediateResult.length()));
     }
 
-    public static <K, V, E extends Throwable> V getOrThrow(final Map<K, V> map, final K key, Supplier<E> exceptionSupplier) throws E {
+    public static <K, V, E extends Throwable> V getOrThrow(final Map<K, V> map, final K key,
+            Supplier<E> exceptionSupplier) throws E {
         if (map.containsKey(key)) {
             return map.get(key);
-        } else {
+        }
+        else {
             throw exceptionSupplier.get();
         }
     }

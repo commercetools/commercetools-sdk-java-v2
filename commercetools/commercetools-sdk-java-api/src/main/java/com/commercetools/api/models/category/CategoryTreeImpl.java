@@ -1,13 +1,14 @@
+
 package com.commercetools.api.models.category;
-
-
-import com.commercetools.api.models.Identifiable;
-
-import java.util.*;
 
 import static com.commercetools.api.models.InternalUtils.immutableCopyOf;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toList;
+
+import java.util.*;
+
+import com.commercetools.api.models.Identifiable;
+import com.commercetools.api.models.common.LocalizedStringEntry;
 
 class CategoryTreeImpl implements CategoryTree {
     private final List<Category> roots;
@@ -18,11 +19,9 @@ class CategoryTreeImpl implements CategoryTree {
     private final Map<String, Category> categoriesByKey;
     private final Map<String, List<Category>> childrenByParentId;
 
-    CategoryTreeImpl(final List<Category> roots,
-            final List<Category> allAsFlatList,
+    CategoryTreeImpl(final List<Category> roots, final List<Category> allAsFlatList,
             final Map<LocalizedStringEntry, Category> categoriesByLocaleAndSlug,
-            final Map<String, Category> categoriesById,
-            final Map<String, Category> categoriesByKey,
+            final Map<String, Category> categoriesById, final Map<String, Category> categoriesByKey,
             final Map<String, List<Category>> childrenByParentId, final List<Category> subtreeRoots) {
         this.childrenByParentId = childrenByParentId;
         this.roots = immutableCopyOf(roots);
@@ -46,7 +45,9 @@ class CategoryTreeImpl implements CategoryTree {
     @Override
     public Optional<Category> findByExternalId(final String externalId) {
         return getAllAsFlatList().parallelStream()
-                .filter(cat -> Optional.ofNullable(cat.getExternalId()).map(extIdElement -> extIdElement.equals(externalId)).orElse(false))
+                .filter(cat -> Optional.ofNullable(cat.getExternalId())
+                        .map(extIdElement -> extIdElement.equals(externalId))
+                        .orElse(false))
                 .findAny();//should be okay, since the externalId should be unique
     }
 
@@ -75,8 +76,9 @@ class CategoryTreeImpl implements CategoryTree {
     public Category getRootAncestor(final Identifiable<Category> category) {
         requireNonNull(category);
         final Category theCategory = CategoryTreeUtils.getCategoryOrThrow(category, this);
-        return theCategory
-                .getAncestors().stream().findFirst()
+        return theCategory.getAncestors()
+                .stream()
+                .findFirst()
                 .flatMap(root -> findById(root.getId()))
                 .orElse(theCategory);
     }
@@ -91,9 +93,7 @@ class CategoryTreeImpl implements CategoryTree {
     }
 
     private List<Category> getSiblings(final Category category) {
-        return Optional.ofNullable(category.getParent())
-                .map(this::findChildren)
-                .orElseGet(this::getRoots);
+        return Optional.ofNullable(category.getParent()).map(this::findChildren).orElseGet(this::getRoots);
     }
 
     @Override

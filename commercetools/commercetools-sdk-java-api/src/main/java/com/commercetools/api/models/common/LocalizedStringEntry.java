@@ -1,8 +1,9 @@
-package com.commercetools.api.models.category;
+
+package com.commercetools.api.models.common;
 
 import java.util.Locale;
 
-final class LocalizedStringEntry {
+public final class LocalizedStringEntry {
     private final Locale locale;
     private final String value;
 

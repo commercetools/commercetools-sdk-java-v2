@@ -20,11 +20,13 @@ import com.commercetools.importapi.models.importrequests.ProductTypeImportReques
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class ProductTypeImportIntegrationTest {
 
     @Test
+    @Disabled("disabled as test is flaky")
     public void createAndDelete() throws InterruptedException {
         String importSinkKey = ImportApiTestUtils.randomKey();
         ImportContainerDraft importSinkDraft = ImportContainerDraftBuilder.of()

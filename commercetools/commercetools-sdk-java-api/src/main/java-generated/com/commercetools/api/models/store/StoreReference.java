@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StoreReferenceImpl.class)
-public interface StoreReference extends Reference {
+public interface StoreReference extends Reference, com.commercetools.api.models.Identifiable<Store> {
 
     String STORE = "store";
 

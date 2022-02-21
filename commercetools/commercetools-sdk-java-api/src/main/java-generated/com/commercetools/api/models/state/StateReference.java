@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
-public interface StateReference extends Reference {
+public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State> {
 
     String STATE = "state";
 

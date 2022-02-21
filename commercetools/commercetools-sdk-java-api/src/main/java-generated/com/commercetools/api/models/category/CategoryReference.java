@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.Identifiable;
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -16,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryReferenceImpl.class)
-public interface CategoryReference extends Reference, Identifiable<Category> {
+public interface CategoryReference extends Reference, com.commercetools.api.models.Identifiable<Category> {
 
     String CATEGORY = "category";
 

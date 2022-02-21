@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditReferenceImpl.class)
-public interface OrderEditReference extends Reference {
+public interface OrderEditReference extends Reference, com.commercetools.api.models.Identifiable<OrderEdit> {
 
     String ORDER_EDIT = "order-edit";
 

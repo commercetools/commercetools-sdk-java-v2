@@ -19,7 +19,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     String CHANGE_CURRENCIES = "changeCurrencies";
 
     /**
-    *  <p>A three-digit currency code as per currency code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("currencies")

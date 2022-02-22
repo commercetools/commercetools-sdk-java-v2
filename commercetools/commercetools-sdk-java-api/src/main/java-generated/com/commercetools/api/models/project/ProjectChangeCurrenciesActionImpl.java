@@ -36,7 +36,7 @@ public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrencie
     }
 
     /**
-    *  <p>A three-digit currency code as per currency code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public java.util.List<String> getCurrencies() {
         return this.currencies;

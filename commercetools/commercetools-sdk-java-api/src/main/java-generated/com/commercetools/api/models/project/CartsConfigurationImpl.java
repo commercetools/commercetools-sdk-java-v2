@@ -17,40 +17,40 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
-    private Boolean countryTaxRateFallbackEnabled;
-
     private Long deleteDaysAfterLastModification;
 
+    private Boolean countryTaxRateFallbackEnabled;
+
     @JsonCreator
-    CartsConfigurationImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
-        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    CartsConfigurationImpl(@JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
     }
 
     public CartsConfigurationImpl() {
     }
 
     /**
-    *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
-    */
-    public Boolean getCountryTaxRateFallbackEnabled() {
-        return this.countryTaxRateFallbackEnabled;
-    }
-
-    /**
-    *  <p>The default value for the deleteDaysAfterLastModification parameter of the CartDraft. Initially set to 90 for projects created after December 2019.</p>
+    *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="ctp:api:type:CartDraft">CartDraft</a>. This field may not be present on Projects created before January 2020.</p>
     */
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
-    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled) {
-        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    /**
+    *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
+    */
+    public Boolean getCountryTaxRateFallbackEnabled() {
+        return this.countryTaxRateFallbackEnabled;
     }
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+    }
+
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled) {
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
     }
 
     @Override
@@ -63,15 +63,15 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
         CartsConfigurationImpl that = (CartsConfigurationImpl) o;
 
-        return new EqualsBuilder().append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
-                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+        return new EqualsBuilder().append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(countryTaxRateFallbackEnabled)
-                .append(deleteDaysAfterLastModification)
+        return new HashCodeBuilder(17, 37).append(deleteDaysAfterLastModification)
+                .append(countryTaxRateFallbackEnabled)
                 .toHashCode();
     }
 

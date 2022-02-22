@@ -20,80 +20,104 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Project {
 
     /**
-    *  <p>The current version of the project.</p>
+    *  <p>Current version of the Project.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>The unique key of the project.</p>
+    *  <p>User-defined unique identifier of the Project.</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>The name of the project.</p>
+    *  <p>Name of the Project.</p>
     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country code of the geographic location.</p>
     */
     @NotNull
     @JsonProperty("countries")
     public List<String> getCountries();
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code of the country. A Project must have at least one currency.</p>
     */
     @NotNull
     @JsonProperty("currencies")
     public List<String> getCurrencies();
 
+    /**
+    *  <p>Language of the country. A Project must have at least one language.</p>
+    */
     @NotNull
     @JsonProperty("languages")
     public List<String> getLanguages();
 
+    /**
+    *  <p>Date and time (UTC) the Project was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>The time is in the format Year-Month <code>YYYY-MM</code>.</p>
+    *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
     */
 
     @JsonProperty("trialUntil")
     public String getTrialUntil();
 
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("messages")
     public MessagesConfiguration getMessages();
 
-    @Valid
-    @JsonProperty("shippingRateInputType")
-    public ShippingRateInputType getShippingRateInputType();
-
-    @Valid
-    @JsonProperty("externalOAuth")
-    public ExternalOAuth getExternalOAuth();
-
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/carts">Carts</a> feature.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("carts")
     public CartsConfiguration getCarts();
 
-    @Valid
-    @JsonProperty("searchIndexing")
-    public SearchIndexingConfiguration getSearchIndexing();
-
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature. This field may not be present on Projects created before January 2020.</p>
+    */
     @Valid
     @JsonProperty("shoppingLists")
     public ShoppingListsConfiguration getShoppingLists();
+
+    /**
+    *  <p>Holds the configuration for the <a href="ctp:api:type:ShippingRatePriceTier">tiered shipping rates</a> feature.</p>
+    */
+    @Valid
+    @JsonProperty("shippingRateInputType")
+    public ShippingRateInputType getShippingRateInputType();
+
+    /**
+    *  <p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint.</p>
+    */
+    @Valid
+    @JsonProperty("externalOAuth")
+    public ExternalOAuth getExternalOAuth();
+
+    /**
+    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+    */
+    @Valid
+    @JsonProperty("searchIndexing")
+    public SearchIndexingConfiguration getSearchIndexing();
 
     public void setVersion(final Long version);
 
@@ -122,15 +146,15 @@ public interface Project {
 
     public void setMessages(final MessagesConfiguration messages);
 
+    public void setCarts(final CartsConfiguration carts);
+
+    public void setShoppingLists(final ShoppingListsConfiguration shoppingLists);
+
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
     public void setExternalOAuth(final ExternalOAuth externalOAuth);
 
-    public void setCarts(final CartsConfiguration carts);
-
     public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
-
-    public void setShoppingLists(final ShoppingListsConfiguration shoppingLists);
 
     public static Project of() {
         return new ProjectImpl();
@@ -147,11 +171,11 @@ public interface Project {
         instance.setCreatedAt(template.getCreatedAt());
         instance.setTrialUntil(template.getTrialUntil());
         instance.setMessages(template.getMessages());
+        instance.setCarts(template.getCarts());
+        instance.setShoppingLists(template.getShoppingLists());
         instance.setShippingRateInputType(template.getShippingRateInputType());
         instance.setExternalOAuth(template.getExternalOAuth());
-        instance.setCarts(template.getCarts());
         instance.setSearchIndexing(template.getSearchIndexing());
-        instance.setShoppingLists(template.getShoppingLists());
         return instance;
     }
 

@@ -6,9 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,27 +18,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchIndexingConfigurationValues {
 
     /**
-    *  <p>Can be one of the following or absent. &quot;Activated&quot; or absent means that the search and suggest endpoints for the specified resource type are active. &quot;Deactivated&quot; means that the search and suggest endpoints for the specified resource type cannot be used. &quot;Indexing&quot; indicates that the search and suggest endpoints can <em>temporally</em> not be used because the search index is being re-built.</p>
+    *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
     */
 
     @JsonProperty("status")
     public SearchIndexingConfigurationStatus getStatus();
 
+    /**
+    *  <p>Date and time (UTC) the Project was last updated.</p>
+    */
+    @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
-    @Valid
+
     @JsonProperty("lastModifiedBy")
-    public LastModifiedBy getLastModifiedBy();
+    public String getLastModifiedBy();
 
     public void setStatus(final SearchIndexingConfigurationStatus status);
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+    public void setLastModifiedBy(final String lastModifiedBy);
 
     public static SearchIndexingConfigurationValues of() {
         return new SearchIndexingConfigurationValuesImpl();

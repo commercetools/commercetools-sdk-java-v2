@@ -33,10 +33,16 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }
 
+    /**
+    *  <p>The classification items that can be used for specifiying any <a href="ctp:api:type:ShippingRatePriceTier">ShippingRatePriceTier</a>.</p>
+    */
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }

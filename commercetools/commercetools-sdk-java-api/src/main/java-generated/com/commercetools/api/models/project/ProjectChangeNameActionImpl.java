@@ -35,6 +35,9 @@ public class ProjectChangeNameActionImpl implements ProjectChangeNameAction, Mod
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public String getName() {
         return this.name;
     }

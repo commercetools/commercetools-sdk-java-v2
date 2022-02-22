@@ -31,10 +31,16 @@ public class ProjectUpdateImpl implements ProjectUpdate, ModelBase {
     public ProjectUpdateImpl() {
     }
 
+    /**
+    *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Project.</p>
+    */
     public java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> getActions() {
         return this.actions;
     }

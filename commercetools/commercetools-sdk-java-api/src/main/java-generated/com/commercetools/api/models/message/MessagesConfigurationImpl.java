@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Holds the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature for the Project.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBase {
 
@@ -31,10 +34,18 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
     public MessagesConfigurationImpl() {
     }
 
+    /**
+    *  <p>When <code>true</code>, the <a href="/../api/projects/messages">Messages Query</a> feature is active.</p>
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
 
+    /**
+    *  <p>Specifies the number of days each Message should be available via the <a href="/../api/projects/messages">Messages Query</a> API.
+    *  For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.
+    *  This field may not be present on Projects created before 8 October 2018.</p>
+    */
     public Integer getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
     }

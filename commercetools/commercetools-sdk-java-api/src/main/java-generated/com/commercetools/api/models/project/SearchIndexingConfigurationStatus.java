@@ -10,15 +10,25 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Can be one of the following or absent. &quot;Activated&quot; or absent means that the search and suggest endpoints for the specified resource type are active. &quot;Deactivated&quot; means that the search and suggest endpoints for the specified resource type cannot be used. &quot;Indexing&quot; indicates that the search and suggest endpoints can <em>temporally</em> not be used because the search index is being re-built.</p>
+*  <p>Status of resource indexing.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface SearchIndexingConfigurationStatus {
 
+    /**
+    	<p>Indicates that search and suggest endpoints for the specified resource type are active.</p>
+
+    */
     SearchIndexingConfigurationStatus ACTIVATED = SearchIndexingConfigurationStatusEnum.ACTIVATED;
+    /**
+    	<p>Indicates that search and suggest endpoints for the specified resource type cannot be used.</p>
 
+    */
     SearchIndexingConfigurationStatus DEACTIVATED = SearchIndexingConfigurationStatusEnum.DEACTIVATED;
+    /**
+    	<p>Indicates that search and suggest endpoints can <em>temporarily</em> not be used because the search index is being re-built.</p>
 
+    */
     SearchIndexingConfigurationStatus INDEXING = SearchIndexingConfigurationStatusEnum.INDEXING;
 
     enum SearchIndexingConfigurationStatusEnum implements SearchIndexingConfigurationStatus {

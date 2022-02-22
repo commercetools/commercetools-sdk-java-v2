@@ -2,7 +2,6 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
-import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,11 +14,10 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
 
-    @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
 
     @Nullable
-    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+    private String lastModifiedBy;
 
     public SearchIndexingConfigurationValuesBuilder status(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
@@ -27,20 +25,12 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return this;
     }
 
-    public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
-            @Nullable final java.time.ZonedDateTime lastModifiedAt) {
+    public SearchIndexingConfigurationValuesBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
-    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
-        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
-        return this;
-    }
-
-    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(@Nullable final String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
@@ -50,17 +40,17 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return this.status;
     }
 
-    @Nullable
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     public SearchIndexingConfigurationValues build() {
+        Objects.requireNonNull(lastModifiedAt, SearchIndexingConfigurationValues.class + ": lastModifiedAt is missing");
         return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 

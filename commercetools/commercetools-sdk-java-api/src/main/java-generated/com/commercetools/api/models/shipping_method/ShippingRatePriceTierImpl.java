@@ -28,6 +28,9 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
     public ShippingRatePriceTierImpl() {
     }
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }

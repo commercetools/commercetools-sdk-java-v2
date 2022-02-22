@@ -36,7 +36,7 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
     }
 
     /**
-    *  <p>A two-digit country code as per country code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public java.util.List<String> getCountries() {
         return this.countries;

@@ -18,6 +18,9 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
 
     String CHANGE_NAME = "changeName";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();

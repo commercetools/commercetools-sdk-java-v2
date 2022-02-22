@@ -20,6 +20,9 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
 
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("messagesConfiguration")

@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyShippingMethodsMatchingLocationGet extends
         ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>,
+        com.commercetools.api.client.SortableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsMatchingLocationGet> {
 
@@ -74,6 +75,10 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
+    }
+
+    public List<String> getSort() {
+        return this.getQueryParam("sort");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -203,6 +208,37 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final List<String> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set sort with the specificied value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final String sort) {
+        return copy().withQueryParam("sort", sort);
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final String sort) {
+        return copy().addQueryParam("sort", sort);
+    }
+
+    /**
+     * set sort with the specificied values
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final List<String> sort) {
+        return copy().withoutQueryParam("sort")
+                .addQueryParams(
+                    sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional sort query parameters
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final List<String> sort) {
+        return copy().addQueryParams(
+            sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

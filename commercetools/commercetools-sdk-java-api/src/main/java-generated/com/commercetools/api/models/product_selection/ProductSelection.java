@@ -13,6 +13,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -95,6 +96,13 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
 
+    /**
+    *  <p>Custom Fields of this Product Selection.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -115,6 +123,8 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
 
     public void setType(final ProductSelectionTypeEnum type);
 
+    public void setCustom(final CustomFields custom);
+
     public static ProductSelection of() {
         return new ProductSelectionImpl();
     }
@@ -131,6 +141,7 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
         instance.setName(template.getName());
         instance.setProductCount(template.getProductCount());
         instance.setType(template.getType());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

@@ -37,6 +37,8 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
 
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     ProductSelectionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -46,7 +48,8 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
             @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productCount") final Integer productCount,
-            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -57,6 +60,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
         this.name = name;
         this.productCount = productCount;
         this.type = type;
+        this.custom = custom;
     }
 
     public ProductSelectionImpl() {
@@ -134,6 +138,13 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
         return this.type;
     }
 
+    /**
+    *  <p>Custom Fields of this Product Selection.</p>
+    */
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -174,6 +185,10 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
         this.type = type;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -194,6 +209,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
                 .append(name, that.name)
                 .append(productCount, that.productCount)
                 .append(type, that.type)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -209,6 +225,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
                 .append(name)
                 .append(productCount)
                 .append(type)
+                .append(custom)
                 .toHashCode();
     }
 

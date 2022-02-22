@@ -3,11 +3,11 @@ package com.commercetools.api.models.common;
 
 import static com.commercetools.api.models.InternalUtils.*;
 import static java.lang.String.format;
-import static java.util.Collections.emptyMap;
 import static java.util.Objects.requireNonNull;
 
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -17,28 +17,45 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.annotation.*;
 
-public interface LocalizedStringUtil {
+@JsonDeserialize(as = LocalizedStringImpl.class)
+public interface LocalizedString {
+
+    @NotNull
+    @JsonAnyGetter
     public Map<String, String> values();
 
+    @JsonAnySetter
     public void setValue(String key, String value);
+
+    public static LocalizedString of() {
+        return new LocalizedStringImpl();
+    }
+
+    public static LocalizedString of(final LocalizedString template) {
+        LocalizedStringImpl instance = new LocalizedStringImpl();
+        return instance;
+    }
+
+    public static LocalizedStringBuilder builder() {
+        return LocalizedStringBuilder.of();
+    }
+
+    public static LocalizedStringBuilder builder(final LocalizedString template) {
+        return LocalizedStringBuilder.of(template);
+    }
+
+    default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
+        return helper.apply(this);
+    }
 
     @NotNull
     @JsonIgnore
     default public Map<Locale, String> localeValues() {
         return values().entrySet().stream().collect(Collectors.toMap(e -> new Locale(e.getKey()), Map.Entry::getValue));
-    }
-
-    /**
-     * Creates an instance without any value.
-     *
-     * @return instance without any value
-     */
-    @JsonIgnore
-    public static LocalizedString of() {
-        return of(emptyMap());
     }
 
     /**
@@ -67,8 +84,6 @@ public interface LocalizedStringUtil {
     /**
      * Creates an instance for two different locales.
      *
-     * {@include.example io.sphere.sdk.models.LocalizedStringTest#createFromTwoValues()}
-     *
      * @param locale1 the first locale
      * @param value1 the translation corresponding to {@code locale1}
      * @param locale2 the second locale which differs from {@code locale1}
@@ -90,7 +105,7 @@ public interface LocalizedStringUtil {
     @JsonIgnore
     public static LocalizedString of(final Map<Locale, String> translations) {
         requireNonNull(translations);
-        return LocalizedStringUtil.ofStringToStringMap(translations.entrySet()
+        return LocalizedString.ofStringToStringMap(translations.entrySet()
                 .stream()
                 .collect(Collectors.toMap(e -> e.getKey().toLanguageTag(), Map.Entry::getValue)));
     }

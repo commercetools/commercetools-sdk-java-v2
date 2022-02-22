@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -11,7 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
-    private String query;
+    private com.commercetools.api.models.order.OrderSearchQuery query;
 
     @Nullable
     private String sort;
@@ -22,7 +23,13 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     @Nullable
     private Integer offset;
 
-    public OrderSearchRequestBuilder query(final String query) {
+    public OrderSearchRequestBuilder query(
+            Function<com.commercetools.api.models.order.OrderSearchQueryBuilder, com.commercetools.api.models.order.OrderSearchQueryBuilder> builder) {
+        this.query = builder.apply(com.commercetools.api.models.order.OrderSearchQueryBuilder.of()).build();
+        return this;
+    }
+
+    public OrderSearchRequestBuilder query(final com.commercetools.api.models.order.OrderSearchQuery query) {
         this.query = query;
         return this;
     }
@@ -42,7 +49,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
         return this;
     }
 
-    public String getQuery() {
+    public com.commercetools.api.models.order.OrderSearchQuery getQuery() {
         return this.query;
     }
 

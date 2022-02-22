@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -20,8 +21,9 @@ public interface OrderSearchRequest {
     *  <p>The Order search query.</p>
     */
     @NotNull
+    @Valid
     @JsonProperty("query")
-    public String getQuery();
+    public OrderSearchQuery getQuery();
 
     /**
     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
@@ -44,7 +46,7 @@ public interface OrderSearchRequest {
     @JsonProperty("offset")
     public Integer getOffset();
 
-    public void setQuery(final String query);
+    public void setQuery(final OrderSearchQuery query);
 
     public void setSort(final String sort);
 

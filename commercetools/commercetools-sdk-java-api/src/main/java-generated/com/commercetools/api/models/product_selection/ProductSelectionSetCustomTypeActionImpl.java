@@ -41,15 +41,15 @@ public class ProductSelectionSetCustomTypeActionImpl implements ProductSelection
     }
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Product Selection with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and any existing Custom Fields are removed from the Product Selection.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the ProductSelection with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Product Selection.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the ProductSelection.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

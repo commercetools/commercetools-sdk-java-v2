@@ -18,7 +18,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
@@ -37,7 +37,14 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
         return this;
     }
 
-    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
@@ -52,7 +59,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     @Nullable
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

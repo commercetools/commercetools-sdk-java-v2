@@ -41,12 +41,16 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
     }
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the MyCart with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the MyCart.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the MyCart.</p>
+    */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

@@ -21,15 +21,15 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Product Selection with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and any existing Custom Fields are removed from the Product Selection.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the ProductSelection with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Product Selection.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the ProductSelection.</p>
     */
     @Valid
     @JsonProperty("fields")

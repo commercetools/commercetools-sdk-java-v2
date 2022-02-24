@@ -21,15 +21,15 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>If absent, the custom type and any existing custom fields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Review with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Review.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
-    *  Sets the CustomFields to this value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Review.</p>
     */
     @Valid
     @JsonProperty("fields")

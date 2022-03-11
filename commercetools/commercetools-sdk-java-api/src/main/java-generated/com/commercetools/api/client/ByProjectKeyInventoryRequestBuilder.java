@@ -27,4 +27,8 @@ public class ByProjectKeyInventoryRequestBuilder {
     public ByProjectKeyInventoryByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyInventoryByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyInventoryKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyInventoryKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
 }

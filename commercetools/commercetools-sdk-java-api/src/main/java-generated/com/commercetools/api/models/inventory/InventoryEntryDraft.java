@@ -24,6 +24,14 @@ public interface InventoryEntryDraft {
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+    *  <p>User-defined unique identifier for the InventoryEntry.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
@@ -47,6 +55,8 @@ public interface InventoryEntryDraft {
 
     public void setSku(final String sku);
 
+    public void setKey(final String key);
+
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     public void setQuantityOnStock(final Long quantityOnStock);
@@ -64,6 +74,7 @@ public interface InventoryEntryDraft {
     public static InventoryEntryDraft of(final InventoryEntryDraft template) {
         InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
         instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());

@@ -56,6 +56,14 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+    *  <p>User-defined unique identifier for the InventoryEntry.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
     @NotNull
     @JsonProperty("sku")
     public String getSku();
@@ -113,6 +121,8 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    public void setKey(final String key);
+
     public void setSku(final String sku);
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
@@ -139,6 +149,7 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
+        instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());

@@ -9,11 +9,21 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>An Extension gets called during any of the following requests of an API call, but before the result is persisted.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ExtensionAction {
 
-    ExtensionAction CREATE = ExtensionActionEnum.CREATE;
+    /**
+    	<p>An Extension gets called during a Create request.</p>
 
+    */
+    ExtensionAction CREATE = ExtensionActionEnum.CREATE;
+    /**
+    	<p>An Extension gets called during an Update request.</p>
+
+    */
     ExtensionAction UPDATE = ExtensionActionEnum.UPDATE;
 
     enum ExtensionActionEnum implements ExtensionAction {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class HttpDestinationImpl implements HttpDestination, ModelBase {
 
@@ -39,10 +42,16 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
         return this.type;
     }
 
+    /**
+    *  <p>URL to the target destination.</p>
+    */
     public String getUrl() {
         return this.url;
     }
 
+    /**
+    *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+    */
     public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {
         return this.authentication;
     }

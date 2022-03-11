@@ -19,6 +19,9 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
     String CHANGE_TRIGGERS = "changeTriggers";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("triggers")

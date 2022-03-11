@@ -36,6 +36,9 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }

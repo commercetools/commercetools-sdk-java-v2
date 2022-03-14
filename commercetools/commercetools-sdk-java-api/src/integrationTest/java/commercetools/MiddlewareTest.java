@@ -5,10 +5,8 @@ import static java.util.Collections.singletonList;
 
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Function;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -69,16 +67,17 @@ public class MiddlewareTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware((request, next) -> CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
-                    if (throwable.getCause() instanceof NotFoundException) {
-                        ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
-                        return CompletableFuture.completedFuture(
-                            new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));
-                    }
-                    CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
-                    future.completeExceptionally(throwable.getCause());
-                    return future;
-                }).toCompletableFuture())
+                .addMiddleware(
+                    (request, next) -> CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
+                        if (throwable.getCause() instanceof NotFoundException) {
+                            ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
+                            return CompletableFuture.completedFuture(
+                                new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));
+                        }
+                        CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
+                        future.completeExceptionally(throwable.getCause());
+                        return future;
+                    }).toCompletableFuture())
 
                 .build(projectKey);
         Category category = b.categories()

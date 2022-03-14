@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -100,7 +102,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
@@ -114,7 +116,37 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final List<Integer> limit) {
         return copy().withoutQueryParam("limit")
@@ -131,7 +163,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
@@ -145,7 +177,37 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final List<Integer> offset) {
         return copy().withoutQueryParam("offset")
@@ -162,7 +224,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set staged with the specificied value
+     * set staged with the specified value
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
@@ -176,7 +238,37 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set staged with the specificied values
+     * set staged with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final List<Boolean> staged) {
         return copy().withoutQueryParam("staged")
@@ -193,7 +285,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set confidenceMin with the specificied value
+     * set confidenceMin with the specified value
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(final double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
@@ -207,7 +299,39 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set confidenceMin with the specificied values
+     * set confidenceMin with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
+            final Supplier<Double> supplier) {
+        return copy().withQueryParam("confidenceMin", supplier.get());
+    }
+
+    /**
+     * add additional confidenceMin query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
+            final Supplier<Double> supplier) {
+        return copy().addQueryParam("confidenceMin", supplier.get());
+    }
+
+    /**
+     * set confidenceMin with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("confidenceMin", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional confidenceMin query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("confidenceMin", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set confidenceMin with the specified values
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
             final List<Double> confidenceMin) {
@@ -228,7 +352,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set confidenceMax with the specificied value
+     * set confidenceMax with the specified value
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
@@ -242,7 +366,39 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     /**
-     * set confidenceMax with the specificied values
+     * set confidenceMax with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
+            final Supplier<Double> supplier) {
+        return copy().withQueryParam("confidenceMax", supplier.get());
+    }
+
+    /**
+     * add additional confidenceMax query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
+            final Supplier<Double> supplier) {
+        return copy().addQueryParam("confidenceMax", supplier.get());
+    }
+
+    /**
+     * set confidenceMax with the specified value
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("confidenceMax", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional confidenceMax query parameter
+     */
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("confidenceMax", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set confidenceMax with the specified values
      */
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
             final List<Double> confidenceMax) {

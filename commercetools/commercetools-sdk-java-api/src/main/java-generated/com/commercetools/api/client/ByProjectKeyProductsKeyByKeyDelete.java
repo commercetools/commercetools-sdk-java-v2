@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -110,7 +112,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCurrency with the specificied value
+     * set priceCurrency with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final String priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
@@ -124,7 +126,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCurrency with the specificied values
+     * set priceCurrency with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCurrency(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCurrency with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final List<String> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
@@ -143,7 +173,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCountry with the specificied value
+     * set priceCountry with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final String priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
@@ -157,7 +187,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCountry with the specificied values
+     * set priceCountry with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCountry(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * set priceCountry with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCountry with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final List<String> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
@@ -176,7 +234,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCustomerGroup with the specificied value
+     * set priceCustomerGroup with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -190,7 +248,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceCustomerGroup with the specificied values
+     * set priceCustomerGroup with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroup with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final List<String> priceCustomerGroup) {
         return copy().withoutQueryParam("priceCustomerGroup")
@@ -209,7 +295,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceChannel with the specificied value
+     * set priceChannel with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final String priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
@@ -223,7 +309,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set priceChannel with the specificied values
+     * set priceChannel with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceChannel(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * set priceChannel with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceChannel with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final List<String> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
@@ -242,7 +356,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set localeProjection with the specificied value
+     * set localeProjection with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withLocaleProjection(final String localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
@@ -256,7 +370,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set localeProjection with the specificied values
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withLocaleProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addLocaleProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withLocaleProjection(final List<String> localeProjection) {
         return copy().withoutQueryParam("localeProjection")
@@ -275,7 +417,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set storeProjection with the specificied value
+     * set storeProjection with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withStoreProjection(final String storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
@@ -289,7 +431,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set storeProjection with the specificied values
+     * set storeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withStoreProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addStoreProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * set storeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set storeProjection with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withStoreProjection(final List<String> storeProjection) {
         return copy().withoutQueryParam("storeProjection")
@@ -308,7 +478,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set version with the specificied value
+     * set version with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
@@ -322,7 +492,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set version with the specificied values
+     * set version with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withVersion(final Supplier<Long> supplier) {
+        return copy().withQueryParam("version", supplier.get());
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addVersion(final Supplier<Long> supplier) {
+        return copy().addQueryParam("version", supplier.get());
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set version with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withVersion(final List<Long> version) {
         return copy().withoutQueryParam("version")
@@ -339,7 +537,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyProductsKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -353,7 +551,35 @@ public class ByProjectKeyProductsKeyByKeyDelete
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyProductsKeyByKeyDelete withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")

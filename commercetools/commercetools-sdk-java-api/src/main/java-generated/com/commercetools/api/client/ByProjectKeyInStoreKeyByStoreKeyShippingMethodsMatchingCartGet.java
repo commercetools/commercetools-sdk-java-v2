@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -88,7 +90,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     }
 
     /**
-     * set cartId with the specificied value
+     * set cartId with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final String cartId) {
         return copy().withQueryParam("cartId", cartId);
@@ -102,7 +104,37 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     }
 
     /**
-     * set cartId with the specificied values
+     * set cartId with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final Supplier<String> supplier) {
+        return copy().withQueryParam("cartId", supplier.get());
+    }
+
+    /**
+     * add additional cartId query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final Supplier<String> supplier) {
+        return copy().addQueryParam("cartId", supplier.get());
+    }
+
+    /**
+     * set cartId with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("cartId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional cartId query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("cartId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set cartId with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final List<String> cartId) {
         return copy().withoutQueryParam("cartId")
@@ -119,7 +151,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -133,7 +165,37 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")

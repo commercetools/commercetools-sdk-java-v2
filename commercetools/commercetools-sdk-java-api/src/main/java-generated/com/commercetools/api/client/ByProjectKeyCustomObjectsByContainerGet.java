@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -86,7 +88,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
-     * set where with the specificied value
+     * set where with the specified value
      */
     public ByProjectKeyCustomObjectsByContainerGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
@@ -100,7 +102,35 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
-     * set where with the specificied values
+     * set where with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
      */
     public ByProjectKeyCustomObjectsByContainerGet withWhere(final List<String> where) {
         return copy().withoutQueryParam("where")
@@ -117,7 +147,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -131,7 +161,35 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyCustomObjectsByContainerGet withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")

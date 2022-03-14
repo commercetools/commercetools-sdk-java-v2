@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -103,7 +105,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -117,7 +119,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")
@@ -134,7 +164,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
@@ -148,7 +178,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withSort(final List<String> sort) {
         return copy().withoutQueryParam("sort")
@@ -165,7 +223,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
@@ -179,7 +237,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withLimit(final List<Integer> limit) {
         return copy().withoutQueryParam("limit")
@@ -196,7 +282,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
@@ -210,7 +296,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withOffset(final List<Integer> offset) {
         return copy().withoutQueryParam("offset")
@@ -227,7 +341,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set withTotal with the specificied value
+     * set withTotal with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -241,7 +355,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set withTotal with the specificied values
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWithTotal(final List<Boolean> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -259,7 +401,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set where with the specificied value
+     * set where with the specified value
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
@@ -273,7 +415,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends
     }
 
     /**
-     * set where with the specificied values
+     * set where with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersGet addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
      */
     public ByProjectKeyInStoreKeyByStoreKeyCustomersGet withWhere(final List<String> where) {
         return copy().withoutQueryParam("where")

@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -86,7 +88,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set country with the specificied value
+     * set country with the specified value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country) {
         return copy().withQueryParam("country", country);
@@ -100,7 +102,35 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set country with the specificied values
+     * set country with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final Supplier<String> supplier) {
+        return copy().withQueryParam("country", supplier.get());
+    }
+
+    /**
+     * add additional country query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final Supplier<String> supplier) {
+        return copy().addQueryParam("country", supplier.get());
+    }
+
+    /**
+     * set country with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("country", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional country query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("country", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set country with the specified values
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final List<String> country) {
         return copy().withoutQueryParam("country")
@@ -117,7 +147,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set state with the specificied value
+     * set state with the specified value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state) {
         return copy().withQueryParam("state", state);
@@ -131,7 +161,35 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set state with the specificied values
+     * set state with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withState(final Supplier<String> supplier) {
+        return copy().withQueryParam("state", supplier.get());
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final Supplier<String> supplier) {
+        return copy().addQueryParam("state", supplier.get());
+    }
+
+    /**
+     * set state with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withState(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set state with the specified values
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final List<String> state) {
         return copy().withoutQueryParam("state")
@@ -148,7 +206,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set currency with the specificied value
+     * set currency with the specified value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency) {
         return copy().withQueryParam("currency", currency);
@@ -162,7 +220,36 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set currency with the specificied values
+     * set currency with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final Supplier<String> supplier) {
+        return copy().withQueryParam("currency", supplier.get());
+    }
+
+    /**
+     * add additional currency query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final Supplier<String> supplier) {
+        return copy().addQueryParam("currency", supplier.get());
+    }
+
+    /**
+     * set currency with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("currency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional currency query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("currency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set currency with the specified values
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final List<String> currency) {
         return copy().withoutQueryParam("currency")
@@ -180,7 +267,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -194,7 +281,35 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")
@@ -211,7 +326,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
@@ -225,7 +340,35 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
      */
     public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final List<String> sort) {
         return copy().withoutQueryParam("sort")

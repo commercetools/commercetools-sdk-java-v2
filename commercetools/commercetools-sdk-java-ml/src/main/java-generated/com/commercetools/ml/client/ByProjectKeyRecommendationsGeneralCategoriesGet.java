@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -90,7 +92,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set productImageUrl with the specificied value
+     * set productImageUrl with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl) {
         return copy().withQueryParam("productImageUrl", productImageUrl);
@@ -104,7 +106,37 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set productImageUrl with the specificied values
+     * set productImageUrl with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final Supplier<String> supplier) {
+        return copy().withQueryParam("productImageUrl", supplier.get());
+    }
+
+    /**
+     * add additional productImageUrl query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final Supplier<String> supplier) {
+        return copy().addQueryParam("productImageUrl", supplier.get());
+    }
+
+    /**
+     * set productImageUrl with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("productImageUrl", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional productImageUrl query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("productImageUrl", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set productImageUrl with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final List<String> productImageUrl) {
         return copy().withoutQueryParam("productImageUrl")
@@ -123,7 +155,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set productName with the specificied value
+     * set productName with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName) {
         return copy().withQueryParam("productName", productName);
@@ -137,7 +169,37 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set productName with the specificied values
+     * set productName with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final Supplier<String> supplier) {
+        return copy().withQueryParam("productName", supplier.get());
+    }
+
+    /**
+     * add additional productName query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final Supplier<String> supplier) {
+        return copy().addQueryParam("productName", supplier.get());
+    }
+
+    /**
+     * set productName with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("productName", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional productName query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("productName", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set productName with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final List<String> productName) {
         return copy().withoutQueryParam("productName")
@@ -155,7 +217,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
@@ -169,7 +231,35 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final List<Integer> limit) {
         return copy().withoutQueryParam("limit")
@@ -186,7 +276,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
@@ -200,7 +290,35 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final List<Integer> offset) {
         return copy().withoutQueryParam("offset")
@@ -217,7 +335,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set confidenceMin with the specificied value
+     * set confidenceMin with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
@@ -231,7 +349,37 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set confidenceMin with the specificied values
+     * set confidenceMin with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Supplier<Double> supplier) {
+        return copy().withQueryParam("confidenceMin", supplier.get());
+    }
+
+    /**
+     * add additional confidenceMin query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Supplier<Double> supplier) {
+        return copy().addQueryParam("confidenceMin", supplier.get());
+    }
+
+    /**
+     * set confidenceMin with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("confidenceMin", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional confidenceMin query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("confidenceMin", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set confidenceMin with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final List<Double> confidenceMin) {
         return copy().withoutQueryParam("confidenceMin")
@@ -250,7 +398,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set confidenceMax with the specificied value
+     * set confidenceMax with the specified value
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
@@ -264,7 +412,37 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     }
 
     /**
-     * set confidenceMax with the specificied values
+     * set confidenceMax with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Supplier<Double> supplier) {
+        return copy().withQueryParam("confidenceMax", supplier.get());
+    }
+
+    /**
+     * add additional confidenceMax query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Supplier<Double> supplier) {
+        return copy().addQueryParam("confidenceMax", supplier.get());
+    }
+
+    /**
+     * set confidenceMax with the specified value
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("confidenceMax", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional confidenceMax query parameter
+     */
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("confidenceMax", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set confidenceMax with the specified values
      */
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final List<Double> confidenceMax) {
         return copy().withoutQueryParam("confidenceMax")

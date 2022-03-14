@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import com.commercetools.importapi.models.common.ProcessingState;
@@ -107,7 +109,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {
         return copy().withQueryParam("limit", limit);
@@ -121,7 +123,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(
+            final Supplier<Double> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(
+            final Supplier<Double> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final List<Double> limit) {
         return copy().withoutQueryParam("limit")
@@ -138,7 +172,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {
         return copy().withQueryParam("offset", offset);
@@ -152,7 +186,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
+            final Supplier<Double> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
+            final Supplier<Double> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final List<Double> offset) {
         return copy().withoutQueryParam("offset")
@@ -169,7 +235,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
@@ -183,7 +249,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addSort(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addSort(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final List<String> sort) {
         return copy().withoutQueryParam("sort")
@@ -200,7 +298,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set resourceKey with the specificied value
+     * set resourceKey with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
             final String resourceKey) {
@@ -216,7 +314,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set resourceKey with the specificied values
+     * set resourceKey with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("resourceKey", supplier.get());
+    }
+
+    /**
+     * add additional resourceKey query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("resourceKey", supplier.get());
+    }
+
+    /**
+     * set resourceKey with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("resourceKey", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional resourceKey query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("resourceKey", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set resourceKey with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
             final List<String> resourceKey) {
@@ -236,7 +366,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set state with the specificied value
+     * set state with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state) {
         return copy().withQueryParam("state", state);
@@ -250,7 +380,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set state with the specificied values
+     * set state with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withState(
+            final Supplier<ProcessingState> supplier) {
+        return copy().withQueryParam("state", supplier.get());
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addState(
+            final Supplier<ProcessingState> supplier) {
+        return copy().addQueryParam("state", supplier.get());
+    }
+
+    /**
+     * set state with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withState(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addState(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set state with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withState(
             final List<ProcessingState> state) {
@@ -269,7 +431,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set debug with the specificied value
+     * set debug with the specified value
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {
         return copy().withQueryParam("debug", debug);
@@ -283,7 +445,39 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     }
 
     /**
-     * set debug with the specificied values
+     * set debug with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(
+            final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("debug", supplier.get());
+    }
+
+    /**
+     * add additional debug query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(
+            final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("debug", supplier.get());
+    }
+
+    /**
+     * set debug with the specified value
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("debug", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional debug query parameter
+     */
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("debug", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set debug with the specified values
      */
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final List<Boolean> debug) {
         return copy().withoutQueryParam("debug")

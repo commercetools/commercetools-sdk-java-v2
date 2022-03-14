@@ -70,13 +70,13 @@ public class MiddlewareTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .addMiddleware((request, next) -> CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
-                    if (throwable instanceof NotFoundException) {
-                        ApiHttpResponse<byte[]> response = ((NotFoundException) throwable).getResponse();
+                    if (throwable.getCause() instanceof NotFoundException) {
+                        ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
                         return CompletableFuture.completedFuture(
                             new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));
                     }
                     CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
-                    future.completeExceptionally(throwable);
+                    future.completeExceptionally(throwable.getCause());
                     return future;
                 }).toCompletableFuture())
 

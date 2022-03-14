@@ -5,8 +5,10 @@ import static java.util.Collections.singletonList;
 
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Function;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -14,6 +16,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryDraftBuilder;
 import com.commercetools.api.models.project.Project;
+import com.spotify.futures.CompletableFutures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -66,7 +69,7 @@ public class MiddlewareTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware((request, next) -> next.apply(request).exceptionallyCompose((throwable) -> {
+                .addMiddleware((request, next) -> CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
                     if (throwable instanceof NotFoundException) {
                         ApiHttpResponse<byte[]> response = ((NotFoundException) throwable).getResponse();
                         return CompletableFuture.completedFuture(
@@ -75,7 +78,8 @@ public class MiddlewareTest {
                     CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
                     future.completeExceptionally(throwable);
                     return future;
-                }))
+                }).toCompletableFuture())
+
                 .build(projectKey);
         Category category = b.categories()
                 .withId("adbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")

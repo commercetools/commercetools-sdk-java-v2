@@ -135,6 +135,19 @@
             ]
         },
         {
+            "moduleName": "com.spotify:completable-futures",
+            "moduleVersion": "0.3.5",
+            "moduleUrls": [
+                "https://spotify.github.io/completable-futures"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "javax.annotation:javax.annotation-api",
             "moduleVersion": "1.3.2",
             "moduleUrls": [

@@ -14,12 +14,12 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryDraftBuilder;
 import com.commercetools.api.models.project.Project;
-import com.spotify.futures.CompletableFutures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
+import io.vrap.rmf.base.client.http.NotFoundExceptionMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -67,18 +67,7 @@ public class MiddlewareTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware(
-                    (request, next) -> CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
-                        if (throwable.getCause() instanceof NotFoundException) {
-                            ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
-                            return CompletableFuture.completedFuture(
-                                new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));
-                        }
-                        CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
-                        future.completeExceptionally(throwable.getCause());
-                        return future;
-                    }).toCompletableFuture())
-
+                .addMiddleware(NotFoundExceptionMiddleware.of())
                 .build(projectKey);
         Category category = b.categories()
                 .withId("adbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")

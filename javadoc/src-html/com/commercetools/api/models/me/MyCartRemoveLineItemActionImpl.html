@@ -72,71 +72,75 @@
 <span class="source-line-no">059</span><span id="line.59">        return this.quantity;</span>
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.externalPrice;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return this.externalTotalPrice;</span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;br /&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">    *  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">    */</span>
+<span class="source-line-no">066</span><span id="line.66">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
+<span class="source-line-no">067</span><span id="line.67">        return this.externalPrice;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return this.shippingDetailsToRemove;</span>
+<span class="source-line-no">070</span><span id="line.70">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return this.externalTotalPrice;</span>
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setLineItemId(final String lineItemId) {</span>
-<span class="source-line-no">075</span><span id="line.75">        this.lineItemId = lineItemId;</span>
+<span class="source-line-no">074</span><span id="line.74">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return this.shippingDetailsToRemove;</span>
 <span class="source-line-no">076</span><span id="line.76">    }</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setQuantity(final Long quantity) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.quantity = quantity;</span>
+<span class="source-line-no">078</span><span id="line.78">    public void setLineItemId(final String lineItemId) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.lineItemId = lineItemId;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.externalPrice = externalPrice;</span>
+<span class="source-line-no">082</span><span id="line.82">    public void setQuantity(final Long quantity) {</span>
+<span class="source-line-no">083</span><span id="line.83">        this.quantity = quantity;</span>
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public void setExternalTotalPrice(</span>
-<span class="source-line-no">087</span><span id="line.87">            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.externalTotalPrice = externalTotalPrice;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setShippingDetailsToRemove(</span>
-<span class="source-line-no">092</span><span id="line.92">            final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {</span>
-<span class="source-line-no">093</span><span id="line.93">        this.shippingDetailsToRemove = shippingDetailsToRemove;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    @Override</span>
-<span class="source-line-no">097</span><span id="line.97">    public boolean equals(Object o) {</span>
-<span class="source-line-no">098</span><span id="line.98">        if (this == o)</span>
-<span class="source-line-no">099</span><span id="line.99">            return true;</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">102</span><span id="line.102">            return false;</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">        MyCartRemoveLineItemActionImpl that = (MyCartRemoveLineItemActionImpl) o;</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">107</span><span id="line.107">                .append(lineItemId, that.lineItemId)</span>
-<span class="source-line-no">108</span><span id="line.108">                .append(quantity, that.quantity)</span>
-<span class="source-line-no">109</span><span id="line.109">                .append(externalPrice, that.externalPrice)</span>
-<span class="source-line-no">110</span><span id="line.110">                .append(externalTotalPrice, that.externalTotalPrice)</span>
-<span class="source-line-no">111</span><span id="line.111">                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)</span>
-<span class="source-line-no">112</span><span id="line.112">                .isEquals();</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    @Override</span>
-<span class="source-line-no">116</span><span id="line.116">    public int hashCode() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">118</span><span id="line.118">                .append(lineItemId)</span>
-<span class="source-line-no">119</span><span id="line.119">                .append(quantity)</span>
-<span class="source-line-no">120</span><span id="line.120">                .append(externalPrice)</span>
-<span class="source-line-no">121</span><span id="line.121">                .append(externalTotalPrice)</span>
-<span class="source-line-no">122</span><span id="line.122">                .append(shippingDetailsToRemove)</span>
-<span class="source-line-no">123</span><span id="line.123">                .toHashCode();</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">}</span>
+<span class="source-line-no">086</span><span id="line.86">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.externalPrice = externalPrice;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setExternalTotalPrice(</span>
+<span class="source-line-no">091</span><span id="line.91">            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.externalTotalPrice = externalTotalPrice;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public void setShippingDetailsToRemove(</span>
+<span class="source-line-no">096</span><span id="line.96">            final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.shippingDetailsToRemove = shippingDetailsToRemove;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    @Override</span>
+<span class="source-line-no">101</span><span id="line.101">    public boolean equals(Object o) {</span>
+<span class="source-line-no">102</span><span id="line.102">        if (this == o)</span>
+<span class="source-line-no">103</span><span id="line.103">            return true;</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">106</span><span id="line.106">            return false;</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">        MyCartRemoveLineItemActionImpl that = (MyCartRemoveLineItemActionImpl) o;</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">111</span><span id="line.111">                .append(lineItemId, that.lineItemId)</span>
+<span class="source-line-no">112</span><span id="line.112">                .append(quantity, that.quantity)</span>
+<span class="source-line-no">113</span><span id="line.113">                .append(externalPrice, that.externalPrice)</span>
+<span class="source-line-no">114</span><span id="line.114">                .append(externalTotalPrice, that.externalTotalPrice)</span>
+<span class="source-line-no">115</span><span id="line.115">                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)</span>
+<span class="source-line-no">116</span><span id="line.116">                .isEquals();</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    @Override</span>
+<span class="source-line-no">120</span><span id="line.120">    public int hashCode() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">122</span><span id="line.122">                .append(lineItemId)</span>
+<span class="source-line-no">123</span><span id="line.123">                .append(quantity)</span>
+<span class="source-line-no">124</span><span id="line.124">                .append(externalPrice)</span>
+<span class="source-line-no">125</span><span id="line.125">                .append(externalTotalPrice)</span>
+<span class="source-line-no">126</span><span id="line.126">                .append(shippingDetailsToRemove)</span>
+<span class="source-line-no">127</span><span id="line.127">                .toHashCode();</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">}</span>
 
 
 

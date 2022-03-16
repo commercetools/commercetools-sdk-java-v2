@@ -84,8 +84,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomFieldReferenceTypeImpl.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.16">CustomFieldReferenceType</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.18">CustomFieldReferenceType</a></span><span class="extends-implements">
 extends <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></span></div>
+<div class="block"><p>Field type for <a href="ctp:api:type:Reference">Reference</a> values.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -121,9 +122,11 @@ extends <a href="FieldType.html" title="interface in com.commercetools.api.model
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomFieldReferenceTypeBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.type.CustomFieldReferenceType)">builder</a></span>&#8203;(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="CustomFieldReferenceValue.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceValue</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getReferenceTypeId()">getReferenceTypeId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Resource type the Custom Field can reference.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -131,7 +134,7 @@ extends <a href="FieldType.html" title="interface in com.commercetools.api.model
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.type.CustomFieldReferenceType)">of</a></span>&#8203;(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setReferenceTypeId(com.commercetools.api.models.common.ReferenceTypeId)">setReferenceTypeId</a></span>&#8203;(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;referenceTypeId)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setReferenceTypeId(com.commercetools.api.models.type.CustomFieldReferenceValue)">setReferenceTypeId</a></span>&#8203;(<a href="CustomFieldReferenceValue.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceValue</a>&nbsp;referenceTypeId)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withCustomFieldReferenceType(java.util.function.Function)">withCustomFieldReferenceType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>,&#8203;T&gt;&nbsp;helper)</code></div>
@@ -156,7 +159,7 @@ extends <a href="FieldType.html" title="interface in com.commercetools.api.model
 <li>
 <section class="detail" id="REFERENCE">
 <h3>REFERENCE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.20">REFERENCE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.22">REFERENCE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.type.CustomFieldReferenceType.REFERENCE">Constant Field Values</a></dd>
@@ -175,43 +178,44 @@ extends <a href="FieldType.html" title="interface in com.commercetools.api.model
 <section class="detail" id="getReferenceTypeId()">
 <h3>getReferenceTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.22">getReferenceTypeId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="CustomFieldReferenceValue.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.27">getReferenceTypeId</a></span>()</div>
+<div class="block"><p>Resource type the Custom Field can reference.</p></div>
 </section>
 </li>
 <li>
-<section class="detail" id="setReferenceTypeId(com.commercetools.api.models.common.ReferenceTypeId)">
+<section class="detail" id="setReferenceTypeId(com.commercetools.api.models.type.CustomFieldReferenceValue)">
 <h3>setReferenceTypeId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.26">setReferenceTypeId</a></span>&#8203;<span class="parameters">(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;referenceTypeId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.31">setReferenceTypeId</a></span>&#8203;<span class="parameters">(<a href="CustomFieldReferenceValue.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceValue</a>&nbsp;referenceTypeId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.28">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.33">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.CustomFieldReferenceType)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.32">of</a></span>&#8203;<span class="parameters">(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.37">of</a></span>&#8203;<span class="parameters">(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceTypeBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.38">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceTypeBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.43">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.CustomFieldReferenceType)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceTypeBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.42">builder</a></span>&#8203;<span class="parameters">(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldReferenceTypeBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldReferenceTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.47">builder</a></span>&#8203;<span class="parameters">(<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomFieldReferenceType(java.util.function.Function)">
 <h3>withCustomFieldReferenceType</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.46">withCustomFieldReferenceType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFieldReferenceType.html#line.51">withCustomFieldReferenceType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldReferenceType.html" title="interface in com.commercetools.api.models.type">CustomFieldReferenceType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

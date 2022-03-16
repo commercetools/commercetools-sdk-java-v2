@@ -34,14 +34,17 @@
 <span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">022</span><span id="line.22">public interface ShippingRateInputType {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
-<span class="source-line-no">025</span><span id="line.25">    @JsonProperty("type")</span>
-<span class="source-line-no">026</span><span id="line.26">    public ShippingRateTierType getType();</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    default &lt;T&gt; T withShippingRateInputType(Function&lt;ShippingRateInputType, T&gt; helper) {</span>
-<span class="source-line-no">029</span><span id="line.29">        return helper.apply(this);</span>
-<span class="source-line-no">030</span><span id="line.30">    }</span>
-<span class="source-line-no">031</span><span id="line.31">}</span>
+<span class="source-line-no">024</span><span id="line.24">    /**</span>
+<span class="source-line-no">025</span><span id="line.25">    *  &lt;p&gt;Can be one of the following or absent.&lt;/p&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">    */</span>
+<span class="source-line-no">027</span><span id="line.27">    @NotNull</span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("type")</span>
+<span class="source-line-no">029</span><span id="line.29">    public ShippingRateTierType getType();</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    default &lt;T&gt; T withShippingRateInputType(Function&lt;ShippingRateInputType, T&gt; helper) {</span>
+<span class="source-line-no">032</span><span id="line.32">        return helper.apply(this);</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34">}</span>
 
 
 

@@ -142,10 +142,14 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValue()">getValue</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -226,7 +230,8 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.49">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.52">getName</a></span>()</div>
+<div class="block"><p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetCustomLineItemCustomFieldAction.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetCustomLineItemCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomLineItemCustomFieldAction</a></code></dd>
@@ -236,7 +241,10 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.53">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.61">getValue</a></span>()</div>
+<div class="block"><p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
+  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetCustomLineItemCustomFieldAction.html#getValue()">getValue</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetCustomLineItemCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomLineItemCustomFieldAction</a></code></dd>
@@ -246,7 +254,7 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.57">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.65">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetCustomLineItemCustomFieldAction.html#setCustomLineItemId(java.lang.String)">setCustomLineItemId</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetCustomLineItemCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomLineItemCustomFieldAction</a></code></dd>
@@ -256,7 +264,7 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.61">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.69">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetCustomLineItemCustomFieldAction.html#setName(java.lang.String)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetCustomLineItemCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomLineItemCustomFieldAction</a></code></dd>
@@ -266,7 +274,7 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="setValue(java.lang.Object)">
 <h3>setValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.65">setValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.73">setValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetCustomLineItemCustomFieldAction.html#setValue(java.lang.Object)">setValue</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetCustomLineItemCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomLineItemCustomFieldAction</a></code></dd>
@@ -276,7 +284,7 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.69">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.77">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -286,7 +294,7 @@ implements <a href="OrderSetCustomLineItemCustomFieldAction.html" title="interfa
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.86">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetCustomLineItemCustomFieldActionImpl.html#line.94">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

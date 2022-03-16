@@ -54,71 +54,74 @@
 <span class="source-line-no">041</span><span id="line.41">    @JsonProperty("newState")</span>
 <span class="source-line-no">042</span><span id="line.42">    public List&lt;ItemState&gt; getNewState();</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("newTotalPrice")</span>
-<span class="source-line-no">047</span><span id="line.47">    public TypedMoney getNewTotalPrice();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Valid</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("newTaxedPrice")</span>
-<span class="source-line-no">051</span><span id="line.51">    public TaxedItemPrice getNewTaxedPrice();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("newPrice")</span>
-<span class="source-line-no">055</span><span id="line.55">    public Price getNewPrice();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    @Valid</span>
-<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("newShippingDetail")</span>
-<span class="source-line-no">059</span><span id="line.59">    public ItemShippingDetails getNewShippingDetail();</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setLineItemId(final String lineItemId);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setRemovedQuantity(final Long removedQuantity);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setNewQuantity(final Long newQuantity);</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonIgnore</span>
-<span class="source-line-no">068</span><span id="line.68">    public void setNewState(final ItemState... newState);</span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">    *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">    */</span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("newTotalPrice")</span>
+<span class="source-line-no">050</span><span id="line.50">    public TypedMoney getNewTotalPrice();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("newTaxedPrice")</span>
+<span class="source-line-no">054</span><span id="line.54">    public TaxedItemPrice getNewTaxedPrice();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @Valid</span>
+<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("newPrice")</span>
+<span class="source-line-no">058</span><span id="line.58">    public Price getNewPrice();</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    @Valid</span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("newShippingDetail")</span>
+<span class="source-line-no">062</span><span id="line.62">    public ItemShippingDetails getNewShippingDetail();</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setLineItemId(final String lineItemId);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public void setRemovedQuantity(final Long removedQuantity);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setNewQuantity(final Long newQuantity);</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setNewState(final List&lt;ItemState&gt; newState);</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setNewTotalPrice(final TypedMoney newTotalPrice);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setNewTaxedPrice(final TaxedItemPrice newTaxedPrice);</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setNewPrice(final Price newPrice);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setNewShippingDetail(final ItemShippingDetails newShippingDetail);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public static OrderLineItemRemovedMessagePayload of() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return new OrderLineItemRemovedMessagePayloadImpl();</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public static OrderLineItemRemovedMessagePayload of(final OrderLineItemRemovedMessagePayload template) {</span>
-<span class="source-line-no">085</span><span id="line.85">        OrderLineItemRemovedMessagePayloadImpl instance = new OrderLineItemRemovedMessagePayloadImpl();</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setLineItemId(template.getLineItemId());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setRemovedQuantity(template.getRemovedQuantity());</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setNewQuantity(template.getNewQuantity());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setNewState(template.getNewState());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setNewTotalPrice(template.getNewTotalPrice());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setNewTaxedPrice(template.getNewTaxedPrice());</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setNewPrice(template.getNewPrice());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setNewShippingDetail(template.getNewShippingDetail());</span>
-<span class="source-line-no">094</span><span id="line.94">        return instance;</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static OrderLineItemRemovedMessagePayloadBuilder builder() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return OrderLineItemRemovedMessagePayloadBuilder.of();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static OrderLineItemRemovedMessagePayloadBuilder builder(final OrderLineItemRemovedMessagePayload template) {</span>
-<span class="source-line-no">102</span><span id="line.102">        return OrderLineItemRemovedMessagePayloadBuilder.of(template);</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    default &lt;T&gt; T withOrderLineItemRemovedMessagePayload(Function&lt;OrderLineItemRemovedMessagePayload, T&gt; helper) {</span>
-<span class="source-line-no">106</span><span id="line.106">        return helper.apply(this);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108">}</span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonIgnore</span>
+<span class="source-line-no">071</span><span id="line.71">    public void setNewState(final ItemState... newState);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setNewState(final List&lt;ItemState&gt; newState);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setNewTotalPrice(final TypedMoney newTotalPrice);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setNewTaxedPrice(final TaxedItemPrice newTaxedPrice);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setNewPrice(final Price newPrice);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setNewShippingDetail(final ItemShippingDetails newShippingDetail);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public static OrderLineItemRemovedMessagePayload of() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return new OrderLineItemRemovedMessagePayloadImpl();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static OrderLineItemRemovedMessagePayload of(final OrderLineItemRemovedMessagePayload template) {</span>
+<span class="source-line-no">088</span><span id="line.88">        OrderLineItemRemovedMessagePayloadImpl instance = new OrderLineItemRemovedMessagePayloadImpl();</span>
+<span class="source-line-no">089</span><span id="line.89">        instance.setLineItemId(template.getLineItemId());</span>
+<span class="source-line-no">090</span><span id="line.90">        instance.setRemovedQuantity(template.getRemovedQuantity());</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setNewQuantity(template.getNewQuantity());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setNewState(template.getNewState());</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setNewTotalPrice(template.getNewTotalPrice());</span>
+<span class="source-line-no">094</span><span id="line.94">        instance.setNewTaxedPrice(template.getNewTaxedPrice());</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setNewPrice(template.getNewPrice());</span>
+<span class="source-line-no">096</span><span id="line.96">        instance.setNewShippingDetail(template.getNewShippingDetail());</span>
+<span class="source-line-no">097</span><span id="line.97">        return instance;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public static OrderLineItemRemovedMessagePayloadBuilder builder() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return OrderLineItemRemovedMessagePayloadBuilder.of();</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public static OrderLineItemRemovedMessagePayloadBuilder builder(final OrderLineItemRemovedMessagePayload template) {</span>
+<span class="source-line-no">105</span><span id="line.105">        return OrderLineItemRemovedMessagePayloadBuilder.of(template);</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    default &lt;T&gt; T withOrderLineItemRemovedMessagePayload(Function&lt;OrderLineItemRemovedMessagePayload, T&gt; helper) {</span>
+<span class="source-line-no">109</span><span id="line.109">        return helper.apply(this);</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111">}</span>
 
 
 

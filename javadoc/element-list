@@ -1,5 +1,6 @@
 com.commercetools.api
 com.commercetools.api.client
+com.commercetools.api.client.error
 com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models

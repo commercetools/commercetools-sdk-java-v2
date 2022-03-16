@@ -126,7 +126,10 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getExternalTotalGross()">getExternalTotalGross</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -188,62 +191,64 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getExternalTotalGross</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.25">getExternalTotalGross</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.29">getExternalTotalGross</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalTaxPortions()">
 <h3>getExternalTaxPortions</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.30">getExternalTaxPortions</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.34">getExternalTaxPortions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTotalGross(com.commercetools.api.models.common.Money)">
 <h3>setExternalTotalGross</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.34">setExternalTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.38">setExternalTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTaxPortions(com.commercetools.api.models.cart.TaxPortionDraft...)">
 <h3>setExternalTaxPortions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.36">setExternalTaxPortions</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;externalTaxPortions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.40">setExternalTaxPortions</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;externalTaxPortions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTaxPortions(java.util.List)">
 <h3>setExternalTaxPortions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.39">setExternalTaxPortions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;externalTaxPortions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.43">setExternalTaxPortions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;externalTaxPortions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.41">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.45">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.52">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetOrderTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderSetOrderTotalTaxAction(java.util.function.Function)">
 <h3>withStagedOrderSetOrderTotalTaxAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.60">withStagedOrderSetOrderTotalTaxAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetOrderTotalTaxAction.html#line.64">withStagedOrderSetOrderTotalTaxAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetOrderTotalTaxAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetOrderTotalTaxAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

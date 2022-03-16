@@ -60,49 +60,56 @@
 <span class="source-line-no">047</span><span id="line.47">        return this.deliveryId;</span>
 <span class="source-line-no">048</span><span id="line.48">    }</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return this.type;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public com.commercetools.api.models.type.FieldContainer getFields() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.fields;</span>
+<span class="source-line-no">050</span><span id="line.50">    /**</span>
+<span class="source-line-no">051</span><span id="line.51">    *  &lt;p&gt;Defines the &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt; that extends the &lt;code&gt;address&lt;/code&gt; in a Delivery with &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt;.</span>
+<span class="source-line-no">052</span><span id="line.52">    *  If absent, any existing Type and Custom Fields are removed from the &lt;code&gt;address&lt;/code&gt; in a Delivery.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">    */</span>
+<span class="source-line-no">054</span><span id="line.54">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return this.type;</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setDeliveryId(final String deliveryId) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.deliveryId = deliveryId;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.type = type;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.fields = fields;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @Override</span>
-<span class="source-line-no">071</span><span id="line.71">    public boolean equals(Object o) {</span>
-<span class="source-line-no">072</span><span id="line.72">        if (this == o)</span>
-<span class="source-line-no">073</span><span id="line.73">            return true;</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">076</span><span id="line.76">            return false;</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">        OrderSetDeliveryAddressCustomTypeActionImpl that = (OrderSetDeliveryAddressCustomTypeActionImpl) o;</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">081</span><span id="line.81">                .append(deliveryId, that.deliveryId)</span>
-<span class="source-line-no">082</span><span id="line.82">                .append(type, that.type)</span>
-<span class="source-line-no">083</span><span id="line.83">                .append(fields, that.fields)</span>
-<span class="source-line-no">084</span><span id="line.84">                .isEquals();</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;Sets the &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; fields for the &lt;code&gt;address&lt;/code&gt; in a Delivery.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    */</span>
+<span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.type.FieldContainer getFields() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return this.fields;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public void setDeliveryId(final String deliveryId) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.deliveryId = deliveryId;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.type = type;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {</span>
+<span class="source-line-no">074</span><span id="line.74">        this.fields = fields;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    @Override</span>
+<span class="source-line-no">078</span><span id="line.78">    public boolean equals(Object o) {</span>
+<span class="source-line-no">079</span><span id="line.79">        if (this == o)</span>
+<span class="source-line-no">080</span><span id="line.80">            return true;</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">083</span><span id="line.83">            return false;</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">        OrderSetDeliveryAddressCustomTypeActionImpl that = (OrderSetDeliveryAddressCustomTypeActionImpl) o;</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    @Override</span>
-<span class="source-line-no">088</span><span id="line.88">    public int hashCode() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">}</span>
+<span class="source-line-no">087</span><span id="line.87">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">088</span><span id="line.88">                .append(deliveryId, that.deliveryId)</span>
+<span class="source-line-no">089</span><span id="line.89">                .append(type, that.type)</span>
+<span class="source-line-no">090</span><span id="line.90">                .append(fields, that.fields)</span>
+<span class="source-line-no">091</span><span id="line.91">                .isEquals();</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @Override</span>
+<span class="source-line-no">095</span><span id="line.95">    public int hashCode() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(type).append(fields).toHashCode();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">}</span>
 
 
 

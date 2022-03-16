@@ -35,9 +35,9 @@
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    public static CentPrecisionMoney of(final CentPrecisionMoney template) {</span>
 <span class="source-line-no">024</span><span id="line.24">        CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();</span>
-<span class="source-line-no">025</span><span id="line.25">        instance.setFractionDigits(template.getFractionDigits());</span>
+<span class="source-line-no">025</span><span id="line.25">        instance.setCurrencyCode(template.getCurrencyCode());</span>
 <span class="source-line-no">026</span><span id="line.26">        instance.setCentAmount(template.getCentAmount());</span>
-<span class="source-line-no">027</span><span id="line.27">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">027</span><span id="line.27">        instance.setFractionDigits(template.getFractionDigits());</span>
 <span class="source-line-no">028</span><span id="line.28">        return instance;</span>
 <span class="source-line-no">029</span><span id="line.29">    }</span>
 <span class="source-line-no">030</span><span id="line.30"></span>

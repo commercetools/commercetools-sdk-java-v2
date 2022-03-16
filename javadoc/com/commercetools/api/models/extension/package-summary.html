@@ -63,15 +63,23 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Interface</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">AuthorizationHeaderAuthentication</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The <code>Authorization</code> header will be set to the content of <code>headerValue</code>.</div>
+</div>
 <div class="col-first odd-row-color"><a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</div>
+</div>
 <div class="col-first even-row-color"><a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the functions key.</div>
+</div>
 <div class="col-first odd-row-color"><a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">An Extension gets called during any of the following requests of an API call, but before the result is persisted.</div>
+</div>
 <div class="col-first odd-row-color"><a href="ExtensionAuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">ExtensionAuthorizationHeaderAuthentication</a></div>
 <div class="col-last odd-row-color">Deprecated.
 <div class="deprecation-comment">use <a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension"><code>AuthorizationHeaderAuthentication</code></a> instead</div>
@@ -89,7 +97,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="ExtensionChangeTriggersAction.html" title="interface in com.commercetools.api.models.extension">ExtensionChangeTriggersAction</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Generic type for destinations.</div>
+</div>
 <div class="col-first odd-row-color"><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionHttpDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionHttpDestination</a></div>
@@ -103,9 +113,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><a href="ExtensionInput.html" title="interface in com.commercetools.api.models.extension">ExtensionInput</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:Extension">Extension</a>.</div>
+</div>
 <div class="col-first even-row-color"><a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Extensions are available for:</div>
+</div>
 <div class="col-first odd-row-color"><a href="ExtensionSetKeyAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetKeyAction</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></div>
@@ -117,7 +131,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="ExtensionUpdateAction.html" title="interface in com.commercetools.api.models.extension">ExtensionUpdateAction</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">We recommend an encrypted <code>HTTPS</code> connection for production setups.</div>
+</div>
 <div class="col-first odd-row-color"><a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
@@ -130,15 +146,21 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><a href="AuthorizationHeaderAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AuthorizationHeaderAuthenticationBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="AuthorizationHeaderAuthenticationImpl.html" title="class in com.commercetools.api.models.extension">AuthorizationHeaderAuthenticationImpl</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">The <code>Authorization</code> header will be set to the content of <code>headerValue</code>.</div>
+</div>
 <div class="col-first even-row-color"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="AWSLambdaDestinationImpl.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationImpl</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</div>
+</div>
 <div class="col-first even-row-color"><a href="AzureFunctionsAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="AzureFunctionsAuthenticationImpl.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationImpl</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the functions key.</div>
+</div>
 <div class="col-first even-row-color"><a href="ExtensionAuthorizationHeaderAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAuthorizationHeaderAuthenticationBuilder</a></div>
 <div class="col-last even-row-color">Deprecated.
 <div class="deprecation-comment">use <a href="AuthorizationHeaderAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension"><code>AuthorizationHeaderAuthenticationBuilder</code></a> instead</div>
@@ -162,7 +184,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="ExtensionChangeTriggersActionImpl.html" title="class in com.commercetools.api.models.extension">ExtensionChangeTriggersActionImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionDestinationImpl.html" title="class in com.commercetools.api.models.extension">ExtensionDestinationImpl</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Generic type for destinations.</div>
+</div>
 <div class="col-first odd-row-color"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionDraftImpl.html" title="class in com.commercetools.api.models.extension">ExtensionDraftImpl</a></div>
@@ -180,7 +204,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="ExtensionPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionPagedQueryResponseBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionPagedQueryResponseImpl.html" title="class in com.commercetools.api.models.extension">ExtensionPagedQueryResponseImpl</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:Extension">Extension</a>.</div>
+</div>
 <div class="col-first odd-row-color"><a href="ExtensionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetKeyActionBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="ExtensionSetKeyActionImpl.html" title="class in com.commercetools.api.models.extension">ExtensionSetKeyActionImpl</a></div>
@@ -204,7 +230,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="HttpDestinationImpl.html" title="class in com.commercetools.api.models.extension">HttpDestinationImpl</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">We recommend an encrypted <code>HTTPS</code> connection for production setups.</div>
+</div>
 </div>
 </li>
 <li>

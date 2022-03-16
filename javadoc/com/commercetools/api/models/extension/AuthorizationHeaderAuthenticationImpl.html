@@ -83,9 +83,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">AuthorizationHeaderAuthentication</a></code>, <code><a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.17">AuthorizationHeaderAuthenticationImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.21">AuthorizationHeaderAuthenticationImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">AuthorizationHeaderAuthentication</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block"><p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
+  <p>For example, the <code>headerValue</code> for <a href="https://datatracker.ietf.org/doc/html/rfc7617">Basic Authentication</a> should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -136,7 +138,9 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getHeaderValue()">getHeaderValue</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Partially hidden on retrieval for security reasons.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -175,7 +179,7 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AuthorizationHeaderAuthenticationImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.30">AuthorizationHeaderAuthenticationImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.34">AuthorizationHeaderAuthenticationImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -189,7 +193,7 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.34">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.38">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="HttpDestinationAuthentication.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></code></dd>
@@ -199,7 +203,8 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="getHeaderValue()">
 <h3>getHeaderValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.38">getHeaderValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.45">getHeaderValue</a></span>()</div>
+<div class="block"><p>Partially hidden on retrieval for security reasons.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AuthorizationHeaderAuthentication.html#getHeaderValue()">getHeaderValue</a></code>&nbsp;in interface&nbsp;<code><a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">AuthorizationHeaderAuthentication</a></code></dd>
@@ -209,7 +214,7 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="setHeaderValue(java.lang.String)">
 <h3>setHeaderValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.42">setHeaderValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;headerValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.49">setHeaderValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;headerValue)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AuthorizationHeaderAuthentication.html#setHeaderValue(java.lang.String)">setHeaderValue</a></code>&nbsp;in interface&nbsp;<code><a href="AuthorizationHeaderAuthentication.html" title="interface in com.commercetools.api.models.extension">AuthorizationHeaderAuthentication</a></code></dd>
@@ -219,7 +224,7 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.46">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.53">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -229,7 +234,7 @@ implements <a href="AuthorizationHeaderAuthentication.html" title="interface in 
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.59">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AuthorizationHeaderAuthenticationImpl.html#line.66">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -14,10 +14,10 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package io.vrap.rmf.base.client.http;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import java.util.concurrent.Executor;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.concurrent.ExecutorService;</span>
 <span class="source-line-no">005</span><span id="line.5">import java.util.concurrent.ScheduledExecutorService;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">import net.jodah.failsafe.util.concurrent.Scheduler;</span>
+<span class="source-line-no">007</span><span id="line.7">import dev.failsafe.spi.Scheduler;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
 <span class="source-line-no">009</span><span id="line.9">/**</span>
 <span class="source-line-no">010</span><span id="line.10"> * Middleware to add an oauth authentication header to requests</span>
@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">        return new OAuthMiddlewareImpl(executor, oAuthHandler, 1, false);</span>
 <span class="source-line-no">016</span><span id="line.16">    }</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    static OAuthMiddleware of(final Executor executor, final OAuthHandler oAuthHandler) {</span>
+<span class="source-line-no">018</span><span id="line.18">    static OAuthMiddleware of(final ExecutorService executor, final OAuthHandler oAuthHandler) {</span>
 <span class="source-line-no">019</span><span id="line.19">        return new OAuthMiddlewareImpl(executor, oAuthHandler, 1, false);</span>
 <span class="source-line-no">020</span><span id="line.20">    }</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
@@ -45,7 +45,7 @@
 <span class="source-line-no">032</span><span id="line.32">        return new OAuthMiddlewareImpl(executor, oauthHandler, maxRetries, false);</span>
 <span class="source-line-no">033</span><span id="line.33">    }</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    static OAuthMiddleware of(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries) {</span>
+<span class="source-line-no">035</span><span id="line.35">    static OAuthMiddleware of(final ExecutorService executor, final OAuthHandler oauthHandler, final int maxRetries) {</span>
 <span class="source-line-no">036</span><span id="line.36">        return new OAuthMiddlewareImpl(executor, oauthHandler, maxRetries, false);</span>
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
@@ -62,7 +62,7 @@
 <span class="source-line-no">049</span><span id="line.49">        return new OAuthMiddlewareImpl(executor, oauthHandler, maxRetries, useCircuitBreaker);</span>
 <span class="source-line-no">050</span><span id="line.50">    }</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    static OAuthMiddleware of(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries,</span>
+<span class="source-line-no">052</span><span id="line.52">    static OAuthMiddleware of(final ExecutorService executor, final OAuthHandler oauthHandler, final int maxRetries,</span>
 <span class="source-line-no">053</span><span id="line.53">            final boolean useCircuitBreaker) {</span>
 <span class="source-line-no">054</span><span id="line.54">        return new OAuthMiddlewareImpl(executor, oauthHandler, maxRetries, useCircuitBreaker);</span>
 <span class="source-line-no">055</span><span id="line.55">    }</span>

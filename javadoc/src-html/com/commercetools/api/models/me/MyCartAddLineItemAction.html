@@ -38,112 +38,119 @@
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    String ADD_LINE_ITEM = "addLineItem";</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    @Valid</span>
-<span class="source-line-no">029</span><span id="line.29">    @JsonProperty("custom")</span>
-<span class="source-line-no">030</span><span id="line.30">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">    */</span>
-<span class="source-line-no">035</span><span id="line.35">    @Valid</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("distributionChannel")</span>
-<span class="source-line-no">037</span><span id="line.37">    public ChannelResourceIdentifier getDistributionChannel();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @Valid</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("externalTaxRate")</span>
-<span class="source-line-no">041</span><span id="line.41">    public ExternalTaxRateDraft getExternalTaxRate();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("productId")</span>
-<span class="source-line-no">044</span><span id="line.44">    public String getProductId();</span>
+<span class="source-line-no">028</span><span id="line.28">    /**</span>
+<span class="source-line-no">029</span><span id="line.29">    *  &lt;p&gt;The representation used when creating or updating a &lt;a href="/../api/projects/types#list-of-customizable-data-types"&gt;customizable data type&lt;/a&gt; with Custom Fields.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30">    */</span>
+<span class="source-line-no">031</span><span id="line.31">    @Valid</span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("custom")</span>
+<span class="source-line-no">033</span><span id="line.33">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    /**</span>
+<span class="source-line-no">036</span><span id="line.36">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">    */</span>
+<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
+<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("distributionChannel")</span>
+<span class="source-line-no">040</span><span id="line.40">    public ChannelResourceIdentifier getDistributionChannel();</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @Valid</span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("externalTaxRate")</span>
+<span class="source-line-no">044</span><span id="line.44">    public ExternalTaxRateDraft getExternalTaxRate();</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("variantId")</span>
-<span class="source-line-no">047</span><span id="line.47">    public Long getVariantId();</span>
+<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("productId")</span>
+<span class="source-line-no">047</span><span id="line.47">    public String getProductId();</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("sku")</span>
-<span class="source-line-no">050</span><span id="line.50">    public String getSku();</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("variantId")</span>
+<span class="source-line-no">050</span><span id="line.50">    public Long getVariantId();</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("quantity")</span>
-<span class="source-line-no">053</span><span id="line.53">    public Long getQuantity();</span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("sku")</span>
+<span class="source-line-no">053</span><span id="line.53">    public String getSku();</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">    */</span>
-<span class="source-line-no">058</span><span id="line.58">    @Valid</span>
-<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("supplyChannel")</span>
-<span class="source-line-no">060</span><span id="line.60">    public ChannelResourceIdentifier getSupplyChannel();</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @Valid</span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("externalPrice")</span>
-<span class="source-line-no">064</span><span id="line.64">    public Money getExternalPrice();</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("externalTotalPrice")</span>
-<span class="source-line-no">068</span><span id="line.68">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @Valid</span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("shippingDetails")</span>
-<span class="source-line-no">072</span><span id="line.72">    public ItemShippingDetailsDraft getShippingDetails();</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("addedAt")</span>
-<span class="source-line-no">075</span><span id="line.75">    public ZonedDateTime getAddedAt();</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("quantity")</span>
+<span class="source-line-no">056</span><span id="line.56">    public Long getQuantity();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    */</span>
+<span class="source-line-no">061</span><span id="line.61">    @Valid</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("supplyChannel")</span>
+<span class="source-line-no">063</span><span id="line.63">    public ChannelResourceIdentifier getSupplyChannel();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;br /&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    *  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">    */</span>
+<span class="source-line-no">069</span><span id="line.69">    @Valid</span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("externalPrice")</span>
+<span class="source-line-no">071</span><span id="line.71">    public Money getExternalPrice();</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    @Valid</span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("externalTotalPrice")</span>
+<span class="source-line-no">075</span><span id="line.75">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);</span>
+<span class="source-line-no">077</span><span id="line.77">    @Valid</span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("shippingDetails")</span>
+<span class="source-line-no">079</span><span id="line.79">    public ItemShippingDetailsDraft getShippingDetails();</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setProductId(final String productId);</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setVariantId(final Long variantId);</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setSku(final String sku);</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setQuantity(final Long quantity);</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setExternalPrice(final Money externalPrice);</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setAddedAt(final ZonedDateTime addedAt);</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static MyCartAddLineItemAction of() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return new MyCartAddLineItemActionImpl();</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static MyCartAddLineItemAction of(final MyCartAddLineItemAction template) {</span>
-<span class="source-line-no">106</span><span id="line.106">        MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setDistributionChannel(template.getDistributionChannel());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
-<span class="source-line-no">110</span><span id="line.110">        instance.setProductId(template.getProductId());</span>
-<span class="source-line-no">111</span><span id="line.111">        instance.setVariantId(template.getVariantId());</span>
-<span class="source-line-no">112</span><span id="line.112">        instance.setSku(template.getSku());</span>
-<span class="source-line-no">113</span><span id="line.113">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">114</span><span id="line.114">        instance.setSupplyChannel(template.getSupplyChannel());</span>
-<span class="source-line-no">115</span><span id="line.115">        instance.setExternalPrice(template.getExternalPrice());</span>
-<span class="source-line-no">116</span><span id="line.116">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
-<span class="source-line-no">117</span><span id="line.117">        instance.setShippingDetails(template.getShippingDetails());</span>
-<span class="source-line-no">118</span><span id="line.118">        instance.setAddedAt(template.getAddedAt());</span>
-<span class="source-line-no">119</span><span id="line.119">        return instance;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public static MyCartAddLineItemActionBuilder builder() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return MyCartAddLineItemActionBuilder.of();</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public static MyCartAddLineItemActionBuilder builder(final MyCartAddLineItemAction template) {</span>
-<span class="source-line-no">127</span><span id="line.127">        return MyCartAddLineItemActionBuilder.of(template);</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    default &lt;T&gt; T withMyCartAddLineItemAction(Function&lt;MyCartAddLineItemAction, T&gt; helper) {</span>
-<span class="source-line-no">131</span><span id="line.131">        return helper.apply(this);</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133">}</span>
+<span class="source-line-no">081</span><span id="line.81">    @JsonProperty("addedAt")</span>
+<span class="source-line-no">082</span><span id="line.82">    public ZonedDateTime getAddedAt();</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setProductId(final String productId);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public void setVariantId(final Long variantId);</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public void setSku(final String sku);</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public void setQuantity(final Long quantity);</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public void setExternalPrice(final Money externalPrice);</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public void setAddedAt(final ZonedDateTime addedAt);</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static MyCartAddLineItemAction of() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new MyCartAddLineItemActionImpl();</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public static MyCartAddLineItemAction of(final MyCartAddLineItemAction template) {</span>
+<span class="source-line-no">113</span><span id="line.113">        MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();</span>
+<span class="source-line-no">114</span><span id="line.114">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">115</span><span id="line.115">        instance.setDistributionChannel(template.getDistributionChannel());</span>
+<span class="source-line-no">116</span><span id="line.116">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
+<span class="source-line-no">117</span><span id="line.117">        instance.setProductId(template.getProductId());</span>
+<span class="source-line-no">118</span><span id="line.118">        instance.setVariantId(template.getVariantId());</span>
+<span class="source-line-no">119</span><span id="line.119">        instance.setSku(template.getSku());</span>
+<span class="source-line-no">120</span><span id="line.120">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">121</span><span id="line.121">        instance.setSupplyChannel(template.getSupplyChannel());</span>
+<span class="source-line-no">122</span><span id="line.122">        instance.setExternalPrice(template.getExternalPrice());</span>
+<span class="source-line-no">123</span><span id="line.123">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
+<span class="source-line-no">124</span><span id="line.124">        instance.setShippingDetails(template.getShippingDetails());</span>
+<span class="source-line-no">125</span><span id="line.125">        instance.setAddedAt(template.getAddedAt());</span>
+<span class="source-line-no">126</span><span id="line.126">        return instance;</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public static MyCartAddLineItemActionBuilder builder() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return MyCartAddLineItemActionBuilder.of();</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public static MyCartAddLineItemActionBuilder builder(final MyCartAddLineItemAction template) {</span>
+<span class="source-line-no">134</span><span id="line.134">        return MyCartAddLineItemActionBuilder.of(template);</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    default &lt;T&gt; T withMyCartAddLineItemAction(Function&lt;MyCartAddLineItemAction, T&gt; helper) {</span>
+<span class="source-line-no">138</span><span id="line.138">        return helper.apply(this);</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140">}</span>
 
 
 

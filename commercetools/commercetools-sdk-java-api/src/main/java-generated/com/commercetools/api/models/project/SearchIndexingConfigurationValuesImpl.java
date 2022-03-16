@@ -21,13 +21,13 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
 
     private java.time.ZonedDateTime lastModifiedAt;
 
-    private String lastModifiedBy;
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     @JsonCreator
     SearchIndexingConfigurationValuesImpl(
             @JsonProperty("status") final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final String lastModifiedBy) {
+            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.status = status;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
@@ -44,7 +44,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     }
 
     /**
-    *  <p>Date and time (UTC) the Project was last updated.</p>
+    *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -53,7 +53,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     /**
     *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
-    public String getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
@@ -65,7 +65,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
         this.lastModifiedAt = lastModifiedAt;
     }
 
-    public void setLastModifiedBy(final String lastModifiedBy) {
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
 

@@ -6,8 +6,9 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
 
+import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -25,24 +26,24 @@ public interface SearchIndexingConfigurationValues {
     public SearchIndexingConfigurationStatus getStatus();
 
     /**
-    *  <p>Date and time (UTC) the Project was last updated.</p>
+    *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
     */
-    @NotNull
+
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
     *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
-
+    @Valid
     @JsonProperty("lastModifiedBy")
-    public String getLastModifiedBy();
+    public LastModifiedBy getLastModifiedBy();
 
     public void setStatus(final SearchIndexingConfigurationStatus status);
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-    public void setLastModifiedBy(final String lastModifiedBy);
+    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     public static SearchIndexingConfigurationValues of() {
         return new SearchIndexingConfigurationValuesImpl();

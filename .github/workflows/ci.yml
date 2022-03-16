@@ -36,7 +36,7 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             commit_message: "spotless: Fix code style"
-            commit_user_name: Auto Mation
+            commit_user_name: automation-commercetools
             commit_user_email: automation@commercetools.com
             commit_author: Auto Mation <automation@commercetools.com>
 
@@ -48,7 +48,7 @@ jobs:
         with:
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
-            commit_user_name: Auto Mation
+            commit_user_name: automation-commercetools
             commit_user_email: automation@commercetools.com
             commit_author: Auto Mation <automation@commercetools.com>
             disable_globbing: true

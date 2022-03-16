@@ -19,7 +19,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     String SET_SHIPPING_RATE_INPUT_TYPE = "setShippingRateInputType";
 
     /**
-    *  <p>If not set, removes existing shippingRateInputType.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     @Valid
     @JsonProperty("shippingRateInputType")

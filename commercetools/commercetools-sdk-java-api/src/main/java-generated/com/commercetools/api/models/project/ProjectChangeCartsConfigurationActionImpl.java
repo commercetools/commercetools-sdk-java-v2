@@ -36,6 +36,9 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
         return this.action;
     }
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/carts">Carts</a> feature.</p>
+    */
     public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {
         return this.cartsConfiguration;
     }

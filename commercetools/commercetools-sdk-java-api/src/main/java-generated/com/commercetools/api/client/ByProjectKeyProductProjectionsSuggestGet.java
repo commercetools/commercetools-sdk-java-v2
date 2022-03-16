@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -87,7 +89,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set fuzzy with the specificied value
+     * set fuzzy with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final boolean fuzzy) {
         return copy().withQueryParam("fuzzy", fuzzy);
@@ -101,7 +103,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set fuzzy with the specificied values
+     * set fuzzy with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("fuzzy", supplier.get());
+    }
+
+    /**
+     * add additional fuzzy query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("fuzzy", supplier.get());
+    }
+
+    /**
+     * set fuzzy with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("fuzzy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional fuzzy query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("fuzzy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set fuzzy with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final List<Boolean> fuzzy) {
         return copy().withoutQueryParam("fuzzy")
@@ -118,7 +148,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set staged with the specificied value
+     * set staged with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
@@ -132,7 +162,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set staged with the specificied values
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final List<Boolean> staged) {
         return copy().withoutQueryParam("staged")
@@ -149,7 +207,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
@@ -163,7 +221,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withSort(final List<String> sort) {
         return copy().withoutQueryParam("sort")
@@ -180,7 +266,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
@@ -194,7 +280,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final List<Integer> limit) {
         return copy().withoutQueryParam("limit")
@@ -211,7 +325,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
@@ -225,7 +339,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final List<Integer> offset) {
         return copy().withoutQueryParam("offset")
@@ -242,7 +384,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set withTotal with the specificied value
+     * set withTotal with the specified value
      */
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -256,7 +398,35 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     /**
-     * set withTotal with the specificied values
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
      */
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final List<Boolean> withTotal) {
         return copy().withoutQueryParam("withTotal")

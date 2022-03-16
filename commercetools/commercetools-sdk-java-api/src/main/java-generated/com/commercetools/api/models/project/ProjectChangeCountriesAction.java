@@ -19,7 +19,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     String CHANGE_COUNTRIES = "changeCountries";
 
     /**
-    *  <p>A two-digit country code as per country code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("countries")

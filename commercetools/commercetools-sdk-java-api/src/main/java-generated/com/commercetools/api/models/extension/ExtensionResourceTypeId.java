@@ -9,15 +9,31 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Extensions are available for:</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ExtensionResourceTypeId {
 
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/carts">Carts</a>.</p>
+
+    */
     ExtensionResourceTypeId CART = ExtensionResourceTypeIdEnum.CART;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/orders">Orders</a>.</p>
 
+    */
     ExtensionResourceTypeId ORDER = ExtensionResourceTypeIdEnum.ORDER;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/payments">Payments</a>.</p>
 
+    */
     ExtensionResourceTypeId PAYMENT = ExtensionResourceTypeIdEnum.PAYMENT;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/customers">Customers</a>.</p>
 
+    */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
 
     enum ExtensionResourceTypeIdEnum implements ExtensionResourceTypeId {

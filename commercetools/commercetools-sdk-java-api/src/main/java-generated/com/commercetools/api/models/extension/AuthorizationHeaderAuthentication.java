@@ -12,12 +12,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
+*  <p>For example, the <code>headerValue</code> for <a href="https://datatracker.ietf.org/doc/html/rfc7617">Basic Authentication</a> should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AuthorizationHeaderAuthenticationImpl.class)
 public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthentication {
 
     String AUTHORIZATION_HEADER = "AuthorizationHeader";
 
+    /**
+    *  <p>Partially hidden on retrieval for security reasons.</p>
+    */
     @NotNull
     @JsonProperty("headerValue")
     public String getHeaderValue();

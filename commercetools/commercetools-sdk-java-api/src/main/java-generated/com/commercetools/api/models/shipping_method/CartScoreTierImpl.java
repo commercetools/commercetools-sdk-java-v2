@@ -43,6 +43,9 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
         this.type = ShippingRateTierType.findEnum("CartScore");
     }
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }

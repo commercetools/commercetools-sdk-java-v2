@@ -31,19 +31,19 @@ public class ProjectBuilder implements Builder<Project> {
 
     private com.commercetools.api.models.message.MessagesConfiguration messages;
 
+    private com.commercetools.api.models.project.CartsConfiguration carts;
+
+    @Nullable
+    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
+
     @Nullable
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
     @Nullable
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
-    private com.commercetools.api.models.project.CartsConfiguration carts;
-
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
-
-    @Nullable
-    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
 
     public ProjectBuilder version(final Long version) {
         this.version = version;
@@ -111,6 +111,30 @@ public class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
+    public ProjectBuilder carts(
+            Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
+        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();
+        return this;
+    }
+
+    public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {
+        this.carts = carts;
+        return this;
+    }
+
+    public ProjectBuilder shoppingLists(
+            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
+        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
+                .build();
+        return this;
+    }
+
+    public ProjectBuilder shoppingLists(
+            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
+        this.shoppingLists = shoppingLists;
+        return this;
+    }
+
     public ProjectBuilder shippingRateInputType(
             @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
@@ -129,17 +153,6 @@ public class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
-    public ProjectBuilder carts(
-            Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
-        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();
-        return this;
-    }
-
-    public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {
-        this.carts = carts;
-        return this;
-    }
-
     public ProjectBuilder searchIndexing(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationBuilder> builder) {
         this.searchIndexing = builder
@@ -151,19 +164,6 @@ public class ProjectBuilder implements Builder<Project> {
     public ProjectBuilder searchIndexing(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
         this.searchIndexing = searchIndexing;
-        return this;
-    }
-
-    public ProjectBuilder shoppingLists(
-            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
-        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
-                .build();
-        return this;
-    }
-
-    public ProjectBuilder shoppingLists(
-            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
-        this.shoppingLists = shoppingLists;
         return this;
     }
 
@@ -204,6 +204,15 @@ public class ProjectBuilder implements Builder<Project> {
         return this.messages;
     }
 
+    public com.commercetools.api.models.project.CartsConfiguration getCarts() {
+        return this.carts;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
+        return this.shoppingLists;
+    }
+
     @Nullable
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
         return this.shippingRateInputType;
@@ -214,18 +223,9 @@ public class ProjectBuilder implements Builder<Project> {
         return this.externalOAuth;
     }
 
-    public com.commercetools.api.models.project.CartsConfiguration getCarts() {
-        return this.carts;
-    }
-
     @Nullable
     public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {
         return this.searchIndexing;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
-        return this.shoppingLists;
     }
 
     public Project build() {
@@ -239,7 +239,7 @@ public class ProjectBuilder implements Builder<Project> {
         Objects.requireNonNull(messages, Project.class + ": messages is missing");
         Objects.requireNonNull(carts, Project.class + ": carts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing);
     }
 
     /**
@@ -247,7 +247,7 @@ public class ProjectBuilder implements Builder<Project> {
      */
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            shippingRateInputType, externalOAuth, carts, searchIndexing, shoppingLists);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing);
     }
 
     public static ProjectBuilder of() {
@@ -265,11 +265,11 @@ public class ProjectBuilder implements Builder<Project> {
         builder.createdAt = template.getCreatedAt();
         builder.trialUntil = template.getTrialUntil();
         builder.messages = template.getMessages();
+        builder.carts = template.getCarts();
+        builder.shoppingLists = template.getShoppingLists();
         builder.shippingRateInputType = template.getShippingRateInputType();
         builder.externalOAuth = template.getExternalOAuth();
-        builder.carts = template.getCarts();
         builder.searchIndexing = template.getSearchIndexing();
-        builder.shoppingLists = template.getShoppingLists();
         return builder;
     }
 

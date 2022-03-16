@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -33,9 +34,18 @@ public interface ProductSelectionDraft {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>Custom Fields of this Product Selection.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
     public void setKey(final String key);
 
     public void setName(final LocalizedString name);
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static ProductSelectionDraft of() {
         return new ProductSelectionDraftImpl();
@@ -45,6 +55,7 @@ public interface ProductSelectionDraft {
         ProductSelectionDraftImpl instance = new ProductSelectionDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

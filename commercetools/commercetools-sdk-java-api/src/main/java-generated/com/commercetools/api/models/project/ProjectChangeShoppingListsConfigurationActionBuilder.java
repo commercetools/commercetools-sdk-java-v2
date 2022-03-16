@@ -4,8 +4,6 @@ package com.commercetools.api.models.project;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +11,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ProjectChangeShoppingListsConfigurationActionBuilder
         implements Builder<ProjectChangeShoppingListsConfigurationAction> {
 
-    @Nullable
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
@@ -25,17 +22,18 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
-            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
+            final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
         this.shoppingListsConfiguration = shoppingListsConfiguration;
         return this;
     }
 
-    @Nullable
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {
         return this.shoppingListsConfiguration;
     }
 
     public ProjectChangeShoppingListsConfigurationAction build() {
+        Objects.requireNonNull(shoppingListsConfiguration,
+            ProjectChangeShoppingListsConfigurationAction.class + ": shoppingListsConfiguration is missing");
         return new ProjectChangeShoppingListsConfigurationActionImpl(shoppingListsConfiguration);
     }
 

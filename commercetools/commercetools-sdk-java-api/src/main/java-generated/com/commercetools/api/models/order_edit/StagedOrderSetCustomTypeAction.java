@@ -22,12 +22,16 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> of a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the StagedOrder with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the StagedOrder.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

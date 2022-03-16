@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldActionImpl.class, name = InventoryEntrySetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeActionImpl.class, name = InventoryEntrySetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionImpl.class, name = InventoryEntrySetExpectedDeliveryAction.SET_EXPECTED_DELIVERY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetKeyActionImpl.class, name = InventoryEntrySetKeyAction.SET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionImpl.class, name = InventoryEntrySetRestockableInDaysAction.SET_RESTOCKABLE_IN_DAYS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionImpl.class, name = InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = InventoryEntryUpdateActionImpl.class, visible = true)

@@ -18,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionUpdate extends
         com.commercetools.api.models.ResourceUpdate<ExtensionUpdate, ExtensionUpdateAction, ExtensionUpdateBuilder> {
 
+    /**
+    *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
+    */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Update actions to be performed on the Extension.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("actions")

@@ -37,7 +37,7 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
     }
 
     /**
-    *  <p>If not set, removes existing shippingRateInputType.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
         return this.shippingRateInputType;

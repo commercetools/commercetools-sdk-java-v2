@@ -21,11 +21,15 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     @JsonCreator
     ProductSelectionDraftImpl(@JsonProperty("key") final String key,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.name = name;
+        this.custom = custom;
     }
 
     public ProductSelectionDraftImpl() {
@@ -45,12 +49,23 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
         return this.name;
     }
 
+    /**
+    *  <p>Custom Fields of this Product Selection.</p>
+    */
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -63,12 +78,12 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
         ProductSelectionDraftImpl that = (ProductSelectionDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(custom, that.custom).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key).append(name).append(custom).toHashCode();
     }
 
 }

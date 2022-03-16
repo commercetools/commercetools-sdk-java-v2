@@ -17,6 +17,9 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -33,6 +36,18 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this;
     }
 
+    public ProductSelectionDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSelectionDraftBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -42,16 +57,21 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this.name;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public ProductSelectionDraft build() {
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
-        return new ProductSelectionDraftImpl(key, name);
+        return new ProductSelectionDraftImpl(key, name, custom);
     }
 
     /**
      * builds ProductSelectionDraft without checking for non null required values
      */
     public ProductSelectionDraft buildUnchecked() {
-        return new ProductSelectionDraftImpl(key, name);
+        return new ProductSelectionDraftImpl(key, name, custom);
     }
 
     public static ProductSelectionDraftBuilder of() {
@@ -62,6 +82,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         ProductSelectionDraftBuilder builder = new ProductSelectionDraftBuilder();
         builder.key = template.getKey();
         builder.name = template.getName();
+        builder.custom = template.getCustom();
         return builder;
     }
 

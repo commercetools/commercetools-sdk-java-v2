@@ -103,6 +103,11 @@ public interface ResourceTypeId {
     */
     ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
     /**
+    	<p><a href="ctp:api:type:ProductSelection">ProductSelection</a></p>
+
+    */
+    ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
+    /**
     	<p><a href="ctp:api:type:Review">Review</a></p>
 
     */
@@ -167,6 +172,8 @@ public interface ResourceTypeId {
         PAYMENT_INTERFACE_INTERACTION("payment-interface-interaction"),
 
         PRODUCT_PRICE("product-price"),
+
+        PRODUCT_SELECTION("product-selection"),
 
         REVIEW("review"),
 

@@ -23,12 +23,12 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
     StagedOrderSetDeliveryCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final java.lang.Object fields) {
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.deliveryId = deliveryId;
         this.type = type;
         this.fields = fields;
@@ -48,17 +48,17 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
     }
 
     /**
-    *  <p>If set, the custom type is set to this new value.
-    *  If absent, the custom type and any existing custom fields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Delivery with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>If set, the custom fields are set to this new value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Delivery.</p>
     */
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
@@ -70,7 +70,7 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
         this.type = type;
     }
 
-    public void setFields(final java.lang.Object fields) {
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
     }
 

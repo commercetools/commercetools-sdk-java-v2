@@ -19,6 +19,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     private String sku;
 
+    private String key;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private Long quantityOnStock;
@@ -30,13 +32,14 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
-    InventoryEntryDraftImpl(@JsonProperty("sku") final String sku,
+    InventoryEntryDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.sku = sku;
+        this.key = key;
         this.supplyChannel = supplyChannel;
         this.quantityOnStock = quantityOnStock;
         this.restockableInDays = restockableInDays;
@@ -49,6 +52,14 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     public String getSku() {
         return this.sku;
+    }
+
+    /**
+    *  <p>User-defined unique identifier for the InventoryEntry.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    */
+    public String getKey() {
+        return this.key;
     }
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -76,6 +87,10 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     public void setSku(final String sku) {
         this.sku = sku;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -109,6 +124,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
         InventoryEntryDraftImpl that = (InventoryEntryDraftImpl) o;
 
         return new EqualsBuilder().append(sku, that.sku)
+                .append(key, that.key)
                 .append(supplyChannel, that.supplyChannel)
                 .append(quantityOnStock, that.quantityOnStock)
                 .append(restockableInDays, that.restockableInDays)
@@ -120,6 +136,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(sku)
+                .append(key)
                 .append(supplyChannel)
                 .append(quantityOnStock)
                 .append(restockableInDays)

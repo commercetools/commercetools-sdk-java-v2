@@ -37,7 +37,7 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
     }
 
     /**
-    *  <p>Activated indicates that the Order Search feature is active. Deactivated means that the namely feature is currently configured to be inactive.</p>
+    *  <p>Activates or deactivates the <a href="/../api/projects/order-search">Order Search</a> feature. Activation will trigger building a search index for the Orders in the Project.</p>
     */
     public com.commercetools.api.models.project.OrderSearchStatus getStatus() {
         return this.status;

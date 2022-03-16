@@ -19,6 +19,9 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
 
     String CHANGE_DESTINATION = "changeDestination";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("destination")

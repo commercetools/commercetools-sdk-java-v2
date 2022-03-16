@@ -15,6 +15,9 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private String sku;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private Long quantityOnStock;
@@ -30,6 +33,11 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     public InventoryEntryDraftBuilder sku(final String sku) {
         this.sku = sku;
+        return this;
+    }
+
+    public InventoryEntryDraftBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -78,6 +86,11 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
@@ -104,16 +117,16 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     public InventoryEntryDraft build() {
         Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
-        return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
-            custom);
+        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, restockableInDays,
+            expectedDelivery, custom);
     }
 
     /**
      * builds InventoryEntryDraft without checking for non null required values
      */
     public InventoryEntryDraft buildUnchecked() {
-        return new InventoryEntryDraftImpl(sku, supplyChannel, quantityOnStock, restockableInDays, expectedDelivery,
-            custom);
+        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, restockableInDays,
+            expectedDelivery, custom);
     }
 
     public static InventoryEntryDraftBuilder of() {
@@ -123,6 +136,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     public static InventoryEntryDraftBuilder of(final InventoryEntryDraft template) {
         InventoryEntryDraftBuilder builder = new InventoryEntryDraftBuilder();
         builder.sku = template.getSku();
+        builder.key = template.getKey();
         builder.supplyChannel = template.getSupplyChannel();
         builder.quantityOnStock = template.getQuantityOnStock();
         builder.restockableInDays = template.getRestockableInDays();

@@ -19,8 +19,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     String SET_EXTERNAL_O_AUTH = "setExternalOAuth";
 
     /**
-    *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
-    *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     @Valid
     @JsonProperty("externalOAuth")

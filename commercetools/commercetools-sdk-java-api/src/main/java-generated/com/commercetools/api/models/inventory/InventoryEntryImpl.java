@@ -29,6 +29,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    private String key;
+
     private String sku;
 
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
@@ -49,7 +51,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("sku") final String sku,
+            @JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel,
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
             @JsonProperty("availableQuantity") final Long availableQuantity,
@@ -62,6 +64,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
+        this.key = key;
         this.sku = sku;
         this.supplyChannel = supplyChannel;
         this.quantityOnStock = quantityOnStock;
@@ -105,6 +108,14 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
+    }
+
+    /**
+    *  <p>User-defined unique identifier for the InventoryEntry.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    */
+    public String getKey() {
+        return this.key;
     }
 
     public String getSku() {
@@ -176,6 +187,10 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
         this.createdBy = createdBy;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setSku(final String sku) {
         this.sku = sku;
     }
@@ -220,6 +235,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
+                .append(key, that.key)
                 .append(sku, that.sku)
                 .append(supplyChannel, that.supplyChannel)
                 .append(quantityOnStock, that.quantityOnStock)
@@ -238,6 +254,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(lastModifiedAt)
                 .append(lastModifiedBy)
                 .append(createdBy)
+                .append(key)
                 .append(sku)
                 .append(supplyChannel)
                 .append(quantityOnStock)

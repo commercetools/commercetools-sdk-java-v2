@@ -40,7 +40,7 @@ public class ChannelSetAddressCustomFieldActionImpl implements ChannelSetAddress
     }
 
     /**
-    *  <p>Name of the Custom Fields.</p>
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
     */
     public String getName() {
         return this.name;

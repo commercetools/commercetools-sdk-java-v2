@@ -19,7 +19,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     String SET_ADDRESS_CUSTOM_FIELD = "setAddressCustomField";
 
     /**
-    *  <p>Name of the Custom Fields.</p>
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
     */
     @NotNull
     @JsonProperty("name")

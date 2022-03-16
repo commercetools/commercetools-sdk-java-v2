@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -26,25 +27,25 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
     public String getParcelId();
 
     /**
-    *  <p>If set, the custom type is set to this new value.
-    *  If absent, the custom type and any existing custom fields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Parcel with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>If set, the custom fields are set to this new value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Parcel.</p>
     */
     @Valid
     @JsonProperty("fields")
-    public Object getFields();
+    public FieldContainer getFields();
 
     public void setParcelId(final String parcelId);
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final Object fields);
+    public void setFields(final FieldContainer fields);
 
     public static StagedOrderSetParcelCustomTypeAction of() {
         return new StagedOrderSetParcelCustomTypeActionImpl();

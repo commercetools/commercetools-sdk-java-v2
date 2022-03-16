@@ -19,7 +19,7 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-    *  <p>Name of the Custom Field.</p>
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
     */
     @NotNull
     @JsonProperty("name")

@@ -12,12 +12,15 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingConfigurationImpl.class)
 public interface SearchIndexingConfiguration {
 
     /**
-    *  <p>Configuration for endpoints serving indexed <a href="ctp:api:type:Product">Product</a> information.</p>
+    *  <p>Configuration for the <a href="/../api/projects/products-search">Product Projection Search</a> and <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoints.</p>
     */
     @Valid
     @JsonProperty("products")

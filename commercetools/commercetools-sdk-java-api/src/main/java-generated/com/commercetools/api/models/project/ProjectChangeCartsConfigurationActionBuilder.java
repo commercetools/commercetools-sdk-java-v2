@@ -4,15 +4,12 @@ package com.commercetools.api.models.project;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProjectChangeCartsConfigurationActionBuilder implements Builder<ProjectChangeCartsConfigurationAction> {
 
-    @Nullable
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
@@ -23,17 +20,18 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
-            @Nullable final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {
+            final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {
         this.cartsConfiguration = cartsConfiguration;
         return this;
     }
 
-    @Nullable
     public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {
         return this.cartsConfiguration;
     }
 
     public ProjectChangeCartsConfigurationAction build() {
+        Objects.requireNonNull(cartsConfiguration,
+            ProjectChangeCartsConfigurationAction.class + ": cartsConfiguration is missing");
         return new ProjectChangeCartsConfigurationActionImpl(cartsConfiguration);
     }
 

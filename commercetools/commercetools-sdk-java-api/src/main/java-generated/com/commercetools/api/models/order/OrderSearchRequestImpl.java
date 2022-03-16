@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
 
-    private String query;
+    private com.commercetools.api.models.order.OrderSearchQuery query;
 
     private String sort;
 
@@ -26,8 +26,9 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     private Integer offset;
 
     @JsonCreator
-    OrderSearchRequestImpl(@JsonProperty("query") final String query, @JsonProperty("sort") final String sort,
-            @JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset) {
+    OrderSearchRequestImpl(@JsonProperty("query") final com.commercetools.api.models.order.OrderSearchQuery query,
+            @JsonProperty("sort") final String sort, @JsonProperty("limit") final Integer limit,
+            @JsonProperty("offset") final Integer offset) {
         this.query = query;
         this.sort = sort;
         this.limit = limit;
@@ -40,7 +41,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     /**
     *  <p>The Order search query.</p>
     */
-    public String getQuery() {
+    public com.commercetools.api.models.order.OrderSearchQuery getQuery() {
         return this.query;
     }
 
@@ -65,7 +66,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
         return this.offset;
     }
 
-    public void setQuery(final String query) {
+    public void setQuery(final com.commercetools.api.models.order.OrderSearchQuery query) {
         this.query = query;
     }
 

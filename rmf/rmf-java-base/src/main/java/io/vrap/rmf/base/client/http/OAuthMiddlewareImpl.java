@@ -5,9 +5,9 @@ import java.time.Duration;
 import java.util.concurrent.*;
 import java.util.function.Function;
 
-import net.jodah.failsafe.*;
-import net.jodah.failsafe.event.ExecutionAttemptedEvent;
-import net.jodah.failsafe.util.concurrent.Scheduler;
+import dev.failsafe.*;
+import dev.failsafe.event.ExecutionAttemptedEvent;
+import dev.failsafe.spi.Scheduler;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
@@ -35,7 +35,7 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
         this(Scheduler.of(executorService), oauthHandler, maxRetries, useCircuitBreaker);
     }
 
-    public OAuthMiddlewareImpl(final Executor executor, final OAuthHandler oauthHandler, final int maxRetries,
+    public OAuthMiddlewareImpl(final ExecutorService executor, final OAuthHandler oauthHandler, final int maxRetries,
             final boolean useCircuitBreaker) {
         this(Scheduler.of(executor), oauthHandler, maxRetries, useCircuitBreaker);
     }
@@ -44,7 +44,7 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             final boolean useCircuitBreaker) {
         this.authHandler = oauthHandler;
 
-        RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()
+        RetryPolicy<ApiHttpResponse<byte[]>> retry = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                 .handleIf((response, throwable) -> {
                     if (throwable != null) {
                         return throwable instanceof UnauthorizedException;
@@ -55,31 +55,35 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     logger.debug(() -> "Refresh Bearer token #" + event.getAttemptCount());
                     authHandler.refreshToken();
                 })
-                .withMaxRetries(maxRetries);
+                .withMaxRetries(maxRetries)
+                .build();
         if (useCircuitBreaker) {
             final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback
-                    .ofException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
+                    .builderOfException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
                         logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException");
                         logger.trace(event::getLastFailure);
                         return new AuthException(400, "", null, "Authentication failed", null, event.getLastFailure());
                     })
-                    .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException);
+                    .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException)
+                    .build();
 
-            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = new CircuitBreaker<>();
-            circuitBreaker.handleIf((response, throwable) -> {
-                if (throwable.getCause() instanceof AuthException) {
-                    return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
-                }
-                return response.getStatusCode() == 400;
-            })
-                    .withDelay((result, failure, context) -> Duration
+            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = CircuitBreaker
+                    .<ApiHttpResponse<byte[]>> builder()
+                    .handleIf((response, throwable) -> {
+                        if (throwable.getCause() instanceof AuthException) {
+                            return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
+                        }
+                        return response.getStatusCode() == 400;
+                    })
+                    .withDelayFn(context -> Duration
                             .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
                     .withFailureThreshold(5, Duration.ofMinutes(1))
                     .withSuccessThreshold(2)
-                    .onClose(() -> logger.debug(() -> "The authentication circuit breaker was closed"))
-                    .onOpen(() -> logger.debug(() -> "The authentication circuit breaker was opened"))
-                    .onHalfOpen(() -> logger.debug(() -> "The authentication circuit breaker was half-opened"))
-                    .onFailure(event -> logger.trace(() -> "Authentication failed", event.getFailure()));
+                    .onClose(event -> logger.debug(() -> "The authentication circuit breaker was closed"))
+                    .onOpen(event -> logger.debug(() -> "The authentication circuit breaker was opened"))
+                    .onHalfOpen(event -> logger.debug(() -> "The authentication circuit breaker was half-opened"))
+                    .onFailure(event -> logger.trace(() -> "Authentication failed", event.getFailure()))
+                    .build();
             this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker).with(scheduler);
         }
         else {

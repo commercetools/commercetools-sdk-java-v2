@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -128,7 +130,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set staged with the specificied value
+     * set staged with the specified value
      */
     public ByProjectKeyProductProjectionsGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
@@ -142,7 +144,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set staged with the specificied values
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
      */
     public ByProjectKeyProductProjectionsGet withStaged(final List<Boolean> staged) {
         return copy().withoutQueryParam("staged")
@@ -159,7 +189,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCurrency with the specificied value
+     * set priceCurrency with the specified value
      */
     public ByProjectKeyProductProjectionsGet withPriceCurrency(final String priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
@@ -173,7 +203,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCurrency with the specificied values
+     * set priceCurrency with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCurrency(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCurrency(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCurrency with the specified values
      */
     public ByProjectKeyProductProjectionsGet withPriceCurrency(final List<String> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
@@ -192,7 +250,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCountry with the specificied value
+     * set priceCountry with the specified value
      */
     public ByProjectKeyProductProjectionsGet withPriceCountry(final String priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
@@ -206,7 +264,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCountry with the specificied values
+     * set priceCountry with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCountry(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCountry(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * set priceCountry with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCountry with the specified values
      */
     public ByProjectKeyProductProjectionsGet withPriceCountry(final List<String> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
@@ -225,7 +311,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCustomerGroup with the specificied value
+     * set priceCustomerGroup with the specified value
      */
     public ByProjectKeyProductProjectionsGet withPriceCustomerGroup(final String priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
@@ -239,7 +325,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceCustomerGroup with the specificied values
+     * set priceCustomerGroup with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroup with the specified values
      */
     public ByProjectKeyProductProjectionsGet withPriceCustomerGroup(final List<String> priceCustomerGroup) {
         return copy().withoutQueryParam("priceCustomerGroup")
@@ -258,7 +372,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceChannel with the specificied value
+     * set priceChannel with the specified value
      */
     public ByProjectKeyProductProjectionsGet withPriceChannel(final String priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
@@ -272,7 +386,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set priceChannel with the specificied values
+     * set priceChannel with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceChannel(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceChannel(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * set priceChannel with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceChannel with the specified values
      */
     public ByProjectKeyProductProjectionsGet withPriceChannel(final List<String> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
@@ -291,7 +433,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set localeProjection with the specificied value
+     * set localeProjection with the specified value
      */
     public ByProjectKeyProductProjectionsGet withLocaleProjection(final String localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
@@ -305,7 +447,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set localeProjection with the specificied values
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withLocaleProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addLocaleProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
      */
     public ByProjectKeyProductProjectionsGet withLocaleProjection(final List<String> localeProjection) {
         return copy().withoutQueryParam("localeProjection")
@@ -324,7 +494,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set storeProjection with the specificied value
+     * set storeProjection with the specified value
      */
     public ByProjectKeyProductProjectionsGet withStoreProjection(final String storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
@@ -338,7 +508,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set storeProjection with the specificied values
+     * set storeProjection with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withStoreProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addStoreProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * set storeProjection with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set storeProjection with the specified values
      */
     public ByProjectKeyProductProjectionsGet withStoreProjection(final List<String> storeProjection) {
         return copy().withoutQueryParam("storeProjection")
@@ -357,7 +555,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
     public ByProjectKeyProductProjectionsGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
@@ -371,7 +569,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
      */
     public ByProjectKeyProductProjectionsGet withExpand(final List<String> expand) {
         return copy().withoutQueryParam("expand")
@@ -388,7 +614,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
     public ByProjectKeyProductProjectionsGet withSort(final String sort) {
         return copy().withQueryParam("sort", sort);
@@ -402,7 +628,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
      */
     public ByProjectKeyProductProjectionsGet withSort(final List<String> sort) {
         return copy().withoutQueryParam("sort")
@@ -419,7 +673,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
     public ByProjectKeyProductProjectionsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
@@ -433,7 +687,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
      */
     public ByProjectKeyProductProjectionsGet withLimit(final List<Integer> limit) {
         return copy().withoutQueryParam("limit")
@@ -450,7 +732,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
     public ByProjectKeyProductProjectionsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
@@ -464,7 +746,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
      */
     public ByProjectKeyProductProjectionsGet withOffset(final List<Integer> offset) {
         return copy().withoutQueryParam("offset")
@@ -481,7 +791,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set withTotal with the specificied value
+     * set withTotal with the specified value
      */
     public ByProjectKeyProductProjectionsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
@@ -495,7 +805,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set withTotal with the specificied values
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
      */
     public ByProjectKeyProductProjectionsGet withWithTotal(final List<Boolean> withTotal) {
         return copy().withoutQueryParam("withTotal")
@@ -513,7 +851,7 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set where with the specificied value
+     * set where with the specified value
      */
     public ByProjectKeyProductProjectionsGet withWhere(final String where) {
         return copy().withQueryParam("where", where);
@@ -527,7 +865,35 @@ public class ByProjectKeyProductProjectionsGet extends
     }
 
     /**
-     * set where with the specificied values
+     * set where with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyProductProjectionsGet withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductProjectionsGet addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
      */
     public ByProjectKeyProductProjectionsGet withWhere(final List<String> where) {
         return copy().withoutQueryParam("where")

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class SearchIndexingConfigurationImpl implements SearchIndexingConfiguration, ModelBase {
 
@@ -33,7 +36,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-    *  <p>Configuration for endpoints serving indexed <a href="ctp:api:type:Product">Product</a> information.</p>
+    *  <p>Configuration for the <a href="/../api/projects/products-search">Product Projection Search</a> and <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoints.</p>
     */
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
         return this.products;

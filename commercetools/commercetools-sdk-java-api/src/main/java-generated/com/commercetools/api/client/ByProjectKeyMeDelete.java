@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -72,7 +74,7 @@ public class ByProjectKeyMeDelete
     }
 
     /**
-     * set version with the specificied value
+     * set version with the specified value
      */
     public ByProjectKeyMeDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
@@ -86,7 +88,35 @@ public class ByProjectKeyMeDelete
     }
 
     /**
-     * set version with the specificied values
+     * set version with the specified value
+     */
+    public ByProjectKeyMeDelete withVersion(final Supplier<Long> supplier) {
+        return copy().withQueryParam("version", supplier.get());
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyMeDelete addVersion(final Supplier<Long> supplier) {
+        return copy().addQueryParam("version", supplier.get());
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public ByProjectKeyMeDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyMeDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set version with the specified values
      */
     public ByProjectKeyMeDelete withVersion(final List<Long> version) {
         return copy().withoutQueryParam("version")

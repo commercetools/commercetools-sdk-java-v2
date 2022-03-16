@@ -39,6 +39,9 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }

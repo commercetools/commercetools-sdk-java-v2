@@ -16,10 +16,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionTriggerImpl.class)
 public interface ExtensionTrigger {
 
+    /**
+    *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+    */
     @NotNull
     @JsonProperty("resourceTypeId")
     public ExtensionResourceTypeId getResourceTypeId();
 
+    /**
+    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+    */
     @NotNull
     @JsonProperty("actions")
     public List<ExtensionAction> getActions();

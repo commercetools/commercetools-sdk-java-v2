@@ -66,6 +66,19 @@
             ]
         },
         {
+            "moduleName": "com.spotify:completable-futures",
+            "moduleVersion": "0.3.5",
+            "moduleUrls": [
+                "https://spotify.github.io/completable-futures"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "commons-codec:commons-codec",
             "moduleVersion": "1.15",
             "moduleUrls": [

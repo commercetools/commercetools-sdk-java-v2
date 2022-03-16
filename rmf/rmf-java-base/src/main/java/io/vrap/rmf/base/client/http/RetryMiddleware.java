@@ -1,18 +1,16 @@
 
 package io.vrap.rmf.base.client.http;
 
-import static java.util.Collections.singletonList;
-
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.FailsafeExecutor;
-import net.jodah.failsafe.RetryPolicy;
-import net.jodah.failsafe.event.ExecutionAttemptedEvent;
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+import dev.failsafe.RetryPolicy;
+import dev.failsafe.event.ExecutionAttemptedEvent;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.json.JsonException;
@@ -21,18 +19,17 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Arrays.asList;
+
 /**
  * Implementation for a retry of a requests upon configured response status codes
  */
 public class RetryMiddleware implements Middleware, AutoCloseable {
-    @Deprecated
-    public static final int DEFAULT_MAX_PARALLEL_REQUESTS = 2;
-
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry";
 
     public static final int DEFAULT_MAX_DELAY = 60000;
     public static final int DEFAULT_INITIAL_DELAY = 200;
-    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = singletonList(503);
+    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(500, 503);
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(RetryMiddleware.class);
 
@@ -52,7 +49,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>>builder()
                 .handleIf((response, throwable) -> {
                     if (throwable instanceof ApiHttpException) {
                         return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
@@ -62,7 +59,8 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .withJitter(0.25)
                 .onRetry(this::logEventFailure)
-                .withMaxRetries(maxRetries);
+                .withMaxRetries(maxRetries)
+                .build();
         this.failsafeExecutor = Failsafe.with(retryPolicy);
     }
 

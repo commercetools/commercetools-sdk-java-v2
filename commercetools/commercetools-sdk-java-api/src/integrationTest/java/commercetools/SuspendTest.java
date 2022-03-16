@@ -6,7 +6,7 @@ import static commercetools.utils.CommercetoolsTestUtils.*;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
-import net.jodah.failsafe.CircuitBreakerOpenException;
+import dev.failsafe.CircuitBreakerOpenException;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;

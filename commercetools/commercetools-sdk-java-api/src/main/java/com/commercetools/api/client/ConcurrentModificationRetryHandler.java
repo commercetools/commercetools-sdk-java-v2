@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
@@ -13,8 +15,6 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.BodyApiMethod;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.RequestCommand;
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 final class ConcurrentModificationRetryHandler<T extends BodyApiMethod<T, TResult, TBody>, TResult, TBody extends ResourceUpdate<TBody, ?, TBuilder>, TBuilder extends Builder<TBody>>
         implements RequestCommand<TResult> {

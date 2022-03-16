@@ -1,10 +1,10 @@
 
 package io.vrap.rmf.base.client.http;
 
-import dev.failsafe.spi.Scheduler;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
+
+import dev.failsafe.spi.Scheduler;
 
 /**
  * Middleware to add an oauth authentication header to requests

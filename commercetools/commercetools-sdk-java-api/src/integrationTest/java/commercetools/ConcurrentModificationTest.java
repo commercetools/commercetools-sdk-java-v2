@@ -1,9 +1,6 @@
 
 package commercetools;
 
-import java.time.Duration;
-import java.util.concurrent.CompletableFuture;
-
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.RetryHandler;
 import com.commercetools.api.models.cart.Cart;
@@ -14,7 +11,6 @@ import commercetools.cart.CartsFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.utils.ClientUtils;
 
 import org.junit.jupiter.api.Test;
 

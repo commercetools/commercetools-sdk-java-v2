@@ -6,12 +6,12 @@ import static commercetools.utils.CommercetoolsTestUtils.*;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
-import dev.failsafe.CircuitBreakerOpenException;
-
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.project.Project;
+
+import dev.failsafe.CircuitBreakerOpenException;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;

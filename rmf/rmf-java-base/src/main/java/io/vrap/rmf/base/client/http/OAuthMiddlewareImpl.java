@@ -7,8 +7,8 @@ import java.util.function.Function;
 
 import dev.failsafe.*;
 import dev.failsafe.event.ExecutionAttemptedEvent;
-
 import dev.failsafe.spi.Scheduler;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
@@ -44,7 +44,7 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             final boolean useCircuitBreaker) {
         this.authHandler = oauthHandler;
 
-        RetryPolicy<ApiHttpResponse<byte[]>> retry = RetryPolicy.<ApiHttpResponse<byte[]>>builder()
+        RetryPolicy<ApiHttpResponse<byte[]>> retry = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                 .handleIf((response, throwable) -> {
                     if (throwable != null) {
                         return throwable instanceof UnauthorizedException;
@@ -67,14 +67,16 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException)
                     .build();
 
-            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = CircuitBreaker.<ApiHttpResponse<byte[]>>builder()
+            final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = CircuitBreaker
+                    .<ApiHttpResponse<byte[]>> builder()
                     .handleIf((response, throwable) -> {
                         if (throwable.getCause() instanceof AuthException) {
                             return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
                         }
                         return response.getStatusCode() == 400;
                     })
-                    .withDelayFn(context -> Duration.ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
+                    .withDelayFn(context -> Duration
+                            .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))
                     .withFailureThreshold(5, Duration.ofMinutes(1))
                     .withSuccessThreshold(2)
                     .onClose(event -> logger.debug(() -> "The authentication circuit breaker was closed"))

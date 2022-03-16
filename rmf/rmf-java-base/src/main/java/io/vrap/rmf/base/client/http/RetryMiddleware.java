@@ -1,6 +1,8 @@
 
 package io.vrap.rmf.base.client.http;
 
+import static java.util.Arrays.asList;
+
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
@@ -18,8 +20,6 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static java.util.Arrays.asList;
 
 /**
  * Implementation for a retry of a requests upon configured response status codes
@@ -49,7 +49,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>>builder()
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                 .handleIf((response, throwable) -> {
                     if (throwable instanceof ApiHttpException) {
                         return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());

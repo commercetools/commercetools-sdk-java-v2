@@ -207,6 +207,23 @@
             ]
         },
         {
+            "moduleName": "dev.failsafe:failsafe",
+            "moduleVersion": "3.2.0",
+            "moduleUrls": [
+                "https://failsafe.dev"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "javax.annotation:javax.annotation-api",
             "moduleVersion": "1.3.2",
             "moduleUrls": [
@@ -249,23 +266,6 @@
                 "http://beanvalidation.org"
             ],
             "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "net.jodah:failsafe",
-            "moduleVersion": "2.4.3",
-            "moduleUrls": [
-                "https://failsafe-lib.github.io"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": null,
-                    "moduleLicenseUrl": "http://apache.org/licenses/LICENSE-2.0"
-                },
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"

@@ -66,10 +66,10 @@
             ]
         },
         {
-            "moduleName": "net.jodah:failsafe",
-            "moduleVersion": "2.4.3",
+            "moduleName": "dev.failsafe:failsafe",
+            "moduleVersion": "3.2.0",
             "moduleUrls": [
-                "https://failsafe-lib.github.io"
+                "https://failsafe.dev"
             ],
             "moduleLicenses": [
                 {

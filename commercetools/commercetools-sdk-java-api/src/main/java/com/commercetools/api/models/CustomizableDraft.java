@@ -7,7 +7,7 @@ public interface CustomizableDraft<T extends CustomizableDraft<T>> {
 
     public void setCustom(final CustomFieldsDraft custom);
 
-    default T get() {
+    default T unwrapCustomizableDraft() {
         return (T) this;
     }
 }

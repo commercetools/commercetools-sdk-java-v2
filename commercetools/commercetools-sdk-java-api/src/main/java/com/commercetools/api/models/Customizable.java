@@ -7,7 +7,7 @@ public interface Customizable<T extends Customizable<T>> {
 
     public void setCustom(final CustomFields custom);
 
-    default T get() {
+    default T unwrapCustomizable() {
         return (T) this;
     }
 }

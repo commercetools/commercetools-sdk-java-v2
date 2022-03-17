@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListLineItemImpl.class)
-public interface ShoppingListLineItem {
+public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable<ShoppingListLineItem> {
 
     @NotNull
     @JsonProperty("addedAt")

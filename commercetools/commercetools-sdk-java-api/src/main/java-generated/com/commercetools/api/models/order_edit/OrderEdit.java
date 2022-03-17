@@ -22,7 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditImpl.class)
-public interface OrderEdit extends BaseResource, com.commercetools.api.models.DomainResource<OrderEdit> {
+public interface OrderEdit extends BaseResource, com.commercetools.api.models.DomainResource<OrderEdit>,
+        com.commercetools.api.models.Customizable<OrderEdit> {
 
     /**
     *  <p>The unique ID of the OrderEdit.</p>

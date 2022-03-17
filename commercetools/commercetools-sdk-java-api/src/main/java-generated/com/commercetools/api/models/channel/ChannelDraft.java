@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelDraftImpl.class)
-public interface ChannelDraft {
+public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft<ChannelDraft> {
 
     /**
     *  <p>User-defined unique identifier for the Channel.</p>

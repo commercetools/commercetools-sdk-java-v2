@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TransactionDraftImpl.class)
-public interface TransactionDraft {
+public interface TransactionDraft extends com.commercetools.api.models.CustomizableDraft<TransactionDraft> {
 
     /**
     *  <p>The time at which the transaction took place.</p>

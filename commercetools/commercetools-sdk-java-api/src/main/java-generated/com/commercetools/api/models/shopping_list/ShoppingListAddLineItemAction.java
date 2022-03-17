@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddLineItemActionImpl.class)
-public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction {
+public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
+        com.commercetools.api.models.CustomizableDraft<ShoppingListAddLineItemAction> {
 
     String ADD_LINE_ITEM = "addLineItem";
 

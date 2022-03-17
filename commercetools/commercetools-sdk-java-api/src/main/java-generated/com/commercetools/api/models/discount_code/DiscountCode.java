@@ -23,7 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeImpl.class)
-public interface DiscountCode extends BaseResource, com.commercetools.api.models.DomainResource<DiscountCode> {
+public interface DiscountCode extends BaseResource, com.commercetools.api.models.DomainResource<DiscountCode>,
+        com.commercetools.api.models.Customizable<DiscountCode> {
 
     /**
     *  <p>The unique ID of the discount code.</p>

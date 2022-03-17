@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetImpl.class)
-public interface Asset {
+public interface Asset extends com.commercetools.api.models.Customizable<Asset> {
 
     @NotNull
     @JsonProperty("id")

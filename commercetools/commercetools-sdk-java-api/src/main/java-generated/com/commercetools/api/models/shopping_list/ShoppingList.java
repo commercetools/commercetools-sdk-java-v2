@@ -23,7 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListImpl.class)
-public interface ShoppingList extends BaseResource, com.commercetools.api.models.DomainResource<ShoppingList> {
+public interface ShoppingList extends BaseResource, com.commercetools.api.models.DomainResource<ShoppingList>,
+        com.commercetools.api.models.Customizable<ShoppingList> {
 
     /**
     *  <p>The unique ID of the shopping list.</p>

@@ -22,7 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentImpl.class)
-public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource<Payment> {
+public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource<Payment>,
+        com.commercetools.api.models.Customizable<Payment> {
 
     @NotNull
     @JsonProperty("id")

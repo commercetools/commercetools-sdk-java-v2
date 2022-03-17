@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PriceDraftImpl.class)
-public interface PriceDraft {
+public interface PriceDraft extends com.commercetools.api.models.CustomizableDraft<PriceDraft> {
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />

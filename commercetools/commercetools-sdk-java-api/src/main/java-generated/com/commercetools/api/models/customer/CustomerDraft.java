@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerDraftImpl.class)
-public interface CustomerDraft {
+public interface CustomerDraft extends com.commercetools.api.models.CustomizableDraft<CustomerDraft> {
 
     /**
     *  <p>String that uniquely identifies a customer.

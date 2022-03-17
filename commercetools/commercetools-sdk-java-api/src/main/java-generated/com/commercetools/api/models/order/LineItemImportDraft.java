@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
-public interface LineItemImportDraft {
+public interface LineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<LineItemImportDraft> {
 
     /**
     *  <p>ID of the existing product.

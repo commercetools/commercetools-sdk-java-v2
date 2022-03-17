@@ -1,3 +1,4 @@
+
 package com.commercetools.api.models;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;

@@ -24,7 +24,7 @@
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.BaseAddress;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.store.StoreResourceIdentifier;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.type.CustomFields;</span>
+<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
 <span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">016</span><span id="line.16">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
@@ -32,7 +32,7 @@
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">@JsonDeserialize(as = MyCustomerDraftImpl.class)</span>
-<span class="source-line-no">022</span><span id="line.22">public interface MyCustomerDraft {</span>
+<span class="source-line-no">022</span><span id="line.22">public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft&lt;MyCustomerDraft&gt; {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
 <span class="source-line-no">025</span><span id="line.25">    @JsonProperty("email")</span>
@@ -91,7 +91,7 @@
 <span class="source-line-no">078</span><span id="line.78">    */</span>
 <span class="source-line-no">079</span><span id="line.79">    @Valid</span>
 <span class="source-line-no">080</span><span id="line.80">    @JsonProperty("custom")</span>
-<span class="source-line-no">081</span><span id="line.81">    public CustomFields getCustom();</span>
+<span class="source-line-no">081</span><span id="line.81">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    @JsonProperty("locale")</span>
 <span class="source-line-no">084</span><span id="line.84">    public String getLocale();</span>
@@ -127,7 +127,7 @@
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    public void setDefaultBillingAddress(final Long defaultBillingAddress);</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">117</span><span id="line.117">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
 <span class="source-line-no">119</span><span id="line.119">    public void setLocale(final String locale);</span>
 <span class="source-line-no">120</span><span id="line.120"></span>

@@ -35,157 +35,158 @@
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">024</span><span id="line.24">@JsonDeserialize(as = StoreImpl.class)</span>
-<span class="source-line-no">025</span><span id="line.25">public interface Store extends BaseResource, com.commercetools.api.models.DomainResource&lt;Store&gt; {</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    @NotNull</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("id")</span>
-<span class="source-line-no">029</span><span id="line.29">    public String getId();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @NotNull</span>
-<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("version")</span>
-<span class="source-line-no">033</span><span id="line.33">    public Long getVersion();</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">037</span><span id="line.37">    public ZonedDateTime getCreatedAt();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("lastModifiedAt")</span>
-<span class="source-line-no">041</span><span id="line.41">    public ZonedDateTime getLastModifiedAt();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">    */</span>
-<span class="source-line-no">046</span><span id="line.46">    @Valid</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("lastModifiedBy")</span>
-<span class="source-line-no">048</span><span id="line.48">    public LastModifiedBy getLastModifiedBy();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">    */</span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("createdBy")</span>
-<span class="source-line-no">055</span><span id="line.55">    public CreatedBy getCreatedBy();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">    *  &lt;p&gt;User-specific unique identifier for the store.</span>
-<span class="source-line-no">059</span><span id="line.59">    *  The &lt;code&gt;key&lt;/code&gt; is mandatory and immutable.</span>
-<span class="source-line-no">060</span><span id="line.60">    *  It is used to reference the store.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">    */</span>
-<span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("key")</span>
-<span class="source-line-no">064</span><span id="line.64">    public String getKey();</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">    */</span>
-<span class="source-line-no">069</span><span id="line.69">    @Valid</span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("name")</span>
-<span class="source-line-no">071</span><span id="line.71">    public LocalizedString getName();</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("languages")</span>
-<span class="source-line-no">074</span><span id="line.74">    public List&lt;String&gt; getLanguages();</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">    *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">    */</span>
-<span class="source-line-no">079</span><span id="line.79">    @NotNull</span>
-<span class="source-line-no">080</span><span id="line.80">    @Valid</span>
-<span class="source-line-no">081</span><span id="line.81">    @JsonProperty("distributionChannels")</span>
-<span class="source-line-no">082</span><span id="line.82">    public List&lt;ChannelReference&gt; getDistributionChannels();</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">    *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">    */</span>
-<span class="source-line-no">087</span><span id="line.87">    @Valid</span>
-<span class="source-line-no">088</span><span id="line.88">    @JsonProperty("supplyChannels")</span>
-<span class="source-line-no">089</span><span id="line.89">    public List&lt;ChannelReference&gt; getSupplyChannels();</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;Set of References to Product Selections along with settings.</span>
-<span class="source-line-no">093</span><span id="line.93">    *  If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store.</span>
-<span class="source-line-no">094</span><span id="line.94">    *  If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">    */</span>
-<span class="source-line-no">096</span><span id="line.96">    @Valid</span>
-<span class="source-line-no">097</span><span id="line.97">    @JsonProperty("productSelections")</span>
-<span class="source-line-no">098</span><span id="line.98">    public List&lt;ProductSelectionSetting&gt; getProductSelections();</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Valid</span>
-<span class="source-line-no">101</span><span id="line.101">    @JsonProperty("custom")</span>
-<span class="source-line-no">102</span><span id="line.102">    public CustomFields getCustom();</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public void setId(final String id);</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public void setVersion(final Long version);</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public void setCreatedBy(final CreatedBy createdBy);</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public void setKey(final String key);</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    @JsonIgnore</span>
-<span class="source-line-no">121</span><span id="line.121">    public void setLanguages(final String... languages);</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public void setLanguages(final List&lt;String&gt; languages);</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    @JsonIgnore</span>
-<span class="source-line-no">126</span><span id="line.126">    public void setDistributionChannels(final ChannelReference... distributionChannels);</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public void setDistributionChannels(final List&lt;ChannelReference&gt; distributionChannels);</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    @JsonIgnore</span>
-<span class="source-line-no">131</span><span id="line.131">    public void setSupplyChannels(final ChannelReference... supplyChannels);</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public void setSupplyChannels(final List&lt;ChannelReference&gt; supplyChannels);</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    @JsonIgnore</span>
-<span class="source-line-no">136</span><span id="line.136">    public void setProductSelections(final ProductSelectionSetting... productSelections);</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public void setProductSelections(final List&lt;ProductSelectionSetting&gt; productSelections);</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public void setCustom(final CustomFields custom);</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public static Store of() {</span>
-<span class="source-line-no">143</span><span id="line.143">        return new StoreImpl();</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public static Store of(final Store template) {</span>
-<span class="source-line-no">147</span><span id="line.147">        StoreImpl instance = new StoreImpl();</span>
-<span class="source-line-no">148</span><span id="line.148">        instance.setId(template.getId());</span>
-<span class="source-line-no">149</span><span id="line.149">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">150</span><span id="line.150">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">151</span><span id="line.151">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">152</span><span id="line.152">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">153</span><span id="line.153">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">154</span><span id="line.154">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">155</span><span id="line.155">        instance.setName(template.getName());</span>
-<span class="source-line-no">156</span><span id="line.156">        instance.setLanguages(template.getLanguages());</span>
-<span class="source-line-no">157</span><span id="line.157">        instance.setDistributionChannels(template.getDistributionChannels());</span>
-<span class="source-line-no">158</span><span id="line.158">        instance.setSupplyChannels(template.getSupplyChannels());</span>
-<span class="source-line-no">159</span><span id="line.159">        instance.setProductSelections(template.getProductSelections());</span>
-<span class="source-line-no">160</span><span id="line.160">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">161</span><span id="line.161">        return instance;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public static StoreBuilder builder() {</span>
-<span class="source-line-no">165</span><span id="line.165">        return StoreBuilder.of();</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public static StoreBuilder builder(final Store template) {</span>
-<span class="source-line-no">169</span><span id="line.169">        return StoreBuilder.of(template);</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    default &lt;T&gt; T withStore(Function&lt;Store, T&gt; helper) {</span>
-<span class="source-line-no">173</span><span id="line.173">        return helper.apply(this);</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175">}</span>
+<span class="source-line-no">025</span><span id="line.25">public interface Store extends BaseResource, com.commercetools.api.models.DomainResource&lt;Store&gt;,</span>
+<span class="source-line-no">026</span><span id="line.26">        com.commercetools.api.models.Customizable&lt;Store&gt; {</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @NotNull</span>
+<span class="source-line-no">029</span><span id="line.29">    @JsonProperty("id")</span>
+<span class="source-line-no">030</span><span id="line.30">    public String getId();</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    @NotNull</span>
+<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("version")</span>
+<span class="source-line-no">034</span><span id="line.34">    public Long getVersion();</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @NotNull</span>
+<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">038</span><span id="line.38">    public ZonedDateTime getCreatedAt();</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("lastModifiedAt")</span>
+<span class="source-line-no">042</span><span id="line.42">    public ZonedDateTime getLastModifiedAt();</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">    */</span>
+<span class="source-line-no">047</span><span id="line.47">    @Valid</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("lastModifiedBy")</span>
+<span class="source-line-no">049</span><span id="line.49">    public LastModifiedBy getLastModifiedBy();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">    */</span>
+<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("createdBy")</span>
+<span class="source-line-no">056</span><span id="line.56">    public CreatedBy getCreatedBy();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;User-specific unique identifier for the store.</span>
+<span class="source-line-no">060</span><span id="line.60">    *  The &lt;code&gt;key&lt;/code&gt; is mandatory and immutable.</span>
+<span class="source-line-no">061</span><span id="line.61">    *  It is used to reference the store.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">    */</span>
+<span class="source-line-no">063</span><span id="line.63">    @NotNull</span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("key")</span>
+<span class="source-line-no">065</span><span id="line.65">    public String getKey();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">    *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">    */</span>
+<span class="source-line-no">070</span><span id="line.70">    @Valid</span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("name")</span>
+<span class="source-line-no">072</span><span id="line.72">    public LocalizedString getName();</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("languages")</span>
+<span class="source-line-no">075</span><span id="line.75">    public List&lt;String&gt; getLanguages();</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">080</span><span id="line.80">    @NotNull</span>
+<span class="source-line-no">081</span><span id="line.81">    @Valid</span>
+<span class="source-line-no">082</span><span id="line.82">    @JsonProperty("distributionChannels")</span>
+<span class="source-line-no">083</span><span id="line.83">    public List&lt;ChannelReference&gt; getDistributionChannels();</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">    *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">    */</span>
+<span class="source-line-no">088</span><span id="line.88">    @Valid</span>
+<span class="source-line-no">089</span><span id="line.89">    @JsonProperty("supplyChannels")</span>
+<span class="source-line-no">090</span><span id="line.90">    public List&lt;ChannelReference&gt; getSupplyChannels();</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">    *  &lt;p&gt;Set of References to Product Selections along with settings.</span>
+<span class="source-line-no">094</span><span id="line.94">    *  If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store.</span>
+<span class="source-line-no">095</span><span id="line.95">    *  If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">    */</span>
+<span class="source-line-no">097</span><span id="line.97">    @Valid</span>
+<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("productSelections")</span>
+<span class="source-line-no">099</span><span id="line.99">    public List&lt;ProductSelectionSetting&gt; getProductSelections();</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    @Valid</span>
+<span class="source-line-no">102</span><span id="line.102">    @JsonProperty("custom")</span>
+<span class="source-line-no">103</span><span id="line.103">    public CustomFields getCustom();</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public void setId(final String id);</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public void setVersion(final Long version);</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public void setKey(final String key);</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    @JsonIgnore</span>
+<span class="source-line-no">122</span><span id="line.122">    public void setLanguages(final String... languages);</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public void setLanguages(final List&lt;String&gt; languages);</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    @JsonIgnore</span>
+<span class="source-line-no">127</span><span id="line.127">    public void setDistributionChannels(final ChannelReference... distributionChannels);</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public void setDistributionChannels(final List&lt;ChannelReference&gt; distributionChannels);</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    @JsonIgnore</span>
+<span class="source-line-no">132</span><span id="line.132">    public void setSupplyChannels(final ChannelReference... supplyChannels);</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    public void setSupplyChannels(final List&lt;ChannelReference&gt; supplyChannels);</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    @JsonIgnore</span>
+<span class="source-line-no">137</span><span id="line.137">    public void setProductSelections(final ProductSelectionSetting... productSelections);</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public void setProductSelections(final List&lt;ProductSelectionSetting&gt; productSelections);</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public static Store of() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return new StoreImpl();</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public static Store of(final Store template) {</span>
+<span class="source-line-no">148</span><span id="line.148">        StoreImpl instance = new StoreImpl();</span>
+<span class="source-line-no">149</span><span id="line.149">        instance.setId(template.getId());</span>
+<span class="source-line-no">150</span><span id="line.150">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">151</span><span id="line.151">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">152</span><span id="line.152">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">153</span><span id="line.153">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">154</span><span id="line.154">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">155</span><span id="line.155">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">156</span><span id="line.156">        instance.setName(template.getName());</span>
+<span class="source-line-no">157</span><span id="line.157">        instance.setLanguages(template.getLanguages());</span>
+<span class="source-line-no">158</span><span id="line.158">        instance.setDistributionChannels(template.getDistributionChannels());</span>
+<span class="source-line-no">159</span><span id="line.159">        instance.setSupplyChannels(template.getSupplyChannels());</span>
+<span class="source-line-no">160</span><span id="line.160">        instance.setProductSelections(template.getProductSelections());</span>
+<span class="source-line-no">161</span><span id="line.161">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">162</span><span id="line.162">        return instance;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public static StoreBuilder builder() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return StoreBuilder.of();</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public static StoreBuilder builder(final Store template) {</span>
+<span class="source-line-no">170</span><span id="line.170">        return StoreBuilder.of(template);</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    default &lt;T&gt; T withStore(Function&lt;Store, T&gt; helper) {</span>
+<span class="source-line-no">174</span><span id="line.174">        return helper.apply(this);</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176">}</span>
 
 
 

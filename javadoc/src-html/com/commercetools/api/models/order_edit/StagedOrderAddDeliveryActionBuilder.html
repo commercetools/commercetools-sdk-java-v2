@@ -35,7 +35,7 @@
 <span class="source-line-no">022</span><span id="line.22">    private java.util.List&lt;com.commercetools.api.models.order.ParcelDraft&gt; parcels;</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    @Nullable</span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    public StagedOrderAddDeliveryActionBuilder items(</span>
 <span class="source-line-no">028</span><span id="line.28">            @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {</span>
@@ -106,13 +106,13 @@
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
 <span class="source-line-no">095</span><span id="line.95">    public StagedOrderAddDeliveryActionBuilder custom(</span>
-<span class="source-line-no">096</span><span id="line.96">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">097</span><span id="line.97">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">096</span><span id="line.96">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
 <span class="source-line-no">098</span><span id="line.98">        return this;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
 <span class="source-line-no">101</span><span id="line.101">    public StagedOrderAddDeliveryActionBuilder custom(</span>
-<span class="source-line-no">102</span><span id="line.102">            @Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">102</span><span id="line.102">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
 <span class="source-line-no">103</span><span id="line.103">        this.custom = custom;</span>
 <span class="source-line-no">104</span><span id="line.104">        return this;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
@@ -133,7 +133,7 @@
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
 <span class="source-line-no">122</span><span id="line.122">    @Nullable</span>
-<span class="source-line-no">123</span><span id="line.123">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">123</span><span id="line.123">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">124</span><span id="line.124">        return this.custom;</span>
 <span class="source-line-no">125</span><span id="line.125">    }</span>
 <span class="source-line-no">126</span><span id="line.126"></span>

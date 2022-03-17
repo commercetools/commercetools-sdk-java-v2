@@ -11,10 +11,25 @@ class VersioningPlugin : Plugin<Project> {
         val extension = project.extensions.create("versioning", VersioningPluginExtension::class.java)
         val file = extension.propertiesFile.getOrElse("gradle.properties")
         val propertyName = extension.versionProperty.getOrElse("version")
+        createTaskSetVersion(file, propertyName, project)
         createTask(file, propertyName, "nextMinorVersion", project) { it.nextMinor() }
         createTask(file, propertyName,"nextMajorVersion", project) { it.nextMajor() }
         createTask(file, propertyName,"nextPatchVersion", project) { it.nextPatch() }
         createTask(file, propertyName,"snapshotVersion", project) { it.snapshot() }
+    }
+
+    private fun createTaskSetVersion(file: String, propertyName: String, project: Project) {
+        val task = project.task("setVersion")
+        task.group = "versioning"
+        task.doLast {
+            val propertiesFile = project.file(file)
+            val properties = Properties()
+            properties.load(propertiesFile.inputStream())
+
+            val versionInfo = VersionInfo.parse(project.version.toString())
+            properties.setProperty(propertyName, versionInfo.versionString())
+            properties.store(propertiesFile.outputStream(), null)
+        }
     }
 
     private fun createTask(file: String, propertyName: String, taskName: String, project: Project, op: UnaryOperator<VersionInfo>) {

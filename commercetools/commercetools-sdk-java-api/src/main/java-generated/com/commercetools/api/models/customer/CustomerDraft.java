@@ -42,7 +42,10 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     @JsonProperty("email")
     public String getEmail();
 
-    @NotNull
+    /**
+    *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
+    */
+
     @JsonProperty("password")
     public String getPassword();
 
@@ -172,6 +175,13 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();
 
+    /**
+    *  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>
+    */
+
+    @JsonProperty("authenticationMode")
+    public AuthenticationMode getAuthenticationMode();
+
     public void setCustomerNumber(final String customerNumber);
 
     public void setEmail(final String email);
@@ -237,6 +247,8 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     public void setStores(final List<StoreResourceIdentifier> stores);
 
+    public void setAuthenticationMode(final AuthenticationMode authenticationMode);
+
     public static CustomerDraft of() {
         return new CustomerDraftImpl();
     }
@@ -269,6 +281,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setSalutation(template.getSalutation());
         instance.setKey(template.getKey());
         instance.setStores(template.getStores());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 

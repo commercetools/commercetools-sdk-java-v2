@@ -75,6 +75,8 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
+
     @JsonCreator
     CustomerImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -98,7 +100,8 @@ public class CustomerImpl implements Customer, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("key") final String key,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -128,6 +131,7 @@ public class CustomerImpl implements Customer, ModelBase {
         this.salutation = salutation;
         this.key = key;
         this.stores = stores;
+        this.authenticationMode = authenticationMode;
     }
 
     public CustomerImpl() {
@@ -187,6 +191,9 @@ public class CustomerImpl implements Customer, ModelBase {
         return this.email;
     }
 
+    /**
+    *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+    */
     public String getPassword() {
         return this.password;
     }
@@ -294,6 +301,13 @@ public class CustomerImpl implements Customer, ModelBase {
     */
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+    *  <p>Defines whether a Customer has a password.</p>
+    */
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
     }
 
     public void setId(final String id) {
@@ -429,6 +443,11 @@ public class CustomerImpl implements Customer, ModelBase {
         this.stores = stores;
     }
 
+    public void setAuthenticationMode(
+            final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -468,6 +487,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(salutation, that.salutation)
                 .append(key, that.key)
                 .append(stores, that.stores)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -502,6 +522,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(salutation)
                 .append(key)
                 .append(stores)
+                .append(authenticationMode)
                 .toHashCode();
     }
 

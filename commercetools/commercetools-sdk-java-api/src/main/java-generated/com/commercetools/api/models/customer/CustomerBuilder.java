@@ -31,6 +31,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     private String email;
 
+    @Nullable
     private String password;
 
     @Nullable
@@ -91,6 +92,9 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
+
     public CustomerBuilder id(final String id) {
         this.id = id;
         return this;
@@ -144,7 +148,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder password(final String password) {
+    public CustomerBuilder password(@Nullable final String password) {
         this.password = password;
         return this;
     }
@@ -317,6 +321,12 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
+    public CustomerBuilder authenticationMode(
+            @Nullable final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -352,6 +362,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return this.email;
     }
 
+    @Nullable
     public String getPassword() {
         return this.password;
     }
@@ -454,19 +465,23 @@ public class CustomerBuilder implements Builder<Customer> {
         return this.stores;
     }
 
+    @Nullable
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public Customer build() {
         Objects.requireNonNull(id, Customer.class + ": id is missing");
         Objects.requireNonNull(version, Customer.class + ": version is missing");
         Objects.requireNonNull(createdAt, Customer.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(email, Customer.class + ": email is missing");
-        Objects.requireNonNull(password, Customer.class + ": password is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     /**
@@ -476,7 +491,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     public static CustomerBuilder of() {
@@ -514,6 +529,7 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.salutation = template.getSalutation();
         builder.key = template.getKey();
         builder.stores = template.getStores();
+        builder.authenticationMode = template.getAuthenticationMode();
         return builder;
     }
 

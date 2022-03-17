@@ -17,6 +17,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     private String email;
 
+    @Nullable
     private String password;
 
     @Nullable
@@ -89,6 +90,9 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    @Nullable
+    private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
+
     public CustomerDraftBuilder customerNumber(@Nullable final String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
@@ -99,7 +103,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder password(final String password) {
+    public CustomerDraftBuilder password(@Nullable final String password) {
         this.password = password;
         return this;
     }
@@ -299,6 +303,12 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
+    public CustomerDraftBuilder authenticationMode(
+            @Nullable final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+        return this;
+    }
+
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
@@ -308,6 +318,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this.email;
     }
 
+    @Nullable
     public String getPassword() {
         return this.password;
     }
@@ -428,13 +439,17 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this.stores;
     }
 
+    @Nullable
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public CustomerDraft build() {
         Objects.requireNonNull(email, CustomerDraft.class + ": email is missing");
-        Objects.requireNonNull(password, CustomerDraft.class + ": password is missing");
         return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
             anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     /**
@@ -444,7 +459,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title,
             anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     public static CustomerDraftBuilder of() {
@@ -479,6 +494,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         builder.salutation = template.getSalutation();
         builder.key = template.getKey();
         builder.stores = template.getStores();
+        builder.authenticationMode = template.getAuthenticationMode();
         return builder;
     }
 

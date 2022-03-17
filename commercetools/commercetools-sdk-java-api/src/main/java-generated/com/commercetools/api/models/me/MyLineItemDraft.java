@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyLineItemDraftImpl.class)
-public interface MyLineItemDraft {
+public interface MyLineItemDraft extends com.commercetools.api.models.CustomizableDraft<MyLineItemDraft> {
 
     @JsonProperty("productId")
     public String getProductId();

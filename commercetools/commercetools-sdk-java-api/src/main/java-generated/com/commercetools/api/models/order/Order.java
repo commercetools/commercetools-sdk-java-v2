@@ -39,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImpl.class)
 public interface Order extends BaseResource, com.commercetools.api.models.DomainResource<Order>,
-        com.commercetools.api.models.order.OrderLike<Order> {
+        com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order> {
 
     /**
     *  <p>The unique ID of the order.</p>

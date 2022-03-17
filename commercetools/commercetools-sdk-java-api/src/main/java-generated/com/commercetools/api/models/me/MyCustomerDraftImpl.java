@@ -41,7 +41,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
 
     private Long defaultBillingAddress;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     private String locale;
 
@@ -56,7 +56,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,
             @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.email = email;
@@ -141,7 +141,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     /**
     *  <p>The custom fields.</p>
     */
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -205,7 +205,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
         this.defaultBillingAddress = defaultBillingAddress;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

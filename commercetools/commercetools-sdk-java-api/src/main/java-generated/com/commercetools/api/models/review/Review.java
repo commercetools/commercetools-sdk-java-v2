@@ -24,7 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewImpl.class)
-public interface Review extends BaseResource, com.commercetools.api.models.DomainResource<Review> {
+public interface Review extends BaseResource, com.commercetools.api.models.DomainResource<Review>,
+        com.commercetools.api.models.Customizable<Review> {
 
     /**
     *  <p>The unique ID of the review.</p>

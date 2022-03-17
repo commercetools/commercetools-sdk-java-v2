@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDraftImpl.class)
-public interface CartDraft {
+public interface CartDraft extends com.commercetools.api.models.CustomizableDraft<CartDraft> {
 
     /**
     *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>

@@ -24,7 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerImpl.class)
-public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer> {
+public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer>,
+        com.commercetools.api.models.Customizable<Customer> {
 
     /**
     *  <p>The unique ID of the customer.</p>

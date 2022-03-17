@@ -20,7 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupImpl.class)
-public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup> {
+public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup>,
+        com.commercetools.api.models.Customizable<CustomerGroup> {
 
     /**
     *  <p>Unique ID of the Customer Group.</p>

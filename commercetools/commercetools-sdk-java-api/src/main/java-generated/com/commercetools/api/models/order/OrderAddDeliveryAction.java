@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderAddDeliveryActionImpl.class)
-public interface OrderAddDeliveryAction extends OrderUpdateAction {
+public interface OrderAddDeliveryAction
+        extends OrderUpdateAction, com.commercetools.api.models.CustomizableDraft<OrderAddDeliveryAction> {
 
     String ADD_DELIVERY = "addDelivery";
 

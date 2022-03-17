@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentDraftImpl.class)
-public interface PaymentDraft {
+public interface PaymentDraft extends com.commercetools.api.models.CustomizableDraft<PaymentDraft> {
 
     /**
     *  <p>A reference to the customer this payment belongs to.</p>

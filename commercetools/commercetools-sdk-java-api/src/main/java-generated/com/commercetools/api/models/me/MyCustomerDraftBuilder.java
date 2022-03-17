@@ -47,7 +47,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     private Long defaultBillingAddress;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
     private String locale;
@@ -139,12 +139,12 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     public MyCustomerDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -241,7 +241,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

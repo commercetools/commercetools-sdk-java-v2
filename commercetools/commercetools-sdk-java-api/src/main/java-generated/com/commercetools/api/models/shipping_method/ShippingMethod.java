@@ -22,7 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodImpl.class)
-public interface ShippingMethod extends BaseResource, com.commercetools.api.models.DomainResource<ShippingMethod> {
+public interface ShippingMethod extends BaseResource, com.commercetools.api.models.DomainResource<ShippingMethod>,
+        com.commercetools.api.models.Customizable<ShippingMethod> {
 
     /**
     *  <p>The unique ID of the shipping method.</p>

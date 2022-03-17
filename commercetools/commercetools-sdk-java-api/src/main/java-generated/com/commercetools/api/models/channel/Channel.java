@@ -24,7 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelImpl.class)
-public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel> {
+public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel>,
+        com.commercetools.api.models.Customizable<Channel> {
 
     /**
     *  <p>Unique ID of the Channel.</p>

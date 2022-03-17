@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartImpl.class)
 public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>,
-        com.commercetools.api.models.order.OrderLike<Cart> {
+        com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
     *  <p>The unique ID of the cart.</p>

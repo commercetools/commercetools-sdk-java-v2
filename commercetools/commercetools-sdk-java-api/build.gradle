@@ -7,6 +7,7 @@ dependencies {
     implementation "javax.validation:validation-api:${versions.validation}"
     api "org.slf4j:slf4j-api:${versions.slf4j}"
     api commons.lang3
+    api "com.spotify:completable-futures:${versions.completableFutures}"
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-apachehttp-client')

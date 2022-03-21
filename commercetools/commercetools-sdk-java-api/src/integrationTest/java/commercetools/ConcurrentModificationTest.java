@@ -1,7 +1,6 @@
 
 package commercetools;
 
-import com.commercetools.api.client.ConcurrentModificationMiddleware;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.RetryHandler;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;

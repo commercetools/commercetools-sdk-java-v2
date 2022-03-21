@@ -1,26 +1,30 @@
-package com.commercetools.api.client;
 
-import com.commercetools.api.client.error.ConcurrentModificationException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.LongNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import dev.failsafe.Failsafe;
-import dev.failsafe.FailsafeExecutor;
-import dev.failsafe.RetryPolicy;
-import dev.failsafe.event.ExecutionAttemptedEvent;
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.http.InternalLogger;
-import io.vrap.rmf.base.client.utils.json.JsonException;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.commercetools.api.client;
 
 import java.io.IOException;
 import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+
+import com.commercetools.api.client.error.ConcurrentModificationException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.LongNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+import dev.failsafe.RetryPolicy;
+import dev.failsafe.event.ExecutionAttemptedEvent;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.InternalLogger;
+import io.vrap.rmf.base.client.utils.json.JsonException;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";
@@ -49,7 +53,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay,
             ObjectMapper mapper) {
         this.mapper = mapper;
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>>builder()
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .withJitter(0.25)
                 .withMaxRetries(maxRetries)
@@ -59,7 +63,8 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
         this.executor = Failsafe.with(retryPolicy);
     }
 
-    @Override public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
+    @Override
+    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
 
         Function<Throwable, CompletableFuture<ApiHttpResponse<byte[]>>> fn = (throwable) -> {
@@ -130,21 +135,23 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
                     classLogger.warn("pretty print failed", e);
                     prettyPrint = unformattedBody;
                 }
-                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl + "\nformatted: " + prettyPrint;
+                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl
+                        + "\nformatted: " + prettyPrint;
             }
             else {
-                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + request.getMethod()
-                        .name() + " " + request.getUrl() + " " + unformattedBody;
+                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + request.getMethod().name()
+                        + " " + request.getUrl() + " " + unformattedBody;
             }
         }
         else {
-            output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl + " <no body>";
+            output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl
+                    + " <no body>";
         }
         if (response != null) {
-            output += "\nFailure response: " + response.getStatusCode() + "\n" + response + "\n" + Optional.ofNullable(
-                            response.getBody())
-                    .map(body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))
-                    .orElse("<no body>");
+            output += "\nFailure response: " + response.getStatusCode() + "\n" + response + "\n"
+                    + Optional.ofNullable(response.getBody())
+                            .map(body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))
+                            .orElse("<no body>");
         }
         return output;
     }

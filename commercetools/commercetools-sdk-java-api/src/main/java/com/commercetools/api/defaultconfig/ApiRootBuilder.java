@@ -243,7 +243,8 @@ public class ApiRootBuilder {
         return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries));
     }
 
-    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries, final long delay, final long maxDelay) {
+    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries, final long delay,
+            final long maxDelay) {
         return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries, delay, maxDelay));
     }
 

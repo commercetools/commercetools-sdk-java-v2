@@ -16,4 +16,3 @@ public interface ConcurrentModificationMiddleware extends Middleware {
         return new ConcurrentModificationMiddlewareImpl(maxRetries, delay, maxDelay);
     }
 }
-

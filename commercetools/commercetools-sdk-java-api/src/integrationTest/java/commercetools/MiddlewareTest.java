@@ -19,7 +19,6 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
-import io.vrap.rmf.base.client.http.NotFoundExceptionMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -67,7 +66,7 @@ public class MiddlewareTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware(NotFoundExceptionMiddleware.of())
+                .addNotFoundExceptionMiddleware()
                 .build(projectKey);
         Category category = b.categories()
                 .withId("adbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")

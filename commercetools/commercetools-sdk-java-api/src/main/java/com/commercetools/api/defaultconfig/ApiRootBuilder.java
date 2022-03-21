@@ -10,10 +10,7 @@ import java.util.function.UnaryOperator;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.client.ApiInternalLoggerFactory;
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.*;
 import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
 import io.vrap.rmf.base.client.*;
@@ -236,6 +233,30 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
         return with(clientBuilder -> clientBuilder.withErrorMiddleware(errorMiddleware));
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware() {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of());
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries) {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries));
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries, final long delay, final long maxDelay) {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries, delay, maxDelay));
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(ConcurrentModificationMiddleware middleware) {
+        return addMiddleware(middleware);
+    }
+
+    public ApiRootBuilder addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware notFoundExceptionMiddleware) {
+        return with(clientBuilder -> clientBuilder.addNotFoundExceptionMiddleware(notFoundExceptionMiddleware));
+    }
+
+    public ApiRootBuilder addNotFoundExceptionMiddleware() {
+        return with(ClientBuilder::addNotFoundExceptionMiddleware);
     }
 
     public ApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {

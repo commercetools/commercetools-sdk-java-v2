@@ -56,7 +56,7 @@ public class ConcurrentModificationTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware(new ConcurrentModificationMiddleware(3))
+                .addConcurrentModificationMiddleware(3)
                 .build(projectKey);
 
         CartsFixtures.withUpdateableCart(cart -> {

@@ -1,25 +1,27 @@
+
 package io.vrap.rmf.base.client.http;
-
-import dev.failsafe.RetryPolicyBuilder;
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
 
 import static io.vrap.rmf.base.client.http.HttpStatusCode.INTERNAL_SERVER_ERROR_500;
 import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_503;
 import static java.util.Arrays.asList;
 
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
+
+import dev.failsafe.RetryPolicyBuilder;
+
+import io.vrap.rmf.base.client.ApiHttpException;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;
     int DEFAULT_INITIAL_DELAY = 200;
-    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500,
-            SERVICE_UNAVAILABLE_503);
+    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500, SERVICE_UNAVAILABLE_503);
 
     public static RetryRequestMiddleware of(final int maxRetries) {
-        return new RetryMiddleware(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, DEFAULT_RETRY_STATUS_CODES, null);
+        return new RetryMiddleware(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, DEFAULT_RETRY_STATUS_CODES,
+            null);
     }
 
     public static RetryRequestMiddleware of(final int maxRetries, final List<Integer> statusCodes) {
@@ -40,9 +42,10 @@ public interface RetryRequestMiddleware extends Middleware {
         return new RetryMiddleware(maxRetries, delay, maxDelay, statusCodes, null);
     }
 
-    public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
-            final List<Class<? extends Throwable>> failures) {
-        return new RetryMiddleware(maxRetries, delay, maxDelay, handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+    public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        return new RetryMiddleware(maxRetries, delay, maxDelay,
+            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
     public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,

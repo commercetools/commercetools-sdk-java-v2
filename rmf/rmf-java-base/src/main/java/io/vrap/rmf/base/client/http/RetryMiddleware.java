@@ -51,7 +51,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
+            RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -59,12 +60,14 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
+            statusCodes, null);
     }
 
     RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, failures);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
+            statusCodes, failures);
     }
 
     /**
@@ -86,7 +89,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures).andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
@@ -163,7 +167,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
+            RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -171,7 +176,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
+            statusCodes, null);
     }
 
     /**

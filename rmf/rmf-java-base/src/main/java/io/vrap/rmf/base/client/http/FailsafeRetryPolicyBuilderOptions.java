@@ -1,12 +1,18 @@
 
 package io.vrap.rmf.base.client.http;
 
-import java.util.function.Function;
+import java.util.Objects;
 
 import dev.failsafe.RetryPolicyBuilder;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
-public interface FailsafeRetryPolicyBuilderOptions
-        extends Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> {
+@FunctionalInterface
+public interface FailsafeRetryPolicyBuilderOptions {
+    RetryPolicyBuilder<ApiHttpResponse<byte[]>> apply(RetryPolicyBuilder<ApiHttpResponse<byte[]>> options);
+
+    default FailsafeRetryPolicyBuilderOptions andThen(FailsafeRetryPolicyBuilderOptions after) {
+        Objects.requireNonNull(after);
+        return (t) -> after.apply(apply(t));
+    }
 }

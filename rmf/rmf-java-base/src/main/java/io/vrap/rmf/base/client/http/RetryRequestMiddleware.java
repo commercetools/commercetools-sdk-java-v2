@@ -40,7 +40,7 @@ public interface RetryRequestMiddleware extends Middleware {
     public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
         return new RetryMiddleware(maxRetries, delay, maxDelay,
-            (FailsafeRetryPolicyBuilderOptions) handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
     public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,

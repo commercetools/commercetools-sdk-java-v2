@@ -450,8 +450,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay,
-            (FailsafeRetryPolicyBuilderOptions) RetryRequestMiddleware.handleFailures(failures)
+        return withRetryMiddleware(
+            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
                     .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
     }
 

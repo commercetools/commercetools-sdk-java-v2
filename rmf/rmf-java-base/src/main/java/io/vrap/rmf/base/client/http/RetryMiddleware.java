@@ -88,9 +88,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, delay, maxDelay,
-            (FailsafeRetryPolicyBuilderOptions) RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,

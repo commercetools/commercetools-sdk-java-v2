@@ -12,6 +12,8 @@ import com.commercetools.ml.client.ApiRoot;
 import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
 import com.commercetools.ml.client.ProjectApiRoot;
 
+import dev.failsafe.RetryPolicyBuilder;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
@@ -216,6 +218,28 @@ public class MLApiRootBuilder {
 
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         builder.withRetryMiddleware(maxRetries, statusCodes);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        builder.withRetryMiddleware(maxRetries, statusCodes, failures);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);
 
         return this;
     }

@@ -13,6 +13,8 @@ import javax.annotation.Nullable;
 import com.commercetools.api.client.*;
 import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
+import dev.failsafe.RetryPolicyBuilder;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
@@ -274,6 +276,23 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+        return with(
+            clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, fn));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

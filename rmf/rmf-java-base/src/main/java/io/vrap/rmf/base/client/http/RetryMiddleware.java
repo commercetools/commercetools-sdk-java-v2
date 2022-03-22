@@ -1,6 +1,7 @@
 
 package io.vrap.rmf.base.client.http;
 
+import static io.vrap.rmf.base.client.http.HttpStatusCode.*;
 import static java.util.Arrays.asList;
 
 import java.time.temporal.ChronoUnit;
@@ -8,10 +9,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
+import dev.failsafe.RetryPolicyBuilder;
 import dev.failsafe.event.ExecutionAttemptedEvent;
 
 import io.vrap.rmf.base.client.*;
@@ -29,7 +32,8 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     public static final int DEFAULT_MAX_DELAY = 60000;
     public static final int DEFAULT_INITIAL_DELAY = 200;
-    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(500, 503);
+    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500,
+        SERVICE_UNAVAILABLE_503);
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(RetryMiddleware.class);
 
@@ -43,25 +47,55 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
         this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
     }
 
+    public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, failures);
+    }
+
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
         this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
     }
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
-                .handleIf((response, throwable) -> {
-                    if (throwable instanceof ApiHttpException) {
-                        return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
-                    }
-                    return statusCodes.contains(response.getStatusCode());
-                })
-                .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
-                .withJitter(0.25)
-                .onRetry(this::logEventFailure)
-                .withMaxRetries(maxRetries)
+        this(maxRetries, delay, maxDelay, statusCodes, null);
+    }
+
+    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        this(maxRetries, delay, maxDelay, handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+    }
+
+    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = fn
+                .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
+                        .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
+                        .withJitter(0.25)
+                        .withMaxRetries(maxRetries)
+                        .onRetry(this::logEventFailure))
                 .build();
         this.failsafeExecutor = Failsafe.with(retryPolicy);
+    }
+
+    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleFailures(
+            final List<Class<? extends Throwable>> failures) {
+        return builder -> {
+            if (failures != null) {
+                builder.handle(failures);
+            }
+            return builder;
+        };
+    }
+
+    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleStatusCodes(
+            final List<Integer> statusCodes) {
+        return builder -> builder.handleIf((response, throwable) -> {
+            if (throwable instanceof ApiHttpException) {
+                return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
+            }
+            return statusCodes.contains(response.getStatusCode());
+        });
     }
 
     private void logEventFailure(ExecutionAttemptedEvent<ApiHttpResponse<byte[]>> event) {

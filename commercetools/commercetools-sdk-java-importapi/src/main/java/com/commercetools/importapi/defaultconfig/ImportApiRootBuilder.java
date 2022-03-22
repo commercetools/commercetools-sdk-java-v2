@@ -12,8 +12,6 @@ import com.commercetools.importapi.client.ApiRoot;
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
 import com.commercetools.importapi.client.ProjectApiRoot;
 
-import dev.failsafe.RetryPolicyBuilder;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
@@ -235,14 +233,14 @@ public class ImportApiRootBuilder {
 
     public ImportApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
-            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+            final FailsafeRetryPolicyBuilderOptions fn) {
         builder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn);
 
         return this;
     }
 
     public ImportApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
-            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+            final FailsafeRetryPolicyBuilderOptions fn) {
         builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);
 
         return this;

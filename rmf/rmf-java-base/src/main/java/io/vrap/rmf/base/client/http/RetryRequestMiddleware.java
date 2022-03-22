@@ -6,13 +6,8 @@ import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_50
 import static java.util.Arrays.asList;
 
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
-
-import dev.failsafe.RetryPolicyBuilder;
 
 import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpResponse;
 
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;
@@ -45,16 +40,15 @@ public interface RetryRequestMiddleware extends Middleware {
     public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
         return new RetryMiddleware(maxRetries, delay, maxDelay,
-            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+            (FailsafeRetryPolicyBuilderOptions) handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
     public static RetryRequestMiddleware of(final int maxRetries, final long delay, final long maxDelay,
-            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+            final FailsafeRetryPolicyBuilderOptions fn) {
         return new RetryMiddleware(maxRetries, delay, maxDelay, fn);
     }
 
-    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleFailures(
-            final List<Class<? extends Throwable>> failures) {
+    public static FailsafeRetryPolicyBuilderOptions handleFailures(final List<Class<? extends Throwable>> failures) {
         return builder -> {
             if (failures != null) {
                 builder.handle(failures);
@@ -63,8 +57,7 @@ public interface RetryRequestMiddleware extends Middleware {
         };
     }
 
-    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleStatusCodes(
-            final List<Integer> statusCodes) {
+    public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes) {
         return builder -> builder.handleIf((response, throwable) -> {
             if (throwable instanceof ApiHttpException) {
                 return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());

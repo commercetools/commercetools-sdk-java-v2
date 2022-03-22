@@ -10,7 +10,6 @@ import java.util.function.Function;
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
-import dev.failsafe.RetryPolicyBuilder;
 import dev.failsafe.event.ExecutionAttemptedEvent;
 
 import io.vrap.rmf.base.client.*;
@@ -89,12 +88,13 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
-                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+        this(maxRetries, delay, maxDelay,
+            (FailsafeRetryPolicyBuilderOptions) RetryRequestMiddleware.handleFailures(failures)
+                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
-            final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
+            final FailsafeRetryPolicyBuilderOptions fn) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = fn
                 .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                         .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)

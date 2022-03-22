@@ -26,7 +26,7 @@ package com.commercetools.docs.meta;
 
     <h3>RetryMiddleware</h3>
 
-    <p>The {@link io.vrap.rmf.base.client.http.RetryMiddleware} is used to retry a failed request returns with the configured
+    <p>The {@link io.vrap.rmf.base.client.http.RetryRequestMiddleware} is used to retry a failed request returns with the configured
     status codes e.g. <code>503</code>. For retrying an exponential backoff strategy is used which will increase the wait
     time before each try to avoid overwhelming the API. A jitter is also added to avoid reduce the possibility that parallel
     requests will be retried at the same time.</p>

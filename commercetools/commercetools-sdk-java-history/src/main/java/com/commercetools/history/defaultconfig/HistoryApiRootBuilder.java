@@ -202,13 +202,13 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
-    public HistoryApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public HistoryApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
-    public HistoryApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public HistoryApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;

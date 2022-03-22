@@ -202,13 +202,13 @@ public class ImportApiRootBuilder {
         return this;
     }
 
-    public ImportApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public ImportApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
-    public ImportApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public ImportApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;

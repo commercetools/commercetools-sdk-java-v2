@@ -35,7 +35,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private int authRetries;
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
-    private Supplier<RetryMiddleware> retryMiddleware;
+    private Supplier<RetryRequestMiddleware> retryMiddleware;
     private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
@@ -427,39 +427,39 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return addMiddleware(exceptionMiddleware);
     }
 
-    public ClientBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public ClientBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         this.retryMiddleware = retryMiddleware;
         return this;
     }
 
-    public ClientBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public ClientBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         return withRetryMiddleware(() -> retryMiddleware);
     }
 
     public ClientBuilder withRetryMiddleware(final int maxRetries) {
-        return withRetryMiddleware(new RetryMiddleware(maxRetries));
+        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries));
     }
 
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        return withRetryMiddleware(new RetryMiddleware(maxRetries, statusCodes));
+        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes));
     }
 
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(new RetryMiddleware(maxRetries, statusCodes, failures));
+        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes, failures));
     }
 
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
         return withRetryMiddleware(
-            new RetryMiddleware(maxRetries, delay, maxDelay, RetryMiddleware.handleFailures(failures)
-                    .andThen(RetryMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
     }
 
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
-        return withRetryMiddleware(new RetryMiddleware(maxRetries, delay, maxDelay, fn));
+        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));
     }
 
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

@@ -1,15 +1,11 @@
 
 package io.vrap.rmf.base.client.http;
 
-import static io.vrap.rmf.base.client.http.HttpStatusCode.*;
-import static java.util.Arrays.asList;
-
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.function.UnaryOperator;
 
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
@@ -27,46 +23,73 @@ import org.slf4j.LoggerFactory;
 /**
  * Implementation for a retry of a requests upon configured response status codes
  */
-public class RetryMiddleware implements Middleware, AutoCloseable {
+public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry";
 
-    public static final int DEFAULT_MAX_DELAY = 60000;
-    public static final int DEFAULT_INITIAL_DELAY = 200;
-    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500,
-        SERVICE_UNAVAILABLE_503);
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_MAX_DELAY} instead
+     */
+    @Deprecated
+    public static final int DEFAULT_MAX_DELAY = RetryRequestMiddleware.DEFAULT_MAX_DELAY;
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_INITIAL_DELAY} instead
+     */
+    @Deprecated
+    public static final int DEFAULT_INITIAL_DELAY = RetryRequestMiddleware.DEFAULT_INITIAL_DELAY;
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_RETRY_STATUS_CODES} instead
+     */
+    @Deprecated
+    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES;
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(RetryMiddleware.class);
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#of(int)} instead
+     */
+    @Deprecated
     public RetryMiddleware(final int maxRetries) {
-        this(maxRetries, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#of(int, List)} instead
+     */
+    @Deprecated
     public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
     }
 
-    public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
+    RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, failures);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, failures);
     }
 
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#of(int, long, long)} instead
+     */
+    @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
-        this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
+    /**
+     * @deprecated use {@link RetryRequestMiddleware#of(int, long, long, List)} instead
+     */
+    @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes) {
         this(maxRetries, delay, maxDelay, statusCodes, null);
     }
 
-    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
+    RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, delay, maxDelay, handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures).andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
     }
 
-    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+    RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final Function<RetryPolicyBuilder<ApiHttpResponse<byte[]>>, RetryPolicyBuilder<ApiHttpResponse<byte[]>>> fn) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = fn
                 .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
@@ -76,26 +99,6 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
                         .onRetry(this::logEventFailure))
                 .build();
         this.failsafeExecutor = Failsafe.with(retryPolicy);
-    }
-
-    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleFailures(
-            final List<Class<? extends Throwable>> failures) {
-        return builder -> {
-            if (failures != null) {
-                builder.handle(failures);
-            }
-            return builder;
-        };
-    }
-
-    public static UnaryOperator<RetryPolicyBuilder<ApiHttpResponse<byte[]>>> handleStatusCodes(
-            final List<Integer> statusCodes) {
-        return builder -> builder.handleIf((response, throwable) -> {
-            if (throwable instanceof ApiHttpException) {
-                return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
-            }
-            return statusCodes.contains(response.getStatusCode());
-        });
     }
 
     private void logEventFailure(ExecutionAttemptedEvent<ApiHttpResponse<byte[]>> event) {
@@ -160,7 +163,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
-        this(maxRetries, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -168,7 +171,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
+        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
     }
 
     /**
@@ -176,7 +179,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay) {
-        this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -185,7 +188,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes) {
-        this(maxRetries, delay, maxDelay, statusCodes);
+        this(maxRetries, delay, maxDelay, statusCodes, null);
     }
 
     @Override

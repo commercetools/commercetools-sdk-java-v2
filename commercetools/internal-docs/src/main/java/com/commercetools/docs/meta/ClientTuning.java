@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.ApiMethod;
  *
  * <h3 id=retry-middleware>RetryMiddleware</h3>
  *
- * <p>The {@link io.vrap.rmf.base.client.http.RetryMiddleware} configures a client to handle failures like gateway timeouts
+ * <p>The {@link io.vrap.rmf.base.client.http.RetryRequestMiddleware} configures a client to handle failures like gateway timeouts
  * and version conflicts through retrying the request.</p>
  *
  * <p>A best practice example to retry on gateway timeouts and similar problems</p>

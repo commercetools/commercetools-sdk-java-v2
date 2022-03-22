@@ -198,13 +198,13 @@ public class MLApiRootBuilder {
         return this;
     }
 
-    public MLApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public MLApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
-    public MLApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public MLApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;

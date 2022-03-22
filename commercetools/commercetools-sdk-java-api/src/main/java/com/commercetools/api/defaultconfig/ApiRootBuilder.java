@@ -262,11 +262,11 @@ public class ApiRootBuilder {
         return with(ClientBuilder::addNotFoundExceptionMiddleware);
     }
 
-    public ApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
-    public ApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 

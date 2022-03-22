@@ -19,7 +19,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testWithStatusCode() {
-        RetryMiddleware middleware = new RetryMiddleware(1);
+        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -34,7 +34,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testWithCoveredException() {
-        RetryMiddleware middleware = new RetryMiddleware(1);
+        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -54,7 +54,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testWithCoveredExceptionResponse() {
-        RetryMiddleware middleware = new RetryMiddleware(1);
+        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -75,7 +75,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testUncoveredException() {
-        RetryMiddleware middleware = new RetryMiddleware(1);
+        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -93,7 +93,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testRetrySuccess() {
-        RetryMiddleware middleware = new RetryMiddleware(1);
+        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();

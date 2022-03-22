@@ -196,13 +196,13 @@ public class MLApiRootBuilder {
         return this;
     }
 
-    public MLApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public MLApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
-    public MLApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public MLApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
@@ -216,6 +216,28 @@ public class MLApiRootBuilder {
 
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         builder.withRetryMiddleware(maxRetries, statusCodes);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        builder.withRetryMiddleware(maxRetries, statusCodes, failures);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);
 
         return this;
     }

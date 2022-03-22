@@ -19,6 +19,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -43,7 +44,7 @@ public class MiddlewareTest {
                     count.getAndIncrement();
                     return next.apply(request);
                 })
-                .withRetryMiddleware(3, singletonList(404))
+                .withRetryMiddleware(3, singletonList(HttpStatusCode.NOT_FOUND_404))
                 .build(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {

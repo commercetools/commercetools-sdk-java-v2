@@ -10,6 +10,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 
@@ -86,7 +87,7 @@ public class AuthEndpointsTest {
 
         // call the revoke endpoint
         final ApiHttpResponse<byte[]> revokeToken = client.execute(revokeRequest).get();
-        Assertions.assertEquals(200, revokeToken.getStatusCode());
+        Assertions.assertEquals(HttpStatusCode.OK_200, revokeToken.getStatusCode());
 
         // build the introspection request
         final String introspectBody = "token=" + token.getAccessToken();

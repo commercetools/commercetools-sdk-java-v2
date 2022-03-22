@@ -260,11 +260,11 @@ public class ApiRootBuilder {
         return with(ClientBuilder::addNotFoundExceptionMiddleware);
     }
 
-    public ApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
-    public ApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
@@ -274,6 +274,23 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(
+            clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, fn));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

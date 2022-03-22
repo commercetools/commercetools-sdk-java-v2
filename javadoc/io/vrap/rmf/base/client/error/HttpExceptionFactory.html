@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../../com/commercetools/api/client/error/ApiHttpExceptionFactory.html" title="class in com.commercetools.api.client.error">ApiHttpExceptionFactory</a></code>, <code><a href="DefaultHttpExceptionFactory.html" title="class in io.vrap.rmf.base.client.error">DefaultHttpExceptionFactory</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.9">HttpExceptionFactory</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.10">HttpExceptionFactory</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -130,34 +130,34 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getResponseSerializer()">
 <h3>getResponseSerializer</h3>
-<div class="member-signature"><span class="return-type"><a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.11">getResponseSerializer</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.12">getResponseSerializer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="create(io.vrap.rmf.base.client.ApiHttpRequest,io.vrap.rmf.base.client.ApiHttpResponse)">
 <h3>create</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.13">create</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.14">create</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createServerException(io.vrap.rmf.base.client.ApiHttpRequest,io.vrap.rmf.base.client.ApiHttpResponse)">
 <h3>createServerException</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.20">createServerException</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.21">createServerException</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createClientException(io.vrap.rmf.base.client.ApiHttpRequest,io.vrap.rmf.base.client.ApiHttpResponse)">
 <h3>createClientException</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.44">createClientException</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../ApiHttpException.html" title="class in io.vrap.rmf.base.client">ApiHttpException</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.45">createClientException</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.ResponseSerializer)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/error/HttpExceptionFactory.html#line.71">of</a></span>&#8203;<span class="parameters">(<a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
 </section>
 </li>
 </ul>

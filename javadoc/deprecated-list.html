@@ -56,6 +56,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li><a href="#interface">Interfaces</a></li>
 <li><a href="#class">Classes</a></li>
+<li><a href="#field">Fields</a></li>
 <li><a href="#method">Methods</a></li>
 <li><a href="#constructor">Constructors</a></li>
 </ul>
@@ -272,6 +273,29 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="block-list">
 <li>
+<div id="field">
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#DEFAULT_INITIAL_DELAY">io.vrap.rmf.base.client.http.RetryMiddleware.DEFAULT_INITIAL_DELAY</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#DEFAULT_INITIAL_DELAY"><code>RetryRequestMiddleware.DEFAULT_INITIAL_DELAY</code></a> instead</div>
+</div>
+<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#DEFAULT_MAX_DELAY">io.vrap.rmf.base.client.http.RetryMiddleware.DEFAULT_MAX_DELAY</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#DEFAULT_MAX_DELAY"><code>RetryRequestMiddleware.DEFAULT_MAX_DELAY</code></a> instead</div>
+</div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#DEFAULT_RETRY_STATUS_CODES">io.vrap.rmf.base.client.http.RetryMiddleware.DEFAULT_RETRY_STATUS_CODES</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#DEFAULT_RETRY_STATUS_CODES"><code>RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES</code></a> instead</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="block-list">
+<li>
 <div id="method">
 <div class="caption"><span>Methods</span></div>
 <div class="summary-table two-column-summary">
@@ -410,21 +434,37 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int)</a></div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int)</a></div>
 <div class="col-last even-row-color">
-<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int)"><code>RetryRequestMiddleware.of(int)</code></a> instead</div>
 </div>
-<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, long, long)</a></div>
+<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int)</a></div>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
 </div>
-<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, long, long, List&lt;Integer&gt;)</a></div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, long, long)</a></div>
 <div class="col-last even-row-color">
 <div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
 </div>
-<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, List&lt;Integer&gt;)</a></div>
+<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, long, long, List&lt;Integer&gt;)</a></div>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
+</div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
+</div>
+<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,long,long)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, long, long)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,long,long)"><code>RetryRequestMiddleware.of(int, long, long)</code></a> instead</div>
+</div>
+<div class="col-deprecated-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,long,long,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, long, long, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,long,long,java.util.List)"><code>RetryRequestMiddleware.of(int, long, long, List)</code></a> instead</div>
+</div>
+<div class="col-deprecated-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,java.util.List)">io.vrap.rmf.base.client.http.RetryMiddleware&#8203;(int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,java.util.List)"><code>RetryRequestMiddleware.of(int, List)</code></a> instead</div>
 </div>
 </div>
 </div>

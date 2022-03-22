@@ -213,13 +213,13 @@
 <span class="source-line-no">200</span><span id="line.200">        return this;</span>
 <span class="source-line-no">201</span><span id="line.201">    }</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public HistoryApiRootBuilder withRetryMiddleware(Supplier&lt;RetryMiddleware&gt; retryMiddleware) {</span>
+<span class="source-line-no">203</span><span id="line.203">    public HistoryApiRootBuilder withRetryMiddleware(Supplier&lt;RetryRequestMiddleware&gt; retryMiddleware) {</span>
 <span class="source-line-no">204</span><span id="line.204">        builder.withRetryMiddleware(retryMiddleware);</span>
 <span class="source-line-no">205</span><span id="line.205"></span>
 <span class="source-line-no">206</span><span id="line.206">        return this;</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public HistoryApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {</span>
+<span class="source-line-no">209</span><span id="line.209">    public HistoryApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {</span>
 <span class="source-line-no">210</span><span id="line.210">        builder.withRetryMiddleware(retryMiddleware);</span>
 <span class="source-line-no">211</span><span id="line.211"></span>
 <span class="source-line-no">212</span><span id="line.212">        return this;</span>
@@ -237,129 +237,151 @@
 <span class="source-line-no">224</span><span id="line.224">        return this;</span>
 <span class="source-line-no">225</span><span id="line.225">    }</span>
 <span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    public HistoryApiRootBuilder withOAuthMiddleware(final Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware) {</span>
-<span class="source-line-no">228</span><span id="line.228">        builder.withOAuthMiddleware(oAuthMiddleware);</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">        return this;</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    public HistoryApiRootBuilder withOAuthMiddleware(final OAuthMiddleware oAuthMiddleware) {</span>
-<span class="source-line-no">234</span><span id="line.234">        builder.withOAuthMiddleware(oAuthMiddleware);</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">        return this;</span>
-<span class="source-line-no">237</span><span id="line.237">    }</span>
+<span class="source-line-no">227</span><span id="line.227">    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, List&lt;Integer&gt; statusCodes,</span>
+<span class="source-line-no">228</span><span id="line.228">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
+<span class="source-line-no">229</span><span id="line.229">        builder.withRetryMiddleware(maxRetries, statusCodes, failures);</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">        return this;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
+<span class="source-line-no">235</span><span id="line.235">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures,</span>
+<span class="source-line-no">236</span><span id="line.236">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">237</span><span id="line.237">        builder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn);</span>
 <span class="source-line-no">238</span><span id="line.238"></span>
-<span class="source-line-no">239</span><span id="line.239">    public HistoryApiRootBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {</span>
-<span class="source-line-no">240</span><span id="line.240">        builder.withTokenSupplier(tokenSupplier);</span>
+<span class="source-line-no">239</span><span id="line.239">        return this;</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
 <span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">        return this;</span>
-<span class="source-line-no">243</span><span id="line.243">    }</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public HistoryApiRootBuilder withTokenSupplier(final Supplier&lt;TokenSupplier&gt; tokenSupplier) {</span>
-<span class="source-line-no">246</span><span id="line.246">        builder.withTokenSupplier(tokenSupplier);</span>
-<span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">        return this;</span>
-<span class="source-line-no">249</span><span id="line.249">    }</span>
-<span class="source-line-no">250</span><span id="line.250"></span>
-<span class="source-line-no">251</span><span id="line.251">    public HistoryApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {</span>
-<span class="source-line-no">252</span><span id="line.252">        builder.withInternalLoggerMiddleware(internalLoggerMiddleware);</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">        return this;</span>
-<span class="source-line-no">255</span><span id="line.255">    }</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.withInternalLoggerFactory(internalLoggerFactory);</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">        return this;</span>
-<span class="source-line-no">261</span><span id="line.261">    }</span>
-<span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">    public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
-<span class="source-line-no">264</span><span id="line.264">            final Level responseLogEvent, final Level deprecationLogEvent) {</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent);</span>
+<span class="source-line-no">242</span><span id="line.242">    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
+<span class="source-line-no">243</span><span id="line.243">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">244</span><span id="line.244">        builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">        return this;</span>
+<span class="source-line-no">247</span><span id="line.247">    }</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public HistoryApiRootBuilder withOAuthMiddleware(final Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware) {</span>
+<span class="source-line-no">250</span><span id="line.250">        builder.withOAuthMiddleware(oAuthMiddleware);</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">        return this;</span>
+<span class="source-line-no">253</span><span id="line.253">    }</span>
+<span class="source-line-no">254</span><span id="line.254"></span>
+<span class="source-line-no">255</span><span id="line.255">    public HistoryApiRootBuilder withOAuthMiddleware(final OAuthMiddleware oAuthMiddleware) {</span>
+<span class="source-line-no">256</span><span id="line.256">        builder.withOAuthMiddleware(oAuthMiddleware);</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">        return this;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public HistoryApiRootBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {</span>
+<span class="source-line-no">262</span><span id="line.262">        builder.withTokenSupplier(tokenSupplier);</span>
+<span class="source-line-no">263</span><span id="line.263"></span>
+<span class="source-line-no">264</span><span id="line.264">        return this;</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
 <span class="source-line-no">266</span><span id="line.266"></span>
-<span class="source-line-no">267</span><span id="line.267">        return this;</span>
-<span class="source-line-no">268</span><span id="line.268">    }</span>
+<span class="source-line-no">267</span><span id="line.267">    public HistoryApiRootBuilder withTokenSupplier(final Supplier&lt;TokenSupplier&gt; tokenSupplier) {</span>
+<span class="source-line-no">268</span><span id="line.268">        builder.withTokenSupplier(tokenSupplier);</span>
 <span class="source-line-no">269</span><span id="line.269"></span>
-<span class="source-line-no">270</span><span id="line.270">    public HistoryApiRootBuilder withApiBaseUrl(String apiBaseUrl) {</span>
-<span class="source-line-no">271</span><span id="line.271">        builder.withApiBaseUrl(apiBaseUrl);</span>
+<span class="source-line-no">270</span><span id="line.270">        return this;</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
 <span class="source-line-no">272</span><span id="line.272"></span>
-<span class="source-line-no">273</span><span id="line.273">        return this;</span>
-<span class="source-line-no">274</span><span id="line.274">    }</span>
+<span class="source-line-no">273</span><span id="line.273">    public HistoryApiRootBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {</span>
+<span class="source-line-no">274</span><span id="line.274">        builder.withInternalLoggerMiddleware(internalLoggerMiddleware);</span>
 <span class="source-line-no">275</span><span id="line.275"></span>
-<span class="source-line-no">276</span><span id="line.276">    public HistoryApiRootBuilder withApiBaseUrl(final URI apiBaseUrl) {</span>
-<span class="source-line-no">277</span><span id="line.277">        builder.withApiBaseUrl(apiBaseUrl);</span>
+<span class="source-line-no">276</span><span id="line.276">        return this;</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
 <span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">        return this;</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
+<span class="source-line-no">279</span><span id="line.279">    public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {</span>
+<span class="source-line-no">280</span><span id="line.280">        builder.withInternalLoggerFactory(internalLoggerFactory);</span>
 <span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    public HistoryApiRootBuilder withUserAgentSupplier(final Supplier&lt;String&gt; userAgentSupplier) {</span>
-<span class="source-line-no">283</span><span id="line.283">        builder.withUserAgentSupplier(userAgentSupplier);</span>
+<span class="source-line-no">282</span><span id="line.282">        return this;</span>
+<span class="source-line-no">283</span><span id="line.283">    }</span>
 <span class="source-line-no">284</span><span id="line.284"></span>
-<span class="source-line-no">285</span><span id="line.285">        return this;</span>
-<span class="source-line-no">286</span><span id="line.286">    }</span>
-<span class="source-line-no">287</span><span id="line.287"></span>
-<span class="source-line-no">288</span><span id="line.288">    public HistoryApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
-<span class="source-line-no">289</span><span id="line.289">        builder.addCorrelationIdProvider(correlationIdProvider);</span>
-<span class="source-line-no">290</span><span id="line.290"></span>
-<span class="source-line-no">291</span><span id="line.291">        return this;</span>
-<span class="source-line-no">292</span><span id="line.292">    }</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">    public HistoryApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">295</span><span id="line.295">        builder.withMiddleware(middleware, middlewares);</span>
-<span class="source-line-no">296</span><span id="line.296"></span>
-<span class="source-line-no">297</span><span id="line.297">        return this;</span>
-<span class="source-line-no">298</span><span id="line.298">    }</span>
-<span class="source-line-no">299</span><span id="line.299"></span>
-<span class="source-line-no">300</span><span id="line.300">    public HistoryApiRootBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">301</span><span id="line.301">        builder.addMiddleware(middleware, middlewares);</span>
-<span class="source-line-no">302</span><span id="line.302"></span>
-<span class="source-line-no">303</span><span id="line.303">        return this;</span>
-<span class="source-line-no">304</span><span id="line.304">    }</span>
-<span class="source-line-no">305</span><span id="line.305"></span>
-<span class="source-line-no">306</span><span id="line.306">    public HistoryApiRootBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">307</span><span id="line.307">        builder.withMiddlewares(middlewares);</span>
-<span class="source-line-no">308</span><span id="line.308"></span>
-<span class="source-line-no">309</span><span id="line.309">        return this;</span>
-<span class="source-line-no">310</span><span id="line.310">    }</span>
-<span class="source-line-no">311</span><span id="line.311"></span>
-<span class="source-line-no">312</span><span id="line.312">    public HistoryApiRootBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">313</span><span id="line.313">        builder.addMiddlewares(middlewares);</span>
-<span class="source-line-no">314</span><span id="line.314"></span>
-<span class="source-line-no">315</span><span id="line.315">        return this;</span>
-<span class="source-line-no">316</span><span id="line.316">    }</span>
-<span class="source-line-no">317</span><span id="line.317"></span>
-<span class="source-line-no">318</span><span id="line.318">    public ApiRoot build() {</span>
-<span class="source-line-no">319</span><span id="line.319">        return ApiRoot.fromClient(clientSupplier().get());</span>
+<span class="source-line-no">285</span><span id="line.285">    public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
+<span class="source-line-no">286</span><span id="line.286">            final Level responseLogEvent, final Level deprecationLogEvent) {</span>
+<span class="source-line-no">287</span><span id="line.287">        builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent);</span>
+<span class="source-line-no">288</span><span id="line.288"></span>
+<span class="source-line-no">289</span><span id="line.289">        return this;</span>
+<span class="source-line-no">290</span><span id="line.290">    }</span>
+<span class="source-line-no">291</span><span id="line.291"></span>
+<span class="source-line-no">292</span><span id="line.292">    public HistoryApiRootBuilder withApiBaseUrl(String apiBaseUrl) {</span>
+<span class="source-line-no">293</span><span id="line.293">        builder.withApiBaseUrl(apiBaseUrl);</span>
+<span class="source-line-no">294</span><span id="line.294"></span>
+<span class="source-line-no">295</span><span id="line.295">        return this;</span>
+<span class="source-line-no">296</span><span id="line.296">    }</span>
+<span class="source-line-no">297</span><span id="line.297"></span>
+<span class="source-line-no">298</span><span id="line.298">    public HistoryApiRootBuilder withApiBaseUrl(final URI apiBaseUrl) {</span>
+<span class="source-line-no">299</span><span id="line.299">        builder.withApiBaseUrl(apiBaseUrl);</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">        return this;</span>
+<span class="source-line-no">302</span><span id="line.302">    }</span>
+<span class="source-line-no">303</span><span id="line.303"></span>
+<span class="source-line-no">304</span><span id="line.304">    public HistoryApiRootBuilder withUserAgentSupplier(final Supplier&lt;String&gt; userAgentSupplier) {</span>
+<span class="source-line-no">305</span><span id="line.305">        builder.withUserAgentSupplier(userAgentSupplier);</span>
+<span class="source-line-no">306</span><span id="line.306"></span>
+<span class="source-line-no">307</span><span id="line.307">        return this;</span>
+<span class="source-line-no">308</span><span id="line.308">    }</span>
+<span class="source-line-no">309</span><span id="line.309"></span>
+<span class="source-line-no">310</span><span id="line.310">    public HistoryApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
+<span class="source-line-no">311</span><span id="line.311">        builder.addCorrelationIdProvider(correlationIdProvider);</span>
+<span class="source-line-no">312</span><span id="line.312"></span>
+<span class="source-line-no">313</span><span id="line.313">        return this;</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    public HistoryApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">317</span><span id="line.317">        builder.withMiddleware(middleware, middlewares);</span>
+<span class="source-line-no">318</span><span id="line.318"></span>
+<span class="source-line-no">319</span><span id="line.319">        return this;</span>
 <span class="source-line-no">320</span><span id="line.320">    }</span>
 <span class="source-line-no">321</span><span id="line.321"></span>
-<span class="source-line-no">322</span><span id="line.322">    public ApiHttpClient buildClient() {</span>
-<span class="source-line-no">323</span><span id="line.323">        return clientSupplier().get();</span>
-<span class="source-line-no">324</span><span id="line.324">    }</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public Supplier&lt;ApiHttpClient&gt; clientSupplier() {</span>
-<span class="source-line-no">327</span><span id="line.327">        return builder::build;</span>
-<span class="source-line-no">328</span><span id="line.328">    }</span>
-<span class="source-line-no">329</span><span id="line.329"></span>
-<span class="source-line-no">330</span><span id="line.330">    /**</span>
-<span class="source-line-no">331</span><span id="line.331">     * @deprecated use {@link #build(String)}  instead</span>
-<span class="source-line-no">332</span><span id="line.332">     */</span>
-<span class="source-line-no">333</span><span id="line.333">    @Deprecated</span>
-<span class="source-line-no">334</span><span id="line.334">    public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {</span>
-<span class="source-line-no">335</span><span id="line.335">        return ApiRoot.fromClient(builder.build()).withProjectKeyValue(projectKey);</span>
-<span class="source-line-no">336</span><span id="line.336">    }</span>
-<span class="source-line-no">337</span><span id="line.337"></span>
-<span class="source-line-no">338</span><span id="line.338">    /**</span>
-<span class="source-line-no">339</span><span id="line.339">     * @deprecated use {@link #build(String)}  instead</span>
-<span class="source-line-no">340</span><span id="line.340">     */</span>
-<span class="source-line-no">341</span><span id="line.341">    @Deprecated</span>
-<span class="source-line-no">342</span><span id="line.342">    public ProjectApiRoot buildProjectRoot(final String projectKey) {</span>
-<span class="source-line-no">343</span><span id="line.343">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
-<span class="source-line-no">344</span><span id="line.344">    }</span>
-<span class="source-line-no">345</span><span id="line.345"></span>
-<span class="source-line-no">346</span><span id="line.346">    public ProjectApiRoot build(final String projectKey) {</span>
-<span class="source-line-no">347</span><span id="line.347">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
-<span class="source-line-no">348</span><span id="line.348">    }</span>
-<span class="source-line-no">349</span><span id="line.349">}</span>
+<span class="source-line-no">322</span><span id="line.322">    public HistoryApiRootBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">323</span><span id="line.323">        builder.addMiddleware(middleware, middlewares);</span>
+<span class="source-line-no">324</span><span id="line.324"></span>
+<span class="source-line-no">325</span><span id="line.325">        return this;</span>
+<span class="source-line-no">326</span><span id="line.326">    }</span>
+<span class="source-line-no">327</span><span id="line.327"></span>
+<span class="source-line-no">328</span><span id="line.328">    public HistoryApiRootBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">329</span><span id="line.329">        builder.withMiddlewares(middlewares);</span>
+<span class="source-line-no">330</span><span id="line.330"></span>
+<span class="source-line-no">331</span><span id="line.331">        return this;</span>
+<span class="source-line-no">332</span><span id="line.332">    }</span>
+<span class="source-line-no">333</span><span id="line.333"></span>
+<span class="source-line-no">334</span><span id="line.334">    public HistoryApiRootBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">335</span><span id="line.335">        builder.addMiddlewares(middlewares);</span>
+<span class="source-line-no">336</span><span id="line.336"></span>
+<span class="source-line-no">337</span><span id="line.337">        return this;</span>
+<span class="source-line-no">338</span><span id="line.338">    }</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    public ApiRoot build() {</span>
+<span class="source-line-no">341</span><span id="line.341">        return ApiRoot.fromClient(clientSupplier().get());</span>
+<span class="source-line-no">342</span><span id="line.342">    }</span>
+<span class="source-line-no">343</span><span id="line.343"></span>
+<span class="source-line-no">344</span><span id="line.344">    public ApiHttpClient buildClient() {</span>
+<span class="source-line-no">345</span><span id="line.345">        return clientSupplier().get();</span>
+<span class="source-line-no">346</span><span id="line.346">    }</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">    public Supplier&lt;ApiHttpClient&gt; clientSupplier() {</span>
+<span class="source-line-no">349</span><span id="line.349">        return builder::build;</span>
+<span class="source-line-no">350</span><span id="line.350">    }</span>
+<span class="source-line-no">351</span><span id="line.351"></span>
+<span class="source-line-no">352</span><span id="line.352">    /**</span>
+<span class="source-line-no">353</span><span id="line.353">     * @deprecated use {@link #build(String)}  instead</span>
+<span class="source-line-no">354</span><span id="line.354">     */</span>
+<span class="source-line-no">355</span><span id="line.355">    @Deprecated</span>
+<span class="source-line-no">356</span><span id="line.356">    public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {</span>
+<span class="source-line-no">357</span><span id="line.357">        return ApiRoot.fromClient(builder.build()).withProjectKeyValue(projectKey);</span>
+<span class="source-line-no">358</span><span id="line.358">    }</span>
+<span class="source-line-no">359</span><span id="line.359"></span>
+<span class="source-line-no">360</span><span id="line.360">    /**</span>
+<span class="source-line-no">361</span><span id="line.361">     * @deprecated use {@link #build(String)}  instead</span>
+<span class="source-line-no">362</span><span id="line.362">     */</span>
+<span class="source-line-no">363</span><span id="line.363">    @Deprecated</span>
+<span class="source-line-no">364</span><span id="line.364">    public ProjectApiRoot buildProjectRoot(final String projectKey) {</span>
+<span class="source-line-no">365</span><span id="line.365">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
+<span class="source-line-no">366</span><span id="line.366">    }</span>
+<span class="source-line-no">367</span><span id="line.367"></span>
+<span class="source-line-no">368</span><span id="line.368">    public ProjectApiRoot build(final String projectKey) {</span>
+<span class="source-line-no">369</span><span id="line.369">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
+<span class="source-line-no">370</span><span id="line.370">    }</span>
+<span class="source-line-no">371</span><span id="line.371">}</span>
 
 
 

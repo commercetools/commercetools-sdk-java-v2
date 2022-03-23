@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionImpl.class, name = InventoryEntrySetRestockableInDaysAction.SET_RESTOCKABLE_IN_DAYS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionImpl.class, name = InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = InventoryEntryUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = InventoryEntryUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface InventoryEntryUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<InventoryEntryUpdateAction> {

@@ -46,13 +46,6 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
         this.type = MoneyType.findEnum("highPrecision");
     }
 
-    /**
-    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
-    *  <ul>
-    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
-    *  </ul>
-    */
     public Long getCentAmount() {
         return this.centAmount;
     }

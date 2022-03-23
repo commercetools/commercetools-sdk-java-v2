@@ -36,8 +36,8 @@ public interface HighPrecisionMoney extends TypedMoney {
 
     public static HighPrecisionMoney of(final HighPrecisionMoney template) {
         HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
-        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setFractionDigits(template.getFractionDigits());
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;

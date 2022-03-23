@@ -267,6 +267,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.UpdateSyncInfoChangeImpl.class, name = UpdateSyncInfoChange.UPDATE_SYNC_INFO_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.VerifyEmailChangeImpl.class, name = VerifyEmailChange.VERIFY_EMAIL_CHANGE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeImpl.class, visible = true)
+@JsonDeserialize(as = ChangeImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface Change {
 

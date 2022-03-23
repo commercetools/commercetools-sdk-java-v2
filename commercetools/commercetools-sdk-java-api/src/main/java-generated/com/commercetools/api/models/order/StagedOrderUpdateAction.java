@@ -184,6 +184,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressActionImpl.class, name = StagedOrderUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionImpl.class, name = StagedOrderUpdateSyncInfoAction.UPDATE_SYNC_INFO) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StagedOrderUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = StagedOrderUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface StagedOrderUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction> {

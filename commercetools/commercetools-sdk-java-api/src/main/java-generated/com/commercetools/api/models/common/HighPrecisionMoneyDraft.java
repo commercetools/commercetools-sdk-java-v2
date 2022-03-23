@@ -28,7 +28,12 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();
 
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
+
     public void setPreciseAmount(final Long preciseAmount);
+
+    public void setCentAmount(final Long centAmount);
 
     public static HighPrecisionMoneyDraft of() {
         return new HighPrecisionMoneyDraftImpl();

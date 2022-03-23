@@ -3,12 +3,14 @@ package commercetools.cart;
 
 import static commercetools.customer.CustomerFixtures.*;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.api.models.cart.CartDraftBuilder;
+import com.commercetools.api.models.customer.Customer;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.jupiter.api.Assertions;
@@ -41,17 +43,17 @@ public class CartsFixtures {
         }
     }
 
-    public static void withCartWithCustomer(final Consumer<Cart> consumer) {
+    public static void withCartWithCustomer(final BiConsumer<Cart, Customer> consumer) {
         withCustomer(customer -> {
             CartDraft cartDraft = CartDraftBuilder.of()
                     .currency("EUR")
                     .country("DE")
-                    .anonymousId(customer.getId())
+                    .customerId(customer.getId())
                     .build();
 
             Cart cart = createCart(cartDraft);
             try {
-                consumer.accept(cart);
+                consumer.accept(cart, customer);
             }
             finally {
                 deleteCart(cart.getId(), cart.getVersion());

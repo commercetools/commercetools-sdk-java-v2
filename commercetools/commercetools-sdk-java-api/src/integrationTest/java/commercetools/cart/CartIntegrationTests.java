@@ -1,11 +1,13 @@
+
 package commercetools.cart;
+
+import java.util.List;
 
 import com.commercetools.api.models.cart.Cart;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 public class CartIntegrationTests {
     @Test

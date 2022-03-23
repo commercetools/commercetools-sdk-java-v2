@@ -5,6 +5,8 @@ import commercetools.utils.CommercetoolsTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class CartIntegrationTests {
     @Test
     public void queryByCustomerId() {
@@ -29,6 +31,30 @@ public class CartIntegrationTests {
                     .getResults()
                     .get(0);
             Assertions.assertThat(queriedCart2.getId()).isEqualTo(cart.getId());
+        });
+    }
+
+    @Test
+    public void queryByCustomerIdFailed() {
+        CartsFixtures.withCartWithCustomer((cart, customer) -> {
+            List<Cart> queriedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .get()
+                    .withWhere("customerId = \"40c4e90e-0666-499c-b645-c6b0a1e7d190\" and cartState = \"Active\"")
+                    .executeBlocking()
+                    .getBody()
+                    .getResults();
+            Assertions.assertThat(queriedCart).isEmpty();
+
+            List<Cart> queriedCart2 = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .get()
+                    .withWhere("customerId = :customerId and cartState = \"Active\"")
+                    .withPredicateVar("customerId", "40c4e90e-0666-499c-b645-c6b0a1e7d190")
+                    .executeBlocking()
+                    .getBody()
+                    .getResults();
+            Assertions.assertThat(queriedCart2).isEmpty();
         });
     }
 

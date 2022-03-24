@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
 
-    private java.lang.Object type;
+    private com.commercetools.history.models.common.FieldType type;
 
     private String name;
 
@@ -26,7 +26,8 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     private com.commercetools.history.models.common.TextInputHint inputHint;
 
     @JsonCreator
-    FieldDefinitionImpl(@JsonProperty("type") final java.lang.Object type, @JsonProperty("name") final String name,
+    FieldDefinitionImpl(@JsonProperty("type") final com.commercetools.history.models.common.FieldType type,
+            @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.history.models.common.LocalizedString label,
             @JsonProperty("inputHint") final com.commercetools.history.models.common.TextInputHint inputHint) {
         this.type = type;
@@ -38,10 +39,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     public FieldDefinitionImpl() {
     }
 
-    /**
-    *  <p>Describes the type of the field.</p>
-    */
-    public java.lang.Object getType() {
+    public com.commercetools.history.models.common.FieldType getType() {
         return this.type;
     }
 
@@ -60,7 +58,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
         return this.inputHint;
     }
 
-    public void setType(final java.lang.Object type) {
+    public void setType(final com.commercetools.history.models.common.FieldType type) {
         this.type = type;
     }
 

@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
 
-    private java.lang.Object type;
+    private com.commercetools.history.models.common.AttributeType type;
 
     private String name;
 
@@ -26,7 +26,13 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     private Boolean isSearchable;
 
-    public AttributeDefinitionBuilder type(final java.lang.Object type) {
+    public AttributeDefinitionBuilder type(
+            Function<com.commercetools.history.models.common.AttributeTypeBuilder, com.commercetools.history.models.common.AttributeTypeBuilder> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of()).build();
+        return this;
+    }
+
+    public AttributeDefinitionBuilder type(final com.commercetools.history.models.common.AttributeType type) {
         this.type = type;
         return this;
     }
@@ -79,7 +85,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
-    public java.lang.Object getType() {
+    public com.commercetools.history.models.common.AttributeType getType() {
         return this.type;
     }
 

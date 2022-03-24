@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.time.*;
 import java.util.*;
@@ -28,12 +28,12 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
 
     private Integer offset;
 
-    private java.util.List<com.commercetools.history.models.Record> results;
+    private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
     @JsonCreator
     RecordPagedQueryResponseImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("count") final Integer count,
             @JsonProperty("total") final Integer total, @JsonProperty("offset") final Integer offset,
-            @JsonProperty("results") final java.util.List<com.commercetools.history.models.Record> results) {
+            @JsonProperty("results") final java.util.List<com.commercetools.history.models.change_history.Record> results) {
         this.limit = limit;
         this.count = count;
         this.total = total;
@@ -73,7 +73,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
         return this.offset;
     }
 
-    public java.util.List<com.commercetools.history.models.Record> getResults() {
+    public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
         return this.results;
     }
 
@@ -93,11 +93,11 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
         this.offset = offset;
     }
 
-    public void setResults(final com.commercetools.history.models.Record... results) {
+    public void setResults(final com.commercetools.history.models.change_history.Record... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
     }
 
-    public void setResults(final java.util.List<com.commercetools.history.models.Record> results) {
+    public void setResults(final java.util.List<com.commercetools.history.models.change_history.Record> results) {
         this.results = results;
     }
 

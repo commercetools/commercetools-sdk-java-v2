@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.util.*;
 import java.util.function.Function;
@@ -16,7 +16,7 @@ public class RecordBuilder implements Builder<Record> {
 
     private String type;
 
-    private com.commercetools.history.models.ModifiedBy modifiedBy;
+    private com.commercetools.history.models.change_history.ModifiedBy modifiedBy;
 
     private String modifiedAt;
 
@@ -27,6 +27,8 @@ public class RecordBuilder implements Builder<Record> {
     private java.util.List<com.commercetools.history.models.change.Change> changes;
 
     private com.commercetools.history.models.common.Reference resource;
+
+    private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
 
     private Boolean withoutChanges;
 
@@ -46,12 +48,12 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     public RecordBuilder modifiedBy(
-            Function<com.commercetools.history.models.ModifiedByBuilder, com.commercetools.history.models.ModifiedByBuilder> builder) {
-        this.modifiedBy = builder.apply(com.commercetools.history.models.ModifiedByBuilder.of()).build();
+            Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedByBuilder> builder) {
+        this.modifiedBy = builder.apply(com.commercetools.history.models.change_history.ModifiedByBuilder.of()).build();
         return this;
     }
 
-    public RecordBuilder modifiedBy(final com.commercetools.history.models.ModifiedBy modifiedBy) {
+    public RecordBuilder modifiedBy(final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
     }
@@ -92,6 +94,32 @@ public class RecordBuilder implements Builder<Record> {
         return this;
     }
 
+    public RecordBuilder stores(final com.commercetools.history.models.common.KeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public RecordBuilder withStores(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public RecordBuilder plusStores(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
     public RecordBuilder withoutChanges(final Boolean withoutChanges) {
         this.withoutChanges = withoutChanges;
         return this;
@@ -109,7 +137,7 @@ public class RecordBuilder implements Builder<Record> {
         return this.type;
     }
 
-    public com.commercetools.history.models.ModifiedBy getModifiedBy() {
+    public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
         return this.modifiedBy;
     }
 
@@ -133,6 +161,10 @@ public class RecordBuilder implements Builder<Record> {
         return this.resource;
     }
 
+    public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
+        return this.stores;
+    }
+
     public Boolean getWithoutChanges() {
         return this.withoutChanges;
     }
@@ -147,9 +179,10 @@ public class RecordBuilder implements Builder<Record> {
         Objects.requireNonNull(previousLabel, Record.class + ": previousLabel is missing");
         Objects.requireNonNull(changes, Record.class + ": changes is missing");
         Objects.requireNonNull(resource, Record.class + ": resource is missing");
+        Objects.requireNonNull(stores, Record.class + ": stores is missing");
         Objects.requireNonNull(withoutChanges, Record.class + ": withoutChanges is missing");
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, withoutChanges);
+            resource, stores, withoutChanges);
     }
 
     /**
@@ -157,7 +190,7 @@ public class RecordBuilder implements Builder<Record> {
      */
     public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, withoutChanges);
+            resource, stores, withoutChanges);
     }
 
     public static RecordBuilder of() {
@@ -175,6 +208,7 @@ public class RecordBuilder implements Builder<Record> {
         builder.previousLabel = template.getPreviousLabel();
         builder.changes = template.getChanges();
         builder.resource = template.getResource();
+        builder.stores = template.getStores();
         builder.withoutChanges = template.getWithoutChanges();
         return builder;
     }

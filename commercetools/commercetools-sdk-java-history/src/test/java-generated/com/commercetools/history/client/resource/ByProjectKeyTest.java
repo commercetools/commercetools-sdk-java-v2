@@ -66,8 +66,8 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
-                        .withResourceType(
-                            com.commercetools.history.models.ChangeHistoryResourceType.findEnum("resourceType"))
+                        .withResourceType(com.commercetools.history.models.change_history.ChangeHistoryResourceType
+                                .findEnum("resourceType"))
                         .createHttpRequest(), "get", "/test_projectKey?resourceType=resourceType", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
@@ -100,16 +100,21 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes").createHttpRequest(),
                         "get", "/test_projectKey?changes=changes", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores").createHttpRequest(),
+                        "get", "/test_projectKey?stores=stores", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withCustomerId("customerId")
                         .createHttpRequest(), "get", "/test_projectKey?customerId=customerId", },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
-                        .get()
-                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
-                                .findEnum("excludePlatformInitiatedChanges"))
-                        .createHttpRequest(), "get",
-                        "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .get()
+                                .withExcludePlatformInitiatedChanges(
+                                    com.commercetools.history.models.change_history.PlatformInitiatedChange
+                                            .findEnum("excludePlatformInitiatedChanges"))
+                                .createHttpRequest(),
+                        "get", "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true).createHttpRequest(),
                         "get", "/test_projectKey?expand=true", },
@@ -120,11 +125,10 @@ public class ByProjectKeyTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey")
-                                .get()
-                                .withResourceType(com.commercetools.history.models.ChangeHistoryResourceType
-                                        .findEnum("resourceType")), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withResourceType(com.commercetools.history.models.change_history.ChangeHistoryResourceType
+                                .findEnum("resourceType")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withDateFrom("date.from"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withDateTo("date.to"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7), },
@@ -135,11 +139,13 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
-                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
-                                .findEnum("excludePlatformInitiatedChanges")), },
+                        .withExcludePlatformInitiatedChanges(
+                            com.commercetools.history.models.change_history.PlatformInitiatedChange
+                                    .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get(), } };
     }

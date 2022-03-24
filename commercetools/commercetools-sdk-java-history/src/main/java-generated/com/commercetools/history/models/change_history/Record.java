@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.time.*;
 import java.util.*;
@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.KeyReference;
 import com.commercetools.history.models.common.Reference;
 import com.commercetools.history.models.label.Label;
 import com.fasterxml.jackson.annotation.*;
@@ -86,12 +87,20 @@ public interface Record {
     public List<Change> getChanges();
 
     /**
-    *  <p><a href="/types#reference">Reference</a> to the changed resource.</p>
+    *  <p>Reference to the changed resource.</p>
     */
     @NotNull
     @Valid
     @JsonProperty("resource")
     public Reference getResource();
+
+    /**
+    *  <p>References to the <a href="ctp:api:type:Store">Stores</a> attached to the <a href="ctp:history:type:Change">Change</a>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<KeyReference> getStores();
 
     /**
     *  <p><code>true</code> if no change was detected.
@@ -122,6 +131,11 @@ public interface Record {
 
     public void setResource(final Reference resource);
 
+    @JsonIgnore
+    public void setStores(final KeyReference... stores);
+
+    public void setStores(final List<KeyReference> stores);
+
     public void setWithoutChanges(final Boolean withoutChanges);
 
     public static Record of() {
@@ -139,6 +153,7 @@ public interface Record {
         instance.setPreviousLabel(template.getPreviousLabel());
         instance.setChanges(template.getChanges());
         instance.setResource(template.getResource());
+        instance.setStores(template.getStores());
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }

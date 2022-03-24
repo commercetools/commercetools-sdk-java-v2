@@ -23,15 +23,15 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
 
     private String catalogData;
 
-    private java.lang.Object previousValue;
+    private com.commercetools.history.models.change_value.AttributeValue previousValue;
 
-    private java.lang.Object nextValue;
+    private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
     @JsonCreator
     SetAttributeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
-            @JsonProperty("previousValue") final java.lang.Object previousValue,
-            @JsonProperty("nextValue") final java.lang.Object nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.AttributeValue previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.AttributeValue nextValue) {
         this.change = change;
         this.catalogData = catalogData;
         this.previousValue = previousValue;
@@ -58,11 +58,11 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
         return this.catalogData;
     }
 
-    public java.lang.Object getPreviousValue() {
+    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public java.lang.Object getNextValue() {
+    public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
         return this.nextValue;
     }
 
@@ -74,11 +74,11 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
         this.catalogData = catalogData;
     }
 
-    public void setPreviousValue(final java.lang.Object previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.change_value.AttributeValue previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
+    public void setNextValue(final com.commercetools.history.models.change_value.AttributeValue nextValue) {
         this.nextValue = nextValue;
     }
 

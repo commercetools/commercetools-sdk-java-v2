@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.time.*;
 import java.util.*;
@@ -25,13 +25,13 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
 
     private String errorDescription;
 
-    private java.util.List<com.commercetools.history.models.ErrorObject> errors;
+    private java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors;
 
     @JsonCreator
     ErrorResponseImpl(@JsonProperty("statusCode") final Integer statusCode,
             @JsonProperty("message") final String message, @JsonProperty("error") final String error,
             @JsonProperty("error_description") final String errorDescription,
-            @JsonProperty("errors") final java.util.List<com.commercetools.history.models.ErrorObject> errors) {
+            @JsonProperty("errors") final java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors) {
         this.statusCode = statusCode;
         this.message = message;
         this.error = error;
@@ -58,7 +58,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
         return this.errorDescription;
     }
 
-    public java.util.List<com.commercetools.history.models.ErrorObject> getErrors() {
+    public java.util.List<com.commercetools.history.models.change_history.ErrorObject> getErrors() {
         return this.errors;
     }
 
@@ -78,11 +78,11 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
         this.errorDescription = errorDescription;
     }
 
-    public void setErrors(final com.commercetools.history.models.ErrorObject... errors) {
+    public void setErrors(final com.commercetools.history.models.change_history.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
     }
 
-    public void setErrors(final java.util.List<com.commercetools.history.models.ErrorObject> errors) {
+    public void setErrors(final java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors) {
         this.errors = errors;
     }
 

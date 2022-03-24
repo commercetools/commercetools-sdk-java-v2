@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.util.*;
 import java.util.function.Function;
@@ -18,7 +18,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     private Integer offset;
 
-    private java.util.List<com.commercetools.history.models.Record> results;
+    private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
         this.limit = limit;
@@ -40,29 +40,30 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
-    public RecordPagedQueryResponseBuilder results(final com.commercetools.history.models.Record... results) {
+    public RecordPagedQueryResponseBuilder results(
+            final com.commercetools.history.models.change_history.Record... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
     public RecordPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
         this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
+        this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
 
     public RecordPagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.history.models.RecordBuilder, com.commercetools.history.models.RecordBuilder> builder) {
+            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
-        this.results.add(builder.apply(com.commercetools.history.models.RecordBuilder.of()).build());
+        this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
 
     public RecordPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.history.models.Record> results) {
+            final java.util.List<com.commercetools.history.models.change_history.Record> results) {
         this.results = results;
         return this;
     }
@@ -83,7 +84,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this.offset;
     }
 
-    public java.util.List<com.commercetools.history.models.Record> getResults() {
+    public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
         return this.results;
     }
 

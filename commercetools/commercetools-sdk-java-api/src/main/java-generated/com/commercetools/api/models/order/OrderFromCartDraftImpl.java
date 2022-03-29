@@ -34,6 +34,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     @JsonCreator
     OrderFromCartDraftImpl(@JsonProperty("id") final String id,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
@@ -41,7 +43,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
+            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.id = id;
         this.cart = cart;
         this.version = version;
@@ -50,6 +53,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         this.shipmentState = shipmentState;
         this.orderState = orderState;
         this.state = state;
+        this.custom = custom;
     }
 
     public OrderFromCartDraftImpl() {
@@ -104,6 +108,17 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         return this.state;
     }
 
+    /**
+    *  <p><a href="/../api/projects/custom-fields">Custom Fields</a> to be added to the Order.</p>
+    *  <ul>
+    *  <li>If provided, only the Custom Fields given here are added to the Order and the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are ignored.</li>
+    *  <li>If not provided, the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are added to the Order automatically.</li>
+    *  </ul>
+    */
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     @Deprecated
     public void setId(final String id) {
         this.id = id;
@@ -137,6 +152,10 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         this.state = state;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -155,6 +174,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .append(shipmentState, that.shipmentState)
                 .append(orderState, that.orderState)
                 .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -168,6 +188,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .append(shipmentState)
                 .append(orderState)
                 .append(state)
+                .append(custom)
                 .toHashCode();
     }
 

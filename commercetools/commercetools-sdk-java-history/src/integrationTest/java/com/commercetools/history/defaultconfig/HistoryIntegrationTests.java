@@ -1,8 +1,7 @@
 
 package com.commercetools.history.defaultconfig;
 
-import com.commercetools.history.models.RecordPagedQueryResponse;
-
+import com.commercetools.history.models.change_history.RecordPagedQueryResponse;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.junit.jupiter.api.Assertions;

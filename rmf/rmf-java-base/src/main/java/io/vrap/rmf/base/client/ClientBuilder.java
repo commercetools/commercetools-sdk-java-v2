@@ -495,6 +495,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent, deprecationLogEvent));
     }
 
+    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent,
+            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));
+    }
+
     public ClientBuilder withApiBaseUrl(String apiBaseUrl) {
         return withApiBaseUrl(URI.create(apiBaseUrl));
     }

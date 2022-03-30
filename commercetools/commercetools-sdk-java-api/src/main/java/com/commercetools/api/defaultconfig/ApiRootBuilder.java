@@ -3,6 +3,7 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -321,6 +322,13 @@ public class ApiRootBuilder {
             final Level responseLogEvent, final Level deprecationLogEvent) {
         return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
             deprecationLogEvent));
+    }
+
+    public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
+            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));
     }
 
     public ApiRootBuilder withApiBaseUrl(String apiBaseUrl) {

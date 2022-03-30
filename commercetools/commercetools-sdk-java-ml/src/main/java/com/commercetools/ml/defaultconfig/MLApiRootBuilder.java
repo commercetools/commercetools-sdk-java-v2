@@ -3,6 +3,7 @@ package com.commercetools.ml.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -281,6 +282,15 @@ public class MLApiRootBuilder {
     public MLApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
             final Level responseLogEvent, final Level deprecationLogEvent) {
         builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent);
+
+        return this;
+    }
+
+    public MLApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+        builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent,
+            defaultExceptionLogEvent, exceptionLogEvents);
 
         return this;
     }

@@ -1,6 +1,7 @@
 
 package io.vrap.rmf.base.client.http;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -23,16 +24,26 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private final InternalLoggerFactory factory;
     private final Level deprecationLogEvent;
     private final Level responseLogEvent;
+    private final Level defaultExceptionLogEvent;
+    private final Map<Class<Throwable>, Level> exceptionLogEvents;
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
         this(factory, Level.INFO, Level.INFO);
     }
 
-    public InternalLoggerMiddlewareImpl(InternalLoggerFactory factory, Level responseLogEvent,
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             Level deprecationLogEvent) {
+        this(factory, responseLogEvent, deprecationLogEvent, Level.ERROR, Collections.emptyMap());
+    }
+
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
+            final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<Throwable>, Level> exceptionLogEvents) {
         this.factory = factory;
         this.responseLogEvent = responseLogEvent;
         this.deprecationLogEvent = deprecationLogEvent;
+        this.defaultExceptionLogEvent = defaultExceptionLogEvent;
+        this.exceptionLogEvents = exceptionLogEvents;
     }
 
     @Override
@@ -78,8 +89,10 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 if (throwable.getCause() instanceof ApiHttpException) {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
                             .getResponse();
-                    responseLogger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
-                        errorResponse.getStatusCode()));
+                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                            .orElse(defaultExceptionLogEvent);
+                    responseLogger.log(level, () -> String.format("%s %s %s", request.getMethod().name(),
+                        request.getUrl(), errorResponse.getStatusCode()));
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
@@ -93,7 +106,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                                     .orElse("<no body>"));
                 }
                 else {
-                    responseLogger.error(throwable::getCause, throwable);
+                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                            .orElse(defaultExceptionLogEvent);
+                    responseLogger.log(level, throwable::getCause, throwable);
                 }
             }
             else {

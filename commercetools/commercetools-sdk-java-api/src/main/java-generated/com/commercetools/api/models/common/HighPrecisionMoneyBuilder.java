@@ -9,21 +9,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
-    private String currencyCode;
-
     private Long centAmount;
+
+    private String currencyCode;
 
     private Integer fractionDigits;
 
     private Long preciseAmount;
 
-    public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
-        this.currencyCode = currencyCode;
+    public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
+        this.centAmount = centAmount;
         return this;
     }
 
-    public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
-        this.centAmount = centAmount;
+    public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
+        this.currencyCode = currencyCode;
         return this;
     }
 
@@ -37,12 +37,12 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this;
     }
 
-    public String getCurrencyCode() {
-        return this.currencyCode;
-    }
-
     public Long getCentAmount() {
         return this.centAmount;
+    }
+
+    public String getCurrencyCode() {
+        return this.currencyCode;
     }
 
     public Integer getFractionDigits() {
@@ -54,18 +54,18 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     public HighPrecisionMoney build() {
-        Objects.requireNonNull(currencyCode, HighPrecisionMoney.class + ": currencyCode is missing");
         Objects.requireNonNull(centAmount, HighPrecisionMoney.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, HighPrecisionMoney.class + ": currencyCode is missing");
         Objects.requireNonNull(fractionDigits, HighPrecisionMoney.class + ": fractionDigits is missing");
         Objects.requireNonNull(preciseAmount, HighPrecisionMoney.class + ": preciseAmount is missing");
-        return new HighPrecisionMoneyImpl(currencyCode, centAmount, fractionDigits, preciseAmount);
+        return new HighPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 
     /**
      * builds HighPrecisionMoney without checking for non null required values
      */
     public HighPrecisionMoney buildUnchecked() {
-        return new HighPrecisionMoneyImpl(currencyCode, centAmount, fractionDigits, preciseAmount);
+        return new HighPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 
     public static HighPrecisionMoneyBuilder of() {
@@ -74,8 +74,8 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     public static HighPrecisionMoneyBuilder of(final HighPrecisionMoney template) {
         HighPrecisionMoneyBuilder builder = new HighPrecisionMoneyBuilder();
-        builder.currencyCode = template.getCurrencyCode();
         builder.centAmount = template.getCentAmount();
+        builder.currencyCode = template.getCurrencyCode();
         builder.fractionDigits = template.getFractionDigits();
         builder.preciseAmount = template.getPreciseAmount();
         return builder;

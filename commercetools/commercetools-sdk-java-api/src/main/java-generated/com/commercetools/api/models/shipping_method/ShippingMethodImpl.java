@@ -121,7 +121,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the shipping method.</p>
+    *  <p>User-specific unique identifier for the shipping method</p>
     */
     public String getKey() {
         return this.key;

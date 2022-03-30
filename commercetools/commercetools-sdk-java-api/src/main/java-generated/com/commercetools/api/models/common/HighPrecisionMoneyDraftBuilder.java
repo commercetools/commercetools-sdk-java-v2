@@ -11,6 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMoneyDraft> {
 
+    @Nullable
     private Long centAmount;
 
     private String currencyCode;
@@ -20,7 +21,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     private Long preciseAmount;
 
-    public HighPrecisionMoneyDraftBuilder centAmount(final Long centAmount) {
+    public HighPrecisionMoneyDraftBuilder centAmount(@Nullable final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
@@ -40,6 +41,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return this;
     }
 
+    @Nullable
     public Long getCentAmount() {
         return this.centAmount;
     }
@@ -58,7 +60,6 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
     }
 
     public HighPrecisionMoneyDraft build() {
-        Objects.requireNonNull(centAmount, HighPrecisionMoneyDraft.class + ": centAmount is missing");
         Objects.requireNonNull(currencyCode, HighPrecisionMoneyDraft.class + ": currencyCode is missing");
         Objects.requireNonNull(preciseAmount, HighPrecisionMoneyDraft.class + ": preciseAmount is missing");
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);

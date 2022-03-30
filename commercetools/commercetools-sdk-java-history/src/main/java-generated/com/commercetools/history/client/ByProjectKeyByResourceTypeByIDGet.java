@@ -10,7 +10,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.commercetools.history.models.PlatformInitiatedChange;
+import com.commercetools.history.models.change_history.PlatformInitiatedChange;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyByResourceTypeByIDGet extends
-        ApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.RecordPagedQueryResponse> {
+        ApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.change_history.RecordPagedQueryResponse> {
 
     private String projectKey;
     private String resourceType;
@@ -52,15 +52,16 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse> executeBlocking(
+    public ApiHttpResponse<com.commercetools.history.models.change_history.RecordPagedQueryResponse> executeBlocking(
             final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout, com.commercetools.history.models.RecordPagedQueryResponse.class);
+        return executeBlocking(client, timeout,
+            com.commercetools.history.models.change_history.RecordPagedQueryResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.change_history.RecordPagedQueryResponse>> execute(
             final ApiHttpClient client) {
-        return execute(client, com.commercetools.history.models.RecordPagedQueryResponse.class);
+        return execute(client, com.commercetools.history.models.change_history.RecordPagedQueryResponse.class);
     }
 
     public String getProjectKey() {
@@ -109,6 +110,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     public List<String> getChanges() {
         return this.getQueryParam("changes");
+    }
+
+    public List<String> getStores() {
+        return this.getQueryParam("stores");
     }
 
     public List<String> getCustomerId() {
@@ -666,6 +671,65 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public ByProjectKeyByResourceTypeByIDGet addChanges(final List<String> changes) {
         return copy().addQueryParams(
             changes.stream().map(s -> new ParamEntry<>("changes", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set stores with the specified value
+     */
+    public ByProjectKeyByResourceTypeByIDGet withStores(final String stores) {
+        return copy().withQueryParam("stores", stores);
+    }
+
+    /**
+     * add additional stores query parameter
+     */
+    public ByProjectKeyByResourceTypeByIDGet addStores(final String stores) {
+        return copy().addQueryParam("stores", stores);
+    }
+
+    /**
+     * set stores with the specified value
+     */
+    public ByProjectKeyByResourceTypeByIDGet withStores(final Supplier<String> supplier) {
+        return copy().withQueryParam("stores", supplier.get());
+    }
+
+    /**
+     * add additional stores query parameter
+     */
+    public ByProjectKeyByResourceTypeByIDGet addStores(final Supplier<String> supplier) {
+        return copy().addQueryParam("stores", supplier.get());
+    }
+
+    /**
+     * set stores with the specified value
+     */
+    public ByProjectKeyByResourceTypeByIDGet withStores(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("stores", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional stores query parameter
+     */
+    public ByProjectKeyByResourceTypeByIDGet addStores(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("stores", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set stores with the specified values
+     */
+    public ByProjectKeyByResourceTypeByIDGet withStores(final List<String> stores) {
+        return copy().withoutQueryParam("stores")
+                .addQueryParams(
+                    stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional stores query parameters
+     */
+    public ByProjectKeyByResourceTypeByIDGet addStores(final List<String> stores) {
+        return copy().addQueryParams(
+            stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
     }
 
     /**

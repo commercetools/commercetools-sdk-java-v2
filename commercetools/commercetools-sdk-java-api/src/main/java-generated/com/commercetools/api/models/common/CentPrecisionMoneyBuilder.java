@@ -9,19 +9,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
-    private String currencyCode;
-
     private Long centAmount;
+
+    private String currencyCode;
 
     private Integer fractionDigits;
 
-    public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {
-        this.currencyCode = currencyCode;
+    public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {
+        this.centAmount = centAmount;
         return this;
     }
 
-    public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {
-        this.centAmount = centAmount;
+    public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {
+        this.currencyCode = currencyCode;
         return this;
     }
 
@@ -30,12 +30,12 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
         return this;
     }
 
-    public String getCurrencyCode() {
-        return this.currencyCode;
-    }
-
     public Long getCentAmount() {
         return this.centAmount;
+    }
+
+    public String getCurrencyCode() {
+        return this.currencyCode;
     }
 
     public Integer getFractionDigits() {
@@ -43,17 +43,17 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     public CentPrecisionMoney build() {
-        Objects.requireNonNull(currencyCode, CentPrecisionMoney.class + ": currencyCode is missing");
         Objects.requireNonNull(centAmount, CentPrecisionMoney.class + ": centAmount is missing");
+        Objects.requireNonNull(currencyCode, CentPrecisionMoney.class + ": currencyCode is missing");
         Objects.requireNonNull(fractionDigits, CentPrecisionMoney.class + ": fractionDigits is missing");
-        return new CentPrecisionMoneyImpl(currencyCode, centAmount, fractionDigits);
+        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);
     }
 
     /**
      * builds CentPrecisionMoney without checking for non null required values
      */
     public CentPrecisionMoney buildUnchecked() {
-        return new CentPrecisionMoneyImpl(currencyCode, centAmount, fractionDigits);
+        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);
     }
 
     public static CentPrecisionMoneyBuilder of() {
@@ -62,8 +62,8 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
     public static CentPrecisionMoneyBuilder of(final CentPrecisionMoney template) {
         CentPrecisionMoneyBuilder builder = new CentPrecisionMoneyBuilder();
-        builder.currencyCode = template.getCurrencyCode();
         builder.centAmount = template.getCentAmount();
+        builder.currencyCode = template.getCurrencyCode();
         builder.fractionDigits = template.getFractionDigits();
         return builder;
     }

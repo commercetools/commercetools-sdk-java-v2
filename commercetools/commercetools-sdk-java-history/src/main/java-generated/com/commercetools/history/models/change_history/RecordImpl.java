@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.time.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class RecordImpl implements Record, ModelBase {
 
     private String type;
 
-    private com.commercetools.history.models.ModifiedBy modifiedBy;
+    private com.commercetools.history.models.change_history.ModifiedBy modifiedBy;
 
     private String modifiedAt;
 
@@ -39,17 +39,20 @@ public class RecordImpl implements Record, ModelBase {
 
     private com.commercetools.history.models.common.Reference resource;
 
+    private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
+
     private Boolean withoutChanges;
 
     @JsonCreator
     RecordImpl(@JsonProperty("version") final Integer version,
             @JsonProperty("previousVersion") final Integer previousVersion, @JsonProperty("type") final String type,
-            @JsonProperty("modifiedBy") final com.commercetools.history.models.ModifiedBy modifiedBy,
+            @JsonProperty("modifiedBy") final com.commercetools.history.models.change_history.ModifiedBy modifiedBy,
             @JsonProperty("modifiedAt") final String modifiedAt,
             @JsonProperty("label") final com.commercetools.history.models.label.Label label,
             @JsonProperty("previousLabel") final com.commercetools.history.models.label.Label previousLabel,
             @JsonProperty("changes") final java.util.List<com.commercetools.history.models.change.Change> changes,
             @JsonProperty("resource") final com.commercetools.history.models.common.Reference resource,
+            @JsonProperty("stores") final java.util.List<com.commercetools.history.models.common.KeyReference> stores,
             @JsonProperty("withoutChanges") final Boolean withoutChanges) {
         this.version = version;
         this.previousVersion = previousVersion;
@@ -60,6 +63,7 @@ public class RecordImpl implements Record, ModelBase {
         this.previousLabel = previousLabel;
         this.changes = changes;
         this.resource = resource;
+        this.stores = stores;
         this.withoutChanges = withoutChanges;
     }
 
@@ -90,7 +94,7 @@ public class RecordImpl implements Record, ModelBase {
     /**
     *  <p>Information about the user or the API client who performed the change.</p>
     */
-    public com.commercetools.history.models.ModifiedBy getModifiedBy() {
+    public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
         return this.modifiedBy;
     }
 
@@ -124,10 +128,17 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-    *  <p><a href="/types#reference">Reference</a> to the changed resource.</p>
+    *  <p>Reference to the changed resource.</p>
     */
     public com.commercetools.history.models.common.Reference getResource() {
         return this.resource;
+    }
+
+    /**
+    *  <p>References to the <a href="ctp:api:type:Store">Stores</a> attached to the <a href="ctp:history:type:Change">Change</a>.</p>
+    */
+    public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
+        return this.stores;
     }
 
     /**
@@ -150,7 +161,7 @@ public class RecordImpl implements Record, ModelBase {
         this.type = type;
     }
 
-    public void setModifiedBy(final com.commercetools.history.models.ModifiedBy modifiedBy) {
+    public void setModifiedBy(final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
@@ -178,6 +189,14 @@ public class RecordImpl implements Record, ModelBase {
         this.resource = resource;
     }
 
+    public void setStores(final com.commercetools.history.models.common.KeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
+        this.stores = stores;
+    }
+
     public void setWithoutChanges(final Boolean withoutChanges) {
         this.withoutChanges = withoutChanges;
     }
@@ -201,6 +220,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(previousLabel, that.previousLabel)
                 .append(changes, that.changes)
                 .append(resource, that.resource)
+                .append(stores, that.stores)
                 .append(withoutChanges, that.withoutChanges)
                 .isEquals();
     }
@@ -216,6 +236,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(previousLabel)
                 .append(changes)
                 .append(resource)
+                .append(stores)
                 .append(withoutChanges)
                 .toHashCode();
     }

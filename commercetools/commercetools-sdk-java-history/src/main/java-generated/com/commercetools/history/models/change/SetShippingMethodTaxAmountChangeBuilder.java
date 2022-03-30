@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,9 +14,9 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     private com.commercetools.history.models.common.TaxMode taxMode;
 
-    private java.lang.Object nextValue;
+    private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue nextValue;
 
-    private java.lang.Object previousValue;
+    private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
     public SetShippingMethodTaxAmountChangeBuilder change(final String change) {
         this.change = change;
@@ -28,12 +29,30 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         return this;
     }
 
-    public SetShippingMethodTaxAmountChangeBuilder nextValue(final java.lang.Object nextValue) {
+    public SetShippingMethodTaxAmountChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetShippingMethodTaxAmountChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
-    public SetShippingMethodTaxAmountChangeBuilder previousValue(final java.lang.Object previousValue) {
+    public SetShippingMethodTaxAmountChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetShippingMethodTaxAmountChangeBuilder previousValue(
+            final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -46,11 +65,11 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         return this.taxMode;
     }
 
-    public java.lang.Object getNextValue() {
+    public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getNextValue() {
         return this.nextValue;
     }
 
-    public java.lang.Object getPreviousValue() {
+    public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getPreviousValue() {
         return this.previousValue;
     }
 

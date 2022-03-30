@@ -48,6 +48,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     private com.commercetools.api.models.order.OrderState orderState;
 
     @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
+    @Nullable
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
     @Nullable
@@ -55,6 +58,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     @Nullable
     private com.commercetools.api.models.order.ShippingInfoImportDraft shippingInfo;
+
+    @Nullable
+    private com.commercetools.api.models.order.PaymentInfo paymentInfo;
 
     @Nullable
     private java.time.ZonedDateTime completedAt;
@@ -222,6 +228,17 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
+    public OrderImportDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    public OrderImportDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public OrderImportDraftBuilder shipmentState(
             @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
@@ -244,6 +261,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.order.ShippingInfoImportDraft shippingInfo) {
         this.shippingInfo = shippingInfo;
+        return this;
+    }
+
+    public OrderImportDraftBuilder paymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    public OrderImportDraftBuilder paymentInfo(
+            @Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
+        this.paymentInfo = paymentInfo;
         return this;
     }
 
@@ -382,6 +411,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
+    @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
@@ -394,6 +428,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     @Nullable
     public com.commercetools.api.models.order.ShippingInfoImportDraft getShippingInfo() {
         return this.shippingInfo;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
+        return this.paymentInfo;
     }
 
     @Nullable
@@ -434,9 +473,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraft build() {
         Objects.requireNonNull(totalPrice, OrderImportDraft.class + ": totalPrice is missing");
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
-            paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, itemShippingAddresses,
-            store, origin);
+            taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, state, shipmentState,
+            paymentState, shippingInfo, paymentInfo, completedAt, custom, inventoryMode, taxRoundingMode,
+            itemShippingAddresses, store, origin);
     }
 
     /**
@@ -444,9 +483,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
      */
     public OrderImportDraft buildUnchecked() {
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
-            paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, itemShippingAddresses,
-            store, origin);
+            taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, state, shipmentState,
+            paymentState, shippingInfo, paymentInfo, completedAt, custom, inventoryMode, taxRoundingMode,
+            itemShippingAddresses, store, origin);
     }
 
     public static OrderImportDraftBuilder of() {
@@ -467,9 +506,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         builder.customerGroup = template.getCustomerGroup();
         builder.country = template.getCountry();
         builder.orderState = template.getOrderState();
+        builder.state = template.getState();
         builder.shipmentState = template.getShipmentState();
         builder.paymentState = template.getPaymentState();
         builder.shippingInfo = template.getShippingInfo();
+        builder.paymentInfo = template.getPaymentInfo();
         builder.completedAt = template.getCompletedAt();
         builder.custom = template.getCustom();
         builder.inventoryMode = template.getInventoryMode();

@@ -1,5 +1,5 @@
 
-package com.commercetools.history.models;
+package com.commercetools.history.models.change_history;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -10,18 +10,26 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type consists of one enum value:</p>
+*  <p>Values for the Source enumeration.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public interface DateStringFilter {
+public interface Source {
 
-    DateStringFilter NOW = DateStringFilterEnum.NOW;
+    Source MERCHANT_CENTER = SourceEnum.MERCHANT_CENTER;
 
-    enum DateStringFilterEnum implements DateStringFilter {
-        NOW("now");
+    Source IMP_EX = SourceEnum.IMP_EX;
+
+    Source API_CLIENT = SourceEnum.API_CLIENT;
+
+    enum SourceEnum implements Source {
+        MERCHANT_CENTER("MerchantCenter"),
+
+        IMP_EX("ImpEx"),
+
+        API_CLIENT("ApiClient");
         private final String jsonName;
 
-        private DateStringFilterEnum(final String jsonName) {
+        private SourceEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
 
@@ -42,8 +50,8 @@ public interface DateStringFilter {
     String toString();
 
     @JsonCreator
-    public static DateStringFilter findEnum(String value) {
-        return findEnumViaJsonName(value).orElse(new DateStringFilter() {
+    public static Source findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new Source() {
             @Override
             public String getJsonName() {
                 return value;
@@ -60,11 +68,11 @@ public interface DateStringFilter {
         });
     }
 
-    public static Optional<DateStringFilter> findEnumViaJsonName(String jsonName) {
+    public static Optional<Source> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
-    public static DateStringFilter[] values() {
-        return DateStringFilterEnum.values();
+    public static Source[] values() {
+        return SourceEnum.values();
     }
 }

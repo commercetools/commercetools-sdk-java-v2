@@ -62,7 +62,7 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the shipping method.</p>
+    *  <p>User-specific unique identifier for the shipping method</p>
     */
 
     @JsonProperty("key")

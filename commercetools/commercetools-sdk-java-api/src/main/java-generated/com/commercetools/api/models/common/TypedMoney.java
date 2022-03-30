@@ -19,8 +19,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
+@JsonDeserialize(as = TypedMoneyImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public interface TypedMoney {
+public interface TypedMoney extends Money {
 
     /**
     *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
@@ -28,24 +29,6 @@ public interface TypedMoney {
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
-
-    /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
-    @NotNull
-    @JsonProperty("currencyCode")
-    public String getCurrencyCode();
-
-    /**
-    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
-    *  <ul>
-    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
-    *  </ul>
-    */
-    @NotNull
-    @JsonProperty("centAmount")
-    public Long getCentAmount();
 
     /**
     *  <p>number of digits after the decimal separator</p>
@@ -57,10 +40,6 @@ public interface TypedMoney {
     @NotNull
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
-
-    public void setCurrencyCode(final String currencyCode);
-
-    public void setCentAmount(final Long centAmount);
 
     public void setFractionDigits(final Integer fractionDigits);
 

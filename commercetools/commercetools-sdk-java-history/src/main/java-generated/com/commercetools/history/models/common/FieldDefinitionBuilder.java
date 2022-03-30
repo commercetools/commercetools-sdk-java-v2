@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
-    private java.lang.Object type;
+    private com.commercetools.history.models.common.FieldType type;
 
     private String name;
 
@@ -18,7 +18,13 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     private com.commercetools.history.models.common.TextInputHint inputHint;
 
-    public FieldDefinitionBuilder type(final java.lang.Object type) {
+    public FieldDefinitionBuilder type(
+            Function<com.commercetools.history.models.common.FieldTypeBuilder, com.commercetools.history.models.common.FieldTypeBuilder> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.FieldTypeBuilder.of()).build();
+        return this;
+    }
+
+    public FieldDefinitionBuilder type(final com.commercetools.history.models.common.FieldType type) {
         this.type = type;
         return this;
     }
@@ -44,7 +50,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this;
     }
 
-    public java.lang.Object getType() {
+    public com.commercetools.history.models.common.FieldType getType() {
         return this.type;
     }
 

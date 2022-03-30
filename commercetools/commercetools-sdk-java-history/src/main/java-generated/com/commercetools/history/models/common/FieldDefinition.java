@@ -17,13 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = FieldDefinitionImpl.class)
 public interface FieldDefinition {
 
-    /**
-    *  <p>Describes the type of the field.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("type")
-    public Object getType();
+    public FieldType getType();
 
     /**
     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
@@ -41,7 +38,7 @@ public interface FieldDefinition {
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
 
-    public void setType(final Object type);
+    public void setType(final FieldType type);
 
     public void setName(final String name);
 

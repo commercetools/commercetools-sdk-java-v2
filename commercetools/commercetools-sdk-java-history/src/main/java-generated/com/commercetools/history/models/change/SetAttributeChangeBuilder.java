@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,9 +14,9 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     private String catalogData;
 
-    private java.lang.Object previousValue;
+    private com.commercetools.history.models.change_value.AttributeValue previousValue;
 
-    private java.lang.Object nextValue;
+    private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
     public SetAttributeChangeBuilder change(final String change) {
         this.change = change;
@@ -27,12 +28,28 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         return this;
     }
 
-    public SetAttributeChangeBuilder previousValue(final java.lang.Object previousValue) {
+    public SetAttributeChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetAttributeChangeBuilder previousValue(
+            final com.commercetools.history.models.change_value.AttributeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
-    public SetAttributeChangeBuilder nextValue(final java.lang.Object nextValue) {
+    public SetAttributeChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    public SetAttributeChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.AttributeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -45,11 +62,11 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         return this.catalogData;
     }
 
-    public java.lang.Object getPreviousValue() {
+    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public java.lang.Object getNextValue() {
+    public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
         return this.nextValue;
     }
 

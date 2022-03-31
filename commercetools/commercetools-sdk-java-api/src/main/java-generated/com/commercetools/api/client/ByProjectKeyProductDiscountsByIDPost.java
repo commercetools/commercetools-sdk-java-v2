@@ -45,7 +45,7 @@ public class ByProjectKeyProductDiscountsByIDPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-discounts/%s", this.projectKey, this.ID);
         if (!params.isEmpty()) {

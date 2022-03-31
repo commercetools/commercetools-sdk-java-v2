@@ -39,7 +39,7 @@ public class ByProjectKeyPaymentsKeyByKeyGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {

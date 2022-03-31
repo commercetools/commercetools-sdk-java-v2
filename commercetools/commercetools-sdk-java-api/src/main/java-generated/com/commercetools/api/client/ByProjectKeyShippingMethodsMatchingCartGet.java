@@ -36,7 +36,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/matching-cart", this.projectKey);
         if (!params.isEmpty()) {

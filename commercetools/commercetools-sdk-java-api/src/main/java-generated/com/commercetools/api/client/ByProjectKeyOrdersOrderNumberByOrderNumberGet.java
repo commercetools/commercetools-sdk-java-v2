@@ -44,7 +44,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/order-number=%s", this.projectKey, this.orderNumber);
         if (!params.isEmpty()) {

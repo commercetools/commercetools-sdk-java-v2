@@ -41,7 +41,7 @@ public class ByProjectKeySubscriptionsGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions", this.projectKey);
         if (!params.isEmpty()) {

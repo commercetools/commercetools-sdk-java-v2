@@ -46,7 +46,7 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/carts/customer-id=%s", this.projectKey, this.customerId);
         if (!params.isEmpty()) {

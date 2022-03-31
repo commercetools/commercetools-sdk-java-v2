@@ -39,7 +39,7 @@ public class ByProjectKeyApiClientsGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/api-clients", this.projectKey);
         if (!params.isEmpty()) {

@@ -38,7 +38,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me", this.projectKey);
         if (!params.isEmpty()) {

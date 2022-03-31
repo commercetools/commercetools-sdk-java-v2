@@ -39,7 +39,7 @@ public class ByProjectKeyMeCartsGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/carts", this.projectKey);
         if (!params.isEmpty()) {

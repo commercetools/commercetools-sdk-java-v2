@@ -37,7 +37,7 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/suggest", this.projectKey);
         if (!params.isEmpty()) {

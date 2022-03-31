@@ -34,7 +34,7 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/attributes/status/%s", this.projectKey, this.taskId);
         if (!params.isEmpty()) {

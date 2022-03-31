@@ -40,7 +40,7 @@ public class ByProjectKeyImportContainersPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-containers", this.projectKey);
         if (!params.isEmpty()) {

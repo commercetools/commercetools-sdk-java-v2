@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
@@ -82,6 +83,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         }
     }
 
+    private Function<ApiHttpRequest, ApiHttpRequest> httpRequestDecorator = Function.identity();
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private List<ParamEntry<String, String>> queryParams = new ArrayList<>();
     private final ApiHttpClient apiHttpClient;
@@ -257,13 +259,23 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     protected abstract T copy();
 
-    public abstract ApiHttpRequest createHttpRequest();
+    protected abstract ApiHttpRequest buildHttpRequest();
+
+    public ApiHttpRequest createHttpRequest() {
+        return httpRequestDecorator.apply(this.buildHttpRequest());
+    }
 
     public CompletableFuture<ApiHttpResponse<TResult>> execute() {
         return execute(apiHttpClient());
     }
 
     public abstract CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client);
+
+    public T withHttpRequest(Function<ApiHttpRequest, ApiHttpRequest> op) {
+        T c = copy();
+        ((ApiMethod<T, TResult>) c).httpRequestDecorator = httpRequestDecorator.andThen(op);
+        return c;
+    }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final Class<TReturn> returnType) {
         return execute(apiHttpClient(), returnType);

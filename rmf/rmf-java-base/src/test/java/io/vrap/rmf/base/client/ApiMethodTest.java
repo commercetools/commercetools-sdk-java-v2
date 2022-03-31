@@ -65,6 +65,10 @@ public class ApiMethodTest {
         public int hashCode() {
             return reflectionHashCode();
         }
+
+        public TestApiMethod withTestParam(final String value) {
+            return withQueryParam("test", value);
+        }
     }
 
     private ApiHttpClient createClient() {
@@ -244,5 +248,33 @@ public class ApiMethodTest {
         final ApiHttpRequest httpRequestDecorated2 = method2.createHttpRequest();
         Assertions.assertEquals("foo", httpRequestDecorated2.getHeaders().getFirst("foo"));
         Assertions.assertEquals("bar", httpRequestDecorated2.getHeaders().getFirst("bar"));
+    }
+
+    @Test
+    public void testMethodDecorator() {
+        TestApiMethod method = new TestApiMethod(createClient());
+        Assertions.assertNull(method.getHeaders().getFirst("foo"));
+        Assertions.assertNull(method.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod = method.with(ApiMethodTest::addFoo);
+        Assertions.assertEquals("foo", decoratedMethod.getHeaders().getFirst("foo"));
+        Assertions.assertNull(decoratedMethod.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod2 = method.with(ApiMethodTest::addBar);
+        Assertions.assertNull(decoratedMethod2.getHeaders().getFirst("foo"));
+        Assertions.assertEquals("bar", decoratedMethod2.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod3 = method.with(m -> m.withTestParam("foo"));
+        Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("foo"));
+        Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("bar"));
+        Assertions.assertEquals("foo", decoratedMethod3.getFirstQueryParam("test"));
+    }
+
+    public static <T extends ApiMethod<T, TResult>, TResult> T addFoo(ApiMethod<T, TResult> method) {
+        return method.addHeader("foo", "foo");
+    }
+
+    public static <T extends ApiMethod<T, TResult>, TResult> T addBar(ApiMethod<T, TResult> method) {
+        return method.addHeader("bar", "bar");
     }
 }

@@ -45,7 +45,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/product-selection-assignments", this.projectKey,
             this.storeKey);

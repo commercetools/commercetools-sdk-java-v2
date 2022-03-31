@@ -39,7 +39,7 @@ public class ByProjectKeyZonesByIDGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/zones/%s", this.projectKey, this.ID);
         if (!params.isEmpty()) {

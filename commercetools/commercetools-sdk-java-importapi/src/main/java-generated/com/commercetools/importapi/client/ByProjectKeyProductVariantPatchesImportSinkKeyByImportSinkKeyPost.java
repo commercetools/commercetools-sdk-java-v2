@@ -45,7 +45,7 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost e
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-variant-patches/importSinkKey=%s", this.projectKey,
             this.importSinkKey);

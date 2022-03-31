@@ -55,7 +55,7 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
 
         HttpRequest httpRequest = request.httpRequestIntent().toHttpRequest("/" + projectKey);
         List<Map.Entry<String, String>> headers = httpRequest.getHeaders()

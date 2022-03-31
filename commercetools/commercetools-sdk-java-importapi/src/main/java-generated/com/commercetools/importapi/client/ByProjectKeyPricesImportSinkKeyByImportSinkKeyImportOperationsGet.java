@@ -45,7 +45,7 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet e
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/prices/importSinkKey=%s/import-operations", this.projectKey,
             this.importSinkKey);

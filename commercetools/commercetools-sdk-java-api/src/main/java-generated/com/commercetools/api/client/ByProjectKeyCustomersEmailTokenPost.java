@@ -39,7 +39,7 @@ public class ByProjectKeyCustomersEmailTokenPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customers/email-token", this.projectKey);
         if (!params.isEmpty()) {

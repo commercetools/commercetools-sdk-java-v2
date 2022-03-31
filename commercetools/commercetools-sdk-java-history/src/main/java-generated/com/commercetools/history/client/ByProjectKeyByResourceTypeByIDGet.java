@@ -42,7 +42,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/%s/%s", this.projectKey, this.resourceType, this.ID);
         if (!params.isEmpty()) {

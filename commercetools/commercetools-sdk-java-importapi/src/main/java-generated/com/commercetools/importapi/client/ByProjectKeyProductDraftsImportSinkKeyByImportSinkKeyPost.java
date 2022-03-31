@@ -45,7 +45,7 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-drafts/importSinkKey=%s", this.projectKey,
             this.importSinkKey);

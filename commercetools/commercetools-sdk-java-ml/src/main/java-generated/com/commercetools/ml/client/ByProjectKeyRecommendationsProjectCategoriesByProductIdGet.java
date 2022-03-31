@@ -41,7 +41,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/recommendations/project-categories/%s", this.projectKey,
             this.productId);

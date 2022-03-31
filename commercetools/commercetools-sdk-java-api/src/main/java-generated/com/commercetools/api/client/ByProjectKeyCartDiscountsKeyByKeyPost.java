@@ -45,7 +45,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/cart-discounts/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {

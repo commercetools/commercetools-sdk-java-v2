@@ -35,7 +35,7 @@ public class ByProjectKeySimilaritiesProductsPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/similarities/products", this.projectKey);
         if (!params.isEmpty()) {

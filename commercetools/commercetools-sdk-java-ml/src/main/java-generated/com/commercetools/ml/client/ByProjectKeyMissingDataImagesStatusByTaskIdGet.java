@@ -34,7 +34,7 @@ public class ByProjectKeyMissingDataImagesStatusByTaskIdGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/images/status/%s", this.projectKey, this.taskId);
         if (!params.isEmpty()) {

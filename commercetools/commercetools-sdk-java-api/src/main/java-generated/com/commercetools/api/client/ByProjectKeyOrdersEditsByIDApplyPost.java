@@ -39,7 +39,7 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s/apply", this.projectKey, this.ID);
         if (!params.isEmpty()) {

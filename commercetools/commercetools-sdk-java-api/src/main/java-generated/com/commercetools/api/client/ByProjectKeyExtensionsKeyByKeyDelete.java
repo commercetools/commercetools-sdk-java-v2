@@ -41,7 +41,7 @@ public class ByProjectKeyExtensionsKeyByKeyDelete
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/extensions/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {

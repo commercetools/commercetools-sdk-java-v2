@@ -39,7 +39,7 @@ public class ByProjectKeyCategoriesByIDGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/categories/%s", this.projectKey, this.ID);
         if (!params.isEmpty()) {

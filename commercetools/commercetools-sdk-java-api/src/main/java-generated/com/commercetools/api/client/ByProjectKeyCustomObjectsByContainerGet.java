@@ -41,7 +41,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/custom-objects/%s", this.projectKey, this.container);
         if (!params.isEmpty()) {

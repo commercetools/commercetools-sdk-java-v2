@@ -39,7 +39,7 @@ public class ByProjectKeyStoresKeyByKeyGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/stores/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {

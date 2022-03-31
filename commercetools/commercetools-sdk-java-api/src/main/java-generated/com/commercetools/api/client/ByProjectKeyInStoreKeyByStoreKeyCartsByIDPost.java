@@ -53,7 +53,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/carts/%s", this.projectKey, this.storeKey, this.ID);
         if (!params.isEmpty()) {

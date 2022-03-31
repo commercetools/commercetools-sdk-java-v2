@@ -240,8 +240,7 @@ public class ApiMethodTest {
         Assertions.assertEquals("foo", httpRequestDecorated.getHeaders().getFirst("foo"));
         Assertions.assertNull(httpRequestDecorated.getHeaders().getFirst("bar"));
 
-        final TestApiMethod method2 = method.withHttpRequest(
-                apiHttpRequest -> apiHttpRequest.addHeader("bar", "bar"));
+        final TestApiMethod method2 = method.withHttpRequest(apiHttpRequest -> apiHttpRequest.addHeader("bar", "bar"));
         final ApiHttpRequest httpRequestDecorated2 = method2.createHttpRequest();
         Assertions.assertEquals("foo", httpRequestDecorated2.getHeaders().getFirst("foo"));
         Assertions.assertEquals("bar", httpRequestDecorated2.getHeaders().getFirst("bar"));

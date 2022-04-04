@@ -1,0 +1,39 @@
+{
+    "facets": {
+        "red-things": {
+            "type": "filter",
+            "count": 0
+        },
+        "variants.attributes.size": {
+            "type": "filter",
+            "count": 0
+        },
+        "prices": {
+            "type": "range",
+            "ranges": [
+                {
+                    "from": 0,
+                    "to": 100
+                },
+                {
+                    "from": 101,
+                    "to": 200
+                }
+            ]
+        },
+        "size": {
+            "type": "terms",
+            "terms": [
+                {
+                    "term": "S"
+                },
+                {
+                    "term": "M"
+                },
+                {
+                    "term": "L"
+                }
+            ]
+        }
+    }
+}

@@ -1,17 +1,21 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.commercetools.api.models.product.*;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
@@ -130,5 +134,26 @@ public class SearchTest {
         Assertions.assertThat(1).isEqualTo(method.getFormParams().size());
         Assertions.assertThat(method.getFirstFormParam("bar")).isNull();
         Assertions.assertThat("foo").isEqualTo(method.getFirstFormParam("foo"));
+    }
+
+    @Test
+    public void testFacetResultsAccessor() {
+        ProductProjectionPagedSearchResponse response = JsonUtils.fromJsonString(stringFromResource("facets.json"),
+            ProductProjectionPagedSearchResponse.class);
+
+        FacetResult redThings = response.getFacets()
+                .withFacetResults(FacetResultsAccessor::asFacetResultMap)
+                .get("red-things");
+        Assertions.assertThat(redThings).isInstanceOf(FilteredFacetResult.class);
+        Assertions.assertThat(redThings.getType()).isEqualTo(FacetTypes.FILTER);
+
+        FacetResult size = response.getFacets().values().get("variants.attributes.size");
+        Assertions.assertThat(redThings).isInstanceOf(FilteredFacetResult.class);
+        Assertions.assertThat(size.getType()).isEqualTo(FacetTypes.FILTER);
+
+        FacetResult prices = response.getFacets().values().get("size");
+        Assertions.assertThat(prices).isInstanceOf(TermFacetResult.class);
+        Assertions.assertThat(((TermFacetResult) prices).getTerms().size()).isEqualTo(3);
+        Assertions.assertThat(((TermFacetResult) prices).getTerms().get(0).getTerm()).isEqualTo("S");
     }
 }

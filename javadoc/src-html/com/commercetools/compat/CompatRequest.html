@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    @Override</span>
-<span class="source-line-no">058</span><span id="line.58">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">058</span><span id="line.58">    protected ApiHttpRequest buildHttpRequest() {</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">        HttpRequest httpRequest = request.httpRequestIntent().toHttpRequest("/" + projectKey);</span>
 <span class="source-line-no">061</span><span id="line.61">        List&lt;Map.Entry&lt;String, String&gt;&gt; headers = httpRequest.getHeaders()</span>

@@ -116,17 +116,18 @@
 <span class="source-line-no">103</span><span id="line.103">        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl.class, name = StoreDeletedMessagePayload.STORE_DELETED),</span>
 <span class="source-line-no">104</span><span id="line.104">        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadImpl.class, name = StoreProductSelectionsChangedMessagePayload.STORE_PRODUCT_SELECTIONS_CHANGED) })</span>
 <span class="source-line-no">105</span><span id="line.105">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessagePayloadImpl.class, visible = true)</span>
-<span class="source-line-no">106</span><span id="line.106">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">107</span><span id="line.107">public interface MessagePayload {</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    @NotNull</span>
-<span class="source-line-no">110</span><span id="line.110">    @JsonProperty("type")</span>
-<span class="source-line-no">111</span><span id="line.111">    public String getType();</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    default &lt;T&gt; T withMessagePayload(Function&lt;MessagePayload, T&gt; helper) {</span>
-<span class="source-line-no">114</span><span id="line.114">        return helper.apply(this);</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116">}</span>
+<span class="source-line-no">106</span><span id="line.106">@JsonDeserialize(as = MessagePayloadImpl.class)</span>
+<span class="source-line-no">107</span><span id="line.107">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">108</span><span id="line.108">public interface MessagePayload {</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @NotNull</span>
+<span class="source-line-no">111</span><span id="line.111">    @JsonProperty("type")</span>
+<span class="source-line-no">112</span><span id="line.112">    public String getType();</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    default &lt;T&gt; T withMessagePayload(Function&lt;MessagePayload, T&gt; helper) {</span>
+<span class="source-line-no">115</span><span id="line.115">        return helper.apply(this);</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117">}</span>
 
 
 

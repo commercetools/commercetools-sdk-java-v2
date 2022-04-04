@@ -42,8 +42,8 @@ com.commercetools.compat
 com.commercetools.docs.meta
 com.commercetools.history.client
 com.commercetools.history.defaultconfig
-com.commercetools.history.models
 com.commercetools.history.models.change
+com.commercetools.history.models.change_history
 com.commercetools.history.models.change_value
 com.commercetools.history.models.common
 com.commercetools.history.models.label

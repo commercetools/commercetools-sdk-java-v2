@@ -44,7 +44,7 @@
 <span class="source-line-no">031</span><span id="line.31">    }</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
 <span class="source-line-no">033</span><span id="line.33">    @Override</span>
-<span class="source-line-no">034</span><span id="line.34">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">034</span><span id="line.34">    protected ApiHttpRequest buildHttpRequest() {</span>
 <span class="source-line-no">035</span><span id="line.35">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
 <span class="source-line-no">036</span><span id="line.36">        String httpRequestPath = String.format("/%s/me/email/confirm", this.projectKey);</span>
 <span class="source-line-no">037</span><span id="line.37">        if (!params.isEmpty()) {</span>

@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">017</span><span id="line.17">public class ByProjectKeyOrdersEditsByIDApplyPost extends</span>
-<span class="source-line-no">018</span><span id="line.18">        BodyApiMethod&lt;ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode, com.commercetools.api.models.order_edit.OrderEditApply&gt;</span>
+<span class="source-line-no">018</span><span id="line.18">        BodyApiMethod&lt;ByProjectKeyOrdersEditsByIDApplyPost, com.commercetools.api.models.order_edit.OrderEdit, com.commercetools.api.models.order_edit.OrderEditApply&gt;</span>
 <span class="source-line-no">019</span><span id="line.19">        implements com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyOrdersEditsByIDApplyPost&gt; {</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">    private String projectKey;</span>
@@ -52,7 +52,7 @@
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    @Override</span>
-<span class="source-line-no">042</span><span id="line.42">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">042</span><span id="line.42">    protected ApiHttpRequest buildHttpRequest() {</span>
 <span class="source-line-no">043</span><span id="line.43">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
 <span class="source-line-no">044</span><span id="line.44">        String httpRequestPath = String.format("/%s/orders/edits/%s/apply", this.projectKey, this.ID);</span>
 <span class="source-line-no">045</span><span id="line.45">        if (!params.isEmpty()) {</span>
@@ -65,15 +65,15 @@
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    @Override</span>
-<span class="source-line-no">055</span><span id="line.55">    public ApiHttpResponse&lt;com.fasterxml.jackson.databind.JsonNode&gt; executeBlocking(final ApiHttpClient client,</span>
-<span class="source-line-no">056</span><span id="line.56">            final Duration timeout) {</span>
-<span class="source-line-no">057</span><span id="line.57">        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);</span>
+<span class="source-line-no">055</span><span id="line.55">    public ApiHttpResponse&lt;com.commercetools.api.models.order_edit.OrderEdit&gt; executeBlocking(</span>
+<span class="source-line-no">056</span><span id="line.56">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">057</span><span id="line.57">        return executeBlocking(client, timeout, com.commercetools.api.models.order_edit.OrderEdit.class);</span>
 <span class="source-line-no">058</span><span id="line.58">    }</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">    @Override</span>
-<span class="source-line-no">061</span><span id="line.61">    public CompletableFuture&lt;ApiHttpResponse&lt;com.fasterxml.jackson.databind.JsonNode&gt;&gt; execute(</span>
+<span class="source-line-no">061</span><span id="line.61">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.order_edit.OrderEdit&gt;&gt; execute(</span>
 <span class="source-line-no">062</span><span id="line.62">            final ApiHttpClient client) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);</span>
+<span class="source-line-no">063</span><span id="line.63">        return execute(client, com.commercetools.api.models.order_edit.OrderEdit.class);</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    public String getProjectKey() {</span>

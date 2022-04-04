@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.28">ApiRootBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.29">ApiRootBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">Builder to create a <a href="../client/ApiRoot.html" title="class in com.commercetools.api.client"><code>ApiRoot</code></a> or a project scoped <a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client"><code>ProjectApiRoot</code></a></div>
 </section>
@@ -335,77 +335,84 @@ loadScripts(document, 'script');</script>
  org.slf4j.event.Level&nbsp;deprecationLogEvent)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)">withInternalLoggerMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)">withInternalLoggerFactory</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+ org.slf4j.event.Level&nbsp;responseLogEvent,
+ org.slf4j.event.Level&nbsp;deprecationLogEvent,
+ org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,&#8203;org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">withMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)">withInternalLoggerMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">withMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMiddlewares(java.util.List)">withMiddlewares</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">withOAuthMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMiddlewares(java.util.List)">withMiddlewares</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(java.util.function.Supplier)">withOAuthMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">withOAuthMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withoutAuthCircuitBreaker()">withoutAuthCircuitBreaker</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOAuthMiddleware(java.util.function.Supplier)">withOAuthMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProjectKey(java.lang.String)">withProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withoutAuthCircuitBreaker()">withoutAuthCircuitBreaker</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProjectKey(java.lang.String)">withProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures,
  <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(int,java.util.List,java.util.List)">withRetryMiddleware</a></span>&#8203;(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">withRetryMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(java.util.function.Supplier)">withRetryMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">withRetryMiddleware</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">withSerializer</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRetryMiddleware(java.util.function.Supplier)">withRetryMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(java.util.function.Supplier)">withSerializer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">withSerializer</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">withStaticTokenFlow</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withSerializer(java.util.function.Supplier)">withSerializer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">withTokenSupplier</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">withStaticTokenFlow</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(java.util.function.Supplier)">withTokenSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">withTokenSupplier</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withUserAgentSupplier(java.util.function.Supplier)">withUserAgentSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTokenSupplier(java.util.function.Supplier)">withTokenSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withUserAgentSupplier(java.util.function.Supplier)">withUserAgentSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -426,110 +433,110 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.38">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.39">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.42">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.HandlerStack)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProjectKey(java.lang.String)">
 <h3>withProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.54">withProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.55">withProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAuthCircuitBreaker()">
 <h3>withAuthCircuitBreaker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.60">withAuthCircuitBreaker</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.61">withAuthCircuitBreaker</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withoutAuthCircuitBreaker()">
 <h3>withoutAuthCircuitBreaker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.64">withoutAuthCircuitBreaker</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.65">withoutAuthCircuitBreaker</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAuthRetries(int)">
 <h3>withAuthRetries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.68">withAuthRetries</a></span>&#8203;<span class="parameters">(int&nbsp;authRetries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.69">withAuthRetries</a></span>&#8203;<span class="parameters">(int&nbsp;authRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHandlerStack(io.vrap.rmf.base.client.http.HandlerStack)">
 <h3>withHandlerStack</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.72">withHandlerStack</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.73">withHandlerStack</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpClient(io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withHttpClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.76">withHttpClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.77">withHttpClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSerializer(io.vrap.rmf.base.client.ResponseSerializer)">
 <h3>withSerializer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.80">withSerializer</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.81">withSerializer</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSerializer(java.util.function.Supplier)">
 <h3>withSerializer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.84">withSerializer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.85">withSerializer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(io.vrap.rmf.base.client.error.HttpExceptionFactory)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.88">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.89">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;factory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(java.util.function.Function)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.92">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>,&#8203;<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.93">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>,&#8203;<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpExceptionFactory(java.util.function.Supplier)">
 <h3>withHttpExceptionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.96">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.97">withHttpExceptionFactory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&gt;&nbsp;factory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.100">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.101">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,io.vrap.rmf.base.client.ServiceRegionConfig)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.104">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.105">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="../../../../io/vrap/rmf/base/client/ServiceRegionConfig.html" title="interface in io.vrap.rmf.base.client">ServiceRegionConfig</a>&nbsp;serviceRegion)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.109">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.110">defaultClient</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
 </section>
@@ -537,7 +544,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="defaultClient(java.lang.String,io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.114">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.115">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 </section>
@@ -545,26 +552,26 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="defaultClient(java.lang.String)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.119">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.120">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiEndpoint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="defaultClient(java.net.URI)">
 <h3>defaultClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.123">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiEndpoint)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.124">defaultClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiEndpoint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.128">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.129">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.132">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.133">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClient)</span></div>
 </section>
@@ -572,7 +579,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.137">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.138">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -580,14 +587,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.142">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.143">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI,java.util.function.Supplier)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.146">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.147">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClient)</span></div>
 </section>
@@ -595,7 +602,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.net.URI,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withClientCredentialsFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.151">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.152">withClientCredentialsFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;tokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -603,20 +610,20 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)">
 <h3>withStaticTokenFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.156">withStaticTokenFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.157">withStaticTokenFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">
 <h3>withAnonymousSessionFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.160">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.161">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.util.function.Supplier)">
 <h3>withAnonymousSessionFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.164">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.165">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&gt;&nbsp;httpClient)</span></div>
 </section>
@@ -624,7 +631,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousSessionFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withAnonymousSessionFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.169">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.170">withAnonymousSessionFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
 </section>
@@ -632,7 +639,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,com.commercetools.api.defaultconfig.ServiceRegion,io.vrap.rmf.base.client.oauth2.TokenStorage)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.174">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.175">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="ServiceRegion.html" title="enum in com.commercetools.api.defaultconfig">ServiceRegion</a>&nbsp;serviceRegion,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage)</span></div>
 </section>
@@ -640,7 +647,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,com.commercetools.api.defaultconfig.ServiceRegion,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.182">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.183">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="ServiceRegion.html" title="enum in com.commercetools.api.defaultconfig">ServiceRegion</a>&nbsp;serviceRegion,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage)</span></div>
@@ -649,7 +656,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.190">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.191">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage)</span></div>
@@ -658,7 +665,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,java.util.function.Supplier)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.196">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.197">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
@@ -668,7 +675,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withAnonymousRefreshFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,io.vrap.rmf.base.client.oauth2.TokenStorage,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withAnonymousRefreshFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.202">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.203">withAnonymousRefreshFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonTokenEndpoint,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;refreshTokenEndpoint,
  <a href="../../../../io/vrap/rmf/base/client/oauth2/TokenStorage.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenStorage</a>&nbsp;storage,
@@ -678,7 +685,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String)">
 <h3>withGlobalCustomerPasswordFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.208">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.209">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint)</span></div>
@@ -687,7 +694,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,java.util.function.Supplier)">
 <h3>withGlobalCustomerPasswordFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.214">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.215">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
@@ -697,7 +704,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withGlobalCustomerPasswordFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,java.lang.String,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>withGlobalCustomerPasswordFlow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.220">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.221">withGlobalCustomerPasswordFlow</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tokenEndpoint,
@@ -707,37 +714,37 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addAcceptGZipMiddleware()">
 <h3>addAcceptGZipMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.226">addAcceptGZipMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.227">addAcceptGZipMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorMiddleware()">
 <h3>withErrorMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.230">withErrorMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.231">withErrorMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware)">
 <h3>withErrorMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.234">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.235">withErrorMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a>&nbsp;errorMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addConcurrentModificationMiddleware()">
 <h3>addConcurrentModificationMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.238">addConcurrentModificationMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.239">addConcurrentModificationMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addConcurrentModificationMiddleware(int)">
 <h3>addConcurrentModificationMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.242">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.243">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addConcurrentModificationMiddleware(int,long,long)">
 <h3>addConcurrentModificationMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.246">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.247">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
 </section>
@@ -745,50 +752,50 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addConcurrentModificationMiddleware(com.commercetools.api.client.ConcurrentModificationMiddleware)">
 <h3>addConcurrentModificationMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.251">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(<a href="../client/ConcurrentModificationMiddleware.html" title="interface in com.commercetools.api.client">ConcurrentModificationMiddleware</a>&nbsp;middleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.252">addConcurrentModificationMiddleware</a></span>&#8203;<span class="parameters">(<a href="../client/ConcurrentModificationMiddleware.html" title="interface in com.commercetools.api.client">ConcurrentModificationMiddleware</a>&nbsp;middleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addNotFoundExceptionMiddleware(io.vrap.rmf.base.client.http.NotFoundExceptionMiddleware)">
 <h3>addNotFoundExceptionMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.255">addNotFoundExceptionMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a>&nbsp;notFoundExceptionMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.256">addNotFoundExceptionMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a>&nbsp;notFoundExceptionMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addNotFoundExceptionMiddleware()">
 <h3>addNotFoundExceptionMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.259">addNotFoundExceptionMiddleware</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.260">addNotFoundExceptionMiddleware</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(java.util.function.Supplier)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.263">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.264">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.267">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.268">withRetryMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(int)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.271">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.272">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(int,java.util.List)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.275">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.276">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRetryMiddleware(int,java.util.List,java.util.List)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.279">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.280">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
 </section>
@@ -796,7 +803,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.284">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.285">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
@@ -807,7 +814,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>withRetryMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.291">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.292">withRetryMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
@@ -816,127 +823,137 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withOAuthMiddleware(java.util.function.Supplier)">
 <h3>withOAuthMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.296">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.297">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)">
 <h3>withOAuthMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.300">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.301">withOAuthMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)">
 <h3>withTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.304">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.305">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTokenSupplier(java.util.function.Supplier)">
 <h3>withTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.308">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.309">withTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)">
 <h3>withInternalLoggerMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.312">withInternalLoggerMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.313">withInternalLoggerMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory)">
 <h3>withInternalLoggerFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.316">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.317">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level)">
 <h3>withInternalLoggerFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.320">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.321">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
  org.slf4j.event.Level&nbsp;responseLogEvent,
  org.slf4j.event.Level&nbsp;deprecationLogEvent)</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)">
+<h3>withInternalLoggerFactory</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.327">withInternalLoggerFactory</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+ org.slf4j.event.Level&nbsp;responseLogEvent,
+ org.slf4j.event.Level&nbsp;deprecationLogEvent,
+ org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,&#8203;org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="withApiBaseUrl(java.lang.String)">
 <h3>withApiBaseUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.326">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.334">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiBaseUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withApiBaseUrl(java.net.URI)">
 <h3>withApiBaseUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.330">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.338">withApiBaseUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;apiBaseUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withUserAgentSupplier(java.util.function.Supplier)">
 <h3>withUserAgentSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.334">withUserAgentSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.342">withUserAgentSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addCorrelationIdProvider(io.vrap.rmf.base.client.http.CorrelationIdProvider)">
 <h3>addCorrelationIdProvider</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.338">addCorrelationIdProvider</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.346">addCorrelationIdProvider</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">
 <h3>withMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.342">withMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.350">withMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)">
 <h3>addMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.346">addMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.354">addMiddleware</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMiddlewares(java.util.List)">
 <h3>withMiddlewares</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.350">withMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.358">withMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addMiddlewares(java.util.List)">
 <h3>addMiddlewares</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.354">addMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.362">addMiddlewares</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="with(java.util.function.UnaryOperator)">
 <h3>with</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.358">with</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a>&gt;&nbsp;builderUnaryOperator)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.366">with</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a>&gt;&nbsp;builderUnaryOperator)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.364">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ApiRoot.html" title="class in com.commercetools.api.client">ApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.372">build</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="buildClient()">
 <h3>buildClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.368">buildClient</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.376">buildClient</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="clientSupplier()">
 <h3>clientSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.372">clientSupplier</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.380">clientSupplier</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="buildForProject(java.lang.String)">
 <h3>buildForProject</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.379">buildForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.387">buildForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#build(java.lang.String)"><code>build(String)</code></a>  instead</div>
 </div>
@@ -945,14 +962,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="buildProjectRoot()">
 <h3>buildProjectRoot</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.384">buildProjectRoot</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.392">buildProjectRoot</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="buildProjectRoot(java.lang.String)">
 <h3>buildProjectRoot</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.392">buildProjectRoot</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.400">buildProjectRoot</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#build(java.lang.String)"><code>build(String)</code></a>  instead</div>
 </div>
@@ -961,13 +978,13 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="build(java.lang.String)">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.397">build</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.405">build</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createForProject(java.lang.String,io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>createForProject</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.401">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/defaultconfig/ApiRootBuilder.html#line.409">createForProject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;clientSupplier)</span></div>
 </section>
 </li>

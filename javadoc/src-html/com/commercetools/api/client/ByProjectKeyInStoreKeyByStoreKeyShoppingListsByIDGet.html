@@ -60,7 +60,7 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    @Override</span>
-<span class="source-line-no">050</span><span id="line.50">    public ApiHttpRequest createHttpRequest() {</span>
+<span class="source-line-no">050</span><span id="line.50">    protected ApiHttpRequest buildHttpRequest() {</span>
 <span class="source-line-no">051</span><span id="line.51">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
 <span class="source-line-no">052</span><span id="line.52">        String httpRequestPath = String.format("/%s/in-store/key=%s/shopping-lists/%s", this.projectKey, this.storeKey,</span>
 <span class="source-line-no">053</span><span id="line.53">            this.ID);</span>

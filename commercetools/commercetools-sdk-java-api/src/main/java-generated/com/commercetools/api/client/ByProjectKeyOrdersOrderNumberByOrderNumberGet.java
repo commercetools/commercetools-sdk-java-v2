@@ -88,14 +88,14 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -130,7 +130,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -139,7 +139,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

@@ -96,14 +96,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -138,7 +138,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -147,7 +147,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -155,14 +155,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set sort with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withSort(final String sort) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
     }
 
     /**
      * add additional sort query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addSort(final String sort) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
     }
 
@@ -197,7 +197,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set sort with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withSort(final List<String> sort) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withSort(final List<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -206,7 +206,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional sort query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addSort(final List<String> sort) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addSort(final List<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -214,14 +214,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set limit with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withLimit(final int limit) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addLimit(final int limit) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
@@ -256,7 +256,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set limit with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -265,7 +265,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -273,14 +273,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set offset with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withOffset(final int offset) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addOffset(final int offset) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -315,7 +315,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set offset with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -324,7 +324,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -332,14 +332,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set withTotal with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withWithTotal(final boolean withTotal) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
     /**
      * add additional withTotal query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addWithTotal(final boolean withTotal) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 
@@ -374,7 +374,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set withTotal with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withWithTotal(final List<Boolean> withTotal) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withWithTotal(final List<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
                 .addQueryParams(withTotal.stream()
                         .map(s -> new ParamEntry<>("withTotal", s.toString()))
@@ -384,7 +384,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional withTotal query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addWithTotal(final List<Boolean> withTotal) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addWithTotal(final List<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
@@ -392,14 +392,14 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set where with the specified value
      */
-    public ByProjectKeyMeShoppingListsGet withWhere(final String where) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
     }
 
     /**
      * add additional where query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addWhere(final String where) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
     }
 
@@ -434,7 +434,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set where with the specified values
      */
-    public ByProjectKeyMeShoppingListsGet withWhere(final List<String> where) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withWhere(final List<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -443,7 +443,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * add additional where query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addWhere(final List<String> where) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addWhere(final List<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
@@ -451,34 +451,38 @@ public class ByProjectKeyMeShoppingListsGet extends
     /**
      * set predicateVar with the specificied value
      */
-    public ByProjectKeyMeShoppingListsGet withPredicateVar(final String varName, final String predicateVar) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withPredicateVar(final String varName, final TValue predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
 
     /**
      * add additional predicateVar query parameter
      */
-    public ByProjectKeyMeShoppingListsGet addPredicateVar(final String varName, final String predicateVar) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addPredicateVar(final String varName, final TValue predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
 
     /**
      * set predicateVar with the specificied values
      */
-    public ByProjectKeyMeShoppingListsGet withPredicateVar(final String varName, final List<String> predicateVar) {
+    public <TValue> ByProjectKeyMeShoppingListsGet withPredicateVar(final String varName,
+            final List<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().withoutQueryParam(placeholderName)
-                .addQueryParams(
-                    predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+                .addQueryParams(predicateVar.stream()
+                        .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                        .collect(Collectors.toList()));
     }
 
     /**
      * add additional predicateVar query parameters
      */
-    public ByProjectKeyMeShoppingListsGet addPredicateVar(final String varName, final List<String> predicateVar) {
+    public <TValue> ByProjectKeyMeShoppingListsGet addPredicateVar(final String varName,
+            final List<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
-        return copy().addQueryParams(
-            predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+        return copy().addQueryParams(predicateVar.stream()
+                .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                .collect(Collectors.toList()));
     }
 
     @Override

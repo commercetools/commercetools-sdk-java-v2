@@ -12,22 +12,22 @@ public interface QueryTrait<T extends QueryTrait<T>> {
     /**
      * set where with the specificied value
      */
-    QueryTrait<T> withWhere(final String where);
+    <TValue> QueryTrait<T> withWhere(final TValue where);
 
     /**
      * add additional where query parameter
      */
-    QueryTrait<T> addWhere(final String where);
+    <TValue> QueryTrait<T> addWhere(final TValue where);
 
     /**
      * set predicateVar with the specificied value
      */
-    QueryTrait<T> withPredicateVar(final String varName, final String predicateVar);
+    <TValue> QueryTrait<T> withPredicateVar(final String varName, final TValue predicateVar);
 
     /**
      * add additional predicateVar query parameter
      */
-    QueryTrait<T> addPredicateVar(final String varName, final String predicateVar);
+    <TValue> QueryTrait<T> addPredicateVar(final String varName, final TValue predicateVar);
 
     default QueryTrait<T> asQueryTrait() {
         return this;

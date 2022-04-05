@@ -12,12 +12,12 @@ public interface SortableTrait<T extends SortableTrait<T>> {
     /**
      * set sort with the specificied value
      */
-    SortableTrait<T> withSort(final String sort);
+    <TValue> SortableTrait<T> withSort(final TValue sort);
 
     /**
      * add additional sort query parameter
      */
-    SortableTrait<T> addSort(final String sort);
+    <TValue> SortableTrait<T> addSort(final TValue sort);
 
     default SortableTrait<T> asSortableTrait() {
         return this;

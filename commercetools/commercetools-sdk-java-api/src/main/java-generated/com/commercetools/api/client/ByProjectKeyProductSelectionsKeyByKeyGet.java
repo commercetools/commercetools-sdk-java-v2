@@ -83,14 +83,14 @@ public class ByProjectKeyProductSelectionsKeyByKeyGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyProductSelectionsKeyByKeyGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyProductSelectionsKeyByKeyGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -125,7 +125,7 @@ public class ByProjectKeyProductSelectionsKeyByKeyGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyProductSelectionsKeyByKeyGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -134,7 +134,7 @@ public class ByProjectKeyProductSelectionsKeyByKeyGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyProductSelectionsKeyByKeyGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

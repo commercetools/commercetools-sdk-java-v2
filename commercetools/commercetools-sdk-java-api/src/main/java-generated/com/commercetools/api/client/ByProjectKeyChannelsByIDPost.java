@@ -92,14 +92,14 @@ public class ByProjectKeyChannelsByIDPost extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyChannelsByIDPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyChannelsByIDPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyChannelsByIDPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyChannelsByIDPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -134,7 +134,7 @@ public class ByProjectKeyChannelsByIDPost extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyChannelsByIDPost withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyChannelsByIDPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -143,7 +143,7 @@ public class ByProjectKeyChannelsByIDPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyChannelsByIDPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyChannelsByIDPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

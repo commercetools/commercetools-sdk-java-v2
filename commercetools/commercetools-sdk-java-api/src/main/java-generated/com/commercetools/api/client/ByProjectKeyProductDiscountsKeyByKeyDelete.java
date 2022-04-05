@@ -90,14 +90,14 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * set version with the specified value
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete withVersion(final long version) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
     }
 
     /**
      * add additional version query parameter
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete addVersion(final long version) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
     }
 
@@ -132,7 +132,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * set version with the specified values
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete withVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete withVersion(final List<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -141,7 +141,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * add additional version query parameters
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete addVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete addVersion(final List<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -149,14 +149,14 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete withExpand(final String expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete addExpand(final String expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -191,7 +191,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -200,7 +200,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyDelete extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyProductDiscountsKeyByKeyDelete addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyDelete addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

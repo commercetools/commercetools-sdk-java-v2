@@ -94,14 +94,14 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set dataErasure with the specified value
      */
-    public ByProjectKeyCustomersByIDDelete withDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withDataErasure(final TValue dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
     /**
      * add additional dataErasure query parameter
      */
-    public ByProjectKeyCustomersByIDDelete addDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addDataErasure(final TValue dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
@@ -136,7 +136,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set dataErasure with the specified values
      */
-    public ByProjectKeyCustomersByIDDelete withDataErasure(final List<Boolean> dataErasure) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withDataErasure(final List<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -146,7 +146,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * add additional dataErasure query parameters
      */
-    public ByProjectKeyCustomersByIDDelete addDataErasure(final List<Boolean> dataErasure) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addDataErasure(final List<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -154,14 +154,14 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set version with the specified value
      */
-    public ByProjectKeyCustomersByIDDelete withVersion(final long version) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
     }
 
     /**
      * add additional version query parameter
      */
-    public ByProjectKeyCustomersByIDDelete addVersion(final long version) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
     }
 
@@ -196,7 +196,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set version with the specified values
      */
-    public ByProjectKeyCustomersByIDDelete withVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withVersion(final List<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -205,7 +205,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * add additional version query parameters
      */
-    public ByProjectKeyCustomersByIDDelete addVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addVersion(final List<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -213,14 +213,14 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomersByIDDelete withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomersByIDDelete addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -255,7 +255,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomersByIDDelete withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersByIDDelete withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -264,7 +264,7 @@ public class ByProjectKeyCustomersByIDDelete
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomersByIDDelete addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersByIDDelete addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

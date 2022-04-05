@@ -12,12 +12,12 @@ public interface VersionedTrait<T extends VersionedTrait<T>> {
     /**
      * set version with the specificied value
      */
-    VersionedTrait<T> withVersion(final long version);
+    <TValue> VersionedTrait<T> withVersion(final TValue version);
 
     /**
      * add additional version query parameter
      */
-    VersionedTrait<T> addVersion(final long version);
+    <TValue> VersionedTrait<T> addVersion(final TValue version);
 
     default VersionedTrait<T> asVersionedTrait() {
         return this;

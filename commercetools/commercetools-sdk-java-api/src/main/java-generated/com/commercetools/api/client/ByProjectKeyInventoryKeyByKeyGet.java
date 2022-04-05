@@ -83,14 +83,14 @@ public class ByProjectKeyInventoryKeyByKeyGet
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyInventoryKeyByKeyGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyInventoryKeyByKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyInventoryKeyByKeyGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyInventoryKeyByKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -125,7 +125,7 @@ public class ByProjectKeyInventoryKeyByKeyGet
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyInventoryKeyByKeyGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInventoryKeyByKeyGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -134,7 +134,7 @@ public class ByProjectKeyInventoryKeyByKeyGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyInventoryKeyByKeyGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInventoryKeyByKeyGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

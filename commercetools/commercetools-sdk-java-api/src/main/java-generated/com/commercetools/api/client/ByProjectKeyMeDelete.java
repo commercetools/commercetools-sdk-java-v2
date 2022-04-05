@@ -76,14 +76,14 @@ public class ByProjectKeyMeDelete
     /**
      * set version with the specified value
      */
-    public ByProjectKeyMeDelete withVersion(final long version) {
+    public <TValue> ByProjectKeyMeDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
     }
 
     /**
      * add additional version query parameter
      */
-    public ByProjectKeyMeDelete addVersion(final long version) {
+    public <TValue> ByProjectKeyMeDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
     }
 
@@ -118,7 +118,7 @@ public class ByProjectKeyMeDelete
     /**
      * set version with the specified values
      */
-    public ByProjectKeyMeDelete withVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyMeDelete withVersion(final List<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -127,7 +127,7 @@ public class ByProjectKeyMeDelete
     /**
      * add additional version query parameters
      */
-    public ByProjectKeyMeDelete addVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyMeDelete addVersion(final List<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }

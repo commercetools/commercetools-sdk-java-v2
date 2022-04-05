@@ -129,14 +129,14 @@ public class ByProjectKeyGet
     /**
      * set resourceType with the specified value
      */
-    public ByProjectKeyGet withResourceType(final ChangeHistoryResourceType resourceType) {
+    public <TValue> ByProjectKeyGet withResourceType(final TValue resourceType) {
         return copy().withQueryParam("resourceType", resourceType);
     }
 
     /**
      * add additional resourceType query parameter
      */
-    public ByProjectKeyGet addResourceType(final ChangeHistoryResourceType resourceType) {
+    public <TValue> ByProjectKeyGet addResourceType(final TValue resourceType) {
         return copy().addQueryParam("resourceType", resourceType);
     }
 
@@ -171,7 +171,7 @@ public class ByProjectKeyGet
     /**
      * set resourceType with the specified values
      */
-    public ByProjectKeyGet withResourceType(final List<ChangeHistoryResourceType> resourceType) {
+    public <TValue> ByProjectKeyGet withResourceType(final List<TValue> resourceType) {
         return copy().withoutQueryParam("resourceType")
                 .addQueryParams(resourceType.stream()
                         .map(s -> new ParamEntry<>("resourceType", s.toString()))
@@ -181,7 +181,7 @@ public class ByProjectKeyGet
     /**
      * add additional resourceType query parameters
      */
-    public ByProjectKeyGet addResourceType(final List<ChangeHistoryResourceType> resourceType) {
+    public <TValue> ByProjectKeyGet addResourceType(final List<TValue> resourceType) {
         return copy().addQueryParams(resourceType.stream()
                 .map(s -> new ParamEntry<>("resourceType", s.toString()))
                 .collect(Collectors.toList()));
@@ -190,14 +190,14 @@ public class ByProjectKeyGet
     /**
      * set dateFrom with the specified value
      */
-    public ByProjectKeyGet withDateFrom(final Object dateFrom) {
+    public <TValue> ByProjectKeyGet withDateFrom(final TValue dateFrom) {
         return copy().withQueryParam("date.from", dateFrom);
     }
 
     /**
      * add additional dateFrom query parameter
      */
-    public ByProjectKeyGet addDateFrom(final Object dateFrom) {
+    public <TValue> ByProjectKeyGet addDateFrom(final TValue dateFrom) {
         return copy().addQueryParam("date.from", dateFrom);
     }
 
@@ -232,7 +232,7 @@ public class ByProjectKeyGet
     /**
      * set dateFrom with the specified values
      */
-    public ByProjectKeyGet withDateFrom(final List<Object> dateFrom) {
+    public <TValue> ByProjectKeyGet withDateFrom(final List<TValue> dateFrom) {
         return copy().withoutQueryParam("date.from")
                 .addQueryParams(dateFrom.stream()
                         .map(s -> new ParamEntry<>("date.from", s.toString()))
@@ -242,7 +242,7 @@ public class ByProjectKeyGet
     /**
      * add additional dateFrom query parameters
      */
-    public ByProjectKeyGet addDateFrom(final List<Object> dateFrom) {
+    public <TValue> ByProjectKeyGet addDateFrom(final List<TValue> dateFrom) {
         return copy().addQueryParams(
             dateFrom.stream().map(s -> new ParamEntry<>("date.from", s.toString())).collect(Collectors.toList()));
     }
@@ -250,14 +250,14 @@ public class ByProjectKeyGet
     /**
      * set dateTo with the specified value
      */
-    public ByProjectKeyGet withDateTo(final Object dateTo) {
+    public <TValue> ByProjectKeyGet withDateTo(final TValue dateTo) {
         return copy().withQueryParam("date.to", dateTo);
     }
 
     /**
      * add additional dateTo query parameter
      */
-    public ByProjectKeyGet addDateTo(final Object dateTo) {
+    public <TValue> ByProjectKeyGet addDateTo(final TValue dateTo) {
         return copy().addQueryParam("date.to", dateTo);
     }
 
@@ -292,7 +292,7 @@ public class ByProjectKeyGet
     /**
      * set dateTo with the specified values
      */
-    public ByProjectKeyGet withDateTo(final List<Object> dateTo) {
+    public <TValue> ByProjectKeyGet withDateTo(final List<TValue> dateTo) {
         return copy().withoutQueryParam("date.to")
                 .addQueryParams(
                     dateTo.stream().map(s -> new ParamEntry<>("date.to", s.toString())).collect(Collectors.toList()));
@@ -301,7 +301,7 @@ public class ByProjectKeyGet
     /**
      * add additional dateTo query parameters
      */
-    public ByProjectKeyGet addDateTo(final List<Object> dateTo) {
+    public <TValue> ByProjectKeyGet addDateTo(final List<TValue> dateTo) {
         return copy().addQueryParams(
             dateTo.stream().map(s -> new ParamEntry<>("date.to", s.toString())).collect(Collectors.toList()));
     }
@@ -309,14 +309,14 @@ public class ByProjectKeyGet
     /**
      * set limit with the specified value
      */
-    public ByProjectKeyGet withLimit(final int limit) {
+    public <TValue> ByProjectKeyGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyGet addLimit(final int limit) {
+    public <TValue> ByProjectKeyGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
@@ -351,7 +351,7 @@ public class ByProjectKeyGet
     /**
      * set limit with the specified values
      */
-    public ByProjectKeyGet withLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyGet withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -360,7 +360,7 @@ public class ByProjectKeyGet
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyGet addLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyGet addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -368,14 +368,14 @@ public class ByProjectKeyGet
     /**
      * set offset with the specified value
      */
-    public ByProjectKeyGet withOffset(final int offset) {
+    public <TValue> ByProjectKeyGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyGet addOffset(final int offset) {
+    public <TValue> ByProjectKeyGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -410,7 +410,7 @@ public class ByProjectKeyGet
     /**
      * set offset with the specified values
      */
-    public ByProjectKeyGet withOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyGet withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -419,7 +419,7 @@ public class ByProjectKeyGet
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyGet addOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyGet addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -427,14 +427,14 @@ public class ByProjectKeyGet
     /**
      * set userId with the specified value
      */
-    public ByProjectKeyGet withUserId(final String userId) {
+    public <TValue> ByProjectKeyGet withUserId(final TValue userId) {
         return copy().withQueryParam("userId", userId);
     }
 
     /**
      * add additional userId query parameter
      */
-    public ByProjectKeyGet addUserId(final String userId) {
+    public <TValue> ByProjectKeyGet addUserId(final TValue userId) {
         return copy().addQueryParam("userId", userId);
     }
 
@@ -469,7 +469,7 @@ public class ByProjectKeyGet
     /**
      * set userId with the specified values
      */
-    public ByProjectKeyGet withUserId(final List<String> userId) {
+    public <TValue> ByProjectKeyGet withUserId(final List<TValue> userId) {
         return copy().withoutQueryParam("userId")
                 .addQueryParams(
                     userId.stream().map(s -> new ParamEntry<>("userId", s.toString())).collect(Collectors.toList()));
@@ -478,7 +478,7 @@ public class ByProjectKeyGet
     /**
      * add additional userId query parameters
      */
-    public ByProjectKeyGet addUserId(final List<String> userId) {
+    public <TValue> ByProjectKeyGet addUserId(final List<TValue> userId) {
         return copy().addQueryParams(
             userId.stream().map(s -> new ParamEntry<>("userId", s.toString())).collect(Collectors.toList()));
     }
@@ -486,14 +486,14 @@ public class ByProjectKeyGet
     /**
      * set type with the specified value
      */
-    public ByProjectKeyGet withType(final String type) {
+    public <TValue> ByProjectKeyGet withType(final TValue type) {
         return copy().withQueryParam("type", type);
     }
 
     /**
      * add additional type query parameter
      */
-    public ByProjectKeyGet addType(final String type) {
+    public <TValue> ByProjectKeyGet addType(final TValue type) {
         return copy().addQueryParam("type", type);
     }
 
@@ -528,7 +528,7 @@ public class ByProjectKeyGet
     /**
      * set type with the specified values
      */
-    public ByProjectKeyGet withType(final List<String> type) {
+    public <TValue> ByProjectKeyGet withType(final List<TValue> type) {
         return copy().withoutQueryParam("type")
                 .addQueryParams(
                     type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
@@ -537,7 +537,7 @@ public class ByProjectKeyGet
     /**
      * add additional type query parameters
      */
-    public ByProjectKeyGet addType(final List<String> type) {
+    public <TValue> ByProjectKeyGet addType(final List<TValue> type) {
         return copy().addQueryParams(
             type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
     }
@@ -545,14 +545,14 @@ public class ByProjectKeyGet
     /**
      * set clientId with the specified value
      */
-    public ByProjectKeyGet withClientId(final String clientId) {
+    public <TValue> ByProjectKeyGet withClientId(final TValue clientId) {
         return copy().withQueryParam("clientId", clientId);
     }
 
     /**
      * add additional clientId query parameter
      */
-    public ByProjectKeyGet addClientId(final String clientId) {
+    public <TValue> ByProjectKeyGet addClientId(final TValue clientId) {
         return copy().addQueryParam("clientId", clientId);
     }
 
@@ -587,7 +587,7 @@ public class ByProjectKeyGet
     /**
      * set clientId with the specified values
      */
-    public ByProjectKeyGet withClientId(final List<String> clientId) {
+    public <TValue> ByProjectKeyGet withClientId(final List<TValue> clientId) {
         return copy().withoutQueryParam("clientId")
                 .addQueryParams(clientId.stream()
                         .map(s -> new ParamEntry<>("clientId", s.toString()))
@@ -597,7 +597,7 @@ public class ByProjectKeyGet
     /**
      * add additional clientId query parameters
      */
-    public ByProjectKeyGet addClientId(final List<String> clientId) {
+    public <TValue> ByProjectKeyGet addClientId(final List<TValue> clientId) {
         return copy().addQueryParams(
             clientId.stream().map(s -> new ParamEntry<>("clientId", s.toString())).collect(Collectors.toList()));
     }
@@ -605,14 +605,14 @@ public class ByProjectKeyGet
     /**
      * set resourceId with the specified value
      */
-    public ByProjectKeyGet withResourceId(final String resourceId) {
+    public <TValue> ByProjectKeyGet withResourceId(final TValue resourceId) {
         return copy().withQueryParam("resourceId", resourceId);
     }
 
     /**
      * add additional resourceId query parameter
      */
-    public ByProjectKeyGet addResourceId(final String resourceId) {
+    public <TValue> ByProjectKeyGet addResourceId(final TValue resourceId) {
         return copy().addQueryParam("resourceId", resourceId);
     }
 
@@ -647,7 +647,7 @@ public class ByProjectKeyGet
     /**
      * set resourceId with the specified values
      */
-    public ByProjectKeyGet withResourceId(final List<String> resourceId) {
+    public <TValue> ByProjectKeyGet withResourceId(final List<TValue> resourceId) {
         return copy().withoutQueryParam("resourceId")
                 .addQueryParams(resourceId.stream()
                         .map(s -> new ParamEntry<>("resourceId", s.toString()))
@@ -657,7 +657,7 @@ public class ByProjectKeyGet
     /**
      * add additional resourceId query parameters
      */
-    public ByProjectKeyGet addResourceId(final List<String> resourceId) {
+    public <TValue> ByProjectKeyGet addResourceId(final List<TValue> resourceId) {
         return copy().addQueryParams(
             resourceId.stream().map(s -> new ParamEntry<>("resourceId", s.toString())).collect(Collectors.toList()));
     }
@@ -665,14 +665,14 @@ public class ByProjectKeyGet
     /**
      * set source with the specified value
      */
-    public ByProjectKeyGet withSource(final String source) {
+    public <TValue> ByProjectKeyGet withSource(final TValue source) {
         return copy().withQueryParam("source", source);
     }
 
     /**
      * add additional source query parameter
      */
-    public ByProjectKeyGet addSource(final String source) {
+    public <TValue> ByProjectKeyGet addSource(final TValue source) {
         return copy().addQueryParam("source", source);
     }
 
@@ -707,7 +707,7 @@ public class ByProjectKeyGet
     /**
      * set source with the specified values
      */
-    public ByProjectKeyGet withSource(final List<String> source) {
+    public <TValue> ByProjectKeyGet withSource(final List<TValue> source) {
         return copy().withoutQueryParam("source")
                 .addQueryParams(
                     source.stream().map(s -> new ParamEntry<>("source", s.toString())).collect(Collectors.toList()));
@@ -716,7 +716,7 @@ public class ByProjectKeyGet
     /**
      * add additional source query parameters
      */
-    public ByProjectKeyGet addSource(final List<String> source) {
+    public <TValue> ByProjectKeyGet addSource(final List<TValue> source) {
         return copy().addQueryParams(
             source.stream().map(s -> new ParamEntry<>("source", s.toString())).collect(Collectors.toList()));
     }
@@ -724,14 +724,14 @@ public class ByProjectKeyGet
     /**
      * set changes with the specified value
      */
-    public ByProjectKeyGet withChanges(final String changes) {
+    public <TValue> ByProjectKeyGet withChanges(final TValue changes) {
         return copy().withQueryParam("changes", changes);
     }
 
     /**
      * add additional changes query parameter
      */
-    public ByProjectKeyGet addChanges(final String changes) {
+    public <TValue> ByProjectKeyGet addChanges(final TValue changes) {
         return copy().addQueryParam("changes", changes);
     }
 
@@ -766,7 +766,7 @@ public class ByProjectKeyGet
     /**
      * set changes with the specified values
      */
-    public ByProjectKeyGet withChanges(final List<String> changes) {
+    public <TValue> ByProjectKeyGet withChanges(final List<TValue> changes) {
         return copy().withoutQueryParam("changes")
                 .addQueryParams(
                     changes.stream().map(s -> new ParamEntry<>("changes", s.toString())).collect(Collectors.toList()));
@@ -775,7 +775,7 @@ public class ByProjectKeyGet
     /**
      * add additional changes query parameters
      */
-    public ByProjectKeyGet addChanges(final List<String> changes) {
+    public <TValue> ByProjectKeyGet addChanges(final List<TValue> changes) {
         return copy().addQueryParams(
             changes.stream().map(s -> new ParamEntry<>("changes", s.toString())).collect(Collectors.toList()));
     }
@@ -783,14 +783,14 @@ public class ByProjectKeyGet
     /**
      * set stores with the specified value
      */
-    public ByProjectKeyGet withStores(final String stores) {
+    public <TValue> ByProjectKeyGet withStores(final TValue stores) {
         return copy().withQueryParam("stores", stores);
     }
 
     /**
      * add additional stores query parameter
      */
-    public ByProjectKeyGet addStores(final String stores) {
+    public <TValue> ByProjectKeyGet addStores(final TValue stores) {
         return copy().addQueryParam("stores", stores);
     }
 
@@ -825,7 +825,7 @@ public class ByProjectKeyGet
     /**
      * set stores with the specified values
      */
-    public ByProjectKeyGet withStores(final List<String> stores) {
+    public <TValue> ByProjectKeyGet withStores(final List<TValue> stores) {
         return copy().withoutQueryParam("stores")
                 .addQueryParams(
                     stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
@@ -834,7 +834,7 @@ public class ByProjectKeyGet
     /**
      * add additional stores query parameters
      */
-    public ByProjectKeyGet addStores(final List<String> stores) {
+    public <TValue> ByProjectKeyGet addStores(final List<TValue> stores) {
         return copy().addQueryParams(
             stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
     }
@@ -842,14 +842,14 @@ public class ByProjectKeyGet
     /**
      * set customerId with the specified value
      */
-    public ByProjectKeyGet withCustomerId(final String customerId) {
+    public <TValue> ByProjectKeyGet withCustomerId(final TValue customerId) {
         return copy().withQueryParam("customerId", customerId);
     }
 
     /**
      * add additional customerId query parameter
      */
-    public ByProjectKeyGet addCustomerId(final String customerId) {
+    public <TValue> ByProjectKeyGet addCustomerId(final TValue customerId) {
         return copy().addQueryParam("customerId", customerId);
     }
 
@@ -884,7 +884,7 @@ public class ByProjectKeyGet
     /**
      * set customerId with the specified values
      */
-    public ByProjectKeyGet withCustomerId(final List<String> customerId) {
+    public <TValue> ByProjectKeyGet withCustomerId(final List<TValue> customerId) {
         return copy().withoutQueryParam("customerId")
                 .addQueryParams(customerId.stream()
                         .map(s -> new ParamEntry<>("customerId", s.toString()))
@@ -894,7 +894,7 @@ public class ByProjectKeyGet
     /**
      * add additional customerId query parameters
      */
-    public ByProjectKeyGet addCustomerId(final List<String> customerId) {
+    public <TValue> ByProjectKeyGet addCustomerId(final List<TValue> customerId) {
         return copy().addQueryParams(
             customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
     }
@@ -902,16 +902,14 @@ public class ByProjectKeyGet
     /**
      * set excludePlatformInitiatedChanges with the specified value
      */
-    public ByProjectKeyGet withExcludePlatformInitiatedChanges(
-            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyGet withExcludePlatformInitiatedChanges(final TValue excludePlatformInitiatedChanges) {
         return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
     }
 
     /**
      * add additional excludePlatformInitiatedChanges query parameter
      */
-    public ByProjectKeyGet addExcludePlatformInitiatedChanges(
-            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyGet addExcludePlatformInitiatedChanges(final TValue excludePlatformInitiatedChanges) {
         return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
     }
 
@@ -946,8 +944,8 @@ public class ByProjectKeyGet
     /**
      * set excludePlatformInitiatedChanges with the specified values
      */
-    public ByProjectKeyGet withExcludePlatformInitiatedChanges(
-            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyGet withExcludePlatformInitiatedChanges(
+            final List<TValue> excludePlatformInitiatedChanges) {
         return copy().withoutQueryParam("excludePlatformInitiatedChanges")
                 .addQueryParams(excludePlatformInitiatedChanges.stream()
                         .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
@@ -957,8 +955,8 @@ public class ByProjectKeyGet
     /**
      * add additional excludePlatformInitiatedChanges query parameters
      */
-    public ByProjectKeyGet addExcludePlatformInitiatedChanges(
-            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyGet addExcludePlatformInitiatedChanges(
+            final List<TValue> excludePlatformInitiatedChanges) {
         return copy().addQueryParams(excludePlatformInitiatedChanges.stream()
                 .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
                 .collect(Collectors.toList()));
@@ -967,14 +965,14 @@ public class ByProjectKeyGet
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyGet withExpand(final boolean expand) {
+    public <TValue> ByProjectKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyGet addExpand(final boolean expand) {
+    public <TValue> ByProjectKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -1009,7 +1007,7 @@ public class ByProjectKeyGet
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyGet withExpand(final List<Boolean> expand) {
+    public <TValue> ByProjectKeyGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -1018,7 +1016,7 @@ public class ByProjectKeyGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyGet addExpand(final List<Boolean> expand) {
+    public <TValue> ByProjectKeyGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

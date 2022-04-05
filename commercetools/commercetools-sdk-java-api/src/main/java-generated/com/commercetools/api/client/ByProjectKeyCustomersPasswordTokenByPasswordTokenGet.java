@@ -85,14 +85,14 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -129,7 +129,7 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -138,7 +138,7 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

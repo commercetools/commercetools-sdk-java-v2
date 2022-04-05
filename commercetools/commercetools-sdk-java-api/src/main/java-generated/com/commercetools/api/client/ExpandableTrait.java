@@ -12,12 +12,12 @@ public interface ExpandableTrait<T extends ExpandableTrait<T>> {
     /**
      * set expand with the specificied value
      */
-    ExpandableTrait<T> withExpand(final String expand);
+    <TValue> ExpandableTrait<T> withExpand(final TValue expand);
 
     /**
      * add additional expand query parameter
      */
-    ExpandableTrait<T> addExpand(final String expand);
+    <TValue> ExpandableTrait<T> addExpand(final TValue expand);
 
     default ExpandableTrait<T> asExpandableTrait() {
         return this;

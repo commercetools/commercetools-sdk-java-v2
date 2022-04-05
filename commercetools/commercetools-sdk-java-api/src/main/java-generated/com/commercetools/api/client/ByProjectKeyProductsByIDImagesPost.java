@@ -111,14 +111,14 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set filename with the specified value
      */
-    public ByProjectKeyProductsByIDImagesPost withFilename(final String filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final TValue filename) {
         return copy().withQueryParam("filename", filename);
     }
 
     /**
      * add additional filename query parameter
      */
-    public ByProjectKeyProductsByIDImagesPost addFilename(final String filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final TValue filename) {
         return copy().addQueryParam("filename", filename);
     }
 
@@ -153,7 +153,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set filename with the specified values
      */
-    public ByProjectKeyProductsByIDImagesPost withFilename(final List<String> filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final List<TValue> filename) {
         return copy().withoutQueryParam("filename")
                 .addQueryParams(filename.stream()
                         .map(s -> new ParamEntry<>("filename", s.toString()))
@@ -163,7 +163,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional filename query parameters
      */
-    public ByProjectKeyProductsByIDImagesPost addFilename(final List<String> filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final List<TValue> filename) {
         return copy().addQueryParams(
             filename.stream().map(s -> new ParamEntry<>("filename", s.toString())).collect(Collectors.toList()));
     }
@@ -171,14 +171,14 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set variant with the specified value
      */
-    public ByProjectKeyProductsByIDImagesPost withVariant(final long variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final TValue variant) {
         return copy().withQueryParam("variant", variant);
     }
 
     /**
      * add additional variant query parameter
      */
-    public ByProjectKeyProductsByIDImagesPost addVariant(final long variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final TValue variant) {
         return copy().addQueryParam("variant", variant);
     }
 
@@ -213,7 +213,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set variant with the specified values
      */
-    public ByProjectKeyProductsByIDImagesPost withVariant(final List<Long> variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final List<TValue> variant) {
         return copy().withoutQueryParam("variant")
                 .addQueryParams(
                     variant.stream().map(s -> new ParamEntry<>("variant", s.toString())).collect(Collectors.toList()));
@@ -222,7 +222,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional variant query parameters
      */
-    public ByProjectKeyProductsByIDImagesPost addVariant(final List<Long> variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final List<TValue> variant) {
         return copy().addQueryParams(
             variant.stream().map(s -> new ParamEntry<>("variant", s.toString())).collect(Collectors.toList()));
     }
@@ -230,14 +230,14 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set sku with the specified value
      */
-    public ByProjectKeyProductsByIDImagesPost withSku(final String sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final TValue sku) {
         return copy().withQueryParam("sku", sku);
     }
 
     /**
      * add additional sku query parameter
      */
-    public ByProjectKeyProductsByIDImagesPost addSku(final String sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final TValue sku) {
         return copy().addQueryParam("sku", sku);
     }
 
@@ -272,7 +272,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set sku with the specified values
      */
-    public ByProjectKeyProductsByIDImagesPost withSku(final List<String> sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final List<TValue> sku) {
         return copy().withoutQueryParam("sku")
                 .addQueryParams(
                     sku.stream().map(s -> new ParamEntry<>("sku", s.toString())).collect(Collectors.toList()));
@@ -281,7 +281,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional sku query parameters
      */
-    public ByProjectKeyProductsByIDImagesPost addSku(final List<String> sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final List<TValue> sku) {
         return copy().addQueryParams(
             sku.stream().map(s -> new ParamEntry<>("sku", s.toString())).collect(Collectors.toList()));
     }
@@ -289,14 +289,14 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set staged with the specified value
      */
-    public ByProjectKeyProductsByIDImagesPost withStaged(final boolean staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final TValue staged) {
         return copy().withQueryParam("staged", staged);
     }
 
     /**
      * add additional staged query parameter
      */
-    public ByProjectKeyProductsByIDImagesPost addStaged(final boolean staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final TValue staged) {
         return copy().addQueryParam("staged", staged);
     }
 
@@ -331,7 +331,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set staged with the specified values
      */
-    public ByProjectKeyProductsByIDImagesPost withStaged(final List<Boolean> staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final List<TValue> staged) {
         return copy().withoutQueryParam("staged")
                 .addQueryParams(
                     staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
@@ -340,7 +340,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional staged query parameters
      */
-    public ByProjectKeyProductsByIDImagesPost addStaged(final List<Boolean> staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final List<TValue> staged) {
         return copy().addQueryParams(
             staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }

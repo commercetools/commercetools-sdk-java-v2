@@ -83,14 +83,14 @@ public class ByProjectKeyTypesKeyByKeyGet
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyTypesKeyByKeyGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyTypesKeyByKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyTypesKeyByKeyGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyTypesKeyByKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -125,7 +125,7 @@ public class ByProjectKeyTypesKeyByKeyGet
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyTypesKeyByKeyGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyTypesKeyByKeyGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -134,7 +134,7 @@ public class ByProjectKeyTypesKeyByKeyGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyTypesKeyByKeyGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyTypesKeyByKeyGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

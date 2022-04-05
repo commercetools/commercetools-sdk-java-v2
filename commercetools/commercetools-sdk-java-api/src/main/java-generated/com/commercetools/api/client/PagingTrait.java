@@ -16,32 +16,32 @@ public interface PagingTrait<T extends PagingTrait<T>> {
     /**
      * set limit with the specificied value
      */
-    PagingTrait<T> withLimit(final int limit);
+    <TValue> PagingTrait<T> withLimit(final TValue limit);
 
     /**
      * add additional limit query parameter
      */
-    PagingTrait<T> addLimit(final int limit);
+    <TValue> PagingTrait<T> addLimit(final TValue limit);
 
     /**
      * set offset with the specificied value
      */
-    PagingTrait<T> withOffset(final int offset);
+    <TValue> PagingTrait<T> withOffset(final TValue offset);
 
     /**
      * add additional offset query parameter
      */
-    PagingTrait<T> addOffset(final int offset);
+    <TValue> PagingTrait<T> addOffset(final TValue offset);
 
     /**
      * set withTotal with the specificied value
      */
-    PagingTrait<T> withWithTotal(final boolean withTotal);
+    <TValue> PagingTrait<T> withWithTotal(final TValue withTotal);
 
     /**
      * add additional withTotal query parameter
      */
-    PagingTrait<T> addWithTotal(final boolean withTotal);
+    <TValue> PagingTrait<T> addWithTotal(final TValue withTotal);
 
     default PagingTrait<T> asPagingTrait() {
         return this;

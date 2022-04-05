@@ -109,14 +109,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set dataErasure with the specified value
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(
+            final TValue dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
     /**
      * add additional dataErasure query parameter
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(final TValue dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
@@ -153,7 +154,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set dataErasure with the specified values
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(final List<Boolean> dataErasure) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(
+            final List<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -163,7 +165,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * add additional dataErasure query parameters
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(final List<Boolean> dataErasure) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(
+            final List<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -171,14 +174,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set version with the specified value
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final long version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
     }
 
     /**
      * add additional version query parameter
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final long version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
     }
 
@@ -215,7 +218,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set version with the specified values
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final List<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -224,7 +227,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * add additional version query parameters
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final List<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -232,14 +235,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final String expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final String expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -276,7 +279,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -285,7 +288,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

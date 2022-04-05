@@ -83,14 +83,14 @@ public class ByProjectKeyCustomerGroupsByIDGet
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomerGroupsByIDGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomerGroupsByIDGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -125,7 +125,7 @@ public class ByProjectKeyCustomerGroupsByIDGet
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomerGroupsByIDGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -134,7 +134,7 @@ public class ByProjectKeyCustomerGroupsByIDGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomerGroupsByIDGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

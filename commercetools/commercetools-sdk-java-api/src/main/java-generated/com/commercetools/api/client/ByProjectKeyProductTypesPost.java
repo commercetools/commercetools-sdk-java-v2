@@ -80,14 +80,14 @@ public class ByProjectKeyProductTypesPost extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyProductTypesPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyProductTypesPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyProductTypesPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyProductTypesPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -122,7 +122,7 @@ public class ByProjectKeyProductTypesPost extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyProductTypesPost withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductTypesPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -131,7 +131,7 @@ public class ByProjectKeyProductTypesPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyProductTypesPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductTypesPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

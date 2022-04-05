@@ -77,14 +77,14 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set cartId with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet withCartId(final String cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withCartId(final TValue cartId) {
         return copy().withQueryParam("cartId", cartId);
     }
 
     /**
      * add additional cartId query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet addCartId(final String cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addCartId(final TValue cartId) {
         return copy().addQueryParam("cartId", cartId);
     }
 
@@ -119,7 +119,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set cartId with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet withCartId(final List<String> cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withCartId(final List<TValue> cartId) {
         return copy().withoutQueryParam("cartId")
                 .addQueryParams(
                     cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
@@ -128,7 +128,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * add additional cartId query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet addCartId(final List<String> cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addCartId(final List<TValue> cartId) {
         return copy().addQueryParams(
             cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
     }
@@ -136,14 +136,14 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -178,7 +178,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -187,7 +187,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingCartGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

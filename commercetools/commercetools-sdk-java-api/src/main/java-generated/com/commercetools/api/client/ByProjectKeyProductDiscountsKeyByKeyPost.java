@@ -92,14 +92,14 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyProductDiscountsKeyByKeyPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -134,7 +134,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -143,7 +143,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyProductDiscountsKeyByKeyPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductDiscountsKeyByKeyPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

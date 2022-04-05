@@ -143,14 +143,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set dateFrom with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final Object dateFrom) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withDateFrom(final TValue dateFrom) {
         return copy().withQueryParam("date.from", dateFrom);
     }
 
     /**
      * add additional dateFrom query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final Object dateFrom) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addDateFrom(final TValue dateFrom) {
         return copy().addQueryParam("date.from", dateFrom);
     }
 
@@ -185,7 +185,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set dateFrom with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withDateFrom(final List<Object> dateFrom) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withDateFrom(final List<TValue> dateFrom) {
         return copy().withoutQueryParam("date.from")
                 .addQueryParams(dateFrom.stream()
                         .map(s -> new ParamEntry<>("date.from", s.toString()))
@@ -195,7 +195,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional dateFrom query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addDateFrom(final List<Object> dateFrom) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addDateFrom(final List<TValue> dateFrom) {
         return copy().addQueryParams(
             dateFrom.stream().map(s -> new ParamEntry<>("date.from", s.toString())).collect(Collectors.toList()));
     }
@@ -203,14 +203,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set dateTo with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withDateTo(final Object dateTo) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withDateTo(final TValue dateTo) {
         return copy().withQueryParam("date.to", dateTo);
     }
 
     /**
      * add additional dateTo query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addDateTo(final Object dateTo) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addDateTo(final TValue dateTo) {
         return copy().addQueryParam("date.to", dateTo);
     }
 
@@ -245,7 +245,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set dateTo with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withDateTo(final List<Object> dateTo) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withDateTo(final List<TValue> dateTo) {
         return copy().withoutQueryParam("date.to")
                 .addQueryParams(
                     dateTo.stream().map(s -> new ParamEntry<>("date.to", s.toString())).collect(Collectors.toList()));
@@ -254,7 +254,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional dateTo query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addDateTo(final List<Object> dateTo) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addDateTo(final List<TValue> dateTo) {
         return copy().addQueryParams(
             dateTo.stream().map(s -> new ParamEntry<>("date.to", s.toString())).collect(Collectors.toList()));
     }
@@ -262,14 +262,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set limit with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withLimit(final int limit) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addLimit(final int limit) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
@@ -304,7 +304,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set limit with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -313,7 +313,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -321,14 +321,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set offset with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withOffset(final int offset) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addOffset(final int offset) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -363,7 +363,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set offset with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -372,7 +372,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -380,14 +380,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set userId with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withUserId(final String userId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withUserId(final TValue userId) {
         return copy().withQueryParam("userId", userId);
     }
 
     /**
      * add additional userId query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addUserId(final String userId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addUserId(final TValue userId) {
         return copy().addQueryParam("userId", userId);
     }
 
@@ -422,7 +422,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set userId with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withUserId(final List<String> userId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withUserId(final List<TValue> userId) {
         return copy().withoutQueryParam("userId")
                 .addQueryParams(
                     userId.stream().map(s -> new ParamEntry<>("userId", s.toString())).collect(Collectors.toList()));
@@ -431,7 +431,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional userId query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addUserId(final List<String> userId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addUserId(final List<TValue> userId) {
         return copy().addQueryParams(
             userId.stream().map(s -> new ParamEntry<>("userId", s.toString())).collect(Collectors.toList()));
     }
@@ -439,14 +439,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set type with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withType(final String type) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withType(final TValue type) {
         return copy().withQueryParam("type", type);
     }
 
     /**
      * add additional type query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addType(final String type) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addType(final TValue type) {
         return copy().addQueryParam("type", type);
     }
 
@@ -481,7 +481,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set type with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withType(final List<String> type) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withType(final List<TValue> type) {
         return copy().withoutQueryParam("type")
                 .addQueryParams(
                     type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
@@ -490,7 +490,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional type query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addType(final List<String> type) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addType(final List<TValue> type) {
         return copy().addQueryParams(
             type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
     }
@@ -498,14 +498,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set clientId with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withClientId(final String clientId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withClientId(final TValue clientId) {
         return copy().withQueryParam("clientId", clientId);
     }
 
     /**
      * add additional clientId query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addClientId(final String clientId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addClientId(final TValue clientId) {
         return copy().addQueryParam("clientId", clientId);
     }
 
@@ -540,7 +540,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set clientId with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withClientId(final List<String> clientId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withClientId(final List<TValue> clientId) {
         return copy().withoutQueryParam("clientId")
                 .addQueryParams(clientId.stream()
                         .map(s -> new ParamEntry<>("clientId", s.toString()))
@@ -550,7 +550,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional clientId query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addClientId(final List<String> clientId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addClientId(final List<TValue> clientId) {
         return copy().addQueryParams(
             clientId.stream().map(s -> new ParamEntry<>("clientId", s.toString())).collect(Collectors.toList()));
     }
@@ -558,14 +558,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set source with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withSource(final String source) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withSource(final TValue source) {
         return copy().withQueryParam("source", source);
     }
 
     /**
      * add additional source query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addSource(final String source) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addSource(final TValue source) {
         return copy().addQueryParam("source", source);
     }
 
@@ -600,7 +600,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set source with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withSource(final List<String> source) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withSource(final List<TValue> source) {
         return copy().withoutQueryParam("source")
                 .addQueryParams(
                     source.stream().map(s -> new ParamEntry<>("source", s.toString())).collect(Collectors.toList()));
@@ -609,7 +609,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional source query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addSource(final List<String> source) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addSource(final List<TValue> source) {
         return copy().addQueryParams(
             source.stream().map(s -> new ParamEntry<>("source", s.toString())).collect(Collectors.toList()));
     }
@@ -617,14 +617,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set changes with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withChanges(final String changes) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withChanges(final TValue changes) {
         return copy().withQueryParam("changes", changes);
     }
 
     /**
      * add additional changes query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addChanges(final String changes) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addChanges(final TValue changes) {
         return copy().addQueryParam("changes", changes);
     }
 
@@ -659,7 +659,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set changes with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withChanges(final List<String> changes) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withChanges(final List<TValue> changes) {
         return copy().withoutQueryParam("changes")
                 .addQueryParams(
                     changes.stream().map(s -> new ParamEntry<>("changes", s.toString())).collect(Collectors.toList()));
@@ -668,7 +668,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional changes query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addChanges(final List<String> changes) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addChanges(final List<TValue> changes) {
         return copy().addQueryParams(
             changes.stream().map(s -> new ParamEntry<>("changes", s.toString())).collect(Collectors.toList()));
     }
@@ -676,14 +676,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set stores with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withStores(final String stores) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withStores(final TValue stores) {
         return copy().withQueryParam("stores", stores);
     }
 
     /**
      * add additional stores query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addStores(final String stores) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addStores(final TValue stores) {
         return copy().addQueryParam("stores", stores);
     }
 
@@ -718,7 +718,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set stores with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withStores(final List<String> stores) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withStores(final List<TValue> stores) {
         return copy().withoutQueryParam("stores")
                 .addQueryParams(
                     stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
@@ -727,7 +727,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional stores query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addStores(final List<String> stores) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addStores(final List<TValue> stores) {
         return copy().addQueryParams(
             stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
     }
@@ -735,14 +735,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set customerId with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final String customerId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withCustomerId(final TValue customerId) {
         return copy().withQueryParam("customerId", customerId);
     }
 
     /**
      * add additional customerId query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final String customerId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addCustomerId(final TValue customerId) {
         return copy().addQueryParam("customerId", customerId);
     }
 
@@ -777,7 +777,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set customerId with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withCustomerId(final List<String> customerId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withCustomerId(final List<TValue> customerId) {
         return copy().withoutQueryParam("customerId")
                 .addQueryParams(customerId.stream()
                         .map(s -> new ParamEntry<>("customerId", s.toString()))
@@ -787,7 +787,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional customerId query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addCustomerId(final List<String> customerId) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addCustomerId(final List<TValue> customerId) {
         return copy().addQueryParams(
             customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
     }
@@ -795,16 +795,16 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set excludePlatformInitiatedChanges with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
-            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
+            final TValue excludePlatformInitiatedChanges) {
         return copy().withQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
     }
 
     /**
      * add additional excludePlatformInitiatedChanges query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
-            final PlatformInitiatedChange excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
+            final TValue excludePlatformInitiatedChanges) {
         return copy().addQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges);
     }
 
@@ -843,8 +843,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set excludePlatformInitiatedChanges with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
-            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withExcludePlatformInitiatedChanges(
+            final List<TValue> excludePlatformInitiatedChanges) {
         return copy().withoutQueryParam("excludePlatformInitiatedChanges")
                 .addQueryParams(excludePlatformInitiatedChanges.stream()
                         .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
@@ -854,8 +854,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional excludePlatformInitiatedChanges query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
-            final List<PlatformInitiatedChange> excludePlatformInitiatedChanges) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addExcludePlatformInitiatedChanges(
+            final List<TValue> excludePlatformInitiatedChanges) {
         return copy().addQueryParams(excludePlatformInitiatedChanges.stream()
                 .map(s -> new ParamEntry<>("excludePlatformInitiatedChanges", s.toString()))
                 .collect(Collectors.toList()));
@@ -864,14 +864,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyByResourceTypeByIDGet withExpand(final boolean expand) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyByResourceTypeByIDGet addExpand(final boolean expand) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -906,7 +906,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyByResourceTypeByIDGet withExpand(final List<Boolean> expand) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -915,7 +915,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyByResourceTypeByIDGet addExpand(final List<Boolean> expand) {
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

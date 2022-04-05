@@ -111,14 +111,16 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set limit with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final double limit) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(
+            final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final double limit) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(
+            final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
@@ -157,7 +159,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set limit with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final List<Double> limit) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(
+            final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -166,7 +169,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final List<Double> limit) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(
+            final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -174,14 +178,16 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set offset with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final double offset) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
+            final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final double offset) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
+            final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -220,8 +226,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set offset with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
-            final List<Double> offset) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(
+            final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -230,8 +236,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
-            final List<Double> offset) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(
+            final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -239,14 +245,15 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set sort with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(
+            final TValue sort) {
         return copy().withQueryParam("sort", sort);
     }
 
     /**
      * add additional sort query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
     }
 
@@ -285,7 +292,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set sort with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final List<String> sort) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(
+            final List<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -294,7 +302,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional sort query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final List<String> sort) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(
+            final List<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -302,16 +311,16 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set resourceKey with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
-            final String resourceKey) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
+            final TValue resourceKey) {
         return copy().withQueryParam("resourceKey", resourceKey);
     }
 
     /**
      * add additional resourceKey query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
-            final String resourceKey) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
+            final TValue resourceKey) {
         return copy().addQueryParam("resourceKey", resourceKey);
     }
 
@@ -350,8 +359,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set resourceKey with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
-            final List<String> resourceKey) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(
+            final List<TValue> resourceKey) {
         return copy().withoutQueryParam("resourceKey")
                 .addQueryParams(resourceKey.stream()
                         .map(s -> new ParamEntry<>("resourceKey", s.toString()))
@@ -361,8 +370,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional resourceKey query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
-            final List<String> resourceKey) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(
+            final List<TValue> resourceKey) {
         return copy().addQueryParams(
             resourceKey.stream().map(s -> new ParamEntry<>("resourceKey", s.toString())).collect(Collectors.toList()));
     }
@@ -370,16 +379,16 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set state with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(
-            final ProcessingState state) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(
+            final TValue state) {
         return copy().withQueryParam("state", state);
     }
 
     /**
      * add additional state query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(
-            final ProcessingState state) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(
+            final TValue state) {
         return copy().addQueryParam("state", state);
     }
 
@@ -418,8 +427,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set state with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(
-            final List<ProcessingState> state) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(
+            final List<TValue> state) {
         return copy().withoutQueryParam("state")
                 .addQueryParams(
                     state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
@@ -428,8 +437,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional state query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(
-            final List<ProcessingState> state) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(
+            final List<TValue> state) {
         return copy().addQueryParams(
             state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }
@@ -437,14 +446,16 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set debug with the specified value
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(final boolean debug) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(
+            final TValue debug) {
         return copy().withQueryParam("debug", debug);
     }
 
     /**
      * add additional debug query parameter
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final boolean debug) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(
+            final TValue debug) {
         return copy().addQueryParam("debug", debug);
     }
 
@@ -483,8 +494,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * set debug with the specified values
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(
-            final List<Boolean> debug) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withDebug(
+            final List<TValue> debug) {
         return copy().withoutQueryParam("debug")
                 .addQueryParams(
                     debug.stream().map(s -> new ParamEntry<>("debug", s.toString())).collect(Collectors.toList()));
@@ -493,7 +504,8 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     /**
      * add additional debug query parameters
      */
-    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(final List<Boolean> debug) {
+    public <TValue> ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addDebug(
+            final List<TValue> debug) {
         return copy().addQueryParams(
             debug.stream().map(s -> new ParamEntry<>("debug", s.toString())).collect(Collectors.toList()));
     }

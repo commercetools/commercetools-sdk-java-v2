@@ -80,14 +80,14 @@ public class ByProjectKeyApiClientsPost extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyApiClientsPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyApiClientsPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyApiClientsPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyApiClientsPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -122,7 +122,7 @@ public class ByProjectKeyApiClientsPost extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyApiClientsPost withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyApiClientsPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -131,7 +131,7 @@ public class ByProjectKeyApiClientsPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyApiClientsPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyApiClientsPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

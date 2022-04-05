@@ -12,12 +12,12 @@ public interface DataerasureTrait<T extends DataerasureTrait<T>> {
     /**
      * set dataErasure with the specificied value
      */
-    DataerasureTrait<T> withDataErasure(final boolean dataErasure);
+    <TValue> DataerasureTrait<T> withDataErasure(final TValue dataErasure);
 
     /**
      * add additional dataErasure query parameter
      */
-    DataerasureTrait<T> addDataErasure(final boolean dataErasure);
+    <TValue> DataerasureTrait<T> addDataErasure(final TValue dataErasure);
 
     default DataerasureTrait<T> asDataerasureTrait() {
         return this;

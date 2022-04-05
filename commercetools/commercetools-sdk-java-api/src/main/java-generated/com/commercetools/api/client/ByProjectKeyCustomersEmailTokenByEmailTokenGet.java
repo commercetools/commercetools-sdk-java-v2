@@ -84,14 +84,14 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -126,7 +126,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -135,7 +135,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

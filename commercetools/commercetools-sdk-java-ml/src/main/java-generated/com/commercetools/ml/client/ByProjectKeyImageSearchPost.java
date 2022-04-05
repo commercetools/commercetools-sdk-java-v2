@@ -91,14 +91,14 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set limit with the specified value
      */
-    public ByProjectKeyImageSearchPost withLimit(final int limit) {
+    public <TValue> ByProjectKeyImageSearchPost withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyImageSearchPost addLimit(final int limit) {
+    public <TValue> ByProjectKeyImageSearchPost addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
@@ -133,7 +133,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set limit with the specified values
      */
-    public ByProjectKeyImageSearchPost withLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyImageSearchPost withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -142,7 +142,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyImageSearchPost addLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyImageSearchPost addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -150,14 +150,14 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set offset with the specified value
      */
-    public ByProjectKeyImageSearchPost withOffset(final int offset) {
+    public <TValue> ByProjectKeyImageSearchPost withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyImageSearchPost addOffset(final int offset) {
+    public <TValue> ByProjectKeyImageSearchPost addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
@@ -192,7 +192,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set offset with the specified values
      */
-    public ByProjectKeyImageSearchPost withOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyImageSearchPost withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -201,7 +201,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyImageSearchPost addOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyImageSearchPost addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }

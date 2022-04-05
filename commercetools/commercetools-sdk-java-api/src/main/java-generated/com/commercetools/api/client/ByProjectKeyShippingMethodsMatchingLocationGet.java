@@ -90,14 +90,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set country with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final TValue country) {
         return copy().withQueryParam("country", country);
     }
 
     /**
      * add additional country query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final String country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final TValue country) {
         return copy().addQueryParam("country", country);
     }
 
@@ -132,7 +132,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set country with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final List<String> country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final List<TValue> country) {
         return copy().withoutQueryParam("country")
                 .addQueryParams(
                     country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
@@ -141,7 +141,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * add additional country query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final List<String> country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final List<TValue> country) {
         return copy().addQueryParams(
             country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
     }
@@ -149,14 +149,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set state with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withState(final TValue state) {
         return copy().withQueryParam("state", state);
     }
 
     /**
      * add additional state query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final String state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addState(final TValue state) {
         return copy().addQueryParam("state", state);
     }
 
@@ -191,7 +191,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set state with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withState(final List<String> state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withState(final List<TValue> state) {
         return copy().withoutQueryParam("state")
                 .addQueryParams(
                     state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
@@ -200,7 +200,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * add additional state query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final List<String> state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addState(final List<TValue> state) {
         return copy().addQueryParams(
             state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }
@@ -208,14 +208,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set currency with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final TValue currency) {
         return copy().withQueryParam("currency", currency);
     }
 
     /**
      * add additional currency query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final String currency) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final TValue currency) {
         return copy().addQueryParam("currency", currency);
     }
 
@@ -251,7 +251,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set currency with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final List<String> currency) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final List<TValue> currency) {
         return copy().withoutQueryParam("currency")
                 .addQueryParams(currency.stream()
                         .map(s -> new ParamEntry<>("currency", s.toString()))
@@ -261,7 +261,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * add additional currency query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final List<String> currency) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final List<TValue> currency) {
         return copy().addQueryParams(
             currency.stream().map(s -> new ParamEntry<>("currency", s.toString())).collect(Collectors.toList()));
     }
@@ -269,14 +269,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -311,7 +311,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -320,7 +320,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -328,14 +328,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set sort with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final String sort) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
     }
 
     /**
      * add additional sort query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final String sort) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
     }
 
@@ -370,7 +370,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * set sort with the specified values
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet withSort(final List<String> sort) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet withSort(final List<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -379,7 +379,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends
     /**
      * add additional sort query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingLocationGet addSort(final List<String> sort) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingLocationGet addSort(final List<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }

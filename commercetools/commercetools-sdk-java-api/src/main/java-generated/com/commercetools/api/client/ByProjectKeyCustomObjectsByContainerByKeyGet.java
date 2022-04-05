@@ -98,14 +98,14 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomObjectsByContainerByKeyGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -140,7 +140,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -149,7 +149,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomObjectsByContainerByKeyGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

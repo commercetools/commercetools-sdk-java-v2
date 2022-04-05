@@ -92,14 +92,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * set cartId with the specified value
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final String cartId) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final TValue cartId) {
         return copy().withQueryParam("cartId", cartId);
     }
 
     /**
      * add additional cartId query parameter
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final String cartId) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final TValue cartId) {
         return copy().addQueryParam("cartId", cartId);
     }
 
@@ -136,7 +136,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * set cartId with the specified values
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final List<String> cartId) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(
+            final List<TValue> cartId) {
         return copy().withoutQueryParam("cartId")
                 .addQueryParams(
                     cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
@@ -145,7 +146,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * add additional cartId query parameters
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(final List<String> cartId) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addCartId(
+            final List<TValue> cartId) {
         return copy().addQueryParams(
             cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
     }
@@ -153,14 +155,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -197,7 +199,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(
+            final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -206,7 +209,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet addExpand(
+            final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

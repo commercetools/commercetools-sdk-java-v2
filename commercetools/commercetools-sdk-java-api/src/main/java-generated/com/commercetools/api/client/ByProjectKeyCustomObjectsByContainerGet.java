@@ -90,14 +90,14 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * set where with the specified value
      */
-    public ByProjectKeyCustomObjectsByContainerGet withWhere(final String where) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withWhere(final TValue where) {
         return copy().withQueryParam("where", where);
     }
 
     /**
      * add additional where query parameter
      */
-    public ByProjectKeyCustomObjectsByContainerGet addWhere(final String where) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addWhere(final TValue where) {
         return copy().addQueryParam("where", where);
     }
 
@@ -132,7 +132,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * set where with the specified values
      */
-    public ByProjectKeyCustomObjectsByContainerGet withWhere(final List<String> where) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withWhere(final List<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -141,7 +141,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * add additional where query parameters
      */
-    public ByProjectKeyCustomObjectsByContainerGet addWhere(final List<String> where) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addWhere(final List<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
@@ -149,14 +149,14 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * set expand with the specified value
      */
-    public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomObjectsByContainerGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
@@ -191,7 +191,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * set expand with the specified values
      */
-    public ByProjectKeyCustomObjectsByContainerGet withExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -200,7 +200,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomObjectsByContainerGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -208,36 +208,40 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
     /**
      * set predicateVar with the specificied value
      */
-    public ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName, final String predicateVar) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName,
+            final TValue predicateVar) {
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
 
     /**
      * add additional predicateVar query parameter
      */
-    public ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName, final String predicateVar) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName,
+            final TValue predicateVar) {
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
 
     /**
      * set predicateVar with the specificied values
      */
-    public ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName,
-            final List<String> predicateVar) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet withPredicateVar(final String varName,
+            final List<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().withoutQueryParam(placeholderName)
-                .addQueryParams(
-                    predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+                .addQueryParams(predicateVar.stream()
+                        .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                        .collect(Collectors.toList()));
     }
 
     /**
      * add additional predicateVar query parameters
      */
-    public ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName,
-            final List<String> predicateVar) {
+    public <TValue> ByProjectKeyCustomObjectsByContainerGet addPredicateVar(final String varName,
+            final List<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
-        return copy().addQueryParams(
-            predicateVar.stream().map(s -> new ParamEntry<>(placeholderName, s)).collect(Collectors.toList()));
+        return copy().addQueryParams(predicateVar.stream()
+                .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                .collect(Collectors.toList()));
     }
 
     @Override

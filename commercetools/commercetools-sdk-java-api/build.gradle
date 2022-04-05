@@ -8,6 +8,8 @@ dependencies {
     api "org.slf4j:slf4j-api:${versions.slf4j}"
     api commons.lang3
 
+    testImplementation group: 'org.javamoney', name: 'moneta', version: '1.4.2'
+
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
     testImplementation 'commons-io:commons-io' version commons.io

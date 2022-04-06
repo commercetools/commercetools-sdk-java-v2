@@ -1,0 +1,18 @@
+{
+    "typeId": "key-value-document",
+    "id": "abcde",
+    "obj": {
+        "value" : {
+            "bars": [
+                {
+                    "name": "World's End",
+                    "number": 1
+                },
+                {
+                    "name": "Winchester",
+                    "number": 2
+                }
+            ]
+        }
+    }
+}

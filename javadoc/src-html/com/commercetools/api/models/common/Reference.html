@@ -75,27 +75,26 @@
 <span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeReferenceImpl.class, name = TypeReference.TYPE),</span>
 <span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneReferenceImpl.class, name = ZoneReference.ZONE) })</span>
 <span class="source-line-no">064</span><span id="line.64">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)</span>
-<span class="source-line-no">065</span><span id="line.65">@JsonDeserialize(as = ReferenceImpl.class)</span>
-<span class="source-line-no">066</span><span id="line.66">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">067</span><span id="line.67">public interface Reference {</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @NotNull</span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("typeId")</span>
-<span class="source-line-no">071</span><span id="line.71">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">    *  &lt;p&gt;Unique ID of the referenced resource.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">    */</span>
-<span class="source-line-no">076</span><span id="line.76">    @NotNull</span>
-<span class="source-line-no">077</span><span id="line.77">    @JsonProperty("id")</span>
-<span class="source-line-no">078</span><span id="line.78">    public String getId();</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setId(final String id);</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
-<span class="source-line-no">083</span><span id="line.83">        return helper.apply(this);</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85">}</span>
+<span class="source-line-no">065</span><span id="line.65">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">066</span><span id="line.66">public interface Reference {</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    @NotNull</span>
+<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("typeId")</span>
+<span class="source-line-no">070</span><span id="line.70">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">    *  &lt;p&gt;Unique ID of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">    */</span>
+<span class="source-line-no">075</span><span id="line.75">    @NotNull</span>
+<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("id")</span>
+<span class="source-line-no">077</span><span id="line.77">    public String getId();</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setId(final String id);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
+<span class="source-line-no">082</span><span id="line.82">        return helper.apply(this);</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84">}</span>
 
 
 

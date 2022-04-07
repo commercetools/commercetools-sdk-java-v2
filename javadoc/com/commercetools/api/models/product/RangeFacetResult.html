@@ -121,7 +121,7 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="RangeFacetResultBuilder.html" title="class in com.commercetools.api.models.product">RangeFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.product.RangeFacetResult)">builder</a></span>&#8203;(<a href="RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRanges()">getRanges</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a></code></div>
@@ -131,10 +131,10 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.product.RangeFacetResult)">of</a></span>&#8203;(<a href="RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setRanges(com.commercetools.api.models.product.FacetRange...)">setRanges</a></span>&#8203;(<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>...&nbsp;ranges)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setRanges(com.commercetools.api.models.product.FacetResultRange...)">setRanges</a></span>&#8203;(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>...&nbsp;ranges)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setRanges(java.util.List)">setRanges</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>&gt;&nbsp;ranges)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setRanges(java.util.List)">setRanges</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&gt;&nbsp;ranges)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withRangeFacetResult(java.util.function.Function)">withRangeFacetResult</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a>,&#8203;T&gt;&nbsp;helper)</code></div>
@@ -179,19 +179,19 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <h3>getRanges</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.22">getRanges</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.22">getRanges</a></span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="setRanges(com.commercetools.api.models.product.FacetRange...)">
+<section class="detail" id="setRanges(com.commercetools.api.models.product.FacetResultRange...)">
 <h3>setRanges</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.27">setRanges</a></span>&#8203;<span class="parameters">(<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>...&nbsp;ranges)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.27">setRanges</a></span>&#8203;<span class="parameters">(<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>...&nbsp;ranges)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRanges(java.util.List)">
 <h3>setRanges</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.30">setRanges</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a>&gt;&nbsp;ranges)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/RangeFacetResult.html#line.30">setRanges</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetResultRange.html" title="interface in com.commercetools.api.models.product">FacetResultRange</a>&gt;&nbsp;ranges)</span></div>
 </section>
 </li>
 <li>

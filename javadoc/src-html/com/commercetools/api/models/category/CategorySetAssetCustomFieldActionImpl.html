@@ -67,67 +67,59 @@
 <span class="source-line-no">054</span><span id="line.54">        return this.assetKey;</span>
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">    *  &lt;p&gt;Name of the &lt;a href="/../api/projects/custom-fields"&gt;Custom Field&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">    */</span>
-<span class="source-line-no">060</span><span id="line.60">    public String getName() {</span>
-<span class="source-line-no">061</span><span id="line.61">        return this.name;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">    *  &lt;p&gt;If &lt;code&gt;value&lt;/code&gt; is absent or &lt;code&gt;null&lt;/code&gt;, this field will be removed if it exists.</span>
-<span class="source-line-no">066</span><span id="line.66">    *  Trying to remove a field that does not exist will fail with an &lt;a href="/../api/errors#general-400-invalid-operation"&gt;InvalidOperation&lt;/a&gt; error.</span>
-<span class="source-line-no">067</span><span id="line.67">    *  If &lt;code&gt;value&lt;/code&gt; is provided, it is set for the field defined by &lt;code&gt;name&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">    */</span>
-<span class="source-line-no">069</span><span id="line.69">    public java.lang.Object getValue() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.value;</span>
+<span class="source-line-no">057</span><span id="line.57">    public String getName() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return this.name;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public java.lang.Object getValue() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return this.value;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public void setAssetId(final String assetId) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.assetId = assetId;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public void setAssetKey(final String assetKey) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.assetKey = assetKey;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setAssetId(final String assetId) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.assetId = assetId;</span>
+<span class="source-line-no">073</span><span id="line.73">    public void setName(final String name) {</span>
+<span class="source-line-no">074</span><span id="line.74">        this.name = name;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setAssetKey(final String assetKey) {</span>
-<span class="source-line-no">078</span><span id="line.78">        this.assetKey = assetKey;</span>
+<span class="source-line-no">077</span><span id="line.77">    public void setValue(final java.lang.Object value) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.value = value;</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setName(final String name) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.name = name;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setValue(final java.lang.Object value) {</span>
-<span class="source-line-no">086</span><span id="line.86">        this.value = value;</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">081</span><span id="line.81">    @Override</span>
+<span class="source-line-no">082</span><span id="line.82">    public boolean equals(Object o) {</span>
+<span class="source-line-no">083</span><span id="line.83">        if (this == o)</span>
+<span class="source-line-no">084</span><span id="line.84">            return true;</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">087</span><span id="line.87">            return false;</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    @Override</span>
-<span class="source-line-no">090</span><span id="line.90">    public boolean equals(Object o) {</span>
-<span class="source-line-no">091</span><span id="line.91">        if (this == o)</span>
-<span class="source-line-no">092</span><span id="line.92">            return true;</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">095</span><span id="line.95">            return false;</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">        CategorySetAssetCustomFieldActionImpl that = (CategorySetAssetCustomFieldActionImpl) o;</span>
+<span class="source-line-no">089</span><span id="line.89">        CategorySetAssetCustomFieldActionImpl that = (CategorySetAssetCustomFieldActionImpl) o;</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">092</span><span id="line.92">                .append(assetId, that.assetId)</span>
+<span class="source-line-no">093</span><span id="line.93">                .append(assetKey, that.assetKey)</span>
+<span class="source-line-no">094</span><span id="line.94">                .append(name, that.name)</span>
+<span class="source-line-no">095</span><span id="line.95">                .append(value, that.value)</span>
+<span class="source-line-no">096</span><span id="line.96">                .isEquals();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">100</span><span id="line.100">                .append(assetId, that.assetId)</span>
-<span class="source-line-no">101</span><span id="line.101">                .append(assetKey, that.assetKey)</span>
-<span class="source-line-no">102</span><span id="line.102">                .append(name, that.name)</span>
-<span class="source-line-no">103</span><span id="line.103">                .append(value, that.value)</span>
-<span class="source-line-no">104</span><span id="line.104">                .isEquals();</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    @Override</span>
-<span class="source-line-no">108</span><span id="line.108">    public int hashCode() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">110</span><span id="line.110">                .append(assetId)</span>
-<span class="source-line-no">111</span><span id="line.111">                .append(assetKey)</span>
-<span class="source-line-no">112</span><span id="line.112">                .append(name)</span>
-<span class="source-line-no">113</span><span id="line.113">                .append(value)</span>
-<span class="source-line-no">114</span><span id="line.114">                .toHashCode();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">}</span>
+<span class="source-line-no">099</span><span id="line.99">    @Override</span>
+<span class="source-line-no">100</span><span id="line.100">    public int hashCode() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">102</span><span id="line.102">                .append(assetId)</span>
+<span class="source-line-no">103</span><span id="line.103">                .append(assetKey)</span>
+<span class="source-line-no">104</span><span id="line.104">                .append(name)</span>
+<span class="source-line-no">105</span><span id="line.105">                .append(value)</span>
+<span class="source-line-no">106</span><span id="line.106">                .toHashCode();</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">}</span>
 
 
 

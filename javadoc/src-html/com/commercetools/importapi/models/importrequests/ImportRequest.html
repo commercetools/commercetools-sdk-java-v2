@@ -41,21 +41,20 @@
 <span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantImportRequestImpl.class, name = ProductVariantImportRequest.PRODUCT_VARIANT),</span>
 <span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl.class, name = ProductVariantPatchRequest.PRODUCT_VARIANT_PATCH) })</span>
 <span class="source-line-no">030</span><span id="line.30">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ImportRequestImpl.class, visible = true)</span>
-<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = ImportRequestImpl.class)</span>
-<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">033</span><span id="line.33">public interface ImportRequest {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">    *  &lt;p&gt;The type of the import resource.&lt;/p&gt;</span>
-<span class="source-line-no">037</span><span id="line.37">    */</span>
-<span class="source-line-no">038</span><span id="line.38">    @NotNull</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("type")</span>
-<span class="source-line-no">040</span><span id="line.40">    public ImportResourceType getType();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    default &lt;T&gt; T withImportRequest(Function&lt;ImportRequest, T&gt; helper) {</span>
-<span class="source-line-no">043</span><span id="line.43">        return helper.apply(this);</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45">}</span>
+<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">032</span><span id="line.32">public interface ImportRequest {</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    /**</span>
+<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;The type of the import resource.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("type")</span>
+<span class="source-line-no">039</span><span id="line.39">    public ImportResourceType getType();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    default &lt;T&gt; T withImportRequest(Function&lt;ImportRequest, T&gt; helper) {</span>
+<span class="source-line-no">042</span><span id="line.42">        return helper.apply(this);</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44">}</span>
 
 
 

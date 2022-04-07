@@ -280,24 +280,23 @@
 <span class="source-line-no">267</span><span id="line.267">        @JsonSubTypes.Type(value = com.commercetools.history.models.change.UpdateSyncInfoChangeImpl.class, name = UpdateSyncInfoChange.UPDATE_SYNC_INFO_CHANGE),</span>
 <span class="source-line-no">268</span><span id="line.268">        @JsonSubTypes.Type(value = com.commercetools.history.models.change.VerifyEmailChangeImpl.class, name = VerifyEmailChange.VERIFY_EMAIL_CHANGE) })</span>
 <span class="source-line-no">269</span><span id="line.269">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeImpl.class, visible = true)</span>
-<span class="source-line-no">270</span><span id="line.270">@JsonDeserialize(as = ChangeImpl.class)</span>
-<span class="source-line-no">271</span><span id="line.271">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">272</span><span id="line.272">public interface Change {</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    @NotNull</span>
-<span class="source-line-no">275</span><span id="line.275">    @JsonProperty("type")</span>
-<span class="source-line-no">276</span><span id="line.276">    public String getType();</span>
-<span class="source-line-no">277</span><span id="line.277"></span>
-<span class="source-line-no">278</span><span id="line.278">    @NotNull</span>
-<span class="source-line-no">279</span><span id="line.279">    @JsonProperty("change")</span>
-<span class="source-line-no">280</span><span id="line.280">    public String getChange();</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    public void setChange(final String change);</span>
-<span class="source-line-no">283</span><span id="line.283"></span>
-<span class="source-line-no">284</span><span id="line.284">    default &lt;T&gt; T withChange(Function&lt;Change, T&gt; helper) {</span>
-<span class="source-line-no">285</span><span id="line.285">        return helper.apply(this);</span>
-<span class="source-line-no">286</span><span id="line.286">    }</span>
-<span class="source-line-no">287</span><span id="line.287">}</span>
+<span class="source-line-no">270</span><span id="line.270">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">271</span><span id="line.271">public interface Change {</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    @NotNull</span>
+<span class="source-line-no">274</span><span id="line.274">    @JsonProperty("type")</span>
+<span class="source-line-no">275</span><span id="line.275">    public String getType();</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    @NotNull</span>
+<span class="source-line-no">278</span><span id="line.278">    @JsonProperty("change")</span>
+<span class="source-line-no">279</span><span id="line.279">    public String getChange();</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    public void setChange(final String change);</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    default &lt;T&gt; T withChange(Function&lt;Change, T&gt; helper) {</span>
+<span class="source-line-no">284</span><span id="line.284">        return helper.apply(this);</span>
+<span class="source-line-no">285</span><span id="line.285">    }</span>
+<span class="source-line-no">286</span><span id="line.286">}</span>
 
 
 

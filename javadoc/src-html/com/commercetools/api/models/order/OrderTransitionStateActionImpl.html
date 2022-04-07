@@ -53,47 +53,44 @@
 <span class="source-line-no">040</span><span id="line.40">        return this.action;</span>
 <span class="source-line-no">041</span><span id="line.41">    }</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:State"&gt;State&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">    */</span>
-<span class="source-line-no">046</span><span id="line.46">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return this.state;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public Boolean getForce() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return this.force;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.state = state;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setForce(final Boolean force) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.force = force;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @Override</span>
-<span class="source-line-no">063</span><span id="line.63">    public boolean equals(Object o) {</span>
-<span class="source-line-no">064</span><span id="line.64">        if (this == o)</span>
-<span class="source-line-no">065</span><span id="line.65">            return true;</span>
+<span class="source-line-no">043</span><span id="line.43">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
+<span class="source-line-no">044</span><span id="line.44">        return this.state;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public Boolean getForce() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return this.force;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
+<span class="source-line-no">052</span><span id="line.52">        this.state = state;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public void setForce(final Boolean force) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.force = force;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    @Override</span>
+<span class="source-line-no">060</span><span id="line.60">    public boolean equals(Object o) {</span>
+<span class="source-line-no">061</span><span id="line.61">        if (this == o)</span>
+<span class="source-line-no">062</span><span id="line.62">            return true;</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">065</span><span id="line.65">            return false;</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">068</span><span id="line.68">            return false;</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">        OrderTransitionStateActionImpl that = (OrderTransitionStateActionImpl) o;</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">073</span><span id="line.73">                .append(state, that.state)</span>
-<span class="source-line-no">074</span><span id="line.74">                .append(force, that.force)</span>
-<span class="source-line-no">075</span><span id="line.75">                .isEquals();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    @Override</span>
-<span class="source-line-no">079</span><span id="line.79">    public int hashCode() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return new HashCodeBuilder(17, 37).append(action).append(state).append(force).toHashCode();</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">}</span>
+<span class="source-line-no">067</span><span id="line.67">        OrderTransitionStateActionImpl that = (OrderTransitionStateActionImpl) o;</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">070</span><span id="line.70">                .append(state, that.state)</span>
+<span class="source-line-no">071</span><span id="line.71">                .append(force, that.force)</span>
+<span class="source-line-no">072</span><span id="line.72">                .isEquals();</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    @Override</span>
+<span class="source-line-no">076</span><span id="line.76">    public int hashCode() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return new HashCodeBuilder(17, 37).append(action).append(state).append(force).toHashCode();</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">}</span>
 
 
 

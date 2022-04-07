@@ -81,64 +81,61 @@
 <span class="source-line-no">068</span><span id="line.68">        return this.addedAt;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">    *  &lt;p&gt;The representation used when creating or updating a &lt;a href="/../api/projects/types#list-of-customizable-data-types"&gt;customizable data type&lt;/a&gt; with Custom Fields.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">    */</span>
-<span class="source-line-no">074</span><span id="line.74">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return this.custom;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.name = name;</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.description = description;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public void setQuantity(final Long quantity) {</span>
-<span class="source-line-no">087</span><span id="line.87">        this.quantity = quantity;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public void setAddedAt(final java.time.ZonedDateTime addedAt) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.addedAt = addedAt;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.custom = custom;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    @Override</span>
-<span class="source-line-no">099</span><span id="line.99">    public boolean equals(Object o) {</span>
-<span class="source-line-no">100</span><span id="line.100">        if (this == o)</span>
-<span class="source-line-no">101</span><span id="line.101">            return true;</span>
+<span class="source-line-no">071</span><span id="line.71">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.custom;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.name = name;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
+<span class="source-line-no">080</span><span id="line.80">        this.description = description;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setQuantity(final Long quantity) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.quantity = quantity;</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setAddedAt(final java.time.ZonedDateTime addedAt) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.addedAt = addedAt;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.custom = custom;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    @Override</span>
+<span class="source-line-no">096</span><span id="line.96">    public boolean equals(Object o) {</span>
+<span class="source-line-no">097</span><span id="line.97">        if (this == o)</span>
+<span class="source-line-no">098</span><span id="line.98">            return true;</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">101</span><span id="line.101">            return false;</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">104</span><span id="line.104">            return false;</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">        MyShoppingListAddTextLineItemActionImpl that = (MyShoppingListAddTextLineItemActionImpl) o;</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">109</span><span id="line.109">                .append(name, that.name)</span>
-<span class="source-line-no">110</span><span id="line.110">                .append(description, that.description)</span>
-<span class="source-line-no">111</span><span id="line.111">                .append(quantity, that.quantity)</span>
-<span class="source-line-no">112</span><span id="line.112">                .append(addedAt, that.addedAt)</span>
-<span class="source-line-no">113</span><span id="line.113">                .append(custom, that.custom)</span>
-<span class="source-line-no">114</span><span id="line.114">                .isEquals();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    @Override</span>
-<span class="source-line-no">118</span><span id="line.118">    public int hashCode() {</span>
-<span class="source-line-no">119</span><span id="line.119">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">120</span><span id="line.120">                .append(name)</span>
-<span class="source-line-no">121</span><span id="line.121">                .append(description)</span>
-<span class="source-line-no">122</span><span id="line.122">                .append(quantity)</span>
-<span class="source-line-no">123</span><span id="line.123">                .append(addedAt)</span>
-<span class="source-line-no">124</span><span id="line.124">                .append(custom)</span>
-<span class="source-line-no">125</span><span id="line.125">                .toHashCode();</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">}</span>
+<span class="source-line-no">103</span><span id="line.103">        MyShoppingListAddTextLineItemActionImpl that = (MyShoppingListAddTextLineItemActionImpl) o;</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">106</span><span id="line.106">                .append(name, that.name)</span>
+<span class="source-line-no">107</span><span id="line.107">                .append(description, that.description)</span>
+<span class="source-line-no">108</span><span id="line.108">                .append(quantity, that.quantity)</span>
+<span class="source-line-no">109</span><span id="line.109">                .append(addedAt, that.addedAt)</span>
+<span class="source-line-no">110</span><span id="line.110">                .append(custom, that.custom)</span>
+<span class="source-line-no">111</span><span id="line.111">                .isEquals();</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    @Override</span>
+<span class="source-line-no">115</span><span id="line.115">    public int hashCode() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">117</span><span id="line.117">                .append(name)</span>
+<span class="source-line-no">118</span><span id="line.118">                .append(description)</span>
+<span class="source-line-no">119</span><span id="line.119">                .append(quantity)</span>
+<span class="source-line-no">120</span><span id="line.120">                .append(addedAt)</span>
+<span class="source-line-no">121</span><span id="line.121">                .append(custom)</span>
+<span class="source-line-no">122</span><span id="line.122">                .toHashCode();</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">}</span>
 
 
 

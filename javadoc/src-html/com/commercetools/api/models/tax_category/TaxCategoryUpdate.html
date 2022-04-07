@@ -28,11 +28,11 @@
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">017</span><span id="line.17">@JsonDeserialize(as = TaxCategoryUpdateImpl.class)</span>
-<span class="source-line-no">018</span><span id="line.18">public interface TaxCategoryUpdate extends</span>
-<span class="source-line-no">019</span><span id="line.19">        com.commercetools.api.models.ResourceUpdate&lt;TaxCategoryUpdate, TaxCategoryUpdateAction, TaxCategoryUpdateBuilder&gt; {</span>
+<span class="source-line-no">018</span><span id="line.18">public interface TaxCategoryUpdate</span>
+<span class="source-line-no">019</span><span id="line.19">        extends com.commercetools.api.models.ResourceUpdate&lt;TaxCategoryUpdate, TaxCategoryUpdateAction&gt; {</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">    /**</span>
-<span class="source-line-no">022</span><span id="line.22">    *  &lt;p&gt;Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a &lt;a href="/../api/errors#409-conflict"&gt;409 Conflict&lt;/a&gt; will be returned.&lt;/p&gt;</span>
+<span class="source-line-no">022</span><span id="line.22">    *  &lt;p&gt;Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.&lt;/p&gt;</span>
 <span class="source-line-no">023</span><span id="line.23">    */</span>
 <span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
 <span class="source-line-no">025</span><span id="line.25">    @JsonProperty("version")</span>

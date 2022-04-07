@@ -33,7 +33,7 @@
 <span class="source-line-no">020</span><span id="line.20">    @NotNull</span>
 <span class="source-line-no">021</span><span id="line.21">    @Valid</span>
 <span class="source-line-no">022</span><span id="line.22">    @JsonProperty("type")</span>
-<span class="source-line-no">023</span><span id="line.23">    public AttributeType getType();</span>
+<span class="source-line-no">023</span><span id="line.23">    public Object getType();</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">    /**</span>
 <span class="source-line-no">026</span><span id="line.26">    *  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an &lt;code&gt;enum&lt;/code&gt; or &lt;code&gt;lenum&lt;/code&gt; type and sets thereof.&lt;/p&gt;</span>
@@ -74,7 +74,7 @@
 <span class="source-line-no">061</span><span id="line.61">    @JsonProperty("isSearchable")</span>
 <span class="source-line-no">062</span><span id="line.62">    public Boolean getIsSearchable();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public void setType(final AttributeType type);</span>
+<span class="source-line-no">064</span><span id="line.64">    public void setType(final Object type);</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    public void setName(final String name);</span>
 <span class="source-line-no">067</span><span id="line.67"></span>

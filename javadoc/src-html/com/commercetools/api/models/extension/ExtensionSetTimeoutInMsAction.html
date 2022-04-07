@@ -30,40 +30,39 @@
 <span class="source-line-no">017</span><span id="line.17">    String SET_TIMEOUT_IN_MS = "setTimeoutInMs";</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">    /**</span>
-<span class="source-line-no">020</span><span id="line.20">    *  &lt;p&gt;Value to set. If not defined, the maximum value is used.</span>
-<span class="source-line-no">021</span><span id="line.21">    *  If no timeout is provided, the default value is used for all types of Extensions.</span>
-<span class="source-line-no">022</span><span id="line.22">    *  The maximum value is 10000 ms (10 seconds) for &lt;code&gt;payment&lt;/code&gt; Extensions and 2000 ms (2 seconds) for all other Extensions.&lt;/p&gt;</span>
-<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;This limit can be increased per Project after we review the performance impact.</span>
-<span class="source-line-no">024</span><span id="line.24">    *  Please contact our support via the &lt;a href="https://support.commercetools.com/"&gt;Support Portal&lt;/a&gt; and provide the Region, Project key, and use case.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("timeoutInMs")</span>
-<span class="source-line-no">028</span><span id="line.28">    public Integer getTimeoutInMs();</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public void setTimeoutInMs(final Integer timeoutInMs);</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public static ExtensionSetTimeoutInMsAction of() {</span>
-<span class="source-line-no">033</span><span id="line.33">        return new ExtensionSetTimeoutInMsActionImpl();</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public static ExtensionSetTimeoutInMsAction of(final ExtensionSetTimeoutInMsAction template) {</span>
-<span class="source-line-no">037</span><span id="line.37">        ExtensionSetTimeoutInMsActionImpl instance = new ExtensionSetTimeoutInMsActionImpl();</span>
-<span class="source-line-no">038</span><span id="line.38">        instance.setTimeoutInMs(template.getTimeoutInMs());</span>
-<span class="source-line-no">039</span><span id="line.39">        return instance;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public static ExtensionSetTimeoutInMsActionBuilder builder() {</span>
-<span class="source-line-no">043</span><span id="line.43">        return ExtensionSetTimeoutInMsActionBuilder.of();</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template) {</span>
-<span class="source-line-no">047</span><span id="line.47">        return ExtensionSetTimeoutInMsActionBuilder.of(template);</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    default &lt;T&gt; T withExtensionSetTimeoutInMsAction(Function&lt;ExtensionSetTimeoutInMsAction, T&gt; helper) {</span>
-<span class="source-line-no">051</span><span id="line.51">        return helper.apply(this);</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53">}</span>
+<span class="source-line-no">020</span><span id="line.20">    *  &lt;p&gt;The maximum time the commercetools platform waits for a response from the extension.</span>
+<span class="source-line-no">021</span><span id="line.21">    *  The maximum value is 2000 ms (2 seconds).</span>
+<span class="source-line-no">022</span><span id="line.22">    *  This limit can be increased per project after we review the performance impact.</span>
+<span class="source-line-no">023</span><span id="line.23">    *  Please contact Support via the support and provide the region, project key and use case.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    */</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("timeoutInMs")</span>
+<span class="source-line-no">027</span><span id="line.27">    public Integer getTimeoutInMs();</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public void setTimeoutInMs(final Integer timeoutInMs);</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    public static ExtensionSetTimeoutInMsAction of() {</span>
+<span class="source-line-no">032</span><span id="line.32">        return new ExtensionSetTimeoutInMsActionImpl();</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public static ExtensionSetTimeoutInMsAction of(final ExtensionSetTimeoutInMsAction template) {</span>
+<span class="source-line-no">036</span><span id="line.36">        ExtensionSetTimeoutInMsActionImpl instance = new ExtensionSetTimeoutInMsActionImpl();</span>
+<span class="source-line-no">037</span><span id="line.37">        instance.setTimeoutInMs(template.getTimeoutInMs());</span>
+<span class="source-line-no">038</span><span id="line.38">        return instance;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public static ExtensionSetTimeoutInMsActionBuilder builder() {</span>
+<span class="source-line-no">042</span><span id="line.42">        return ExtensionSetTimeoutInMsActionBuilder.of();</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template) {</span>
+<span class="source-line-no">046</span><span id="line.46">        return ExtensionSetTimeoutInMsActionBuilder.of(template);</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    default &lt;T&gt; T withExtensionSetTimeoutInMsAction(Function&lt;ExtensionSetTimeoutInMsAction, T&gt; helper) {</span>
+<span class="source-line-no">050</span><span id="line.50">        return helper.apply(this);</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52">}</span>
 
 
 

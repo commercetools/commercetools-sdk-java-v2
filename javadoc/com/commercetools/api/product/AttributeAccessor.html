@@ -16,7 +16,11 @@
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search">SEARCH:</label>
@@ -71,18 +75,12 @@ loadScripts(document, 'script');</script>
 <h1 title="Class AttributeAccessor" class="title">Class AttributeAccessor</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="../models/product/AttributeAccessor.html" title="class in com.commercetools.api.models.product">com.commercetools.api.models.product.AttributeAccessor</a>
 <div class="inheritance">com.commercetools.api.product.AttributeAccessor</div>
-</div>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.7">AttributeAccessor</a></span>
-<span class="extends-implements">extends <a href="../models/product/AttributeAccessor.html" title="class in com.commercetools.api.models.product">AttributeAccessor</a></span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="../models/product/AttributeAccessor.html" title="class in com.commercetools.api.models.product"><code>AttributeAccessor</code></a> instead</div>
-</div>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.21">AttributeAccessor</a></span>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,9 +93,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E()">AttributeAccessor</a></span>()</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-&nbsp;</div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -105,9 +101,94 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.commercetools.api.models.product.AttributeAccessor">Methods inherited from class&nbsp;com.commercetools.api.models.product.<a href="../models/product/AttributeAccessor.html" title="class in com.commercetools.api.models.product">AttributeAccessor</a></h3>
-<code><a href="../models/product/AttributeAccessor.html#asAttributeMap(com.commercetools.api.models.product.ProductVariant)">asAttributeMap</a>, <a href="../models/product/AttributeAccessor.html#asBoolean(com.commercetools.api.models.product.Attribute)">asBoolean</a>, <a href="../models/product/AttributeAccessor.html#asDate(com.commercetools.api.models.product.Attribute)">asDate</a>, <a href="../models/product/AttributeAccessor.html#asDateTime(com.commercetools.api.models.product.Attribute)">asDateTime</a>, <a href="../models/product/AttributeAccessor.html#asDouble(com.commercetools.api.models.product.Attribute)">asDouble</a>, <a href="../models/product/AttributeAccessor.html#asEnum(com.commercetools.api.models.product.Attribute)">asEnum</a>, <a href="../models/product/AttributeAccessor.html#asLocalizedEnum(com.commercetools.api.models.product.Attribute)">asLocalizedEnum</a>, <a href="../models/product/AttributeAccessor.html#asLocalizedString(com.commercetools.api.models.product.Attribute)">asLocalizedString</a>, <a href="../models/product/AttributeAccessor.html#asLong(com.commercetools.api.models.product.Attribute)">asLong</a>, <a href="../models/product/AttributeAccessor.html#asMap(com.commercetools.api.models.product.ProductVariant)">asMap</a>, <a href="../models/product/AttributeAccessor.html#asMoney(com.commercetools.api.models.product.Attribute)">asMoney</a>, <a href="../models/product/AttributeAccessor.html#asReference(com.commercetools.api.models.product.Attribute)">asReference</a>, <a href="../models/product/AttributeAccessor.html#asSetBoolean(com.commercetools.api.models.product.Attribute)">asSetBoolean</a>, <a href="../models/product/AttributeAccessor.html#asSetDate(com.commercetools.api.models.product.Attribute)">asSetDate</a>, <a href="../models/product/AttributeAccessor.html#asSetDateTime(com.commercetools.api.models.product.Attribute)">asSetDateTime</a>, <a href="../models/product/AttributeAccessor.html#asSetDouble(com.commercetools.api.models.product.Attribute)">asSetDouble</a>, <a href="../models/product/AttributeAccessor.html#asSetEnum(com.commercetools.api.models.product.Attribute)">asSetEnum</a>, <a href="../models/product/AttributeAccessor.html#asSetLocalizedEnum(com.commercetools.api.models.product.Attribute)">asSetLocalizedEnum</a>, <a href="../models/product/AttributeAccessor.html#asSetLocalizedString(com.commercetools.api.models.product.Attribute)">asSetLocalizedString</a>, <a href="../models/product/AttributeAccessor.html#asSetLong(com.commercetools.api.models.product.Attribute)">asSetLong</a>, <a href="../models/product/AttributeAccessor.html#asSetMoney(com.commercetools.api.models.product.Attribute)">asSetMoney</a>, <a href="../models/product/AttributeAccessor.html#asSetReference(com.commercetools.api.models.product.Attribute)">asSetReference</a>, <a href="../models/product/AttributeAccessor.html#asSetString(com.commercetools.api.models.product.Attribute)">asSetString</a>, <a href="../models/product/AttributeAccessor.html#asSetTime(com.commercetools.api.models.product.Attribute)">asSetTime</a>, <a href="../models/product/AttributeAccessor.html#asString(com.commercetools.api.models.product.Attribute)">asString</a>, <a href="../models/product/AttributeAccessor.html#asTime(com.commercetools.api.models.product.Attribute)">asTime</a></code></div>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asAttributeMap(com.commercetools.api.models.product.ProductVariant)">asAttributeMap</a></span>&#8203;(<a href="../models/product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asBoolean(com.commercetools.api.models.product.Attribute)">asBoolean</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asDate(com.commercetools.api.models.product.Attribute)">asDate</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asDateTime(com.commercetools.api.models.product.Attribute)">asDateTime</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asDouble(com.commercetools.api.models.product.Attribute)">asDouble</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../models/product_type/AttributePlainEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributePlainEnumValue</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asEnum(com.commercetools.api.models.product.Attribute)">asEnum</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../models/product_type/AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asLocalizedEnum(com.commercetools.api.models.product.Attribute)">asLocalizedEnum</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asLocalizedString(com.commercetools.api.models.product.Attribute)">asLocalizedString</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asLong(com.commercetools.api.models.product.Attribute)">asLong</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asMap(com.commercetools.api.models.product.ProductVariant)">asMap</a></span>&#8203;(<a href="../models/product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asMoney(com.commercetools.api.models.product.Attribute)">asMoney</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="../models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asReference(com.commercetools.api.models.product.Attribute)">asReference</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetBoolean(com.commercetools.api.models.product.Attribute)">asSetBoolean</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetDate(com.commercetools.api.models.product.Attribute)">asSetDate</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetDateTime(com.commercetools.api.models.product.Attribute)">asSetDateTime</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetDouble(com.commercetools.api.models.product.Attribute)">asSetDouble</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/product_type/AttributePlainEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributePlainEnumValue</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetEnum(com.commercetools.api.models.product.Attribute)">asSetEnum</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/product_type/AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetLocalizedEnum(com.commercetools.api.models.product.Attribute)">asSetLocalizedEnum</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetLocalizedString(com.commercetools.api.models.product.Attribute)">asSetLocalizedString</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetLong(com.commercetools.api.models.product.Attribute)">asSetLong</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetMoney(com.commercetools.api.models.product.Attribute)">asSetMoney</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetReference(com.commercetools.api.models.product.Attribute)">asSetReference</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetString(com.commercetools.api.models.product.Attribute)">asSetString</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link">LocalTime</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asSetTime(com.commercetools.api.models.product.Attribute)">asSetTime</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asString(com.commercetools.api.models.product.Attribute)">asString</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link">LocalTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#asTime(com.commercetools.api.models.product.Attribute)">asTime</a></span>&#8203;(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -125,8 +206,171 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AttributeAccessor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.8">AttributeAccessor</a></span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.21">AttributeAccessor</a></span>()</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method.detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="asAttributeMap(com.commercetools.api.models.product.ProductVariant)">
+<h3>asAttributeMap</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.22">asAttributeMap</a></span>&#8203;<span class="parameters">(<a href="../models/product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asMap(com.commercetools.api.models.product.ProductVariant)">
+<h3>asMap</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.26">asMap</a></span>&#8203;<span class="parameters">(<a href="../models/product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asDate(com.commercetools.api.models.product.Attribute)">
+<h3>asDate</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.30">asDate</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asTime(com.commercetools.api.models.product.Attribute)">
+<h3>asTime</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link">LocalTime</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.38">asTime</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asDateTime(com.commercetools.api.models.product.Attribute)">
+<h3>asDateTime</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.46">asDateTime</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetDate(com.commercetools.api.models.product.Attribute)">
+<h3>asSetDate</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.54">asSetDate</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetTime(com.commercetools.api.models.product.Attribute)">
+<h3>asSetTime</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link">LocalTime</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.64">asSetTime</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetDateTime(com.commercetools.api.models.product.Attribute)">
+<h3>asSetDateTime</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.74">asSetDateTime</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asString(com.commercetools.api.models.product.Attribute)">
+<h3>asString</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.84">asString</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asBoolean(com.commercetools.api.models.product.Attribute)">
+<h3>asBoolean</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.88">asBoolean</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asDouble(com.commercetools.api.models.product.Attribute)">
+<h3>asDouble</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.92">asDouble</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asLocalizedString(com.commercetools.api.models.product.Attribute)">
+<h3>asLocalizedString</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.96">asLocalizedString</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asEnum(com.commercetools.api.models.product.Attribute)">
+<h3>asEnum</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../models/product_type/AttributePlainEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributePlainEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.100">asEnum</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asLocalizedEnum(com.commercetools.api.models.product.Attribute)">
+<h3>asLocalizedEnum</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../models/product_type/AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.104">asLocalizedEnum</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asLong(com.commercetools.api.models.product.Attribute)">
+<h3>asLong</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.108">asLong</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asReference(com.commercetools.api.models.product.Attribute)">
+<h3>asReference</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.112">asReference</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asMoney(com.commercetools.api.models.product.Attribute)">
+<h3>asMoney</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.116">asMoney</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetString(com.commercetools.api.models.product.Attribute)">
+<h3>asSetString</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.120">asSetString</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetBoolean(com.commercetools.api.models.product.Attribute)">
+<h3>asSetBoolean</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.125">asSetBoolean</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetDouble(com.commercetools.api.models.product.Attribute)">
+<h3>asSetDouble</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.130">asSetDouble</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetLocalizedString(com.commercetools.api.models.product.Attribute)">
+<h3>asSetLocalizedString</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.135">asSetLocalizedString</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetEnum(com.commercetools.api.models.product.Attribute)">
+<h3>asSetEnum</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/product_type/AttributePlainEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributePlainEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.140">asSetEnum</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetLocalizedEnum(com.commercetools.api.models.product.Attribute)">
+<h3>asSetLocalizedEnum</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/product_type/AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.145">asSetLocalizedEnum</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetLong(com.commercetools.api.models.product.Attribute)">
+<h3>asSetLong</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.150">asSetLong</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetReference(com.commercetools.api.models.product.Attribute)">
+<h3>asSetReference</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.155">asSetReference</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="asSetMoney(com.commercetools.api.models.product.Attribute)">
+<h3>asSetMoney</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/product/AttributeAccessor.html#line.160">asSetMoney</a></span>&#8203;<span class="parameters">(<a href="../models/product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&nbsp;attribute)</span></div>
 </section>
 </li>
 </ul>

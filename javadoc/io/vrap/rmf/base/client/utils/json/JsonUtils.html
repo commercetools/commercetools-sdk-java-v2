@@ -45,7 +45,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -83,27 +83,12 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="VrapJsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">VrapJsonUtils</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.24">JsonUtils</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.23">JsonUtils</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">Class with methods to customize the JSON serialization/deserialization</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
-<li>
-<section class="nested-class-summary" id="nested.class.summary">
-<h2>Nested Class Summary</h2>
-<div class="caption"><span>Nested Classes</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Class</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;<a href="JsonUtils.SupplierThrowingIOException.html" title="type parameter in JsonUtils.SupplierThrowingIOException">T</a>&gt;</span></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-</div>
-</section>
-</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor.summary">
@@ -137,47 +122,27 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createObjectMapper(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)">createObjectMapper</a></span>&#8203;(<a href="modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#executing(io.vrap.rmf.base.client.utils.json.JsonUtils.SupplierThrowingIOException)">executing</a></span>&#8203;(<a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;T&gt;&nbsp;supplier)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromInputStream(java.io.InputStream,java.lang.Class)">fromInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">deserializes the given json string to the given class</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromInputStream(java.io.InputStream,java.lang.Class)">fromInputStream</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonByteArray(byte%5B%5D,java.lang.Class)">fromJsonByteArray</a></span>&#8203;(byte[]&nbsp;content,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">deserializes the given json string to the given class</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonByteArray(byte%5B%5D,java.lang.Class)">fromJsonByteArray</a></span>&#8203;(byte[]&nbsp;content,
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonString(java.lang.String,java.lang.Class)">fromJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">deserializes the given json string to the given class</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonNode(com.fasterxml.jackson.databind.JsonNode,com.fasterxml.jackson.core.type.TypeReference)">fromJsonNode</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a>&nbsp;jsonNode,
- com.fasterxml.jackson.core.type.TypeReference&lt;T&gt;&nbsp;typeReference)</code></div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfiguredObjectMapper()">getConfiguredObjectMapper</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Reads a Java object from JsonNode data.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonString(java.lang.String,com.fasterxml.jackson.core.type.TypeReference)">fromJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonAsString,
- com.fasterxml.jackson.core.type.TypeReference&lt;T&gt;&nbsp;typeReference)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Reads a Java object from JSON data (String).</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fromJsonString(java.lang.String,java.lang.Class)">fromJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">deserializes the given json string to the given class</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfiguredObjectMapper()">getConfiguredObjectMapper</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">default <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a></div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#parse(java.lang.String)">parse</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonAsString)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Parses a String containing JSON data and produces a <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>JsonNode</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#prettyPrint(java.lang.String)">prettyPrint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;json)</code></div>
@@ -189,14 +154,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">serializes the given object to JSON as a byte array</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonNode(java.lang.Object)">toJsonNode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonString(java.lang.Object)">toJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Converts a commercetools platform Java object to JSON as <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>JsonNode</code></a>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toJsonString(java.lang.Object)">toJsonString</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">serializes the given object to JSON as a byte array</div>
 </div>
 </div>
@@ -219,7 +179,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>JsonUtils</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.24">JsonUtils</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.23">JsonUtils</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -233,7 +193,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createObjectMapper()">
 <h3>createObjectMapper</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.36">createObjectMapper</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.35">createObjectMapper</a></span>()</div>
 <div class="block">creates a new <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> instance</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -244,7 +204,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createObjectMapper(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)">
 <h3>createObjectMapper</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.45">createObjectMapper</a></span>&#8203;<span class="parameters">(<a href="modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.44">createObjectMapper</a></span>&#8203;<span class="parameters">(<a href="modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>options</code> - configuration for jackson modules supplied by a <a href="ModuleSupplier.html" title="interface in io.vrap.rmf.base.client.utils.json"><code>ModuleSupplier</code></a></dd>
@@ -256,7 +216,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="toJsonByteArray(java.lang.Object)">
 <h3>toJsonByteArray</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.72">toJsonByteArray</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.71">toJsonByteArray</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span>
                               throws <span class="exceptions">com.fasterxml.jackson.core.JsonProcessingException</span></div>
 <div class="block">serializes the given object to JSON as a byte array</div>
 <dl class="notes">
@@ -272,7 +232,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="toJsonString(java.lang.Object)">
 <h3>toJsonString</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.82">toJsonString</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.81">toJsonString</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span>
                            throws <span class="exceptions">com.fasterxml.jackson.core.JsonProcessingException</span></div>
 <div class="block">serializes the given object to JSON as a byte array</div>
 <dl class="notes">
@@ -289,7 +249,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="fromJsonString(java.lang.String,java.lang.Class)">
 <h3>fromJsonString</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.92">fromJsonString</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span></div>
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span>
+                            throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">deserializes the given json string to the given class</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -297,78 +258,17 @@ loadScripts(document, 'script');</script>
 <dd><code>content</code> - json as string</dd>
 <dt>Returns:</dt>
 <dd>deserialized object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="fromJsonString(java.lang.String,com.fasterxml.jackson.core.type.TypeReference)">
-<h3>fromJsonString</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.104">fromJsonString</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonAsString,
- com.fasterxml.jackson.core.type.TypeReference&lt;T&gt;&nbsp;typeReference)</span></div>
-<div class="block">Reads a Java object from JSON data (String).</div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><code>T</code> - the type of the result</dd>
-<dt>Parameters:</dt>
-<dd><code>jsonAsString</code> - the JSON data which represents sth. of type <code>&lt;T&gt;</code></dd>
-<dd><code>typeReference</code> - the full generic type information about the object to create</dd>
-<dt>Returns:</dt>
-<dd>the created objected</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="fromJsonNode(com.fasterxml.jackson.databind.JsonNode,com.fasterxml.jackson.core.type.TypeReference)">
-<h3>fromJsonNode</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.117">fromJsonNode</a></span>&#8203;<span class="parameters">(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a>&nbsp;jsonNode,
- com.fasterxml.jackson.core.type.TypeReference&lt;T&gt;&nbsp;typeReference)</span></div>
-<div class="block">Reads a Java object from JsonNode data.
- <p></div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><code>T</code> - the type of the result</dd>
-<dt>Parameters:</dt>
-<dd><code>jsonNode</code> - the JSON data which represents sth. of type <code>&lt;T&gt;</code></dd>
-<dd><code>typeReference</code> - the full generic type information about the object to create</dd>
-<dt>Returns:</dt>
-<dd>the created objected</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="toJsonNode(java.lang.Object)">
-<h3>toJsonNode</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.130">toJsonNode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block">Converts a commercetools platform Java object to JSON as <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>JsonNode</code></a>.
- <p>If <code>value</code> is of type String and contains JSON data, that will be ignored, <code>value</code> will be treated as just any String.
- If you want to parse a JSON String to a JsonNode use <a href="#parse(java.lang.String)"><code>parse(java.lang.String)</code></a> instead.</p>
- <p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - the object to convert</dd>
-<dt>Returns:</dt>
-<dd>new json</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.lang.String)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.140">parse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonAsString)</span></div>
-<div class="block">Parses a String containing JSON data and produces a <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>JsonNode</code></a>.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>jsonAsString</code> - json data</dd>
-<dt>Returns:</dt>
-<dd>new JsonNode</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - deserialization errors</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="fromJsonByteArray(byte[],java.lang.Class)">
 <h3>fromJsonByteArray</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.151">fromJsonByteArray</a></span>&#8203;<span class="parameters">(byte[]&nbsp;content,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.103">fromJsonByteArray</a></span>&#8203;<span class="parameters">(byte[]&nbsp;content,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span>
+                               throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">deserializes the given json string to the given class</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -377,15 +277,16 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>deserialized object</dd>
 <dt>Throws:</dt>
-<dd><code><a href="JsonException.html" title="class in io.vrap.rmf.base.client.utils.json">JsonException</a></code> - deserialization errors</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - deserialization errors</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="fromInputStream(java.io.InputStream,java.lang.Class)">
 <h3>fromInputStream</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.162">fromInputStream</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.114">fromInputStream</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;content,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span>
+                             throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">deserializes the given json string to the given class</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -394,14 +295,14 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>deserialized object</dd>
 <dt>Throws:</dt>
-<dd><code><a href="JsonException.html" title="class in io.vrap.rmf.base.client.utils.json">JsonException</a></code> - deserialization errors</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - deserialization errors</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getConfiguredObjectMapper()">
 <h3>getConfiguredObjectMapper</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.170">getConfiguredObjectMapper</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.122">getConfiguredObjectMapper</a></span>()</div>
 <div class="block">default <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -412,7 +313,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="prettyPrint(java.lang.String)">
 <h3>prettyPrint</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.216">prettyPrint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;json)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.168">prettyPrint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;json)</span></div>
 <div class="block">Pretty prints a given JSON string.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -420,12 +321,6 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd><code>json</code> formatted</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="executing(io.vrap.rmf.base.client.utils.json.JsonUtils.SupplierThrowingIOException)">
-<h3>executing</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../../../src-html/io/vrap/rmf/base/client/utils/json/JsonUtils.html#line.226">executing</a></span>&#8203;<span class="parameters">(<a href="JsonUtils.SupplierThrowingIOException.html" title="interface in io.vrap.rmf.base.client.utils.json">JsonUtils.SupplierThrowingIOException</a>&lt;T&gt;&nbsp;supplier)</span></div>
 </section>
 </li>
 </ul>

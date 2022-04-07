@@ -36,39 +36,42 @@
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    String MONEY_SET = "money-set";</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
-<span class="source-line-no">027</span><span id="line.27">    @Valid</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("value")</span>
-<span class="source-line-no">029</span><span id="line.29">    public List&lt;TypedMoney&gt; getValue();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonIgnore</span>
-<span class="source-line-no">032</span><span id="line.32">    public void setValue(final TypedMoney... value);</span>
+<span class="source-line-no">026</span><span id="line.26">    /**</span>
+<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;TypedMoney is what is called BaseMoney in the HTTP API.&lt;/p&gt;</span>
+<span class="source-line-no">028</span><span id="line.28">    */</span>
+<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
+<span class="source-line-no">030</span><span id="line.30">    @Valid</span>
+<span class="source-line-no">031</span><span id="line.31">    @JsonProperty("value")</span>
+<span class="source-line-no">032</span><span id="line.32">    public List&lt;TypedMoney&gt; getValue();</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public void setValue(final List&lt;TypedMoney&gt; value);</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public static MoneySetAttribute of() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return new MoneySetAttributeImpl();</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public static MoneySetAttribute of(final MoneySetAttribute template) {</span>
-<span class="source-line-no">041</span><span id="line.41">        MoneySetAttributeImpl instance = new MoneySetAttributeImpl();</span>
-<span class="source-line-no">042</span><span id="line.42">        instance.setName(template.getName());</span>
-<span class="source-line-no">043</span><span id="line.43">        instance.setValue(template.getValue());</span>
-<span class="source-line-no">044</span><span id="line.44">        return instance;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static MoneySetAttributeBuilder builder() {</span>
-<span class="source-line-no">048</span><span id="line.48">        return MoneySetAttributeBuilder.of();</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static MoneySetAttributeBuilder builder(final MoneySetAttribute template) {</span>
-<span class="source-line-no">052</span><span id="line.52">        return MoneySetAttributeBuilder.of(template);</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    default &lt;T&gt; T withMoneySetAttribute(Function&lt;MoneySetAttribute, T&gt; helper) {</span>
-<span class="source-line-no">056</span><span id="line.56">        return helper.apply(this);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58">}</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonIgnore</span>
+<span class="source-line-no">035</span><span id="line.35">    public void setValue(final TypedMoney... value);</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public void setValue(final List&lt;TypedMoney&gt; value);</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public static MoneySetAttribute of() {</span>
+<span class="source-line-no">040</span><span id="line.40">        return new MoneySetAttributeImpl();</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public static MoneySetAttribute of(final MoneySetAttribute template) {</span>
+<span class="source-line-no">044</span><span id="line.44">        MoneySetAttributeImpl instance = new MoneySetAttributeImpl();</span>
+<span class="source-line-no">045</span><span id="line.45">        instance.setName(template.getName());</span>
+<span class="source-line-no">046</span><span id="line.46">        instance.setValue(template.getValue());</span>
+<span class="source-line-no">047</span><span id="line.47">        return instance;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public static MoneySetAttributeBuilder builder() {</span>
+<span class="source-line-no">051</span><span id="line.51">        return MoneySetAttributeBuilder.of();</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public static MoneySetAttributeBuilder builder(final MoneySetAttribute template) {</span>
+<span class="source-line-no">055</span><span id="line.55">        return MoneySetAttributeBuilder.of(template);</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    default &lt;T&gt; T withMoneySetAttribute(Function&lt;MoneySetAttribute, T&gt; helper) {</span>
+<span class="source-line-no">059</span><span id="line.59">        return helper.apply(this);</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61">}</span>
 
 
 

@@ -54,7 +54,7 @@
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    private Long defaultBillingAddress;</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.type.CustomFields custom;</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    private String locale;</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
@@ -69,7 +69,7 @@
 <span class="source-line-no">056</span><span id="line.56">            @JsonProperty("addresses") final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses,</span>
 <span class="source-line-no">057</span><span id="line.57">            @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,</span>
 <span class="source-line-no">058</span><span id="line.58">            @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,</span>
-<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
+<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,</span>
 <span class="source-line-no">060</span><span id="line.60">            @JsonProperty("locale") final String locale,</span>
 <span class="source-line-no">061</span><span id="line.61">            @JsonProperty("stores") final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
 <span class="source-line-no">062</span><span id="line.62">        this.email = email;</span>
@@ -154,7 +154,7 @@
 <span class="source-line-no">141</span><span id="line.141">    /**</span>
 <span class="source-line-no">142</span><span id="line.142">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
 <span class="source-line-no">143</span><span id="line.143">    */</span>
-<span class="source-line-no">144</span><span id="line.144">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">144</span><span id="line.144">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
 <span class="source-line-no">145</span><span id="line.145">        return this.custom;</span>
 <span class="source-line-no">146</span><span id="line.146">    }</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
@@ -218,7 +218,7 @@
 <span class="source-line-no">205</span><span id="line.205">        this.defaultBillingAddress = defaultBillingAddress;</span>
 <span class="source-line-no">206</span><span id="line.206">    }</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">208</span><span id="line.208">    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {</span>
 <span class="source-line-no">209</span><span id="line.209">        this.custom = custom;</span>
 <span class="source-line-no">210</span><span id="line.210">    }</span>
 <span class="source-line-no">211</span><span id="line.211"></span>

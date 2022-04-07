@@ -16,7 +16,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search">SEARCH:</label>
@@ -71,22 +75,17 @@ loadScripts(document, 'script');</script>
 <h1 title="Class MessageDeliveryBuilder" class="title">Class MessageDeliveryBuilder</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder</a>
 <div class="inheritance">com.commercetools.api.models.subscription.MessageDeliveryBuilder</div>
-</div>
 </div>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&gt;</code></dd>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.9">MessageDeliveryBuilder</a></span>
-<span class="extends-implements">extends <a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription"><code>MessageDeliveryPayloadBuilder</code></a> instead</div>
-</div>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.12">MessageDeliveryBuilder</a></span>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a>&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -99,9 +98,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E()">MessageDeliveryBuilder</a></span>()</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-&nbsp;</div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -109,9 +106,96 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder">Methods inherited from class&nbsp;com.commercetools.api.models.subscription.<a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></h3>
-<code><a href="MessageDeliveryPayloadBuilder.html#build()">build</a>, <a href="MessageDeliveryPayloadBuilder.html#buildUnchecked()">buildUnchecked</a>, <a href="MessageDeliveryPayloadBuilder.html#createdAt(java.time.ZonedDateTime)">createdAt</a>, <a href="MessageDeliveryPayloadBuilder.html#getCreatedAt()">getCreatedAt</a>, <a href="MessageDeliveryPayloadBuilder.html#getId()">getId</a>, <a href="MessageDeliveryPayloadBuilder.html#getLastModifiedAt()">getLastModifiedAt</a>, <a href="MessageDeliveryPayloadBuilder.html#getPayloadNotIncluded()">getPayloadNotIncluded</a>, <a href="MessageDeliveryPayloadBuilder.html#getProjectKey()">getProjectKey</a>, <a href="MessageDeliveryPayloadBuilder.html#getResource()">getResource</a>, <a href="MessageDeliveryPayloadBuilder.html#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a>, <a href="MessageDeliveryPayloadBuilder.html#getResourceVersion()">getResourceVersion</a>, <a href="MessageDeliveryPayloadBuilder.html#getSequenceNumber()">getSequenceNumber</a>, <a href="MessageDeliveryPayloadBuilder.html#getVersion()">getVersion</a>, <a href="MessageDeliveryPayloadBuilder.html#id(java.lang.String)">id</a>, <a href="MessageDeliveryPayloadBuilder.html#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a>, <a href="MessageDeliveryPayloadBuilder.html#of()">of</a>, <a href="MessageDeliveryPayloadBuilder.html#of(com.commercetools.api.models.subscription.MessageDeliveryPayload)">of</a>, <a href="MessageDeliveryPayloadBuilder.html#payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">payloadNotIncluded</a>, <a href="MessageDeliveryPayloadBuilder.html#payloadNotIncluded(java.util.function.Function)">payloadNotIncluded</a>, <a href="MessageDeliveryPayloadBuilder.html#projectKey(java.lang.String)">projectKey</a>, <a href="MessageDeliveryPayloadBuilder.html#resource(com.commercetools.api.models.common.Reference)">resource</a>, <a href="MessageDeliveryPayloadBuilder.html#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a>, <a href="MessageDeliveryPayloadBuilder.html#resourceUserProvidedIdentifiers(java.util.function.Function)">resourceUserProvidedIdentifiers</a>, <a href="MessageDeliveryPayloadBuilder.html#resourceVersion(java.lang.Long)">resourceVersion</a>, <a href="MessageDeliveryPayloadBuilder.html#sequenceNumber(java.lang.Long)">sequenceNumber</a>, <a href="MessageDeliveryPayloadBuilder.html#version(java.lang.Long)">version</a></code></div>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#buildUnchecked()">buildUnchecked</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">builds MessageDelivery without checking for non null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedAt()">getLastModifiedAt</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPayloadNotIncluded()">getPayloadNotIncluded</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResource()">getResource</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResourceVersion()">getResourceVersion</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSequenceNumber()">getSequenceNumber</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.subscription.MessageDelivery)">of</a></span>&#8203;(<a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">payloadNotIncluded</a></span>&#8203;(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payloadNotIncluded(java.util.function.Function)">payloadNotIncluded</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>,&#8203;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#projectKey(java.lang.String)">projectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(java.util.function.Function)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceVersion(java.lang.Long)">resourceVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sequenceNumber(java.lang.Long)">sequenceNumber</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -129,8 +213,178 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MessageDeliveryBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.11">MessageDeliveryBuilder</a></span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.13">MessageDeliveryBuilder</a></span>()</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method.detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="projectKey(java.lang.String)">
+<h3>projectKey</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.36">projectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="resource(com.commercetools.api.models.common.Reference)">
+<h3>resource</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.41">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="resourceUserProvidedIdentifiers(java.util.function.Function)">
+<h3>resourceUserProvidedIdentifiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.46">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">
+<h3>resourceUserProvidedIdentifiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.54">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="id(java.lang.String)">
+<h3>id</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.60">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="version(java.lang.Long)">
+<h3>version</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.65">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="createdAt(java.time.ZonedDateTime)">
+<h3>createdAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.70">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
+<h3>lastModifiedAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.75">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="sequenceNumber(java.lang.Long)">
+<h3>sequenceNumber</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.80">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="resourceVersion(java.lang.Long)">
+<h3>resourceVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.85">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="payloadNotIncluded(java.util.function.Function)">
+<h3>payloadNotIncluded</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.90">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>,&#8203;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">
+<h3>payloadNotIncluded</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.98">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getProjectKey()">
+<h3>getProjectKey</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.104">getProjectKey</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResource()">
+<h3>getResource</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.108">getResource</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUserProvidedIdentifiers()">
+<h3>getResourceUserProvidedIdentifiers</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.112">getResourceUserProvidedIdentifiers</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.117">getId</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getVersion()">
+<h3>getVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.121">getVersion</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCreatedAt()">
+<h3>getCreatedAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.125">getCreatedAt</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastModifiedAt()">
+<h3>getLastModifiedAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.129">getLastModifiedAt</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSequenceNumber()">
+<h3>getSequenceNumber</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.133">getSequenceNumber</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceVersion()">
+<h3>getResourceVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.137">getResourceVersion</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPayloadNotIncluded()">
+<h3>getPayloadNotIncluded</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.141">getPayloadNotIncluded</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="build()">
+<h3>build</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.145">build</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="buildUnchecked()">
+<h3>buildUnchecked</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.162">buildUnchecked</a></span>()</div>
+<div class="block">builds MessageDelivery without checking for non null required values</div>
+</section>
+</li>
+<li>
+<section class="detail" id="of()">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.167">of</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.models.subscription.MessageDelivery)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryBuilder.html#line.171">of</a></span>&#8203;<span class="parameters">(<a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

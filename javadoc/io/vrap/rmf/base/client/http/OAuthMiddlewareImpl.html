@@ -98,23 +98,23 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(dev.failsafe.spi.Scheduler,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.http.OAuthHandler)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oAuthHandler)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
+ int&nbsp;maxRetries,
+ boolean&nbsp;useCircuitBreaker)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.Executor,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor,
  <a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
  int&nbsp;maxRetries,
  boolean&nbsp;useCircuitBreaker)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.http.OAuthHandler)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oAuthHandler)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
- int&nbsp;maxRetries,
- boolean&nbsp;useCircuitBreaker)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ScheduledExecutorService,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  <a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
  int&nbsp;maxRetries,
  boolean&nbsp;useCircuitBreaker)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ScheduledExecutorService,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(net.jodah.failsafe.util.concurrent.Scheduler,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">OAuthMiddlewareImpl</a></span>&#8203;(net.jodah.failsafe.util.concurrent.Scheduler&nbsp;scheduler,
  <a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
  int&nbsp;maxRetries,
  boolean&nbsp;useCircuitBreaker)</code></div>
@@ -181,18 +181,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">
+<section class="detail" id="&lt;init&gt;(java.util.concurrent.Executor,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">
 <h3>OAuthMiddlewareImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.38">OAuthMiddlewareImpl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.38">OAuthMiddlewareImpl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor,
  <a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
  int&nbsp;maxRetries,
  boolean&nbsp;useCircuitBreaker)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(dev.failsafe.spi.Scheduler,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">
+<section class="detail" id="&lt;init&gt;(net.jodah.failsafe.util.concurrent.Scheduler,io.vrap.rmf.base.client.http.OAuthHandler,int,boolean)">
 <h3>OAuthMiddlewareImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.43">OAuthMiddlewareImpl</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.43">OAuthMiddlewareImpl</a></span>&#8203;<span class="parameters">(net.jodah.failsafe.util.concurrent.Scheduler&nbsp;scheduler,
  <a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a>&nbsp;oauthHandler,
  int&nbsp;maxRetries,
  boolean&nbsp;useCircuitBreaker)</span></div>
@@ -209,7 +209,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <li>
 <section class="detail" id="invoke(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)">
 <h3>invoke</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.94">invoke</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.90">invoke</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;&gt;&nbsp;next)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -220,7 +220,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoClos
 <li>
 <section class="detail" id="close()">
 <h3>close</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.106">close</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.html#line.102">close</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>

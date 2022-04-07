@@ -25,62 +25,52 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Changes the order of &lt;a href="ctp:api:type:CustomFieldLocalizedEnumValue"&gt;LocalizedEnumValues&lt;/a&gt; in a &lt;a href="ctp:api:type:CustomFieldLocalizedEnumType"&gt;LocalizedEnumType&lt;/a&gt; FieldDefinition.</span>
-<span class="source-line-no">017</span><span id="line.17">*  This update action can be used to update a &lt;a href="ctp:api:type:CustomFieldLocalizedEnumType"&gt;LocalizedEnumType&lt;/a&gt; FieldDefinition and a &lt;a href="ctp:api:type:CustomFieldSetType"&gt;SetType&lt;/a&gt; of &lt;a href="ctp:api:type:CustomFieldLocalizedEnumType"&gt;LocalizedEnumType&lt;/a&gt; FieldDefinitions.&lt;/p&gt;</span>
-<span class="source-line-no">018</span><span id="line.18">*/</span>
-<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = TypeChangeLocalizedEnumValueOrderActionImpl.class)</span>
-<span class="source-line-no">021</span><span id="line.21">public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateAction {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";</span>
+<span class="source-line-no">015</span><span id="line.15">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">016</span><span id="line.16">@JsonDeserialize(as = TypeChangeLocalizedEnumValueOrderActionImpl.class)</span>
+<span class="source-line-no">017</span><span id="line.17">public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateAction {</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";</span>
+<span class="source-line-no">020</span><span id="line.20"></span>
+<span class="source-line-no">021</span><span id="line.21">    @NotNull</span>
+<span class="source-line-no">022</span><span id="line.22">    @JsonProperty("fieldName")</span>
+<span class="source-line-no">023</span><span id="line.23">    public String getFieldName();</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    /**</span>
-<span class="source-line-no">026</span><span id="line.26">    *  &lt;p&gt;&lt;code&gt;name&lt;/code&gt; of the &lt;a href="ctp:api:type:FieldDefinition"&gt;Field Definition&lt;/a&gt; to update.&lt;/p&gt;</span>
-<span class="source-line-no">027</span><span id="line.27">    */</span>
-<span class="source-line-no">028</span><span id="line.28">    @NotNull</span>
-<span class="source-line-no">029</span><span id="line.29">    @JsonProperty("fieldName")</span>
-<span class="source-line-no">030</span><span id="line.30">    public String getFieldName();</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">    *  &lt;p&gt;Must match the set of &lt;code&gt;key&lt;/code&gt;s of the LocalizedEnumValues in the FieldDefinition (up to order).&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">    */</span>
-<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("keys")</span>
-<span class="source-line-no">037</span><span id="line.37">    public List&lt;String&gt; getKeys();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public void setFieldName(final String fieldName);</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonIgnore</span>
-<span class="source-line-no">042</span><span id="line.42">    public void setKeys(final String... keys);</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public void setKeys(final List&lt;String&gt; keys);</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public static TypeChangeLocalizedEnumValueOrderAction of() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return new TypeChangeLocalizedEnumValueOrderActionImpl();</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public static TypeChangeLocalizedEnumValueOrderAction of(final TypeChangeLocalizedEnumValueOrderAction template) {</span>
-<span class="source-line-no">051</span><span id="line.51">        TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();</span>
-<span class="source-line-no">052</span><span id="line.52">        instance.setFieldName(template.getFieldName());</span>
-<span class="source-line-no">053</span><span id="line.53">        instance.setKeys(template.getKeys());</span>
-<span class="source-line-no">054</span><span id="line.54">        return instance;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return TypeChangeLocalizedEnumValueOrderActionBuilder.of();</span>
+<span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("keys")</span>
+<span class="source-line-no">027</span><span id="line.27">    public List&lt;String&gt; getKeys();</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public void setFieldName(final String fieldName);</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    @JsonIgnore</span>
+<span class="source-line-no">032</span><span id="line.32">    public void setKeys(final String... keys);</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public void setKeys(final List&lt;String&gt; keys);</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    public static TypeChangeLocalizedEnumValueOrderAction of() {</span>
+<span class="source-line-no">037</span><span id="line.37">        return new TypeChangeLocalizedEnumValueOrderActionImpl();</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public static TypeChangeLocalizedEnumValueOrderAction of(final TypeChangeLocalizedEnumValueOrderAction template) {</span>
+<span class="source-line-no">041</span><span id="line.41">        TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();</span>
+<span class="source-line-no">042</span><span id="line.42">        instance.setFieldName(template.getFieldName());</span>
+<span class="source-line-no">043</span><span id="line.43">        instance.setKeys(template.getKeys());</span>
+<span class="source-line-no">044</span><span id="line.44">        return instance;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return TypeChangeLocalizedEnumValueOrderActionBuilder.of();</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder(</span>
+<span class="source-line-no">052</span><span id="line.52">            final TypeChangeLocalizedEnumValueOrderAction template) {</span>
+<span class="source-line-no">053</span><span id="line.53">        return TypeChangeLocalizedEnumValueOrderActionBuilder.of(template);</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    default &lt;T&gt; T withTypeChangeLocalizedEnumValueOrderAction(</span>
+<span class="source-line-no">057</span><span id="line.57">            Function&lt;TypeChangeLocalizedEnumValueOrderAction, T&gt; helper) {</span>
+<span class="source-line-no">058</span><span id="line.58">        return helper.apply(this);</span>
 <span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder(</span>
-<span class="source-line-no">062</span><span id="line.62">            final TypeChangeLocalizedEnumValueOrderAction template) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return TypeChangeLocalizedEnumValueOrderActionBuilder.of(template);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    default &lt;T&gt; T withTypeChangeLocalizedEnumValueOrderAction(</span>
-<span class="source-line-no">067</span><span id="line.67">            Function&lt;TypeChangeLocalizedEnumValueOrderAction, T&gt; helper) {</span>
-<span class="source-line-no">068</span><span id="line.68">        return helper.apply(this);</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70">}</span>
+<span class="source-line-no">060</span><span id="line.60">}</span>
 
 
 

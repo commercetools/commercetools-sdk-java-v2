@@ -40,18 +40,17 @@
 <span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl.class, name = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH),</span>
 <span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl.class, name = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE) })</span>
 <span class="source-line-no">029</span><span id="line.29">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProjectUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = ProjectUpdateActionImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">public interface ProjectUpdateAction extends com.commercetools.api.models.ResourceUpdateAction&lt;ProjectUpdateAction&gt; {</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @NotNull</span>
-<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("action")</span>
-<span class="source-line-no">036</span><span id="line.36">    public String getAction();</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    default &lt;T&gt; T withProjectUpdateAction(Function&lt;ProjectUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">039</span><span id="line.39">        return helper.apply(this);</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41">}</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">public interface ProjectUpdateAction extends com.commercetools.api.models.ResourceUpdateAction&lt;ProjectUpdateAction&gt; {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("action")</span>
+<span class="source-line-no">035</span><span id="line.35">    public String getAction();</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    default &lt;T&gt; T withProjectUpdateAction(Function&lt;ProjectUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">038</span><span id="line.38">        return helper.apply(this);</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40">}</span>
 
 
 

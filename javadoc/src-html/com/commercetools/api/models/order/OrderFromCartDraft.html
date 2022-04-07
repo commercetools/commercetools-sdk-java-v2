@@ -23,122 +23,107 @@
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.cart.CartResourceIdentifier;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.state.StateResourceIdentifier;</span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = OrderFromCartDraftImpl.class)</span>
-<span class="source-line-no">021</span><span id="line.21">public interface OrderFromCartDraft {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;The unique id of the cart from which an order is created.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26">    @Deprecated</span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("id")</span>
-<span class="source-line-no">028</span><span id="line.28">    public String getId();</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
-<span class="source-line-no">032</span><span id="line.32">    */</span>
-<span class="source-line-no">033</span><span id="line.33">    @Valid</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("cart")</span>
-<span class="source-line-no">035</span><span id="line.35">    public CartResourceIdentifier getCart();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("version")</span>
-<span class="source-line-no">039</span><span id="line.39">    public Long getVersion();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;String that uniquely identifies an order.</span>
-<span class="source-line-no">043</span><span id="line.43">    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.</span>
-<span class="source-line-no">044</span><span id="line.44">    *  It should be unique across a project.</span>
-<span class="source-line-no">045</span><span id="line.45">    *  Once it's set it cannot be changed.</span>
-<span class="source-line-no">046</span><span id="line.46">    *  For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">    */</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("orderNumber")</span>
-<span class="source-line-no">050</span><span id="line.50">    public String getOrderNumber();</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("paymentState")</span>
-<span class="source-line-no">053</span><span id="line.53">    public PaymentState getPaymentState();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("shipmentState")</span>
-<span class="source-line-no">056</span><span id="line.56">    public ShipmentState getShipmentState();</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">    */</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("orderState")</span>
-<span class="source-line-no">063</span><span id="line.63">    public OrderState getOrderState();</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
-<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("state")</span>
-<span class="source-line-no">067</span><span id="line.67">    public StateResourceIdentifier getState();</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;&lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; to be added to the Order.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;ul&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    *  &lt;li&gt;If provided, only the Custom Fields given here are added to the Order and the Custom Fields on the referenced &lt;a href="/../api/projects/carts#cart"&gt;Cart&lt;/a&gt; are ignored.&lt;/li&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">    *  &lt;li&gt;If not provided, the Custom Fields on the referenced &lt;a href="/../api/projects/carts#cart"&gt;Cart&lt;/a&gt; are added to the Order automatically.&lt;/li&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">    *  &lt;/ul&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">    */</span>
-<span class="source-line-no">076</span><span id="line.76">    @Valid</span>
-<span class="source-line-no">077</span><span id="line.77">    @JsonProperty("custom")</span>
-<span class="source-line-no">078</span><span id="line.78">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Deprecated</span>
-<span class="source-line-no">081</span><span id="line.81">    public void setId(final String id);</span>
+<span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">019</span><span id="line.19">@JsonDeserialize(as = OrderFromCartDraftImpl.class)</span>
+<span class="source-line-no">020</span><span id="line.20">public interface OrderFromCartDraft {</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    /**</span>
+<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;The unique id of the cart from which an order is created.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    */</span>
+<span class="source-line-no">025</span><span id="line.25">    @Deprecated</span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("id")</span>
+<span class="source-line-no">027</span><span id="line.27">    public String getId();</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    /**</span>
+<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">    */</span>
+<span class="source-line-no">032</span><span id="line.32">    @Valid</span>
+<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("cart")</span>
+<span class="source-line-no">034</span><span id="line.34">    public CartResourceIdentifier getCart();</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @NotNull</span>
+<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("version")</span>
+<span class="source-line-no">038</span><span id="line.38">    public Long getVersion();</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">    *  &lt;p&gt;String that uniquely identifies an order.</span>
+<span class="source-line-no">042</span><span id="line.42">    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.</span>
+<span class="source-line-no">043</span><span id="line.43">    *  It should be unique across a project.</span>
+<span class="source-line-no">044</span><span id="line.44">    *  Once it's set it cannot be changed.</span>
+<span class="source-line-no">045</span><span id="line.45">    *  For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">    */</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("orderNumber")</span>
+<span class="source-line-no">049</span><span id="line.49">    public String getOrderNumber();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("paymentState")</span>
+<span class="source-line-no">052</span><span id="line.52">    public PaymentState getPaymentState();</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("shipmentState")</span>
+<span class="source-line-no">055</span><span id="line.55">    public ShipmentState getShipmentState();</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">    *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">    */</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("orderState")</span>
+<span class="source-line-no">062</span><span id="line.62">    public OrderState getOrderState();</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @Valid</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("state")</span>
+<span class="source-line-no">066</span><span id="line.66">    public StateResourceIdentifier getState();</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    @Deprecated</span>
+<span class="source-line-no">069</span><span id="line.69">    public void setId(final String id);</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setCart(final CartResourceIdentifier cart);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setVersion(final Long version);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setOrderNumber(final String orderNumber);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setPaymentState(final PaymentState paymentState);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setShipmentState(final ShipmentState shipmentState);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setOrderState(final OrderState orderState);</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setCart(final CartResourceIdentifier cart);</span>
+<span class="source-line-no">083</span><span id="line.83">    public void setState(final StateResourceIdentifier state);</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setVersion(final Long version);</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setOrderNumber(final String orderNumber);</span>
+<span class="source-line-no">085</span><span id="line.85">    public static OrderFromCartDraft of() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new OrderFromCartDraftImpl();</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setPaymentState(final PaymentState paymentState);</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setShipmentState(final ShipmentState shipmentState);</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setOrderState(final OrderState orderState);</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setState(final StateResourceIdentifier state);</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static OrderFromCartDraft of() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return new OrderFromCartDraftImpl();</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public static OrderFromCartDraft of(final OrderFromCartDraft template) {</span>
-<span class="source-line-no">104</span><span id="line.104">        OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();</span>
-<span class="source-line-no">105</span><span id="line.105">        instance.setId(template.getId());</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setCart(template.getCart());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setOrderNumber(template.getOrderNumber());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setPaymentState(template.getPaymentState());</span>
-<span class="source-line-no">110</span><span id="line.110">        instance.setShipmentState(template.getShipmentState());</span>
-<span class="source-line-no">111</span><span id="line.111">        instance.setOrderState(template.getOrderState());</span>
-<span class="source-line-no">112</span><span id="line.112">        instance.setState(template.getState());</span>
-<span class="source-line-no">113</span><span id="line.113">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">114</span><span id="line.114">        return instance;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static OrderFromCartDraftBuilder builder() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return OrderFromCartDraftBuilder.of();</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template) {</span>
-<span class="source-line-no">122</span><span id="line.122">        return OrderFromCartDraftBuilder.of(template);</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    default &lt;T&gt; T withOrderFromCartDraft(Function&lt;OrderFromCartDraft, T&gt; helper) {</span>
-<span class="source-line-no">126</span><span id="line.126">        return helper.apply(this);</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128">}</span>
+<span class="source-line-no">089</span><span id="line.89">    public static OrderFromCartDraft of(final OrderFromCartDraft template) {</span>
+<span class="source-line-no">090</span><span id="line.90">        OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setId(template.getId());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setCart(template.getCart());</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">094</span><span id="line.94">        instance.setOrderNumber(template.getOrderNumber());</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setPaymentState(template.getPaymentState());</span>
+<span class="source-line-no">096</span><span id="line.96">        instance.setShipmentState(template.getShipmentState());</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setOrderState(template.getOrderState());</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setState(template.getState());</span>
+<span class="source-line-no">099</span><span id="line.99">        return instance;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public static OrderFromCartDraftBuilder builder() {</span>
+<span class="source-line-no">103</span><span id="line.103">        return OrderFromCartDraftBuilder.of();</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template) {</span>
+<span class="source-line-no">107</span><span id="line.107">        return OrderFromCartDraftBuilder.of(template);</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    default &lt;T&gt; T withOrderFromCartDraft(Function&lt;OrderFromCartDraft, T&gt; helper) {</span>
+<span class="source-line-no">111</span><span id="line.111">        return helper.apply(this);</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113">}</span>
 
 
 

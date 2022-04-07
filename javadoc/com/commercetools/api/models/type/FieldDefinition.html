@@ -80,9 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.21">FieldDefinition</a></span></div>
-<div class="block"><p>Defines a <a href="/../api/projects/custom-fields">Custom Field</a> and its meta-information.
-  This FieldDefinition is similar to an <a href="ctp:api:type:AttributeDefinition">AttributeDefinition</a> of <a href="/../api/projects/productTypes">Product Types</a>.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.17">FieldDefinition</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,7 +104,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getInputHint()">getInputHint</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Must be either <code>SingleLine</code> or <code>MultiLine</code>.</div>
+<div class="block">Provides a visual representation type for this field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLabel()">getLabel</a></span>()</code></div>
@@ -116,17 +114,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Name of the Custom Field to define.</div>
+<div class="block">The name of the field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRequired()">getRequired</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines whether the field is required to have a value.</div>
+<div class="block">Whether the field is required to have a value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Data type of the Custom Field to define.</div>
+<div class="block">Describes the type of the field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -171,18 +169,19 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.28">getType</a></span>()</div>
-<div class="block"><p>Data type of the Custom Field to define.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.24">getType</a></span>()</div>
+<div class="block"><p>Describes the type of the field.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.38">getName</a></span>()</div>
-<div class="block"><p>Name of the Custom Field to define.
-  Must be unique for a given <a href="ctp:api:type:ResourceTypeId">ResourceTypeId</a>.
-  In case there is a FieldDefinition with the same <code>name</code> in another <a href="ctp:api:type:Type">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.35">getName</a></span>()</div>
+<div class="block"><p>The name of the field.
+  The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>).
+  The name must be unique for a given resource type ID.
+  In case there is a field with the same name in another type it has to have the same FieldType also.</p></div>
 </section>
 </li>
 <li>
@@ -190,7 +189,7 @@ loadScripts(document, 'script');</script>
 <h3>getLabel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.45">getLabel</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.42">getLabel</a></span>()</div>
 <div class="block"><p>A human-readable label for the field.</p></div>
 </section>
 </li>
@@ -198,77 +197,76 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRequired()">
 <h3>getRequired</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.53">getRequired</a></span>()</div>
-<div class="block"><p>Defines whether the field is required to have a value.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.50">getRequired</a></span>()</div>
+<div class="block"><p>Whether the field is required to have a value.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.63">getInputHint</a></span>()</div>
-<div class="block"><p>Must be either <code>SingleLine</code> or <code>MultiLine</code>.
-  Defines the visual representation of the field in user interfaces like the Merchant Center.
-  It is only relevant for string-based <a href="ctp:api:type:FieldType">FieldTypes</a> like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.59">getInputHint</a></span>()</div>
+<div class="block"><p>Provides a visual representation type for this field.
+  It is only relevant for string-based field types like StringType and LocalizedStringType.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.FieldType)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.66">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.62">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.68">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.64">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLabel(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLabel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.70">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.66">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRequired(java.lang.Boolean)">
 <h3>setRequired</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.72">setRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.68">setRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputHint(com.commercetools.api.models.type.TypeTextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.74">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.70">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.76">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.72">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.FieldDefinition)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.80">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.76">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.90">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.86">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.FieldDefinition)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.94">builder</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.90">builder</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withFieldDefinition(java.util.function.Function)">
 <h3>withFieldDefinition</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.98">withFieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.94">withFieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

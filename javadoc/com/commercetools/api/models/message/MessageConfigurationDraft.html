@@ -16,7 +16,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search">SEARCH:</label>
@@ -72,16 +76,11 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl class="notes">
-<dt>All Superinterfaces:</dt>
-<dd><code><a href="MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a></code></dd>
+<dt>All Known Implementing Classes:</dt>
+<dd><code><a href="MessageConfigurationDraftImpl.html" title="class in com.commercetools.api.models.message">MessageConfigurationDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.9">MessageConfigurationDraft</a></span><span class="extends-implements">
-extends <a href="MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a></span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message"><code>MessagesConfigurationDraft</code></a> instead</div>
-</div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.15">MessageConfigurationDraft</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,9 +88,111 @@ extends <a href="MessagesConfigurationDraft.html" title="interface in com.commer
 <li>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.commercetools.api.models.message.MessagesConfigurationDraft">Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a></h3>
-<code><a href="MessagesConfigurationDraft.html#getDeleteDaysAfterCreation()">getDeleteDaysAfterCreation</a>, <a href="MessagesConfigurationDraft.html#getEnabled()">getEnabled</a>, <a href="MessagesConfigurationDraft.html#setDeleteDaysAfterCreation(java.lang.Integer)">setDeleteDaysAfterCreation</a>, <a href="MessagesConfigurationDraft.html#setEnabled(java.lang.Boolean)">setEnabled</a>, <a href="MessagesConfigurationDraft.html#withMessagesConfigurationDraft(java.util.function.Function)">withMessagesConfigurationDraft</a></code></div>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MessageConfigurationDraftBuilder.html" title="class in com.commercetools.api.models.message">MessageConfigurationDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder()">builder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MessageConfigurationDraftBuilder.html" title="class in com.commercetools.api.models.message">MessageConfigurationDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.message.MessageConfigurationDraft)">builder</a></span>&#8203;(<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDeleteDaysAfterCreation()">getDeleteDaysAfterCreation</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getEnabled()">getEnabled</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.MessageConfigurationDraft)">of</a></span>&#8203;(<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setDeleteDaysAfterCreation(java.lang.Integer)">setDeleteDaysAfterCreation</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;deleteDaysAfterCreation)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setEnabled(java.lang.Boolean)">setEnabled</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;enabled)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withMessageConfigurationDraft(java.util.function.Function)">withMessageConfigurationDraft</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+</div>
+</div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method.detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="getEnabled()">
+<h3>getEnabled</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.19">getEnabled</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDeleteDaysAfterCreation()">
+<h3>getDeleteDaysAfterCreation</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.23">getDeleteDaysAfterCreation</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setEnabled(java.lang.Boolean)">
+<h3>setEnabled</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.27">setEnabled</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;enabled)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setDeleteDaysAfterCreation(java.lang.Integer)">
+<h3>setDeleteDaysAfterCreation</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.29">setDeleteDaysAfterCreation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;deleteDaysAfterCreation)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of()">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.31">of</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.models.message.MessageConfigurationDraft)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.35">of</a></span>&#8203;<span class="parameters">(<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>&nbsp;template)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="builder()">
+<h3>builder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageConfigurationDraftBuilder.html" title="class in com.commercetools.api.models.message">MessageConfigurationDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.42">builder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="builder(com.commercetools.api.models.message.MessageConfigurationDraft)">
+<h3>builder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageConfigurationDraftBuilder.html" title="class in com.commercetools.api.models.message">MessageConfigurationDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.46">builder</a></span>&#8203;<span class="parameters">(<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>&nbsp;template)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withMessageConfigurationDraft(java.util.function.Function)">
+<h3>withMessageConfigurationDraft</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessageConfigurationDraft.html#line.50">withMessageConfigurationDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessageConfigurationDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+</section>
+</li>
+</ul>
 </section>
 </li>
 </ul>

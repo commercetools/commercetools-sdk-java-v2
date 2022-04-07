@@ -91,7 +91,7 @@ Project project = apiRoot.get().executeBlocking().getBody();
 
  <h3 id=retry-middleware>RetryMiddleware</h3>
 
- <p>The <a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>RetryRequestMiddleware</code></a> configures a client to handle failures like gateway timeouts
+ <p>The <a href="../../../../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http"><code>RetryMiddleware</code></a> configures a client to handle failures like gateway timeouts
  and version conflicts through retrying the request.</p>
 
  <p>A best practice example to retry on gateway timeouts and similar problems</p>
@@ -99,7 +99,7 @@ Project project = apiRoot.get().executeBlocking().getBody();
  <div id="example-ExamplesTest-retry--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
             ServiceRegion.GCP_EUROPE_WEST1)
-        .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
+        .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
         .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 

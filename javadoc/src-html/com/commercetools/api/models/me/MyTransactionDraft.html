@@ -24,7 +24,7 @@
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.Money;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.payment.TransactionType;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
+<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.type.CustomFields;</span>
 <span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">016</span><span id="line.16">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
@@ -32,7 +32,7 @@
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">@JsonDeserialize(as = MyTransactionDraftImpl.class)</span>
-<span class="source-line-no">022</span><span id="line.22">public interface MyTransactionDraft extends com.commercetools.api.models.CustomizableDraft&lt;MyTransactionDraft&gt; {</span>
+<span class="source-line-no">022</span><span id="line.22">public interface MyTransactionDraft {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    /**</span>
 <span class="source-line-no">025</span><span id="line.25">    *  &lt;p&gt;The time at which the transaction took place.&lt;/p&gt;</span>
@@ -70,7 +70,7 @@
 <span class="source-line-no">057</span><span id="line.57">    */</span>
 <span class="source-line-no">058</span><span id="line.58">    @Valid</span>
 <span class="source-line-no">059</span><span id="line.59">    @JsonProperty("custom")</span>
-<span class="source-line-no">060</span><span id="line.60">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">060</span><span id="line.60">    public CustomFields getCustom();</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    public void setTimestamp(final ZonedDateTime timestamp);</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
@@ -80,7 +80,7 @@
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    public void setInteractionId(final String interactionId);</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">070</span><span id="line.70">    public void setCustom(final CustomFields custom);</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    public static MyTransactionDraft of() {</span>
 <span class="source-line-no">073</span><span id="line.73">        return new MyTransactionDraftImpl();</span>

@@ -24,23 +24,23 @@
 <span class="source-line-no">011</span><span id="line.11">public class ProjectChangeMessagesConfigurationActionBuilder</span>
 <span class="source-line-no">012</span><span id="line.12">        implements Builder&lt;ProjectChangeMessagesConfigurationAction&gt; {</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;</span>
+<span class="source-line-no">014</span><span id="line.14">    private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(</span>
-<span class="source-line-no">017</span><span id="line.17">            Function&lt;com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">017</span><span id="line.17">            Function&lt;com.commercetools.api.models.message.MessageConfigurationDraftBuilder, com.commercetools.api.models.message.MessageConfigurationDraftBuilder&gt; builder) {</span>
 <span class="source-line-no">018</span><span id="line.18">        this.messagesConfiguration = builder</span>
-<span class="source-line-no">019</span><span id="line.19">                .apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of())</span>
+<span class="source-line-no">019</span><span id="line.19">                .apply(com.commercetools.api.models.message.MessageConfigurationDraftBuilder.of())</span>
 <span class="source-line-no">020</span><span id="line.20">                .build();</span>
 <span class="source-line-no">021</span><span id="line.21">        return this;</span>
 <span class="source-line-no">022</span><span id="line.22">    }</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(</span>
-<span class="source-line-no">025</span><span id="line.25">            final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {</span>
+<span class="source-line-no">025</span><span id="line.25">            final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {</span>
 <span class="source-line-no">026</span><span id="line.26">        this.messagesConfiguration = messagesConfiguration;</span>
 <span class="source-line-no">027</span><span id="line.27">        return this;</span>
 <span class="source-line-no">028</span><span id="line.28">    }</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {</span>
+<span class="source-line-no">030</span><span id="line.30">    public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration() {</span>
 <span class="source-line-no">031</span><span id="line.31">        return this.messagesConfiguration;</span>
 <span class="source-line-no">032</span><span id="line.32">    }</span>
 <span class="source-line-no">033</span><span id="line.33"></span>

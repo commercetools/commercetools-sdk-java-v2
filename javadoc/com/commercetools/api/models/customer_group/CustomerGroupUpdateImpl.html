@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code>, <code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>,&#8203;<a href="CustomerGroupUpdateBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupUpdateBuilder</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code>, <code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.17">CustomerGroupUpdateImpl</a></span>
@@ -190,46 +190,47 @@ implements <a href="CustomerGroupUpdate.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.38">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.39">getVersion</a></span>()</div>
 <div class="block"><p>Expected version of the Customer Group on which the changes should be applied.
-  If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p></div>
+  If the expected version does not match the actual version, a 409 Conflict
+  will be returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerGroupUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>,&#8203;<a href="CustomerGroupUpdateBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupUpdateBuilder</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.45">getActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.46">getActions</a></span>()</div>
 <div class="block"><p>Update actions to be performed on the Customer Group.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerGroupUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>,&#8203;<a href="CustomerGroupUpdateBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupUpdateBuilder</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.49">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.50">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerGroupUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>,&#8203;<a href="CustomerGroupUpdateBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupUpdateBuilder</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setActions(com.commercetools.api.models.customer_group.CustomerGroupUpdateAction...)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.53">setActions</a></span>&#8203;<span class="parameters">(<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.54">setActions</a></span>&#8203;<span class="parameters">(<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>...&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerGroupUpdate.html#setActions(com.commercetools.api.models.customer_group.CustomerGroupUpdateAction...)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code></dd>
@@ -239,19 +240,19 @@ implements <a href="CustomerGroupUpdate.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setActions(java.util.List)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.57">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.58">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerGroupUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>,&#8203;<a href="CustomerGroupUpdateBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupUpdateBuilder</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CustomerGroupUpdate.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdate</a>,&#8203;<a href="CustomerGroupUpdateAction.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupUpdateAction</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.62">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.63">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -261,7 +262,7 @@ implements <a href="CustomerGroupUpdate.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.75">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer_group/CustomerGroupUpdateImpl.html#line.76">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

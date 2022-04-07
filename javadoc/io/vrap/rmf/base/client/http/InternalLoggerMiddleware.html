@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.11">InternalLoggerMiddleware</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.9">InternalLoggerMiddleware</a></span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
 <div class="block">Middleware instrumenting the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a></div>
 </section>
@@ -100,13 +100,6 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  org.slf4j.event.Level&nbsp;responseLogEvent,
  org.slf4j.event.Level&nbsp;deprecationLogEvent)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)">of</a></span>&#8203;(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
- org.slf4j.event.Level&nbsp;responseLogEvent,
- org.slf4j.event.Level&nbsp;deprecationLogEvent,
- org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,&#8203;org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 </div>
 </div>
 <div class="inherited-list">
@@ -126,25 +119,15 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.13">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.11">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.17">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.15">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
  org.slf4j.event.Level&nbsp;responseLogEvent,
  org.slf4j.event.Level&nbsp;deprecationLogEvent)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.22">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
- org.slf4j.event.Level&nbsp;responseLogEvent,
- org.slf4j.event.Level&nbsp;deprecationLogEvent,
- org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,&#8203;org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</span></div>
 </section>
 </li>
 </ul>

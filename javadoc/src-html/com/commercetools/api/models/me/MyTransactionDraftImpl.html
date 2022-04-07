@@ -38,14 +38,14 @@
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    private String interactionId;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.api.models.type.CustomFields custom;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    @JsonCreator</span>
 <span class="source-line-no">031</span><span id="line.31">    MyTransactionDraftImpl(@JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,</span>
 <span class="source-line-no">032</span><span id="line.32">            @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,</span>
 <span class="source-line-no">033</span><span id="line.33">            @JsonProperty("amount") final com.commercetools.api.models.common.Money amount,</span>
 <span class="source-line-no">034</span><span id="line.34">            @JsonProperty("interactionId") final String interactionId,</span>
-<span class="source-line-no">035</span><span id="line.35">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">035</span><span id="line.35">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {</span>
 <span class="source-line-no">036</span><span id="line.36">        this.timestamp = timestamp;</span>
 <span class="source-line-no">037</span><span id="line.37">        this.type = type;</span>
 <span class="source-line-no">038</span><span id="line.38">        this.amount = amount;</span>
@@ -89,7 +89,7 @@
 <span class="source-line-no">076</span><span id="line.76">    /**</span>
 <span class="source-line-no">077</span><span id="line.77">    *  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;</span>
 <span class="source-line-no">078</span><span id="line.78">    */</span>
-<span class="source-line-no">079</span><span id="line.79">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">079</span><span id="line.79">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
 <span class="source-line-no">080</span><span id="line.80">        return this.custom;</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
@@ -109,7 +109,7 @@
 <span class="source-line-no">096</span><span id="line.96">        this.interactionId = interactionId;</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">099</span><span id="line.99">    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {</span>
 <span class="source-line-no">100</span><span id="line.100">        this.custom = custom;</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>

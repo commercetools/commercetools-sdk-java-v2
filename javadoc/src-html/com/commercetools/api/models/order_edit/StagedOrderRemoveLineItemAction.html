@@ -43,58 +43,54 @@
 <span class="source-line-no">030</span><span id="line.30">    @JsonProperty("quantity")</span>
 <span class="source-line-no">031</span><span id="line.31">    public Double getQuantity();</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;br /&gt;</span>
-<span class="source-line-no">035</span><span id="line.35">    *  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">033</span><span id="line.33">    @Valid</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("externalPrice")</span>
+<span class="source-line-no">035</span><span id="line.35">    public Money getExternalPrice();</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">    @Valid</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("externalPrice")</span>
-<span class="source-line-no">039</span><span id="line.39">    public Money getExternalPrice();</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("externalTotalPrice")</span>
+<span class="source-line-no">039</span><span id="line.39">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    @Valid</span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("externalTotalPrice")</span>
-<span class="source-line-no">043</span><span id="line.43">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("shippingDetailsToRemove")</span>
+<span class="source-line-no">043</span><span id="line.43">    public ItemShippingDetailsDraft getShippingDetailsToRemove();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("shippingDetailsToRemove")</span>
-<span class="source-line-no">047</span><span id="line.47">    public ItemShippingDetailsDraft getShippingDetailsToRemove();</span>
+<span class="source-line-no">045</span><span id="line.45">    public void setLineItemId(final String lineItemId);</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public void setQuantity(final Double quantity);</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public void setLineItemId(final String lineItemId);</span>
+<span class="source-line-no">049</span><span id="line.49">    public void setExternalPrice(final Money externalPrice);</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public void setQuantity(final Double quantity);</span>
+<span class="source-line-no">051</span><span id="line.51">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public void setExternalPrice(final Money externalPrice);</span>
+<span class="source-line-no">053</span><span id="line.53">    public void setShippingDetailsToRemove(final ItemShippingDetailsDraft shippingDetailsToRemove);</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setShippingDetailsToRemove(final ItemShippingDetailsDraft shippingDetailsToRemove);</span>
+<span class="source-line-no">055</span><span id="line.55">    public static StagedOrderRemoveLineItemAction of() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return new StagedOrderRemoveLineItemActionImpl();</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static StagedOrderRemoveLineItemAction of() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return new StagedOrderRemoveLineItemActionImpl();</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public static StagedOrderRemoveLineItemAction of(final StagedOrderRemoveLineItemAction template) {</span>
-<span class="source-line-no">064</span><span id="line.64">        StagedOrderRemoveLineItemActionImpl instance = new StagedOrderRemoveLineItemActionImpl();</span>
-<span class="source-line-no">065</span><span id="line.65">        instance.setLineItemId(template.getLineItemId());</span>
-<span class="source-line-no">066</span><span id="line.66">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">067</span><span id="line.67">        instance.setExternalPrice(template.getExternalPrice());</span>
-<span class="source-line-no">068</span><span id="line.68">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
-<span class="source-line-no">069</span><span id="line.69">        instance.setShippingDetailsToRemove(template.getShippingDetailsToRemove());</span>
-<span class="source-line-no">070</span><span id="line.70">        return instance;</span>
+<span class="source-line-no">059</span><span id="line.59">    public static StagedOrderRemoveLineItemAction of(final StagedOrderRemoveLineItemAction template) {</span>
+<span class="source-line-no">060</span><span id="line.60">        StagedOrderRemoveLineItemActionImpl instance = new StagedOrderRemoveLineItemActionImpl();</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setLineItemId(template.getLineItemId());</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setExternalPrice(template.getExternalPrice());</span>
+<span class="source-line-no">064</span><span id="line.64">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
+<span class="source-line-no">065</span><span id="line.65">        instance.setShippingDetailsToRemove(template.getShippingDetailsToRemove());</span>
+<span class="source-line-no">066</span><span id="line.66">        return instance;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static StagedOrderRemoveLineItemActionBuilder builder() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return StagedOrderRemoveLineItemActionBuilder.of();</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public static StagedOrderRemoveLineItemActionBuilder builder() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return StagedOrderRemoveLineItemActionBuilder.of();</span>
+<span class="source-line-no">073</span><span id="line.73">    public static StagedOrderRemoveLineItemActionBuilder builder(final StagedOrderRemoveLineItemAction template) {</span>
+<span class="source-line-no">074</span><span id="line.74">        return StagedOrderRemoveLineItemActionBuilder.of(template);</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static StagedOrderRemoveLineItemActionBuilder builder(final StagedOrderRemoveLineItemAction template) {</span>
-<span class="source-line-no">078</span><span id="line.78">        return StagedOrderRemoveLineItemActionBuilder.of(template);</span>
+<span class="source-line-no">077</span><span id="line.77">    default &lt;T&gt; T withStagedOrderRemoveLineItemAction(Function&lt;StagedOrderRemoveLineItemAction, T&gt; helper) {</span>
+<span class="source-line-no">078</span><span id="line.78">        return helper.apply(this);</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    default &lt;T&gt; T withStagedOrderRemoveLineItemAction(Function&lt;StagedOrderRemoveLineItemAction, T&gt; helper) {</span>
-<span class="source-line-no">082</span><span id="line.82">        return helper.apply(this);</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">080</span><span id="line.80">}</span>
 
 
 

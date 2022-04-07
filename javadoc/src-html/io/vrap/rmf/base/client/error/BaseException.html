@@ -26,49 +26,46 @@
 <span class="source-line-no">013</span><span id="line.13"> * }</span>
 <span class="source-line-no">014</span><span id="line.14"> * package io.vrap.rmf.base.client.error {</span>
 <span class="source-line-no">015</span><span id="line.15"> *   class BaseException</span>
-<span class="source-line-no">016</span><span id="line.16"> *   class JsonException extends BaseException</span>
-<span class="source-line-no">017</span><span id="line.17"> *   class FileException extends BaseException</span>
-<span class="source-line-no">018</span><span id="line.18"> *   class ApiHttpException extends BaseException</span>
-<span class="source-line-no">019</span><span id="line.19"> *   class RmfTimeoutException extends BaseException</span>
-<span class="source-line-no">020</span><span id="line.20"> *</span>
-<span class="source-line-no">021</span><span id="line.21"> *   class ApiClientException extends ApiHttpException</span>
-<span class="source-line-no">022</span><span id="line.22"> *   class ApiServerException extends ApiHttpException</span>
-<span class="source-line-no">023</span><span id="line.23"> *   class AuthException extends ApiHttpException</span>
-<span class="source-line-no">024</span><span id="line.24"> *</span>
-<span class="source-line-no">025</span><span id="line.25"> *   class BadGateWayException extends ApiServerException</span>
-<span class="source-line-no">026</span><span id="line.26"> *   class GatewayTimeoutException extends ApiServerException</span>
-<span class="source-line-no">027</span><span id="line.27"> *   class InternalServerErrorException extends ApiServerException</span>
-<span class="source-line-no">028</span><span id="line.28"> *   class ServiceUnavailableException extends ApiServerException</span>
-<span class="source-line-no">029</span><span id="line.29"> *</span>
-<span class="source-line-no">030</span><span id="line.30"> *   class BadRequestException extends ApiClientException</span>
-<span class="source-line-no">031</span><span id="line.31"> *   class ConcurrentModification extends ApiClientException</span>
-<span class="source-line-no">032</span><span id="line.32"> *   class ForbiddenException extends ApiClientException</span>
-<span class="source-line-no">033</span><span id="line.33"> *   class NotFoundException extends ApiClientException</span>
-<span class="source-line-no">034</span><span id="line.34"> *   class UnauthorizedException extends ApiClientException</span>
-<span class="source-line-no">035</span><span id="line.35"> * }</span>
-<span class="source-line-no">036</span><span id="line.36"> * @enduml</span>
-<span class="source-line-no">037</span><span id="line.37"> */</span>
-<span class="source-line-no">038</span><span id="line.38">public class BaseException extends RuntimeException {</span>
-<span class="source-line-no">039</span><span id="line.39">    public BaseException() {</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public BaseException(final String message) {</span>
-<span class="source-line-no">043</span><span id="line.43">        super(message);</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public BaseException(final String message, final Throwable cause) {</span>
-<span class="source-line-no">047</span><span id="line.47">        super(message, cause);</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public BaseException(final Throwable cause) {</span>
-<span class="source-line-no">051</span><span id="line.51">        super(cause);</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public BaseException(final String message, final Throwable cause, final boolean enableSuppression,</span>
-<span class="source-line-no">055</span><span id="line.55">            final boolean writableStackTrace) {</span>
-<span class="source-line-no">056</span><span id="line.56">        super(message, cause, enableSuppression, writableStackTrace);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58">}</span>
+<span class="source-line-no">016</span><span id="line.16"> *   class ApiHttpException extends BaseException</span>
+<span class="source-line-no">017</span><span id="line.17"> *   class RmfTimeoutException extends BaseException</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> *   class ApiClientException extends ApiHttpException</span>
+<span class="source-line-no">020</span><span id="line.20"> *   class ApiServerException extends ApiHttpException</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> *   class BadGateWayException extends ApiServerException</span>
+<span class="source-line-no">023</span><span id="line.23"> *   class GatewayTimeoutException extends ApiServerException</span>
+<span class="source-line-no">024</span><span id="line.24"> *   class InternalServerErrorException extends ApiServerException</span>
+<span class="source-line-no">025</span><span id="line.25"> *   class ServiceUnavailableException extends ApiServerException</span>
+<span class="source-line-no">026</span><span id="line.26"> *</span>
+<span class="source-line-no">027</span><span id="line.27"> *   class BadRequestException extends ApiClientException</span>
+<span class="source-line-no">028</span><span id="line.28"> *   class ConcurrentModification extends ApiClientException</span>
+<span class="source-line-no">029</span><span id="line.29"> *   class ForbiddenException extends ApiClientException</span>
+<span class="source-line-no">030</span><span id="line.30"> *   class NotFoundException extends ApiClientException</span>
+<span class="source-line-no">031</span><span id="line.31"> *   class UnauthorizedException extends ApiClientException</span>
+<span class="source-line-no">032</span><span id="line.32"> * }</span>
+<span class="source-line-no">033</span><span id="line.33"> * @enduml</span>
+<span class="source-line-no">034</span><span id="line.34"> */</span>
+<span class="source-line-no">035</span><span id="line.35">public class BaseException extends RuntimeException {</span>
+<span class="source-line-no">036</span><span id="line.36">    public BaseException() {</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public BaseException(final String message) {</span>
+<span class="source-line-no">040</span><span id="line.40">        super(message);</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public BaseException(final String message, final Throwable cause) {</span>
+<span class="source-line-no">044</span><span id="line.44">        super(message, cause);</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public BaseException(final Throwable cause) {</span>
+<span class="source-line-no">048</span><span id="line.48">        super(cause);</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public BaseException(final String message, final Throwable cause, final boolean enableSuppression,</span>
+<span class="source-line-no">052</span><span id="line.52">            final boolean writableStackTrace) {</span>
+<span class="source-line-no">053</span><span id="line.53">        super(message, cause, enableSuppression, writableStackTrace);</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55">}</span>
 
 
 

@@ -41,23 +41,22 @@
 <span class="source-line-no">028</span><span id="line.28">    public static ConcurrentModificationError of(final ConcurrentModificationError template) {</span>
 <span class="source-line-no">029</span><span id="line.29">        ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();</span>
 <span class="source-line-no">030</span><span id="line.30">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">        instance.setCurrentVersion(template.getCurrentVersion());</span>
-<span class="source-line-no">033</span><span id="line.33">        return instance;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public static ConcurrentModificationErrorBuilder builder() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return ConcurrentModificationErrorBuilder.of();</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template) {</span>
-<span class="source-line-no">041</span><span id="line.41">        return ConcurrentModificationErrorBuilder.of(template);</span>
-<span class="source-line-no">042</span><span id="line.42">    }</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    default &lt;T&gt; T withConcurrentModificationError(Function&lt;ConcurrentModificationError, T&gt; helper) {</span>
-<span class="source-line-no">045</span><span id="line.45">        return helper.apply(this);</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47">}</span>
+<span class="source-line-no">031</span><span id="line.31">        instance.setCurrentVersion(template.getCurrentVersion());</span>
+<span class="source-line-no">032</span><span id="line.32">        return instance;</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public static ConcurrentModificationErrorBuilder builder() {</span>
+<span class="source-line-no">036</span><span id="line.36">        return ConcurrentModificationErrorBuilder.of();</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template) {</span>
+<span class="source-line-no">040</span><span id="line.40">        return ConcurrentModificationErrorBuilder.of(template);</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    default &lt;T&gt; T withConcurrentModificationError(Function&lt;ConcurrentModificationError, T&gt; helper) {</span>
+<span class="source-line-no">044</span><span id="line.44">        return helper.apply(this);</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46">}</span>
 
 
 

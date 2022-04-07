@@ -42,99 +42,102 @@
 <span class="source-line-no">029</span><span id="line.29">    @JsonProperty("shippingMethodName")</span>
 <span class="source-line-no">030</span><span id="line.30">    public String getShippingMethodName();</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    @NotNull</span>
-<span class="source-line-no">033</span><span id="line.33">    @Valid</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("price")</span>
-<span class="source-line-no">035</span><span id="line.35">    public TypedMoney getPrice();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("shippingRate")</span>
-<span class="source-line-no">040</span><span id="line.40">    public ShippingRateDraft getShippingRate();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @Valid</span>
-<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("taxRate")</span>
-<span class="source-line-no">044</span><span id="line.44">    public TaxRate getTaxRate();</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">    *  &lt;p&gt;References a tax category by key.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">    */</span>
-<span class="source-line-no">049</span><span id="line.49">    @Valid</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("taxCategory")</span>
-<span class="source-line-no">051</span><span id="line.51">    public TaxCategoryKeyReference getTaxCategory();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">    *  &lt;p&gt;References a shipping method by key.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">    */</span>
-<span class="source-line-no">056</span><span id="line.56">    @Valid</span>
-<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("shippingMethod")</span>
-<span class="source-line-no">058</span><span id="line.58">    public ShippingMethodKeyReference getShippingMethod();</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">    *  &lt;p&gt;Note that you can not add a &lt;code&gt;DeliveryItem&lt;/code&gt; on import, as &lt;code&gt;LineItems&lt;/code&gt; and &lt;code&gt;CustomLineItems&lt;/code&gt; are not yet referencable by an &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">062</span><span id="line.62">    */</span>
-<span class="source-line-no">063</span><span id="line.63">    @Valid</span>
-<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("deliveries")</span>
-<span class="source-line-no">065</span><span id="line.65">    public List&lt;Delivery&gt; getDeliveries();</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    @Valid</span>
-<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("discountedPrice")</span>
-<span class="source-line-no">069</span><span id="line.69">    public DiscountedLineItemPriceDraft getDiscountedPrice();</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("shippingMethodState")</span>
-<span class="source-line-no">072</span><span id="line.72">    public ShippingMethodState getShippingMethodState();</span>
+<span class="source-line-no">032</span><span id="line.32">    /**</span>
+<span class="source-line-no">033</span><span id="line.33">    *  &lt;p&gt;TypedMoney is what is called BaseMoney in the HTTP API.&lt;/p&gt;</span>
+<span class="source-line-no">034</span><span id="line.34">    */</span>
+<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
+<span class="source-line-no">036</span><span id="line.36">    @Valid</span>
+<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("price")</span>
+<span class="source-line-no">038</span><span id="line.38">    public TypedMoney getPrice();</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
+<span class="source-line-no">041</span><span id="line.41">    @Valid</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("shippingRate")</span>
+<span class="source-line-no">043</span><span id="line.43">    public ShippingRateDraft getShippingRate();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
+<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("taxRate")</span>
+<span class="source-line-no">047</span><span id="line.47">    public TaxRate getTaxRate();</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;References a tax category by key.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("taxCategory")</span>
+<span class="source-line-no">054</span><span id="line.54">    public TaxCategoryKeyReference getTaxCategory();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">    *  &lt;p&gt;References a shipping method by key.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">    */</span>
+<span class="source-line-no">059</span><span id="line.59">    @Valid</span>
+<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("shippingMethod")</span>
+<span class="source-line-no">061</span><span id="line.61">    public ShippingMethodKeyReference getShippingMethod();</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    /**</span>
+<span class="source-line-no">064</span><span id="line.64">    *  &lt;p&gt;Note that you can not add a &lt;code&gt;DeliveryItem&lt;/code&gt; on import, as &lt;code&gt;LineItems&lt;/code&gt; and &lt;code&gt;CustomLineItems&lt;/code&gt; are not yet referencable by an &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">    */</span>
+<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
+<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("deliveries")</span>
+<span class="source-line-no">068</span><span id="line.68">    public List&lt;Delivery&gt; getDeliveries();</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @Valid</span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("discountedPrice")</span>
+<span class="source-line-no">072</span><span id="line.72">    public DiscountedLineItemPriceDraft getDiscountedPrice();</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setShippingMethodName(final String shippingMethodName);</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setPrice(final TypedMoney price);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setShippingRate(final ShippingRateDraft shippingRate);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setTaxRate(final TaxRate taxRate);</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setShippingMethod(final ShippingMethodKeyReference shippingMethod);</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    @JsonIgnore</span>
-<span class="source-line-no">087</span><span id="line.87">    public void setDeliveries(final Delivery... deliveries);</span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("shippingMethodState")</span>
+<span class="source-line-no">075</span><span id="line.75">    public ShippingMethodState getShippingMethodState();</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setShippingMethodName(final String shippingMethodName);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setPrice(final TypedMoney price);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setShippingRate(final ShippingRateDraft shippingRate);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setTaxRate(final TaxRate taxRate);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setShippingMethod(final ShippingMethodKeyReference shippingMethod);</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setDeliveries(final List&lt;Delivery&gt; deliveries);</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setShippingMethodState(final ShippingMethodState shippingMethodState);</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static ShippingInfoImportDraft of() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return new ShippingInfoImportDraftImpl();</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static ShippingInfoImportDraft of(final ShippingInfoImportDraft template) {</span>
-<span class="source-line-no">100</span><span id="line.100">        ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();</span>
-<span class="source-line-no">101</span><span id="line.101">        instance.setShippingMethodName(template.getShippingMethodName());</span>
-<span class="source-line-no">102</span><span id="line.102">        instance.setPrice(template.getPrice());</span>
-<span class="source-line-no">103</span><span id="line.103">        instance.setShippingRate(template.getShippingRate());</span>
-<span class="source-line-no">104</span><span id="line.104">        instance.setTaxRate(template.getTaxRate());</span>
-<span class="source-line-no">105</span><span id="line.105">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setShippingMethod(template.getShippingMethod());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setDeliveries(template.getDeliveries());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setDiscountedPrice(template.getDiscountedPrice());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setShippingMethodState(template.getShippingMethodState());</span>
-<span class="source-line-no">110</span><span id="line.110">        return instance;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static ShippingInfoImportDraftBuilder builder() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return ShippingInfoImportDraftBuilder.of();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template) {</span>
-<span class="source-line-no">118</span><span id="line.118">        return ShippingInfoImportDraftBuilder.of(template);</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    default &lt;T&gt; T withShippingInfoImportDraft(Function&lt;ShippingInfoImportDraft, T&gt; helper) {</span>
-<span class="source-line-no">122</span><span id="line.122">        return helper.apply(this);</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124">}</span>
+<span class="source-line-no">089</span><span id="line.89">    @JsonIgnore</span>
+<span class="source-line-no">090</span><span id="line.90">    public void setDeliveries(final Delivery... deliveries);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public void setDeliveries(final List&lt;Delivery&gt; deliveries);</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public void setShippingMethodState(final ShippingMethodState shippingMethodState);</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static ShippingInfoImportDraft of() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new ShippingInfoImportDraftImpl();</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public static ShippingInfoImportDraft of(final ShippingInfoImportDraft template) {</span>
+<span class="source-line-no">103</span><span id="line.103">        ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();</span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setShippingMethodName(template.getShippingMethodName());</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setPrice(template.getPrice());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setShippingRate(template.getShippingRate());</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setTaxRate(template.getTaxRate());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setShippingMethod(template.getShippingMethod());</span>
+<span class="source-line-no">110</span><span id="line.110">        instance.setDeliveries(template.getDeliveries());</span>
+<span class="source-line-no">111</span><span id="line.111">        instance.setDiscountedPrice(template.getDiscountedPrice());</span>
+<span class="source-line-no">112</span><span id="line.112">        instance.setShippingMethodState(template.getShippingMethodState());</span>
+<span class="source-line-no">113</span><span id="line.113">        return instance;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public static ShippingInfoImportDraftBuilder builder() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return ShippingInfoImportDraftBuilder.of();</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template) {</span>
+<span class="source-line-no">121</span><span id="line.121">        return ShippingInfoImportDraftBuilder.of(template);</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    default &lt;T&gt; T withShippingInfoImportDraft(Function&lt;ShippingInfoImportDraft, T&gt; helper) {</span>
+<span class="source-line-no">125</span><span id="line.125">        return helper.apply(this);</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127">}</span>
 
 
 

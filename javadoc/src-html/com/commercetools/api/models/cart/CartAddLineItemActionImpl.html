@@ -86,152 +86,145 @@
 <span class="source-line-no">073</span><span id="line.73">        return this.action;</span>
 <span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">    *  &lt;p&gt;The representation used when creating or updating a &lt;a href="/../api/projects/types#list-of-customizable-data-types"&gt;customizable data type&lt;/a&gt; with Custom Fields.&lt;/p&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">    */</span>
-<span class="source-line-no">079</span><span id="line.79">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.custom;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">085</span><span id="line.85">    */</span>
-<span class="source-line-no">086</span><span id="line.86">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return this.distributionChannel;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return this.externalTaxRate;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public String getProductId() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.productId;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public Long getVariantId() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.variantId;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public String getSku() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return this.sku;</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public Long getQuantity() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return this.quantity;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    /**</span>
-<span class="source-line-no">111</span><span id="line.111">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">112</span><span id="line.112">    */</span>
-<span class="source-line-no">113</span><span id="line.113">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return this.supplyChannel;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    /**</span>
-<span class="source-line-no">118</span><span id="line.118">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;br /&gt;</span>
-<span class="source-line-no">119</span><span id="line.119">    *  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">    */</span>
-<span class="source-line-no">121</span><span id="line.121">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return this.externalPrice;</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
-<span class="source-line-no">126</span><span id="line.126">        return this.externalTotalPrice;</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
-<span class="source-line-no">130</span><span id="line.130">        return this.shippingDetails;</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">134</span><span id="line.134">        this.custom = custom;</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    public void setDistributionChannel(</span>
-<span class="source-line-no">138</span><span id="line.138">            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
-<span class="source-line-no">139</span><span id="line.139">        this.distributionChannel = distributionChannel;</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
-<span class="source-line-no">143</span><span id="line.143">        this.externalTaxRate = externalTaxRate;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public void setProductId(final String productId) {</span>
-<span class="source-line-no">147</span><span id="line.147">        this.productId = productId;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public void setVariantId(final Long variantId) {</span>
-<span class="source-line-no">151</span><span id="line.151">        this.variantId = variantId;</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public void setSku(final String sku) {</span>
-<span class="source-line-no">155</span><span id="line.155">        this.sku = sku;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public void setQuantity(final Long quantity) {</span>
-<span class="source-line-no">159</span><span id="line.159">        this.quantity = quantity;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.supplyChannel = supplyChannel;</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
-<span class="source-line-no">167</span><span id="line.167">        this.externalPrice = externalPrice;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    public void setExternalTotalPrice(</span>
-<span class="source-line-no">171</span><span id="line.171">            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
-<span class="source-line-no">172</span><span id="line.172">        this.externalTotalPrice = externalTotalPrice;</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
-<span class="source-line-no">176</span><span id="line.176">        this.shippingDetails = shippingDetails;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    @Override</span>
-<span class="source-line-no">180</span><span id="line.180">    public boolean equals(Object o) {</span>
-<span class="source-line-no">181</span><span id="line.181">        if (this == o)</span>
-<span class="source-line-no">182</span><span id="line.182">            return true;</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">185</span><span id="line.185">            return false;</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">        CartAddLineItemActionImpl that = (CartAddLineItemActionImpl) o;</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">190</span><span id="line.190">                .append(custom, that.custom)</span>
-<span class="source-line-no">191</span><span id="line.191">                .append(distributionChannel, that.distributionChannel)</span>
-<span class="source-line-no">192</span><span id="line.192">                .append(externalTaxRate, that.externalTaxRate)</span>
-<span class="source-line-no">193</span><span id="line.193">                .append(productId, that.productId)</span>
-<span class="source-line-no">194</span><span id="line.194">                .append(variantId, that.variantId)</span>
-<span class="source-line-no">195</span><span id="line.195">                .append(sku, that.sku)</span>
-<span class="source-line-no">196</span><span id="line.196">                .append(quantity, that.quantity)</span>
-<span class="source-line-no">197</span><span id="line.197">                .append(supplyChannel, that.supplyChannel)</span>
-<span class="source-line-no">198</span><span id="line.198">                .append(externalPrice, that.externalPrice)</span>
-<span class="source-line-no">199</span><span id="line.199">                .append(externalTotalPrice, that.externalTotalPrice)</span>
-<span class="source-line-no">200</span><span id="line.200">                .append(shippingDetails, that.shippingDetails)</span>
-<span class="source-line-no">201</span><span id="line.201">                .isEquals();</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    @Override</span>
-<span class="source-line-no">205</span><span id="line.205">    public int hashCode() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">207</span><span id="line.207">                .append(custom)</span>
-<span class="source-line-no">208</span><span id="line.208">                .append(distributionChannel)</span>
-<span class="source-line-no">209</span><span id="line.209">                .append(externalTaxRate)</span>
-<span class="source-line-no">210</span><span id="line.210">                .append(productId)</span>
-<span class="source-line-no">211</span><span id="line.211">                .append(variantId)</span>
-<span class="source-line-no">212</span><span id="line.212">                .append(sku)</span>
-<span class="source-line-no">213</span><span id="line.213">                .append(quantity)</span>
-<span class="source-line-no">214</span><span id="line.214">                .append(supplyChannel)</span>
-<span class="source-line-no">215</span><span id="line.215">                .append(externalPrice)</span>
-<span class="source-line-no">216</span><span id="line.216">                .append(externalTotalPrice)</span>
-<span class="source-line-no">217</span><span id="line.217">                .append(shippingDetails)</span>
-<span class="source-line-no">218</span><span id="line.218">                .toHashCode();</span>
-<span class="source-line-no">219</span><span id="line.219">    }</span>
-<span class="source-line-no">220</span><span id="line.220"></span>
-<span class="source-line-no">221</span><span id="line.221">}</span>
+<span class="source-line-no">076</span><span id="line.76">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return this.custom;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    /**</span>
+<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">    */</span>
+<span class="source-line-no">083</span><span id="line.83">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return this.distributionChannel;</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return this.externalTaxRate;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public String getProductId() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return this.productId;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public Long getVariantId() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.variantId;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public String getSku() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return this.sku;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public Long getQuantity() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return this.quantity;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    /**</span>
+<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;&lt;a href="/../api/types#resourceidentifier"&gt;ResourceIdentifier&lt;/a&gt; to a &lt;a href="ctp:api:type:Channel"&gt;Channel&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return this.supplyChannel;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return this.externalPrice;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return this.externalTotalPrice;</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return this.shippingDetails;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.custom = custom;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public void setDistributionChannel(</span>
+<span class="source-line-no">131</span><span id="line.131">            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
+<span class="source-line-no">132</span><span id="line.132">        this.distributionChannel = distributionChannel;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
+<span class="source-line-no">136</span><span id="line.136">        this.externalTaxRate = externalTaxRate;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public void setProductId(final String productId) {</span>
+<span class="source-line-no">140</span><span id="line.140">        this.productId = productId;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public void setVariantId(final Long variantId) {</span>
+<span class="source-line-no">144</span><span id="line.144">        this.variantId = variantId;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public void setSku(final String sku) {</span>
+<span class="source-line-no">148</span><span id="line.148">        this.sku = sku;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public void setQuantity(final Long quantity) {</span>
+<span class="source-line-no">152</span><span id="line.152">        this.quantity = quantity;</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
+<span class="source-line-no">156</span><span id="line.156">        this.supplyChannel = supplyChannel;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
+<span class="source-line-no">160</span><span id="line.160">        this.externalPrice = externalPrice;</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public void setExternalTotalPrice(</span>
+<span class="source-line-no">164</span><span id="line.164">            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
+<span class="source-line-no">165</span><span id="line.165">        this.externalTotalPrice = externalTotalPrice;</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
+<span class="source-line-no">169</span><span id="line.169">        this.shippingDetails = shippingDetails;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    @Override</span>
+<span class="source-line-no">173</span><span id="line.173">    public boolean equals(Object o) {</span>
+<span class="source-line-no">174</span><span id="line.174">        if (this == o)</span>
+<span class="source-line-no">175</span><span id="line.175">            return true;</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">178</span><span id="line.178">            return false;</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">        CartAddLineItemActionImpl that = (CartAddLineItemActionImpl) o;</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">183</span><span id="line.183">                .append(custom, that.custom)</span>
+<span class="source-line-no">184</span><span id="line.184">                .append(distributionChannel, that.distributionChannel)</span>
+<span class="source-line-no">185</span><span id="line.185">                .append(externalTaxRate, that.externalTaxRate)</span>
+<span class="source-line-no">186</span><span id="line.186">                .append(productId, that.productId)</span>
+<span class="source-line-no">187</span><span id="line.187">                .append(variantId, that.variantId)</span>
+<span class="source-line-no">188</span><span id="line.188">                .append(sku, that.sku)</span>
+<span class="source-line-no">189</span><span id="line.189">                .append(quantity, that.quantity)</span>
+<span class="source-line-no">190</span><span id="line.190">                .append(supplyChannel, that.supplyChannel)</span>
+<span class="source-line-no">191</span><span id="line.191">                .append(externalPrice, that.externalPrice)</span>
+<span class="source-line-no">192</span><span id="line.192">                .append(externalTotalPrice, that.externalTotalPrice)</span>
+<span class="source-line-no">193</span><span id="line.193">                .append(shippingDetails, that.shippingDetails)</span>
+<span class="source-line-no">194</span><span id="line.194">                .isEquals();</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    @Override</span>
+<span class="source-line-no">198</span><span id="line.198">    public int hashCode() {</span>
+<span class="source-line-no">199</span><span id="line.199">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">200</span><span id="line.200">                .append(custom)</span>
+<span class="source-line-no">201</span><span id="line.201">                .append(distributionChannel)</span>
+<span class="source-line-no">202</span><span id="line.202">                .append(externalTaxRate)</span>
+<span class="source-line-no">203</span><span id="line.203">                .append(productId)</span>
+<span class="source-line-no">204</span><span id="line.204">                .append(variantId)</span>
+<span class="source-line-no">205</span><span id="line.205">                .append(sku)</span>
+<span class="source-line-no">206</span><span id="line.206">                .append(quantity)</span>
+<span class="source-line-no">207</span><span id="line.207">                .append(supplyChannel)</span>
+<span class="source-line-no">208</span><span id="line.208">                .append(externalPrice)</span>
+<span class="source-line-no">209</span><span id="line.209">                .append(externalTotalPrice)</span>
+<span class="source-line-no">210</span><span id="line.210">                .append(shippingDetails)</span>
+<span class="source-line-no">211</span><span id="line.211">                .toHashCode();</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">}</span>
 
 
 

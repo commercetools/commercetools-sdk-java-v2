@@ -31,18 +31,17 @@
 <span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl.class, name = ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM),</span>
 <span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueImpl.class, name = ChangeValueRelativeChangeValue.RELATIVE) })</span>
 <span class="source-line-no">020</span><span id="line.20">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeValueChangeValueImpl.class, visible = true)</span>
-<span class="source-line-no">021</span><span id="line.21">@JsonDeserialize(as = ChangeValueChangeValueImpl.class)</span>
-<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">023</span><span id="line.23">public interface ChangeValueChangeValue {</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
-<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("type")</span>
-<span class="source-line-no">027</span><span id="line.27">    public String getType();</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    default &lt;T&gt; T withChangeValueChangeValue(Function&lt;ChangeValueChangeValue, T&gt; helper) {</span>
-<span class="source-line-no">030</span><span id="line.30">        return helper.apply(this);</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
-<span class="source-line-no">032</span><span id="line.32">}</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">public interface ChangeValueChangeValue {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
+<span class="source-line-no">025</span><span id="line.25">    @JsonProperty("type")</span>
+<span class="source-line-no">026</span><span id="line.26">    public String getType();</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    default &lt;T&gt; T withChangeValueChangeValue(Function&lt;ChangeValueChangeValue, T&gt; helper) {</span>
+<span class="source-line-no">029</span><span id="line.29">        return helper.apply(this);</span>
+<span class="source-line-no">030</span><span id="line.30">    }</span>
+<span class="source-line-no">031</span><span id="line.31">}</span>
 
 
 

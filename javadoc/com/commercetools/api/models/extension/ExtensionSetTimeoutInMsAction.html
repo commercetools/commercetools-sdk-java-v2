@@ -124,7 +124,7 @@ extends <a href="ExtensionUpdateAction.html" title="interface in com.commercetoo
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTimeoutInMs()">getTimeoutInMs</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Value to set.</div>
+<div class="block">The maximum time the commercetools platform waits for a response from the extension.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -179,48 +179,47 @@ extends <a href="ExtensionUpdateAction.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="getTimeoutInMs()">
 <h3>getTimeoutInMs</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.27">getTimeoutInMs</a></span>()</div>
-<div class="block"><p>Value to set. If not defined, the maximum value is used.
-  If no timeout is provided, the default value is used for all types of Extensions.
-  The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-  <p>This limit can be increased per Project after we review the performance impact.
-  Please contact our support via the <a href="https://support.commercetools.com/">Support Portal</a> and provide the Region, Project key, and use case.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.26">getTimeoutInMs</a></span>()</div>
+<div class="block"><p>The maximum time the commercetools platform waits for a response from the extension.
+  The maximum value is 2000 ms (2 seconds).
+  This limit can be increased per project after we review the performance impact.
+  Please contact Support via the support and provide the region, project key and use case.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTimeoutInMs(java.lang.Integer)">
 <h3>setTimeoutInMs</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.30">setTimeoutInMs</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeoutInMs)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.29">setTimeoutInMs</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeoutInMs)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.32">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.31">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.36">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.35">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.42">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.41">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.46">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.45">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExtensionSetTimeoutInMsAction(java.util.function.Function)">
 <h3>withExtensionSetTimeoutInMsAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.50">withExtensionSetTimeoutInMsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionSetTimeoutInMsAction.html#line.49">withExtensionSetTimeoutInMsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

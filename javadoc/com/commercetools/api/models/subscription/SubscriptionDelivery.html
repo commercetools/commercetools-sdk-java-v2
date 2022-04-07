@@ -16,7 +16,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search">SEARCH:</label>
@@ -72,16 +76,15 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl class="notes">
-<dt>All Superinterfaces:</dt>
-<dd><code><a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></code></dd>
+<dt>All Known Subinterfaces:</dt>
+<dd><code><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></code>, <code><a href="ResourceCreatedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceCreatedDelivery</a></code>, <code><a href="ResourceDeletedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceDeletedDelivery</a></code>, <code><a href="ResourceUpdatedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceUpdatedDelivery</a></code></dd>
+</dl>
+<dl class="notes">
+<dt>All Known Implementing Classes:</dt>
+<dd><code><a href="MessageDeliveryImpl.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryImpl</a></code>, <code><a href="ResourceCreatedDeliveryImpl.html" title="class in com.commercetools.api.models.subscription">ResourceCreatedDeliveryImpl</a></code>, <code><a href="ResourceDeletedDeliveryImpl.html" title="class in com.commercetools.api.models.subscription">ResourceDeletedDeliveryImpl</a></code>, <code><a href="ResourceUpdatedDeliveryImpl.html" title="class in com.commercetools.api.models.subscription">ResourceUpdatedDeliveryImpl</a></code>, <code><a href="SubscriptionDeliveryImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionDeliveryImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.9">SubscriptionDelivery</a></span><span class="extends-implements">
-extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription"><code>DeliveryPayload</code></a> instead</div>
-</div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.18">SubscriptionDelivery</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,9 +92,105 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.commercetools.api.models.subscription.DeliveryPayload">Methods inherited from interface&nbsp;com.commercetools.api.models.subscription.<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></h3>
-<code><a href="DeliveryPayload.html#getNotificationType()">getNotificationType</a>, <a href="DeliveryPayload.html#getProjectKey()">getProjectKey</a>, <a href="DeliveryPayload.html#getResource()">getResource</a>, <a href="DeliveryPayload.html#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#setProjectKey(java.lang.String)">setProjectKey</a>, <a href="DeliveryPayload.html#setResource(com.commercetools.api.models.common.Reference)">setResource</a>, <a href="DeliveryPayload.html#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">setResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#withDeliveryPayload(java.util.function.Function)">withDeliveryPayload</a></code></div>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNotificationType()">getNotificationType</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResource()">getResource</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setProjectKey(java.lang.String)">setProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setResource(com.commercetools.api.models.common.Reference)">setResource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">setResourceUserProvidedIdentifiers</a></span>&#8203;(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withSubscriptionDelivery(java.util.function.Function)">withSubscriptionDelivery</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionDelivery.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDelivery</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+</div>
+</div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method.detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="getProjectKey()">
+<h3>getProjectKey</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.27">getProjectKey</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNotificationType()">
+<h3>getNotificationType</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.31">getNotificationType</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResource()">
+<h3>getResource</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.35">getResource</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUserProvidedIdentifiers()">
+<h3>getResourceUserProvidedIdentifiers</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.40">getResourceUserProvidedIdentifiers</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setProjectKey(java.lang.String)">
+<h3>setProjectKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.44">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setResource(com.commercetools.api.models.common.Reference)">
+<h3>setResource</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.46">setResource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">
+<h3>setResourceUserProvidedIdentifiers</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.48">setResourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withSubscriptionDelivery(java.util.function.Function)">
+<h3>withSubscriptionDelivery</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDelivery.html#line.50">withSubscriptionDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionDelivery.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDelivery</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+</section>
+</li>
+</ul>
 </section>
 </li>
 </ul>

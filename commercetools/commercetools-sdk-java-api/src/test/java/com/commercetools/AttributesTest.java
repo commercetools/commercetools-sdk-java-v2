@@ -97,6 +97,8 @@ public class AttributesTest {
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
                     attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+
+        assertThat(attributes.get("localizedNotes")).asList().first().isInstanceOf(LocalizedString.class);
     }
 
     @Test
@@ -237,6 +239,8 @@ public class AttributesTest {
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
                     attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("localizedNotes").getValue()).asList().first().isInstanceOf(LocalizedString.class);
+
     }
 
     @Test
@@ -317,6 +321,9 @@ public class AttributesTest {
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
                     attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("localizedNotes").withAttribute(AttributeAccessor::asSetLocalizedString)).asList()
+                .first()
+                .isInstanceOf(LocalizedString.class);
     }
 
     @Test
@@ -380,5 +387,8 @@ public class AttributesTest {
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
                     attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.asSetLocalizedString("localizedNotes")).asList()
+                .first()
+                .isInstanceOf(LocalizedString.class);
     }
 }

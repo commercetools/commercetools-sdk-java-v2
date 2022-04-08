@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.order;
 
+import static com.commercetools.api.models.common.MonetaryUtil.zeroAmount;
+
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -15,8 +17,6 @@ import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
-
-import static com.commercetools.api.models.common.MonetaryUtil.zeroAmount;
 
 public interface OrderLike<T extends OrderLike<T>> {
     @NotNull
@@ -115,16 +115,14 @@ public interface OrderLike<T extends OrderLike<T>> {
                 .stream()
                 .map(LineItem::getTotalPrice)
                 .map(Monetary::asMonetary)
-                .reduce(
-                        zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
-                        MonetaryAmount::add);
+                .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
+                    MonetaryAmount::add);
         final MonetaryAmount customLineItemTotal = this.getCustomLineItems()
                 .stream()
                 .map(CustomLineItem::getTotalPrice)
                 .map(Monetary::asMonetary)
-                .reduce(
-                        zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
-                        MonetaryAmount::add);
+                .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
+                    MonetaryAmount::add);
         return lineItemTotal.add(customLineItemTotal);
     }
 }

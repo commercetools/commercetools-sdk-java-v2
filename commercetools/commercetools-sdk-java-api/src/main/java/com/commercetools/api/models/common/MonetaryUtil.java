@@ -7,9 +7,6 @@ import javax.money.CurrencyUnit;
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 
-import com.commercetools.api.models.cart.CustomLineItem;
-import com.commercetools.api.models.cart.LineItem;
-import com.commercetools.api.models.order.OrderLike;
 import com.commercetools.money.MonetaryProvider;
 import com.commercetools.money.MonetarySupplier;
 

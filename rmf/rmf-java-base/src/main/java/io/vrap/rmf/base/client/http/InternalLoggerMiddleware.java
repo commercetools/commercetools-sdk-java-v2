@@ -21,7 +21,7 @@ public interface InternalLoggerMiddleware extends Middleware {
 
     static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent,
             final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
-            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
         return new InternalLoggerMiddlewareImpl(internalLoggerFactory, responseLogEvent, deprecationLogEvent,
             defaultExceptionLogEvent, exceptionLogEvents);
     }

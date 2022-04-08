@@ -326,7 +326,7 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
             final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
-            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
         return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
             deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));
     }

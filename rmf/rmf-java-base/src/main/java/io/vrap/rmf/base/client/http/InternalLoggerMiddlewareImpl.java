@@ -1,10 +1,7 @@
 
 package io.vrap.rmf.base.client.http;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -25,7 +22,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private final Level deprecationLogEvent;
     private final Level responseLogEvent;
     private final Level defaultExceptionLogEvent;
-    private final Map<Class<Throwable>, Level> exceptionLogEvents;
+    private final Map<Class<? extends Throwable>, Level> exceptionLogEvents;
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
         this(factory, Level.INFO, Level.INFO);
@@ -33,12 +30,13 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             Level deprecationLogEvent) {
-        this(factory, responseLogEvent, deprecationLogEvent, Level.ERROR, Collections.emptyMap());
+        this(factory, responseLogEvent, deprecationLogEvent, Level.ERROR,
+            Collections.singletonMap(ConcurrentModificationException.class, Level.INFO));
     }
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
-            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
         this.factory = factory;
         this.responseLogEvent = responseLogEvent;
         this.deprecationLogEvent = deprecationLogEvent;

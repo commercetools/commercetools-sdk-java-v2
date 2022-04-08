@@ -292,7 +292,7 @@ public class ImportApiRootBuilder {
 
     public ImportApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
             final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
-            final Map<Class<Throwable>, Level> exceptionLogEvents) {
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
         builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent,
             defaultExceptionLogEvent, exceptionLogEvents);
 
